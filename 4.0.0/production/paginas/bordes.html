@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.css">
+    <link rel="stylesheet" href="../css/dynamics-dark.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet" href="../css/interior.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Bordes</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1>Bordes</h1>
+            <p>
+                En este apartado se documentará todo lo referido a bordes, incluyendo el radio de los bordes 
+                de los elementos y los bordes llenos de diferentes colores para rodear al elemento. <br>
+                Las clases provistas poseen diferentes medidas establecidas a través de los parámetros
+                enviados en los nombres de las clases.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Bordes Redondeados</h2>
+            <p>
+                Para llevar a cabo esto la librería provee diferentes clases divididas en dos conjuntos.
+                El primero establece radios a partir un la medida en la <span class="badge badge-gris">unidad PX</span>, mientras que el otro conjunto 
+                permite definir los bordes utilizando la <span class="badge badge-gris">unidad % (Porcentaje)</span>.
+            </p>
+
+            <h3 id="t3">Bordes Redondeados en PX</h3>
+
+            <p>
+                El conjunto de clases utilizadas para esta tarea son los que tienen el prefijo 
+                <span class="badge badge-rojo">bor-rad-[medida en PX]</span>. El parámetro en este caso va desde 1 a 20 px.
+            </p>
+
+            <div class="row mar-3">
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-1">.bor-rad-1</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-2">.bor-rad-2</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-3">.bor-rad-3</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-4">.bor-rad-4</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-5">.bor-rad-5</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-6">.bor-rad-6</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-7">.bor-rad-7</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-8">.bor-rad-8</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-9">.bor-rad-9</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-10">.bor-rad-10</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-11">.bor-rad-11</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-12">.bor-rad-12</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-13">.bor-rad-13</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-14">.bor-rad-14</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-15">.bor-rad-15</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-16">.bor-rad-16</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-17">.bor-rad-17</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-18">.bor-rad-18</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-19">.bor-rad-19</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-20">.bor-rad-20</div>
+            </div>
+
+    <div class="codigo">
+
+    <pre class="cod-html" id="c1">
+         <div class="row mar-3">
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-1">.bor-rad-1</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-2">.bor-rad-2</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-3">.bor-rad-3</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-4">.bor-rad-4</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-5">.bor-rad-5</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-6">.bor-rad-6</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-7">.bor-rad-7</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-8">.bor-rad-8</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-9">.bor-rad-9</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-10">.bor-rad-10</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-11">.bor-rad-11</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-12">.bor-rad-12</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-13">.bor-rad-13</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-14">.bor-rad-14</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-15">.bor-rad-15</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-16">.bor-rad-16</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-17">.bor-rad-17</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-18">.bor-rad-18</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-19">.bor-rad-19</div>
+            <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-20">.bor-rad-20</div>
+        </div>
+    </pre>
+    </div>
+            <h3 id="t4">Borde Redondeado %</h3>
+            <p>
+                Los bordes definidos por porcentajes van desde 1% - 50% y el prefijo utilizado 
+                es bor-rad-por-[%]. 
+            </p>
+
+            <div class="row mar-3">
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-1">.bor-rad-por-1</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-5">.bor-rad-por-5</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-10">.bor-rad-por-10</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-15">.bor-rad-por-15</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-20">.bor-rad-por-20</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-25">.bor-rad-por-25</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-30">.bor-rad-por-30</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-35">.bor-rad-por-35</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-40">.bor-rad-por-40</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-45">.bor-rad-por-45</div>
+                <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-50">.bor-rad-por-50</div>
+            </div>
+
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="row mar-3">
+        <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-1">.bor-rad-por-1</div>
+        <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-5">.bor-rad-por-5</div>
+        <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-10">.bor-rad-por-10</div>
+        <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-15">.bor-rad-por-15</div>
+        <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-20">.bor-rad-por-20</div>
+        <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-25">.bor-rad-por-25</div>
+        <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-30">.bor-rad-por-30</div>
+        <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-35">.bor-rad-por-35</div>
+        <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-40">.bor-rad-por-40</div>
+        <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-45">.bor-rad-por-45</div>
+        <div class="ta-c c-white p-5 bg-black cxs-12 cs-6 cm-4 cl-3 bor-rad-por-50">.bor-rad-por-50</div>
+    </div>
+</pre>
+</div>
+        <p class="alerta-negra">
+            Si disponemos de una figura cuadrada, alto = ancho, si utlizados la clase 
+            <span class="badge-badge-rojo">.bor-rad-por-50</span> obtenemos un circulo 
+            perfecto.
+        </p>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+
+        <article class="articulo">
+            <h2 id="t5">Borde de extremos circulares</h2>
+            <p>
+                Si disponemos de un contenedor y queremos redondear los extremos 
+                de ese contenedor generando una imágen con los bordes con dos 
+                semicirculos perfectos
+                vamos a utilizar la clase <span class="badge badge-rojo">.bor-pill</span>.
+            </p>
+
+            <div class="p-5 bg-black ta-c c-white bor-pill mar-3">
+                .bor-pill
+            </div>
+
+
+    <div class="codigo">
+    <pre class="cod-html" id="c3">
+         <div class="p-5 bg-black ta-c c-white bor-pill mar-3">
+            .bor-pill
+        </div>
+    </pre>
+    </div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t5">Bordes de Colores</h2>
+            <p>
+                Vamos a definir ahora los bordes de colores para los elementos,
+                los mismos pueden variar de color y tamaño, es por ello que la librería 
+                cuenta con las clases suficientes para brindale al usuario de la misma
+                la flexibilidad necesaria para no agregar CSS innecesariamente. 
+            </p>
+
+            <h3 id="t6">Borde Negro</h3>
+
+            <p>
+                La clase más sencilla de utilizar es <span class="badge badge-rojo tips-ele"
+                data-tips="Tamaño en &nbsp; <span class='c-red'>PX</span>&nbsp; del borde." data-pos="top">bor-[PX]</span> siendo 
+                PX la cantidad de pixeles del borde que va desde 1 a 10 PX. 
+            </p>
+
+            <div class="row mar-3">
+                <div class="p-5 c-white bg-red ta-c bor-1 cxs-12 cs-6 cm-4 cl-3">.bor-1</div>
+                <div class="p-5 c-white bg-red ta-c bor-2 cxs-12 cs-6 cm-4 cl-3">.bor-2</div>
+                <div class="p-5 c-white bg-red ta-c bor-3 cxs-12 cs-6 cm-4 cl-3">.bor-3</div>
+                <div class="p-5 c-white bg-red ta-c bor-4 cxs-12 cs-6 cm-4 cl-3">.bor-4</div>
+                <div class="p-5 c-white bg-red ta-c bor-5 cxs-12 cs-6 cm-4 cl-3">.bor-5</div>
+                <div class="p-5 c-white bg-red ta-c bor-6 cxs-12 cs-6 cm-4 cl-3">.bor-6</div>
+                <div class="p-5 c-white bg-red ta-c bor-7 cxs-12 cs-6 cm-4 cl-3">.bor-7</div>
+                <div class="p-5 c-white bg-red ta-c bor-8 cxs-12 cs-6 cm-4 cl-3">.bor-8</div>
+                <div class="p-5 c-white bg-red ta-c bor-9 cxs-12 cs-6 cm-4 cl-3">.bor-9</div>
+                <div class="p-5 c-white bg-red ta-c bor-10 cxs-12 cs-6 cm-4 cl-3">.bor-10</div>
+            </div>
+
+            <h3 id="t7">Brode de Colores</h3>
+            <p>
+                Para definir este tipo de bordes es necesario utilizar la clase 
+                que permite enviarle como parámetro el color. <br>
+                La encargada de esta tarea es: <span class="badge badge-rojo">.bor-[color]-[PX]</span> donde 
+                color es el color del borde y PX la cantidad de px que va a tener su grosor.
+            </p>
+
+            <h4 class="f-w-6">Rojo</h4>
+            <div class="row mar-3">
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-1">.bor-red-1</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-2">.bor-red-2</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-3">.bor-red-3</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-4">.bor-red-4</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-5">.bor-red-5</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-6">.bor-red-6</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-7">.bor-red-7</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-8">.bor-red-8</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-9">.bor-red-9</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-10">.bor-red-10</div>
+            </div>
+
+            <h4 class="f-w-6">Rojo Claro</h4>
+            <div class="row mar-3">
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-1">.bor-red-s-1</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-2">.bor-red-s-2</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-3">.bor-red-s-3</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-4">.bor-red-s-4</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-5">.bor-red-s-5</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-6">.bor-red-s-6</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-7">.bor-red-s-7</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-8">.bor-red-s-8</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-9">.bor-red-s-9</div>
+                <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-10">.bor-red-s-10</div>
+            </div>
+    <div class="codigo">
+        <pre id="c4" class="cod-html">
+        <!--ROJO -->
+        <h4 class="f-w-6">Rojo</h4>
+        <div class="row mar-3">
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-1">.bor-red-1</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-2">.bor-red-2</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-3">.bor-red-3</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-4">.bor-red-4</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-5">.bor-red-5</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-6">.bor-red-6</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-7">.bor-red-7</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-8">.bor-red-8</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-9">.bor-red-9</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-10">.bor-red-10</div>
+        </div>
+
+        <!--ROJO CLARO-->
+        <h4 class="f-w-6">Rojo Claro</h4>
+        <div class="row mar-3">
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-1">.bor-red-s-1</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-2">.bor-red-s-2</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-3">.bor-red-s-3</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-4">.bor-red-s-4</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-5">.bor-red-s-5</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-6">.bor-red-s-6</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-7">.bor-red-s-7</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-8">.bor-red-s-8</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-9">.bor-red-s-9</div>
+            <div class="bg-black p-4 ta-c c-white cxs-12 cs-6 cm-4 cl-3 bor-red-s-10">.bor-red-s-10</div>
+        </div>
+        </pre>
+    </div>
+
+        <h3 id="t8">Tabla con los Colores Disponibles</h3>
+        <p>
+            A partir de la versión 4.0.0 se definieron algunos alias en inglés para el 
+            nombre de las clases de bordes de los colores. <br>
+            En la siguiete tabla se muestran las equivalencias.
+        </p>
+        <table class="fd-gris-n vertical-border table-sm table-bor-grey mar-3 tabla-responsive">
+            <thead>
+                <tr>
+                    <th class="c-white">Español</th>
+                    <th class="c-white">Inglés</th>
+                    <th class="c-white">Color</th>
+                    <th class="c-white">Rango</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="c-white">.bor-[rango]</td>
+                    <td class="c-white">.bor-[rango]</td>
+                    <td><div class="p-1 bg-black"></div></td>
+                    <td class="c-white">[1 - 10]</td>
+                </tr>
+                <tr>
+                    <td class="c-white">.bor-rojo-[rango]</td>
+                    <td class="c-white">.bor-red-[rango]</td>
+                    <td><div class="p-1 bg-red"></div></td>
+                    <td class="c-white">[1 - 10]</td>
+                </tr>
+                <tr>
+                    <td class="c-white">.bor-rojo-c-[rango]</td>
+                    <td class="c-white">.bor-red-s-[rango]</td>
+                    <td><div class="p-1 bg-red-s"></div></td>
+                    <td class="c-white">[1 - 10]</td>
+                </tr>
+                <tr>
+                    <td class="c-white">.bor-rojo-t-[rango]</td>
+                    <td class="c-white">N/A</td>
+                    <td><div class="p-1 fd-rojo-t"></div></td>
+                    <td class="c-white">[1 - 10]</td>
+                </tr>
+
+                <tr>
+                    <td class="c-white">.bor-rojo-o-[rango]</td>
+                    <td class="c-white">.bor-rojo-d-[rango]</td>
+                    <td><div class="p-1 fd-rojo-o-1"></div></td>
+                    <td class="c-white">[1 - 10]</td>
+                </tr>
+
+                <tr>
+                    <td class="c-white">.bor-verde-[rango]</td>
+                    <td class="c-white">.bor-green-[rango]</td>
+                    <td><div class="p-1 fd-verde"></div></td>
+                    <td class="c-white">[1 - 10]</td>
+                </tr>
+
+                 <tr>
+                    <td class="c-white">.bor-verde-c-[rango]</td>
+                    <td class="c-white">.bor-green-s-[rango]</td>
+                    <td><div class="p-1 fd-verde-c"></div></td>
+                    <td class="c-white">[1 - 10]</td>
+                </tr>
+
+                <tr>
+                    <td class="c-white">.bor-verde-o-[rango]</td>
+                    <td class="c-white">.bor-green-d-[rango]</td>
+                    <td><div class="p-1 fd-verde-o-1"></div></td>
+                    <td class="c-white">[1 - 10]</td>
+                </tr>
+
+                <tr>
+                    <td class="c-white">.bor-verde-t-[rango]</td>
+                    <td class="c-white">N/A</td>
+                    <td><div class="p-1 fd-verde-t"></div></td>
+                    <td class="c-white">[1 - 10]</td>
+                </tr>
+
+                <tr>
+                    <td class="c-white">.bor-verde-az-[rango]</td>
+                    <td class="c-white">N/A</td>
+                    <td><div class="p-1 fd-verde-az"></div></td>
+                    <td class="c-white">[1 - 10]</td>
+                </tr>
+
+                <tr>
+                    <td class="c-white">.bor-azul-[rango]</td>
+                    <td class="c-white">.bor-blue-[rango]</td>
+                    <td><div class="p-1 fd-azul"></div></td>
+                    <td class="c-white">[1 - 10]</td>
+                </tr>
+
+
+                <tr>
+                    <td class="c-white">.bor-azul-c-[rango]</td>
+                    <td class="c-white">.bor-blue-s-[rango]</td>
+                    <td><div class="p-1 fd-azul-c"></div></td>
+                    <td class="c-white">[1 - 10]</td>
+                </tr>
+
+                <tr>
+                    <td class="c-white">.bor-azul-o-[rango]</td>
+                    <td class="c-white">.bor-blue-d-[rango]</td>
+                    <td><div class="p-1 fd-azul-o-1"></div></td>
+                    <td class="c-white">[1 - 10]</td>
+                </tr>
+
+                <tr>
+                    <td class="c-white">.bor-azul-ve-[rango]</td>
+                    <td class="c-white">N/A</td>
+                    <td><div class="p-1 fd-azul-ve"></div></td>
+                    <td class="c-white">[1 - 10]</td>
+                </tr>
+
+                <tr>
+                    <td class="c-white">.bor-azul-ve-[rango]</td>
+                    <td class="c-white">N/A</td>
+                    <td><div class="p-1 fd-azul-ve"></div></td>
+                    <td class="c-white">[1 - 10]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        </article>
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="guia-pagina">
+        <ul>
+            <li><a href="#t1">Bordes</a></li>
+            <li><a href="#t2">Redondeados</a></li>
+            <li><a href="#t3">Redondeados (PX)</a></li>
+            <li><a href="#t4">Redondeados (%)</a></li>
+            <li><a href="#t5">Colores</a></li>
+            <li><a href="#t7">Otros Colores</a></li>
+            <li><a href="#t8">Equivalencias</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Bordes"
+        var idMenu = "#m1"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>
+
+
+
