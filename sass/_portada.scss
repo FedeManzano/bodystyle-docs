@@ -1,0 +1,50 @@
+
+
+*{
+    scrollbar-color: #840000 #000000; /* Color de la miniatura y de la pista */
+    scrollbar-width: thin;
+}
+.body {
+    min-height: 150%;
+    min-width: 100%;
+    background-image: url("../imagenes/portada.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: rgb(21,21,21); /* Fallback color */
+}
+
+
+.nav-prop
+{
+    margin-bottom: 100px !important;
+    border-bottom: 1.5px solid #ccc;
+    background-color: rgb(21,21,21);
+    display: flex !important;
+}
+
+.logo
+{
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    padding-top: 1.2em !important;
+    padding-bottom: 1.2em !important;
+    margin-right: 1.2em !important;
+    img 
+    {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+}
+
+#cabecera_principal
+{
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+    text-align: center;
+}
