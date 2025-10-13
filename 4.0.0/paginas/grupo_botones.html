@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/bodystyle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     
-    <title>Get Started</title>
+    <title>Grupo de Botones</title>
 </head>
 <body>
 
@@ -27,9 +27,15 @@
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
-            <h1>Get Started</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ducimus distinctio doloremque aperiam fugiat,
-                 sapiente animi quam ut minima recusandae aut blanditiis tenetur. Animi earum culpa, quam incidunt nemo dolores?</p>
+            <h1 id="t1">Grupo de Botones</h1>
+            <p>
+                Al igual que el partado anterior 
+                <a  class="link tips-ele"
+                    href="botones.html"
+                    data-tips="<i class='fa-brands fa-html5 c-red'>&nbsp;</i> Sección de la documentación de botones.">(Botones)</a> vamos a ver otro elemento que permite 
+                el agrupamiento de estos elementos de una manera más compacta y definida en tres tamaños 
+                diferentes.
+            </p>
             
             <div class="mar-2 boton-descarga"></div>
         </section>
@@ -37,44 +43,70 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="a1_pt">SubTitulo Artículo 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus ea nulla aliquam soluta commodi laboriosam nobis reprehenderit, 
-                labore est asperiores voluptatum beatae fuga atque rem eos nemo rerum magnam.</p>
+            <h2 id="t2">Grupo de Botones Tamaños</h2>
+            <p>
+                La librería cuenta con tres tamaños (LG, MD, SM) para la definición de estos elementos. <br>
+                La clase utilizada es btn-group / btn-grupo y la misma envuelve a los botones que se deseen agrupar.
+            </p>
 
-<div class="codigo">
+            <h3 id="t3">Grupo de Botones Medianos</h3>
 
-<pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
+            <div class="container">
+                <div class="btn-group">
+                    <a href="#" class="btn bg-red">Botón 1</a>
+                    <a href="#" class="btn bg-green">Botón 2</a>
+                    <a href="#" class="btn bg-grey-d-1">Botón 3</a>
+                    <a href="#" class="btn bg-blue">Botón 4</a>
+                </div>
+            </div>
+
+    <div class="codigo">
+
+    <pre class="cod-html" id="c1">
+        <div class="container">
+            <div class="btn-group">
+                <a href="#" class="btn bg-red">Botón 1</a>
+                <a href="#" class="btn bg-green">Botón 2</a>
+                <a href="#" class="btn bg-grey-d-1">Botón 3</a>
+                <a href="#" class="btn bg-blue">Botón 4</a>
+            </div>
+        </div>
+    </pre>
     </div>
-</pre>
-</div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
+            <h3 id="t3">Grupo de Botones Pequeños</h3>
+            <p>
+                Para declarar botones más pequeños utilizamos btn-group-sm y los mismos se alinearán 
+                de la misma manera que en los botones medianos pero de tamaño más pequeño.
+            </p>
+             <div class="container mar-3">
+                <div class="btn-group-sm">
+                    <a href="#" class="btn bg-red">Botón 1</a>
+                    <a href="#" class="btn bg-green">Botón 2</a>
+                    <a href="#" class="btn bg-grey-d-1">Botón 3</a>
+                    <a href="#" class="btn bg-blue">Botón 4</a>
+                </div>
+            </div>
 <div class="codigo">
-
-<pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
-</pre>
+    <pre class="cod-html" id="c2">
+         <div class="container">
+            <div class="btn-group-sm">
+                <a href="#" class="btn bg-red">Botón 1</a>
+                <a href="#" class="btn bg-green">Botón 2</a>
+                <a href="#" class="btn bg-grey-d-1">Botón 3</a>
+                <a href="#" class="btn bg-blue">Botón 4</a>
+            </div>
+        </div>
+    </pre>
 </div>
-        <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
-        </p>
+        <h3 id="t4">Grupo de Botones Grandes</h3>
+        <div class="container">
+            <div class="btn-grupo-lg">
+                <a href="#" class="btn bg-red">Botón 1</a>
+                <a href="#" class="btn bg-green">Botón 2</a>
+                <a href="#" class="btn bg-grey-d-1">Botón 3</a>
+                <a href="#" class="btn bg-blue">Botón 4</a>
+            </div>
+        </div>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
 
