@@ -22,7 +22,7 @@ import $ from "jquery"
             <ul id="m2">
                 <li><a href="botones.html">Botones</a></li>
                 <li><a href="grupo_botones.html">Grupo Botones</a></li>
-                <li><a href="">Badges</a></li>
+                <li><a href="badges.html">Badges</a></li>
                 <li><a href="">Alertas</a></li>
                 <li><a href="">Tarjetas</a></li>
                 <li><a href="">Breadcrumbs</a></li>
