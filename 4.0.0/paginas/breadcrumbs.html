@@ -28,8 +28,12 @@
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
             <h1>Breadcrumbs</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ducimus distinctio doloremque aperiam fugiat,
-                 sapiente animi quam ut minima recusandae aut blanditiis tenetur. Animi earum culpa, quam incidunt nemo dolores?</p>
+            <p>
+                Elemento simple compuesto sólo por clases CSS y que permite brindale una guia al 
+                usuario para saber en que parte del proceso se encuentra. Por ejemplo cuando el usuario 
+                se encuentra completando un formulario de varias etapas, este elemento le permite al usuario 
+                conocer la etapa en la que se encuentra.
+            </p>
             
             <div class="mar-2 boton-descarga"></div>
         </section>
@@ -37,46 +41,72 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="a1_pt">SubTitulo Artículo 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus ea nulla aliquam soluta commodi laboriosam nobis reprehenderit, 
-                labore est asperiores voluptatum beatae fuga atque rem eos nemo rerum magnam.</p>
+            <h2 id="#t1">Breadcrumbs Oscuro</h2>
+            <p>
+                La librería tiene dos temas uno claro y uno oscuro para ajustarse a todos los 
+                sitios que implementen diferentes temas en su diseño.
+            </p>
+
+            <div class="breadcrumb-negro bg-white mar-3">
+                <a href="#" class="br-activo">Inicio</a>
+                <a href="#">servicios</a>
+                <a href="#">Personal</a>
+                <a href="#">Galeria</a>
+            </div>
 
 <div class="codigo">
-
 <pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
+    <div class="breadcrumb-negro bg-white mar-3">
+        <a href="#" class="br-activo">Inicio</a>
+        <a href="#">servicios</a>
+        <a href="#">Personal</a>
+        <a href="#">Galeria</a>
     </div>
 </pre>
 </div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
-<div class="codigo">
-
-<pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
-</pre>
-</div>
-        <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
-        </p>
+            <div class="alerta-negra">
+                En el ejemplo anterior se colocó un fondo blanco para que pueda apreciarse el elemento. <br>
+                La clase <span class="badge badge-red">.br-activo</span> mantiene la situación actual del 
+                usuario en color negro, de manera tal de poder identificar visualmente el paso del proceso 
+                en el que se encuentran.
+            </div>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
+
+
+        <article class="articulo">
+            <h2 id="t3">Breadcrumbs Claro</h2>
+            <p>
+                Ahora el otro tema de este elemento que resalta en sitios que utilizan diseños 
+                oscuros.
+            </p>
+
+             <div class="breadcrumb-blanco mar-3">
+                <a href="#" class="br-activo">Inicio</a>
+                <a href="#">servicios</a>
+                <a href="#">Personal</a>
+                <a href="#">Galeria</a>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="breadcrumb-blanco">
+        <a href="#" class="br-activo">Inicio</a>
+        <a href="#">servicios</a>
+        <a href="#">Personal</a>
+        <a href="#">Galeria</a>
+    </div>
+</pre>
+</div>
+
+        <div class="alert-black">
+            Simplemente cuando el usuario avance en el proceso en el cual se encuentre 
+            se remueve la clase <span class="badge badge-red">.br-activo</span> del elemento 
+            actual y se la agrega en el elemento siguiente.
+        </div>
+
+        </article>
+
 
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
