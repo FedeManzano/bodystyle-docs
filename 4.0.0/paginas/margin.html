@@ -260,8 +260,85 @@
         <div class="p-1 bg-red c-white ta-c">BOTTON</div>
     </pre>
 </div>
+
+        <h3 id="t8">Margin Combinado Direccionado</h3>
+
+        <p>
+            Podemos utilizar el mismo concepto anterior pero utilizando las clases 
+            que generen un margen en una sola dirección en diferentes tamaños de pantalla. <br>
+            Para el ejemplo se utilizará un margen izquierdo de 1.5em en equipos grandes, 1em en equipos 
+            medianos, 0.5em en equipos chicos y 0em en equpos extra chicos. 
+        </p>
+
+        
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase m-m-3 -->
+            <div class="p-1 bg-red c-white ta-c ml-3 ml-m-2 ml-s-1 ml-xs-0">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+
+        <div class="alerta-negra mt-3">
+            Si se achica el tamaño de pantalla se notará como el margen izquierdo se atenúa hasta 0 
+            para los diferentes tamaños de pantalla.
+        </div>
+
+<div class="codigo">
+    <pre id="c8" class="cod-html">
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase ml-3 ml-m-2 ml-s-1 ml-xs-0 -->
+            <div class="p-1 bg-red c-white ta-c ml-3 ml-m-2 ml-s-1 ml-xs-0">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+    </pre>
+</div>
+
+        <div class="alerta-negra">
+            Se puede realizar lo mismo con <span class="badge badge-red">mr-[tamaño]-[em]</span>, 
+            <span class="badge badge-red">mt-[tamaño]-[em]</span> y <span class="badge badge-red">mr-[tamaño]-[em]</span>. <br>
+            es importante resaltar que se pueden combinar todas estas clases para generar margenes completamente personalizados
+            que permitan ajustar el contenido de manera precisa.
+        </div>
+
         </article>
-    
+
+        <article class="articulo">
+            <h2 id="t9">Margenes en el Eje X e Y</h2>
+            <p>
+                Existen en la librería clases que permiten para diferentes tamaños de pantalla establecer un 
+                margen arriba y abajo del elemento, como así tambien a la izquierda y a la derecha del mismo. <br>
+                Las clases utilizadas son <span class="badge badge-red">my-[tamaño]-[em]</span>  y 
+                <span class="badge badge-red">mx-[tamaño]-[em]</span>. Es importante aclarar que si no se agrega 
+                el parámetro [tamaño] el margen se representará en todos los tamaños de pantalla.
+            </p>
+
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+            <div class="d-flex just-center">
+                <div class="p-1 bg-red c-white ta-c">LEFT</div>
+                <!-- Elemento con la clase m-m-3 -->
+                <div class="p-1 bg-red c-white ta-c mx-3 my-3">ELEMENTO</div>
+                <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+            </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+
+<div class="codigo">
+    <pre id="c9" class="cod-html">
+       <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+            <div class="d-flex just-center">
+                <div class="p-1 bg-red c-white ta-c">LEFT</div>
+                <!-- Elemento con la clase mx-3 my-3 -->
+                <div class="p-1 bg-red c-white ta-c mx-3 my-3">ELEMENTO</div>
+                <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+            </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+    </pre>
+</div>
+        </article>
 
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
