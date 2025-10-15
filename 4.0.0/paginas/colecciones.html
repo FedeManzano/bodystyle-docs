@@ -27,9 +27,13 @@
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
-            <h1>Colecciones</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ducimus distinctio doloremque aperiam fugiat,
-                 sapiente animi quam ut minima recusandae aut blanditiis tenetur. Animi earum culpa, quam incidunt nemo dolores?</p>
+            <h1 id="t1">Colecciones</h1>
+            <p>
+                En este apartado vamos a ver un elemento muy utilizado en todo sitio web para agrupar elementos 
+                de características similares, las calecciones son un forma muy intuitiva de distribuir los elementos 
+                de manera tal de mejorar la expreriencia del usuario y el recorrido a través de la aplicación o sitio web en 
+                desarrollo.
+            </p>
             
             <div class="mar-2 boton-descarga"></div>
         </section>
@@ -37,46 +41,311 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="a1_pt">SubTitulo Artículo 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus ea nulla aliquam soluta commodi laboriosam nobis reprehenderit, 
-                labore est asperiores voluptatum beatae fuga atque rem eos nemo rerum magnam.</p>
+            <h2 id="t2">Colecciones por default</h2>
+            <p>
+                Vamos a ver como generar una colección con los estilos básicos que permitirán agrupar un conjunto de enlaces 
+                para la navegación. <br>
+                La clase utilizada como contenedor es <span class="badge badge-red">.list-container</span> y dentro de esta 
+                <span class="badge badge-red">.list-intem</span> que envuelve a cada enlace de la lista.
+            </p>
 
-<div class="codigo">
+            <div class="container mar-3">
+                <div class="list-container bg-white">
+                    <div class="list-item">
+                        <a href="#">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#">Perfíl</a>
+                    </div>
+                </div>
+            </div>
 
-<pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
+            
+
+    <div class="codigo">
+    <pre class="cod-html" id="c1">
+        <div class="container mar-3">
+            <div class="list-container bg-white">
+                <div class="list-item">
+                    <a href="#">Inicio</a>
+                </div>
+                <div class="list-item">
+                    <a href="#">Servicios</a>
+                </div>
+                <div class="list-item">
+                    <a href="#">Galeria</a>
+                </div>
+                <div class="list-item">
+                    <a href="#">Perfíl</a>
+                </div>
+            </div>
+        </div>
+    </pre>
     </div>
-</pre>
-</div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
-<div class="codigo">
+            <h3 id="t3">Colecciones en colores</h3>
+            <p>
+                Para añadirle un color a la colección tendremos que utilizar los colores de la librería 
+                los cuales están en la siguiente sección: 
+                <a href="colores.html" class="link tips-ele"
+                data-tips="Colores de fondo de la librería">Colores</a>
+            </p>
 
+
+            <div class="row mar-3">
+                <div class="list-container bg-green cxs-12 cs-12 cm-6 cl-4">
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div>  
+                </div>
+
+                <div class="list-container bg-blue cxs-12 cs-12 cm-6 cl-4">
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div>  
+                </div>
+                <div class="list-container fd-gris-n cxs-12 cs-12 cm-6 cl-4">
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div>  
+                </div>
+                <div class="list-container fd-gris-az cxs-12 cs-12 cm-6 cl-4">
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div>  
+                </div>
+
+                <div class="list-container fd-rojo cxs-12 cs-12 cm-6 cl-4">
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div>  
+                </div>
+
+                <div class="list-container fd-naranja cxs-12 cs-12 cm-6 cl-4">
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="alerta-negra mar-3">
+                Lo que se dispuso arriba se puede realizar con todos los colores de fondo de los cuales dispone 
+                la librería, por esta razón se le recomienda al lector que visiten esa sección. <br>
+                <a href="colores.html" class="link tips-ele"
+                data-tips="Colores de fondo de la librería">Colores</a>
+            </div>
+
+<div class="codigo">
 <pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
+    <div class="row mar-3">
+        <div class="list-container bg-green cxs-12 cs-12 cm-6 cl-4">
+            <div class="list-item">
+                <a href="#" class="c-white">Inicio</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Servicios</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Galeria</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Perfíl</a>
+            </div>  
+        </div>
+        <div class="list-container bg-blue cxs-12 cs-12 cm-6 cl-4">
+            <div class="list-item">
+                <a href="#" class="c-white">Inicio</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Servicios</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Galeria</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Perfíl</a>
+            </div>  
+        </div>
+        <div class="list-container fd-gris-n cxs-12 cs-12 cm-6 cl-4">
+            <div class="list-item">
+                <a href="#" class="c-white">Inicio</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Servicios</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Galeria</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Perfíl</a>
+            </div>  
+        </div>
+        <div class="list-container fd-gris-az cxs-12 cs-12 cm-6 cl-4">
+            <div class="list-item">
+                <a href="#" class="c-white">Inicio</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Servicios</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Galeria</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Perfíl</a>
+            </div>  
+        </div>
+        <div class="list-container fd-rojo cxs-12 cs-12 cm-6 cl-4">
+            <div class="list-item">
+                <a href="#" class="c-white">Inicio</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Servicios</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Galeria</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Perfíl</a>
+            </div>  
+        </div>
+        <div class="list-container fd-naranja cxs-12 cs-12 cm-6 cl-4">
+            <div class="list-item">
+                <a href="#" class="c-white">Inicio</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Servicios</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Galeria</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Perfíl</a>
+            </div>  
+        </div>
     </div>
 </pre>
 </div>
-        <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
-        </p>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
+
+        <article class="articulo">
+            <h2 id="t4">Encabezados</h2>
+            <p>
+                Es posible añadirle un pie y un encabezado a la lista para describir los elementos dispuestos en esta 
+                sección, las clases <span class="badge badge-red">.list-header</span> y <span class="badge badge-red">.list-footer</span>.
+            </p>
+
+            <div class="container mar-3">
+                <div class="list-container bg-green">
+                    <div class="list-header c-white f-w-500">
+                        Titulo de la lista
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div> 
+                    <div class="list-footer c-white f-w-500">
+                        Footer de la lista
+                    </div> 
+                </div>
+            </div>
+
+
+    <div class="codigo">
+        <pre id="c3" class="cod-html">
+             <div class="container mar-3">
+                <div class="list-container bg-green">
+                    <div class="list-header c-white f-w-500">
+                        Titulo de la lista
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div> 
+                    <div class="list-footer c-white f-w-500">
+                        Footer de la lista
+                    </div> 
+                </div>
+            </div>
+        </pre>
+    </div>  
+        </article>
+
 
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
@@ -86,12 +355,10 @@
     <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
     <div class="guia-pagina">
         <ul>
-            <li><a href="#t1">Subtitulo 1</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
+            <li><a href="#t1">Colecciones</a></li>
+            <li><a href="#t2">Default</a></li>
+            <li><a href="#t3">Colores</a></li>
+            <li><a href="#t4">Encabezados</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
