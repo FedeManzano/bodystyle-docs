@@ -1,7 +1,7 @@
 
 import  "./bodystyle"
 import "./cargaMenues"
-import"./copiarCodigo"
+import "./copiarCodigo"
 
 window.onload = () => {
   setTimeout( () => {
