@@ -26,7 +26,7 @@ import $ from "jquery"
                 <li><a href="alertas.html">Alertas</a></li>
                 <li><a href="tarjetas.html">Tarjetas</a></li>
                 <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
-                <li><a href="">Colecciones</a></li>
+                <li><a href="colecciones.html">Colecciones</a></li>
                 <li><a href="">Etiquetas</a></li>
                 <li><a href="">Decoradores</a></li>
                 <li><a href="">Footers</a></li>
