@@ -45,45 +45,223 @@
         <article class="articulo">
             <h2 id="t2">Margin General</h2>
             <p>
-                En este apartado veremos el margen que se aplica a un elemento para todas las pantallas.
+                En este apartado veremos el margen que se aplica a un elemento para todas las pantallas y en todas las direcciones. <br>
+                La clase utilizada para este ejemplo es <span class="badge badge-red">m-[em]</span> siendo em la cantidad de PX de margen requerido, 
+                siendo 1em = 16PX, en el caso de las clases de margin toman el valor 1 con 0.5em lo que es igual a 8px. <br>
+                <span class="f-w-7 c-red">Es importante aclarar que el parámetro de la clase puede varias desde 1 a 15 donde 1 es igual a 8px</span>.
             </p>
 
-<div class="codigo">
+            <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+            <div class="d-flex just-center">
+                <div class="p-1 bg-red c-white ta-c">LEFT</div>
+                <div class="p-1 bg-red c-white ta-c m-1">ELEMENTO</div>
+                <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+            </div>
+            <div class="p-1 bg-red c-white ta-c">BOTTON</div>
 
+            <div class="alerta-negra mt-3">
+                En este ejemplo se le aplica un margen de 0.5em, lo que es lo mismo a 8px. <br>
+                En este caso no cambiará el margen en ningún tamaño de pantalla, lo que implica que se mantendrá constante.
+            </div>
+
+<div class="codigo">
 <pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
+    <div class="p-1 bg-red c-white ta-c">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <div class="p-1 bg-red c-white ta-c m-1">ELEMENTO</div> <!-- ELEMENTO Con la clase m-1 -->
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+    <div class="p-1 bg-red c-white ta-c">BOTTON</div>
 </pre>
 </div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
-<div class="codigo">
+            <h3 id="t3">Margin General Top</h3>
+            <p>
+                Para el caso del margen en la parte superior es exactamente igual pero la clase utilizada es <span class="badge badge-red">mt-[em]</span>
+                para el valor 1 corresponde a 8px.
+            </p>
 
+            <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+            <div class="d-flex just-center">
+                <div class="p-1 bg-red c-white ta-c">LEFT</div>
+                <div class="p-1 bg-red c-white ta-c mt-1">ELEMENTO</div>
+                <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+            </div>
+            <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+
+<div class="codigo">
 <pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
+    <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase mt-1-->
+            <div class="p-1 bg-red c-white ta-c mt-1">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+    <div class="p-1 bg-red c-white ta-c">BOTTON</div>
 </pre>
 </div>
-        <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
+        <h3 id="t4">Margen General Derecho</h3>
+
+        <p>
+            La clase utilizada para agregar un margen general a la derecha utilizamos la 
+            clase <span class="badge badge-red">mr-[em]</span> em puede variar de 1 a 15 
+            siendo 1 = 8px.
         </p>
+
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase mt-1-->
+            <div class="p-1 bg-red c-white ta-c mr-3">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+
+<div class="codigo">
+    <pre id="c3" class="cod-html">
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase mr-3 -->
+            <div class="p-1 bg-red c-white ta-c mr-3">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+    </pre>
+</div>
+
+        <h3 id="t5">Margen General Izquierdo</h3>
+
+        <p>
+            La clase utilizada para agregar un margen general a la derecha utilizamos la 
+            clase <span class="badge badge-red">ml-[em]</span> em puede variar de 1 a 15 
+            siendo 1 = 8px.
+        </p>
+
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase mt-1-->
+            <div class="p-1 bg-red c-white ta-c ml-3">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+
+<div class="codigo">
+    <pre id="c4" class="cod-html">
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase ml-3 -->
+            <div class="p-1 bg-red c-white ta-c ml-3">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+    </pre>
+</div>
+
+        <h3 id="t5">Margin General Abajo</h3>
+        <p>
+            Margen aplicado abajo del elemento con la clase <span class="badge badge-red">mb-[em]</span>.
+        </p>
+
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase mt-1-->
+            <div class="p-1 bg-red c-white ta-c mb-3">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+<div class="codigo">
+    <pre id="c5" class="cod-html">
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase mb-3 -->
+            <div class="p-1 bg-red c-white ta-c mb-3">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+    </pre>
+</div>
         </article>
-        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <article class="articulo">
+            <h2 id="t6">Margin Especializado</h2>
+            <p>
+                Existen clases dentro de la librería que permiten aplicar margenes a elementos en determinados 
+                tamaños de pantalla, de manera tal que solo afecte al elemento en circunstancias determinadas.
+            </p>
+
+            <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+            <div class="d-flex just-center">
+                <div class="p-1 bg-red c-white ta-c">LEFT</div>
+                <div class="p-1 bg-red c-white ta-c m-m-3">ELEMENTO</div>
+                <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+            </div>
+            <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+
+            <div class="mt-3 alerta-negra">
+                Como se puede observar no hay margenes que afectan al elemento, pero si llevamos 
+                el tamaño de la pantalla a menos 1030px se creará un margen en todas las direcciones 
+                dejando un espacio de 1.5em. <br>
+                Esto se logra con la clase <span class="badge badge-red">.m-[tamaño]-[em]</span> donde tamaño 
+                corresponde al tamaño de pantalla utilizado definidos en la página de esta documentación correspondiente 
+                a este tema <a href="medidas.html" class="link tips-ele"
+                data-tips="Medidas de pantalla definidas en la librería.">Medidas</a>.
+            </div>
+
+<div class="codigo">
+    <pre id="c6" class="cod-html">
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase m-m-3 -->
+            <div class="p-1 bg-red c-white ta-c m-m-3">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+    </pre>
+</div>
+
+        <h3 id="t7">Margenes Combinados</h3>
+        <p>
+            Para este ejemplo se aplicará varios margenes a un mismo elemento utilizando todas 
+            las posibilidaddes provistas por la librería, ajustando el margen adaptandolo 
+            a diferentes dispositivos.
+        </p>
+
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase m-m-3 -->
+            <div class="p-1 bg-red c-white ta-c m-4 m-m-3 m-s-2 m-xs-1">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+
+        <div class="alerta-negra mt-3">
+            Si se achica el tamaño de pantalla se notará como el margen en todas las direcciones 
+            va disminuyendo paulatinamente.
+        </div>
+
+
+<div class="codigo">
+    <pre id="c7" class="cod-html">
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase m-4 m-m-3 m-s-2 m-xs-1 -->
+            <div class="p-1 bg-red c-white ta-c m-4 m-m-3 m-s-2 m-xs-1">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+    </pre>
+</div>
+        </article>
+    
 
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
