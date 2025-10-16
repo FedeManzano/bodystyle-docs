@@ -42,3 +42,16 @@ En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de 
         - :page_facing_up: <i>texto.html</i>
     - :page_facing_up: <i>index.html</i>
     - :page_facing_up: <i>logo.ico</i>
+
+    ## Descarga
+
+    Para disponer de la documentación se puede ingresar a: <br>
+
+    - [https://bodystyle.webcindario.com](https://bodystyle.webcindario.com)
+
+    - [Descarga]()
+
+
+    ## Autor
+
+    [Federico Manzano](https://github.com/FedeManzano)
