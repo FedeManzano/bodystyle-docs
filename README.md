@@ -1,5 +1,5 @@
 <p align="center"> 
-    <img src="logo/logo.png" width="350px">
+    <img src="logo/logo.png" width="300px">
 </p>
 
 
@@ -15,6 +15,9 @@ En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de 
 ## Estructura
 
 - :green_book: <b>Docs</b>
-    - c <b>css</b>
+    - :open_file_folder: <b>css</b>
         - :page_facing_up: <i>bodystyle.min.css</i>
     - :open_file_folder: <b>imagenes</b>
+        - IMAGENES DE LA DOC.
+    - :open_file_folder: <b>js</b>
+        - :page_facing_up: <i>docs-body.js</i>
