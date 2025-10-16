@@ -21,3 +21,24 @@ En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de 
         - IMAGENES DE LA DOC.
     - :open_file_folder: <b>js</b>
         - :page_facing_up: <i>docs-body.js</i>
+    - :open_file_folder: <b>paginas</b>
+        - :page_facing_up: <i>alertas.html</i>
+        - :page_facing_up: <i>badges.html</i>
+        - :page_facing_up: <i>bordes.html</i>
+        - :page_facing_up: <i>botones.html</i>
+        - :page_facing_up: <i>breadcrumbs.html</i>
+        - :page_facing_up: <i>colecciones.html</i>
+        - :page_facing_up: <i>colores.html</i>
+        - :page_facing_up: <i>contenedor.html</i>
+        - :page_facing_up: <i>flexbox.html</i>
+        - :page_facing_up: <i>get_started.html</i>
+        - :page_facing_up: <i>grupo_botones.html</i>
+        - :page_facing_up: <i>margin.html</i>
+        - :page_facing_up: <i>medidas.html</i>
+        - :page_facing_up: <i>opacidad.html</i>
+        - :page_facing_up: <i>padding.html</i>
+        - :page_facing_up: <i>tablas.html</i>
+        - :page_facing_up: <i>tarjetas.html</i>
+        - :page_facing_up: <i>texto.html</i>
+    - :page_facing_up: <i>index.html</i>
+    - :page_facing_up: <i>logo.ico</i>
