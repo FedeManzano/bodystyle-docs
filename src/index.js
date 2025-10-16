@@ -8,6 +8,7 @@ window.onload = () => {
     BS.DropDownInit()
     BS.CodigoHtmlInit()
     BS.CodigoJsInit()
+    BS.CodigoCssInit()
     BS.ToolTipsInit()
     BS.NavInit(idMenu)
     BS.BotonInicioInit()

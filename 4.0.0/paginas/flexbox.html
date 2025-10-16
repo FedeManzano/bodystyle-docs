@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../logo.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <style>
+        .flex-box {
+        display: flex;
+    }
+    </style>
+
+
+    <title>Flexbox</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1>Flexbox</h1>
+            <p>
+                En este apartado vamos a ver y analizar una de las funcionalidades más importantes 
+                de CSS 3, que permite el aliniamiento horizontal y vertical de los elementos con la facilidad 
+                que versiones anteriores de CSS no tenian, desde el punto de vista de la librería se 
+                dispondrán de clases que permitirán utilizar estas funcionalidades sin necesidad de archivos 
+                de estilos y aplicándolas directamente en el DOM de html.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t1">Flexbox en CSS3</h2>
+            <p>
+                En CSS3 se utiliza la propiedad <span class="badge badge-red">display: flex</span> 
+                que por defecto acomoda a los elementos de forma horizontal uno pegado al otro.
+            </p>
+<div class="codigo">
+<pre class="cod-css" id="c1">
+    .flex-box {
+        display: flex;
+    }
+</pre>
+</div>
+           <p>
+                El resultado de aplicar esta clase a elementos del DOM es el siguiente. 
+           </p>
+
+            <div class="flex-box">
+                <div class="p-1 bg-red c-white ta-c">Cont 1</div>
+                <div class="p-1 bg-red c-white ta-c">Cont 2</div>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="flex-box">
+        <div class="p-1 bg-red c-white ta-c">Cont 1</div>
+        <div class="p-1 bg-red c-white ta-c">Cont 2</div>
+    </div>
+</pre>
+</div>
+        <p class="alerta-negra">
+            Como se puede observar se mantienen un contenedor pegado al otro 
+            sin ningún tipo de distancia entre ambos y alineados a la izquierda. <br>
+            Para centrar los contenedores es necesario valerse de otra propiedad que 
+            acompaña a la anterior <span class="badge badge-red">justify-content: center</span>. 
+        </p>
+<div class="codigo">
+<pre class="cod-css" id="c3">
+    .flex-box {
+        display: flex;
+        justify-content: center;
+    }
+</pre>
+</div>
+        <div class="flex-box just-center">
+            <div class="p-1 bg-red c-white ta-c">Cont 1</div>
+            <div class="p-1 bg-red c-white ta-c">Cont 2</div>
+        </div>
+
+        <p>
+            En este caso están centrados, pero si queremos que los contenedores se distribuyan
+            a través de todo el ancho del contenedor padre utilizaremos la misma propiedad anteriormente 
+            mencionada pero con el valor <span class="badge badge-red">justify-content: space-around</span>
+        </p>
+<div class="codigo">
+<pre class="cod-css" id="c4">
+    .flex-box {
+        display: flex;
+        justify-content: space-around;
+    }
+</pre>
+</div>
+        <div class="flex-box just-around">
+            <div class="p-1 bg-red c-white ta-c">Cont 1</div>
+            <div class="p-1 bg-red c-white ta-c">Cont 2</div>
+        </div>
+
+        <p>
+            Ahora bien, si lo que queremos es que los contenedores estén lo mas distanciados posibles 
+            es necesario utilizar otro valor que es <span class="badge badge-red">space-between</span>.
+        </p>
+
+        <div class="codigo">
+<pre class="cod-css" id="c5">
+    .flex-box {
+        display: flex;
+        justify-content: space-between;
+    }
+</pre>
+</div>
+        <div class="flex-box just-between">
+            <div class="p-1 bg-red c-white ta-c">Cont 1</div>
+            <div class="p-1 bg-red c-white ta-c">Cont 2</div>
+        </div>
+
+        <p class="mt-3">
+            En todos los ejemplos anteriores pudimos alinear los elementos de forma horizontal 
+            pero que pasa cuando el aliniamiento lo queremos realizar de forma vertical. <br>
+            Para esta tarea utilizaremos la propiedad <span class="badge badge-red">align-item: [valor]</span>
+        </p>
+
+        <div class="bg-red d-flex just-center mt-3" style="height: 120px;">
+            <div class="p-1 bg-black c-white ta-c">1</div>
+            <div class="p-1 bg-black c-white ta-c">2</div>
+        </div>
+
+        <p class="mt-3">
+            Como se puede ver números identificadores de contenedores quedan en la parte superior del contenedor padre y la altura
+            de los dos contenedores ocupa el 100% del alto. <br>
+            si queremos centrarlos utilizamos <span class="badge badge-red">align-items: center</span>
+        </p>
+
+        <div class="bg-red d-flex just-center ali-center mt-3" style="height: 120px;">
+            <div class="p-1 bg-black c-white ta-c">1</div>
+            <div class="p-1 bg-black c-white ta-c">2</div>
+        </div>
+
+<div class="codigo">
+<pre class="cod-css" id="c6">
+    .flex-box {
+        display: flex;
+        justify-content: center;
+        align-item: center;
+    }
+</pre>
+</div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <article class="articulo">
+            <h2 id="t3">Flexbox en Bodystyle</h2>
+            <p>
+                Ahora vamos a ver como aplicar las propiedades antes vistas con las clases provistas 
+                por la librería no solo de manera estática sino dinámica (cambiando las propiedades en función
+                del tamaño de pantalla donde se estén mostrando los elementos).
+            </p>
+
+            <h3 id="t4">d-flex</h3>
+            <p>
+                La clase que permite implementar flexbox en los contenedores es 
+                <span class="badge badge-red">.d-flex</span> que por defecto generará 
+                un alineamiento horizontal.
+            </p>
+
+            <div class="d-flex">
+                <div class="p-1 bg-red ta-c bor-3">1</div>
+                <div class="p-1 bg-red ta-c bor-3">2</div>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c7">
+    <div class="d-flex">
+        <div class="p-1 bg-red ta-c bor-3">1</div>
+        <div class="p-1 bg-red ta-c bor-3">2</div>
+    </div>
+</pre>
+</div>
+            
+        </article>
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="guia-pagina">
+        <ul>
+            <li><a href="#a1_pt">Subtitulo 1</a></li>
+            <li><a href="">Template literal</a></li>
+            <li><a href="">Boton Flotante</a></li>
+            <li><a href="">Servicios</a></li>
+            <li><a href="">Template literal</a></li>
+            <li><a href="">Boton Flotante</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Flexbox"
+        var idMenu = "#m3"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>

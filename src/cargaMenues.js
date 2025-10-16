@@ -37,7 +37,7 @@ import $ from "jquery"
                 <li><a href="">Helpers</a></li>
                 <li><a href="margin.html">Margin</a></li>
                 <li><a href="padding.html">Padding</a></li>
-                <li><a href="">Flexbox</a></li>
+                <li><a href="flexbox.html">Flexbox</a></li>
                 <li><a href="">Grilla</a></li>
             </ul>
             <a  class="titulo c-blanco t-may" data-target="#m4">Formularios</a>
