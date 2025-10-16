@@ -36,7 +36,7 @@ import $ from "jquery"
                 <li><a href="contenedor.html">Contenedor</a></li>
                 <li><a href="">Helpers</a></li>
                 <li><a href="margin.html">Margin</a></li>
-                <li><a href="">Padding</a></li>
+                <li><a href="padding.html">Padding</a></li>
                 <li><a href="">Flexbox</a></li>
                 <li><a href="">Grilla</a></li>
             </ul>
