@@ -573,7 +573,7 @@
         </div>
         
 <div class="codigo">
-<pre class="cod-html" id="c115">
+<pre class="cod-html" id="c15">
     <!--just-center y just-start-m -->
     <div class="bg-red d-flex just-center just-start-m  ali-center" style="height: 150px;">
         <div class="bg-black p-1 ta-c c-white">1</div>
@@ -637,11 +637,123 @@
                     <td>Alinea el contenido al inicio pero a partir de pantallas extra chicos.</td>
                 </tr>
 
+                <tr>
+                    <td>just-center-m</td>
+                    <td> 770px < X < 1030px </td>
+                    <td>Alinea el contenido al centro pero a partir de pantallas medianas.</td>
+                </tr>
 
+                <tr>
+                    <td>just-center-s</td>
+                    <td> 400px < X <= 770px </td>
+                    <td>Alinea el contenido al centro pero a partir de pantallas chicas.</td>
+                </tr>
+
+                <tr>
+                    <td>just-center-xs</td>
+                    <td> X < 400px </td>
+                    <td>Alinea el contenido al centro pero a partir de pantallas extra chicas.</td>
+                </tr>
+
+                <tr>
+                    <td>just-end-m</td>
+                    <td>  770px < X < 1030px </td>
+                    <td>Alinea el contenido al final pero a partir de pantallas medianas.</td>
+                </tr>
+
+                <tr>
+                    <td>just-end-s</td>
+                    <td>  400px < X <= 770px </td>
+                    <td>Alinea el contenido al final pero a partir de pantallas chicas.</td>
+                </tr>
+
+
+                <tr>
+                    <td>just-end-xs</td>
+                    <td>  X < 400px </td>
+                    <td>Alinea el contenido al final pero a partir de pantallas extra chicas.</td>
+                </tr>
             </tbody>
         </table>
+        
+        <h3 id="t16">Alineación Variable</h3>
 
+        <p>
+            Similar a lo que sucede con la justificación podemos realizarlo con la Alineación
+            vertical, la librería dispone de clases para ajustar estos valores a todo tipo de 
+            pantalla.
+        </p>
+
+        <div class="bg-red d-flex just-center ali-center ali-end-m" style="height: 150px;">
+            <div class="bg-black p-1 ta-c c-white">1</div>
+            <div class="bg-black p-1 ta-c c-white">2</div>
+        </div>
+
+        <div class="alerta-negra my-3">
+            En este ejemplo utiliza un alineamiento centrado para equipos de mas de 1030px, pero para 
+            menos que ese valor la alineación se posiciona al final.
+        </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c16">
+    <!-- ali-center y ali-end-m -->
+    <div class="bg-red d-flex just-center ali-center ali-end-m" style="height: 150px;">
+        <div class="bg-black p-1 ta-c c-white">1</div>
+        <div class="bg-black p-1 ta-c c-white">2</div>
+    </div>
+</pre>
+</div> 
+
+            <p>
+                Otro ejemplo un poco mas completo es utilizar una alineación centrada en equipos 
+                grandes, una alineación al inicio en equipos medianos y la ruptura del flexbox en 
+                equipos chicos, todo esto en los mismos contenedores.
+            </p>
+
+
+            <div class="bg-red d-flex  ali-center ali-start-m flex-wrap-s" style="height: 800px;">
+                <div  class="card"> 
+                    <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                    <small>Pequeña descripción</small>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                    </p> 
+                        <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                    </div><!-- FIN Tarjeta oscura -->
+                </div>
+                <!-- Tarjeta clara-->
+                <div  class="card">
+                    <div  class="card-simple-light"> <!-- Comienzo de la tarjeta simple-->
+                        <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                        <small>Pequeña descripción</small>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                        </p> 
+                        <button  href=""  class="btn-cover-sm-o btn-black-o mar-2">Subs</button>
+                    </div> <!-- FIN de la tarjeta simple-->
+                </div>
+            </div>
+
+            <table class="selector table-dark table-sm vertical-border table-bor-grey mt-3">
+                <thead>
+                    <tr>
+                        <th>Clase</th>
+                        <th>Tamaños</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ali-start</td>
+                        <td>Todos los tamaños</td>
+                        <td>Alinea los elementos al inicio del contenedor padre</td>
+                    </tr>
+                </tbody>
+            </table>
         </article>
+
+        
 
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
