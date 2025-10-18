@@ -175,16 +175,45 @@
                     </li>
                 </ul>
             </div>
+
+            <h3 id="t5"><i class="fa-solid fa-3 c-rojo-ro"></i>&nbsp;Dynamics-Tips</h3>
+            <p>
+                Es una dependencia creada por la misma persona que desarrolló la librería Bodystyle que 
+                permite incluir dentro del diseño objetos dinámicos informátivos en los puede incluirse 
+                código html con el fin de brindarle al usuario información más específica del contenido 
+                de la página.
+            </p>
+
+            <h4 class="mb-3">Repositorio</h4>
+
+            <a class="btn-sm bg-green com-trigger bor-pill"
+            data-info="Dependencia <span class='f-w-9'>dynamics-tips</span> para generar elementos dinámicos y brindarle al usuario más información sobre determinadas cuestiones referidas al sitio."
+            href="https://github.com/FedericoManzano/dynamics-tips">Dynamics-Tips 1.8.0</a>
+        
+            
+            <h3 id="t6"><i class="fa-solid fa-4 c-rojo-ro"></i>&nbsp;Show Code</h3>
+            <p>
+                Dependencia realizada por el mismo desarrollador de Bodystyle que pretende poder colorear el código 
+                fuente dentro de una página web. Los lenguajes de programación admitidos por esta dependencia son: <br>
+                Java, JavaScript, C, CSS, Html.
+            </p>
+
+            <h4 class="mb-3">Repositorio</h4>
+
+            <a class="btn-sm bg-green com-trigger bor-pill"
+            data-info="Dependencia <span class='f-w-9'>show-code 1.1.1</span>se utiliza para colorear el código fuente y permitir la claridad de lo mostrado en los ejemplos."
+            href="https://github.com/FedericoManzano/show-code">Show-Code 1.1.1</a>
+
         </article>
 
         <article class="articulo">
-            <h2>Descarga e Instalación</h2>
+            <h2 id="t7">Descarga e Instalación</h2>
             <p>
                 Vamos a ver las diferentes formas de disponer de la librería a través de los 
                 diferentes medios según el proyecto en desarrollo.
             </p>
 
-            <h3>Descarga de los Archivos</h3>
+            <h3 id="t8">Descarga de los Archivos</h3>
             <p class="mb-3">
                 Descargar el procesado de la librería con los archivos transpilados.
             </p>
@@ -194,7 +223,7 @@
             data-tips="<i class='fa-solid fa-download'>&nbsp;</i> Descarga de <span class='badge badge-red'>Bodystyle 4.0.0</span>"
             data-color="fd-blanco">Bodystyle 4.0.0</a>
 
-            <h3>CDN Plantilla</h3>
+            <h3 id="t9">CDN Plantilla</h3>
 
             <p>
                 Se puede agregar la plantilla que se encuentra a continuación para disponer de los estilos y de la lógica en JS 
@@ -202,7 +231,7 @@
                 la carga de la librería.
             </p>
 <div class="codigo">
-    <pre id="c4" class="cod-html">
+    <pre id="c1" class="cod-html">
     <!--DESCOMENTAR ESTE CÓDIGO -->
     <!--
         <!DOCTYPE html>
@@ -224,7 +253,7 @@
             para el correcto funcionamiento de la librería.</b>
         </div>
 
-        <h3>Npm</h3>
+        <h3 id="t10">Npm</h3>
 
         <p>
             Se pude agregar la librería al proyecto a través del gestor de paquetes de NodeJs NPM.
@@ -239,12 +268,12 @@
         </article>
 
         <article class="articulo">
-            <h2>Desarrollo</h2>
+            <h2 class="t11">Desarrollo</h2>
             <p>
                 Para el desarrollo de la librería se utilizó el entorno de ejecución NodeJs 22.20.0 y el gestor de paquetes 
                 11.6.1.
             </p>
-            <h3>Gestor de paquetes</h3>
+            <h3 id="t12">Gestor de paquetes</h3>
             <div class="row mar-3">
                 <div class="card cxs-12 cs-12 cm-6 cl-4">
                     <div class="card-icon-dark card-cover com-trigger"
@@ -274,7 +303,7 @@
                 </div>
             </div>
 
-            <h3>JS</h3>
+            <h3 id="t13">JS</h3>
             <p class="mab-3">
                 Las dependencias utilizadas para el desarrollo son WEBPACK para 
                 modularizar el código JS y BABEL para transpilar el código de JavaScript 
@@ -282,38 +311,28 @@
             </p>
             <div class="row">
                 <div class="card cxs-12 cs-12 cm-6 cl-4">
-                    <div class="card-icon-dark card-cover">
+                    <div class="card-icon-dark card-cover com-trigger"
+                    data-info="Webpack es un empaquetador de módulos estáticos para aplicaciones web modernas que transforma código y recursos (como JavaScript, CSS, imágenes y fuentes)">
                         <div class="image-container">
-                            <img src="../imagenes/wp.png" alt="">
+                            <img src="../imagenes/wp.png" alt="Webpack modularización del código fuente js.">
                         </div>
                         <div>
                             <h4 class="mar-0">WEBPACK</h4>
                             <small>v5.0.7</small> <br>
-                            <a href="" class="link">Sitio Oficial</a>
+                            <a href="https://webpack.js.org/" class="link" target="_blank">Sitio Oficial</a>
                         </div>
                     </div>
                 </div>
                 <div class="card cxs-12 cs-12 cm-6 cl-4">
-                    <div class="card-icon-dark card-cover">
+                    <div class="card-icon-dark card-cover com-trigger"
+                    data-info="Babel es un compilador de JavaScript que transforma código moderno (ECMAScript 2015+ o ES6+) a una versión más antigua y compatible con navegadores y entornos que no soportan las características más recientes del lenguaje.">
                         <div class="image-container">
                             <img src="../imagenes/ba.png" alt="">
                         </div>
                         <div>
                             <h4 class="mar-0">BABEL</h4>
                             <small>8.0.8</small> <br>
-                            <a href="" class="link">Sitio Oficial</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card cxs-12 cs-12 cm-6 cl-4">
-                    <div class="card-icon-dark card-cover">
-                        <div class="image-container">
-                            <img src="../imagenes/jquery.png" alt="">
-                        </div>
-                        <div>
-                            <h4 class="mar-0">JQUERY</h4>
-                            <small>v5.0.7</small> <br>
-                            <a href="" class="link">Sitio Oficial</a>
+                            <a href="https://babeljs.io/" class="link" target="_blank">Sitio Oficial</a>
                         </div>
                     </div>
                 </div>
@@ -321,131 +340,26 @@
 
             <h3>Transpilar el código JS de Bodystyle</h3>
     <div class="codigo">
-    <pre id="c1" class="cod-js">
+    <pre id="c2" class="cod-js">
         // desde el prompt ejecutar 
         npm run build
     </pre>
     </div>
 
-        <h3>Procesador de estilos</h3>
+        <h3 id="t14">Procesador de estilos</h3>
         <div class="card">
-            <div class="card-icon-dark">
+            <div class="card-icon-dark com-trigger"
+            data-info="Sass es un preprocesador CSS (Syntactically Awesome Style Sheets) que extiende las capacidades de CSS añadiendo características de programación como variables, funciones, anidación y herencia">
                 <div class="image-container">
                     <img src="../imagenes/sass.png" alt="">
                 </div>
                 <div>
                     <h4 class="mar-0">SASS</h4>
                     <small>v5.0.7</small> <br>
-                    <a href="" class="link">Sitio Oficial</a>
+                    <a href="https://sass-lang.com/" class="link" target="_blank">Sitio Oficial</a>
                 </div>
             </div>
         </div>        
-        </article>
-
-        <article class="articulo">
-            <h2 id="t2">Dependencias</h2>
-            <p class="mab-3">
-                Las dependencias utilizadas para el desarrollo y producción de 
-                la librería bodystyle.
-            </p>
-            <div class="row">
-                <div class="card cxs-12 cs-12 cm-6 cl-4">
-                    <div class="card-icon-dark card-cover">
-                        <div class="image-container">
-                            <img src="../imagenes/wp.png" alt="">
-                        </div>
-                        <div>
-                            <h4 class="mar-0">WEBPACK</h4>
-                            <small>v5.0.7</small> <br>
-                            <a href="" class="link">Sitio Oficial</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card cxs-12 cs-12 cm-6 cl-4">
-                    <div class="card-icon-dark card-cover">
-                        <div class="image-container">
-                            <img src="../imagenes/ba.png" alt="">
-                        </div>
-                        <div>
-                            <h4 class="mar-0">BABEL</h4>
-                            <small>8.0.8</small> <br>
-                            <a href="" class="link">Sitio Oficial</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card cxs-12 cs-12 cm-6 cl-4">
-                        <div class="card-icon-dark card-cover">
-                            <div class="image-container">
-                                <img src="../imagenes/jquery.png" alt="">
-                            </div>
-                            <div>
-                                <h4 class="mar-0">JQUERY</h4>
-                                <small>v3.5.1</small><br>
-                                <a href="" class="link">Sitio Oficial</a>
-                            </div>
-                        </div>
-                </div>
-            </div>
-
-            <h3>Package.json</h3>
-    <div class="codigo">
-    <pre id="c1" class="cod-js">
-    // Package.json de la librería
-    {
-        "name": "body-ui",
-        "version": "4.0.0",
-        "description": "Librería de estilos estáticos y dinámicos para la creación del Front-End WEB.",
-        "main": "dist/js/bodystyle.js",
-        "scripts": {
-          "build": "webpack"
-        },
-        "repository": {
-          "type": "git",
-          "url": "git+https://github.com/FedericoManzano/bodystyle"
-        },
-        "files": [
-          "dist/{css,js}/*.{css,js,map}",
-          "src/{modulos}/**/*.{js}",
-          "src/**/*.js",
-          "sass/**/*.scss"
-        ],
-        "keywords": [
-          "librería",
-          "css",
-          "framework",
-          "ui",
-          "sass"
-        ],
-        "author": "Federico Manzano",
-        "license": "MIT",
-        "style": "dist/css/bodystyle.css",
-        "sass": "sass/bodystyle.scss",
-        "dependencies": {
-          "dynamics-tips": "^1.8.0",
-          "jquery": "^3.5.1",
-          "show-sintax": "^1.1.1"
-        },
-        "devDependencies": {
-          "@babel/cli": "^7.8.4",
-          "@babel/core": "^7.10.5",
-          "@babel/preset-env": "^7.10.4",
-          "acorn": "^8.0.1",
-          "babel": "^6.23.0",
-          "babel-core": "^6.26.3",
-          "babel-loader": "^8.1.0",
-          "braces": "^3.0.2",
-          "css-loader": "^5.0.0",
-          "kind-of": "^6.0.3",
-          "lodash": "^4.17.19",
-          "minimist": "^1.2.5",
-          "style-loader": "^2.0.0",
-          "webpack": "^5.102.0",
-          "webpack-cli": "^4.1.0"
-        }
-    }
-
-    </pre>
-    </div>
         </article>
 
 
@@ -456,8 +370,19 @@
     <div class="guia-pagina">
         <ul>
             <li><a href="#t1">Get Started</a></li>
-            <li><a href="#t2">Template</a></li>
-            <li><a href="#t3">Subtitulo</a></li>
+            <li><a href="#t2">Core Bodystyle</a></li>
+            <li><a href="#t3">Alineamiento</a></li>
+            <li><a href="#t4">Utilitarios</a></li>
+            <li><a href="#t5">Dynamics-Tips</a></li>
+            <li><a href="#t6">Show-Code</a></li>
+            <li><a href="#t7">Instalación</a></li>
+            <li><a href="#t8">Descarga Directa</a></li>
+            <li><a href="#t9">CDN</a></li>
+            <li><a href="#t10">NPM</a></li>
+            <li><a href="#t11">Desarrollo</a></li>
+            <li><a href="#t12">Gesto Paquetes</a></li>
+            <li><a href="#t13">Js</a></li>
+            <li><a href="#t14">Sass</a></li>
         </ul>
     </div>
 
