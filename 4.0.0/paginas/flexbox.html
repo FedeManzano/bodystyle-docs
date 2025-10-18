@@ -749,8 +749,174 @@
                         <td>Todos los tamaños</td>
                         <td>Alinea los elementos al inicio del contenedor padre</td>
                     </tr>
+                    <tr>
+                        <td>ali-center</td>
+                        <td>Todos los tamaños</td>
+                        <td>Alinea los elementos al centro del contenedor padre</td>
+                    </tr>
+                    <tr>
+                        <td>ali-end</td>
+                        <td>Todos los tamaños</td>
+                        <td>Alinea los elementos al final del contenedor padre</td>
+                    </tr>
+                    <tr>
+                        <td>ali-stretch</td>
+                        <td>Todos los tamaños</td>
+                        <td>Alinea los elementos distruyendolos proporcionalmente por todo el contenedor padre</td>
+                    </tr>
+
+                    <tr>
+                        <td>ali-start-m</td>
+                        <td>770px < X < 1030px </td>
+                        <td>Alinea los elementos al inicio del contenedor padre en equipos medianos</td>
+                    </tr>
+                    <tr>
+                        <td>ali-start-s</td>
+                        <td>400px < X < 770px </td>
+                        <td>Alinea los elementos al inicio del contenedor padre en equipos chicos</td>
+                    </tr>
+                    <tr>
+                        <td>ali-start-xs</td>
+                        <td>400px > X </td>
+                        <td>Alinea los elementos al inicio del contenedor padre en equipos extra chicos</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>ali-center-m</td>
+                        <td>770px < X < 1030px </td>
+                        <td>Alinea los elementos al centro del contenedor padre en equipos medianos</td>
+                    </tr>
+                    <tr>
+                        <td>ali-center-s</td>
+                        <td>400px < X < 770px </td>
+                        <td>Alinea los elementos al centro del contenedor padre en equipos chicos</td>
+                    </tr>
+                    <tr>
+                        <td>ali-center-xs</td>
+                        <td>400px > X </td>
+                        <td>Alinea los elementos al centro del contenedor padre en equipos extra chicos</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>ali-end-m</td>
+                        <td>770px < X < 1030px </td>
+                        <td>Alinea los elementos al final del contenedor padre en equipos medianos</td>
+                    </tr>
+                    <tr>
+                        <td>ali-end-s</td>
+                        <td>400px < X < 770px </td>
+                        <td>Alinea los elementos al final del contenedor padre en equipos chicos</td>
+                    </tr>
+                    <tr>
+                        <td>ali-end-xs</td>
+                        <td>400px > X </td>
+                        <td>Alinea los elementos al final del contenedor padre en equipos extra chicos</td>
+                    </tr>
+                    <tr>
+                        <td>ali-stretch-m</td>
+                        <td>770px < X < 1030px</td>
+                        <td>Alinea los elementos distruyendolos proporcionalmente por todo el contenedor padre</td>
+                    </tr>
+
+                    <tr>
+                        <td>ali-stretch-s</td>
+                        <td>400px < X < 770px</td>
+                        <td>Alinea los elementos distruyendolos proporcionalmente por todo el contenedor padre</td>
+                    </tr>
+
+                    <tr>
+                        <td>ali-stretch-xs</td>
+                        <td>400px > X </td>
+                        <td>Alinea los elementos distruyendolos proporcionalmente por todo el contenedor padre</td>
+                    </tr>
                 </tbody>
             </table>
+        </article>
+
+        <article class="articulo">
+            <h2 id="17">Flex Culumn-Row</h2>
+            <p>
+                Por defecto la clase <span class="badge badge-red">d-flex</span> establece el 
+                alineamiento de forma horizontal, pero existen ocasiones en las cuales debemos 
+                disponer de un alineamiento horizontal en determinadas circunstancias y en otras optar 
+                por un alineamiento vertical. Por esta razón existen dos clases que permiten definir esta situación.
+            </p>
+
+             <div class="d-flex  flex-row flex-column-m mt-3">
+                <div  class="card"> 
+                    <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                    <small>Pequeña descripción</small>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                    </p> 
+                        <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                    </div><!-- FIN Tarjeta oscura -->
+                </div>
+                <!-- Tarjeta clara-->
+                <div  class="card">
+                    <div  class="card-simple-light"> <!-- Comienzo de la tarjeta simple-->
+                        <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                        <small>Pequeña descripción</small>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                        </p> 
+                        <button  href=""  class="btn-cover-sm-o btn-black-o mar-2">Subs</button>
+                    </div> <!-- FIN de la tarjeta simple-->
+                </div>
+            </div>
+
+
+    <div class="codigo">
+        <pre id="c17" class="cod-html">
+
+        <!-- 
+             flex-row para equipos > 1030px
+             flex-column-m para equpos menores 1030px 
+        -->
+        <div class="d-flex  flex-row flex-column-m">
+            <div  class="card"> 
+                <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                    <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                </div><!-- FIN Tarjeta oscura -->
+            </div>
+            <!-- Tarjeta clara-->
+            <div  class="card">
+                <div  class="card-simple-light"> <!-- Comienzo de la tarjeta simple-->
+                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                    <small>Pequeña descripción</small>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                    </p> 
+                    <button  href=""  class="btn-cover-sm-o btn-black-o mar-2">Subs</button>
+                </div> <!-- FIN de la tarjeta simple-->
+            </div>
+        </div>
+        </pre>
+    </div>
+
+        <div class="alerta-negra my-3">
+            Si achican el tamaño de la pantalla a menos de 1030px las dos tarjetas utilizadas para el ejemplo 
+            se acomodarán encolumnadas y no en forma de horizontal. <br>
+            Como se muestra en el ejemplo las clases utilizadas son:
+            <div class="lista-doc m-0">
+                <ul>
+                    <li>.flex-row</li>
+                    <li>.flex-column-m</li>
+                </ul>
+            </div>
+            La clase <span class="f-w-9">.flex-row</span> no posee parámetro referente a el tamaño de pantalla, por lo tanto 
+            se aplicará a todos los dispositivos, mientras que la clase <span class="f-w-9">.flex-column-m</span> si lo tiene 
+            y se aplicará a partir de equipos medianos.
+        </div>
+
         </article>
 
         
