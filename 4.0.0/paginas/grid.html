@@ -27,7 +27,7 @@
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
-            <h1>Grid</h1>
+            <h1 id="t1">Grid</h1>
             <p>
                 La grilla de la librería es la herramienta mas importante del alineamiento de los elementos 
                 dentro del DOM, junto con Flexbox y la capacidad de ajustar el Margin y el Padding, la grilla permite 
@@ -41,47 +41,281 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="a1_pt">SubTitulo Artículo 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus ea nulla aliquam soluta commodi laboriosam nobis reprehenderit, 
-                labore est asperiores voluptatum beatae fuga atque rem eos nemo rerum magnam.</p>
+            <h2 id="t2">Grid Row-Fila</h2>
+            <p>
+                Es necesario para definir la grilla disponer de un contenedor dividido en doce partes iguales, de manera 
+                tal que cada un de los elementos internos ocupen un conjunto de columnas definidas por el usuario de la grilla.
+            </p>
+
+            <div class="row my-3">
+                <div class="p-1 bg-red ta-c cl-1">1</div>
+                <div class="p-1 bg-red ta-c cl-1">2</div>
+                <div class="p-1 bg-red ta-c cl-1">3</div>
+                <div class="p-1 bg-red ta-c cl-1">4</div>
+                <div class="p-1 bg-red ta-c cl-1">5</div>
+                <div class="p-1 bg-red ta-c cl-1">6</div>
+                <div class="p-1 bg-red ta-c cl-1">7</div>
+                <div class="p-1 bg-red ta-c cl-1">8</div>
+                <div class="p-1 bg-red ta-c cl-1">9</div>
+                <div class="p-1 bg-red ta-c cl-1">10</div>
+                <div class="p-1 bg-red ta-c cl-1">11</div>
+                <div class="p-1 bg-red ta-c cl-1">12</div>
+            </div>
+
+            <div class="alerta-negra">
+                Cada columna está representada en el ejemplo anterior por un número y la clase 
+                para definar la grilla es <span class="badge badge-red">.row / .fila</span>
+            </div>
 
 <div class="codigo">
 
 <pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
+    <div class="row my-3">
+        <div class="p-1 bg-red ta-c cl-1">1</div>
+        <div class="p-1 bg-red ta-c cl-1">2</div>
+        <div class="p-1 bg-red ta-c cl-1">3</div>
+        <div class="p-1 bg-red ta-c cl-1">4</div>
+        <div class="p-1 bg-red ta-c cl-1">5</div>
+        <div class="p-1 bg-red ta-c cl-1">6</div>
+        <div class="p-1 bg-red ta-c cl-1">7</div>
+        <div class="p-1 bg-red ta-c cl-1">8</div>
+        <div class="p-1 bg-red ta-c cl-1">9</div>
+        <div class="p-1 bg-red ta-c cl-1">10</div>
+        <div class="p-1 bg-red ta-c cl-1">11</div>
+        <div class="p-1 bg-red ta-c cl-1">12</div>
     </div>
 </pre>
 </div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
-<div class="codigo">
 
+            <div class="alerta-negra">
+                En este caso se define la clase <span class="badge badge-red">.cl-1</span> lo que implica 
+                que cada elemento va a ocupar 1 columna en todos los tamaños de pantalla sin importar el tamaño. 
+            </div>
+
+            <h3 id="t3">Varias Columnas</h3>
+            <p>
+                La forma de que un elemento ocupe varias clolumnas lo definimos con el parámetro que acompaña a la 
+                clase <span class="badge badge-red">cl-[n]</span> donde n es el numero de columnas que ocupa cada elemento.
+            </p>
+
+            <div class="row my-3">
+                <div class="p-1 bg-red ta-c cl-3">1</div>
+                <div class="p-1 bg-red ta-c cl-3">2</div>
+                <div class="p-1 bg-red ta-c cl-3">3</div>
+                <div class="p-1 bg-red ta-c cl-3">4</div>
+                <div class="p-1 bg-red ta-c cl-3">5</div>
+                <div class="p-1 bg-red ta-c cl-3">6</div>
+                <div class="p-1 bg-red ta-c cl-3">7</div>
+                <div class="p-1 bg-red ta-c cl-3">8</div>
+                <div class="p-1 bg-red ta-c cl-3">9</div>
+                <div class="p-1 bg-red ta-c cl-3">10</div>
+                <div class="p-1 bg-red ta-c cl-3">11</div>
+                <div class="p-1 bg-red ta-c cl-3">12</div>
+            </div>      
+<div class="codigo">
 <pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
+    <div class="row my-3">
+        <div class="p-1 bg-red ta-c cl-3">1</div>
+        <div class="p-1 bg-red ta-c cl-3">2</div>
+        <div class="p-1 bg-red ta-c cl-3">3</div>
+        <div class="p-1 bg-red ta-c cl-3">4</div>
+        <div class="p-1 bg-red ta-c cl-3">5</div>
+        <div class="p-1 bg-red ta-c cl-3">6</div>
+        <div class="p-1 bg-red ta-c cl-3">7</div>
+        <div class="p-1 bg-red ta-c cl-3">8</div>
+        <div class="p-1 bg-red ta-c cl-3">9</div>
+        <div class="p-1 bg-red ta-c cl-3">10</div>
+        <div class="p-1 bg-red ta-c cl-3">11</div>
+        <div class="p-1 bg-red ta-c cl-3">12</div>
+    </div>  
 </pre>
 </div>
-        <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
-        </p>
+
+
+            <div class="alerta-negra">
+                Como se puede observar en el ejemplo cada elemento ocupa 3 columnas, por esta razón 
+                hay 4 elementos por fila lo que se deduce a partir de la siguiente expresión 
+                <span class="badge badge-red">12 Columnas / 3 Columnas = 4 elementos por fila</span>.
+            </div>
+
+
+            <p class="my-3">
+                Que sucede si queremos que ocupe 4 columnas y que existan solo 3 elementos por fila.
+            </p>
+
+            <div class="row">
+                <div class="p-1 bg-red ta-c cl-4">1</div>
+                <div class="p-1 bg-red ta-c cl-4">2</div>
+                <div class="p-1 bg-red ta-c cl-4">3</div>
+                <div class="p-1 bg-red ta-c cl-4">4</div>
+                <div class="p-1 bg-red ta-c cl-4">5</div>
+                <div class="p-1 bg-red ta-c cl-4">6</div>
+                <div class="p-1 bg-red ta-c cl-4">7</div>
+                <div class="p-1 bg-red ta-c cl-4">8</div>
+                <div class="p-1 bg-red ta-c cl-4">9</div>
+                <div class="p-1 bg-red ta-c cl-4">10</div>
+                <div class="p-1 bg-red ta-c cl-4">11</div>
+                <div class="p-1 bg-red ta-c cl-4">12</div>
+            </div> 
+
+<div class="codigo">
+<pre class="cod-html" id="c3">
+    <div class="row my-3">
+        <div class="p-1 bg-red ta-c cl-4">1</div>
+        <div class="p-1 bg-red ta-c cl-4">2</div>
+        <div class="p-1 bg-red ta-c cl-4">3</div>
+        <div class="p-1 bg-red ta-c cl-4">4</div>
+        <div class="p-1 bg-red ta-c cl-4">5</div>
+        <div class="p-1 bg-red ta-c cl-4">6</div>
+        <div class="p-1 bg-red ta-c cl-4">7</div>
+        <div class="p-1 bg-red ta-c cl-4">8</div>
+        <div class="p-1 bg-red ta-c cl-4">9</div>
+        <div class="p-1 bg-red ta-c cl-4">10</div>
+        <div class="p-1 bg-red ta-c cl-4">11</div>
+        <div class="p-1 bg-red ta-c cl-4">12</div>
+    </div>  
+</pre>
+</div>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
 
+
+        <article class="articulo">
+            <h2 id="t3">Tamaños de Pantalla</h2>
+            <p>
+                En los ejemplos anteriores definimos la grilla junto con lo que ocupa cada elemento 
+                en la misma para todos los tamaños de pantalla, lo que implica que si definimos una cantida fija 
+                de columnas esta se mantendra constante en cada dispositivo sin importar su tamaño. <br>
+                Ahora bien, que sucede cuando queremos definir que un elemento ocupe n columnas en los dispositivos 
+                mayores 1030px de pantalla y m columnas para dispositivos de pantalla mas pequeña.
+            </p>
+
+             <div class="row my-3">
+                <div class="p-1 bg-red ta-c cm-6 cl-4">1</div>
+                <div class="p-1 bg-red ta-c cm-6 cl-4">2</div>
+                <div class="p-1 bg-red ta-c cm-6 cl-4">3</div>
+                <div class="p-1 bg-red ta-c cm-6 cl-4">4</div>
+                <div class="p-1 bg-red ta-c cm-6 cl-4">5</div>
+                <div class="p-1 bg-red ta-c cm-6 cl-4">6</div>
+                <div class="p-1 bg-red ta-c cm-6 cl-4">7</div>
+                <div class="p-1 bg-red ta-c cm-6 cl-4">8</div>
+                <div class="p-1 bg-red ta-c cm-6 cl-4">9</div>
+                <div class="p-1 bg-red ta-c cm-6 cl-4">10</div>
+                <div class="p-1 bg-red ta-c cm-6 cl-4">11</div>
+                <div class="p-1 bg-red ta-c cm-6 cl-4">12</div>
+            </div>  
+
+<div class="codigo">
+<pre class="cod-html" id="c4">
+    <div class="row my-3">
+        <div class="p-1 bg-red ta-c cm-6 cl-4">1</div>
+        <div class="p-1 bg-red ta-c cm-6 cl-4">2</div>
+        <div class="p-1 bg-red ta-c cm-6 cl-4">3</div>
+        <div class="p-1 bg-red ta-c cm-6 cl-4">4</div>
+        <div class="p-1 bg-red ta-c cm-6 cl-4">5</div>
+        <div class="p-1 bg-red ta-c cm-6 cl-4">6</div>
+        <div class="p-1 bg-red ta-c cm-6 cl-4">7</div>
+        <div class="p-1 bg-red ta-c cm-6 cl-4">8</div>
+        <div class="p-1 bg-red ta-c cm-6 cl-4">9</div>
+        <div class="p-1 bg-red ta-c cm-6 cl-4">10</div>
+        <div class="p-1 bg-red ta-c cm-6 cl-4">11</div>
+        <div class="p-1 bg-red ta-c cm-6 cl-4">12</div>
+    </div>  
+</pre>
+</div>
+        <div class="alerta-negra">
+            Como se puede observar en el ejemplo anterior se añadió a cada elemento la clase 
+            <span class="badge badge-red">cm-[n]</span> lo cual implica que en dispositivos menores
+            a 1030px de ancho la cantidad de columnas asignadas a cada elemento va a ser de 6, por lo tanto la configuración de elementos 
+            se presenta a partir de la siguiente expresión: <br>
+            <span class="badge badge-red">12 Columnas / 4 Columnas = 3</span> y <span class="badge badge-red">12 Columnas / 6 Columnas = 2</span> esto 
+            quiere decir que en dispositivos grandes (mayores a 1030px) la cantidad de columnas de cada elemento va a ser de 3, mientras que en dispositivos 
+            menosres a 1030px va a ser de 2.
+        </div>
+
+        <table class="selector table-dark vertical-border table-sm table-bor-grey mt-3">
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Descripción</th>
+                    <th>Rango</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>.cl-[n]</td>
+                    <td>Cantidad de columnas que ocupa un elemento en dispositivos 
+                        mayores a 1030px
+                    </td>
+                    <td>n = 1-12</td>
+                </tr>
+
+                <tr>
+                    <td>.cm-[n]</td>
+                    <td>Cantidad de columnas que ocupa un elemento en dispositivos 
+                        menores a 1030px
+                    </td>
+                    <td>n = 1-12</td>
+                </tr>
+
+                <tr>
+                    <td>.cs-[n]</td>
+                    <td>Cantidad de columnas que ocupa un elemento en dispositivos 
+                        menores a 770px
+                    </td>
+                    <td>n = 1-12</td>
+                </tr>
+
+                <tr>
+                    <td>.cxs-[n]</td>
+                    <td>Cantidad de columnas que ocupa un elemento en dispositivos 
+                        menores a 400px
+                    </td>
+                    <td>n = 1-12</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 id="t4">Ejemplo Completo</h3>
+        <p>
+            Ahora definimos un ejemplo en el que los elementos en los dispositivos mayores a 1030px 
+            ocuparán 3 columnas, en dispositivos medianos menores a 1030px ocuparán 4 columnas, en dispositivos chicos 
+            ocuparán 6 columnas y en dispositivos extra chicos menores a 400px ocuparan 12 columnas (100% de la grilla).
+        </p> 
+
+        <div class="row">
+            <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">1</div>
+            <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">2</div>
+            <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">3</div>
+            <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">4</div>
+            <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">5</div>
+            <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">6</div>
+            <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">7</div>
+            <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">8</div>
+            <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">9</div>
+            <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">10</div>
+            <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">11</div>
+            <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">12</div>
+        </div>
+<div class="codigo">
+<pre class="cod-html" id="c5">
+    <div class="row">
+        <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">1</div>
+        <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">2</div>
+        <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">3</div>
+        <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">4</div>
+        <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">5</div>
+        <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">6</div>
+        <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">7</div>
+        <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">8</div>
+        <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">9</div>
+        <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">10</div>
+        <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">11</div>
+        <div class="p-1 bg-red ta-c cxs-12 cs-6 cm-4 cl-3">12</div>
+    </div>
+</pre>
+</div>
+        
+        </article>
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
