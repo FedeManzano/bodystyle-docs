@@ -34,7 +34,7 @@
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
-            <h1>Flexbox</h1>
+            <h1 id="t1">Flexbox</h1>
             <p>
                 En este apartado vamos a ver y analizar una de las funcionalidades más importantes 
                 de CSS 3, que permite el aliniamiento horizontal y vertical de los elementos con la facilidad 
@@ -49,7 +49,7 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="t1">Flexbox en CSS3</h2>
+            <h2 id="t2">Flexbox en CSS3</h2>
             <p>
                 En CSS3 se utiliza la propiedad <span class="badge badge-red">display: flex</span> 
                 que por defecto acomoda a los elementos de forma horizontal uno pegado al otro.
@@ -836,7 +836,7 @@
         </article>
 
         <article class="articulo">
-            <h2 id="17">Flex Culumn-Row</h2>
+            <h2 id="t17">Flex Culumn-Row</h2>
             <p>
                 Por defecto la clase <span class="badge badge-red">d-flex</span> establece el 
                 alineamiento de forma horizontal, pero existen ocasiones en las cuales debemos 
@@ -919,6 +919,55 @@
 
         </article>
 
+        <article class="articulo">
+            <h2 id="t18">Flex Reverse</h2>
+            <p>
+                Flexbox tiene propiedades para mostrar el contenido de forma inversa a como está dispuesto 
+                dentro del archivo html, la librería hace uso de estas propiedades a través de dos clases que permiten llevar 
+                a cabo estas tareas.
+            </p>
+
+            <div class="d-flex flex-row-reverse">
+                <div class="p-1 bg-red c-white ta-c">1</div>
+                <div class="p-1 bg-red c-white ta-c">2</div>
+            </div>
+
+            <div class="alerta-negra mt-3">
+                Como se puede ver en el ejemplo los contenedores por defecto quedan alineados 
+                de manera horizontal y a la derecha. El primero contenedor es el que posee el número dos.
+            </div>
+
+    <div class="codigo">
+        <pre id="c18" class="cod-html">
+            <!-- clase flex-row-reverse -->
+            <div class="d-flex flex-row-reverse">
+                <div class="p-1 bg-red c-white ta-c">1</div>
+                <div class="p-1 bg-red c-white ta-c">2</div>
+            </div>
+        </pre>
+    </div>
+
+
+            <p>
+                Lo mismo sucede con las columnas.
+            </p>
+
+            <div class="d-flex flex-column-reverse">
+                <div class="p-1 bg-red c-white ta-c bor-2">1</div>
+                <div class="p-1 bg-red c-white ta-c">2</div>
+            </div>
+    <div class="codigo">
+        <pre id="c18" class="cod-html">
+            <!-- clase flex-column-reverse -->
+           <div class="d-flex flex-column-reverse">
+                <div class="p-1 bg-red c-white ta-c bor-2">1</div>
+                <div class="p-1 bg-red c-white ta-c">2</div>
+            </div>
+        </pre>
+    </div>
+
+        </article>
+
         
 
         <!--AUTOR--------------------------------------------------------------------->
@@ -929,12 +978,23 @@
     <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
     <div class="guia-pagina">
         <ul>
-            <li><a href="#a1_pt">Subtitulo 1</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
+            <li><a href="#t1">Flexbox</a></li>
+            <li><a href="#t2">Flexbox en CSS3</a></li>
+            <li><a href="#t3">Flexbox en Bodystyle</a></li>
+            <li><a href="#t4">Display Flex</a></li>
+            <li><a href="#t5">Just Center</a></li>
+            <li><a href="#t6">Just Around</a></li>
+            <li><a href="#t7">Just Between</a></li>
+            <li><a href="#t8">Align Center</a></li>
+            <li><a href="#t9">Align End</a></li>
+            <li><a href="#t10">Align Baseline</a></li>
+            <li><a href="#t11">Align Stretch</a></li>
+            <li><a href="#t12">Flex Responsive</a></li>
+            <li><a href="#t13">Wrap</a></li>
+            <li><a href="#t14">Wrap Manual</a></li>
+            <li><a href="#t15">Just Variable</a></li>
+            <li><a href="#t16">Align Variable</a></li>
+            <li><a href="#t17">Flex Reverse</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
@@ -949,3 +1009,5 @@
     <script src="../js/docs-body.js"></script>
 </body>
 </html>
+
+        
