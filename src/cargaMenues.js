@@ -63,7 +63,15 @@ import $ from "jquery"
             <li><a href="">Toasts</a></li>
             <li><a href="">Modals</a></li>
             <li><a href="">Tabs</a></li>
-        </ul>`
+        </ul>
+        <a  class="titulo c-blanco t-may" data-target="#m6">Componentes</a>
+        <ul id="m6">
+            <li><a href="">Nav</a></li>
+            <li><a href="">Progressbar</a></li>
+            <li><a href="">Preloader</a></li>
+        </ul>
+        `
+
     )
 
     if(enlace !== null && enlace !== undefined)
