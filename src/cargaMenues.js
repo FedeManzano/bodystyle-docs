@@ -34,7 +34,7 @@ import $ from "jquery"
         <a  class="titulo c-blanco t-may" data-target="#m3">Alineamiento</a>
         <ul id="m3">
             <li><a href="contenedor.html">Contenedor</a></li>
-            <li><a href="">Helpers</a></li>
+            <li><a href="helpers.html">Helpers</a></li>
             <li><a href="margin.html">Margin</a></li>
             <li><a href="padding.html">Padding</a></li>
             <li><a href="flexbox.html">Flexbox</a></li>
