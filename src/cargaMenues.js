@@ -129,7 +129,7 @@ import $ from "jquery"
                     data-tips="Versión procesada de Bodystyle"
                     data-pos='right'>versión 4.0.0</a>.
                 </p> 
-                <a target="_blank" href="https://mega.nz/file/YMME1DiY#nOQJnjKBCPKmMX2I40VZp91_JaIwRXsOvpnRNr39yZk" class="btn-cover-sm-o btn-white-o mar-2 tips-ele"
+                <a target="_blank" href="https://mega.nz/file/dBkFCKhY#zSY1DV73ciNFk3O22YGuR4SIIcKuuJ9pPx99V1hsmNw" class="btn-cover-sm-o btn-white-o mar-2 tips-ele"
                 data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v4.0.0_dist.zip">Descargar</a>
             </div>
         </div> 

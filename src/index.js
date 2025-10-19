@@ -1,5 +1,5 @@
 
-import  "./bodystyle"
+import "./bodystyle"
 import "./cargaMenues"
 import "./copiarCodigo"
 
@@ -16,5 +16,8 @@ window.onload = () => {
     }, 50); 
 }
 
+
 CargarMenu.Iniciar()
 Copiar.Iniciar()
+
+export default BS
