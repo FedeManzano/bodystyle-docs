@@ -44,7 +44,7 @@ import $ from "jquery"
         <ul id="m4">
             <li><a href="input.html">Input</a></li>
             <li><a href="">Range</a></li>
-            <li><a href="">Select</a></li>
+            <li><a href="select.html">Select</a></li>
             <li><a href="">Grupos</a></li>
             <li><a href="checkbox.html">Checkbox</a></li>
             <li><a href="radio.html">Radio</a></li>
