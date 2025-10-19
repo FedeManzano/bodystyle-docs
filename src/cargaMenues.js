@@ -47,7 +47,7 @@ import $ from "jquery"
             <li><a href="">Select</a></li>
             <li><a href="">Grupos</a></li>
             <li><a href="checkbox.html">Checkbox</a></li>
-            <li><a href="">Radio</a></li>
+            <li><a href="radio.html">Radio</a></li>
             <li><a href="">Formularios</a></li>
             <li><a href="">Template</a></li>
         </ul>
