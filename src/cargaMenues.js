@@ -42,7 +42,7 @@ import $ from "jquery"
         </ul>
         <a  class="titulo c-blanco t-may" data-target="#m4">Formularios</a>
         <ul id="m4">
-            <li><a href="">Input</a></li>
+            <li><a href="input.html">Input</a></li>
             <li><a href="">Range</a></li>
             <li><a href="">Select</a></li>
             <li><a href="">Grupos</a></li>
