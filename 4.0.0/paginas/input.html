@@ -27,9 +27,11 @@
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
-            <h1>Input</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ducimus distinctio doloremque aperiam fugiat,
-                 sapiente animi quam ut minima recusandae aut blanditiis tenetur. Animi earum culpa, quam incidunt nemo dolores?</p>
+            <h1 id="t1">Input</h1>
+            <p>
+                Es el primer elemento de los formularios que vamos a documentar, este elemento dispone valores CSS 
+                por defecto, esto implica que no existe la necesidad de agregarle mas clases para definirle estilos. 
+            </p>
             
             <div class="mar-2 boton-descarga"></div>
         </section>
@@ -37,47 +39,236 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="a1_pt">SubTitulo Artículo 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus ea nulla aliquam soluta commodi laboriosam nobis reprehenderit, 
-                labore est asperiores voluptatum beatae fuga atque rem eos nemo rerum magnam.</p>
+            <h2 id="t2">Input Text</h2>
+            <p>
+                Es uno de los elementos de un formulario más utilizado, esto se debe que en el se definen 
+                nombres, apellidos, direcciones, etc.
+            </p>
 
-                <input type="text" required>
+            <div class="container d-flex flex-column">
+                <input type="text" name="nombre" placeholder="Nombre">
+                <input type="text" name="apellido" class="mt-1" placeholder="Apellido">
+                <input type="text" name="desactivado" class="mt-1 desactivado" placeholder="Desactivado">
+            </div>
+                
 <div class="codigo">
-
 <pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
+    <div class="container d-flex flex-column">
+        <input type="text" name="nombre" placeholder="Nombre">
+        <input type="text" name="apellido" class="mt-1" placeholder="Apellido">
+        <input type="text" name="desactivado" class="mt-1 desactivado" placeholder="Desactivado">
     </div>
 </pre>
 </div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
-<div class="codigo">
+        <div class="alerta-negra">
+            Al input <span class="badge badge-red">.desactivado</span> se le remueven la posibilidad de edición y los eventos asociados
+            al elemento, esto es para dejarlo presente en la página pero mientras tenga esta clase no va a funcionar. 
+        </div>
+            <h3 id="t3">i-error</h3>
+            <p>
+                La librería dispone de una clase para alertar al usuario sobre la información erronea dentro 
+                del campo de texto que es <span class="badge badge-red">.i-error</span>.
+            </p>
 
+            <div class="container">
+                <input type="email" name="correo" class="i-error" placeholder="Email">
+            </div>
+<div class="codigo">
 <pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
+    <div class="container">
+        <input type="email" name="correo" class="i-error" placeholder="Email">
     </div>
 </pre>
 </div>
         <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
+            Es una forma de validación, cuando el usuario ingresa valores correctos dentro del input se remueve la clase 
+            <span class="badge badge-red">i-error</span> del input y se habilita la posibilidad de enviar el formulario.
         </p>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
+
+        <article class="articulo">
+            <h2 id="t4">Grupo Input</h2>
+            <p>
+                Existe dentro de la librería un agrupador de elementos de formulario, a través de el 
+                podemos agrupar un conjunto para obtener un nuevo elemento con ciertas características 
+                que mejoran la experiencia del usuario.
+            </p>
+
+            <div class="container mt-3">
+                <div class="input-g">
+                    <div class="grupo">
+                        <span class="span-grupo">@</span>
+                        <input type="email" name="correo">
+                        <a href="#" class="btn c-grey">Enviar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-3 alerta-negra">
+                El conjunto está envuelto en un div con la clase <span class="badge badge-red">.input-g</span>, 
+                dentro con la clase <span class="badge badge-red">grupo</span>.
+            </div>
+
+<div class="codigo">
+    <pre id="c3" class="cod-html">
+        <div class="container mt-3">
+            <div class="input-g">
+                <div class="grupo">
+                    <span class="span-grupo">@</span>
+                    <input type="email" name="correo">
+                    <a href="#" class="btn c-grey">Enviar</a>
+                </div>
+            </div>
+        </div>
+    </pre>
+</div>
+
+
+        <h3 id="t5">Grilla</h3>
+        <p>
+            Para personalizar más el formulario podemos utilizar una <a href="grid.html" class="link tips-ele"
+            data-tips="Grilla de la librería Bodystyle">Grilla</a>.
+        </p>
+
+        <div class="container mt-3">
+            <div class="row">
+                <div class="input-g cm-12 cl-6">
+                    <div class="grupo">
+                        <span class="span-grupo">Nombre</span>
+                        <input type="text" name="Nombre">
+                    </div>
+                </div>
+                <div class="input-g cm-12 cl-6">
+                    <div class="grupo">
+                        <span class="span-grupo">Apellido</span>
+                        <input type="text" name="Apellido">
+                    </div>
+                </div>
+                <div class="input-g cl-12">
+                    <div class="grupo">
+                        <span class="span-grupo">@</span>
+                        <input type="email" name="Email">
+                        <a href="#" class="btn c-grey">Consultar</a>
+                    </div>
+                </div>
+                <div class="input-g cm-12 cl-6">
+                    <div class="grupo">
+                        <span class="span-grupo">Password</span>
+                        <input type="password" name="Password">
+                    </div>
+                </div>
+                <div class="input-g cm-12 cl-6">
+                    <div class="grupo">
+                        <span class="span-grupo">Repetir</span>
+                        <input type="password" name="Password">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="codigo">
+    <pre id="c5" class="cod-html">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="input-g cm-12 cl-6">
+                    <div class="grupo">
+                        <span class="span-grupo">Nombre</span>
+                        <input type="text" name="Nombre">
+                    </div>
+                </div>
+                <div class="input-g cm-12 cl-6">
+                    <div class="grupo">
+                        <span class="span-grupo">Apellido</span>
+                        <input type="text" name="Apellido">
+                    </div>
+                </div>
+                <div class="input-g cl-12">
+                    <div class="grupo">
+                        <span class="span-grupo">@</span>
+                        <input type="email" name="Email">
+                        <a href="#" class="btn c-grey">Consultar</a>
+                    </div>
+                </div>
+                <div class="input-g cm-12 cl-6">
+                    <div class="grupo">
+                        <span class="span-grupo">Password</span>
+                        <input type="password" name="Password">
+                    </div>
+                </div>
+                <div class="input-g cm-12 cl-6">
+                    <div class="grupo">
+                        <span class="span-grupo">Repetir</span>
+                        <input type="password" name="Password">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </pre>
+</div>
+
+        <h3 id="t6">Tamaños</h3>
+        <p>
+            Estos grupos pueden ser definidos en tres tamaños (S, M, L) por defecto si no se especifica 
+            la medida el elemento es de tamaño medio como en los ejemplos anteriores. <br>
+            Ahora vamos a ver las dos medidas restantes.
+        </p>
+
+
+        <div class="container mt-3">
+            <div class="input-g">
+                <div class="grupo-sm">
+                    <span class="span-grupo">@</span>
+                    <input type="email" name="correo">
+                    <input type="submit" class="btn c-grey" name="Enviar">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container mt-3">
+            <div class="input-g">
+                <div class="grupo-lg">
+                    <span class="span-grupo">@</span>
+                    <input type="email" name="correo">
+                    <input type="submit" class="btn c-grey" name="Enviar">
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-3 alerta-negra">
+            Para definir estos tamaños a la clase <span class="badge badge-red">.grupo-[sm | lg]</span> se le añade 
+            el parámetro <span class="f-w-9">sm (Chicos)</span> o <span class="f-w-9">lg (Grandes)</span>.
+        </div>
+
+<div class="codigo">
+    <pre id="c6" class="cod-html">
+        <div class="container mt-3">
+            <div class="input-g">
+                <div class="grupo-sm">
+                    <span class="span-grupo">@</span>
+                    <input type="email" name="correo">
+                    <input type="submit" class="btn c-grey" name="Enviar">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container mt-3">
+            <div class="input-g">
+                <div class="grupo-lg">
+                    <span class="span-grupo">@</span>
+                    <input type="email" name="correo">
+                    <input type="submit" class="btn c-grey" name="Enviar">
+                </div>
+            </div>
+        </div>    
+    </pre>
+</div>
+
+
+
+        </article>
 
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
@@ -87,12 +278,12 @@
     <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
     <div class="guia-pagina">
         <ul>
-            <li><a href="#a1_pt">Subtitulo 1</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
+            <li><a href="#t1">Input</a></li>
+            <li><a href="#t2">Input Text</a></li>
+            <li><a href="#t3">Errores</a></li>
+            <li><a href="#t4">Grupo Input</a></li>
+            <li><a href="#t5">Grilla</a></li>
+            <li><a href="#t6">Tamaños</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
