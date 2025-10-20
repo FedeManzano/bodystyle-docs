@@ -226,32 +226,41 @@
             data-tips="<i class='fa-solid fa-download'>&nbsp;</i> Descarga de <span class='badge badge-red'>Bodystyle 4.0.0</span>"
             data-color="fd-blanco">Bodystyle 4.0.0</a>
 
-            <h3 id="t9">CDN Plantilla</h3>
+            <h3 id="t9">CDN</h3>
 
             <p>
                 Se puede agregar la plantilla que se encuentra a continuación para disponer de los estilos y de la lógica en JS 
                 de la librería. Los archivos enlazados son los minificados de la bodystyle para mejorar el rendimiento de 
                 la carga de la librería.
             </p>
+
+            <h4>CDN Estilos CSS</h4>
+
 <div class="codigo">
     <pre id="c1" class="cod-html">
-    <!--DESCOMENTAR ESTE CÓDIGO -->
-    <!--
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
-        </head>
-        <body>
-            <h1>Hola Mundo !!! <span class="badge badge-rojo">New</h1>
-            <script src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
-        </body>
-        </html>
-    -->
+        <!--Agregar en el head de la página -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
     </pre>
 </div>
-        <div class="alerta-negra">
+
+        <h4>Lógica en JS</h4>
+<div class="codigo">
+    <pre id="c2" class="cod-html">
+        <!--Agregar antes de la etiqueta de cierre del body -->
+        <script src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
+    </pre>
+</div>
+        <h4>Plantilla</h4>
+
+        <p class="mt-1">
+            La otra opción es copiar y pegar una plantilla que pueden copiar desde el repositorio: <br>
+        </p>
+
+        <a href="https://github.com/FedeManzano/bodystyle?tab=readme-ov-file#pencil2-plantilla" target="_blank" class="link tips-ele"
+        data-tips="Plantilla HTML para agregar la librería." data-pos="right">Plantilla</a>
+
+        <div class="alerta-negra mt-3">
             <b class="c-red">La etiqueta viewport que se encuentra en el header de la plantilla es necesaria y obligatoria 
             para el correcto funcionamiento de la librería.</b>
         </div>
@@ -263,7 +272,7 @@
         </p>
 
 <div class="codigo">
-    <pre class="cod-js">
+    <pre id="c4" class="cod-js">
         # npm install bodyui2
     </pre>
 </div>
