@@ -6,7 +6,7 @@
     <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
 
     
-    <meta name="description" content="">
+    <meta name="description" content="Efecto que añade un borde dinámico por debajo del elemento.">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/bodystyle.min.css">
@@ -30,54 +30,71 @@
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
-            <h1>Efecto Hover</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ducimus distinctio doloremque aperiam fugiat,
-                 sapiente animi quam ut minima recusandae aut blanditiis tenetur. Animi earum culpa, quam incidunt nemo dolores?</p>
-            
+            <h1 id="t1">Efecto Hover</h1>
+            <p>
+                Aquí un efecto sencillo que permite añadirle un borde al elemento  en la parte inferior
+                de diferentes colores.
+            </p>
+                
             <div class="mar-2 boton-descarga"></div>
         </section>
         <!-- ENCABEZADO FIN ------------------------------------------------------>
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="a1_pt">SubTitulo Artículo 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus ea nulla aliquam soluta commodi laboriosam nobis reprehenderit, 
-                labore est asperiores voluptatum beatae fuga atque rem eos nemo rerum magnam.</p>
-
+            <h2 id="t2">Efecto Borde Inferior</h2>
+            <p>
+                La muestra de este efecto la realizaremos con un contenedor blanco que ocupa un 100% del 
+                tamaño de su contenedor padre.
+            </p>
+            <div class="bg-white  py-2 efecto-borde-rojo mt-3"></div>
 <div class="codigo">
 
 <pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
+    <!--Si se pasa el cursor por encima se podra observar el borde que aparece -->
+    <div class="bg-white  py-2 efecto-borde-rojo mt-3"></div>
 </pre>
 </div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
+            <h3 id="t3">Colores</h3>
+            <p class="mb-3">
+                La librería contiene diversos colores para el efecto establecido en esta sección de la 
+                documentación. 
+            </p>
+
+            <div class="row">
+                <div class="py-2 bg-red efecto-borde-blanco cxs-12 cs-6 cm-4 cl-3"></div>
+                <div class="py-2 bg-red efecto-borde-azul cxs-12 cs-6 cm-4 cl-3"></div>
+                <div class="py-2 bg-red efecto-borde-negro cxs-12 cs-6 cm-4 cl-3"></div>
+                <div class="py-2 bg-red efecto-borde-verde cxs-12 cs-6 cm-4 cl-3"></div>
+                <div class="py-2 bg-red efecto-borde-gris cxs-12 cs-6 cm-4 cl-3"></div>
+                <div class="py-2 bg-black efecto-borde-rojo cxs-12 cs-6 cm-4 cl-3"></div>
+            </div>
+
 <div class="codigo">
 
 <pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
+    <div class="row">
+        <div class="py-2 bg-red efecto-borde-blanco cxs-12 cs-6 cm-4 cl-3"></div>
+        <div class="py-2 bg-red efecto-borde-azul cxs-12 cs-6 cm-4 cl-3"></div>
+        <div class="py-2 bg-red efecto-borde-negro cxs-12 cs-6 cm-4 cl-3"></div>
+        <div class="py-2 bg-red efecto-borde-verde cxs-12 cs-6 cm-4 cl-3"></div>
+        <div class="py-2 bg-red efecto-borde-gris cxs-12 cs-6 cm-4 cl-3"></div>
+        <div class="py-2 bg-black efecto-borde-rojo cxs-12 cs-6 cm-4 cl-3"></div>
     </div>
 </pre>
 </div>
-        <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
-        </p>
+        <div class="alerta-negra">
+            La clase utilizada para agregar el efecto borde es <span class="badge badge-red">efecto-borde-[color]</span>. 
+            Los colores son: 
+            <div class="lista-doc m-0">
+                <li>.efecto-borde-blanco</li>
+                <li>.efecto-borde-rojo</li>
+                <li>.efecto-borde-verde</li>
+                <li>.efecto-borde-negro</li>
+                <li>.efecto-borde-gris</li>
+                <li>.efecto-borde-azul</li>
+            </div>
+        </div>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
 
@@ -89,12 +106,9 @@
     <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
     <div class="guia-pagina">
         <ul>
-            <li><a href="#a1_pt">Subtitulo 1</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
+            <li><a href="#t1">Efecto Hover</a></li>
+            <li><a href="#t2">Muestra</a></li>
+            <li><a href="#t3">Colores</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
