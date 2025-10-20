@@ -6,7 +6,7 @@
     <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
 
     
-    <meta name="description" content="">
+    <meta name="description" content="Efecto de CSS de giro que permite ver el contenido detras de una figura.">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/bodystyle.min.css">
@@ -31,8 +31,11 @@
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
             <h1>Efecto 3D</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ducimus distinctio doloremque aperiam fugiat,
-                 sapiente animi quam ut minima recusandae aut blanditiis tenetur. Animi earum culpa, quam incidunt nemo dolores?</p>
+            <p>
+                En esta sección vamos a ver un efecto de giro que posee la librería, de esta forma 
+                vamos a añadir contenido detras de los elementos y solo podrá ser visto si el usuario
+                pasa el cursor por encima del elemento principal.
+            </p>
             
             <div class="mar-2 boton-descarga"></div>
         </section>
@@ -40,44 +43,203 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="a1_pt">SubTitulo Artículo 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus ea nulla aliquam soluta commodi laboriosam nobis reprehenderit, 
-                labore est asperiores voluptatum beatae fuga atque rem eos nemo rerum magnam.</p>
+            <h2 id="t2">Efecto 3D Aplicación</h2>
+            <p>
+                Vamos a ver las clases CSS que provee la librería para generar un efecto 3D que mantiene oculta 
+                un elemento hasta que el usuario pasa el cursor por el elemento que se encuentra visible. <br>
+                Es necesario para realizarle ajustes al diseño tener en cuenta clases ya documentadas para poder 
+                alinear de manera correcta el contenido.
+            </p>
 
+            <h3 id="t3">Muestra</h3>
+            <div class="ancho-40">
+                <div class="contenedor-efecto3d">
+                    <div class="contenedor-vertical bor-rad-10 ">
+                        <div class="adelate">
+                            <div class="card">
+                                <div class="card-simple-dark">
+                                    <h4>Cara Delantera</h4>
+                                    <small>Pequeña descripción</small>
+                                    <p>
+                                        Esto es el contenido del elemento que se ve de frente
+                                    </p> 
+                                </div>
+                            </div>
+                        </div>
+                            
+                    
+                        <div class="atras-vertical ">
+                            <div class="bg-black p-2 c-white  alto-100 bor-rad-10 ta-c d-flex ali-center">
+                                <p>
+                                    Este texto queda por oculto por detrás de la figura que se muestra de frente.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 <div class="codigo">
-
-<pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
-</pre>
+    <pre class="cod-html" id="c1">
+        <div class="ancho-40">
+            <div class="contenedor-efecto3d">
+                <div class="contenedor-vertical bor-rad-10 ">
+                    <div class="adelate">
+                        <div class="card">
+                            <div class="card-simple-dark">
+                                <h4>Cara Delantera</h4>
+                                <small>Pequeña descripción</small>
+                                <p>
+                                    Esto es el contenido del elemento que se ve de frente
+                                </p> 
+                            </div>
+                        </div>
+                    </div>
+                        
+                
+                    <div class="atras-vertical ">
+                        <div class="bg-black p-2 c-white  alto-100 bor-rad-10 ta-c d-flex ali-center">
+                            <p>
+                                Este texto queda por oculto por detrás de la figura que se muestra de frente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </pre>
 </div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
-<div class="codigo">
 
-<pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
-</pre>
+            <div class="alerta-negra">
+                Como se puede observar en el código de arriba es necesario ajustar el contenido para lograr un efecto correcto, 
+                por esta razón es necesario utilizar diversas clases ya documentadas en otros apartados de la documentación. <br>
+                Se recomienda al lector ver: 
+                <div class="lista-doc m-0">
+                    <ul>
+                        <li><a href="margin.html" class="link">Margenes</a></li>
+                        <li><a href="padding.html" class="link">Padding</a></li>
+                        <li><a href="flexbox.html" class="link">Flexbox</a></li>
+                        <li><a href="tarjetas.html" class="link">Cards</a></li>
+                        <li><a href="colores.html" class="link">Colores</a></li>
+                        <li><a href="bordes.html" class="link">Bordes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3 id="t3">Estructura Básica</h3>
+            <p>
+                Todo el contenido del efecto va a estar encerrado en la clase <span class="badge badge-red">.contenedor-efecto3d</span> que 
+                va a contener otra clase que se denomina <span class="badge badge-red">contenedor-[giro]</span> donde giro puede ser horizontal
+                o vertical, luego dentro de esta última de añadirán las clases <span class="badge badge-red">.adelante</span> (Con lo que queda a la vista) y
+                <span class="badge badge-red">.atras-[giro]</span> donde giro es horizontal o vertical.
+            </p>
+<div class="codigo">
+    <pre class="cod-html" id="c2">
+
+        <!-- GIRO HORIZONTAL -->
+        <div class="contenedor-efecto3d">
+            <div class="contenedor-horizontal">
+                <div class="adelante">
+                    <!-- Aquí va el contenido que queda por delante-->
+                </div>
+                <div class="atras-horizontal">
+                    <!-- Aquí va a el contenido que queda por detrás -->
+                </div>
+            </div>
+        </div>
+
+        <!--GIRO VERTICAL -->
+        <div class="contenedor-efecto3d">
+            <div class="contenedor-vertical">
+                <div class="adelante">
+                    <!-- Aquí va el contenido que queda por delante-->
+                </div>
+                <div class="atras-vertical">
+                    <!-- Aquí va a el contenido que queda por detrás -->
+                </div>
+            </div>
+        </div>
+    </pre>
 </div>
         <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
+            La estructura que se muestra en el código de arriba es básica y funcional pero hay que tener en cuenta que 
+            cuando se ponga en práctica es necesario ajustar el contenido de las partes involucradas para que de mantengan 
+            dentro de los límites del contenedor. Esto se logra a través de la aplicación de las clases de alineamiento provistas 
+            por Bodystyle.
         </p>
+
+        <h3 id="t4">Ejemplo simple</h3>
+        <p>
+            Vamos a realizar un ejemplo simple con dos textos, uno por delante y otro por detras con fondos de colores 
+            distintos y utilizando las clases <a href="bordes.html" class="link">bordes</a> predefinidas. 
+        </p>
+
+        <div class="container mt-3">
+            <div class="contenedor-efecto3d ">
+                <div class="contenedor-horizontal bor-rad-10">
+                    <div class="adelante">
+                        <div class="p-1 bor-rad-10 ta-c d-flex ali-center bg-red">
+                            <p class="c-white">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsam molestiae aut hic sit perferendis.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="atras-horizontal">
+                        <div class="p-1 bor-rad-10 ta-c d-flex ali-center bg-black">
+                            <p class="c-white">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsam molestiae aut hic sit perferendis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="codigo">
+    <pre id="c3" class="cod-html">
+        <div class="container mt-3">
+            <div class="contenedor-efecto3d ">
+                <div class="contenedor-horizontal bor-rad-10">
+                    <div class="adelante">
+                        <div class="p-1 bor-rad-10 ta-c d-flex ali-center bg-red">
+                            <p class="c-white">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsam molestiae aut hic sit perferendis.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="atras-horizontal">
+                        <div class="p-1 bor-rad-10 ta-c d-flex ali-center bg-black">
+                            <p class="c-white">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsam molestiae aut hic sit perferendis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </pre>
+</div>
+        <div class="container mt-3">
+            <div class="contenedor-efecto3d ">
+                <div class="contenedor-vertical bor-rad-10">
+                    <div class="adelante">
+                        <div class="p-1 bor-rad-10 ta-c d-flex ali-center bg-red">
+                            <p class="c-white">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsam molestiae aut hic sit perferendis.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="atras-vertical">
+                        <div class="p-1 bor-rad-10 ta-c d-flex ali-center bg-black">
+                            <p class="c-white">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsam molestiae aut hic sit perferendis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 id="t5">Ejemplo Complejo</h3>
+        
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
 
