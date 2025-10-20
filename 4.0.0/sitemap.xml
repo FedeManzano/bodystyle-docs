@@ -36,6 +36,11 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://bodystyle.webcindario.com/paginas/checkbox.html</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://bodystyle.webcindario.com/paginas/colecciones.html</loc>
     <lastmod>2025-10-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -71,6 +76,11 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://bodystyle.webcindario.com/paginas/input.html</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://bodystyle.webcindario.com/paginas/margin.html</loc>
     <lastmod>2025-10-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -87,6 +97,16 @@
   </url>
   <url>
     <loc>https://bodystyle.webcindario.com/paginas/padding.html</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://bodystyle.webcindario.com/paginas/radio.html</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://bodystyle.webcindario.com/paginas/select.html</loc>
     <lastmod>2025-10-17</lastmod>
     <changefreq>weekly</changefreq>
   </url>
