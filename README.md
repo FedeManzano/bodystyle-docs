@@ -31,6 +31,7 @@ En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de 
         - :page_facing_up: <i>colores.html</i>
         - :page_facing_up: <i>contenedor.html</i>
         - :page_facing_up: <i>flexbox.html</i>
+        - :page_facing_up: <i>formmularios.html</i>
         - :page_facing_up: <i>get_started.html</i>
         - :page_facing_up: <i>grid.html</i>
         - :page_facing_up: <i>grupo_botones.html</i>
