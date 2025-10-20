@@ -48,7 +48,7 @@ import $ from "jquery"
             <li><a href="switch.html">Switch</a></li>
             <li><a href="checkbox.html">Checkbox</a></li>
             <li><a href="radio.html">Radio</a></li>
-            <li><a href="">Formularios</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
             <li><a href="">Template</a></li>
         </ul>
         <a  class="titulo c-blanco t-may" data-target="#m5">JS</a>
