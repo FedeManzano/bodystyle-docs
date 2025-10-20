@@ -39,6 +39,7 @@ import $ from "jquery"
             <li><a href="padding.html">Padding</a></li>
             <li><a href="flexbox.html">Flexbox</a></li>
             <li><a href="grid.html">Grid</a></li>
+            <li><a href="ancho_alto.html">Ancho y Alto</a></li>
         </ul>
         <a  class="titulo c-blanco t-may" data-target="#m4">Formularios</a>
         <ul id="m4">
