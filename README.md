@@ -23,6 +23,7 @@ En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de 
         - :page_facing_up: <i>docs-body.js</i>
     - :open_file_folder: <b>paginas</b>
         - :page_facing_up: <i>alertas.html</i>
+        - :page_facing_up: <i>ancho_alto.html</i>
         - :page_facing_up: <i>badges.html</i>
         - :page_facing_up: <i>bordes.html</i>
         - :page_facing_up: <i>botones.html</i>
