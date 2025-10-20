@@ -30,7 +30,7 @@
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
-            <h1>Efecto 3D</h1>
+            <h1 id="t1">Efecto 3D</h1>
             <p>
                 En esta sección vamos a ver un efecto de giro que posee la librería, de esta forma 
                 vamos a añadir contenido detras de los elementos y solo podrá ser visto si el usuario
@@ -52,7 +52,7 @@
             </p>
 
             <h3 id="t3">Muestra</h3>
-            <div class="ancho-40">
+            <div class="ancho-40 ancho-m-60 ancho-s-70 ancho-xs-90">
                 <div class="contenedor-efecto3d">
                     <div class="contenedor-vertical bor-rad-10 ">
                         <div class="adelate">
@@ -240,6 +240,140 @@
 
         <h3 id="t5">Ejemplo Complejo</h3>
         
+        <p class="mb-3">
+            En este ejemplo se va a simular el efecto 3D con dos tarjetas vistas en esta documentación. En este caso 
+            es un ejemplo más complejo en el cual se utiliza la grilla, el contenedor, las tarjetas y ciertas funcionalidades 
+            de alineamiento que provee bodystyle.
+        </p>
+
+        <div class="container">
+            <div class="row">
+                <div class="contenedor-efecto3d cs-12 cl-6 ">
+                    <div class="contenedor-vertical bor-rad-10">
+                        <div class="adelante">
+                            <div  class="card">
+                                <div  class="card-description-dark card-cover">
+                                    <div  class="image-container">
+                                            <img  src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg"  alt="Ejemplo card description">
+                                    </div>
+                                    <div  class="content">
+                                        <h4>Autos en Venta</h4>
+                                        <small>Renault 206</small>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit
+                                        </p>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="atras-vertical ">
+                            <div class="bg-black alto-100 d-flex ali-center ta-c c-white p-2 bor-rad-10">
+                                <div>
+                                    <h4 class="m-0 mb-2">Titulo</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, hic.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenedor-efecto3d cs-12 cl-6 ">
+                    <div class="contenedor-horizontal bor-rad-10">
+                        <div class="adelante">
+                            <div  class="card">
+                                <div  class="card-description-dark card-cover">
+                                    <div  class="image-container">
+                                            <img  src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg"  alt="Ejemplo card description">
+                                    </div>
+                                    <div  class="content">
+                                        <h4>Autos en Venta</h4>
+                                        <small>Renault 206</small>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit
+                                        </p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="atras-horizontal ">
+                            <div class="bg-black alto-100 d-flex ali-center ta-c c-white p-2 bor-rad-10">
+                                <div>
+                                    <h4 class="m-0 mb-2">Titulo</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, hic.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>       
+            </div>
+        </div>
+
+<div class="codigo">
+    <pre id="c4" class="cod-html">
+    <div class="container">
+        <div class="row">
+            <div class="contenedor-efecto3d cs-12 cl-6 ">
+                <div class="contenedor-vertical bor-rad-10">
+                    <div class="adelante">
+                        <div  class="card">
+                            <div  class="card-description-dark card-cover">
+                                <div  class="image-container">
+                                        <img  src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg"  alt="Ejemplo card description">
+                                </div>
+                                <div  class="content">
+                                    <h4>Autos en Venta</h4>
+                                    <small>Renault 206</small>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit
+                                    </p>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="atras-vertical ">
+                        <div class="bg-black alto-100 d-flex ali-center ta-c c-white p-2 bor-rad-10">
+                            <div>
+                                <h4 class="m-0 mb-2">Titulo</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, hic.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor-efecto3d cs-12 cl-6 ">
+                <div class="contenedor-horizontal bor-rad-10">
+                    <div class="adelante">
+                        <div  class="card">
+                            <div  class="card-description-dark card-cover">
+                                <div  class="image-container">
+                                        <img  src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg"  alt="Ejemplo card description">
+                                </div>
+                                <div  class="content">
+                                    <h4>Autos en Venta</h4>
+                                    <small>Renault 206</small>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit
+                                    </p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="atras-horizontal ">
+                        <div class="bg-black alto-100 d-flex ali-center ta-c c-white p-2 bor-rad-10">
+                            <div>
+                                <h4 class="m-0 mb-2">Titulo</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, hic.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </div>
+    </pre>
+</div>
+
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
 
@@ -251,12 +385,11 @@
     <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
     <div class="guia-pagina">
         <ul>
-            <li><a href="#a1_pt">Subtitulo 1</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
+            <li><a href="#t1">Efecto 3d</a></li>
+            <li><a href="#t2">Aplicación</a></li>
+            <li><a href="#t3">Muestra</a></li>
+            <li><a href="#t4">Ejemplo Simple</a></li>
+            <li><a href="#t5">Ejemplo Complejo</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
