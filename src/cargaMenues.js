@@ -45,7 +45,7 @@ import $ from "jquery"
             <li><a href="input.html">Input</a></li>
             <li><a href="">Range</a></li>
             <li><a href="select.html">Select</a></li>
-            <li><a href="">Grupos</a></li>
+            <li><a href="switch.html">Switch</a></li>
             <li><a href="checkbox.html">Checkbox</a></li>
             <li><a href="radio.html">Radio</a></li>
             <li><a href="">Formularios</a></li>
