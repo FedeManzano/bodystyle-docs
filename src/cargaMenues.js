@@ -27,8 +27,8 @@ import $ from "jquery"
             <li><a href="tarjetas.html">Tarjetas</a></li>
             <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
             <li><a href="colecciones.html">Colecciones</a></li>
-            <li><a href="">Etiquetas</a></li>
-            <li><a href="">Decoradores</a></li>
+            <li><a href="efecto3d.html">Efecto 3D</a></li>
+            <li><a href="efecto_hover.html">Efecto Hover</a></li>
             <li><a href="">Footers</a></li>
         </ul>
         <a  class="titulo c-blanco t-may" data-target="#m3">Alineamiento</a>
@@ -129,7 +129,7 @@ import $ from "jquery"
                     data-tips="Versión procesada de Bodystyle"
                     data-pos='right'>versión 4.0.0</a>.
                 </p> 
-                <a target="_blank" href="https://mega.nz/file/dBkFCKhY#zSY1DV73ciNFk3O22YGuR4SIIcKuuJ9pPx99V1hsmNw" class="btn-cover-sm-o btn-white-o mar-2 tips-ele"
+                <a target="_blank" href="https://mega.nz/file/cQMHGSDS#kK6bvOzeLMdLy15qLuqAwYaY_j_UnDWuyVAudZCYoTw" class="btn-cover-sm-o btn-white-o mar-2 tips-ele"
                 data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v4.0.0_dist.zip">Descargar</a>
             </div>
         </div> 
