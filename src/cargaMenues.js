@@ -58,7 +58,7 @@ import $ from "jquery"
             <li><a href="">Boton Flotante</a></li>
             <li><a href="">Colección Flotante</a></li>
             <li><a href="">Dropdown</a></li>
-            <li><a href="">ToolTips</a></li>
+            <li><a href="tooltips.html">ToolTips</a></li>
             <li><a href="">Comentarios</a></li>
             <li><a href="">Show Code</a></li>
             <li><a href="">Toasts</a></li>
