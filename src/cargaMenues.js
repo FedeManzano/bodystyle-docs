@@ -62,7 +62,7 @@ import $ from "jquery"
             <li><a href="show_code.html">Show Code</a></li>
             <li><a href="toast.html">Toasts</a></li>
             <li><a href="">Modals</a></li>
-            <li><a href="">Tabs</a></li>
+            <li><a href="tabs.html">Tabs</a></li>
         </ul>
         <a  class="titulo c-blanco t-may" data-target="#m6">Componentes</a>
         <ul id="m6">
