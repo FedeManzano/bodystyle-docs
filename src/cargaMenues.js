@@ -59,7 +59,7 @@ import $ from "jquery"
             <li><a href="">Dropdown</a></li>
             <li><a href="tooltips.html">ToolTips</a></li>
             <li><a href="comentarios.html">Comentarios</a></li>
-            <li><a href="">Show Code</a></li>
+            <li><a href="show_code.html">Show Code</a></li>
             <li><a href="toast.html">Toasts</a></li>
             <li><a href="">Modals</a></li>
             <li><a href="">Tabs</a></li>
