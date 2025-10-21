@@ -101,7 +101,148 @@
             este es uno de los parámetros de configuración.
         </div>
         </article>
+        <article class="articulo">
+            <h2 id="t5">Html en el Toast</h2>
+            <p class="mb-3">
+                Ahora vamos a añadirle estilos al texto que enviamos a través de etquetas HTML a través 
+                de clases que posea el desarrollador o las de la librería. 
+            </p>
+            <button class="btn fd-azul bor-pill" onclick="BS.Toast({html: `<span class='c-rojo-ro'>Librería de estilos <span class='badge badge-red'>Bodystyle</span></span>`})">Click !</button>
 
+<div class="codigo">
+<pre class="cod-html" id="c4">
+    <!--Toast con texto peronalizado-->
+    <button class="btn fd-azul bor-pill" onclick="BS.Toast({html: `<span class='c-rojo-ro'>Librería de estilos <span class='badge badge-red'>Bodystyle</span></span>`})">Click !</button>
+</pre>
+</div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t6">Clases Css en el Toast</h2>
+            <p>
+                Para realizar esto lo conveniente es crear una función de javaScript separada, esto debe a que 
+                si lo hacemos desde el propio elemento disparador el código se puede volver inmanejable. Por esta razón 
+                el arreglo con las clases CSS que modificarán el Toast se configurarán en una función.
+            </p>
+<div class="codigo">
+<pre class="cod-js" id="c5">
+    MensajeError = () => {
+        let conf = {
+            html: `<span class="c-white f-w-9">El botón presionado envía este mensaje</span>`, // Html del mensaje 
+            clases: ['bg-red', 'bor-rad-10', 'bor-gris-c-3'] // Clases que modifican la pariencia del toast
+        }
+        BS.Toast(conf)
+    }
+
+    MensajeSuccess = () => {
+        let conf = {
+            html: `<span class="c-white f-w-7">Este es un mensaje de Success</span>`, // Html del mensaje 
+            clases: ['fd-verde-az', 'bor-rad-5', 'bor-grey-s-1']
+        }
+        BS.Toast(conf)
+    }
+</pre>
+</div>
+        <button class="btn fd-azul bor-pill" onclick="MensajeError()">Mensaje Rojo !</button>
+        <button class="btn fd-azul bor-pill mt-1" onclick="MensajeSuccess()">Mensaje Verde !</button>
+
+
+<div class="codigo">
+<pre class="cod-html" id="c6">
+    <button class="btn fd-azul bor-pill" onclick="MensajeError()">Mensaje Rojo !</button>
+    <button class="btn fd-azul bor-pill mt-1" onclick="MensajeSuccess()">Mensaje Verde !</button>
+</pre>
+</div>
+
+        <div class="alerta-negra">
+            En el segundo parámetro que recibe la función toast se envía un arreglo de clases 
+            estas pueden ser muy diversas y es el usuario el que las selecciona, a partir de esto 
+            la flexibilidad que ofrece el elemento es muy alta.
+        </div>
+
+        <button class="btn bg-green bor-pill mt-1" onclick="MensajeSuccessIcono()">Success !</button>
+
+<div class="codigo">
+<pre class="cod-js" id="c7">
+    MensajeSuccessIcono = () => {
+        let conf = {
+            // Se envía el mensaje con un ícono de FontAwesome
+            html: `<span class="c-white f-w-7">Este es un mensaje de Success <i class="fa-solid fa-check c-white f-w-9"></i></span>`, // Html del mensaje 
+            clases: ['fd-verde-az', 'bor-rad-5', 'bor-grey-s-1']
+        }
+        BS.Toast(conf)
+    }    
+</pre>
+</div>
+    
+        </article>
+
+        <article class="articulo">
+            <h2 id="t7">Tiempo de Duración del Toast</h2>
+            <p>
+                También podemos configurar la duración del toast de manera tal que permanezca 
+                el tiempo deseado, por defecto son 2000ms pero este tiempo es configurable a través del campo 
+                <span class="badge badge-negro">tiempo</span>.
+            </p>
+
+<div class="codigo">
+    <pre id="c8" class="cod-js">
+        Tiempo5000 = () => {
+            let conf = {
+                html: `Este toast dura 5 seguendos`, // Html del mensaje 
+                clases: ['fd-verde-az','bor-grey-s-1', 'bor-pill'],
+                tiempo: 5000
+            }
+            BS.Toast(conf)
+        } 
+    </pre>
+</div>
+        <button class="btn bg-green bor-pill mt-1" onclick="Tiempo5000()">5 SEG !</button>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t8">Cierre del Toast</h2>
+            <p>
+                Se le puede dar la posibilidad al usuario de cerrar el toast cuando quiera, para eso 
+                es necesario configurar el toast con el atributo <span class="badge badge-negro">cerrar</span> en 
+                el JSON de configuración con el valor true.
+            </p>
+
+            <button class="btn bg-green bor-pill mt-3" onclick="CerrarToast()">Cerrar !</button>
+
+
+<div class="codigo">
+    <pre id="c8" class="cod-js">
+        CerrarToast = () => {
+            let conf = {
+                html: `Este toast dura 5 seguendos`, // Html del mensaje 
+                clases: ['fd-verde-az','bor-grey-s-1', 'bor-pill'],
+                tiempo: 5000,
+                cerrar: true // Con esto le da la opción al usuario
+            }
+            BS.Toast(conf)
+        } 
+    </pre>
+</div>
+
+<div class="codigo">
+    <pre id="c9" class="cod-html">
+        <button class="btn bg-green bor-pill" onclick="CerrarToast()">Cerrar !</button> 
+    </pre>
+</div>
+
+        <div class="alerta-negra">
+            Recomendación final: Para aprovechar este elemento en su totalidas es necesario 
+            conocer las clases de colores y las funcionalidades establecidas para la configuración
+            de los bordes de los elementos. 
+            <div class="lista-doc m-0">
+                <ul>
+                    <li><a href="colores.html" class="link">Colores</a></li>
+                    <li><a href="bordes.html" class="link">Bordes</a></li>
+                </ul>
+            </div>
+        </div>
+        </article>
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
@@ -110,12 +251,14 @@
     <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
     <div class="guia-pagina">
         <ul>
-            <li><a href="#a1_pt">Subtitulo 1</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
+            <li><a href="#t1">Toast</a></li>
+            <li><a href="#t2">Inicialización</a></li>
+            <li><a href="#t3">Muestra</a></li>
+            <li><a href="#t4">Contenido</a></li>
+            <li><a href="#t5">Html</a></li>
+            <li><a href="#t6">Clases CSS</a></li>
+            <li><a href="#t7">Duración</a></li>
+            <li><a href="#t8">Cerrar</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
@@ -128,5 +271,52 @@
         var idMenu = "#m5"
     </script>
     <script src="../js/docs-body.js"></script>
+
+    <script>
+        MensajeError = () => {
+            let conf = {
+                html: `<span class="c-white f-w-9">El botón presionado envía este mensaje</span>`, // Html del mensaje 
+                clases: ['bg-red', 'bor-rad-10', 'bor-grey-s-3']
+            }
+            BS.Toast(conf)
+        }
+
+        MensajeSuccess = () => {
+            let conf = {
+                html: `<span class="c-white f-w-7">Este es un mensaje de Success</span>`, // Html del mensaje 
+                clases: ['fd-verde-az', 'bor-rad-5', 'bor-grey-s-1']
+            }
+            BS.Toast(conf)
+        }
+
+        MensajeSuccessIcono = () => {
+            let conf = {
+                html: `<span class="c-white f-w-7">Este es un mensaje de Success <i class="fa-solid fa-check c-white f-w-9"></i></span>`, // Html del mensaje 
+                clases: ['fd-verde-az', 'bor-rad-5', 'bor-grey-s-1']
+            }
+            BS.Toast(conf)
+        }
+
+
+        Tiempo5000 = () => {
+            let conf = {
+                html: `Este toast dura 5 seguendos`, // Html del mensaje 
+                clases: ['fd-verde-az','bor-grey-s-1', 'bor-pill'],
+                tiempo: 5000
+            }
+            BS.Toast(conf)
+        }
+
+        CerrarToast = () => {
+            let conf = {
+                html: `Este toast dura 5 seguendos`, // Html del mensaje 
+                clases: ['fd-verde-az','bor-grey-s-1', 'bor-pill'],
+                tiempo: 5000,
+                cerrar: true
+            }
+            BS.Toast(conf)
+        }
+    </script>
 </body>
 </html>
+   
