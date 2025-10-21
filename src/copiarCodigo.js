@@ -41,7 +41,7 @@ import $ from "jquery"
 
         var  confToast = {
                 html: 'Copiado OK',
-                clases: ["fd-verde"],
+                clases: ["fd-verde", "bor-rad-10"],
                 tiempo: 2000,
                 cerrar: false
         }
