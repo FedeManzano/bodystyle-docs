@@ -60,20 +60,29 @@
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
             <h2 id="t2">Show Code Inicialización</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus ea nulla aliquam soluta commodi laboriosam nobis reprehenderit, 
-                labore est asperiores voluptatum beatae fuga atque rem eos nemo rerum magnam.</p>
+            <p>
+                Para poder utilizar las funcionalidades provistas por Show-Code es necesario agregar a nuestro proyecto el archivo 
+                de javascript de la librería <span class="badge badge-negro">bodystyle.min.js</span> este proceso de puede realizar de varias 
+                maneras como se describe en <a href="get_started.html" class="link">Get Started</a> para llevar a cabo los ejemplos que siguen a 
+                continuación lo haremos a través de su CDN.
+            </p>
+
+            
 
 <div class="codigo">
-
 <pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
+    <!--Agregar antes de la etiqueta de cierre del body -->
+    <!--DESCOMENTAR LA LINEA DE ABAJO-->
+    <!--<script  src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>-->
+    <script>
+        /* DESCOMENTAR ESTE CÓDIGO
+            BS.CodigoCInit(); Si necesitamos el código de C
+            BS.CodigoJavaInit(); Si necesitamos el código de Java
+            BS.CodigoJsInit(); Si necesitamos el código de JavaScript
+            BS.CodigoHtmlInit() Si necesitamos el código de Html
+            BS.CodigoCssInit() Si necesitamos el código de CSS
+        */
+    </script>
 </pre>
 </div>
             <h3>Subtitulo</h3>
