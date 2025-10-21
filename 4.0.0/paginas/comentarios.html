@@ -30,9 +30,17 @@
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
-            <h1>Comentarios</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ducimus distinctio doloremque aperiam fugiat,
-                 sapiente animi quam ut minima recusandae aut blanditiis tenetur. Animi earum culpa, quam incidunt nemo dolores?</p>
+            <h1 id="t1">Comentarios</h1>
+            <p>
+                Elementos dinámicos que se utilizan para describir un elemento dentro del DOM, es similar 
+                al <a href="tooltips.html" class="link com-trigger"
+                data-info="Elementos dinámicos que permiten guiar al usuario y conecer información sobre un elemento perteneciente al DOM de HTML.">ToolTips</a>. 
+                Se basa en el mismo núcleo de posicionamiento utilizado por los tooltips provisto por <span class="badge badge-gris">dynamics-tips 1.8.0</span> 
+                que puede descargase a partir del siguiente enlace <a target="_blank" href="https://mega.nz/file/pEsyDAYY#lEve_WyproRQAN1MnZx0Mba40HgZFjcHJ9rFN95wWYk" class="link com-trigger"
+                data-info="Dependencia utilizada por bodystyle para posicionar los elementos dinámicos, cuenta con un núcleo de posicionamiento genérico que ubica a los elementos de manera correcta dentro del espacio donde se pretenda mostrar.">dynamics-tips 1.8.0</a>. <br>
+                La diferencia con los tooltips radica en la cantidad de texto suministrado, los comentarios son capaces de contener bastante más contenido 
+                que los tooltips.
+            </p>
             
             <div class="mar-2 boton-descarga"></div>
         </section>
@@ -40,47 +48,106 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="a1_pt">SubTitulo Artículo 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus ea nulla aliquam soluta commodi laboriosam nobis reprehenderit, 
-                labore est asperiores voluptatum beatae fuga atque rem eos nemo rerum magnam.</p>
+            <h2 id="t2">Inicialización de Comentarios</h2>
+            <p>
+                Es necesario inicializar el mmódulo de JS para utilizar los comentarios dinámicos, para ello 
+                es indispensable disponer del archivo <span class="badge badge-gris">bodystyle.min.js</span> agregado a la página
+                en desarrollo. Como se mencionó en varias oportunidades hay diferentes formas de realizar esta tarea, pero por simplicidad 
+                en este artículo se mostrará como agregar el archivo a través de si CDN. 
+            </p>
 
 <div class="codigo">
-
 <pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
+    <!-- CDN de bodystyle -->
+     <!-- Simplmente con esto podemos utilizar los Comentarios Dinámicos-->
+    <script  src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
 </pre>
 </div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
-<div class="codigo">
+            <h3 id="t3">Muestra</h3>
+            <p class="mb-3">
+                Ahora veamos una muestra de como utilizar un comentario con mucho texto en un elemento 
+                del DOM, en este caso utilizaremos un botón pero puede ser cualquier otro.
+            </p>
 
+            <button class="btn-sm-o btn-blue-o com-trigger"
+            data-info="Este elemento es un botón outline proveisto por <span class='f-w-9 c-red'> Bodystyle UI </span> para mejorar la apariencia de estos botones y mejorar la experiencia del usuario en el sitio que se esté desarrollando.">HOVER</button>
+<div class="codigo">
 <pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
+    <!-- Es comentario bastante largo pero se muestra de manera adecuada -->
+     <button class="btn-sm-o btn-blue-o com-trigger"
+            data-info="Este elemento es un botón outline proveisto por <span class='f-w-9 c-red'> Bodystyle UI </span> para mejorar la apariencia de estos botones y mejorar la experiencia del usuario en el sitio que se esté desarrollando.">HOVER</button>
 </pre>
 </div>
-        <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
-        </p>
+        <div class="alerta-negra">
+            La clase utilizada para agregar al elemento es <span class="badge badge-red">.com-trigger</span> que la va a contener 
+            el elemento que se quiere describir, luego es necesario defir el atributo <span class="badge badge-grey">data-info</span> 
+            que va a permitir configurar la información a mostrar.
+        </div>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
 
+
+        <article class="articulo">
+            <h2 id="t4">Posicionamiento</h2>
+            <p>
+                es posible posicionar el comentario en cuatro posiciones predefinidas, arriba, abajo, a la izquierda y a la derecha. 
+                Para esta tarea se utiliza el atributo <span class="badge badge-gris">data-pos</span> que permite definir este parámetro. <br>
+                Es oimportante aclarar que si el elemento dinámico no encuentra lugar el mismo se ubicará automaticamente en una posición 
+                diferente a la seleccionada buscando espacio donde pueda mostrarse correctamente. 
+            </p>
+
+            <div class="mt-3 d-flex just-around flex-wrap">
+                <button class="btn fd-azul com-trigger"
+                data-info="Esto es un comentario en un botón azul del lado derecho" data-pos="right">Right</button>
+
+                <button class="btn fd-azul com-trigger"
+                data-info="Esto es un comentario en un botón azul del lado izquierdo" data-pos="left">Left</button>
+
+                <button class="btn fd-azul com-trigger"
+                data-info="Esto es un comentario en un botón azul arriba del elemento" data-pos="top">Top</button>
+
+
+                <button class="btn fd-azul com-trigger"
+                data-info="Esto es un comentario en un botón azul abajo del elemento" data-pos="botton">Botton</button>
+            </div>
+
+
+<div class="codigo">
+<pre class="cod-html" id="c3">
+    <div class="mt-3 d-flex just-around flex-wrap">
+        <button class="btn fd-azul com-trigger"
+        data-info="Esto es un comentario en un botón azul del lado derecho" data-pos="right">Right</button>
+        <button class="btn fd-azul com-trigger"
+        data-info="Esto es un comentario en un botón azul del lado izquierdo" data-pos="left">Left</button>
+        <button class="btn fd-azul com-trigger"
+        data-info="Esto es un comentario en un botón azul arriba del elemento" data-pos="top">Top</button>
+        <button class="btn fd-azul com-trigger"
+        data-info="Esto es un comentario en un botón azul abajo del elemento" data-pos="botton">Botton</button>
+    </div>
+</pre>
+</div>
+        </article>
+
+
+        <article class="articulo">
+            <h2 id="t5">Eventos</h2>
+            <p class="mb-3">
+                Se desencadenar el evento para mostrar el comentario a través del evento HOVER que los estuvimos viendo anteriormente 
+                ya que se ejecuta por defecto o a través del evento click el cual puede configurarse a través del atributo 
+                <span class="badge badge-gris">data-evt</span> como se muestra a continuación.
+            </p>
+
+            <button class="btn-sm-o btn-red-o com-trigger bor-pill"
+            data-info="Botón Outline de Bodystyle de color rojo y con efecto hover de fondo para cuando el usuario pasa el cursor por encima del elemento. <br> <a href='botones.html' class='link'>Ver Documentación</a>" data-evt="click">Click !</button>
+            
+    <div class="codigo">
+    <pre id="c5" class="cod-html">
+        
+     <button class="btn-sm-o btn-red-o com-trigger bor-pill"
+     data-info="Botón Outline de Bodystyle de color rojo y con efecto hover de fondo para cuando el usuario pasa el cursor por encima del elemento. <br> <a href='botones.html' class='link'>Ver Documentación</a>" data-evt="click">Click !</button>   
+    </pre>
+    </div>
+        </article>
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
@@ -89,12 +156,11 @@
     <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
     <div class="guia-pagina">
         <ul>
-            <li><a href="#a1_pt">Subtitulo 1</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
+            <li><a href="#t1">Comentarios</a></li>
+            <li><a href="#t2">Iniciación</a></li>
+            <li><a href="#t3">Muestra</a></li>
+            <li><a href="#t4">Posicionamiento</a></li>
+            <li><a href="#t5">Eventos</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->

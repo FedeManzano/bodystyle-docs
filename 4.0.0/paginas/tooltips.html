@@ -195,6 +195,34 @@
     </pre>
 </div>
         </article>
+
+        <article class="articulo">
+            <h2 id="t7">Mostrar en Elementos Dinámicos</h2>
+            <div class="alerta-negra">
+                Este artículo es sobre un caso posible que se puede dar durante el desarrollo de cualquier proyecto. <br>
+                Si queremos que un tooltips haga referencia a un determinado elemento del DOM que se añade al mismo dinámicamente 
+                (A través de JS) y no se encuentra fisicamente en el DOM cuando se renderiza la página es necesario inicializar el módulo 
+                de los tooltips de otra manera.
+            </div>
+
+    <div class="codigo">
+    <pre id="c6" class="cod-js">
+        /** 
+            Este código debe ir dentro de las etiquetas script de html 
+            justo debajo la inicialización de la librería bodystyle.min.js.
+
+            Haciendo esto podemos añadirle los tootips a cualquier elemento estático o 
+            dinámico.
+        */
+        window.onload = () => {
+        setTimeout( () => {
+            BS.ToolTipsInit();
+            }, 50); 
+        }
+    </pre>
+    </div>
+
+        </article>
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
@@ -209,6 +237,7 @@
             <li><a href="#t4">Posicionamiento</a></li>
             <li><a href="#t5">Html</a></li>
             <li><a href="#t6">Evento</a></li>
+            <li><a href="#t7">Dinámicos</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
