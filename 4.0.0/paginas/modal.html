@@ -30,12 +30,12 @@
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
-            <h1>Modal</h1>
+            <h1 id="t1">Modal</h1>
             <p>
                 El Modal es una herramienta muy utilizada en todo tipo de web, ya que captura y centraliza la 
                 la atención del usuario para gestionar acciones y anular de manera momentanea todos los demás elementos.
                 Se basa en una ventana emergente que contiene por lo genera formularios, tabs y accesos a determinadas 
-                funciones encapsuladas.
+                funciones encapsuladas. 
             </p>
             
             <div class="mar-2 boton-descarga"></div>
@@ -44,47 +44,260 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="a1_pt">SubTitulo Artículo 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus ea nulla aliquam soluta commodi laboriosam nobis reprehenderit, 
-                labore est asperiores voluptatum beatae fuga atque rem eos nemo rerum magnam.</p>
+            <h2 id="t2">Modal Inicialización</h2>
+            <p>
+                Para pode inicializar el módulo que gestiona este elemento tenemos que disponer de la lógica 
+                de la librería agregada al proyecto, esto se puede hacer de diversas maneras, si aún no saben como
+                realizar esto les recomiendo ver <a href="get_started.html" class="link">Get Started</a> donde 
+                se mostrarán como instalar la librería en el proyecto en desarrollo. 
+                Luego hay que inicializar el módulo a través de la función que se muestra a continuación.
+            </p>
 
 <div class="codigo">
-
-<pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
+<pre class="cod-js" id="c1">
+    BS.ModalInit() // Con esta linea inicializamos el módulo
 </pre>
 </div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
-<div class="codigo">
+            <h3>Muestra por Default</h3>
+            <p class="mb-3">
+                Se mostrará un modal por defecto con muy pocas cosas para determinar la estructura genera que lo compone. 
+            </p>
 
+            <button class="btn bg-blue bor-pill activar-modal" data-target="#mod1">Disparador</button>
+
+            <div class="modal-fondo" id="mod1">
+                <div class="modal ancho-50">
+                    <div class="modal-cuerpo ta-c fd-blanco">
+                        <p class="c-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quaerat similique reprehenderit unde cupiditate fuga voluptatem repudiandae labore! Soluta harum, ducimus et vel facere voluptates eligendi nemo vitae fugit?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alerta-negra mt-3">
+                El funcionamiento se basa en un elemento disparador que contiene la clase <span class="badge badge-res">.activar-modal</span>,
+                luego a este mismo elementos hay que agregar el atributo <span class="badge badge-black">data-target</span> que contendrá el ID 
+                de la ventana modal. <br>
+                Respecto a la ventana está compuesta con la siguiente estructura: 
+            </div>
+<div class="codigo">
 <pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
+    <!--Elemento disparador CLASE: activar-modal ID: #modal1 -->
+    <button class="btn bg-blue bor-pill activar-modal" data-target="#modal1">Disparador</button>
+
+    <!-- Código del Modal -->
+    <div class="modal-fondo" id="modal1"> <!--ID Igual al data-target del disparador -->
+        <div class="modal ancho-50">
+            <div class="modal-cuerpo ta-c fd-blanco"> <!--Modal Cuerpo aquí va el contenido del modal-->
+                <p class="c-black">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Reiciendis qui quaerat similique reprehenderit unde cupiditate fuga 
+                    voluptatem repudiandae labore! Soluta harum, ducimus et vel 
+                    facere voluptates eligendi nemo vitae fugit?
+                </p>
+            </div>
+        </div>
     </div>
 </pre>
 </div>
-        <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
-        </p>
+        <div class="alerta-negra">
+            Notese que en la definición del elemento se utilizaron clases de <a href="texto.html" class="link">Texto</a> , de <a href="colores.html" class="link">colores</a> de fondo y
+            de <a href="ancho_alto.html" class="link">ancho y alto</a> por porcentaje. A lo largo de la explicación de este elemento 
+            vamos a utilizar mas que solo las mencionadas. Cada diseño queda sujeto a las necesidades del proyecto en desarrollo.
+        </div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t4">Modal Dark</h2>
+            <p class="mb-3">
+                Ahora vamos a realizar el mismo modal pero de color oscuro y mostrar como a través de las clases de la librería 
+                se puede obtener diversos resultados flexibles acorde a las necesidades.
+            </p>
+
+             <button class="btn bg-blue bor-pill activar-modal" data-target="#mod2">Disparador</button>
+
+            <div class="modal-fondo" id="mod2">
+                <div class="modal ancho-50 fd-gris-n">
+                    <div class="modal-cuerpo ta-c c-gris-c">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quaerat similique reprehenderit unde cupiditate fuga voluptatem repudiandae labore! Soluta harum, ducimus et vel facere voluptates eligendi nemo vitae fugit?</p>
+                    </div>
+                </div>
+            </div>
+
+
+<div class="codigo">
+    <pre id="c3" class="cod-html">
+        <button class="btn bg-blue bor-pill activar-modal" data-target="#mod2">Disparador</button>
+        <div class="modal-fondo" id="mod2">
+            <div class="modal ancho-50 fd-gris-n">
+                <div class="modal-cuerpo ta-c c-gris-c">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quaerat similique reprehenderit unde cupiditate fuga voluptatem repudiandae labore! Soluta harum, ducimus et vel facere voluptates eligendi nemo vitae fugit?</p>
+                </div>
+            </div>
+        </div>       
+    </pre>
+</div>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t5">Modal Formulario</h2>
+            <p class="mb-3">
+                Es muy común ver en diversos sitios como se establece los formularios en ventanas modals para 
+                realizar esto, y teniendo en cuenta la estructura vista realizaremos un modal con un <a href="formularios.html" class="link">formulario</a>
+                de login introducido en una ventana emergente. Es importante aclarar que para que el modal se ajuste 
+                a diversos tamaños de pantalla se utilizará las clases responsive de <a href="ancho_alto.html" class="link">Ancho y Alto</a> 
+                documentadas.
+            </p>
 
+            <button class="btn bg-blue bor-pill activar-modal" data-target="#mod4">Disparador</button>
+            <div class="modal-fondo" id="mod4">
+                <div class="modal ancho-25 ancho-m-45 ancho-s-75 ancho-xs-90 fd-gris-n">
+                    <div class="modal-cuerpo ta-c c-gris-c">
+                        <h2  class="m-0 mb-3 c-blanco ta-l">Login</h2>
+                        <div  class="flex-column">
+                            <div  class="input-g">
+                                <div  class="grupo">
+                                    <span  class="span-grupo">Username</span>
+                                    <input  type="text"  name="usuario"  required="">
+                                </div>
+                                <div  class="grupo mt-3">
+                                    <span  class="span-grupo">Password</span>
+                                    <input  type="password"  name="clave"  required="">
+                                </div>
+                            </div>
+                            <div  class="d-flex just-end">
+                                <div  class="check-radio-grupo">
+                                    <input  type="checkbox"  id="rec_login">
+                                    <label  for="rec_login"  class="cb-verde mt-1">Recordar Clave</label>
+                                </div>
+                            </div>
+                            <div  class="d-flex flex-column-reverse just-between ali-stretch mt-5 flex-wrap flex-column-reverse-s ali-stretch-s">
+                                <div  class="btn-grupo-lg">
+                                    <input  type="submit"  name="Registrarse"  class="btn-sm bg-grey"  value="Registro">
+                                    <input  type="submit"  name="Ingresar"  class="btn-sm bg-green"  value="Ingresar">
+                                </div>
+                            </div>
+                            <div  class="mt-2">
+                                <a  href="#"  class="link mt-3">Olvidó su clave</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="codigo">
+    <pre id="c4" class="cod-html">
+        <div class="modal-fondo" id="mod4">
+            <div class="modal ancho-25 ancho-m-45 ancho-s-75 ancho-xs-90 fd-gris-n">
+                <div class="modal-cuerpo ta-c c-gris-c">
+                    <h2  class="m-0 mb-3 c-blanco ta-l">Login</h2>
+                    <div  class="flex-column">
+                        <div  class="input-g">
+                            <div  class="grupo">
+                                <span  class="span-grupo">Username</span>
+                                <input  type="text"  name="usuario"  required="">
+                            </div>
+                            <div  class="grupo mt-3">
+                                <span  class="span-grupo">Password</span>
+                                <input  type="password"  name="clave"  required="">
+                            </div>
+                        </div>
+                        <div  class="d-flex just-end">
+                            <div  class="check-radio-grupo">
+                                <input  type="checkbox"  id="rec_login">
+                                <label  for="rec_login"  class="cb-verde mt-1">Recordar Clave</label>
+                            </div>
+                        </div>
+                        <div  class="d-flex flex-column-reverse just-between ali-stretch mt-5 flex-wrap flex-column-reverse-s ali-stretch-s">
+                            <div  class="btn-grupo-lg">
+                                <input  type="submit"  name="Registrarse"  class="btn-sm bg-grey"  value="Registro">
+                                <input  type="submit"  name="Ingresar"  class="btn-sm bg-green"  value="Ingresar">
+                            </div>
+                        </div>
+                        <div  class="mt-2">
+                            <a  href="#"  class="link mt-3">Olvidó su clave</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </pre>
+</div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t6">Modal Tabs</h2>
+            <p class="mb-3">
+                Otro de los elementos más comunes en las ventanas modals son los <a href="tabs.html" class="link">tabs</a> 
+                que permiten a usuario seleccionar contenido a través de solapas que cumplen la función de menú.
+            </p>
+
+            <button class="btn bg-blue bor-pill activar-modal" data-target="#mod5">Disparador</button>
+
+            <div class="modal-fondo" id="mod5">
+                <div class="modal ancho-50 ancho-m-60 ancho-s-70 ancho-xs-90 fd-gris-n">
+                    <div class="modal-cuerpo ta-c c-gris-c">
+                        <div  id="tab3">
+                            <div  class="tab-borde">
+                                <div  class="op-tab-borde">
+                                    <ul>
+                                        <label  data-target="#inicio3">Inicio</label>
+                                        <label  data-target="#servicios3">Servicios</label>
+                                        <label  data-target="#galeria3">Galeria</label>
+                                        <label  data-target="#porfolio3">Porfolio</label>
+                                    </ul>
+                                </div>
+                                <div  id="inicio3"  class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n">
+                                    <p>Hola soy el inicio del tab!!</p>
+                                </div>
+                                <div  id="servicios3"  class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n">
+                                    <p>Hola soy los servicios del tab!!</p>
+                                </div>
+                                <div  id="galeria3"  class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n">
+                                    <p>Hola soy la galeria del tab!!</p>
+                                </div>
+                                <div  id="porfolio3"  class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n">
+                                    <p>Hola soy el porfolio del tab!!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+<div class="codigo">
+    <pre id="c5" class="cod-html">
+        <div class="modal-fondo" id="mod5">
+            <div class="modal ancho-50 ancho-m-60 ancho-s-70 ancho-xs-90 fd-gris-n">
+                <div class="modal-cuerpo ta-c c-gris-c">
+                    <div  id="tab3">
+                        <div  class="tab-borde">
+                            <div  class="op-tab-borde">
+                                <ul>
+                                    <label  data-target="#inicio3">Inicio</label>
+                                    <label  data-target="#servicios3">Servicios</label>
+                                    <label  data-target="#galeria3">Galeria</label>
+                                    <label  data-target="#porfolio3">Porfolio</label>
+                                </ul>
+                            </div>
+                            <div  id="inicio3"  class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n">
+                                <p>Hola soy el inicio del tab!!</p>
+                            </div>
+                            <div  id="servicios3"  class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n">
+                                <p>Hola soy los servicios del tab!!</p>
+                            </div>
+                            <div  id="galeria3"  class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n">
+                                <p>Hola soy la galeria del tab!!</p>
+                            </div>
+                            <div  id="porfolio3"  class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n">
+                                <p>Hola soy el porfolio del tab!!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>     
+    </pre>
+</div>
+        </article>
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
@@ -111,5 +324,10 @@
         var idMenu = "#m5"
     </script>
     <script src="../js/docs-body.js"></script>
+    <script>
+        BS.ModalInit()
+        BS.TabInit().iniciarBorde({contexto: "#tab3",colorFuente: "c-white", colorFondo: "bg-pink-d-1", colorBorde: "fd-blanco"})
+    
+    </script>
 </body>
 </html>
