@@ -31,8 +31,14 @@
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
             <h1>Tabs</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ducimus distinctio doloremque aperiam fugiat,
-                 sapiente animi quam ut minima recusandae aut blanditiis tenetur. Animi earum culpa, quam incidunt nemo dolores?</p>
+            <p>
+                Elemento dinámico que permite a través de las solapas definidas por el usuario 
+                seleccionar contenido a visualizar. La librería contiene un conjunto de clases 
+                que permiten definir este elemento tan utilizado en el desarrollo web. <br>
+                Es importante aclarar que es uno de los elementos con más funciones, lo cual implica 
+                que hay que utilizar muchas de las clases utilitarias y de alineamiento de la librería, de esta forma 
+                se obtienen resultados óptimos.
+            </p>
             
             <div class="mar-2 boton-descarga"></div>
         </section>
@@ -40,44 +46,119 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="a1_pt">SubTitulo Artículo 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus ea nulla aliquam soluta commodi laboriosam nobis reprehenderit, 
-                labore est asperiores voluptatum beatae fuga atque rem eos nemo rerum magnam.</p>
+            <h2 id="a1_pt">Inicialización del Tabs</h2>
+            <p>
+                Lo primero como todos los módulos de JavaScript de la librería es necesario disponer 
+                en nuestro proyecto el archivo <span class="badge badge-gris">bodystyle.min.js</span>
+                de esta forma tendremos a disposición la lógica para manejar este elemento.
+            </p>
 
 <div class="codigo">
-
 <pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
+    <!--Agregar antes de la etiqueta de cierre del body -->
+    <!--DESCOMENTAR LA LINEA DE ABAJO-->
+    <!--<script  src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>-->
 </pre>
 </div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
-<div class="codigo">
 
-<pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
+            <div class="alerta-negra mb-3">
+                Si no quieren agregarlo a través de su CDN pueden descargargar el archivo a través de NPM o 
+                la descarga directa la cual la van a encontrar al inicio de esta documentación <a href="get_started.html" class="link">Get Started</a>.
+            </div>
+
+            <p>
+                Luego, es necesario inicializar el elemento, para ello es necesario darle un <span class="badge badge-red com-trigger"
+                data-info="Un selector de ID en CSS es una herramienta para seleccionar y aplicar estilos a un único elemento en una página web utilizando su atributo id">id</span> al tab único utilizado 
+                como <span class="badge badge-gris">contexto</span> que va a permitir gestionar la lógica del elemento.
+            </p>
+
+<div class="codigo">
+    <pre id="c2" class="cod-html">
+        <script>
+            /**
+             * CUATRO PARÁMETROS DE LOS CUALES EL PRIMERO ES OBLIGATORIO 
+             * contexto: ID que se utiliza para definir el contexto
+             * colorFuente: Color del texto del tab (Estilos de texto)
+             * colorFondo: Color del fondo del tab (Clases colores)
+             * colorBorde: Borde selector (Color de fondo)
+             */
+            // BS.TabInit().iniciarBorde({contexto: "#ta",colorFuente: "c-white", colorFondo: "bg-black", colorBorde: "fd-blanco"})
+        </script>
+    </pre>
+</div>
+
+            <h3>Muestra Default</h3>
+            <p class="mb-3">
+                Ahora veremos un ejemplo por default de como definir el elemento tab poder tener una primera apreciación. <br>
+                El ID selecionado va a ser <span class="badge badge-red">#tab1</span>.
+            </p>
+            <div id="ta1">
+                <div class="tab-borde">
+                    <div class="op-tab-borde">
+                        <ul>
+                            <label data-target="#inicio">Inicio</label>
+                            <label data-target="#servicios">Servicios</label>
+                            <label data-target="#galeria">Galeria</label>
+                            <label data-target="#porfolio">Porfolio</label>
+                        </ul>
+                    </div>
+                    <div id="inicio" class="contenido-tab p-1 d-flex just-center ali-center">
+                        <p>Hola soy el inicio del tab!!</p>
+                    </div>
+                    <div id="servicios" class="contenido-tab p-1 d-flex just-center ali-center">
+                        <p>Hola soy los servicios del tab!!</p>
+                    </div>
+                    <div id="galeria" class="contenido-tab p-1 d-flex just-center ali-center">
+                        <p>Hola soy la galeria del tab!!</p>
+                    </div>
+                    <div id="porfolio" class="contenido-tab p-1 d-flex just-center ali-center">
+                        <p>Hola soy el porfolio del tab!!</p>
+                    </div>
+                </div>
+            </div>
+            
+
+<div class="codigo">
+<pre class="cod-html" id="c3">
+    <div id="tab1">
+        <div class="tab-borde">
+            <div class="op-tab-borde">
+                <ul>
+                    <label data-target="#inicio">Inicio</label>
+                    <label data-target="#servicios">Servicios</label>
+                    <label data-target="#galeria">Galeria</label>
+                    <label data-target="#porfolio">Porfolio</label>
+                </ul>
+            </div>
+            <div id="inicio" class="contenido-tab p-1 d-flex just-center ali-center">
+                <p>Hola soy el inicio del tab!!</p>
+            </div>
+            <div id="servicios" class="contenido-tab p-1 d-flex just-center ali-center">
+                <p>Hola soy los servicios del tab!!</p>
+            </div>
+            <div id="galeria" class="contenido-tab p-1 d-flex just-center ali-center">
+                <p>Hola soy la galeria del tab!!</p>
+            </div>
+            <div id="porfolio" class="contenido-tab p-1 d-flex just-center ali-center">
+                <p>Hola soy el porfolio del tab!!</p>
+            </div>
+        </div>
     </div>
 </pre>
 </div>
-        <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
-        </p>
+        <div class="alerta-negra">
+            Notese que cada opción del tab (etiquetas label) tienen un atributo <span class="badge badge-black">data-target</span>
+            que apunta al contenido que pretende mostrar, por esta razón estos dos elementos (contenido y opción están enlazados)
+            de esta forma se puede establecer la conexión, es muy importante que el <span class="badge badge-black">data-target</span> 
+            esté igualado al #idContenido, no olvidarse el numeral.
+        </div>
+       
+<div class="codigo">
+    <pre id="c4" class="cod-js">
+        // Inicialización del ejemplo 
+        BS.TabInit().iniciarBorde({contexto: "#tab1"})
+    </pre>
+</div>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
 
@@ -107,5 +188,9 @@
         var idMenu = "#m5"
     </script>
     <script src="../js/docs-body.js"></script>
+
+    <script>
+        BS.TabInit().iniciarBorde({contexto: "#ta1"})
+    </script>
 </body>
 </html>
