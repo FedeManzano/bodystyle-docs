@@ -27,6 +27,7 @@ En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de 
         - :page_facing_up: <i>badges.html</i>
         - :page_facing_up: <i>bordes.html</i>
         - :page_facing_up: <i>botones.html</i>
+        - :page_facing_up: <i>boton_inicio.html</i>
         - :page_facing_up: <i>breadcrumbs.html</i>
         - :page_facing_up: <i>colecciones.html</i>
         - :page_facing_up: <i>colecciones_flotantes.html</i>
