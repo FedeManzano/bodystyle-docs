@@ -147,8 +147,35 @@
 </div>
 <div class="codigo">
 <pre class="cod-js" id="c2">
+    // CDN : https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js
+
+    // 1 OPCIÓN ESTÁTICA
+    // ------------------
+
+    // Inicializa el elemento
+    // cuando estos están dispuestos de manera estática dentro del DOM
+
     // Notese que el ID de contexto es igual al definido en el HTML pero con el numeral delante
     BS.ColeccionFlot().iniciar({contexto:"#lis1", fondoItem:"bg-pink-d-1", colorTexto:"c-blanco", altura:300} )
+
+     // 2 OPCIÓN DINÁMICA
+    // -----------------   
+    
+    /*
+        En proyectos donde se tabaja a través de injección de elementos a través 
+        de JavaScript de manera dinámica, y el elemento que se estudia en esta sección se 
+        ingresa de esta manera, es necesario aplicar un retraso en la inicialización del 
+        módulo con el siguiente codigo.
+    */
+
+    //Si los elementos que conforman esta funcionalidad son dinámicos 
+    // Agregados a través de JS 
+    window.onload = () => {
+        setTimeout( () => {
+            BS.ColeccionFlot().iniciar({contexto:"#lis1", fondoItem:"bg-pink-d-1", colorTexto:"c-blanco", altura:300} )
+        }, 100); 
+    }
+
 </pre>
 </div>
         </article>

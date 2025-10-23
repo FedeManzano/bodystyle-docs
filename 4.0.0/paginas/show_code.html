@@ -68,19 +68,43 @@
             </p>
 
 <div class="codigo">
-<pre class="cod-html" id="c1">
-    <!--Agregar antes de la etiqueta de cierre del body -->
-    <!--DESCOMENTAR LA LINEA DE ABAJO-->
-    <!--<script  src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>-->
-    <script>
-        /* DESCOMENTAR ESTE CÓDIGO
+<pre class="cod-js" id="c1">
+    // CDN : https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js
+
+    // 1 OPCIÓN ESTÁTICA
+    // ------------------
+
+    // Inicializa el elemento
+    // cuando estos están dispuestos de manera estática dentro del DOM
+    BS.CodigoCInit(); Si necesitamos el código de C
+    BS.CodigoJavaInit(); Si necesitamos el código de Java
+    BS.CodigoJsInit(); Si necesitamos el código de JavaScript
+    BS.CodigoHtmlInit() Si necesitamos el código de Html
+    BS.CodigoCssInit() Si necesitamos el código de CSS
+
+    /*******************************************************************************/
+
+    // 2 OPCIÓN DINÁMICA
+    // -----------------   
+    
+    /*
+        En proyectos donde se tabaja a través de injección de elementos a través 
+        de JavaScript de manera dinámica, y el elemento que se estudia en esta sección se 
+        ingresa de esta manera, es necesario aplicar un retraso en la inicialización del 
+        módulo con el siguiente codigo.
+    */
+
+    //Si los elementos que conforman esta funcionalidad son dinámicos 
+    // Agregados a través de JS 
+    window.onload = () => {
+        setTimeout( () => {
             BS.CodigoCInit(); Si necesitamos el código de C
             BS.CodigoJavaInit(); Si necesitamos el código de Java
             BS.CodigoJsInit(); Si necesitamos el código de JavaScript
             BS.CodigoHtmlInit() Si necesitamos el código de Html
             BS.CodigoCssInit() Si necesitamos el código de CSS
-        */
-    </script>
+        }, 100); 
+    }
 </pre>
 </div>
 

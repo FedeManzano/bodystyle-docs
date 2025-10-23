@@ -73,17 +73,42 @@
             </p>
 
 <div class="codigo">
-    <pre id="c2" class="cod-html">
-        <script>
-            /**
-             * CUATRO PARÁMETROS DE LOS CUALES EL PRIMERO ES OBLIGATORIO 
-             * contexto: ID que se utiliza para definir el contexto
-             * colorFuente: Color del texto del tab (Estilos de texto)
-             * colorFondo: Color del fondo del tab (Clases colores)
-             * colorBorde: Borde selector (Color de fondo)
-             */
-            // BS.TabInit().iniciarBorde({contexto: "#ta",colorFuente: "c-white", colorFondo: "bg-black", colorBorde: "fd-blanco"})
-        </script>
+    <pre id="c2" class="cod-js">
+    // CDN : https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js
+
+    // 1 OPCIÓN ESTÁTICA
+    // ------------------
+
+    // Inicializa el elemento
+    // cuando estos están dispuestos de manera estática dentro del DOM
+    /**
+     * CUATRO PARÁMETROS DE LOS CUALES EL PRIMERO ES OBLIGATORIO 
+     * contexto: ID que se utiliza para definir el contexto
+     * colorFuente: Color del texto del tab (Estilos de texto)
+     * colorFondo: Color del fondo del tab (Clases colores)
+     * colorBorde: Borde selector (Color de fondo)
+     */
+    BS.TabInit().iniciarBorde({contexto: "#ta",colorFuente: "c-white", colorFondo: "bg-black", colorBorde: "fd-blanco"})
+    
+    /****************************************************************************/
+
+    // 2 OPCIÓN DINÁMICA
+    // -----------------   
+
+    /*
+        En proyectos donde se tabaja a través de injección de elementos a través 
+        de JavaScript de manera dinámica, y el elemento que se estudia en esta sección se 
+        ingresa de esta manera, es necesario aplicar un retraso en la inicialización del 
+        módulo con el siguiente codigo.
+    */
+
+    //Si los elementos que conforman esta funcionalidad son dinámicos 
+    // Agregados a través de JS 
+    window.onload = () => {
+        setTimeout( () => {
+            BS.TabInit().iniciarBorde({contexto: "#ta",colorFuente: "c-white", colorFondo: "bg-black", colorBorde: "fd-blanco"})
+        }, 100); 
+    }
     </pre>
 </div>
 
