@@ -30,9 +30,12 @@
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
-            <h1>Lista Fixed</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ducimus distinctio doloremque aperiam fugiat,
-                 sapiente animi quam ut minima recusandae aut blanditiis tenetur. Animi earum culpa, quam incidunt nemo dolores?</p>
+            <h1 id="t1">Lista Fixed</h1>
+            <p>
+                Listas que se posicionan a la derecha o la izquierda de la pantalla y permanece en esa posición 
+                durante toda la pantalla, de manera tal que acompaña el usuario durante todo el recorrido de la página. <br>
+                A la derecha de esta página hay una muestra del elemento de esta sección.
+            </p>
             
             <div class="mar-2 boton-descarga"></div>
         </section>
@@ -40,44 +43,117 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="a1_pt">SubTitulo Artículo 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus ea nulla aliquam soluta commodi laboriosam nobis reprehenderit, 
-                labore est asperiores voluptatum beatae fuga atque rem eos nemo rerum magnam.</p>
+            <h2 id="t2">Inicialización</h2>
+            <p>
+                Para inicializar el elemento es necesario disponer del archivo <span class="badge badge-grey">bodystyle.min.js</span>
+                agregado en el proyecto en desarrollo, para hacer esto consultar <a href="get_started.html" class="link">Get Started</a> 
+                de la documentación. <br>
+                Luego hay que inicializar el módulo de la librería a través del objeto <span class="badge badge-negro">BS</span> que 
+                permite el acceso a todos los módulos de la librería.
+            </p>
+
+            <h3 id="t3">Parámetros del Módulo</h3>
+
+            <table class="table-dark table-sm vertical-border selector table-bor-grey">
+                <thead>
+                    <tr>
+                        <th>Atributo</th>
+                        <th>Valores</th>
+                        <th>Descripción</th>
+                        <th>Obligatorio</th>
+                        <th>Default</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Contexto</td>
+                        <td>ID que envuelve a toda la lista</td>
+                        <td>
+                            Importante parámetro porque permite configurar el elemento,
+                            es importante definir un ID unívoco para poder manejar ele elemento.
+                        </td>
+                        <td>SI</td>
+                        <td>vacio (no funciona)</td>
+                    </tr>
+                    <tr>
+                        <td>fondoItem</td>
+                        <td>(fd-[color]|bg-[color])</td>
+                        <td>
+                            Permite definir el color de fondo de los elementos de la lista.
+                            Son las clases de la librería que permiten configurar 
+                            el color de fondo. <a href="colores.html" class="link">Ver Colores</a> 
+                        </td>
+                        <td>NO</td>
+                        <td>fd-gris-ve-o</td>
+                    </tr>
+                    <tr>
+                        <td>colorTexto</td>
+                        <td>(c-[color])</td>
+                        <td>
+                            Permite definir el color de texto de los elementos de la lista.
+                            Son las clases de la librería que permiten configurar 
+                            el color del texto. <a href="texto.html" class="link">Ver Texto</a> 
+                        </td>
+                        <td>NO</td>
+                        <td>c-white</td>
+                    </tr>
+                    <tr>
+                        <td>altura</td>
+                        <td>Valores entero positivo</td>
+                        <td>
+                            Altura respecto el eje Y en PX donde queremos que aparezca la lista. 
+                        </td>
+                        <td>NO</td>
+                        <td>150</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 id="t4">Ejemplo en esta Página</h3>
+
+            <p>
+                Código utilizado para implementar el elemento que se muestra a la derecha en esta misma página. <br>
+                Es importante envolver toda la lista en un contenedor con un ID único para cada lista instanciada, 
+                luego utilizar las clases <span class="badge badge-red">.lista-float-der</span> o 
+                <span class="badge badge-red">.lista-float-izq</span> que permitirán posicionar la lista a la derecha 
+                o a la izquierda con respecto a la pantalla. El paso siguiente es envolver a los items de la lista 
+                en un contenedor con la clase <span class="badge badge-red">.lista-item</span> como se muestra en el código 
+                de abajo. Por último agregamos los botones de abrir y cerrar la lista con las clases <span class="badge badge-red">.abrir</span> y
+                 <span class="badge badge-red">.cerrar</span>.
+            </p>
 
 <div class="codigo">
-
 <pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
-</pre>
-</div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
-<div class="codigo">
+    <div id="lis1"> <!--IMP Es el contexto-->
+        <div class="lista-float-der">
+            <div class="lista-item"> 
+                <a href="#t1" >Lista Fixed</a>
+            </div>
+            <div class="lista-item"> 
+                <a href="#t2" >Inicialización</a>
+            </div>
+            <div class="lista-item"> 
+                <a href="#t3" >Parámetros</a>
+            </div>
+            <div class="lista-item"> 
+                <a href="#t4" >Ejemplo</a>
+            </div>
+            <div class="lista-item"> 
+                <a href="#t5" >Posicionamiento</a>
+            </div>
 
-<pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
+            <div class="abrir c-white">_</div>
+            <div class="cerrar c-white">X</div>
+        </div>
     </div>
 </pre>
 </div>
-        <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
-        </p>
+<div class="codigo">
+<pre class="cod-js" id="c2">
+    // Notese que el ID de contexto es igual al definido en el HTML pero con el numeral delante
+    BS.ColeccionFlot().iniciar({contexto:"#lis1", fondoItem:"bg-pink-d-1", colorTexto:"c-blanco", altura:300} )
+</pre>
+</div>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
 
@@ -86,18 +162,28 @@
     </section>
     <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
 
-    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
-    <div class="guia-pagina">
-        <ul>
-            <li><a href="#a1_pt">Subtitulo 1</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
-        </ul>
+    <div id="col1">
+        <div class="lista-float-der">
+            <div class="lista-item"> 
+                <a href="#t1" >Lista Fixed</a>
+            </div>
+            <div class="lista-item"> 
+                <a href="#t2" >Inicialización</a>
+            </div>
+            <div class="lista-item"> 
+                <a href="#t3" >Parámetros</a>
+            </div>
+            <div class="lista-item"> 
+                <a href="#t4" >Ejemplo</a>
+            </div>
+            <div class="lista-item"> 
+                <a href="#t5" >Posicionamiento</a>
+            </div>
+
+            <div class="abrir c-white">_</div>
+            <div class="cerrar c-white">X</div>
+        </div>
     </div>
-    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
     <!--JS -------------------------------------------------------------------------------------------------------------->
@@ -107,5 +193,8 @@
         var idMenu = "#m5"
     </script>
     <script src="../js/docs-body.js"></script>
+    <script>
+            BS.ColeccionFlot().iniciar({contexto:"#col1", fondoItem:"bg-pink-d-1", colorTexto:"c-blanco", altura:120} )
+    </script>
 </body>
 </html>
