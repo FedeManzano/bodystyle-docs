@@ -55,7 +55,7 @@ import $ from "jquery"
         <a  class="titulo c-blanco t-may" data-target="#m5">JS</a>
         <ul id="m5">
             <li><a href="">Boton Inicio</a></li>
-            <li><a href="">Colección Flotante</a></li>
+            <li><a href="colecciones_flotantes.html">Lista Fixed</a></li>
             <li><a href="">Dropdown</a></li>
             <li><a href="tooltips.html">ToolTips</a></li>
             <li><a href="comentarios.html">Comentarios</a></li>

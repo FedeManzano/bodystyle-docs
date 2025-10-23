@@ -29,6 +29,7 @@ En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de 
         - :page_facing_up: <i>botones.html</i>
         - :page_facing_up: <i>breadcrumbs.html</i>
         - :page_facing_up: <i>colecciones.html</i>
+        - :page_facing_up: <i>colecciones_flotantes.html</i>
         - :page_facing_up: <i>colores.html</i>
         - :page_facing_up: <i>comentarios.html</i>
         - :page_facing_up: <i>contenedor.html</i>
