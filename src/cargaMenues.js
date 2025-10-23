@@ -29,6 +29,7 @@ import $ from "jquery"
             <li><a href="colecciones.html">Colecciones</a></li>
             <li><a href="efecto3d.html">Efecto 3D</a></li>
             <li><a href="efecto_hover.html">Efecto Hover</a></li>
+            <li><a href="formas.html">Formas</a></li>
             <li><a href="">Footers</a></li>
         </ul>
         <a  class="titulo c-blanco t-may" data-target="#m3">Alineamiento</a>
