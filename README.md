@@ -2,7 +2,6 @@
     <img src="./logo/logobs.png" width="300px" height="300px">
 </p>
 
-
 # :green_book: Docs [Bodystyle 4.0.0](https://github.com/FedeManzano/bodystyle)
 
 ![LICENSE](https://img.shields.io/badge/LICENSE-MIT-purple)
