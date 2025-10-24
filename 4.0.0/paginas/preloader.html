@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Elemento que se muestra cuando se está esperando algún recurso.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Preloader</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Preloader</h1>
+            <p>
+                Elemento sencillo que busca entretener al usuario cuando está a la espera de un recurso 
+                o la carga de cierto módulo de la aplicación tarda algunos segundos en cargarse. 
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Tamaños</h2>
+            <p class="mb-3">
+                La librería cuanta con tres tamaños para este tipo de elementos, (sm | md | lg) donde md no hace falta 
+                ponerlo porque es el valor por default. <br>
+                Para utilizar este elemento tenemos que agregar a una etqueta <span class="badge badge-red">.preloader-[TAM]</span> donde 
+                TAM es el tamaño del preloader, luego en el mismo elemento la clase <span class="badge badge-red">pre-[color]</span> donde color 
+                es el color del preloader.
+            </p>
+
+            <div class="container d-flex just-around flex-wrap">
+                <div class="preloader-sm pre-rojo"></div>
+                <div class="preloader pre-rojo"></div>
+                <div class="preloader-lg pre-rojo"></div>
+            </div>
+
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <div class="container d-flex just-around flex-wrap">
+        <div class="preloader-sm pre-rojo"></div>
+        <div class="preloader pre-rojo"></div>
+        <div class="preloader-lg pre-rojo"></div>
+    </div>
+</pre>
+</div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t3">Colores</h2>
+            <p>
+                Existe algunos colores para definir estos elementos, los mismos se detallan en la siguiente lista.
+            </p>
+            <div class="lista-doc">
+                <ul>
+                    <li>.pre-rojo</li>
+                    <li>.pre-verde</li>
+                    <li>.pre-azul</li>
+                    <li>.pre-negro</li>
+                    <li>.pre-gris</li>
+                    <li>.pre-blanco</li>
+                </ul>
+            </div>
+
+            <div class="container d-flex just-around flex-wrap">
+                <div class="preloader pre-rojo"></div>
+                <div class="preloader pre-verde"></div>
+                <div class="preloader pre-azul"></div>
+                <div class="preloader pre-gris"></div>
+                <div class="preloader pre-negro"></div>
+                <div class="preloader pre-blanco"></div>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="container d-flex just-around flex-wrap">
+        <div class="preloader pre-rojo"></div>
+        <div class="preloader pre-verde"></div>
+        <div class="preloader pre-azul"></div>
+        <div class="preloader pre-gris"></div>
+        <div class="preloader pre-negro"></div>
+        <div class="preloader pre-blanco"></div>
+    </div>
+</pre>
+</div>
+        </article>
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="guia-pagina">
+        <ul>
+            <li><a href="#t1">Preloader</a></li>
+            <li><a href="#t2">Tamaños</a></li>
+            <li><a href="#t3">Colores</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Preloader"
+        var idMenu = "#m6"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>

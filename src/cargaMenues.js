@@ -66,8 +66,8 @@ import $ from "jquery"
         <a  class="titulo c-blanco t-may" data-target="#m6">Componentes</a>
         <ul id="m6">
             <li><a href="nav.html">Nav</a></li>
-            <li><a href="">Progressbar</a></li>
-            <li><a href="">Preloader</a></li>
+            <li><a href="progressbar.html">Progressbar</a></li>
+            <li><a href="preloader.html">Preloader</a></li>
         </ul>
         `
 
