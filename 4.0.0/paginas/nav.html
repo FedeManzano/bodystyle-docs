@@ -6,7 +6,7 @@
     <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
 
     
-    <meta name="description" content="">
+    <meta name="description" content="Barra de navegación de la librería Bodystyle.">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/bodystyle.min.css">
@@ -30,9 +30,12 @@
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
-            <h1>Nav</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ducimus distinctio doloremque aperiam fugiat,
-                 sapiente animi quam ut minima recusandae aut blanditiis tenetur. Animi earum culpa, quam incidunt nemo dolores?</p>
+            <h1 id="t1">Nav</h1>
+            <p>
+                En esta sección vamos a ver como utilizar la barra de navegación de Bodystyle a través de las 
+                diferentes configuraciones que se le pueden dar a este elemento en función de las necesidades 
+                del desarrollo.
+            </p>
             
             <div class="mar-2 boton-descarga"></div>
         </section>
@@ -40,44 +43,167 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="a1_pt">SubTitulo Artículo 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus ea nulla aliquam soluta commodi laboriosam nobis reprehenderit, 
-                labore est asperiores voluptatum beatae fuga atque rem eos nemo rerum magnam.</p>
+            <h2 id="t2">Inicialización</h2>
+            <p>
+                Dependiendo de las funcionalidades que necesitemos de la barra de navegación vamos a tener que 
+                inicializar el módulo correspondiente a este elemento, es importante aclarar que si no queremos ajustar 
+                la barra de navegación a todos los tamaños de pantalla la inicialización del módulo de JavaScript no es necesario, aún así 
+                en esta documentación se mostrarán todos los casos posibles de como colocar el nav a diferentes circunstancias. <br>
+                La recomendación es ver <a href="get_started.html" class="link">Get Started</a> página en la cual se muestra 
+                como añadir la lógica de la librería.
+            </p>
 
 <div class="codigo">
+    <pre id="c1" class="cod-js">
+    // CDN : https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js
 
-<pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
-</pre>
+    // 1 OPCIÓN ESTÁTICA
+    // ------------------
+
+    // Inicializa el elemento
+    // cuando estos están dispuestos de manera estática dentro del DOM
+    /**
+     * CUATRO PARÁMETROS DE LOS CUALES EL PRIMERO ES OBLIGATORIO 
+     * contexto: ID que se utiliza para definir el contexto
+     * colorFuente: Color del texto del tab (Estilos de texto)
+     * colorFondo: Color del fondo del tab (Clases colores)
+     * colorBorde: Borde selector (Color de fondo)
+     */
+    BS.NavInit("#ID_ DEL_ NAV") // Importante parámetro porque permite definir el contexto 
+                                // Donde se aplicarán las diferentes funciones y eventos.
+    
+    /****************************************************************************/
+
+    // 2 OPCIÓN DINÁMICA
+    // -----------------   
+
+    /*
+        En proyectos donde se tabaja a través de injección de elementos a través 
+        de JavaScript de manera dinámica, y el elemento que se estudia en esta sección se 
+        ingresa de esta manera, es necesario aplicar un retraso en la inicialización del 
+        módulo con el siguiente codigo.
+    */
+
+    //Si los elementos que conforman esta funcionalidad son dinámicos 
+    // Agregados a través de JS 
+    window.onload = () => {
+        setTimeout( () => {
+           BS.NavInit("#ID_ DEL_ NAV") // Importante parámetro porque permite definir el contexto 
+                                       // Donde se aplicarán las diferentes funciones y eventos.
+        }, 100); 
+    }
+    </pre>
 </div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
+            <h3 id="t3">Muestra Por Default</h3>
+            <p class="mb-3">
+                El nav por default de la librería se muestra a continuación.
+            </p>
+
+            <nav id="nav" class="bs-nav mt-2" data-target="#bs-nav-sidebar">
+                <div class="bs-nav-md align-left-list">
+                    <a href="#" class="logo-container">
+                        <img src="../imagenes/20191106_205049.png"  alt="Foto de perfil">
+                    </a>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Porfolio</a></li>
+                        <li><a href="#">Galeria</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <nav id="nav" class="bs-nav mt-2" data-target="#bs-nav-sidebar">
+                <div class="bs-nav-lg align-left-list">
+                    <a href="#" class="logo-container">
+                        <img src="../imagenes/20191106_205049.png" alt="Foto de perfil">
+                    </a>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Porfolio</a></li>
+                        <li><a href="#">Galeria</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+
+
 <div class="codigo">
+    <pre id="c2" class="cod-html">
+        <!--NAV Mediana -->
+        <nav id="nav" class="bs-nav" data-target="#bs-nav-sidebar">
+            <div class="bs-nav-md align-left-list">
+                <a href="#" class="logo-container">
+                    <img src="../imagenes/20191106_205049.png"  alt="Foto de perfil">
+                </a>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Porfolio</a></li>
+                    <li><a href="#">Galeria</a></li>
+                </ul>
+            </div>
+        </nav>
 
-<pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
-</pre>
+        <!--NAV LG -->
+        <nav id="nav" class="bs-nav mt-2" data-target="#bs-nav-sidebar">
+            <div class="bs-nav-lg align-left-list">
+                <a href="#" class="logo-container">
+                    <img src="../imagenes/20191106_205049.png" alt="Foto de perfil">
+                </a>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Porfolio</a></li>
+                    <li><a href="#">Galeria</a></li>
+                </ul>
+            </div>
+        </nav>
+    </pre>
 </div>
-        <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
+
+        <div class="alerta-negra">
+            Este es el Nav por default, a partir de esto vamos a comenzar a agregar elementos y clases para obtener un resultado 
+            mas personalido. <br>
+            Como se puede observar hay dos medidas, md y lg que según las circunstacias puede ser mejor uno que otro, eso le toca al lector 
+            la elección del nav mas conveniente.
+        </div>
+
+        <h3 id="t4">Estructura</h3>
+        <p>
+            Conociendo la estructura es más fácil recordar como se compone este elemento y es mas sencillo 
+            incorporarlo.
         </p>
+
+<div class="codigo">
+    <pre id="c3" class="cod-html">
+        <nav class="bs-nav"> <!--Un nav con la clase bs-nav como contenedor principal-->
+            <!-- 
+                Luego utilizar el contenedor secundario con la clase bs-nav-[md | lg] 
+                y donde queremos la lista  [align-left-list | align-right-list]
+            -->
+                
+            <div class="bs-nav-md align-left-list"> <!--INICIO Contenedor secundario -->
+
+                <!-- Luego una etiqueta a con la clase [logo-container]-->
+                <a href="#" class="logo-container">
+                    <!-- Imagen del logo a mostrar-->
+                    <img src="../imagenes/20191106_205049.png" alt="Foto de perfil">
+                </a>
+
+                <!-- Luego la lista donde estarán los enlaces -->
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Porfolio</a></li>
+                    <li><a href="#">Galeria</a></li>
+                </ul>
+
+                <!--Contenido a la derecha Todavía no definido-->
+                <div class="right-content">
+                    <!-- Se mostrará el contenido a la derecha del NAV-->
+                </div>
+
+            </div> <!--FIN Contenedor secundario -->
+        </nav> <!--FIN bs-nav -->
+    </pre>
+</div>
+
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
 
