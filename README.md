@@ -1,6 +1,4 @@
-<p align=center>
-  <img src="./logo/logobs.png" height="200px" width="200px"/>
-</p>
+
 
 # :green_book: Docs [Bodystyle 4.0.0](https://github.com/FedeManzano/bodystyle)
 
