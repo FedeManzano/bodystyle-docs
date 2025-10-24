@@ -99,7 +99,7 @@ import $ from "jquery"
             <li><a href="../index.html">Inicio</a></li>
         </ul>
         <!--DROP para el versionado -->
-        <a class="btn-verde-o  t-blanco p-1">V4.0.0</a>
+        <a class="btn-verde-o  t-blanco p-1">V4.5.0</a>
         `
     )
 
@@ -119,13 +119,13 @@ import $ from "jquery"
         <div class="card">
             <div class="card-simple-dark">
                 <h4>Descargar Bodystyle<span class="badge badge-rojo">New</span></h4>
-                <small>Versión 4.0.0</small>
+                <small>Versión 4.5.0</small>
                 <p>
                     Con el botón que está abajo de este texto descargará
                     la versión procesada de la librería en su 
                     <a href='https://github.com/FedeManzano/bodystyle' target='_blank' class='link tips-ele '
                     data-tips="Versión procesada de Bodystyle"
-                    data-pos='right'>versión 4.0.0</a>.
+                    data-pos='right'>versión 4.5.0</a>.
                 </p> 
                 <a target="_blank" href="https://mega.nz/file/cQMHGSDS#kK6bvOzeLMdLy15qLuqAwYaY_j_UnDWuyVAudZCYoTw" class="btn-cover-sm-o btn-white-o mar-2 tips-ele"
                 data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v4.0.0_dist.zip">Descargar</a>
