@@ -70,7 +70,7 @@ En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de 
 Para disponer de la documentación se puede ingresar a: <br>
 
 - [https://bodystyle.webcindario.com](https://bodystyle.webcindario.com)
-- [Descarga]()
+- [Descarga](https://mega.nz/file/Eds0HSgL#r8pNNctkK8UQ5cpNeH_zQk6loqFp7--uUAn9pb-Wn1g)
 
 
 ## Autor
