@@ -44,7 +44,6 @@ import $ from "jquery"
         <a  class="titulo c-blanco t-may" data-target="#m4">Formularios</a>
         <ul id="m4">
             <li><a href="input.html">Input</a></li>
-            <li><a href="">Range</a></li>
             <li><a href="select.html">Select</a></li>
             <li><a href="switch.html">Switch</a></li>
             <li><a href="checkbox.html">Checkbox</a></li>
