@@ -30,7 +30,6 @@ import $ from "jquery"
             <li><a href="efecto3d.html">Efecto 3D</a></li>
             <li><a href="efecto_hover.html">Efecto Hover</a></li>
             <li><a href="formas.html">Formas</a></li>
-            <li><a href="">Footers</a></li>
         </ul>
         <a  class="titulo c-blanco t-may" data-target="#m3">Alineamiento</a>
         <ul id="m3">
@@ -51,7 +50,6 @@ import $ from "jquery"
             <li><a href="checkbox.html">Checkbox</a></li>
             <li><a href="radio.html">Radio</a></li>
             <li><a href="formularios.html">Formularios</a></li>
-            <li><a href="">Template</a></li>
         </ul>
         <a  class="titulo c-blanco t-may" data-target="#m5">JS</a>
         <ul id="m5">
@@ -67,7 +65,7 @@ import $ from "jquery"
         </ul>
         <a  class="titulo c-blanco t-may" data-target="#m6">Componentes</a>
         <ul id="m6">
-            <li><a href="">Nav</a></li>
+            <li><a href="nav.html">Nav</a></li>
             <li><a href="">Progressbar</a></li>
             <li><a href="">Preloader</a></li>
         </ul>
