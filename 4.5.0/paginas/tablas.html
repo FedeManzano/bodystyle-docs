@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Tablas html modificadas para mejorar la experiencia de usuario.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Tablas</title>
+</head>
+<body>
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+
+    <section class="pagina nav-contenido">
+        <!-- INTRODUCCIÓN TABLAS ------------------------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Tablas</h1>
+            <p>
+                Para que el usuario vea la información de manera clara y estructutada se utilizan tablas
+                desde html. En este apartado se mostrarán los estilos predefinidos para las tablas 
+                que aporta la librería <span class="badge badge-rojo">Bodystyle</span>.
+            </p>
+
+            <div class="alerta-negra mar-2">
+               <a   href="https://github.com/FedeManzano/bodystyle"
+                    target="_blank"
+                    class="link tips-ele"
+               data-tips="<span class='badge badge-verde'>Enlace al Repositorio</span>"
+               data-pos="top">Desde la versión 4.0.0</a> se adoptaron alias para las clases que conforman los estilos
+                de las tablas. A continuación se generará una tabla con la compatibiladad con las clases que 
+                provienen de versiones anteriores.
+            </div>
+                
+            <div class="contenedor mar-3">
+                <table class="table-dark selector tabla-sm borde-vertical table-bor-white tabla-responsive">
+                    <thead>
+                        <tr>
+                            <th>Español</th>
+                            <th>Inglés</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>.tabla-roja</td>
+                            <td>.table-red</td>
+                        </tr>
+                        <tr>
+                            <td>.tabla-verde</td>
+                            <td>.table-green</td>
+                        </tr>
+                        <tr>
+                            <td>.tabla-azul</td>
+                            <td>.table-blue</td>
+                        </tr>
+                        <tr>
+                            <td>.tabla-oscura</td>
+                            <td>.table-dark</td>
+                        </tr>
+                        <tr>
+                            <td>.tabla-sm</td>
+                            <td>.table-sm</td>
+                        </tr>
+                        <tr>
+                            <td>.tabla-bor-negro</td>
+                            <td>.table-bor-black</td>
+                        </tr>
+                         <tr>
+                            <td>.tabla-bor-blanco</td>
+                            <td>.table-bor-white</td>
+                        </tr>
+                        <tr>
+                            <td>.tabla-bor-gris</td>
+                            <td>.table-bor-grey</td>
+                        </tr>
+                        <tr>
+                            <td>.tabla-bor-rojo</td>
+                            <td>.table-bor-red</td>
+                        </tr>
+                        <tr>
+                            <td>.tabla-bor-verde</td>
+                            <td>.table-bor-green</td>
+                        </tr>
+                        <tr>
+                            <td>.tabla-bor-azul</td>
+                            <td>.table-bor-blue</td>
+                        </tr>
+                        <tr>
+                            <td>.borde-vertical</td>
+                            <td>.vertical-border</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- FIN INTRODUCCIÓN TABLAS -------------------------------------------------------------------->
+        
+        <!-- MODELO TABLA ------------------------------------------------------------------------>
+        <article class="articulo">
+            <h2 id="t2">Tabla Modelo</h2>
+            <p class="mab-3">
+                A continuación se presenta una tabla modelo, definida con clases pertenecientes a otros 
+                apartados de esta documentación, que son una forma de definir los estilos 
+                de las tablas y aportan conocimientos de otras áreas que conforman 
+                <span class="badge badge-rojo">Bodystyle</span>.
+            </p>
+            <p class="f-grosor-6">Recomendación: </p>
+            <div class="lista-doc mab-3">
+                <ul>
+                    <li><a  class="link tips-ele" 
+                            href="colores.html#t2"
+                            data-tips="Doc. Colores <span class='badge badge-gris'>colores.html</span"
+                            data-pos="right">Colores de Fondo</a></li>
+                    <li><a  class="link tips-ele" 
+                            href="texto.html#t7"
+                            data-tips="Doc. Texto <span class='badge badge-gris'>texto.html</span"
+                            data-pos="right">Colores de Texto</a></li>
+                </ul>
+            </div>
+            <table class="fd-gris-az tabla-responsive bor-rad-15 borde-vertical ta-c selector">
+                <thead class="borde-vertical">
+                    <tr>
+                        <td class="c-blanco">ID</td>
+                        <td class="c-blanco">Apellido</td>
+                        <td class="c-blanco">Nombre</td>
+                        <td class="c-blanco">Estado</td>
+                    </tr>
+                </thead>
+                <tbody class="borde-vertical">
+                    <tr>
+                        <td class="c-blanco">1</td>
+                        <td class="c-blanco">Manzano</td>
+                        <td class="c-blanco">Federico</td>
+                        <td class="c-verde t-up">Activo</td>
+                    </tr>
+                    <tr>
+                        <td class="c-blanco">2</td>
+                        <td class="c-blanco">Ramirez</td>
+                        <td class="c-blanco">Ezequiel</td>
+                        <td class="c-rojo t-up">Inactivo</td>
+                    </tr>
+                    <tr>
+                        <td class="c-blanco t-may">3</td>
+                        <td class="c-blanco t-may">Perez</td>
+                        <td class="c-blanco t-may">Carlos</td>
+                        <td class="c-verde t-may">Activo</td>
+                    </tr>
+                    <tr>
+                        <td class="c-blanco t-may">4</td>
+                        <td class="c-blanco t-may">Gonzales</td>
+                        <td class="c-blanco t-may">Julian</td>
+                        <td class="c-rojo t-may">Inactivo</td>
+                    </tr>
+                    <tr>
+                        <td class="c-blanco t-may">5</td>
+                        <td class="c-blanco t-may">Gomez</td>
+                        <td class="c-blanco t-may">Pedro</td>
+                        <td class="c-verde t-may">Activo</td>
+                    </tr>
+                </tbody>
+            </table>
+    <div class="codigo">
+    <pre class="cod-html" id="c1">
+        <!--
+            Modelo de tabla utilizando las clases 
+            que dispone la librería Bodystyle CSS
+        -->
+    <table class="fd-gris-az tabla-responsive bor-rad-15 borde-vertical ta-c selector">
+        <thead class="borde-vertical">
+            <tr>
+                <td class="c-blanco">ID</td>
+                <td class="c-blanco">Apellido</td>
+                <td class="c-blanco">Nombre</td>
+                <td class="c-blanco">Estado</td>
+            </tr>
+        </thead>
+        <tbody class="borde-vertical">
+            <tr>
+                <td class="c-blanco">1</td>
+                <td class="c-blanco">Manzano</td>
+                <td class="c-blanco">Federico</td>
+                <td class="c-verde t-up">Activo</td>
+            </tr>
+            <tr>
+                <td class="c-blanco">2</td>
+                <td class="c-blanco">Ramirez</td>
+                <td class="c-blanco">Ezequiel</td>
+                <td class="c-rojo t-up">Inactivo</td>
+            </tr>
+            <tr>
+                <td class="c-blanco t-may">3</td>
+                <td class="c-blanco t-may">Perez</td>
+                <td class="c-blanco t-may">Carlos</td>
+                <td class="c-verde t-may">Activo</td>
+            </tr>
+            <tr>
+                <td class="c-blanco t-may">4</td>
+                <td class="c-blanco t-may">Gonzales</td>
+                <td class="c-blanco t-may">Julian</td>
+                <td class="c-rojo t-may">Inactivo</td>
+            </tr>
+            <tr>
+                <td class="c-blanco t-may">5</td>
+                <td class="c-blanco t-may">Gomez</td>
+                <td class="c-blanco t-may">Pedro</td>
+                <td class="c-verde t-may">Activo</td>
+            </tr>
+        </tbody>
+    </table>
+    </pre>
+    
+    </div>
+            <h3 id="t3">Tabla por Default</h3>
+
+            <p class="mab-3">
+                La librería tiene un estilo predefinido para las tablas con solo 
+                agregar la librería a nuestro proyecto, a partir de esto podemos obtener 
+                el siguiente resultado:
+            </p>
+
+            <table class="fd-blanco">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Descripción</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Mesa de cocina</td>
+                    </tr>
+                </tbody>
+            </table>
+
+    <div class="codigo">
+
+    <pre class="cod-html" id="c2">
+        <table>
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Descripción</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mesa de cocina</td>
+                </tr>
+            </tbody>
+        </table>
+    </pre>
+    </div>
+        <p class="alerta-negra">
+            En este caso, la tabla por default sólo se veria correctamente desde un fondo 
+            blanco, si la web en cuestión es de un fondo diferente el contenido de la tabla 
+            no sería adecuado.
+        </p>
+        </article>
+        <!-- FIN MODELO TABLA ------------------------------------------------------------------------>
+
+        <!-- COLORES TABLA ------------------------------------------------------------------------>
+        <article class="articulo">
+            <h2 id="t4">Colores de Tablas</h2>
+            <p>
+                A continuación de describen las clases necesarias para colorear las tablas y mejorar 
+                la visibilidad según el fondo del sitio en desarrollo. <br>
+                Para la versión actual de la librería se añadieron los alias para el nombre de las 
+                clases en inglés.
+            </p>
+
+            <h3 id="t5">Colores</h3>
+
+            <div class="fila">
+                <div class="csx-12 cs-6 cm-4 cl-3">
+                    <table class="table-red">
+                        <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>Descripción</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mesa de cocina</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="csx-12 cs-6 cm-4 cl-3">
+                    <table class="table-green">
+                        <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>Descripción</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mesa de cocina</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="csx-12 cs-6 cm-4 cl-3">
+                    <table class="table-dark">
+                        <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>Descripción</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mesa de cocina</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="csx-12 cs-6 cm-4 cl-3">
+                    <table class="table-blue">
+                        <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>Descripción</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td >1</td>
+                                <td>Mesa de cocina</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        <div class="codigo">
+    <pre class="cod-html" id="c3">
+        <!--
+            Está configuración está dispuesta a través de una grilla
+            provista por bodystyle.
+        -->
+        <div class="fila">
+            <div class="csx-12 cs-6 cm-4 cl-3">
+                <table class="table-red">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Descripción</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mesa de cocina</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="csx-12 cs-6 cm-4 cl-3">
+                <table class="table-green">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Descripción</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mesa de cocina</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="csx-12 cs-6 cm-4 cl-3">
+                <table class="table-dark">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Descripción</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mesa de cocina</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="csx-12 cs-6 cm-4 cl-3">
+                <table class="table-blue">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Descripción</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td >1</td>
+                            <td>Mesa de cocina</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </pre>
+        </div>
+        </article>
+        <!-- COLORES TABLA ------------------------------------------------------------------------>
+
+        <!-- TABLA SMALL ------------------------------------------------------------------------>
+        <article class="articulo">
+            <h2 id="t6">Tabla SM</h2>
+
+            <p>
+                Podemos definir un estilo de tabla mas pequeña que se ajuste mejor 
+                a la visualización en dispositivos de pantalla de tamaño reducido. <br>
+                La clase encargada de realizar esto es <span class="badge badge-rojo">.table-sm</span>.
+            </p>
+
+            <table class="table-sm table-dark mar-3">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Apellido</td>
+                        <td>Nombre</td>
+                        <td>Estado</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Manzano</td>
+                        <td>Federico</td>
+                        <td class="c-verde t-up">Activo</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ramirez</td>
+                        <td>Ezequiel</td>
+                        <td class="c-rojo t-up">Inactivo</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Perez</td>
+                        <td>Carlos</td>
+                        <td class="c-verde t-may">Activo</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Gonzales</td>
+                        <td>Julian</td>
+                        <td class="c-rojo t-may">Inactivo</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Gomez</td>
+                        <td>Pedro</td>
+                        <td class="c-verde t-may">Activo</td>
+                    </tr>
+                </tbody>
+            </table>
+
+    <div class="codigo">
+    <pre id="c4" class="cod-html">
+        <table class="table-sm table-dark">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Apellido</td>
+                    <td>Nombre</td>
+                    <td>Estado</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Manzano</td>
+                    <td>Federico</td>
+                    <td class="c-verde t-up">Activo</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ramirez</td>
+                    <td>Ezequiel</td>
+                    <td class="c-rojo t-up">Inactivo</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Perez</td>
+                    <td>Carlos</td>
+                    <td class="c-verde t-may">Activo</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Gonzales</td>
+                    <td>Julian</td>
+                    <td class="c-rojo t-may">Inactivo</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Gomez</td>
+                    <td>Pedro</td>
+                    <td class="c-verde t-may">Activo</td>
+                </tr>
+            </tbody>
+        </table>
+    </pre>
+    </div>
+        </article>
+         <!-- FIN TABLA SMALL ------------------------------------------------------------------------>
+
+        <!-- BORDES VERTICALES ------------------------------------------------------------------------>
+        <article class="articulo">
+            <h2 id="t6">Bordes Vericales</h2>
+            <p>
+                Para añadirle bordes vericales a la tabla y definir una separación de los campos 
+                contenidos utilizaremos la clase <span class="badge badge-rojo">.borde-vertical</span> o el alias 
+                <span class="badge badge-rojo">.vertical-border</span>.
+            </p>
+
+            <table class="table-sm table-dark vertical-border mar-3">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Apellido</td>
+                        <td>Nombre</td>
+                        <td>Estado</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Manzano</td>
+                        <td>Federico</td>
+                        <td class="c-verde t-up">Activo</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ramirez</td>
+                        <td>Ezequiel</td>
+                        <td class="c-rojo t-up">Inactivo</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Perez</td>
+                        <td>Carlos</td>
+                        <td class="c-verde t-may">Activo</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Gonzales</td>
+                        <td>Julian</td>
+                        <td class="c-rojo t-may">Inactivo</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Gomez</td>
+                        <td>Pedro</td>
+                        <td class="c-verde t-may">Activo</td>
+                    </tr>
+                </tbody>
+            </table>
+
+    <div class="codigo">
+        <pre id="c5" class="cod-html">
+        <table class="table-sm table-dark vertical-border mar-3">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Apellido</td>
+                <td>Nombre</td>
+                <td>Estado</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Manzano</td>
+                <td>Federico</td>
+                <td class="c-verde t-up">Activo</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ramirez</td>
+                <td>Ezequiel</td>
+                <td class="c-rojo t-up">Inactivo</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Perez</td>
+                <td>Carlos</td>
+                <td class="c-verde t-may">Activo</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Gonzales</td>
+                <td>Julian</td>
+                <td class="c-rojo t-may">Inactivo</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Gomez</td>
+                <td>Pedro</td>
+                <td class="c-verde t-may">Activo</td>
+            </tr>
+        </tbody>
+    </table>
+</pre>
+    </div>
+
+        </article>
+        <!-- FIN BORDES VERTICALES ------------------------------------------------------------------------>
+
+        <!-- BORDES SUPERIORES  ------------------------------------------------------------------------>
+        <article class="articulo">
+            <h2 id="t7">Bordes Superiores</h2>
+            <p>
+                Tenemos la opción de decorar la tabla con un borde superior que puede ser 
+                de varios colores, las clases implicadas en esta acción son las siguientes:
+            </p>
+
+            <table class="bg-grey-d-3 table-sm vertical-border table-bor-white mar-3 tabla-responsive">
+                <thead>
+                    <tr>
+                        <th class="c-white">Español</th>
+                        <th class="c-white">Inglés</th>
+                        <th class="c-white">Función</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="c-white">tabla-bor-azul</td>
+                        <td class="c-white">table-bor-blue</td>
+                        <td class="c-white">Genera un borde azul en la parte superior de la tabla</td>
+                    </tr>
+
+                    <tr>
+                        <td class="c-white">tabla-bor-rojo</td>
+                        <td class="c-white">table-bor-red</td>
+                        <td class="c-white">Genera un borde rojo en la parte superior de la tabla</td>
+                    </tr>
+
+                    <tr>
+                        <td class="c-white">tabla-bor-verde</td>
+                        <td class="c-white">table-bor-green</td>
+                        <td class="c-white">Genera un borde verde en la parte superior de la tabla</td>
+                    </tr>
+
+                    <tr>
+                        <td class="c-white">tabla-bor-gris</td>
+                        <td class="c-white">table-bor-grey</td>
+                        <td class="c-white">Genera un borde gris en la parte superior de la tabla</td>
+                    </tr>
+
+                    <tr>
+                        <td class="c-white">tabla-bor-blanco</td>
+                        <td class="c-white">table-bor-white</td>
+                        <td class="c-white">Genera un borde blanco en la parte superior de la tabla</td>
+                    </tr>
+
+                    <tr>
+                        <td class="c-white">tabla-bor-negro</td>
+                        <td class="c-white">table-bor-black</td>
+                        <td class="c-white">Genera un borde negro en la parte superior de la tabla</td>
+                    </tr>
+                </tbody>
+            </table>
+
+    <div class="codigo">
+        <pre id="c7" class="cod-html">
+            <!--
+                Tabla de la documentación con todas las clases de borde superior e 
+                implemnta uno de ellos que es el table-bor-white.
+            -->
+            <table class="bg-grey-d-3 table-sm vertical-border table-bor-white mar-3">
+                <thead>
+                    <tr>
+                        <th class="c-white">Español</th>
+                        <th class="c-white">Inglés</th>
+                        <th class="c-white">Función</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="c-white">tabla-bor-azul</td>
+                        <td class="c-white">table-bor-blue</td>
+                        <td class="c-white">Genera un borde azul en la parte superior de la tabla</td>
+                    </tr>
+
+                    <tr>
+                        <td class="c-white">tabla-bor-rojo</td>
+                        <td class="c-white">table-bor-red</td>
+                        <td class="c-white">Genera un borde rojo en la parte superior de la tabla</td>
+                    </tr>
+
+                    <tr>
+                        <td class="c-white">tabla-bor-verde</td>
+                        <td class="c-white">table-bor-green</td>
+                        <td class="c-white">Genera un borde verde en la parte superior de la tabla</td>
+                    </tr>
+
+                    <tr>
+                        <td class="c-white">tabla-bor-gris</td>
+                        <td class="c-white">table-bor-grey</td>
+                        <td class="c-white">Genera un borde gris en la parte superior de la tabla</td>
+                    </tr>
+
+                    <tr>
+                        <td class="c-white">tabla-bor-blanco</td>
+                        <td class="c-white">table-bor-white</td>
+                        <td class="c-white">Genera un borde blanco en la parte superior de la tabla</td>
+                    </tr>
+
+                    <tr>
+                        <td class="c-white">tabla-bor-negro</td>
+                        <td class="c-white">table-bor-black</td>
+                        <td class="c-white">Genera un borde negro en la parte superior de la tabla</td>
+                    </tr>
+                </tbody>
+            </table>
+        </pre>
+    </div>
+        </article>
+        <!-- FIN BORDES SUPERIORES  ------------------------------------------------------------------------>
+
+        <!-- SELECTOR DE FILAS  ------------------------------------------------------------------------>
+        <article class="articulo">
+            <h2 id="t8">Selector de Filas</h2>
+            <p>
+                El selector de filas nos va a permitir darle un color a las filas pares y otro 
+                a las filas impares permitiendo una mejor lectura del contenido y mejorando la visualización 
+                de la tabla. <br>
+                La clase encargada de esta tarea es <span class="badge badge-gris">.selector</span> y va incluida 
+                dentro del conjunto de clases de la etiqueta <span class="c-red">table</span>.
+            </p>
+
+            <div class="contenedor mar-3">
+                 <table class="table-sm table-dark vertical-border selector">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Apellido</td>
+                        <td>Nombre</td>
+                        <td>Estado</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Manzano</td>
+                        <td>Federico</td>
+                        <td class="c-verde t-up">Activo</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ramirez</td>
+                        <td>Ezequiel</td>
+                        <td class="c-rojo t-up">Inactivo</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Perez</td>
+                        <td>Carlos</td>
+                        <td class="c-verde t-may">Activo</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Gonzales</td>
+                        <td>Julian</td>
+                        <td class="c-rojo t-may">Inactivo</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Gomez</td>
+                        <td>Pedro</td>
+                        <td class="c-verde t-may">Activo</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+    <div class="codigo">
+        <pre id="c8" class="cod-html">
+        <!--
+            Tabla generada a partir de un selector que 
+            pinta las tuplas pares de un color distinto a las 
+            tuplas impares.
+        -->
+        <div class="contenedor mar-3"> <!--Contenedor para centrar el contenido-->
+                                       <!--clase mar-3 introduce un margen arriba del elemento.-->
+            <table class="table-sm table-dark vertical-border selector">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Apellido</td>
+                        <td>Nombre</td>
+                        <td>Estado</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Manzano</td>
+                        <td>Federico</td>
+                        <td class="c-verde t-up">Activo</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ramirez</td>
+                        <td>Ezequiel</td>
+                        <td class="c-rojo t-up">Inactivo</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Perez</td>
+                        <td>Carlos</td>
+                        <td class="c-verde t-may">Activo</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Gonzales</td>
+                        <td>Julian</td>
+                        <td class="c-rojo t-may">Inactivo</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Gomez</td>
+                        <td>Pedro</td>
+                        <td class="c-verde t-may">Activo</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </pre>
+    </div>
+        </article>
+        <!-- FIN SELECTOR DE FILAS  ------------------------------------------------------------------------>
+
+        <!-- FIN TABLA CON ELEMENTOS  ------------------------------------------------------------------------>
+        <article class="articulo">
+            <h2 id="t9">Tabla con Elementos</h2>
+            <p>
+                Hasta el momento todo lo añadido a las tablas de ejemplo 
+                de las secciones anteriores contienen texto. En este apartado 
+                agregaremmos elementos compuestos como por ejemplo: Botones, Checkbox, Etc. 
+            </p>
+
+            <h3 id="t10">Botones</h3>
+
+            <div class="contenedor mar-3">
+                 <table class="table-sm table-dark vertical-border selector">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Apellido</td>
+                        <td>Nombre</td>
+                        <td>Estado</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Manzano</td>
+                        <td>Federico</td>
+                        <td>
+                            <a class="btn-sm fd-gris-n">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ramirez</td>
+                        <td>Ezequiel</td>
+                        <td>
+                            <a class="btn-sm fd-gris-n">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Perez</td>
+                        <td>Carlos</td>
+                        <td>
+                            <a class="btn-sm fd-gris-n">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Gonzales</td>
+                        <td>Julian</td>
+                        <td>
+                            <a class="btn-sm fd-gris-n">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Gomez</td>
+                        <td>Pedro</td>
+                        <td>
+                            <a class="btn-sm fd-gris-n">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            
+    <div class="codigo">
+        <pre id="c8" class="cod-html">
+            <div class="contenedor mar-3">
+                 <table class="table-sm table-dark vertical-border selector">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Apellido</td>
+                        <td>Nombre</td>
+                        <td>Estado</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Manzano</td>
+                        <td>Federico</td>
+                        <td>
+                            <a class="btn-sm fd-gris-n">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ramirez</td>
+                        <td>Ezequiel</td>
+                        <td>
+                            <a class="btn-sm fd-gris-n">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Perez</td>
+                        <td>Carlos</td>
+                        <td>
+                            <a class="btn-sm fd-gris-n">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Gonzales</td>
+                        <td>Julian</td>
+                        <td>
+                            <a class="btn-sm fd-gris-n">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Gomez</td>
+                        <td>Pedro</td>
+                        <td>
+                            <a class="btn-sm fd-gris-n">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </pre>
+    </div>
+
+            <h3 id="t11">Checkbox</h3>
+
+            <div class="contenedor mar-3">
+                 <table class="table-sm table-dark vertical-border selector">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Apellido</td>
+                        <td>Nombre</td>
+                        <td>Estado</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Manzano</td>
+                        <td>Federico</td>
+                        <td>
+                            <div class="check-radio-grupo">
+                                <input type="checkbox" id="check1" class="checkbox">
+                                <label for="check1" class="cb-rojo">Eliminar</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ramirez</td>
+                        <td>Ezequiel</td>
+                        <td>
+                            <div class="check-radio-grupo">
+                                <input type="checkbox" id="check2" class="checkbox">
+                                <label for="check2" class="cb-rojo">Eliminar</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Perez</td>
+                        <td>Carlos</td>
+                        <td>
+                            <div class="check-radio-grupo">
+                                <input type="checkbox" id="check3" class="checkbox">
+                                <label for="check3" class="cb-rojo">Eliminar</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Gonzales</td>
+                        <td>Julian</td>
+                        <td>
+                            <div class="check-radio-grupo">
+                                <input type="checkbox" id="check4" class="checkbox">
+                                <label for="check4" class="cb-rojo">Eliminar</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Gomez</td>
+                        <td>Pedro</td>
+                        <td>
+                            <div class="check-radio-grupo">
+                                <input type="checkbox" id="check5" class="checkbox">
+                                <label for="check5" class="cb-rojo">Eliminar</label>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+    <div class="codigo">
+        <pre id="c10" class="cod-html">
+            <!--
+                Tabla generada con checkbox proporcionados por
+                Bodystyle.
+            -->
+            <div class="contenedor mar-3">
+                 <table class="table-sm table-dark vertical-border selector">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Apellido</td>
+                        <td>Nombre</td>
+                        <td>Estado</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Manzano</td>
+                        <td>Federico</td>
+                        <td>
+                            <div class="check-radio-grupo"> <!--Checkbox de la librería -->
+                                <input type="checkbox" id="check1" class="checkbox">
+                                <label for="check1" class="cb-rojo">Eliminar</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ramirez</td>
+                        <td>Ezequiel</td>
+                        <td>
+                            <div class="check-radio-grupo">
+                                <input type="checkbox" id="check2" class="checkbox">
+                                <label for="check2" class="cb-rojo">Eliminar</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Perez</td>
+                        <td>Carlos</td>
+                        <td>
+                            <div class="check-radio-grupo">
+                                <input type="checkbox" id="check3" class="checkbox">
+                                <label for="check3" class="cb-rojo">Eliminar</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Gonzales</td>
+                        <td>Julian</td>
+                        <td>
+                            <div class="check-radio-grupo">
+                                <input type="checkbox" id="check4" class="checkbox">
+                                <label for="check4" class="cb-rojo">Eliminar</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Gomez</td>
+                        <td>Pedro</td>
+                        <td>
+                            <div class="check-radio-grupo">
+                                <input type="checkbox" id="check5" class="checkbox">
+                                <label for="check5" class="cb-rojo">Eliminar</label>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </pre>
+    </div>
+
+        </article>
+        <!-- TABLA CON ELEMENTOS  ------------------------------------------------------------------------>
+
+
+        <div class="autor"></div>
+    </section>
+
+    <div class="guia-pagina">
+        <ul>
+            <li><a href="#t1">Tablas</a></li>
+            <li><a href="#t2">Tabla Modelo</a></li>
+            <li><a href="#t3">Tabla Por Default</a></li>
+            <li><a href="#t4">Colores de Tabla</a></li>
+            <li><a href="#t5">Ejemplo Colores</a></li>
+            <li><a href="#t6">Tabla SM</a></li>
+            <li><a href="#t7">Borde Superior</a></li>
+            <li><a href="#t8">Selector de Filas</a></li>
+            <li><a href="#t9">Otros elementos</a></li>
+            <li><a href="#t10">Con Botones</a></li>
+            <li><a href="#t11">Con Checkbox</a></li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Tablas"
+        var idMenu = "#m1"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>
+

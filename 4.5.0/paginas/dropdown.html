@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Lista desplegable asociada a un elemento disparador que permite que la lista se muestre.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <style>
+        .f-abajo,
+        .f-derecha {
+
+            display: block !important;
+        }
+    </style>
+
+
+    <title>Dropdown</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Dropdown</h1>
+            <p>
+                Una lista desplegable asociada a un elemento del DOM que permite su despliegue brindando un conjunto 
+                de opciones que se mostrarán solo cuando se las requiera. <br>
+                Es parte del core de bodystyle a través de la dependencia
+                <a href="https://mega.nz/file/pEsyDAYY#lEve_WyproRQAN1MnZx0Mba40HgZFjcHJ9rFN95wWYk" class="link com-trigger"
+                data-info="Descarga de la dependencia <span class='f-w-7'>dynamics-tips 1.8.0</span> que posee el núcleo de posicionamiento de toda la librería.">Dynamics-Tips 1.8.0</a>
+                que es la que se encargaga de poscionar todos los elementos dinámicos a través del Kernel de posicionamiento.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Inicialización</h2>
+            <p>
+                Para poder utilizar el módulo es necesario disponer del archivo <span class="badge badge-gris">bodystyle.min.js</span>
+                agregado al proyecto en desarrollo y luego es necesario inicializar el elemento con la función provista por la 
+                librería. Recomendación <a href="get_started.html" class="link">Get Started</a>.
+            </p>
+
+<div class="codigo">
+<pre class="cod-js" id="c1">
+    // CDN : https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js
+
+    // 1 OPCIÓN ESTÁTICA
+    // ------------------
+
+    // Inicializa el elemento
+    // cuando estos están dispuestos de manera estática dentro del DOM
+    BS.DropDownInit();
+
+    /*******************************************************************************/
+
+    // 2 OPCIÓN DINÁMICA
+    // -----------------   
+
+    /*
+        En proyectos donde se tabaja a través de injección de elementos a través 
+        de JavaScript de manera dinámica, y el elemento que se estudia en esta sección se 
+        ingresa de esta manera, es necesario aplicar un retraso en la inicialización del 
+        módulo con el siguiente codigo.
+    */
+
+    //Si los elementos que conforman esta funcionalidad son dinámicos 
+    // Agregados a través de JS 
+    window.onload = () => {
+        setTimeout( () => {
+            BS.DropDownInit();
+        }, 100); 
+    }
+</pre>
+</div>
+            <h3 id="t3">Muestra</h3>
+            <p class="mb-3">
+                Para poder utilizar este elemento hay que enlazar el disparador con la lista a desplegar por el dropdown. Para lograr 
+                hay que agregarle al disparador la clase <span class="badge badge-red">.dropdown-toogle</span> y el atributo 
+                <span class="badge badge-black">data-target</span>, luego a la lista a desplegar (que puede estar ubicada en cualquier parte del DOM) 
+                hay que agregarle la clase <span class="badge badge-red">dropdown</span> y un ID que coincidirá con el valor asignado al atributo 
+                <span class="badge badge-negro">data-target</span> del disparador.
+            </p>
+
+            <button class="btn bg-pink-d-1 dropdown-toggle" data-target="#drop">Disparador</button>
+            
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <!-- Elemento disparador del drop -->
+    <!-- El atributo del data-target contiene el ID de la lista a desplegar -->
+    <!-- <button class="btn bg-pink-d-1 dropdown-toggle" data-target="#drop-desplegar">Disparador</button> Descomentar este Código -->
+
+    <!-- Lista desplegable que puede incluirse en cualquir logar del DOM -->
+    <div class="dropdown fd-gris-az" id="drop-desplegar" style="user-select: none;">
+        <a href="#" class="c-white">Inicio</a>
+        <a href="#" class="c-white">Servicios</a>
+        <a href="#" class="c-white">Galeria</a>
+        <a href="#" class="c-white">Porfolio</a>
+    </div>
+</pre>
+</div>
+        <div class="alerta-negra">
+            El drop utilizado en el ejemplo anterior tiene estilos modificados con clases de la librería 
+            que modifican el color de fondo y el color de la letra de los enlaces. Recomendación: 
+            <div class="lista-doc m-0">
+                <ul>
+                    <li><a href="colecciones.html" class="link tips-ele"
+                        data-tips="Ver documentación de los colores de fondo." data-pos="right">Colores</a></li>
+                    <li><a href="texto.html" class="link tips-ele"
+                        data-tips="Ver documentación del texto." data-pos="right">Texto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 id="t4">Ejemplo Dropdown</h3>
+        <p class="mb-3">
+            Otro ejemplo de como utilizar este elemento con los estilos por default sin agregado de estilos adicionales.
+        </p>
+
+        <button class="btn-sm-o btn-blue-o bor-pill dropdown-toggle" data-target="#drop2">Disparador</button>
+
+        <div class="codigo">
+<pre class="cod-html" id="c3">
+    <!-- Elemento disparador del drop -->
+    <!-- El atributo del data-target contiene el ID de la lista a desplegar -->
+    <!-- <button class="btn bg-pink-d-1 dropdown-toggle" data-target="#drop-default">Disparador</button> Descomentar este Código -->
+
+    <!-- Lista desplegable que puede incluirse en cualquir logar del DOM -->
+    <div class="dropdown" id="drop-default" style="user-select: none;">
+        <a href="#">Ventas</a>
+        <a href="#">Compras</a>
+        <a href="#">Perfil</a>
+        <a href="#">Precio</a>
+    </div>
+</pre>
+</div>
+
+        <div class="alerta-negra">
+            Notese que el valor del data-target del disparador es igual al ID de la lista desplegable utilizada para 
+            el ejemplo.
+        </div>
+
+        <h3 id="t5">Efecto Hover</h3>
+        <p class="mb-3">
+            Podemos realizar lo antes visto pero ahora con el evento HOVER del disparador, de esta dorma cuando 
+            el cursor pase por encima del disparador se mostrará la lista desplegable. <br>
+            Para poder realizar esto es necesario agregarle al disparador el atributo 
+            <span class="badge badge-black">data-evt='hover'</span>.
+        </p>
+
+         <button class="btn-sm bg-pink-d-1 bor-pill dropdown-toggle" data-evt="hover" data-target="#drop">Disparador</button>
+
+<div class="codigo">
+<pre class="cod-html" id="c4">
+    <!-- Elemento disparador del drop -->
+    <!-- El atributo del data-target contiene el ID de la lista a desplegar -->
+    <!-- <button class="btn-sm bg-pink-d-1 bor-pill dropdown-toggle" data-evt="hover" data-target="#drop-hover">Disparador</button> Descomentar este Código -->
+
+    <!-- Lista desplegable que puede incluirse en cualquir logar del DOM -->
+    <div class="dropdown" id="drop-hover" style="user-select: none;">
+        <a href="#">Ventas</a>
+        <a href="#">Compras</a>
+        <a href="#">Perfil</a>
+        <a href="#">Precio</a>
+    </div>
+</pre>
+</div>
+
+        <h3 id="t6">Posicion</h3>
+        <p>
+            Tenemos la posibilidad de elegir la posición dende queremos que se muestra el elemento, la misma 
+            puede ser <span class="badge badge-black">top</span>, <span class="badge badge-black">botton</span>,
+            <span class="badge badge-black">legt</span> y <span class="badge badge-black">right</span>. Para poder 
+            llevar a cabo esto es necesario agregar el atributo <span class="badge badge-black">data-pos</span> al 
+            disparador y la lista se mostrará en el lugar adecuado.
+        </p>
+
+        <div class="d-flex just-around flex-wrap mt-3">
+            <button class="btn bg-blue dropdown-toggle" data-target="#posicion" data-pos="right">Derecha</button>
+            <button class="btn bg-blue dropdown-toggle mt-xs-1" data-target="#posicion" data-pos="left">Izquierda</button>
+            <button class="btn bg-blue dropdown-toggle mt-s-1" data-target="#posicion" data-pos="botton">Abajo</button>
+            <button class="btn bg-blue dropdown-toggle mt-s-1" data-target="#posicion" data-pos="top">Arriba</button>
+        </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c4">
+    <!-- Elemento disparador del drop -->
+    <!-- El atributo del data-target contiene el ID de la lista a desplegar -->
+    <!--
+        <div class="d-flex just-around flex-wrap mt-3">
+        <button class="btn bg-blue dropdown-toggle" data-target="#pos" data-pos="right">Derecha</button>
+        <button class="btn bg-blue dropdown-toggle mt-xs-1" data-target="#pos" data-pos="left">Izquierda</button>
+        <button class="btn bg-blue dropdown-toggle mt-s-1" data-target="#pos" data-pos="botton">Abajo</button>
+        <button class="btn bg-blue dropdown-toggle mt-s-1" data-target="#pos" data-pos="top">Arriba</button>
+    </div> -->
+
+    <!-- Lista desplegable que puede incluirse en cualquir logar del DOM -->
+    <div class="dropdown" id="pos" style="user-select: none;">
+        <a href="#">Arriba</a>
+        <a href="#">Abajo</a>
+        <a href="#">Izquierda</a>
+        <a href="#">Derecha</a>
+    </div>
+</pre>
+</div>
+
+
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <div class="dropdown fd-gris-az" id="drop" style="user-select: none;">
+        <a href="#" class="c-white">Inicio</a>
+        <a href="#" class="c-white">Servicios</a>
+        <a href="#" class="c-white">Galeria</a>
+        <a href="#" class="c-white">Porfolio</a>
+    </div>
+
+    <div class="dropdown" id="drop2" style="user-select: none;">
+        <a href="#">Ventas</a>
+        <a href="#">Compras</a>
+        <a href="#">Perfil</a>
+        <a href="#">Precio</a>
+    </div>
+
+
+    <div class="dropdown" id="posicion" style="user-select: none;">
+        <a href="#">Arriba</a>
+        <a href="#">Abajo</a>
+        <a href="#">Izquierda</a>
+        <a href="#">Derecha</a>
+    </div>
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="guia-pagina">
+        <ul>
+            <li><a href="#t1">Dropdown</a></li>
+            <li><a href="#t2">Inicialización</a></li>
+            <li><a href="#t3">Muestra</a></li>
+            <li><a href="#t4">Ejemplo</a></li>
+            <li><a href="#t5">Hover</a></li>
+            <li><a href="#t6">Posición</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Dropdown"
+        var idMenu = "#m5"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Elemento que permite centrar el contenido en cualquier tipo de pantalla.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Contenedor</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Contenedor</h1>
+            <p>
+                Contenedor que permite centrar el contenido en diferentes tamaños de pantalla, ocupando 
+                el 70% en equipos con pantallas de más de 1030px, entre 770px y 1030px ocupa un 75%, entre 400px y 
+                770px 80% y menores a 400px ocupa un 90% del contenedor padre.
+            </p>
+            
+            <table class="table-dark vertical-border table-sm table-bor-grey mar-3">
+                <thead>
+                    <tr>
+                        <th>Medida</th>
+                        <th>Español</th>
+                        <th>Inglés</th>
+                        <th>Porcentaje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>XS</td>
+                        <td>.contenedor</td>
+                        <td>.container</td>
+                        <td>90%</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>.contenedor</td>
+                        <td>.container</td>
+                        <td>80%</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>.contenedor</td>
+                        <td>.container</td>
+                        <td>75%</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>.contenedor</td>
+                        <td>.container</td>
+                        <td>70%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Ejemplo Contenedor</h2>
+            <p>
+                Un ejemplo de la utilización del contenedor, se toma un DIV con un determinado padding y se lo 
+                envuelve en un contenedor para centrarlo en pantalla.
+            </p>
+
+            <div class="container mar-3">
+                <div class="p-1 bg-red ta-c c-white">
+                    Esto es un DIV Centrado
+                </div>
+            </div>
+
+<div class="codigo">
+    <pre class="cod-html" id="c1">
+        <div class="container">
+            <div class="p-1 bg-red ta-c c-white">
+                Esto es un DIV Centrado
+            </div>
+        </div>
+    </pre>
+</div>
+            <div class="alerta-negra">
+                Si achican el tamaño de la pantalla desde donde están viendo la documentación 
+                van a notar como el contenedor aumenta su tamaño proporcionalmente para ocupar más 
+                espacio y adaptarse de manera correcta a la pantalla.
+            </div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="guia-pagina">
+        <ul>
+            <li><a href="#t1">Contenedor</a></li>
+            <li><a href="#t2">Ejemplo Contenedor</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Contenedor"
+        var idMenu = "#m3"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>

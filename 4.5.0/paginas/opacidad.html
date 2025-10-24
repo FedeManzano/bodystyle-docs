@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Clases CSS para ajustar la opacidad del elemento.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Opacidad</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Opacidad</h1>
+            <p>
+                Conjunto de clases <span class="badge badge-gris com-trigger"
+                data-info="CSS, por sus siglas en inglés 'Cascading Style Sheets' (Hojas de Estilo en Cascada), es un lenguaje utilizado para definir la presentación y el estilo visual de documentos web escritos en lenguajes de marcado como HTML y XML."
+                data-pos="top">CSS</span> 
+                predefinidas para definir el nivel de visibilidad 
+                de un determinado elementos dentro del 
+                <span class="com-trigger badge badge-gris"
+                data-info="El DOM (Document Object Model, o Modelo de Objetos del Documento) es una API (Interfaz de Programación de Aplicaciones) que representa la estructura de una página HTML como un árbol de nodos.">DOM</span>. <br>
+                Si un elemento tiene una opacidad menor a uno la visisbilidad va a tener un nivel de transparencia
+                acorde con el valor definido. 
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="#t2">Opacidad de un Elemento</h2>
+            <p>
+                La clase para llevar a cabo esta tarea es <span class="badge badge-rojo">opa-[nivel]</span> donde nivel es un valor de 
+                1 a 10, de manera tal que 1 es equivalente a 0.1 de la propiededad CSS opacity.
+            </p>
+
+            <div class="row mar-3">
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-1">
+                    .opa-1
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-2">
+                    .opa-2
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-3">
+                    .opa-3
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-4">
+                    .opa-4
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-5">
+                    .opa-5
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-6">
+                    .opa-6
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-7">
+                    .opa-7
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-8">
+                    .opa-8
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-9">
+                    .opa-9
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-10">
+                    .opa-10
+                </div>
+            </div>
+
+    <div class="codigo">
+        <pre class="cod-html" id="c1">
+            <div class="row mar-3">
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-1">
+                    .opa-1
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-2">
+                    .opa-2
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-3">
+                    .opa-3
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-4">
+                    .opa-4
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-5">
+                    .opa-5
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-6">
+                    .opa-6
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-7">
+                    .opa-7
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-8">
+                    .opa-8
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-9">
+                    .opa-9
+                </div>
+                <div class="p-1 bg-red cxs-12 cs-6 cm-4 cl-3 c-white ta-c opa-10">
+                    .opa-10
+                </div>
+            </div>  
+        </pre>
+    </div>
+            <div class="alerta-negra mar-3">
+                La propiedad de CSS es opacity: [0-1], en el ejemplo anterior si 
+                utilizamos la clase opa-0, entonces el elemento no se verá en 
+                pantalla. Caso contario si utilizamos el parámetro 10 / opa-10 el 
+                elemento se verá en su totalidad si ningún nivel de transparecia. 
+            </div>
+            
+
+
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="guia-pagina">
+        <ul>
+            <li><a href="#t1">Opacidad</a></li>
+            <li><a href="#t2">Definición de Clases</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Opacidad"
+        var idMenu = "#m1"
+    </script>
+     <script src="../js/docs-body.js"></script>
+</body>
+</html>

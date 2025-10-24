@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Herramienta y conjunto de clases CSS que hacen uso de las propiedades de Flexbon de CSS.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <style>
+        .flex-box {
+        display: flex;
+    }
+    </style>
+
+
+    <title>Flexbox</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Flexbox</h1>
+            <p>
+                En este apartado vamos a ver y analizar una de las funcionalidades más importantes 
+                de CSS 3, que permite el aliniamiento horizontal y vertical de los elementos con la facilidad 
+                que versiones anteriores de CSS no tenian, desde el punto de vista de la librería se 
+                dispondrán de clases que permitirán utilizar estas funcionalidades sin necesidad de archivos 
+                de estilos y aplicándolas directamente en el DOM de html.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Flexbox en CSS3</h2>
+            <p>
+                En CSS3 se utiliza la propiedad <span class="badge badge-red">display: flex</span> 
+                que por defecto acomoda a los elementos de forma horizontal uno pegado al otro.
+            </p>
+<div class="codigo">
+<pre class="cod-css" id="c1">
+    .flex-box {
+        display: flex;
+    }
+</pre>
+</div>
+           <p>
+                El resultado de aplicar esta clase a elementos del DOM es el siguiente. 
+           </p>
+
+            <div class="flex-box">
+                <div class="p-1 bg-red c-white ta-c">Cont 1</div>
+                <div class="p-1 bg-red c-white ta-c">Cont 2</div>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="flex-box">
+        <div class="p-1 bg-red c-white ta-c">Cont 1</div>
+        <div class="p-1 bg-red c-white ta-c">Cont 2</div>
+    </div>
+</pre>
+</div>
+        <p class="alerta-negra">
+            Como se puede observar se mantienen un contenedor pegado al otro 
+            sin ningún tipo de distancia entre ambos y alineados a la izquierda. <br>
+            Para centrar los contenedores es necesario valerse de otra propiedad que 
+            acompaña a la anterior <span class="badge badge-red">justify-content: center</span>. 
+        </p>
+<div class="codigo">
+<pre class="cod-css" id="c3">
+    .flex-box {
+        display: flex;
+        justify-content: center;
+    }
+</pre>
+</div>
+        <div class="flex-box just-center">
+            <div class="p-1 bg-red c-white ta-c">Cont 1</div>
+            <div class="p-1 bg-red c-white ta-c">Cont 2</div>
+        </div>
+
+        <p>
+            En este caso están centrados, pero si queremos que los contenedores se distribuyan
+            a través de todo el ancho del contenedor padre utilizaremos la misma propiedad anteriormente 
+            mencionada pero con el valor <span class="badge badge-red">justify-content: space-around</span>
+        </p>
+<div class="codigo">
+<pre class="cod-css" id="c4">
+    .flex-box {
+        display: flex;
+        justify-content: space-around;
+    }
+</pre>
+</div>
+        <div class="flex-box just-around">
+            <div class="p-1 bg-red c-white ta-c">Cont 1</div>
+            <div class="p-1 bg-red c-white ta-c">Cont 2</div>
+        </div>
+
+        <p>
+            Ahora bien, si lo que queremos es que los contenedores estén lo mas distanciados posibles 
+            es necesario utilizar otro valor que es <span class="badge badge-red">space-between</span>.
+        </p>
+
+        <div class="codigo">
+<pre class="cod-css" id="c5">
+    .flex-box {
+        display: flex;
+        justify-content: space-between;
+    }
+</pre>
+</div>
+        <div class="flex-box just-between">
+            <div class="p-1 bg-red c-white ta-c">Cont 1</div>
+            <div class="p-1 bg-red c-white ta-c">Cont 2</div>
+        </div>
+
+        <p class="mt-3">
+            En todos los ejemplos anteriores pudimos alinear los elementos de forma horizontal 
+            pero que pasa cuando el aliniamiento lo queremos realizar de forma vertical. <br>
+            Para esta tarea utilizaremos la propiedad <span class="badge badge-red">align-item: [valor]</span>
+        </p>
+
+        <div class="bg-red d-flex just-center mt-3" style="height: 120px;">
+            <div class="p-1 bg-black c-white ta-c">1</div>
+            <div class="p-1 bg-black c-white ta-c">2</div>
+        </div>
+
+        <p class="mt-3">
+            Como se puede ver números identificadores de contenedores quedan en la parte superior del contenedor padre y la altura
+            de los dos contenedores ocupa el 100% del alto. <br>
+            si queremos centrarlos utilizamos <span class="badge badge-red">align-items: center</span>
+        </p>
+
+        <div class="bg-red d-flex just-center ali-center mt-3" style="height: 120px;">
+            <div class="p-1 bg-black c-white ta-c">1</div>
+            <div class="p-1 bg-black c-white ta-c">2</div>
+        </div>
+
+<div class="codigo">
+<pre class="cod-css" id="c6">
+    .flex-box {
+        display: flex;
+        justify-content: center;
+        align-item: center;
+    }
+</pre>
+</div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <article class="articulo">
+            <h2 id="t3">Flexbox en Bodystyle</h2>
+            <p>
+                Ahora vamos a ver como aplicar las propiedades antes vistas con las clases provistas 
+                por la librería no solo de manera estática sino dinámica (cambiando las propiedades en función
+                del tamaño de pantalla donde se estén mostrando los elementos).
+            </p>
+
+            <h3 id="t4">d-flex</h3>
+            <p>
+                La clase que permite implementar flexbox en los contenedores es 
+                <span class="badge badge-red">.d-flex</span> que por defecto generará 
+                un alineamiento horizontal.
+            </p>
+
+            <div class="d-flex">
+                <div class="p-1 bg-red ta-c bor-3">1</div>
+                <div class="p-1 bg-red ta-c bor-3">2</div>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c7">
+    <div class="d-flex">
+        <div class="p-1 bg-red ta-c bor-3">1</div>
+        <div class="p-1 bg-red ta-c bor-3">2</div>
+    </div>
+</pre>
+</div>
+
+        <h3 id="t5">just-center</h3>
+        <p>
+            Ahora tomaremos el ejemplo anterior y centraremos los elementos agregando la justificación requerida.
+        </p>
+
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red ta-c bor-3">1</div>
+            <div class="p-1 bg-red ta-c bor-3">2</div>
+        </div>
+        
+<div class="codigo">
+<pre class="cod-html" id="c8">
+    <div class="d-flex just-center">
+        <div class="p-1 bg-red ta-c bor-3">1</div>
+        <div class="p-1 bg-red ta-c bor-3">2</div>
+    </div>
+</pre>
+</div>
+
+        <h3 id="t6">just-around</h3>
+        <p>
+            Para cubrir todo el ancho con elementos es necesario utilizar esta clase que permitirá replicar el 
+            ejemplo de la sección anterior. 
+        </p>
+
+        <div class="d-flex just-around">
+            <div class="bg-red p-1 ta-c c-white">1</div>
+            <div class="bg-red p-1 ta-c c-white">2</div>
+        </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c8">
+    <div class="d-flex just-around">
+        <div class="bg-red p-1 ta-c c-white">1</div>
+        <div class="bg-red p-1 ta-c c-white">2</div>
+    </div>
+</pre>
+</div>
+
+        <h3 id="t7">just-between</h3>
+
+        <div class="d-flex just-between">
+            <div class="bg-red p-1 ta-c c-white">1</div>
+            <div class="bg-red p-1 ta-c c-white">2</div>
+        </div>
+<div class="codigo">
+<pre class="cod-html" id="c9">
+    <div class="d-flex just-between">
+        <div class="bg-red p-1 ta-c c-white">1</div>
+        <div class="bg-red p-1 ta-c c-white">2</div>
+    </div>
+</pre>
+</div>
+
+        <h3 id="t8">ali-center</h3>
+
+        <p>
+            Ahora vamos a ver como alinear el contenido de flexbox pero verticalmente, la propiedad 
+            utilizada es la descripta en la sección anterior <span class="badge badge-red">align-items</span>
+            y a través de sus variantes vamos a disponer de un conjuntos de valores que van a permitir 
+            acomodar el contenido como requiera el diseño.
+        </p>
+
+        <div class="bg-red d-flex ali-center" style="height: 150px;">
+            <div class="bg-black p-1 ta-c c-white">1</div>
+            <div class="bg-black p-1 ta-c c-white">2</div>
+        </div>
+
+        <div class="alerta-negra mt-3">
+            Notese que los contenedores están centrados verticalmente dentro del contenedor padre que es 
+            el que dispone de las propiedades de flexbox.
+        </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c10">
+    <div class="bg-red d-flex ali-center" style="height: 150px;">
+        <div class="bg-black p-1 ta-c c-white">1</div>
+        <div class="bg-black p-1 ta-c c-white">2</div>
+    </div>
+</pre>
+</div>
+      
+        <h3 id="t9">ali-end</h3>
+        <p>
+            El mismo concepto anterior pero envez de centrar el contenido verticalmente ahora se 
+            los alinea al final del mismo.
+        </p>
+
+        <div class="bg-red d-flex ali-end" style="height: 150px;">
+            <div class="bg-black p-1 ta-c c-white">1</div>
+            <div class="bg-black p-1 ta-c c-white">2</div>
+        </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c11">
+    <div class="bg-red d-flex ali-end" style="height: 150px;">
+        <div class="bg-black p-1 ta-c c-white">1</div>
+        <div class="bg-black p-1 ta-c c-white">2</div>
+    </div>
+</pre>
+</div>        
+
+        <h3 id="t10">ali-baseline</h3>
+
+        <p>
+            Alinea verticamente los contenedores pero en función al contenido de los mismos 
+            pero no a los límites establecidos por los contenedores, es decir para generar 
+            el aliniamiento se basa en el contenido en este caso texto.
+        </p>
+
+        <div class="bg-red d-flex ali-baseline" style="height: 150px;">
+            <div class="bg-black p-1 ta-c c-white">Esto es el contenedor 1 <br>
+                                                    alineado con flexbox</div>
+            <div class="bg-black p-1 ta-c c-white">Esto es el contenedor 2 <br>
+                                                    Propiedad ali-baseline</div>
+        </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c11">
+    <div class="bg-red d-flex ali-baseline" style="height: 150px;">
+        <div class="bg-black p-1 ta-c c-white">Esto es el contenedor 1 <br>
+                                                    alineado con flexbox</div>
+        <div class="bg-black p-1 ta-c c-white">Esto es el contenedor 2 <br>
+                                                    Propiedad ali-baseline</div>
+    </div>
+</pre>
+</div>  
+
+        <h3 id="t11">ali-stretch</h3>
+
+        <p>
+            Lo que hace esta clase es brindale a los contenedores hijos 
+            el mismo alto que el contenedor padre expandiendo el alto de los 
+            contenedores.
+        </p>
+
+        <div class="bg-red d-flex ali-stretch" style="height: 150px;">
+            <div class="bg-black p-1 ta-c c-white">1</div>
+            <div class="bg-black p-1 ta-c c-white">2</div>
+        </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c12">
+    <div class="bg-red d-flex ali-stretch" style="height: 150px;">
+        <div class="bg-black p-1 ta-c c-white">1</div>
+        <div class="bg-black p-1 ta-c c-white">2</div>
+    </div>
+</pre>
+</div>  
+        </article>
+
+        <article class="articulo">
+            <h2 id="t12">Flexbox Responsive</h2>
+
+            <p>
+                En este apartado vamos a ver las funcionalidades antes vistas, pero en este caso vamos 
+                a elegir en que pantalla se van a aplicar, en ciertas oportunidades es necesario aplicar flexbox 
+                en tamaños de pantalla grandes pero en dispositivos de pantalla mas pequeños estas propiedades 
+                no encajan con el diseño. 
+            </p>
+
+            <h3 id="t13">Wrap</h3>
+            <p>
+                Es importante poder romper el flexbox en un momento determinado, en la práctica 
+                en muchas oportunidades contenedores alineados horizontamente se adaptan muy bien 
+                a tamaños de pantalla de más 1030px pero no es de esta manera para tamaños más pequeños. <br>
+                La propiedad wrap no da la oportunidad de romper el flexbox establecido de manera automática o manual 
+                para que el diseño no se salga de la pantalla generando el scroll inferior y obligando al usuario 
+                a moverlo para ver el contenido completo.
+            </p>
+
+            <div class="d-flex just-center">
+                <div  class="card"> <!-- Comienza la tarjeta simple -->
+                    <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                        <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                        <small>Pequeña descripción</small>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                        </p> 
+                        <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                    </div><!-- FIN Tarjeta oscura -->
+                </div>
+
+                <!-- Tarjeta clara-->
+                <div  class="card">
+                    <div  class="card-simple-light"> <!-- Comienzo de la tarjeta simple-->
+                        <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                        <small>Pequeña descripción</small>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                        </p> 
+                        <button  href=""  class="btn-cover-sm-o btn-black-o mar-2">Subs</button>
+                    </div> <!-- FIN de la tarjeta simple-->
+                </div>
+            </div>
+
+            <div class="alerta-negra my-3">
+                Notese en este ejemplo que si achicamos la pantalla del navegador el diseño tiene conflitos 
+                con el espacio y las tarjetas se saldrán del ancho de la pantalla. Esto se debe a que flexbox por default
+                es no-wrap (no se rompe el diseño y lo mantiene aún cuando no es adecuado).
+            </div>
+
+            <p class="f-w-9">Solución:</p>
+
+            <div class="d-flex just-center flex-wrap">
+                <div  class="card"> <!-- Comienza la tarjeta simple -->
+                    <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                        <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                        <small>Pequeña descripción</small>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                        </p> 
+                        <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                    </div><!-- FIN Tarjeta oscura -->
+                </div>
+
+                <!-- Tarjeta clara-->
+                <div  class="card">
+                    <div  class="card-simple-light"> <!-- Comienzo de la tarjeta simple-->
+                        <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                        <small>Pequeña descripción</small>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                        </p> 
+                        <button  href=""  class="btn-cover-sm-o btn-black-o mar-2">Subs</button>
+                    </div> <!-- FIN de la tarjeta simple-->
+                </div>
+            </div>
+
+            <div class="mt-3 alerta-negra">
+                Ahora si achican la pantalla la segunda tarjeta se irá debajo de la primera
+                manteniendo el diseño. Esto se logra añadiendo la clase <span class="badge badge-red">flex-wrap</span>
+                (Automático).
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c13">
+    <div class="d-flex just-center flex-wrap"> <!-- clase flex-wrap -->
+        <div  class="card"> 
+            <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+            </div><!-- FIN Tarjeta oscura -->
+        </div>
+        <!-- Tarjeta clara-->
+        <div  class="card">
+            <div  class="card-simple-light"> <!-- Comienzo de la tarjeta simple-->
+                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                <button  href=""  class="btn-cover-sm-o btn-black-o mar-2">Subs</button>
+            </div> <!-- FIN de la tarjeta simple-->
+        </div>
+    </div>
+</pre>
+</div>              
+
+        <h3 id="t14">Wrap Manual</h3>
+        <p>
+            El concepto es idéntico al ejemplo anterior con la diferencia que somos nosotros los que 
+            vamos a decidir el momento exacto para que flexbox se rompa y los contenedores se ubiquen 
+            uno abajo del otro. 
+        </p>
+
+        <div class="alerta-negra my-3">
+            Queremos para este ejemplo que en dispositivos de menos de 1030px (Medianos) flexbox se rompa. 
+        </div>
+
+        <div class="d-flex just-center flex-wrap-m">
+            <div  class="card"> <!-- Comienza la tarjeta simple -->
+                <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                    <small>Pequeña descripción</small>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                    </p> 
+                    <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                </div><!-- FIN Tarjeta oscura -->
+            </div>
+            <!-- Tarjeta clara-->
+            <div  class="card">
+                <div  class="card-simple-light"> <!-- Comienzo de la tarjeta simple-->
+                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                    <small>Pequeña descripción</small>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                    </p> 
+                    <button  href=""  class="btn-cover-sm-o btn-black-o mar-2">Subs</button>
+                </div> <!-- FIN de la tarjeta simple-->
+            </div>
+        </div>
+
+         <div class="alerta-negra my-3">
+            La clase utilizada es <span class="badge badge-red">flex-wrap-m</span> (Medium).
+        </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c14">
+    <div class="d-flex just-center flex-wrap-m"> <!-- clase flex-wrap-m -->
+        <div  class="card"> 
+            <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+            </div><!-- FIN Tarjeta oscura -->
+        </div>
+        <!-- Tarjeta clara-->
+        <div  class="card">
+            <div  class="card-simple-light"> <!-- Comienzo de la tarjeta simple-->
+                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                <button  href=""  class="btn-cover-sm-o btn-black-o mar-2">Subs</button>
+            </div> <!-- FIN de la tarjeta simple-->
+        </div>
+    </div>
+</pre>
+</div> 
+
+        <table class="mt-3 table-dark vertical-border table-sm table-bor-grey selector">
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Medida</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>.flex-wrap</td>
+                    <td>Todos los dispositivos</td>
+                </tr>
+                <tr>
+                    <td>.flex-wrap-m</td>
+                    <td>770px < X <= 1030px</td>
+                </tr>
+                <tr>
+                    <td>.flex-wrap-s</td>
+                    <td>400px < X <= 770px</td>
+                </tr>
+                <tr>
+                    <td>.flex-wrap-xs</td>
+                    <td>X <= 400px</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 id="t15">Justificación Variable</h3>
+
+        <p>
+            En muchas oportunidades no queremos romper el flexbox para alinear los elementos 
+            sino que con solo ajjustar la justificación es suficiente y podemos a partir de esto 
+            mostrar un diseño consistente.
+        </p>
+
+        <div class="bg-red d-flex just-center just-start-m  ali-center" style="height: 150px;">
+            <div class="bg-black p-1 ta-c c-white">1</div>
+            <div class="bg-black p-1 ta-c c-white">2</div>
+        </div>
+
+        <div class="alerta-negra mt-3">
+            Notese que si se achica el tamaño de pantalla y esta sea menor a 1030px los contenedores 1 y 2
+            se alinearán a la izquierda, esto se logra con la clase <span class="badge badge-red">just-start-m</span>.
+        </div>
+        
+<div class="codigo">
+<pre class="cod-html" id="c15">
+    <!--just-center y just-start-m -->
+    <div class="bg-red d-flex just-center just-start-m  ali-center" style="height: 150px;">
+        <div class="bg-black p-1 ta-c c-white">1</div>
+        <div class="bg-black p-1 ta-c c-white">2</div>
+    </div>
+</pre>
+</div> 
+
+        <table class="vertical-border table-dark table-sm table bor-grey mt-3 selector">
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Medida</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>just-start</td>
+                    <td>Todos los dispositivos</td>
+                    <td>Alinea horizontalmente los elementos al inicio.</td>
+                </tr>
+                <tr>
+                    <td>just-end</td>
+                    <td>Todos los dispositivos</td>
+                    <td>Alinea horizontalmente los elementos al final.</td>
+                </tr>
+                <tr>
+                    <td>just-center</td>
+                    <td>Todos los dispositivos</td>
+                    <td>Alinea horizontalmente los elementos al centro.</td>
+                </tr>
+
+                <tr>
+                    <td>just-around</td>
+                    <td>Todos los dispositivos</td>
+                    <td>Alinea horizontalmente los elementos distribuidos por todo el contenedor padre.</td>
+                </tr>
+
+                 <tr>
+                    <td>just-between</td>
+                    <td>Todos los dispositivos</td>
+                    <td>Alinea horizontalmente los elementos en extremos opuestos.</td>
+                </tr>
+                
+                <tr>
+                    <td>just-start-m</td>
+                    <td> 770px < X < 1030px </td>
+                    <td>Alinea el contenido al inicio pero a partir de pantallas medianas.</td>
+                </tr>
+
+                 <tr>
+                    <td>just-start-s</td>
+                    <td> 400px < X < 770px </td>
+                    <td>Alinea el contenido al inicio pero a partir de pantallas chicos.</td>
+                </tr>
+
+                <tr>
+                    <td>just-start-xs</td>
+                    <td> X < 400px </td>
+                    <td>Alinea el contenido al inicio pero a partir de pantallas extra chicos.</td>
+                </tr>
+
+                <tr>
+                    <td>just-center-m</td>
+                    <td> 770px < X < 1030px </td>
+                    <td>Alinea el contenido al centro pero a partir de pantallas medianas.</td>
+                </tr>
+
+                <tr>
+                    <td>just-center-s</td>
+                    <td> 400px < X <= 770px </td>
+                    <td>Alinea el contenido al centro pero a partir de pantallas chicas.</td>
+                </tr>
+
+                <tr>
+                    <td>just-center-xs</td>
+                    <td> X < 400px </td>
+                    <td>Alinea el contenido al centro pero a partir de pantallas extra chicas.</td>
+                </tr>
+
+                <tr>
+                    <td>just-end-m</td>
+                    <td>  770px < X < 1030px </td>
+                    <td>Alinea el contenido al final pero a partir de pantallas medianas.</td>
+                </tr>
+
+                <tr>
+                    <td>just-end-s</td>
+                    <td>  400px < X <= 770px </td>
+                    <td>Alinea el contenido al final pero a partir de pantallas chicas.</td>
+                </tr>
+
+
+                <tr>
+                    <td>just-end-xs</td>
+                    <td>  X < 400px </td>
+                    <td>Alinea el contenido al final pero a partir de pantallas extra chicas.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3 id="t16">Alineación Variable</h3>
+
+        <p>
+            Similar a lo que sucede con la justificación podemos realizarlo con la Alineación
+            vertical, la librería dispone de clases para ajustar estos valores a todo tipo de 
+            pantalla.
+        </p>
+
+        <div class="bg-red d-flex just-center ali-center ali-end-m" style="height: 150px;">
+            <div class="bg-black p-1 ta-c c-white">1</div>
+            <div class="bg-black p-1 ta-c c-white">2</div>
+        </div>
+
+        <div class="alerta-negra my-3">
+            En este ejemplo utiliza un alineamiento centrado para equipos de mas de 1030px, pero para 
+            menos que ese valor la alineación se posiciona al final.
+        </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c16">
+    <!-- ali-center y ali-end-m -->
+    <div class="bg-red d-flex just-center ali-center ali-end-m" style="height: 150px;">
+        <div class="bg-black p-1 ta-c c-white">1</div>
+        <div class="bg-black p-1 ta-c c-white">2</div>
+    </div>
+</pre>
+</div> 
+
+            <p>
+                Otro ejemplo un poco mas completo es utilizar una alineación centrada en equipos 
+                grandes, una alineación al inicio en equipos medianos y la ruptura del flexbox en 
+                equipos chicos, todo esto en los mismos contenedores.
+            </p>
+
+
+            <div class="bg-red d-flex  ali-center ali-start-m flex-wrap-s" style="height: 800px;">
+                <div  class="card"> 
+                    <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                    <small>Pequeña descripción</small>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                    </p> 
+                        <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                    </div><!-- FIN Tarjeta oscura -->
+                </div>
+                <!-- Tarjeta clara-->
+                <div  class="card">
+                    <div  class="card-simple-light"> <!-- Comienzo de la tarjeta simple-->
+                        <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                        <small>Pequeña descripción</small>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                        </p> 
+                        <button  href=""  class="btn-cover-sm-o btn-black-o mar-2">Subs</button>
+                    </div> <!-- FIN de la tarjeta simple-->
+                </div>
+            </div>
+
+            <table class="selector table-dark table-sm vertical-border table-bor-grey mt-3">
+                <thead>
+                    <tr>
+                        <th>Clase</th>
+                        <th>Tamaños</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ali-start</td>
+                        <td>Todos los tamaños</td>
+                        <td>Alinea los elementos al inicio del contenedor padre</td>
+                    </tr>
+                    <tr>
+                        <td>ali-center</td>
+                        <td>Todos los tamaños</td>
+                        <td>Alinea los elementos al centro del contenedor padre</td>
+                    </tr>
+                    <tr>
+                        <td>ali-end</td>
+                        <td>Todos los tamaños</td>
+                        <td>Alinea los elementos al final del contenedor padre</td>
+                    </tr>
+                    <tr>
+                        <td>ali-stretch</td>
+                        <td>Todos los tamaños</td>
+                        <td>Alinea los elementos distruyendolos proporcionalmente por todo el contenedor padre</td>
+                    </tr>
+
+                    <tr>
+                        <td>ali-start-m</td>
+                        <td>770px < X < 1030px </td>
+                        <td>Alinea los elementos al inicio del contenedor padre en equipos medianos</td>
+                    </tr>
+                    <tr>
+                        <td>ali-start-s</td>
+                        <td>400px < X < 770px </td>
+                        <td>Alinea los elementos al inicio del contenedor padre en equipos chicos</td>
+                    </tr>
+                    <tr>
+                        <td>ali-start-xs</td>
+                        <td>400px > X </td>
+                        <td>Alinea los elementos al inicio del contenedor padre en equipos extra chicos</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>ali-center-m</td>
+                        <td>770px < X < 1030px </td>
+                        <td>Alinea los elementos al centro del contenedor padre en equipos medianos</td>
+                    </tr>
+                    <tr>
+                        <td>ali-center-s</td>
+                        <td>400px < X < 770px </td>
+                        <td>Alinea los elementos al centro del contenedor padre en equipos chicos</td>
+                    </tr>
+                    <tr>
+                        <td>ali-center-xs</td>
+                        <td>400px > X </td>
+                        <td>Alinea los elementos al centro del contenedor padre en equipos extra chicos</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>ali-end-m</td>
+                        <td>770px < X < 1030px </td>
+                        <td>Alinea los elementos al final del contenedor padre en equipos medianos</td>
+                    </tr>
+                    <tr>
+                        <td>ali-end-s</td>
+                        <td>400px < X < 770px </td>
+                        <td>Alinea los elementos al final del contenedor padre en equipos chicos</td>
+                    </tr>
+                    <tr>
+                        <td>ali-end-xs</td>
+                        <td>400px > X </td>
+                        <td>Alinea los elementos al final del contenedor padre en equipos extra chicos</td>
+                    </tr>
+                    <tr>
+                        <td>ali-stretch-m</td>
+                        <td>770px < X < 1030px</td>
+                        <td>Alinea los elementos distruyendolos proporcionalmente por todo el contenedor padre</td>
+                    </tr>
+
+                    <tr>
+                        <td>ali-stretch-s</td>
+                        <td>400px < X < 770px</td>
+                        <td>Alinea los elementos distruyendolos proporcionalmente por todo el contenedor padre</td>
+                    </tr>
+
+                    <tr>
+                        <td>ali-stretch-xs</td>
+                        <td>400px > X </td>
+                        <td>Alinea los elementos distruyendolos proporcionalmente por todo el contenedor padre</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t17">Flex Culumn-Row</h2>
+            <p>
+                Por defecto la clase <span class="badge badge-red">d-flex</span> establece el 
+                alineamiento de forma horizontal, pero existen ocasiones en las cuales debemos 
+                disponer de un alineamiento horizontal en determinadas circunstancias y en otras optar 
+                por un alineamiento vertical. Por esta razón existen dos clases que permiten definir esta situación.
+            </p>
+
+             <div class="d-flex  flex-row flex-column-m mt-3">
+                <div  class="card"> 
+                    <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                    <small>Pequeña descripción</small>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                    </p> 
+                        <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                    </div><!-- FIN Tarjeta oscura -->
+                </div>
+                <!-- Tarjeta clara-->
+                <div  class="card">
+                    <div  class="card-simple-light"> <!-- Comienzo de la tarjeta simple-->
+                        <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                        <small>Pequeña descripción</small>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                        </p> 
+                        <button  href=""  class="btn-cover-sm-o btn-black-o mar-2">Subs</button>
+                    </div> <!-- FIN de la tarjeta simple-->
+                </div>
+            </div>
+
+
+    <div class="codigo">
+        <pre id="c17" class="cod-html">
+
+        <!-- 
+             flex-row para equipos > 1030px
+             flex-column-m para equpos menores 1030px 
+        -->
+        <div class="d-flex  flex-row flex-column-m">
+            <div  class="card"> 
+                <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                    <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                </div><!-- FIN Tarjeta oscura -->
+            </div>
+            <!-- Tarjeta clara-->
+            <div  class="card">
+                <div  class="card-simple-light"> <!-- Comienzo de la tarjeta simple-->
+                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                    <small>Pequeña descripción</small>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                    </p> 
+                    <button  href=""  class="btn-cover-sm-o btn-black-o mar-2">Subs</button>
+                </div> <!-- FIN de la tarjeta simple-->
+            </div>
+        </div>
+        </pre>
+    </div>
+
+        <div class="alerta-negra my-3">
+            Si achican el tamaño de la pantalla a menos de 1030px las dos tarjetas utilizadas para el ejemplo 
+            se acomodarán encolumnadas y no en forma de horizontal. <br>
+            Como se muestra en el ejemplo las clases utilizadas son:
+            <div class="lista-doc m-0">
+                <ul>
+                    <li>.flex-row</li>
+                    <li>.flex-column-m</li>
+                </ul>
+            </div>
+            La clase <span class="f-w-9">.flex-row</span> no posee parámetro referente a el tamaño de pantalla, por lo tanto 
+            se aplicará a todos los dispositivos, mientras que la clase <span class="f-w-9">.flex-column-m</span> si lo tiene 
+            y se aplicará a partir de equipos medianos.
+        </div>
+
+        </article>
+
+        <article class="articulo">
+            <h2 id="t18">Flex Reverse</h2>
+            <p>
+                Flexbox tiene propiedades para mostrar el contenido de forma inversa a como está dispuesto 
+                dentro del archivo html, la librería hace uso de estas propiedades a través de dos clases que permiten llevar 
+                a cabo estas tareas.
+            </p>
+
+            <div class="d-flex flex-row-reverse">
+                <div class="p-1 bg-red c-white ta-c">1</div>
+                <div class="p-1 bg-red c-white ta-c">2</div>
+            </div>
+
+            <div class="alerta-negra mt-3">
+                Como se puede ver en el ejemplo los contenedores por defecto quedan alineados 
+                de manera horizontal y a la derecha. El primero contenedor es el que posee el número dos.
+            </div>
+
+    <div class="codigo">
+        <pre id="c18" class="cod-html">
+            <!-- clase flex-row-reverse -->
+            <div class="d-flex flex-row-reverse">
+                <div class="p-1 bg-red c-white ta-c">1</div>
+                <div class="p-1 bg-red c-white ta-c">2</div>
+            </div>
+        </pre>
+    </div>
+
+
+            <p>
+                Lo mismo sucede con las columnas.
+            </p>
+
+            <div class="d-flex flex-column-reverse">
+                <div class="p-1 bg-red c-white ta-c bor-2">1</div>
+                <div class="p-1 bg-red c-white ta-c">2</div>
+            </div>
+    <div class="codigo">
+        <pre id="c18" class="cod-html">
+            <!-- clase flex-column-reverse -->
+           <div class="d-flex flex-column-reverse">
+                <div class="p-1 bg-red c-white ta-c bor-2">1</div>
+                <div class="p-1 bg-red c-white ta-c">2</div>
+            </div>
+        </pre>
+    </div>
+
+        </article>
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="guia-pagina">
+        <ul>
+            <li><a href="#t1">Flexbox</a></li>
+            <li><a href="#t2">Flexbox en CSS3</a></li>
+            <li><a href="#t3">Flexbox en Bodystyle</a></li>
+            <li><a href="#t4">Display Flex</a></li>
+            <li><a href="#t5">Just Center</a></li>
+            <li><a href="#t6">Just Around</a></li>
+            <li><a href="#t7">Just Between</a></li>
+            <li><a href="#t8">Align Center</a></li>
+            <li><a href="#t9">Align End</a></li>
+            <li><a href="#t10">Align Baseline</a></li>
+            <li><a href="#t11">Align Stretch</a></li>
+            <li><a href="#t12">Flex Responsive</a></li>
+            <li><a href="#t13">Wrap</a></li>
+            <li><a href="#t14">Wrap Manual</a></li>
+            <li><a href="#t15">Just Variable</a></li>
+            <li><a href="#t16">Align Variable</a></li>
+            <li><a href="#t17">Flex Reverse</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Flexbox"
+        var idMenu = "#m3"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>
+
+        

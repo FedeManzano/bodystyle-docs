@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="description" content="Tarjetas CSS que permiten mostrar a ciertos elementos de una mejor manera.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Tarjetas</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Tarjetas</h1>
+            <p>
+                Elementos combinados que permiten mostrar determinada información de manera organizada
+                y atractiva para el usuario, esta librería brinda cuatro tipos de tarjetas compuestas 
+                con distintos tipos de conformación. <br>
+                Los temas seleccionados para la creación de estos elementos don dos: Tema claro y oscuro.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <article class="articulo">
+            <h2 id="t2">Tarjeta Simple</h2>
+            <p>
+                El modelo más simple de la librería, conteniendo sólo texto. 
+            </p>
+
+            <div class=" d-flex just-around flex-wrap mar-3">
+                 <div class="card mab-m-1">
+                    <div class="card-simple-dark">
+                        <h4>Título de la tarjeta<span class="badge badge-rojo c-blanco">New</span></h4>
+                        <small>Pequeña descripción</small>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                        </p> 
+                        <button href="" class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-simple-light">
+                        <h4>Título de la tarjeta<span class="badge badge-rojo c-blanco">New</span></h4>
+                        <small>Pequeña descripción</small>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                        </p> 
+                        <button href="" class="btn-cover-sm-o btn-black-o mar-2">Subs</button>
+                    </div>
+                </div>
+            </div>
+
+<div class="codigo">
+    <pre class="cod-html" id="c1">
+        <!-- Tarjetas simples -->
+        <div class=" d-flex just-around">
+        <div class="card"> <!-- Comienza la tarjeta simple -->
+            <div class="card-simple-dark"> <!-- Tarjeta oscura -->
+                <h4>Título de la tarjeta<span class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                <button href="" class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+            </div><!-- FIN Tarjeta oscura -->
+        </div>
+
+        <!-- Tarjeta clara-->
+        <div class="card">
+            <div class="card-simple-light"> <!-- Comienzo de la tarjeta simple-->
+                <h4>Título de la tarjeta<span class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                <button href="" class="btn-cover-sm-o btn-black-o mar-2">Subs</button>
+            </div> <!-- FIN de la tarjeta simple-->
+        </div>
+    </div>
+    </pre>
+</div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t3">Tarjetas Íconos</h2>
+            <p>
+                El segundo tipo es la tarjeta con íconos pequeños un título y un enlace en dos temas posibles oscuro y claro.
+            </p>
+
+            <div class="d-flex just-around flex-wrap mar-3">
+                 <div class="card mab-s-1">
+                    <div class="card-icon-dark">
+                        <div class="image-container">
+                            <img src="../imagenes/node.png" alt="Node JS">
+                        </div>
+                        <div>
+                            <h4 class="m-0">Titulo</h4>
+                            <small>desc</small> <br>
+                            <a href="" class="link">Descarga</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon-light">
+                        <div class="image-container">
+                            <img src="../imagenes/node.png" alt="Node JS">
+                        </div>
+                        <div>
+                            <h4 class="m-0">Titulo</h4>
+                            <small>desc</small> <br>
+                            <a href="" class="link">Descarga</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <div class="codigo">
+        <pre id="c2" class="cod-html">
+            <div class="d-flex just-around flex-wrap mar-3">
+                 <div class="card mab-s-1">
+                    <div class="card-icon-dark">
+                        <div class="image-container">
+                            <img src="../imagenes/node.png" alt="Node JS">
+                        </div>
+                        <div>
+                            <h4 class="m-0">Titulo</h4>
+                            <small>desc</small> <br>
+                            <a href="" class="link">Descarga</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon-light">
+                        <div class="image-container">
+                            <img src="../imagenes/node.png" alt="Node JS">
+                        </div>
+                        <div>
+                            <h4 class="m-0">Titulo</h4>
+                            <small>desc</small> <br>
+                            <a href="" class="link">Descarga</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </pre>
+    </div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t4">Tarjetas Perfil</h2>
+
+            <div class="d-flex just-around flex-wrap-s mar-10">
+                <div class="card">
+                    <div class="card-perfil-dark">
+                        <div class="image-container">
+                            <img src="https://media.istockphoto.com/id/1056239454/es/foto/mujer-africana-en-la-decisi%C3%B3n.jpg?s=612x612&w=0&k=20&c=l3fDnEUpBdib7Jbca9N4caqWMFGafab88qFXvhX5e2g=" alt="">
+                        </div>
+                        <h4>Teresa Aguilar</h4>
+                        <div class="ta-c">
+                            <small>Ejecutiva de Cuenta</small>
+                        </div>
+                        
+                        <div class="divisor"></div>
+
+                        <div class="ta-c">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto in perspiciatis!</p> <br>
+                            <a href="#" class="link">@FedericoManzano</a>
+                        </div>
+
+                        <div class="divisor"></div>
+
+                        <div class="btn-group-lg mar-4">
+                            <a href="#" class="btn bg-blue">Perfil</a>
+                            <a href="#" class="btn bg-blue">Historial</a>
+                            <a href="#" class="btn bg-blue">Desempeño</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mar-s-15">
+                    <div class="card-perfil-light">
+                        <div class="image-container">
+                            <img src="https://media.istockphoto.com/id/1056239454/es/foto/mujer-africana-en-la-decisi%C3%B3n.jpg?s=612x612&w=0&k=20&c=l3fDnEUpBdib7Jbca9N4caqWMFGafab88qFXvhX5e2g=" alt="">
+                        </div>
+                        <h4>Teresa Aguilar</h4>
+                        <div class="ta-c">
+                            <small>Ejecutiva de Cuenta</small>
+                        </div>
+                        
+                        <div class="divisor"></div>
+
+                        <div class="ta-c">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto in perspiciatis!</p> <br>
+                            <a href="#" class="link">@FedericoManzano</a>
+                        </div>
+
+                        <div class="divisor"></div>
+
+                        <div class="btn-group-lg mar-4">
+                            <a href="#" class="btn bg-blue">Perfil</a>
+                            <a href="#" class="btn bg-blue">Historial</a>
+                            <a href="#" class="btn bg-blue">Desempeño</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <div class="codigo">
+    <pre id="c3" class="cod-html">
+    <div class="d-flex just-around flex-wrap-s mar-10">
+        <div class="card">
+            <div class="card-perfil-dark">
+                <div class="image-container">
+                    <img src="https://media.istockphoto.com/id/1056239454/es/foto/mujer-africana-en-la-decisi%C3%B3n.jpg?s=612x612&w=0&k=20&c=l3fDnEUpBdib7Jbca9N4caqWMFGafab88qFXvhX5e2g=" alt="">
+                </div>
+                <h4>Teresa Aguilar</h4>
+                <div class="ta-c">
+                    <small>Ejecutiva de Cuenta</small>
+                </div>
+                
+                <div class="divisor"></div>
+                <div class="ta-c">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto in perspiciatis!</p> <br>
+                    <a href="#" class="link">@FedericoManzano</a>
+                </div>
+                <div class="divisor"></div>
+                <div class="btn-group-lg mar-4">
+                    <a href="#" class="btn bg-blue">Perfil</a>
+                    <a href="#" class="btn bg-blue">Historial</a>
+                    <a href="#" class="btn bg-blue">Desempeño</a>
+                </div>
+            </div>
+        </div>
+    <div class="card mar-s-15">
+        <div class="card-perfil-light">
+            <div class="image-container">
+                <img src="https://media.istockphoto.com/id/1056239454/es/foto/mujer-africana-en-la-decisi%C3%B3n.jpg?s=612x612&w=0&k=20&c=l3fDnEUpBdib7Jbca9N4caqWMFGafab88qFXvhX5e2g=" alt="">
+            </div>
+            <h4>Teresa Aguilar</h4>
+            <div class="ta-c">
+                <small>Ejecutiva de Cuenta</small>
+            </div>
+            
+            <div class="divisor"></div>
+            <div class="ta-c">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto in perspiciatis!</p> <br>
+                <a href="#" class="link">@FedericoManzano</a>
+            </div>
+            <div class="divisor"></div>
+            <div class="btn-group-lg mar-4">
+                <a href="#" class="btn bg-blue">Perfil</a>
+                <a href="#" class="btn bg-blue">Historial</a>
+                <a href="#" class="btn bg-blue">Desempeño</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    </pre>
+    </div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t5">Tarjetas Descripción</h2>
+
+            <div class="d-flex just-around flex-wrap-m">
+                <div class="card">
+                    <div class="card-description-dark">
+                        <div class="image-container">
+                            <img src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Ejemplo card description">
+                        </div>
+                        <div class="content">
+                            <h4>Autos en Venta</h4>
+                            <small>Renault 206</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                        </div>
+                        <div class="d-flex just-final">
+                            <div class="btn-sm-o btn-green-o bor-pill waves">Comprar</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-description-light">
+                        <div class="image-container">
+                            <img src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Ejemplo card descripción">
+                        </div>
+                        <div class="content">
+                            <h4>Autos en Venta</h4>
+                            <small>Renault 206</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                        </div>
+                        <div class="d-flex just-final">
+                            <div class="btn-sm-o btn-green-o bor-pill waves">Comprar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="codigo">
+        <pre id="c4" class="cod-html">
+            <div class="d-flex just-around flex-wrap-m">
+                <div class="card">
+                    <div class="card-description-dark">
+                        <div class="image-container">
+                            <img src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Ejemplo de tarjeta">
+                        </div>
+                        <div class="content">
+                            <h4>Autos en Venta</h4>
+                            <small>Renault 206</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                        </div>
+                        <div class="d-flex just-final">
+                            <div class="btn-sm-o btn-green-o bor-pill waves">Comprar</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-description-light">
+                        <div class="image-container">
+                            <img src="../imagenes/auto.jpg" alt="Ejemplo card descripción">
+                        </div>
+                        <div class="content">
+                            <h4>Autos en Venta</h4>
+                            <small>Renault 206</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                        </div>
+                        <div class="d-flex just-final">
+                            <div class="btn-sm-o btn-green-o bor-pill waves">Comprar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </pre>
+        </div>
+
+        </article>
+        
+        <article class="articulo">
+            <h2 id="t6">Tarjetas y la Grilla</h2>
+            <p>
+                Para poder alinear varias tarjetas a través de una grilla hay que utilizar la 
+                clase <span class="badge badge-red">.card-cover</span> que permite que ancho máximo de las 
+                tarjetas sea el 100% del ancho del contenedor padre, de esta forma se logra conformar una grilla uniforme.
+            </p>
+
+            <div class="row mar-3">
+                <div class="card cxs-12 cs-12 cm-6 cl-4">
+                    <div class="card-description-dark card-cover">
+                        <div class="image-container">
+                            <img src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Ejemplo card description">
+                        </div>
+                        <div class="content">
+                            <h4>Autos en Venta</h4>
+                            <small>Renault 206</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                        </div>
+                        <div class="d-flex just-final">
+                            <div class="btn-sm-o btn-green-o bor-pill waves">Comprar</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card cxs-12 cs-12 cm-6 cl-4">
+                    <div class="card-description-dark card-cover">
+                        <div class="image-container">
+                            <img src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Ejemplo card description">
+                        </div>
+                        <div class="content">
+                            <h4>Autos en Venta</h4>
+                            <small>Renault 206</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                        </div>
+                        <div class="d-flex just-final">
+                            <div class="btn-sm-o btn-green-o bor-pill waves">Comprar</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card cxs-12 cs-12 cm-6 cl-4">
+                    <div class="card-description-dark card-cover">
+                        <div class="image-container">
+                            <img src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Ejemplo card description">
+                        </div>
+                        <div class="content">
+                            <h4>Autos en Venta</h4>
+                            <small>Renault 206</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                        </div>
+                        <div class="d-flex just-final">
+                            <div class="btn-sm-o btn-green-o bor-pill waves">Comprar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <div class="codigo">
+        <pre id="c5" class="cod-html">
+        <div class="row mar-3">
+                <div class="card cxs-12 cs-12 cm-6 cl-4">
+                    <div class="card-description-dark card-cover">
+                        <div class="image-container">
+                            <img src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Ejemplo card description">
+                        </div>
+                        <div class="content">
+                            <h4>Autos en Venta</h4>
+                            <small>Renault 206</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                        </div>
+                        <div class="d-flex just-final">
+                            <div class="btn-sm-o btn-green-o bor-pill waves">Comprar</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card cxs-12 cs-12 cm-6 cl-4">
+                    <div class="card-description-dark card-cover">
+                        <div class="image-container">
+                            <img src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Ejemplo card description">
+                        </div>
+                        <div class="content">
+                            <h4>Autos en Venta</h4>
+                            <small>Renault 206</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                        </div>
+                        <div class="d-flex just-final">
+                            <div class="btn-sm-o btn-green-o bor-pill waves">Comprar</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card cxs-12 cs-12 cm-6 cl-4">
+                    <div class="card-description-dark card-cover">
+                        <div class="image-container">
+                            <img src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Ejemplo card description">
+                        </div>
+                        <div class="content">
+                            <h4>Autos en Venta</h4>
+                            <small>Renault 206</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                        </div>
+                        <div class="d-flex just-final">
+                            <div class="btn-sm-o btn-green-o bor-pill waves">Comprar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </pre>
+    </div>
+        </article>
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="guia-pagina">
+        <ul>
+            <li><a href="#t1">Tarjetas</a></li>
+            <li><a href="#t2">Tarjeta Simple</a></li>
+            <li><a href="#t3">Tarjeta con Íconos</a></li>
+            <li><a href="#t4">Tarjetas de Perfil</a></li>
+            <li><a href="#t5">Tarjetas Descripción</a></li>
+            <li><a href="#t6">Tarjetas y Grilla</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Tarjetas"
+        var idMenu = "#m2"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>
+
+        
+

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../logo.ico" type="image/x-icon">
+
+    <meta name="description" content="Clases CSS para establecer los margenes entro los elementos ajustando esta propiedad a todo tipo de pantalla.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Margin</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Margin</h1>
+            <p>
+                Propiedad de de CSS que permite generar una distancia entre los elementos dispuestos en una 
+                página web. El reacomodamiento de los elementos se basa tanto en el nivel de margen como en el espacio
+                interno que tenga un determinado elemento con respecto de su propio contenido (padding). <br>
+                En muchas oportunidades es nececesario definir un nivel de margen distinto para un único elemento dentro del DOM según 
+                el tamaño de la pantalla donde se presente, por esta razón la librería cuenta con un conjunto de clases 
+                que permite definir margenes apropiados para cada situación y tipo de pantalla.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Margin General</h2>
+            <p>
+                En este apartado veremos el margen que se aplica a un elemento para todas las pantallas y en todas las direcciones. <br>
+                La clase utilizada para este ejemplo es <span class="badge badge-red">m-[em]</span> siendo em la cantidad de PX de margen requerido, 
+                siendo 1em = 16PX, en el caso de las clases de margin toman el valor 1 con 0.5em lo que es igual a 8px. <br>
+                <span class="f-w-7 c-red">Es importante aclarar que el parámetro de la clase puede varias desde 1 a 15 donde 1 es igual a 8px</span>.
+            </p>
+
+            <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+            <div class="d-flex just-center">
+                <div class="p-1 bg-red c-white ta-c">LEFT</div>
+                <div class="p-1 bg-red c-white ta-c m-1">ELEMENTO</div>
+                <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+            </div>
+            <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+
+            <div class="alerta-negra mt-3">
+                En este ejemplo se le aplica un margen de 0.5em, lo que es lo mismo a 8px. <br>
+                En este caso no cambiará el margen en ningún tamaño de pantalla, lo que implica que se mantendrá constante.
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <div class="p-1 bg-red c-white ta-c">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <div class="p-1 bg-red c-white ta-c m-1">ELEMENTO</div> <!-- ELEMENTO Con la clase m-1 -->
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+    <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+</pre>
+</div>
+            <h3 id="t3">Margin General Top</h3>
+            <p>
+                Para el caso del margen en la parte superior es exactamente igual pero la clase utilizada es <span class="badge badge-red">mt-[em]</span>
+                para el valor 1 corresponde a 8px.
+            </p>
+
+            <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+            <div class="d-flex just-center">
+                <div class="p-1 bg-red c-white ta-c">LEFT</div>
+                <div class="p-1 bg-red c-white ta-c mt-1">ELEMENTO</div>
+                <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+            </div>
+            <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase mt-1-->
+            <div class="p-1 bg-red c-white ta-c mt-1">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+    <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+</pre>
+</div>
+        <h3 id="t4">Margen General Derecho</h3>
+
+        <p>
+            La clase utilizada para agregar un margen general a la derecha utilizamos la 
+            clase <span class="badge badge-red">mr-[em]</span> em puede variar de 1 a 15 
+            siendo 1 = 8px.
+        </p>
+
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase mt-1-->
+            <div class="p-1 bg-red c-white ta-c mr-3">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+
+<div class="codigo">
+    <pre id="c3" class="cod-html">
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase mr-3 -->
+            <div class="p-1 bg-red c-white ta-c mr-3">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+    </pre>
+</div>
+
+        <h3 id="t5">Margen General Izquierdo</h3>
+
+        <p>
+            La clase utilizada para agregar un margen general a la derecha utilizamos la 
+            clase <span class="badge badge-red">ml-[em]</span> em puede variar de 1 a 15 
+            siendo 1 = 8px.
+        </p>
+
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase mt-1-->
+            <div class="p-1 bg-red c-white ta-c ml-3">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+
+<div class="codigo">
+    <pre id="c4" class="cod-html">
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase ml-3 -->
+            <div class="p-1 bg-red c-white ta-c ml-3">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+    </pre>
+</div>
+
+        <h3 id="t6">Margin General Abajo</h3>
+        <p>
+            Margen aplicado abajo del elemento con la clase <span class="badge badge-red">mb-[em]</span>.
+        </p>
+
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase mt-1-->
+            <div class="p-1 bg-red c-white ta-c mb-3">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+<div class="codigo">
+    <pre id="c5" class="cod-html">
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase mb-3 -->
+            <div class="p-1 bg-red c-white ta-c mb-3">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+    </pre>
+</div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t7">Margin Especializado</h2>
+            <p>
+                Existen clases dentro de la librería que permiten aplicar margenes a elementos en determinados 
+                tamaños de pantalla, de manera tal que solo afecte al elemento en circunstancias determinadas.
+            </p>
+
+            <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+            <div class="d-flex just-center">
+                <div class="p-1 bg-red c-white ta-c">LEFT</div>
+                <div class="p-1 bg-red c-white ta-c m-m-3">ELEMENTO</div>
+                <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+            </div>
+            <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+
+            <div class="mt-3 alerta-negra">
+                Como se puede observar no hay margenes que afectan al elemento, pero si llevamos 
+                el tamaño de la pantalla a menos 1030px se creará un margen en todas las direcciones 
+                dejando un espacio de 1.5em. <br>
+                Esto se logra con la clase <span class="badge badge-red">.m-[tamaño]-[em]</span> donde tamaño 
+                corresponde al tamaño de pantalla utilizado definidos en la página de esta documentación correspondiente 
+                a este tema <a href="medidas.html" class="link tips-ele"
+                data-tips="Medidas de pantalla definidas en la librería.">Medidas</a>.
+            </div>
+
+<div class="codigo">
+    <pre id="c6" class="cod-html">
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase m-m-3 -->
+            <div class="p-1 bg-red c-white ta-c m-m-3">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+    </pre>
+</div>
+
+        <h3 id="t8">Margenes Combinados</h3>
+        <p>
+            Para este ejemplo se aplicará varios margenes a un mismo elemento utilizando todas 
+            las posibilidaddes provistas por la librería, ajustando el margen adaptandolo 
+            a diferentes dispositivos.
+        </p>
+
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase m-m-3 -->
+            <div class="p-1 bg-red c-white ta-c m-4 m-m-3 m-s-2 m-xs-1">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+
+        <div class="alerta-negra mt-3">
+            Si se achica el tamaño de pantalla se notará como el margen en todas las direcciones 
+            va disminuyendo paulatinamente.
+        </div>
+
+
+<div class="codigo">
+    <pre id="c7" class="cod-html">
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase m-4 m-m-3 m-s-2 m-xs-1 -->
+            <div class="p-1 bg-red c-white ta-c m-4 m-m-3 m-s-2 m-xs-1">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+    </pre>
+</div>
+
+        <h3 id="t9">Margin Combinado Direccionado</h3>
+
+        <p>
+            Podemos utilizar el mismo concepto anterior pero utilizando las clases 
+            que generen un margen en una sola dirección en diferentes tamaños de pantalla. <br>
+            Para el ejemplo se utilizará un margen izquierdo de 1.5em en equipos grandes, 1em en equipos 
+            medianos, 0.5em en equipos chicos y 0em en equpos extra chicos. 
+        </p>
+
+        
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase m-m-3 -->
+            <div class="p-1 bg-red c-white ta-c ml-3 ml-m-2 ml-s-1 ml-xs-0">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+
+        <div class="alerta-negra mt-3">
+            Si se achica el tamaño de pantalla se notará como el margen izquierdo se atenúa hasta 0 
+            para los diferentes tamaños de pantalla.
+        </div>
+
+<div class="codigo">
+    <pre id="c8" class="cod-html">
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+        <div class="d-flex just-center">
+            <div class="p-1 bg-red c-white ta-c">LEFT</div>
+            <!-- Elemento con la clase ml-3 ml-m-2 ml-s-1 ml-xs-0 -->
+            <div class="p-1 bg-red c-white ta-c ml-3 ml-m-2 ml-s-1 ml-xs-0">ELEMENTO</div>
+            <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+        </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+    </pre>
+</div>
+
+        <div class="alerta-negra">
+            Se puede realizar lo mismo con <span class="badge badge-red">mr-[tamaño]-[em]</span>, 
+            <span class="badge badge-red">mt-[tamaño]-[em]</span> y <span class="badge badge-red">mr-[tamaño]-[em]</span>. <br>
+            es importante resaltar que se pueden combinar todas estas clases para generar margenes completamente personalizados
+            que permitan ajustar el contenido de manera precisa.
+        </div>
+
+        </article>
+
+        <article class="articulo">
+            <h2 id="t10">Margenes en el Eje X e Y</h2>
+            <p>
+                Existen en la librería clases que permiten para diferentes tamaños de pantalla establecer un 
+                margen arriba y abajo del elemento, como así tambien a la izquierda y a la derecha del mismo. <br>
+                Las clases utilizadas son <span class="badge badge-red">my-[tamaño]-[em]</span>  y 
+                <span class="badge badge-red">mx-[tamaño]-[em]</span>. Es importante aclarar que si no se agrega 
+                el parámetro [tamaño] el margen se representará en todos los tamaños de pantalla.
+            </p>
+
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+            <div class="d-flex just-center">
+                <div class="p-1 bg-red c-white ta-c">LEFT</div>
+                <!-- Elemento con la clase m-m-3 -->
+                <div class="p-1 bg-red c-white ta-c mx-3 my-3">ELEMENTO</div>
+                <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+            </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+
+<div class="codigo">
+    <pre id="c9" class="cod-html">
+       <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+            <div class="d-flex just-center">
+                <div class="p-1 bg-red c-white ta-c">LEFT</div>
+                <!-- Elemento con la clase mx-3 my-3 -->
+                <div class="p-1 bg-red c-white ta-c mx-3 my-3">ELEMENTO</div>
+                <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+            </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+    </pre>
+</div>
+        <div class="alerta-negra">
+            La combinación de todas las clases de margen son muchas pero todas pueden asociarse 
+            para encontrar el resultado esperado, la clases vistas en los primeros apartados como 
+            las últimas mencionadas pueden utilizarse juntas.
+        </div>
+
+        <h3 id="t11">Margenes en X e Y En Tamaños Diferentes</h3>
+        <p>
+            En el ejemplo que sigue se aplicará un margen arriba y abajo en dispositivos grandes 
+            de 3em, en medianos de 2em, en chicos de 1em y en extra chicos de 0em. También se agregará 
+            un margen a la derecha y a la izquierda de 0em en dispositivos grandes, 1em en dispositivos medianos,
+            2em en dispositovos chicos y 3em en dispositivos extra chicos.
+        </p>
+
+        <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+            <div class="d-flex just-center">
+                <div class="p-1 bg-red c-white ta-c">LEFT</div>
+             
+                <div class="p-1 bg-red c-white ta-c my-3 my-m-2 my-s-1 my-xs-0 mx-0 mx-m-1 mx-s-2 mx-xs-3">ELEMENTO</div>
+                <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+            </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+
+<div class="codigo">
+    <pre id="c10" class="cod-html">
+       <div class="p-1 bg-red c-white ta-c mt-3">TOP</div>
+            <div class="d-flex just-center">
+                <div class="p-1 bg-red c-white ta-c">LEFT</div>
+                <!-- Elemento con la clase my-3 my-m-2 my-s-1 my-xs-0 mx-0 mx-m-1 mx-s-2 mx-xs-3-->
+                <div class="p-1 bg-red c-white ta-c my-3 my-m-2 my-s-1 my-xs-0 mx-0 mx-m-1 mx-s-2 mx-xs-3">ELEMENTO</div>
+                <div class="p-1 bg-red c-white ta-c">RIGHT</div>
+            </div>
+        <div class="p-1 bg-red c-white ta-c">BOTTON</div>
+    </pre>
+</div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t12">Alias Para Margenes</h2>
+
+            <table class="table-dark vertical-border table-sm table-bor-grey mt-3 selector">
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>Español</th>
+                        <th>Inglés</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>L</td>
+                        <td>
+                            <div class="lista-doc m-0">
+                                <ul>
+                                    <li>m-[0-15]</li>
+                                    <li>mi-[0-15]</li>
+                                    <li>md-[0-15]</li>
+                                    <li>mar-[0-15]</li>
+                                    <li>mab-[0-15]</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="lista-doc m-0">
+                                <ul>
+                                    <li>m-[0-15]</li>
+                                    <li>ml-[0-15]</li>
+                                    <li>mr-[0-15]</li>
+                                    <li>mt-[0-15]</li>
+                                    <li>mb-[0-15]</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>
+                            <div class="lista-doc m-0">
+                                <ul>
+                                    <li>m-m-[0-15]</li>
+                                    <li>mi-m-[0-15]</li>
+                                    <li>md-m-[0-15]</li>
+                                    <li>mar-m-[0-15]</li>
+                                    <li>mab-m-[0-15]</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="lista-doc m-0">
+                                <ul>
+                                    <li>m-m-[0-15]</li>
+                                    <li>ml-m-[0-15]</li>
+                                    <li>mr-m-[0-15]</li>
+                                    <li>mt-m-[0-15]</li>
+                                    <li>mb-m-[0-15]</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>
+                            <div class="lista-doc m-0">
+                                <ul>
+                                    <li>m-s-[0-15]</li>
+                                    <li>mi-s-[0-15]</li>
+                                    <li>md-s-[0-15]</li>
+                                    <li>mar-s-[0-15]</li>
+                                    <li>mab-s-[0-15]</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="lista-doc m-0">
+                                <ul>
+                                    <li>m-s-[0-15]</li>
+                                    <li>ml-s-[0-15]</li>
+                                    <li>mr-s-[0-15]</li>
+                                    <li>mt-s-[0-15]</li>
+                                    <li>mb-s-[0-15]</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>XS</td>
+                        <td>
+                            <div class="lista-doc m-0">
+                                <ul>
+                                    <li>m-xs-[0-15]</li>
+                                    <li>mi-xs-[0-15]</li>
+                                    <li>md-xs-[0-15]</li>
+                                    <li>mar-xs-[0-15]</li>
+                                    <li>mab-xs-[0-15]</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="lista-doc m-0">
+                                <ul>
+                                    <li>m-xs-[0-15]</li>
+                                    <li>ml-xs-[0-15]</li>
+                                    <li>mr-xs-[0-15]</li>
+                                    <li>mt-xs-[0-15]</li>
+                                    <li>mb-xs-[0-15]</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mt-3 alerta-negra">
+                En la tabla anterior sólo se tienen en cuenta las clases que difieren y que cumplen las mismas funciones
+                las que se nombran igual en ambos idiomas no se mencionan.
+            </div>
+        </article>
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="guia-pagina">
+        <ul>
+            <li><a href="#t1">Margin</a></li>
+            <li><a href="#t2">Margin General</a></li>
+            <li><a href="#t3">Margin Top</a></li>
+            <li><a href="#t4">Margin Right</a></li>
+            <li><a href="#t5">Margin Left</a></li>
+            <li><a href="#t6">Margin Botton</a></li>
+            <li><a href="#t7">Especializado</a></li>
+            <li><a href="#t8">Combinados</a></li>
+            <li><a href="#t9">Direccionados</a></li>
+            <li><a href="#t10">Margenes X e Y</a></li>
+            <li><a href="#t11">X e Y Tamaños</a></li>
+            <li><a href="#t12">Alias</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Margin"
+        var idMenu = "#m3"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>

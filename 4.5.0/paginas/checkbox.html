@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+    
+    <meta name="description" content="Checkbox modificados para correcta visualización de este elemento.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Checkbox</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Checkbox</h1>
+            <p>
+                Elemento de html que permite seleccionar una o más opciones de varias posibles
+                tildando las opciones seleccionada. Bodystyle provee un conjunto de estilos que permiten
+                mostrar a estos elementos con cierto formato y mejorar la experiencia del usuario.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Checkbox Group</h2>
+            <p class="mb-3">
+                La forma en la que se podrán aplicar los estilos a este elemento es a través 
+                de un contenedor que envuelva al elemento
+            </p>
+
+             <div class="check-radio-grupo">
+                <input id="ck" type="checkbox" class="checkbox">
+                <label for="ck" class="cb-azul">Acepta los terminos de licencia</label>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <div class="check-radio-grupo">
+        <input id="ck" type="checkbox" class="checkbox">
+        <label for="ck" class="cb-azul">Acepta los terminos de licencia</label>
+    </div>
+</pre>
+</div>
+
+            <div class="alerta-negra my-3">
+                Como se puede ver en el ejemplo hay un contenedor padre con la clase 
+                <span class="badge badge-red">.check-radio-grupo</span> que envuelve 
+                a un label con la clace <span class="badge badge-red">.cd-azul</span> 
+                y a un input del tipo checkbox con la clase <span class="badge badge-red">checkbox</span>.
+            </div>
+            <h3 id="t3">Colores</h3>
+            <p>
+                La librería dispone de varios colores para este elemento determinado por las necesidades del 
+                desarrollador en un momento determinado.
+            </p>
+
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="check-radio-grupo cxs-12 cs-6 cm-4 cl-3">
+                        <input id="ck-azul" type="checkbox" class="checkbox">
+                        <label for="ck-azul" class="cb-azul">Azul</label>
+                    </div>
+                    <div class="check-radio-grupo cxs-12 cs-6 cm-4 cl-3">
+                        <input id="ck-rojo" type="checkbox" class="checkbox">
+                        <label for="ck-rojo" class="cb-rojo">Rojo</label>
+                    </div>
+                    <div class="check-radio-grupo cxs-12 cs-6 cm-4 cl-3">
+                        <input id="ck-verde" type="checkbox" class="checkbox">
+                        <label for="ck-verde" class="cb-verde">Verde</label>
+                    </div>
+                    <div class="check-radio-grupo cxs-12 cs-6 cm-4 cl-3">
+                        <input id="ck-gris" type="checkbox" class="checkbox">
+                        <label for="ck-gris" class="cb-gris">Gris</label>
+                    </div>
+                    <div class="check-radio-grupo cxs-12 cs-6 cm-4 cl-3">
+                        <input id="ck-blanco" type="checkbox" class="checkbox">
+                        <label for="ck-blanco" class="cb-blanco">Blanco</label>
+                    </div>
+                    <div class="check-radio-grupo cxs-12 cs-6 cm-4 cl-3">
+                        <input id="ck-negro" type="checkbox" class="checkbox">
+                        <label for="ck-negro" class="cb-negro">Negro</label>
+                    </div>
+                    <div class="check-radio-grupo cxs-12 cs-6 cm-4 cl-3 desactivado">
+                        <input id="ck-desac" type="checkbox" class="checkbox">
+                        <label for="ck-desac" class="cb-negro ">Desactivado</label>
+                    </div>
+                </div>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="container mt-3">
+        <div class="row">
+            <div class="check-radio-grupo cxs-12 cs-6 cm-4 cl-3">
+                <input id="ck-azul" type="checkbox" class="checkbox">
+                <label for="ck-azul" class="cb-azul">Azul</label>
+            </div>
+            <div class="check-radio-grupo cxs-12 cs-6 cm-4 cl-3">
+                <input id="ck-rojo" type="checkbox" class="checkbox">
+                <label for="ck-rojo" class="cb-rojo">Rojo</label>
+            </div>
+            <div class="check-radio-grupo cxs-12 cs-6 cm-4 cl-3">
+                <input id="ck-verde" type="checkbox" class="checkbox">
+                <label for="ck-verde" class="cb-verde">Verde</label>
+            </div>
+            <div class="check-radio-grupo cxs-12 cs-6 cm-4 cl-3">
+                <input id="ck-gris" type="checkbox" class="checkbox">
+                <label for="ck-gris" class="cb-gris">Gris</label>
+            </div>
+            <div class="check-radio-grupo cxs-12 cs-6 cm-4 cl-3">
+                <input id="ck-blanco" type="checkbox" class="checkbox">
+                <label for="ck-blanco" class="cb-blanco">Blanco</label>
+            </div>
+            <div class="check-radio-grupo cxs-12 cs-6 cm-4 cl-3">
+                <input id="ck-negro" type="checkbox" class="checkbox">
+                <label for="ck-negro" class="cb-negro">Negro</label>
+            </div>
+            <!-- Check box desactivado, no funciona hasta que se remueva la clase .desactivado-->
+            <div class="check-radio-grupo cxs-12 cs-6 cm-4 cl-3 desactivado">
+                <input id="ck-desac" type="checkbox" class="checkbox">
+                <label for="ck-desac" class="cb-negro ">Desactivado</label>
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <article class="articulo">
+            <h2 id="t4">Ejemplo Formulario</h2>
+
+            <p>
+                Ahora un ejemplo de un formulario utilizando el checkbox.
+            </p>
+
+            <div class="container mt-3 p-2 bg-black bor-rad-10">
+                <h3 class="m-0 mb-3 c-blanco">Formulario de Registro</h3>
+                <div class="row">
+                    <div class="input-g cxs-12 cl-6">
+                        <div class="grupo-sm">
+                            <span class="span-grupo">Nombre</span>
+                            <input type="text" name="nombre">
+                        </div>
+                    </div>
+                    <div class="input-g cxs-12 cl-6">
+                        <div class="grupo-sm">
+                            <span class="span-grupo">Apellido</span>
+                            <input type="text" name="apellido">
+                        </div>
+                    </div>
+                     <div class="input-g cxs-12 cl-12">
+                        <div class="grupo-sm">
+                            <span class="span-grupo">@</span>
+                            <input type="email" name="email">
+                            <input type="submit" value="verificar" name="verificar" class="btn c-grey">
+                        </div>
+                    </div>
+                    <div class="input-g cxs-12 cl-6">
+                        <div class="grupo-sm">
+                            <span class="span-grupo">Password</span>
+                            <input type="password" name="password">
+                        </div>
+                    </div>
+                    <div class="input-g cxs-12 cl-6">
+                        <div class="grupo-sm">
+                            <span class="span-grupo">Repetir</span>
+                            <input type="password" name="repetir">
+                        </div>
+                    </div>
+
+                    <div class="cl-12 d-flex just-end mt-3">
+                        <div class="check-radio-grupo">
+                            <input id="ck-terminos" type="checkbox" class="checkbox">
+                            <label for="ck-terminos" class="cb-blanco">Acepta los Términos</label>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="d-flex just-end mt-3">
+                    <input type="submit" class="btn-sm bg-green bor-pill">
+                </div>
+            </div>
+
+<div class="codigo">
+    <pre id="c3" class="cod-html">
+        <div class="container mt-3 p-2 bg-black bor-rad-10">
+            <div class="row">
+                <div class="input-g cxs-12 cl-6">
+                    <div class="grupo-sm">
+                        <span class="span-grupo">Nombre</span>
+                        <input type="text" name="nombre">
+                    </div>
+                </div>
+                <div class="input-g cxs-12 cl-6">
+                    <div class="grupo-sm">
+                        <span class="span-grupo">Apellido</span>
+                        <input type="text" name="apellido">
+                    </div>
+                </div>
+                 <div class="input-g cxs-12 cl-12">
+                    <div class="grupo-sm">
+                        <span class="span-grupo">@</span>
+                        <input type="email" name="email">
+                        <input type="submit" value="verificar" name="verificar" class="btn c-grey">
+                    </div>
+                </div>
+                <div class="input-g cxs-12 cl-6">
+                    <div class="grupo-sm">
+                        <span class="span-grupo">Password</span>
+                        <input type="password" name="password">
+                    </div>
+                </div>
+                <div class="input-g cxs-12 cl-6">
+                    <div class="grupo-sm">
+                        <span class="span-grupo">Repetir</span>
+                        <input type="password" name="repetir">
+                    </div>
+                </div>
+                <div class="cl-12 d-flex just-end mt-3">
+                    <div class="check-radio-grupo">
+                        <input id="ck-terminos" type="checkbox" class="checkbox">
+                        <label for="ck-terminos" class="cb-blanco">Acepta los Términos</label>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex just-end mt-3">
+                <input type="submit" class="btn-sm bg-green bor-pill">
+            </div>
+        </div>
+    </pre>
+</div>
+
+        <div class="alerta-negra mt-3">
+            Este formulario fué realizado completamente con clases de la librería, todos los 
+            estilos está documentados en las secciones correspondientes a esta documentación. <br>
+            Se recomienda al lector ver: <a href="input.html" class="link tips-ele" 
+            data-tips="Documentación de los estilos de Inputs">Input</a>, <a href="grid.html" class="link tips-ele"
+            data-tips="Documentación de la grilla">Grilla</a>.
+        </div>
+
+        </article>
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="guia-pagina">
+        <ul>
+            <li><a href="#t1">Checkbox</a></li>
+            <li><a href="#t2">Checkbox Group</a></li>
+            <li><a href="#t3">Colores</a></li>
+            <li><a href="#t4">Ejemplos</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Checkbox"
+        var idMenu = "#m4"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../logo.ico" type="image/x-icon">
+
+    <meta name="description" content="Elementos que acompañan al texto para resaltar cuestiones importantes.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Badges</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Badges</h1>
+            <p>
+                Los badges son elementos muy utilizados para resaltar texto, para anunciar alguna novedad y que le llame la 
+                atención a las personas que visitan la página. <br>
+                Dependiendo la función que se requiera va a estar coloreados de diferentes colores.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Badges en los párrafos</h2>
+            <p>
+                A lo largo de esta documentación se utilizó este recurso para resaltar texto
+                en diferentes partes y se los asoción a otros elementos dinámicos que permiten más conocimiento 
+                acerca de lo referenciado al usuario que visita la página. 
+            </p>
+
+            <div class="container mar-3">
+                <p>
+                    Lorem ipsum, dolor sit amet <span class="badge badge-grey tips-ele"
+                    data-tips="Esto es un badge gris" data-pos="top">consectetur adipisicing</span> elit. Dicta, dolores quo? At, 
+                    voluptate mollitia veniam sapiente quo pariatur quaerat voluptates aliquid deserunt ea eos, 
+                    voluptatibus exercitationem<span class="badge badge-red tips-ele"
+                    data-tips="Esto es un badge rojo">dolore ducimus</span>  repellendus maxime!
+                </p>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <div class="container mar-3">
+        <p>
+            Lorem ipsum, dolor sit amet <span class="badge badge-grey tips-ele"
+            data-tips="Esto es un badge gris" data-pos="top">consectetur adipisicing</span> elit. Dicta, dolores quo? At, 
+            voluptate mollitia veniam sapiente quo pariatur quaerat voluptates aliquid deserunt ea eos, 
+            voluptatibus exercitationem<span class="badge badge-red tips-ele"
+            data-tips="Esto es un badge rojo">dolore ducimus</span>  repellendus maxime!
+        </p>
+    </div>
+</pre>
+</div>
+        <div class="alert-black">
+            Las clases utilizadas para resaltar el texto de esta menera son <span class="badge badge-red">.badge .badge-[color]</span> siendo color los que dispone bodystyle 
+                para definir estos elementos.       
+        </div>
+
+
+        <div class="lista-doc mar-1">
+            <ul>
+                <li><span class="badge badge-white">BLANCO</span></li>
+                 <li><span class="badge badge-black">NEGRO</span></li>
+                 <li><span class="badge badge-grey">GRIS</span></li>
+                 <li><span class="badge badge-red">ROJO</span></li>
+                 <li><span class="badge badge-blue">AZUL</span></li>
+                 <li><span class="badge badge-green">VERDE</span></li>
+            </ul>
+        </div>
+
+
+    <div class="codigo">
+        <pre class="cod-html" id="c2">
+        <div class="lista-doc mar-1">
+            <ul>
+                <li><span class="badge badge-white">BLANCO</span></li>
+                 <li><span class="badge badge-black">NEGRO</span></li>
+                 <li><span class="badge badge-grey">GRIS</span></li>
+                 <li><span class="badge badge-red">ROJO</span></li>
+                 <li><span class="badge badge-blue">AZUL</span></li>
+                 <li><span class="badge badge-green">VERDE</span></li>
+            </ul>
+        </div>
+        </pre>
+    </div>
+
+            <h3 id="t3">Alias en inglés</h3>
+            <p>Desde la <a href="https://github.com/FedeManzano/bodystyle" class="link tips-ele"
+                data-tips="<i class='fa-brands fa-github'>&nbsp;</i> Repositorio de <span class='badge badge-red'>Bodystyle</span>">Versión 4.0.0</a> se migraron algunas clases al idioma inglés siendo funcionales en ambos idiomas.</p>
+            
+            <div class="container mar-3">
+                <table class="table-dark vertical-border table-sm table-bor-grey">
+                    <thead>
+                        <tr>
+                            <th>Español</th>
+                            <th>Inglés</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>badge-rojo</td>
+                            <td>badge-red</td>
+                            <td><span class="badge badge-red">Ejemplo</span></td>
+                        </tr>
+                        <tr>
+                            <td>badge-verde</td>
+                            <td>badge-green</td>
+                            <td><span class="badge badge-green">Ejemplo</span></td>
+                        </tr>
+                        <tr>
+                            <td>badge-negro</td>
+                            <td>badge-black</td>
+                            <td><span class="badge badge-black">Ejemplo</span></td>
+                        </tr>
+                        <tr>
+                            <td>badge-blanco</td>
+                            <td>badge-white</td>
+                            <td><span class="badge badge-white">Ejemplo</span></td>
+                        </tr>
+                        <tr>
+                            <td>badge-azul</td>
+                            <td>badge-blue</td>
+                            <td><span class="badge badge-blue">Ejemplo</span></td>
+                        </tr>
+                        <tr>
+                            <td>badge-gris</td>
+                            <td>badge-grey</td>
+                            <td><span class="badge badge-grey">Ejemplo</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="guia-pagina">
+        <ul>
+            <li><a href="#t1">Badges</a></li>
+            <li><a href="#t2">Badges Párrafos</a></li>
+            <li><a href="#t3">Alias en Inglés</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Badges"
+        var idMenu = "#m2"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>

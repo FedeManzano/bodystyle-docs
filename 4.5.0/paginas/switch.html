@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Swich es un elemento binario que permite tomar decisiones dentro de DOM y actuar en consecuencia.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Switch</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Switch</h1>
+            <p>
+                Elemento Html que posee dos estados ON/OFF permite definir que hacer en función de una desición booleana
+                que permite tomar caminos diferentes en función de la selección del usuario.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Muestra del Switch</h2>
+            <p>
+                En este apartado se muestra un ejemplo de un Switch en un determinado color.
+            </p>
+
+            <div class="switch-grupo mt-3">
+                <input id="sw" type="checkbox" name="sw_1" >
+                <label for="sw" class="switch-rojo"></label>
+            </div> 
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <div class="switch-grupo mt-3">
+        <input id="sw" type="checkbox" name="sw_1" >
+        <label for="sw" class="switch-rojo"></label>
+    </div> 
+</pre>
+</div>
+
+            <div class="alerta-negra">
+                Para el funcionamiento de este elemento es necesario envolver a todo el conjunto en u div 
+                con la clase <span class="badge badge-red">.switch-grupo</span> y luego, dentro del div contenedor 
+                agregamos input del tipo <span class="badge badge-grey tips-ele" 
+                data-tips="Uno de los tipos de input que posee html.">checkbox</span>, luego agregar un label 
+                con el atributo for = (id del input checkbox).
+            </div>
+            <h3 id="t3">Colores</h3>
+            <p>
+                La paleta de colores disposibles por la librería.
+            </p>
+
+            <div class="container mt-3">
+
+                <div class="row">
+                    <div class="switch-grupo cs-4 cm-1">
+                        <input id="sw_rojo" type="checkbox" name="sw_2" >
+                        <label for="sw_rojo" class="switch-rojo"></label>
+                    </div>
+                    <div class="switch-grupo cs-4 cm-1">
+                        <input id="sw_azul" type="checkbox" name="sw_3" >
+                        <label for="sw_azul" class="switch-azul"></label>
+                    </div>
+                    <div class="switch-grupo cs-4 cm-1">
+                        <input id="sw_verde" type="checkbox" name="sw_4" >
+                        <label for="sw_verde" class="switch-verde"></label>
+                    </div>
+                    <div class="switch-grupo cs-4 cm-1">
+                        <input id="sw_negro" type="checkbox" name="sw_5" >
+                        <label for="sw_negro" class="switch-negro"></label>
+                    </div>
+                </div>
+            </div>
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="container mt-3">
+        <div class="row">
+            <div class="switch-grupo cs-4 cm-1">
+                <input id="sw_rojo" type="checkbox" name="sw_2" >
+                <label for="sw_rojo" class="switch-rojo"></label>
+            </div>
+            <div class="switch-grupo cs-4 cm-1">
+                <input id="sw_azul" type="checkbox" name="sw_3" >
+                <label for="sw_azul" class="switch-azul"></label>
+            </div>
+            <div class="switch-grupo cs-4 cm-1">
+                <input id="sw_verde" type="checkbox" name="sw_4" >
+                <label for="sw_verde" class="switch-verde"></label>
+            </div>
+            <div class="switch-grupo cs-4 cm-1">
+                <input id="sw_negro" type="checkbox" name="sw_5" >
+                <label for="sw_negro" class="switch-negro"></label>
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="guia-pagina">
+        <ul>
+            <li><a href="#t1">Switch</a></li>
+            <li><a href="#t2">Muestra</a></li>
+            <li><a href="#t3">Colores</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Switch"
+        var idMenu = "#m4"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>

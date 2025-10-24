@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Selector de contenido dinámico a través de solapas selectoras de contenido.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Tabs</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Tabs</h1>
+            <p>
+                Elemento dinámico que permite a través de las solapas definidas por el usuario 
+                seleccionar el contenido a visualizar. La librería contiene un conjunto de clases 
+                que permiten definir este elemento tan utilizado en el desarrollo web. <br>
+                Es importante aclarar que es uno de los elementos con más funciones, lo cual implica 
+                que hay que utilizar muchas de las clases utilitarias y de alineamiento de la librería, de esta forma 
+                se obtienen resultados óptimos.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Inicialización del Tabs</h2>
+            <p>
+                Lo primero como todos los módulos de JavaScript de la librería es necesario disponer 
+                en nuestro proyecto el archivo <span class="badge badge-gris">bodystyle.min.js</span>
+                de esta forma tendremos a disposición la lógica para manejar este elemento.
+            </p>
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <!--Agregar antes de la etiqueta de cierre del body -->
+    <!--DESCOMENTAR LA LINEA DE ABAJO-->
+    <!--<script  src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>-->
+</pre>
+</div>
+
+            <div class="alerta-negra mb-3">
+                Si no quieren agregarlo a través de su CDN pueden descargargar el archivo a través de NPM o 
+                la descarga directa la cual la van a encontrar al inicio de esta documentación <a href="get_started.html" class="link">Get Started</a>.
+            </div>
+
+            <p>
+                Luego, es necesario inicializar el elemento, para ello es necesario darle un <span class="badge badge-red com-trigger"
+                data-info="Un selector de ID en CSS es una herramienta para seleccionar y aplicar estilos a un único elemento en una página web utilizando su atributo id">id</span> al tab único utilizado 
+                como <span class="badge badge-gris">contexto</span> que va a permitir gestionar la lógica del elemento.
+            </p>
+
+<div class="codigo">
+    <pre id="c2" class="cod-js">
+    // CDN : https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js
+
+    // 1 OPCIÓN ESTÁTICA
+    // ------------------
+
+    // Inicializa el elemento
+    // cuando estos están dispuestos de manera estática dentro del DOM
+    /**
+     * CUATRO PARÁMETROS DE LOS CUALES EL PRIMERO ES OBLIGATORIO 
+     * contexto: ID que se utiliza para definir el contexto
+     * colorFuente: Color del texto del tab (Estilos de texto)
+     * colorFondo: Color del fondo del tab (Clases colores)
+     * colorBorde: Borde selector (Color de fondo)
+     */
+    BS.TabInit().iniciarBorde({contexto: "#ta",colorFuente: "c-white", colorFondo: "bg-black", colorBorde: "fd-blanco"})
+    
+    /****************************************************************************/
+
+    // 2 OPCIÓN DINÁMICA
+    // -----------------   
+
+    /*
+        En proyectos donde se tabaja a través de injección de elementos a través 
+        de JavaScript de manera dinámica, y el elemento que se estudia en esta sección se 
+        ingresa de esta manera, es necesario aplicar un retraso en la inicialización del 
+        módulo con el siguiente codigo.
+    */
+
+    //Si los elementos que conforman esta funcionalidad son dinámicos 
+    // Agregados a través de JS 
+    window.onload = () => {
+        setTimeout( () => {
+            BS.TabInit().iniciarBorde({contexto: "#ta",colorFuente: "c-white", colorFondo: "bg-black", colorBorde: "fd-blanco"})
+        }, 100); 
+    }
+    </pre>
+</div>
+
+            <h3 id="t3">Muestra Default</h3>
+            <p class="mb-3">
+                Ahora veremos un ejemplo por default de como definir el elemento tab poder tener una primera apreciación. <br>
+                El ID selecionado va a ser <span class="badge badge-red">#tab1</span>.
+            </p>
+            <div id="ta1">
+                <div class="tab-borde">
+                    <div class="op-tab-borde">
+                        <ul>
+                            <label data-target="#inicio">Inicio</label>
+                            <label data-target="#servicios">Servicios</label>
+                            <label data-target="#galeria">Galeria</label>
+                            <label data-target="#porfolio">Porfolio</label>
+                        </ul>
+                    </div>
+                    <div id="inicio" class="contenido-tab p-1 d-flex just-center ali-center">
+                        <p>Hola soy el inicio del tab!!</p>
+                    </div>
+                    <div id="servicios" class="contenido-tab p-1 d-flex just-center ali-center">
+                        <p>Hola soy los servicios del tab!!</p>
+                    </div>
+                    <div id="galeria" class="contenido-tab p-1 d-flex just-center ali-center">
+                        <p>Hola soy la galeria del tab!!</p>
+                    </div>
+                    <div id="porfolio" class="contenido-tab p-1 d-flex just-center ali-center">
+                        <p>Hola soy el porfolio del tab!!</p>
+                    </div>
+                </div>
+            </div>
+            
+
+<div class="codigo">
+<pre class="cod-html" id="c3">
+    <div id="tab1">
+        <div class="tab-borde">
+            <div class="op-tab-borde">
+                <ul>
+                    <label data-target="#inicio">Inicio</label>
+                    <label data-target="#servicios">Servicios</label>
+                    <label data-target="#galeria">Galeria</label>
+                    <label data-target="#porfolio">Porfolio</label>
+                </ul>
+            </div>
+            <div id="inicio" class="contenido-tab p-1 d-flex just-center ali-center">
+                <p>Hola soy el inicio del tab!!</p>
+            </div>
+            <div id="servicios" class="contenido-tab p-1 d-flex just-center ali-center">
+                <p>Hola soy los servicios del tab!!</p>
+            </div>
+            <div id="galeria" class="contenido-tab p-1 d-flex just-center ali-center">
+                <p>Hola soy la galeria del tab!!</p>
+            </div>
+            <div id="porfolio" class="contenido-tab p-1 d-flex just-center ali-center">
+                <p>Hola soy el porfolio del tab!!</p>
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+        <div class="alerta-negra">
+            Notese que cada opción del tab (etiquetas label) tienen un atributo <span class="badge badge-black">data-target</span>
+            que apunta al contenido que pretende mostrar, por esta razón estos dos elementos (contenido y opción están enlazados)
+            de esta forma se puede establecer la conexión, es muy importante que el <span class="badge badge-black">data-target</span> 
+            esté igualado al #idContenido, no olvidarse el numeral.
+        </div>
+       
+<div class="codigo">
+    <pre id="c4" class="cod-js">
+        // Inicialización del ejemplo 
+        BS.TabInit().iniciarBorde({contexto: "#tab1"})
+    </pre>
+</div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t4">Tab Modificado</h2>
+            <p class="mb-3">
+                Ahora vamos a ver un ejemplo un poco más complejo con el tab modificado por los parámetros 
+                de ingreso de la función de iniciación.
+            </p>
+
+            <div id="ta2">
+                <div class="tab-borde">
+                    <div class="op-tab-borde">
+                        <ul>
+                            <label data-target="#inicio2">Inicio</label>
+                            <label data-target="#servicios2">Servicios</label>
+                            <label data-target="#galeria2">Galeria</label>
+                            <label data-target="#porfolio2">Porfolio</label>
+                        </ul>
+                    </div>
+                    <div id="inicio2" class="contenido-tab p-1 d-flex just-center ali-center bg-black">
+                        <p>Hola soy el inicio del tab!!</p>
+                    </div>
+                    <div id="servicios2" class="contenido-tab p-1 d-flex just-center ali-center bg-black">
+                        <p>Hola soy los servicios del tab!!</p>
+                    </div>
+                    <div id="galeria2" class="contenido-tab p-1 d-flex just-center ali-center bg-black">
+                        <p>Hola soy la galeria del tab!!</p>
+                    </div>
+                    <div id="porfolio2" class="contenido-tab p-1 d-flex just-center ali-center bg-black">
+                        <p>Hola soy el porfolio del tab!!</p>
+                    </div>
+                </div>
+            </div>
+<div class="codigo">
+    <pre id="c5" class="cod-html">
+        <div id="tab2">
+            <div class="tab-borde">
+                <div class="op-tab-borde">
+                    <ul>
+                        <label data-target="#inicio2">Inicio</label>
+                        <label data-target="#servicios2">Servicios</label>
+                        <label data-target="#galeria2">Galeria</label>
+                        <label data-target="#porfolio2">Porfolio</label>
+                    </ul>
+                </div>
+                <div id="inicio2" class="contenido-tab p-1 d-flex just-center ali-center bg-black">
+                    <p>Hola soy el inicio del tab!!</p>
+                </div>
+                <div id="servicios2" class="contenido-tab p-1 d-flex just-center ali-center bg-black">
+                    <p>Hola soy los servicios del tab!!</p>
+                </div>
+                <div id="galeria2" class="contenido-tab p-1 d-flex just-center ali-center bg-black">
+                    <p>Hola soy la galeria del tab!!</p>
+                </div>
+                <div id="porfolio2" class="contenido-tab p-1 d-flex just-center ali-center bg-black">
+                    <p>Hola soy el porfolio del tab!!</p>
+                </div>
+            </div>
+        </div>
+    </pre>
+</div>
+        <div class="alerta-negra">
+            Como se puede observar pra conseguir este resultado se utilizaron las clases de <a href="bordes.html" class="link">bordes</a> 
+            de la librería, de <a href="colores.html" class="link">colores</a>, de <a href="padding.html" class="link">padding</a>
+            y <a href="flexbox.html" class="link">flexbox</a>.
+        </div>
+
+<div class="codigo">
+    <pre id="c6" class="cod-js">
+        // Inicialización del elemento con las clases de Bodystyle
+        BS.TabInit().iniciarBorde({contexto: "#tab2",colorFuente: "c-white", colorFondo: "bg-black", colorBorde: "fd-blanco"})
+    </pre>
+</div>
+
+        <p class="mb-3">
+            Ahora vamos a ver un ejemplo similar per más personalizado, para luego ver un ejemplo más complejo.
+        </p>
+
+        <div id="ta3">
+            <div class="tab-borde">
+                <div class="op-tab-borde">
+                    <ul>
+                        <label data-target="#inicio3">Inicio</label>
+                        <label data-target="#servicios3">Servicios</label>
+                        <label data-target="#galeria3">Galeria</label>
+                        <label data-target="#porfolio3">Porfolio</label>
+                    </ul>
+                </div>
+                <div id="inicio3" class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n">
+                    <p>Hola soy el inicio del tab!!</p>
+                </div>
+                <div id="servicios3" class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n">
+                    <p>Hola soy los servicios del tab!!</p>
+                </div>
+                <div id="galeria3" class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n">
+                    <p>Hola soy la galeria del tab!!</p>
+                </div>
+                <div id="porfolio3" class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n">
+                    <p>Hola soy el porfolio del tab!!</p>
+                </div>
+            </div>
+        </div>
+
+<div class="codigo">
+    <pre  id="c7" class="cod-html">
+        <div id="tab3">
+            <div class="tab-borde">
+                <div class="op-tab-borde">
+                    <ul>
+                        <label data-target="#inicio3">Inicio</label>
+                        <label data-target="#servicios3">Servicios</label>
+                        <label data-target="#galeria3">Galeria</label>
+                        <label data-target="#porfolio3">Porfolio</label>
+                    </ul>
+                </div>
+                <div id="inicio3" class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n">
+                    <p>Hola soy el inicio del tab!!</p>
+                </div>
+                <div id="servicios3" class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n">
+                    <p>Hola soy los servicios del tab!!</p>
+                </div>
+                <div id="galeria3" class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n">
+                    <p>Hola soy la galeria del tab!!</p>
+                </div>
+                <div id="porfolio3" class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n">
+                    <p>Hola soy el porfolio del tab!!</p>
+                </div>
+            </div>
+        </div>
+    </pre>
+</div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t5">Contenido Complejo</h2>
+            <p>
+                Ahora vamos a inicializar tabs con contenidos mas complejos lo cual hace menos manejable el código.
+            </p>
+
+            <h3 id="t6">Login Registro</h3>
+            <div id="ta4">
+                <div class="tab-borde">
+                    <div class="op-tab-borde">
+                        <ul>
+                            <label data-target="#login">Login</label>
+                            <label data-target="#registro">Registro</label>
+                        </ul>
+                    </div>
+                    
+                    <div id="login" class="contenido-tab p-1 d-flex just-center  ali-center ali-m-stretch fd-gris-o-3">
+                        <div  class="d-flex just-center flex-wrap">
+                            <div  class="ancho-100  bg-black p-3 bor-rad-10">
+                                <h2  class="m-0 mb-3 c-blanco">Login</h2>
+                                <div  class="flex-column">
+                                    <div  class="input-g">
+                                        <div  class="grupo">
+                                            <span  class="span-grupo bg-pink-d-1 c-blanco">Username</span>
+                                            <input  type="text" class="fd-gris-az c-white"  name="usuario"  required="">
+                                        </div>
+                                        <div  class="grupo mt-3">
+                                            <span  class="span-grupo bg-pink-d-1 c-blanco">Password</span>
+                                            <input  type="password" class="fd-gris-az c-white"  name="clave"  required="">
+                                        </div>
+                                    </div>
+                                    <div  class="d-flex just-end">
+                                        <div  class="check-radio-grupo">
+                                            <input  type="checkbox"  id="rec_login">
+                                            <label  for="rec_login"  class="cb-blanco mt-1">Recordar Clave</label>
+                                        </div>
+                                    </div>
+                                    <div  class="d-flex flex-column-reverse just-between ali-stretch mt-5 flex-wrap flex-column-reverse-s ali-stretch-s">
+                                        <div  class="btn-grupo-lg">
+                                            <input  type="submit"  name="Registrarse"  class="btn-sm fd-gris-az"  value="Registro">
+                                            <input  type="submit"  name="Ingresar"  class="btn-sm bg-pink-d-1 c-white"  value="Ingresar">
+                                        </div>
+                                    </div>
+                                    <div  class="mt-2">
+                                        <a  href="#"  class="link mt-3">Olvidó su clave</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="registro" class="contenido-tab p-1 d-flex just-center  ali-center ali-m-stretch fd-gris-o-3">
+                        <div  class="container p-3 bg-black bor-rad-10">
+                            <h2  class="m-0 mb-3 c-white">Registro de Usuario</h2>
+                            <div  class="row">
+                                <div  class="input-g cs-12 cm-6">
+                                    <div  class="grupo">
+                                        <span  class="span-grupo bg-pink-d-1 c-white">DNI</span>
+                                        <input  type="text" class="fd-gris-az c-white"  name="dni">
+                                    </div>
+                                </div>
+                                <div  class="input-g cs-12 cm-6">
+                                    <div  class="grupo">
+                                        <span  class="span-grupo bg-pink-d-1 c-white">Nombre</span>
+                                        <input  type="text" class="fd-gris-az c-white"  name="nombre">
+                                    </div>
+                                </div>
+                                <div  class="input-g cs-12 cm-6">
+                                    <div  class="grupo">
+                                        <span  class="span-grupo bg-pink-d-1 c-white">Apellido</span>
+                                        <input  type="text" class="fd-gris-az c-white"  name="apellido1">
+                                    </div>
+                                </div>
+                                <div  class="input-g cs-12 cm-6">
+                                    <div  class="grupo">
+                                        <span  class="span-grupo bg-pink-d-1 c-white">Apellido</span>
+                                        <input  type="text" class="fd-gris-az c-white" name="apellido2">
+                                    </div>
+                                </div>
+                                <div  class="input-g cs-12">
+                                <div  class="grupo">
+                                    <span  class="span-grupo bg-pink-d-1 c-white">@</span>
+                                    <input  type="email" class="fd-gris-az c-white"  name="correo">
+                                </div>
+                            </div>
+                        
+                        <div  class="input-g cs-12 cm-6">
+                            <div  class="grupo">
+                                <span  class="span-grupo bg-pink-d-1 c-white">Password</span>
+                                <input  type="password" class="fd-gris-az c-white"  name="password">
+                            </div>
+                        </div>
+                        <div  class="input-g cs-12 cm-6">
+                            <div  class="grupo">
+                                <span  class="span-grupo bg-pink-d-1 c-white">Repetir</span>
+                                <input  type="password" class="fd-gris-az c-white" name="repetir">
+                            </div>
+                        </div>
+                            </div>
+                            <div  class="d-flex just-end mt-3">
+                                <div  class="check-radio-grupo">
+                                    <input  type="checkbox"  id="terminos"  class="checkbox">
+                                    <label  for="terminos"  class="cb-blanco">Acepta los Términos</label>
+                                </div>
+                            </div>
+                            <input type="submit"  href="#"  class="btn-cover-o btn-white-o bor-pill mt-3" value="Registrar" />    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<div class="codigo">
+    <pre id="c8" class="cod-html">
+        <div id="tab4">
+            <div class="tab-borde">
+                <div class="op-tab-borde">
+                    <ul>
+                        <label data-target="#login">Login</label>
+                        <label data-target="#registro">Registro</label>
+                    </ul>
+                </div>
+        
+                <div id="login" class="contenido-tab p-1 d-flex just-center  ali-center ali-m-stretch fd-gris-o-3">
+                    <div  class="d-flex just-center flex-wrap">
+                        <div  class="ancho-100  bg-black p-3 bor-rad-10">
+                            <h2  class="m-0 mb-3 c-blanco">Login</h2>
+                            <div  class="flex-column">
+                                <div  class="input-g">
+                                    <div  class="grupo">
+                                        <span  class="span-grupo bg-pink-d-1 c-blanco">Username</span>
+                                        <input  type="text" class="fd-gris-az c-white"  name="usuario"  required="">
+                                    </div>
+                                    <div  class="grupo mt-3">
+                                        <span  class="span-grupo bg-pink-d-1 c-blanco">Password</span>
+                                        <input  type="password" class="fd-gris-az c-white"  name="clave"  required="">
+                                    </div>
+                                </div>
+                                <div  class="d-flex just-end">
+                                    <div  class="check-radio-grupo">
+                                        <input  type="checkbox"  id="rec_login">
+                                        <label  for="rec_login"  class="cb-blanco mt-1">Recordar Clave</label>
+                                    </div>
+                                </div>
+                                <div  class="d-flex flex-column-reverse just-between ali-stretch mt-5 flex-wrap flex-column-reverse-s ali-stretch-s">
+                                    <div  class="btn-grupo-lg">
+                                        <input  type="submit"  name="Registrarse"  class="btn-sm fd-gris-az"  value="Registro">
+                                        <input  type="submit"  name="Ingresar"  class="btn-sm bg-white c-black"  value="Ingresar">
+                                    </div>
+                                </div>
+                                <div  class="mt-2">
+                                    <a  href="#"  class="link mt-3">Olvidó su clave</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="registro" class="contenido-tab p-1 d-flex just-center  ali-center ali-m-stretch fd-gris-o-3">
+                    <div  class="container p-3 bg-black bor-rad-10">
+                        <h2  class="m-0 mb-3 c-white">Registro de Usuario</h2>
+                        <div  class="row">
+                            <div  class="input-g cs-12 cm-6">
+                                <div  class="grupo">
+                                    <span  class="span-grupo bg-pink-d-1 c-white">DNI</span>
+                                    <input  type="text" class="fd-gris-az"  name="dni">
+                                </div>
+                            </div>
+                            <div  class="input-g cs-12 cm-6">
+                                <div  class="grupo">
+                                    <span  class="span-grupo bg-pink-d-1 c-white">Nombre</span>
+                                    <input  type="text" class="fd-gris-az"  name="nombre">
+                                </div>
+                            </div>
+                            <div  class="input-g cs-12 cm-6">
+                                <div  class="grupo">
+                                    <span  class="span-grupo bg-pink-d-1 c-white">Apellido</span>
+                                    <input  type="text" class="fd-gris-az"  name="apellido1">
+                                </div>
+                            </div>
+                            <div  class="input-g cs-12 cm-6">
+                                <div  class="grupo">
+                                    <span  class="span-grupo bg-pink-d-1 c-white">Apellido</span>
+                                    <input  type="text" class="fd-gris-az" name="apellido2">
+                                </div>
+                            </div>
+                            <div  class="input-g cs-12">
+                            <div  class="grupo">
+                                <span  class="span-grupo bg-pink-d-1 c-white">@</span>
+                                <input  type="email" class="fd-gris-az c-white"  name="correo">
+                            </div>
+                        </div>
+                        
+                        <div  class="input-g cs-12 cm-6">
+                            <div  class="grupo">
+                                <span  class="span-grupo bg-pink-d-1 c-white">Password</span>
+                                <input  type="password" class="fd-gris-az c-white"  name="password">
+                            </div>
+                        </div>
+                        <div  class="input-g cs-12 cm-6">
+                            <div  class="grupo">
+                                <span  class="span-grupo bg-pink-d-1 c-white">Repetir</span>
+                                <input  type="password" class="fd-gris-az c-white" name="repetir">
+                            </div>
+                        </div>
+                        </div>
+                        <div  class="d-flex just-end mt-3">
+                            <div  class="check-radio-grupo">
+                                <input  type="checkbox"  id="terminos"  class="checkbox">
+                                <label  for="terminos"  class="cb-blanco">Acepta los Términos</label>
+                            </div>
+                        </div>
+                        <input type="submit"  href="#"  class="btn-cover-o btn-white-o bor-pill mt-3" value="Registrar" />    
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </pre>
+</div>
+            <h3 id="t7">Tarjetas</h3>
+
+            <div id="ta5">
+                <div class="tab-borde">
+                    <div class="op-tab-borde">
+                        <ul>
+                            <label data-target="#simples">Simples</label>
+                            <label data-target="#iconos">Iconos</label>
+                            <label data-target="#perfil">Perfil</label>
+                        </ul>
+                    </div>
+                    <div id="simples" class="contenido-tab p-1 d-flex just-around flex-wrap ali-center fd-gris-n">
+                        <div  class="card"> <!-- Comienza la tarjeta simple -->
+                            <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                                <small>Pequeña descripción</small>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                                </p> 
+                                <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                            </div><!-- FIN Tarjeta oscura -->
+                        </div>
+                        <!-- Tarjeta clara-->
+                        <div  class="card mt-s-1">
+                            <div  class="card-simple-light"> <!-- Comienzo de la tarjeta simple-->
+                                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                                <small>Pequeña descripción</small>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                                </p> 
+                                <button  href=""  class="btn-cover-sm-o btn-black-o mar-2">Subs</button>
+                            </div> <!-- FIN de la tarjeta simple-->
+                        </div>
+                        
+                    </div>
+                    <div id="iconos" class="contenido-tab p-1 pt-10 d-flex just-around ali-center flex-wrap fd-gris-n">
+                        <div  class="card">
+                            <div  class="card-perfil-dark">
+                                <div  class="image-container">
+                                    <img  src="https://media.istockphoto.com/id/1056239454/es/foto/mujer-africana-en-la-decisi%C3%B3n.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=l3fDnEUpBdib7Jbca9N4caqWMFGafab88qFXvhX5e2g="  alt="">
+                                </div>
+                                <h4>Teresa Aguilar</h4>
+                                <div  class="ta-c">
+                                    <small>Ejecutiva de Cuenta</small>
+                                </div>
+                                
+                                <div  class="divisor"></div>
+                                <div  class="ta-c">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto in perspiciatis!</p> <br>
+                                    <a  href="#"  class="link">@FedericoManzano</a>
+                                </div>
+                                <div  class="divisor"></div>
+                                <div  class="btn-group-lg mar-4">
+                                    <a  href="#"  class="btn bg-blue">Perfil</a>
+                                    <a  href="#"  class="btn bg-blue">Historial</a>
+                                    <a  href="#"  class="btn bg-blue">Desempeño</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div  class="card mar-s-15">
+                            <div  class="card-perfil-light">
+                                <div  class="image-container">
+                                    <img  src="https://media.istockphoto.com/id/1056239454/es/foto/mujer-africana-en-la-decisi%C3%B3n.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=l3fDnEUpBdib7Jbca9N4caqWMFGafab88qFXvhX5e2g="  alt="">
+                                </div>
+                                <h4>Teresa Aguilar</h4>
+                                <div  class="ta-c">
+                                    <small>Ejecutiva de Cuenta</small>
+                                </div>
+                                
+                                <div  class="divisor"></div>
+                                <div  class="ta-c">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto in perspiciatis!</p> <br>
+                                    <a  href="#"  class="link">@FedericoManzano</a>
+                                </div>
+                                <div  class="divisor"></div>
+                                <div  class="btn-group-lg mar-4">
+                                    <a  href="#"  class="btn bg-blue">Perfil</a>
+                                    <a  href="#"  class="btn bg-blue">Historial</a>
+                                    <a  href="#"  class="btn bg-blue">Desempeño</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="perfil" class="contenido-tab p-1 d-flex just-around flex-wrap ali-center fd-gris-n">
+                        <div  class="card mab-s-1">
+                            <div  class="card-icon-dark">
+                                <div  class="image-container">
+                                    <img  src="../imagenes/node.png"  alt="Node JS">
+                                </div>
+                                <div>
+                                    <h4  class="m-0">Titulo</h4>
+                                    <small>desc</small> <br>
+                                    <a  href=""  class="link">Descarga</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div  class="card">
+                            <div  class="card-icon-light">
+                                <div  class="image-container">
+                                    <img  src="../imagenes/node.png"  alt="Node JS">
+                                </div>
+                                <div>
+                                    <h4  class="m-0">Titulo</h4>
+                                    <small>desc</small> <br>
+                                    <a  href=""  class="link">Descarga</a>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+
+
+<div class="codigo">
+    <pre id="c9" class="cod-html">
+        <div id="ta5">
+            <div class="tab-borde">
+                <div class="op-tab-borde">
+                    <ul>
+                        <label data-target="#simples">Simples</label>
+                        <label data-target="#iconos">Iconos</label>
+                        <label data-target="#perfil">Perfil</label>
+                    </ul>
+                </div>
+                <div id="simples" class="contenido-tab p-1 d-flex just-around flex-wrap ali-center fd-gris-n">
+                    <div  class="card"> <!-- Comienza la tarjeta simple -->
+                        <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                            <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                            <small>Pequeña descripción</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                            </p> 
+                            <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                        </div><!-- FIN Tarjeta oscura -->
+                    </div>
+                    <div  class="card mt-s-1">
+                        <div  class="card-simple-light"> <!-- Comienzo de la tarjeta simple-->
+                            <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                            <small>Pequeña descripción</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                            </p> 
+                            <button  href=""  class="btn-cover-sm-o btn-black-o mar-2">Subs</button>
+                        </div> <!-- FIN de la tarjeta simple-->
+                    </div>
+
+                </div>
+                <div id="iconos" class="contenido-tab p-1 pt-10 d-flex just-around ali-center flex-wrap fd-gris-n">
+                    <div  class="card">
+                        <div  class="card-perfil-dark">
+                            <div  class="image-container">
+                                <img  src="https://media.istockphoto.com/id/1056239454/es/foto/mujer-africana-en-la-decisi%C3%B3n.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=l3fDnEUpBdib7Jbca9N4caqWMFGafab88qFXvhX5e2g="  alt="">
+                            </div>
+                            <h4>Teresa Aguilar</h4>
+                            <div  class="ta-c">
+                                <small>Ejecutiva de Cuenta</small>
+                            </div>
+                            <div  class="divisor"></div>
+                            <div  class="ta-c">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto in perspiciatis!</p> <br>
+                                <a  href="#"  class="link">@FedericoManzano</a>
+                            </div>
+                            <div  class="divisor"></div>
+                            <div  class="btn-group-lg mar-4">
+                                <a  href="#"  class="btn bg-blue">Perfil</a>
+                                <a  href="#"  class="btn bg-blue">Historial</a>
+                                <a  href="#"  class="btn bg-blue">Desempeño</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="card mar-s-15">
+                        <div  class="card-perfil-light">
+                            <div  class="image-container">
+                                <img  src="https://media.istockphoto.com/id/1056239454/es/foto/mujer-africana-en-la-decisi%C3%B3n.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=l3fDnEUpBdib7Jbca9N4caqWMFGafab88qFXvhX5e2g="  alt="">
+                            </div>
+                            <h4>Teresa Aguilar</h4>
+                            <div  class="ta-c">
+                                <small>Ejecutiva de Cuenta</small>
+                            </div>
+                            <div  class="divisor"></div>
+                            <div  class="ta-c">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto in perspiciatis!</p> <br>
+                                <a  href="#"  class="link">@FedericoManzano</a>
+                            </div>
+                            <div  class="divisor"></div>
+                            <div  class="btn-group-lg mar-4">
+                                <a  href="#"  class="btn bg-blue">Perfil</a>
+                                <a  href="#"  class="btn bg-blue">Historial</a>
+                                <a  href="#"  class="btn bg-blue">Desempeño</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="perfil" class="contenido-tab p-1 d-flex just-around flex-wrap ali-center fd-gris-n">
+                    <div  class="card mab-s-1">
+                        <div  class="card-icon-dark">
+                            <div  class="image-container">
+                                <img  src="../imagenes/node.png"  alt="Node JS">
+                            </div>
+                            <div>
+                                <h4  class="m-0">Titulo</h4>
+                                <small>desc</small> <br>
+                                <a  href=""  class="link">Descarga</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="card">
+                        <div  class="card-icon-light">
+                            <div  class="image-container">
+                                <img  src="../imagenes/node.png"  alt="Node JS">
+                            </div>
+                            <div>
+                                <h4  class="m-0">Titulo</h4>
+                                <small>desc</small> <br>
+                                <a  href=""  class="link">Descarga</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </pre>
+</div>
+        </article>
+
+
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="guia-pagina">
+        <ul>
+            <li><a href="#t1">Tabs</a></li>
+            <li><a href="#t2">Inicialización</a></li>
+            <li><a href="#t3">Muestra Default</a></li>
+            <li><a href="#t4">Tab Modificado</a></li>
+            <li><a href="#t5">Contenido Complejo</a></li>
+            <li><a href="#t6">Login-Refistro</a></li>
+            <li><a href="#t7">Tarjetas</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Tabs"
+        var idMenu = "#m5"
+    </script>
+    <script src="../js/docs-body.js"></script>
+
+    <script>
+        BS.TabInit().iniciarBorde({contexto: "#ta1"})
+        BS.TabInit().iniciarBorde({contexto: "#ta2",colorFuente: "c-white", colorFondo: "bg-black", colorBorde: "fd-blanco"})
+        BS.TabInit().iniciarBorde({contexto: "#ta3",colorFuente: "c-white", colorFondo: "bg-pink-d-1", colorBorde: "fd-blanco"})
+        BS.TabInit().iniciarBorde({contexto: "#ta4",colorFuente: "c-white", colorFondo: "bg-pink-d-1", colorBorde: "fd-blanco"})
+         BS.TabInit().iniciarBorde({contexto: "#ta5",colorFuente: "c-white", colorFondo: "fd-azul-ve", colorBorde: "fd-blanco"})
+    </script>
+</body>
+</html>
+

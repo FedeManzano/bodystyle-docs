@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <meta name="description" content="Las medidas de pantalla utilizadas por la librería.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Tamaños de pantalla</title>
+</head>
+<body>
+
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+
+
+    <section class="pagina nav-contenido">
+        <section class="encabezado">
+            <h1 id="t1">Tamaños de pantalla</h1>
+            <p>
+                Los tamaños de pantalla utilizados son cuatro, <span class="badge badge-gris">xs, s, m, l</span> y se aplican a 
+                cada elemento y funcionalidad provista por la librería. <br>
+                Los bordes, la grilla, las funciones de fexbox utilizan los tamaños que se detallan a continuación.
+                <div class="contenedor mar-3">
+                    <table  class="tabla-sm fd-gris-o-1 bor-rad-10 ta-c tabla-responsive borde-vertical selector">
+                    <thead>
+                        <tr>
+                            <th class="c-white">Medida</th>
+                            <th class="c-white">Desde</td>
+                            <th class="c-white">Hasta</th>
+                        </tr>
+                    </thead>
+                    <tbody class="selector">
+                        <tr>
+                            <td class="c-white">XS</td>
+                            <td class="c-white f-w-2">0px</td>
+                            <td class="c-white f-w-2">400px</td>
+                        </tr>
+                        <tr>
+                            <td class="c-white">S</td>
+                            <td class="c-white f-w-2">400px</td>
+                            <td class="c-white f-w-2">770px</td>
+                        </tr>
+                        <tr>
+                            <td class="c-white">M</td>
+                            <td class="c-white f-w-2">770px</td>
+                            <td class="c-white f-w-2">1030px</td>
+                        </tr>
+                        <tr>
+                            <td class="c-white">L</td>
+                            <td class="c-white f-w-2">1030px</td>
+                            <td class="c-white f-w-2">N</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+                
+            </p>
+        </section>
+
+        <article class="articulo">
+            <h2 id="t2">Grilla de elmentos</h2>
+            <p>
+                Si bien la grilla la vamos a ver en apartados posteriores a este documento
+                vamos a utilizarla como ejemplo para describir lo antes mencionado, invitamos al lector 
+                a achicar el tamaño de la vista del navegador para observar como se reacomodan los elementos.
+            </p>
+            <h3 class="mar-2" id="t3">Ejemplo Medidas</h3>
+            <p>
+                Si achica el tamaño de la pantalla va poder apreciar como se distribuyen los campos
+                respetando las medidas explicadas en este apartado.
+            </p>
+            <div class="fila mar-2">
+                <div class="cxs-12 cs-6 cm-4 cl-3 div-ejemplo"></div>
+                <div class="cxs-12 cs-6 cm-4 cl-3 div-ejemplo"></div>
+                <div class="cxs-12 cs-6 cm-4 cl-3 div-ejemplo"></div>
+                <div class="cxs-12 cs-6 cm-4 cl-3 div-ejemplo"></div>
+            </div>
+<h4 id="t4">Codigo Css</h4>
+<div class="codigo">
+<pre class="cod-css" id="c1">
+    .div-ejemplo {
+        padding: 20px;
+        border-color: black;
+        background-color: red;
+    }
+</pre>
+</div>
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="fila">
+        <div class="cxs-12 cs-6 cm-4 cl-3 div-ejemplo"></div>
+        <div class="cxs-12 cs-6 cm-4 cl-3 div-ejemplo"></div>
+        <div class="cxs-12 cs-6 cm-4 cl-3 div-ejemplo"></div>
+        <div class="cxs-12 cs-6 cm-4 cl-3 div-ejemplo"></div>
+    </div>
+</pre>
+</div>
+            <h3 id="t5">Modificación</h3>
+            <p>Si lo desea pude alterar estos valores desde el archivo que se encuentra en 
+                <span class="badge badge-gris">sass/globales/_variables.scss</span>
+            </p>
+<div class="codigo">
+<pre class="cod-css" id="c3">
+    // ************************************** //
+    // *********** CONFIGURACIÓN ************ //
+    // ************************************** //
+
+    $tamaños:(
+                xs: 400px,
+                s: 770px,
+                m: 1030px,
+                l: 1200px, /// Mayor 
+    );
+</pre>
+</div>
+
+        </article>
+
+        <div class="autor"></div>
+    </section>
+
+    <div class="guia-pagina">
+        <ul>
+            <li><a href="#t1">Tamaños de Pantalla</a></li>
+            <li><a href="#t2">Grilla Elementos</a></li>
+            <li><a href="#t3">Ejemplo Medidas</a></li>
+            <li><a href="#t4">Código</a></li>
+            <li><a href="#t5">Modicicación</a></li>
+        </ul>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Medidas"
+        var idMenu = "#m1"
+    </script>
+     <script src="../js/docs-body.js"></script>
+</body>
+</html>
