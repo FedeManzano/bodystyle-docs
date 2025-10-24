@@ -17,6 +17,7 @@ import $ from "jquery"
             <li><a href="texto.html">Texto</a></li>
             <li><a href="opacidad.html">Opacidad</a></li>
             <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="overflow.html">Overflow</a></li>
         </ul>
         <a  class="titulo c-blanco t-may" data-target="#m2">CSS</a>
         <ul id="m2">
