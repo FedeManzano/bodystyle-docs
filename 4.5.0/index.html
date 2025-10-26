@@ -9,98 +9,79 @@
     <meta name="description" content="Librería de estilos para el desarrollo del Front-End">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/bodystyle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-
+    <link  rel="stylesheet"  href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
+    
     <title>Bodystyle Librería de Estilos</title>
 </head>
 <body class="body">
-    <!-- Sección principal de la documentación -->
-    <section id="#pagina_principal" style="user-select: none;" class="mar-10">
-        <nav class="nav-body nav-prop">
-            <a class="boton-desplegable ocultar-solo-grandes" data-trigger="#desp"></a>
-            <p class="nav-logo logo">
-                <img src="imagenes/20191106_205049.png">
-            </p>
-            <!-- LISTA Con las opciones del menú -->
-            <ul class="lista d-flex ocultar-desde-medianos">
-                <li><a href="https://github.com/FedeManzano/bodystyle">Repositorio</a></li>
-                <li><a href="paginas/get_started.html">Docs</a></li>
-                <li><a class="tips-ele" 
-                    data-tips="Licencia:&nbsp; <span class='c-rojo'>MIT&nbsp;Copyright (c) 2020 Bodystyle</span>" 
-                    href="https://github.com/FedeManzano/bodystyle/blob/master/LICENSE">Licencia</a></li>
-            </ul>
+   
+    
+    <nav id="nav" class="bs-nav fd-trasparente bs-nav-fixed" data-target="#bs-nav-sidebar">
+        <div class="bs-nav-sm align-left-list align-right-list">
+            <label class="btn-menu ocultar-solo-grandes" ></label>
+            <label  class="logo-container" style="cursor: pointer;">
+                <img class="com-trigger" src="./logo/logo.png" alt="Logo de Bodystyle"
+                data-info="<span class='f-w-7'>Autor: </span><a target='_blank' href='https://github.com/FedeManzano' class='link'> Federico Manzano</a> <br> Estudiante de Ingeniería en Informática en la <span class='f-w-7'>Universidad Nacional de la Matanza.</span>" data-evt="click">
+            </label>
+            <div class="ocultar-desde-medianos">
+                <ul >
+                    <li><a href="./paginas/get_started.html" class="tips-ele"
+                        data-tips="Ingreso a la documentación">Docs</a></li>
+                    <li><a target="_blank" href="https://github.com/FedeManzano/bodystyle" class="com-trigger"
+                        data-info="Repositorio de la librería disponible para ser descargado y modificado.">Repositorio</a></li>
+                    <li><a href="#" class="com-trigger"
+                        data-info="<span class='f-w-7'>Licencia MIT:</span> Es una licencia de software libre muy permisiva y sencilla que permite usar, copiar, modificar, distribuir y vender software con mínimas restricciones. <br> <a target='_blank' href='https://github.com/FedeManzano/bodystyle/blob/master/LICENSE' class='link'>Ver Licencia</a>"
+                        data-evt="click">Licencia</a></li>
+                </ul>
+            </div>
             
-            <a  href="https://mega.nz/file/cQMHGSDS#kK6bvOzeLMdLy15qLuqAwYaY_j_UnDWuyVAudZCYoTw"
-                target="_blank"
-                class="m-1 ocultar-desde-x-chicos"
-                style="color: white !important">
-                <i class="fa-solid fa-download t_blanco fz-24 tips-ele" data-pos="botton" data-evt="hover"
-                data-tips="<a href='https://mega.nz/file/cQMHGSDS#kK6bvOzeLMdLy15qLuqAwYaY_j_UnDWuyVAudZCYoTw' class='link'>Descargar</a>" 
-                data-pos="top"></i>
-            </a>
-            <!--DROP para el versionado -->
-            <a  href="https://github.com/FedeManzano"
-                target="_blank"
-                class="m-1"
-                style="color: white !important">
-                <i class="fa-brands fa-github t_blanco fz-24 tips-ele" data-pos="botton" data-evt="hover"
-                data-tips="Cuenta &nbsp; <a href='https://github.com/FedeManzano' class='link'>Federico Manzano</a>" 
-                data-pos="top">&nbsp;</i>
-            </a>
-            <a  class="btn-verde-o  dropdown-toggle t-blanco p-1" 
-                data-target="#drop"  
-                style="width: 90px;">4.5.0
-            </a>
-        </nav>
-
-        <!-- CABECERA DE LA PÁGINA -->
-        <section id="cabecera_principal">
-            <div class="c-blanco">
-                <h1 class="fz-m-70 fz-110" style="border: none !important">Bodystyle</h1> 
-                <p class="fz-xs-17 fz-s-21 fz-m-29 fz-32 mar-2">Librería para el desarrollo del Front-End</p>
-                <p class="fz-sx-13 fz-m-17 fz-19 mar-2 c-gris">
-                    Elementos dinámicos construidos con CSS y JS <br>
-                    diseñados para crear sitios web dinámidos y completante <br>
-                    responsive, ajustandose a cualquier tamaño de pantalla.
-                </p>
-                <div class="d-flex flex-wrap-s just-centrada mar-5 ">
-                    <a href="paginas/get_started.html" 
-                        class="btn-cover-lg-o btn-green-o mab-s-1">GET STARTED
-                    </a>
-                    <a  href="https://github.com/FedeManzano/bodystyle"
-                        target="_blank"
-                        class="btn-cubrir-lg-o btn-white-o mi-s-0 mi-1">REPOSITORIO
-                    </a>
-                </div>
-                <div class="mar-5">
-                    <a  class="link tips-ele"
-                        href="https://github.com/FedeManzano/bodystyle"
-                        data-tips="<i class='fa-brands fa-github c-white'></i>&nbsp;v4.0.0&nbsp;<span class='c-red'>Bodystyle<span>"
-                        data-pos="top">Releases 4.5.0
-                    </a>
+            <div class="right-content pr-13 pr-s-6">
+                <a class="badge-sub com-trigger bor-pill bg-bodyui"
+                data-info="Descarga de los archivos procesados y transpilados de la Bodystyle, no están incluidos los archivos con el código fuente.">Descarga<span class="ocultar-desde-chicos">v4.5.0</span></a>
+            </div>
+        </div>
+    </nav>
+    <!-- CABECERA DE LA PÁGINA -->
+    <section class="d-flex just-center ta-c fd-gris-n "   style="position: relative; width: 100%;min-height: 100%; position: absolute; user-select: none;">
+        <div class="forma-triangulo-recto-inf-der ov-visible" style="z-index: 1;position: absolute; min-width: 100%; min-height: 100%; background-color: rgba(133, 0, 42, 0.529);">
+            
+        </div>
+        <div class="ancho-50 pt-8 pt-xs-12 ancho-m-70 ancho-s-85 ancho-xs-95 d-flex flex-column just-center" style="z-index: 2;">
+            <div class="d-flex just-center mb-2">
+                <div class="img-display-256 d-flex just-center ">
+                    <img src="./logo/logo.png" alt="Logo de Bodystyle" class="img-responsive">
                 </div>
             </div>
-        </section>
+            
+            <h1 class="mt-1 c-gris-c fz-28 fz-s-25 f-w-4">Librería para la creación del Front-End</h1>
+            <h2 class="mt-1 c-gris fz-18 fz-s-16 f-w-4">Funcionalidades que permiten la rápida creación del Front-End 
+                en aplicaciones y sitios web.</h2>
+            <div class="d-flex just-center flex-wrap-s mt-5">
+                <a href="./paginas/get_started.html" class="btn-lg-o btn-white-o mr-1 mr-xs-0 mb-xs-1 bor-pill tips-ele"
+                data-tips="Empezar a utilizar la Bodystyle" data-pos="top">Get Started</a>
+                <a target="_blank" href="https://github.com/FedeManzano/bodystyle" class="btn-lg fd-gris-n bor-pill tips-ele"
+                data-tips="Visitar ek repositorio de Bodystyle" data-pos="top">Repositorio</a>
+            </div>
+            <div class="mt-2">
+                <a target="_blank" href="https://github.com/FedeManzano/bodystyle/releases/tag/4.0.4" class="link tips-ele"
+                data-tips="Versión 4.5.0 De Bodystyle">Releases 4.5.0</a>
+            </div>
+        </div>
     </section>
 
-    <div id="desp" class="nav-sidebar mar-9 fd-gris-az-o">
+    <div id="bs-nav-sidebar" class="bs-nav-sidebar fd-gris-n">
         <ul>
-            <li><a href="https://github.com/FedeManzano/bodystyle" class="c-blanco par-2 fz-18"><i class="fa-brands fa-github">&nbsp;</i>Repositorio</a></li>
-            <li><a href="paginas/get_started.html" class="c-blanco fz-18"><i class="fa-solid fa-book">&nbsp;</i>Docs</a></li>
-            <li><a href="https://github.com/FedeManzano/bodystyle/blob/master/LICENSE" class="c-blanco fz-18"><i class="fa-solid fa-id-badge">&nbsp;</i>Licencia</a></li>
+            <li><a href="./paginas/get_started.html">Docs</a></li>
+            <li><a href="https://github.com/FedeManzano/bodystyle">Repositorio</a></li>
+            <li><a href="#">Licencia</a></li>
         </ul>
     </div>
 
-    <div class="dropdown" id="drop" style="user-select: none;">
-        <a href="https://github.com/FedeManzano/bodystyle"><i class="fa-brands fa-github">&nbsp;</i>Repositorio 4.0.0</a>
-        <a href="https://github.com/FedericoManzano/bodystyle"><i class="fa-brands fa-github">&nbsp;</i>Repositorio 3.5.0</a>
-    </div>
-
-    <script src="js/docs-body.js"></script>
+    <script src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
     
     <script>
-        BS.NavInit()
+        BS.ToolTipsInit()
+        BS.NavigationInit("#nav", true)
     </script>
 </body>
 </html>
