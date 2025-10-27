@@ -94,7 +94,6 @@
             
 
 <div class="codigo">
-
 <pre class="cod-html" id="c1">
     <div class="d-flex just-center">
         <div class="ancho-40 ancho-m-65 ancho-s-80 ancho-xs-95 bg-black p-3 bor-rad-10">
@@ -102,25 +101,26 @@
             <div class="flex-column">
                 <div class="input-g">
                     <div class="grupo">
-                        <span class="span-grupo">Username</span>
-                        <input type="text" name="usuario" required>
+                        <span class="span-grupo fd-gris-az c-white">Username</span>
+                        <input type="text" name="usuario" class="fd-gris-az c-white" required>
                     </div>
                      <div class="grupo mt-3">
-                        <span class="span-grupo">Password</span>
-                        <input type="password" name="clave" required>
+                        <span class="span-grupo fd-gris-az c-white">Password</span>
+                        <input type="password" name="clave" class="fd-gris-az c-white" required>
                     </div>
                 </div>
                 <div class="d-flex just-end">
                     <div class="check-radio-grupo">
                         <input type="checkbox" id="rec_login">
-                        <label for="rec_login" class="cb-verde mt-1">Recordar Clave</label>
+                        <label for="rec_login" class="cb-blanco mt-1">Recordar Clave</label>
                     </div>
                 </div>
                 <div class="d-flex flex-column-reverse just-between ali-stretch mt-5 flex-wrap flex-column-reverse-s ali-stretch-s">
                     <div class="btn-grupo-lg">
-                        <input type="submit" name="Registrarse" class="btn-sm bg-grey" value="Registro">
-                        <input type="submit" name="Ingresar" class="btn-sm bg-green" value="Ingresar">
+                        <input type="submit" name="Registrarse" class="btn-sm fd-gris-az" value="Registro">
+                        <input type="submit" name="Ingresar" class="btn-sm bg-white c-black" value="Ingresar">
                     </div>
+                    
                 </div>
                 <div class="mt-2">
                     <a href="#" class="link mt-3">Olvidó su clave</a>
@@ -129,6 +129,7 @@
             </div>
         </div>
     </div>
+            
 </pre>
 </div>
             <h3 id="t4">Registro de Usuario</h3>
@@ -212,69 +213,76 @@
 <div class="codigo">
 
 <pre class="cod-html" id="c2">
-    <div class="container p-3 bg-black bor-rad-10">
-        <h2 class="m-0 mb-3 c-white">Registro de Usuario</h2>
-        <div class="row">
-            <div class="input-g cs-12 cm-6">
-                <div class="grupo">
-                    <span class="span-grupo bg-pink-d-1 c-white">DNI &nbsp; <span class="c-black">*</span></span>
-                    <input type="text" class="fd-gris-az c-white" name="dni">
+    <div class="d-flex just-center">
+        <div class="ancho-80 ancho-m-90 ancho-s-95  p-3 bg-black bor-rad-10">
+            <h2 class="m-0 mb-3 c-white">Registro de Usuario</h2>
+            <div class="row">
+                <div class="input-g cm-12 cl-6">
+                    <div class="grupo">
+                        <span class="span-grupo bg-pink-d-1 c-white">DNI &nbsp; <span class="c-black">*</span></span>
+                        <input type="text" class="fd-gris-az c-white" name="dni">
+                    </div>
+                </div>
+                <div class="input-g cm-12 cl-6">
+                    <div class="grupo">
+                        <span class="span-grupo bg-pink-d-1 c-white">Nombre &nbsp;<span class="c-black">*</span></span>
+                        <input type="text" class="fd-gris-az c-white" name="nombre">
+                    </div>
+                </div>
+                <div class="input-g cm-12 cl-6">
+                    <div class="grupo">
+                        <span class="span-grupo bg-pink-d-1 c-white">Apellido &nbsp; <span class="c-black">*</span></span>
+                        <input type="text" class="fd-gris-az c-white" name="apellido1">
+                    </div>
+                </div>
+                <div class="input-g cm-12 cl-6">
+                    <div class="grupo">
+                        <span class="span-grupo bg-pink-d-1 c-white">Apellido</span>
+                        <input type="text" class="fd-gris-az c-white" name="apellido2">
+                    </div>
+                </div>
+            
+                <div class="input-g cs-12">
+                    <div class="grupo">
+                        <span class="span-grupo bg-pink-d-1 c-white">@ &nbsp;<span class="c-black">*</span></span>
+                        <input type="email" class="fd-gris-az c-white" name="correo">
+                    </div>
+                </div>
+                <div  class="select-mod-dark cs-12"  id="localidad"> <!--ID igual a lo que pasamos por parámetro-->
+                    <select  name="Selector">
+                        <option  value="Localidad">Localidad</option>
+                        <option  value="Ramos Mejia">Ramos Mejía</option>
+                        <option  value="Villa Luzuriaga">Villa Luzuriaga</option>
+                        <option  value="Tres de Febrero">Tres de Febrero</option>
+                        <option  value="Flores">Flores</option>
+                        <option  value="Caballito">Caballito</option>
+                    </select>
+                </div>
+            
+                <div class="input-g cm-12 cl-6">
+                    <div class="grupo">
+                        <span class="span-grupo bg-pink-d-1 c-white">Password</span>
+                        <input type="password" class="fd-gris-az c-white" name="password">
+                    </div>
+                </div>
+            
+                <div class="input-g cm-12 cl-6">
+                    <div class="grupo">
+                        <span class="span-grupo bg-pink-d-1 c-white">Repetir</span>
+                        <input type="password" class="fd-gris-az c-white" name="repetir">
+                    </div>
                 </div>
             </div>
-            <div class="input-g cs-12 cm-6">
-                <div class="grupo">
-                    <span class="span-grupo bg-pink-d-1 c-white">Nombre &nbsp;<span class="c-black">*</span></span>
-                    <input type="text" class="fd-gris-az c-white" name="nombre">
-                </div>
+        
+            <div class="d-flex just-end mt-1">
+                <div class="check-radio-grupo">
+                    <input type="checkbox" id="terminos" class="checkbox">
+                    <label for="terminos" class="cb-blanco">Acepta los Términos</label>
+                 </div>
             </div>
-            <div class="input-g cs-12 cm-6">
-                <div class="grupo">
-                    <span class="span-grupo bg-pink-d-1 c-white">Apellido &nbsp; <span class="c-black">*</span></span>
-                    <input type="text" class="fd-gris-az c-white" name="apellido1">
-                </div>
-            </div>
-            <div class="input-g cs-12 cm-6">
-                <div class="grupo">
-                    <span class="span-grupo bg-pink-d-1 c-white">Apellido</span>
-                    <input type="text" class="fd-gris-az c-white" name="apellido2">
-                </div>
-            </div>
-            <div class="input-g cs-12">
-                <div class="grupo">
-                    <span class="span-grupo bg-pink-d-1 c-white">@ &nbsp;<span class="c-black">*</span></span>
-                    <input type="email" class="fd-gris-az c-white" name="correo">
-                </div>
-            </div>
-            <div  class="select-mod-dark cs-12"  id="loc"> <!--ID igual a lo que pasamos por parámetro-->
-                <select  name="Selector">
-                    <option  value="Localidad">Localidad</option>
-                    <option  value="Ramos Mejia">Ramos Mejía</option>
-                    <option  value="Villa Luzuriaga">Villa Luzuriaga</option>
-                    <option  value="Tres de Febrero">Tres de Febrero</option>
-                    <option  value="Flores">Flores</option>
-                    <option  value="Caballito">Caballito</option>
-                </select>
-            </div>
-            <div class="input-g cs-12 cm-6">
-                <div class="grupo">
-                    <span class="span-grupo bg-pink-d-1 c-white">Password</span>
-                    <input type="password" class="fd-gris-az c-white" name="password">
-                </div>
-            </div>
-            <div class="input-g cs-12 cm-6">
-                <div class="grupo">
-                    <span class="span-grupo bg-pink-d-1 c-white">Repetir</span>
-                    <input type="password" class="fd-gris-az c-white" name="repetir">
-                </div>
-            </div>
+        
+            <input type="submit" class="btn-cover-o btn-white-o bor-pill mt-3" value="Registrar" />
         </div>
-        <div class="d-flex just-end mt-1">
-            <div class="check-radio-grupo">
-                <input type="checkbox" id="terminos" class="checkbox">
-                <label for="terminos" class="cb-blanco">Acepta los Términos</label>
-             </div>
-        </div>
-        <a href="" class="btn-cover-o btn-white-o bor-pill mt-3">Registrar</a>     
     </div>
 </pre>
 </div>

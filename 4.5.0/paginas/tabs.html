@@ -447,11 +447,11 @@
                             <div  class="flex-column">
                                 <div  class="input-g">
                                     <div  class="grupo">
-                                        <span  class="span-grupo bg-pink-d-1 c-blanco">Username</span>
+                                        <span  class="span-grupo bg-bodyui c-blanco">Username</span>
                                         <input  type="text" class="fd-gris-az c-white"  name="usuario"  required="">
                                     </div>
                                     <div  class="grupo mt-3">
-                                        <span  class="span-grupo bg-pink-d-1 c-blanco">Password</span>
+                                        <span  class="span-grupo bg-bodyui c-blanco">Password</span>
                                         <input  type="password" class="fd-gris-az c-white"  name="clave"  required="">
                                     </div>
                                 </div>
@@ -464,42 +464,43 @@
                                 <div  class="d-flex flex-column-reverse just-between ali-stretch mt-5 flex-wrap flex-column-reverse-s ali-stretch-s">
                                     <div  class="btn-grupo-lg">
                                         <input  type="submit"  name="Registrarse"  class="btn-sm fd-gris-az"  value="Registro">
-                                        <input  type="submit"  name="Ingresar"  class="btn-sm bg-white c-black"  value="Ingresar">
+                                        <input  type="submit"  name="Ingresar"  class="btn-sm bg-bodyui c-white"  value="Ingresar">
                                     </div>
                                 </div>
                                 <div  class="mt-2">
                                     <a  href="#"  class="link mt-3">Olvidó su clave</a>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="registro" class="contenido-tab p-1 d-flex just-center  ali-center ali-m-stretch fd-gris-o-3">
-                    <div  class="container p-3 bg-black bor-rad-10">
+                    <div  class="ancho-75 ancho-m-95 ancho-s-98 ancho-xs-100 p-3 bg-black bor-rad-10">
                         <h2  class="m-0 mb-3 c-white">Registro de Usuario</h2>
                         <div  class="row">
                             <div  class="input-g cs-12 cm-6">
                                 <div  class="grupo">
                                     <span  class="span-grupo bg-pink-d-1 c-white">DNI</span>
-                                    <input  type="text" class="fd-gris-az"  name="dni">
+                                    <input  type="text" class="fd-gris-az c-white"  name="dni">
                                 </div>
                             </div>
                             <div  class="input-g cs-12 cm-6">
                                 <div  class="grupo">
                                     <span  class="span-grupo bg-pink-d-1 c-white">Nombre</span>
-                                    <input  type="text" class="fd-gris-az"  name="nombre">
+                                    <input  type="text" class="fd-gris-az c-white"  name="nombre">
                                 </div>
                             </div>
                             <div  class="input-g cs-12 cm-6">
                                 <div  class="grupo">
                                     <span  class="span-grupo bg-pink-d-1 c-white">Apellido</span>
-                                    <input  type="text" class="fd-gris-az"  name="apellido1">
+                                    <input  type="text" class="fd-gris-az c-white"  name="apellido1">
                                 </div>
                             </div>
                             <div  class="input-g cs-12 cm-6">
                                 <div  class="grupo">
                                     <span  class="span-grupo bg-pink-d-1 c-white">Apellido</span>
-                                    <input  type="text" class="fd-gris-az" name="apellido2">
+                                    <input  type="text" class="fd-gris-az c-white" name="apellido2">
                                 </div>
                             </div>
                             <div  class="input-g cs-12">
@@ -508,19 +509,19 @@
                                 <input  type="email" class="fd-gris-az c-white"  name="correo">
                             </div>
                         </div>
-                        
-                        <div  class="input-g cs-12 cm-6">
-                            <div  class="grupo">
-                                <span  class="span-grupo bg-pink-d-1 c-white">Password</span>
-                                <input  type="password" class="fd-gris-az c-white"  name="password">
-                            </div>
+                    
+                    <div  class="input-g cs-12 cm-6">
+                        <div  class="grupo">
+                            <span  class="span-grupo bg-pink-d-1 c-white">Password</span>
+                            <input  type="password" class="fd-gris-az c-white"  name="password">
                         </div>
-                        <div  class="input-g cs-12 cm-6">
-                            <div  class="grupo">
-                                <span  class="span-grupo bg-pink-d-1 c-white">Repetir</span>
-                                <input  type="password" class="fd-gris-az c-white" name="repetir">
-                            </div>
+                    </div>
+                    <div  class="input-g cs-12 cm-6">
+                        <div  class="grupo">
+                            <span  class="span-grupo bg-pink-d-1 c-white">Repetir</span>
+                            <input  type="password" class="fd-gris-az c-white" name="repetir">
                         </div>
+                    </div>
                         </div>
                         <div  class="d-flex just-end mt-3">
                             <div  class="check-radio-grupo">
@@ -798,7 +799,8 @@
         BS.TabInit().iniciarBorde({contexto: "#ta2",colorFuente: "c-white", colorFondo: "bg-black", colorBorde: "fd-blanco"})
         BS.TabInit().iniciarBorde({contexto: "#ta3",colorFuente: "c-white", colorFondo: "bg-pink-d-1", colorBorde: "fd-blanco"})
         BS.TabInit().iniciarBorde({contexto: "#ta4",colorFuente: "c-white", colorFondo: "bg-pink-d-1", colorBorde: "fd-blanco"})
-         BS.TabInit().iniciarBorde({contexto: "#ta5",colorFuente: "c-white", colorFondo: "fd-azul-ve", colorBorde: "fd-blanco"})
+        BS.TabInit().iniciarBorde({contexto: "#ta5",colorFuente: "c-white", colorFondo: "fd-azul-ve", colorBorde: "fd-blanco"})
+        BS.CodigoJsInit()
     </script>
 </body>
 </html>
