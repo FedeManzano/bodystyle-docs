@@ -258,7 +258,13 @@ div.colores
     align-items: center;
     justify-content: center;
 }
+.lista-scroll{
 
+    @media(max-width: 1400px)
+    {
+        display: none !important;
+    }
+}
 .guia-pagina
 {
     position: fixed;
