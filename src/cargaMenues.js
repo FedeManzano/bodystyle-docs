@@ -66,6 +66,7 @@ import $ from "jquery"
             <li><a href="toast.html">Toasts</a></li>
             <li><a href="modal.html">Modals</a></li>
             <li><a href="tabs.html">Tabs</a></li>
+            <li><a href="imagenes.html">Imagenes<span class='badge badge-bodyui'>New</span></a></li>
         </ul>
         <a  class="titulo c-blanco t-may" data-target="#m6">Componentes</a>
         <ul id="m6">
