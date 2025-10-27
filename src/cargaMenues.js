@@ -24,14 +24,14 @@ import $ from "jquery"
             <li><a href="botones.html">Botones</a></li>
             <li><a href="grupo_botones.html">Grupo Botones</a></li>
             <li><a href="badges.html">Badges<span class="badge badge-bodyui">New</span></a></li>
-            <li><a href="badges.html">Etiquetas<span class="badge badge-bodyui">New</span></a></li>
-            <li><a href="badges.html">Solapas<span class="badge badge-bodyui">New</span></a></li>
-            <li><a href="badges.html">Compartir<span class="badge badge-bodyui">New</span></a></li>
-            <li><a href="badges.html">Mensajes<span class="badge badge-bodyui">New</span></a></li>
+            <li><a href="etiquetas.html">Etiquetas<span class="badge badge-bodyui">New</span></a></li>
+            <li><a href="solapas.html">Solapas<span class="badge badge-bodyui">New</span></a></li>
+            <li><a href="compartir.html">Compartir<span class="badge badge-bodyui">New</span></a></li>
+            <li><a href="mensajes.html">Mensajes<span class="badge badge-bodyui">New</span></a></li>
             <li><a href="alertas.html">Alertas</a></li>
             <li><a href="tarjetas.html">Tarjetas</a></li>
             <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
-            <li><a href="colecciones.html">Colecciones</a></li>
+            <li><a href="colecciones.html">Colecciones<span class="badge badge-bodyui">New</span></a></li>
             <li><a href="efecto3d.html">Efecto 3D</a></li>
             <li><a href="efecto_hover.html">Efecto Hover</a></li>
             <li><a href="formas.html">Formas</a></li>

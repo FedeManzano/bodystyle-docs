@@ -347,6 +347,184 @@
     </div>  
         </article>
 
+        <article class="articulo">
+            <h2 id="t5">Colección Desplegable <span class="badge badge-bodyui">4.5.0</span></h2>
+            <p>
+                Desed la versión <span class="badge badge-bodyui">4.5.0</span> se añadió las colecciones 
+                desplegables, con las mimas funcionabilidades que las antes vistas pero con el cpodigo JS 
+                que permite desplegar un conjunto de opciones.
+            </p>
+            <div  class="container mar-3">
+                <div  class="list-container bg-white">
+                    <div class="lista-cabecera bg-bodyui c-white f-w-7">
+                        Cabecera
+                    </div>
+                    <div id="coleccion_desplegable">
+                        <div class="l-colapso">
+                            <a class="lista-item" data-target="#menu1">Servicios</a>
+                            <div class="desplegable fd-gris-o-2" id="menu1">
+                                <ul>
+                                    <li><a href="">500 GB de Almacenamiento</a></li>
+                                    <li><a href="">Ventas de Productos</a></li>
+                                    <li><a href="">4G / Gigabits de Datos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="l-colapso">
+                            <a class="lista-item" data-target="#menu2">Facturación</a>
+                            <div class="desplegable fd-gris-o-2" id="menu2">
+                                <ul>
+                                    <li><a href="#">Medios de Pagos</a></li>
+                                    <li><a href="#">Precios</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lista-pie bg-bodyui c-white f-w-7">
+                        Esto es el Pie
+                    </div>
+                </div>  
+            </div>
+
+            <div class="alerta-negra mt-3">
+                Para poder llevar a cabo este ejemplo hay que definir un ID global para la lista, luego 
+                cada uno de los disparadores de la lista añadirle el atricuto <span class="badge-xs badge-bodyui">data-target</span> de esta forma 
+                conseguimos un vínculo entre los elementos a desplegar.
+            </div>
+
+
+<div class="codigo">
+    <pre id="c4" class="cod-html">
+        <div  class="container mar-3">
+            <!-- 
+            ESTA ES LA LISTA ANTERIOR COMENTADA 
+            Para poder utilizarla descomentar este código
+
+            <div  class="list-container bg-white">
+                <div class="lista-cabecera bg-bodyui c-white f-w-7">
+                    Cabecera
+                </div>
+                <div id="coleccion_desplegable">
+                    <div class="l-colapso">
+                        <a class="lista-item" data-target="#menu1">Servicios</a>
+                        <div class="desplegable fd-gris-o-2" id="menu1">
+                            <ul>
+                                <li><a href="">500 GB de Almacenamiento</a></li>
+                                <li><a href="">Ventas de Productos</a></li>
+                                <li><a href="">4G / Gigabits de Datos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="l-colapso">
+                        <a class="lista-item" data-target="#menu2">Facturación</a>
+                        <div class="desplegable fd-gris-o-2" id="menu2">
+                            <ul>
+                                <li><a href="#">Medios de Pagos</a></li>
+                                <li><a href="#">Precios</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="lista-pie bg-bodyui c-white f-w-7">
+                    Esto es el Pie
+                </div>
+            </div>  FIN DE LA LISTA-->
+        </div>
+    </pre>
+</div>
+        <h3 id="t6">Inicialización</h3>
+        <p>
+            Para poder utilizar este módulo es necesario inicializarlo con la función de la librería correspondiente. Es 
+            importante recalcar las dos situaciones posibles para evitarb el mal funcionamiento del componente.
+        </p>
+
+        <div class="codigo">
+<pre class="cod-js" id="c6">
+    // CDN : https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js
+
+    // 1 OPCIÓN ESTÁTICA
+    // ------------------
+
+    // Inicializa el elemento
+    // cuando estos están dispuestos de manera estática dentro del DOM
+    BS.Colecciones().iniciar({ contexto : "#coleccion_desplegable", colorFondo : "bg-pink-d-1",colorTexto : "c-blanco",  colorFlechas : "#fff" })
+
+    /*******************************************************************************/
+
+    // 2 OPCIÓN DINÁMICA
+    // -----------------   
+
+    /*
+        En proyectos donde se tabaja a través de injección de elementos a través 
+        de JavaScript de manera dinámica, y el elemento que se estudia en esta sección se 
+        ingresa de esta manera, es necesario aplicar un retraso en la inicialización del 
+        módulo con el siguiente codigo.
+    */
+
+    //Si los elementos que conforman esta funcionalidad son dinámicos 
+    // Agregados a través de JS 
+    window.onload = () => {
+        setTimeout( () => {
+            BS.Colecciones().iniciar({ contexto : "#coleccion_desplegable", colorFondo : "bg-pink-d-1",colorTexto : "c-blanco",  colorFlechas : "#fff" })
+        }, 100); 
+    }
+</pre>
+</div>
+        <div class="alerta-negra">
+            Como se puede observar en el código anterior la función de inicialización recibe cuatro parámetros que van a permitir 
+            darle la funcionalidad a la lista y además los estilos para configurarla de manera correcta.
+        </div>
+
+        <h4 class="mb-3">Parámetros</h4>
+
+        <div class="table-responsive">
+            <table class="vertical-border table-sm table-dark selector table-bor-grey">
+                <thead>
+                    <tr>
+                        <th>Parámetro</th>
+                        <th>Tipo</th>
+                        <th>Descripción</th>
+                        <th>Obligatorio</th>
+                        <th>Default</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>contexto</td>
+                        <td>string</td>
+                        <td>ID de la lista a la cual apunta la funcionalidad</td>
+                        <td>SI</td>
+                        <td>Vacio</td>
+                    </tr>
+                    <tr>
+                        <td>colorFondo</td>
+                        <td>string</td>
+                        <td>Clase de la librería para establecer el color de fondo formato (fd-[color] | bg-[color])</td>
+                        <td>NO</td>
+                        <td>fd-blanco</td>
+                    </tr>
+                    <tr>
+                        <td>colorTexto</td>
+                        <td>string</td>
+                        <td>Clase de la librería para establecer el color del texto formato (c-[color] | c-[color])</td>
+                        <td>NO</td>
+                        <td>fd-negro</td>
+                    </tr>
+                    <tr>
+                        <td>colorFlechas</td>
+                        <td>string</td>
+                        <td>Color hexadecimal que permite configurar el color de las flechas EJ: #000</td>
+                        <td>NO</td>
+                        <td>#000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        </article>
+
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
@@ -360,6 +538,8 @@
             <li><a href="#t2">Default</a></li>
             <li><a href="#t3">Colores</a></li>
             <li><a href="#t4">Encabezados</a></li>
+            <li><a href="#t5">Desplegable <span class="badge badge-bodyui">4.5.0</span></a></li>
+            <li><a href="#t6">Inicialización</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
@@ -372,5 +552,9 @@
         var idMenu = "#m2"
     </script>
     <script src="../js/docs-body.js"></script>
+    <script>
+        BS.CodigoJsInit()
+        BS.Colecciones().iniciar({ contexto : "#coleccion_desplegable", colorFondo : "bg-pink-d-1",colorTexto : "c-blanco",  colorFlechas : "#fff" })
+    </script>
 </body>
 </html>
