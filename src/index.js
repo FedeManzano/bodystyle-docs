@@ -11,6 +11,9 @@ window.onload = () => {
     BS.BotonInicioInit()
     $("#sidebar").fadeIn(1500)
 
+    $("h1, h2, h3").removeClass("scroll-item")
+    $("h1, h2, h3").addClass("scroll-item")
+
     let conf =
     {
       ancho : 16, 
