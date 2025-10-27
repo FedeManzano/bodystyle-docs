@@ -1,5 +1,5 @@
 import $ from "jquery"
-
+import "./bodystyle"
 (() => {
 
 
@@ -96,16 +96,15 @@ import $ from "jquery"
     $(".nav-body").append
     (
         `
-        <p class="nav-logo logo">
+        <p class="nav-logo logo pl-0" style="width: 75px !important; height: 75px !important;">
             <img src="../imagenes/20191106_205049.png">
         </p>
-        <!-- LISTA Con las opciones del menú -->
         <ul class="lista d-flex ocultar-desde-medianos">
             <li><a href="https://github.com/FedeManzano/bodystyle">Repositorio</a></li>
             <li><a href="../index.html">Inicio</a></li>
         </ul>
-        <a target="_blank" href="https://mega.nz/file/ZEkV0ZQI#a0-_5aoELyOirQGbHlT7xM7a_mApM0GifHGOHAM9hH0" class="badge-sub com-trigger bor-pill bg-bodyui" style="margin-right: 150px"
-        data-info="Descarga de los archivos procesados y transpilados de la Bodystyle, no están incluidos los archivos con el código fuente.">Descarga<span class="ocultar-desde-chicos">v4.5.0</span></a>
+        <a target="_blank" href="https://mega.nz/file/ZEkV0ZQI#a0-_5aoELyOirQGbHlT7xM7a_mApM0GifHGOHAM9hH0" class='badge-sub tips-ele bor-pill bg-bodyui' style="margin-right: 150px"
+        data-tips='<span><i class="fa-solid fa-book c-bodyui">&nbsp</i><span>Librería Procesada. v4.5.0'>Descarga<span class="ocultar-desde-chicos">v4.5.0</span></a>
         `
     )
 

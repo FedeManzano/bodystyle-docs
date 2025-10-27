@@ -26,7 +26,7 @@ window.onload = () => {
     } 
 
     BS.ScrollSpyInit(conf)
-    }, 50); 
+    }, 100); 
 }
 
 
