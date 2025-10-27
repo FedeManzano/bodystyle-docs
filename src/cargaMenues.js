@@ -103,7 +103,7 @@ import "./bodystyle"
             <li><a href="https://github.com/FedeManzano/bodystyle">Repositorio</a></li>
             <li><a href="../index.html">Inicio</a></li>
         </ul>
-        <a target="_blank" href="https://mega.nz/file/ZEkV0ZQI#a0-_5aoELyOirQGbHlT7xM7a_mApM0GifHGOHAM9hH0" class='badge-sub tips-ele bor-pill bg-bodyui' style="margin-right: 150px"
+        <a target="_blank" href="https://mega.nz/file/ZEkV0ZQI#a0-_5aoELyOirQGbHlT7xM7a_mApM0GifHGOHAM9hH0" class='ocultar-desde-x-chicos badge-sub tips-ele bor-pill bg-bodyui pl-xs-0' style="margin-right: 150px"
         data-tips='<span><i class="fa-solid fa-book c-bodyui">&nbsp</i><span>Librería Procesada. v4.5.0'>Descarga<span class="ocultar-desde-chicos">v4.5.0</span></a>
         `
     )
@@ -121,8 +121,9 @@ import "./bodystyle"
     $(".boton-descarga").html
     (
         `
+        <div class="ancho-55 ancho-m-75 ancho-s-90 ancho-xs-100">
         <div class="card">
-            <div class="card-simple-dark">
+            <div class="card-simple-dark card-cover">
                 <h4>Descargar Bodystyle<span class="badge badge-bodyui">4.5.0</span></h4>
                 <small>Versión 4.5.0</small>
                 <p>
@@ -130,12 +131,16 @@ import "./bodystyle"
                     la versión procesada de la librería en su 
                     <a href='https://github.com/FedeManzano/bodystyle' target='_blank' class='link tips-ele '
                     data-tips="Versión procesada de Bodystyle"
-                    data-pos='right'>versión 4.5.0</a>.
+                    data-pos='right'>versión 4.5.0</a>, el segundo botón es para descargar esta misma documentación
+                    para no tener que ver publicidad que el hosting introduce sin permiso.
                 </p> 
                 <a target="_blank" href="https://mega.nz/file/ZEkV0ZQI#a0-_5aoELyOirQGbHlT7xM7a_mApM0GifHGOHAM9hH0" class="btn-cover-sm fd-bodyui mar-2 tips-ele bor-pill"
-                data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v4.5.0.zip">Descargar</a>
+                data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v4.5.0.zip" data-pos='right'>Descargar</a>
+                <a target="_blank" href="" class="btn-cover-sm-o btn-white-o mar-1 tips-ele bor-pill"
+                data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bs_docs_4.5.0.zip">Docs 4.5.0</a>
             </div>
         </div> 
+        </div>
         `
     )
 
