@@ -99,7 +99,7 @@
 
 
             <div class="row mar-3">
-                <div class="list-container bg-green cxs-12 cs-12 cm-6 cl-4">
+                <div class="list-container bg-green cxs-12 cs-12 cm-6 cl-4" id="l1">
                     <div class="list-item">
                         <a href="#" class="c-white">Inicio</a>
                     </div>
@@ -114,7 +114,7 @@
                     </div>  
                 </div>
 
-                <div class="list-container bg-blue cxs-12 cs-12 cm-6 cl-4">
+                <div class="list-container bg-blue cxs-12 cs-12 cm-6 cl-4" id="l2">
                     <div class="list-item">
                         <a href="#" class="c-white">Inicio</a>
                     </div>
@@ -128,7 +128,7 @@
                         <a href="#" class="c-white">Perfíl</a>
                     </div>  
                 </div>
-                <div class="list-container fd-gris-n cxs-12 cs-12 cm-6 cl-4">
+                <div class="list-container fd-gris-n cxs-12 cs-12 cm-6 cl-4" id="l3">
                     <div class="list-item">
                         <a href="#" class="c-white">Inicio</a>
                     </div>
@@ -142,22 +142,7 @@
                         <a href="#" class="c-white">Perfíl</a>
                     </div>  
                 </div>
-                <div class="list-container fd-gris-az cxs-12 cs-12 cm-6 cl-4">
-                    <div class="list-item">
-                        <a href="#" class="c-white">Inicio</a>
-                    </div>
-                    <div class="list-item">
-                        <a href="#" class="c-white">Servicios</a>
-                    </div>
-                    <div class="list-item">
-                        <a href="#" class="c-white">Galeria</a>
-                    </div>
-                    <div class="list-item">
-                        <a href="#" class="c-white">Perfíl</a>
-                    </div>  
-                </div>
-
-                <div class="list-container fd-rojo cxs-12 cs-12 cm-6 cl-4">
+                <div class="list-container fd-gris-az cxs-12 cs-12 cm-6 cl-4" id="l4">
                     <div class="list-item">
                         <a href="#" class="c-white">Inicio</a>
                     </div>
@@ -172,7 +157,22 @@
                     </div>  
                 </div>
 
-                <div class="list-container fd-naranja cxs-12 cs-12 cm-6 cl-4">
+                <div class="list-container fd-rojo cxs-12 cs-12 cm-6 cl-4" id="l5">
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div>  
+                </div>
+
+                <div class="list-container fd-naranja cxs-12 cs-12 cm-6 cl-4" id="l6">
                     <div class="list-item">
                         <a href="#" class="c-white">Inicio</a>
                     </div>
@@ -523,6 +523,48 @@
             </table>
         </div>
 
+        <h3 id="t7">Estructura</h3>
+        <p>
+            Ahora vamos a nalizar cual es la estructura de la lista de manera tal de poder utilizarla.
+        </p>
+
+<div class="codigo">
+    <pre id="c7" class="cod-html">
+        <!-- 
+            Toda la lista encerrada en con contenedor con la 
+            clase list-container 
+         -->
+        <div  class="list-container bg-white">
+
+            <!-- Luego un contenedor que posee un ID que es el contexto de la lista
+                 es a partir de este ID que se puede manipular la lista -->
+            <div id="id_coleccion">
+                <!--
+                    Luego un contenedor con la clase l-colapso
+                -->
+                <div class="l-colapso">
+                    <!-- Disparador con la clase lista-item y 
+                         el attr data-target que apunta a la lista a desplegar
+                         no ovidarse el ID -->
+                    <a class="lista-item" data-target="#id_lista_a_desplegar">Servicios</a>
+
+                    <!--
+                        Luego el último contenedor con la clase desplegable 
+                        y el ID que se asignó al data-target del elemento anterior
+                    -->
+                    <div class="desplegable fd-gris-o-2" id="id_lista_a_desplegar">
+                        <ul>
+                            <li><a href="#">Opción 1</a></li>
+                            <li><a href="#">Opción 2</a></li>
+                            <li><a href="#">Opción 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </pre>
+</div>
+
         </article>
 
         <!--AUTOR--------------------------------------------------------------------->
@@ -540,6 +582,7 @@
             <li><a href="#t4">Encabezados</a></li>
             <li><a href="#t5">Desplegable <span class="badge badge-bodyui">4.5.0</span></a></li>
             <li><a href="#t6">Inicialización</a></li>
+            <li><a href="#t7">Parámetros</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
@@ -555,6 +598,7 @@
     <script>
         BS.CodigoJsInit()
         BS.Colecciones().iniciar({ contexto : "#coleccion_desplegable", colorFondo : "bg-pink-d-1",colorTexto : "c-blanco",  colorFlechas : "#fff" })
+        //BS.Colecciones().iniciar({ contexto : "#ejemplo_lista", colorFondo : "fd-gris-n",colorTexto : "c-blanco",  colorFlechas : "#fff" })
     </script>
 </body>
 </html>
