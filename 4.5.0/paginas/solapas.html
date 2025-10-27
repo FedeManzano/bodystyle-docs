@@ -44,8 +44,12 @@
         <article class="articulo">
             <h2 id="t2">Muestra</h2>
             <p class="mb-3">
-                Vamos a realizar una muestra del elemento absoluto, pero previamente debemos insertar la clase 
-                <span class="badge badge-red">.relative-container</span> al elemento padre.
+                Vamos a realizar una muestra del <span class="badge badge-grey com-trigger"
+                data-info="El posicionamiento absoluto en CSS (position: absolute;) saca un elemento del flujo normal del documento y lo posiciona con respecto a su ancestro posicionado más cercano">elemento absoluto</span>, pero previamente debemos insertar la clase 
+                <span class="badge badge-red">.relative-container</span> al elemento padre. <br>
+                Es importante aclarar que elemento que se está documentando en esta sección posee un posicionamiento 
+                absoluto, lo cual obliga a que el contenedor padre tenga un <span class="badge badge-grey com-trigger" 
+                data-info="El posicionamiento relativo en CSS se refiere a la técnica de desplazar un elemento desde su ubicación original sin afectar la posición de los demás elementos">posicionamiento relativo</span>. 
             </p>
 
             <div class="row">
@@ -140,27 +144,104 @@
     </div>
 </pre>
 </div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
-<div class="codigo">
+            <div class="alerta-negra">
+                Notese que para los ejemplos anteriores se utilizaron clases de:
+                <div class="lista-doc m-0">
+                    <ul>
+                        <li><a href="padding.html" class="link tips-ele" data-tips="Documentación de las clases de Padding" data-pos="right">Padding</a></li>
+                        <li><a href="margin.html" class="link tips-ele" data-tips="Documentación de las clases de Margin" data-pos="right">Margin</a></li>
+                        <li><a href="bordes.html" class="link tips-ele" data-tips="Documentación de las clases de Bordes" data-pos="right">Bordes</a></li>
+                        <li><a href="grid.html" class="link tips-ele" data-tips="Documentación de las clases de Grilla" data-pos="right">Grilla</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3 id="t3">Tabla de Colores</h3>
+            <p>
+                Se muestra a continuación una tabla descriptiva con las clases y los colores asociados.
+            </p>
 
+            <div class="table-responsive mt-3">
+                <table class="vertical-border selector table-dark table-sm">
+                    <thead>
+                        <tr>
+                            <th>Español</th>
+                            <th>Inglés</th>
+                            <th>Color</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>.badge-solapa-bodyui</td>
+                            <td>.badge-flap-bodyui</td>
+                            <td><div class="p-1 bg-bodyui"></div></td>
+                        </tr>
+                        <tr>
+                            <td>.badge-solapa-rojo</td>
+                            <td>.badge-flap-red</td>
+                            <td><div class="p-1 bg-red"></div></td>
+                        </tr>
+                        <tr>
+                            <td>.badge-solapa-verde</td>
+                            <td>.badge-flap-green</td>
+                            <td><div class="p-1 bg-green"></div></td>
+                        </tr>
+                        <tr>
+                            <td>.badge-solapa-azul</td>
+                            <td>.badge-flap-blue</td>
+                            <td><div class="p-1 bg-blue"></div></td>
+                        </tr>
+                        <tr>
+                            <td>.badge-solapa-gris</td>
+                            <td>.badge-flap-grey</td>
+                            <td><div class="p-1 bg-grey"></div></td>
+                        </tr>
+                        <tr>
+                            <td>.badge-solapa-negro</td>
+                            <td>.badge-flap-black</td>
+                            <td><div class="p-1 bg-black"></div></td>
+                        </tr>
+                        <tr>
+                            <td>.badge-solapa-blanco</td>
+                            <td>.badge-flap-white</td>
+                            <td><div class="p-1 bg-white"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 id="t4">Ejemplos Con Tarjetas</h3>
+            <p class="mb-3">
+                Veamis ejemplos en contenedores más complejos y determinar el funcionamiento del posicionamiento de los elementos. <br>
+                Es importante reiterar que cualquier elemento contenedor padre debe tener incorporada la clase <span class="badge badge-bodyui">.relative-container</span>
+                para que la solapa permanezca dentro del contenedor padre.
+            </p>
+            
+            <div  class="card relative-container"> <!-- Comienza la tarjeta simple -->
+                <div class="badge-flap-bodyui">Ejemplo de Solapa en una Tarjeta</div>
+                <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                    <h4 class="pt-4">Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                    <small>Pequeña descripción</small>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                    </p> 
+                    <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                </div><!-- FIN Tarjeta oscura -->
+            </div>
+
+<div class="codigo">
 <pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
+    <div  class="card relative-container"> <!-- Comienza la tarjeta simple -->
+        <div class="badge-flap-bodyui">Ejemplo de Solapa en una Tarjeta</div>
+        <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+            <h4 class="pt-4">Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+            <small>Pequeña descripción</small>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+            </p> 
+            <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+        </div><!-- FIN Tarjeta oscura -->
     </div>
 </pre>
 </div>
-        <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
-        </p>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
 
@@ -170,14 +251,12 @@
     <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
 
     <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
-    <div class="guia-pagina">
+    <div class="lista-scroll">
         <ul>
-            <li><a href="#a1_pt">Subtitulo 1</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
+            <li><a href="#t1">Solapas</a></li>
+            <li><a href="#t2">Muestra</a></li>
+            <li><a href="#t3">Colores</a></li>
+            <li><a href="#t4">Ejemplo</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
