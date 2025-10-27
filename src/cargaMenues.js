@@ -23,7 +23,11 @@ import $ from "jquery"
         <ul id="m2">
             <li><a href="botones.html">Botones</a></li>
             <li><a href="grupo_botones.html">Grupo Botones</a></li>
-            <li><a href="badges.html">Badges</a></li>
+            <li><a href="badges.html">Badges<span class="badge badge-bodyui">New</span></a></li>
+            <li><a href="badges.html">Etiquetas<span class="badge badge-bodyui">New</span></a></li>
+            <li><a href="badges.html">Solapas<span class="badge badge-bodyui">New</span></a></li>
+            <li><a href="badges.html">Compartir<span class="badge badge-bodyui">New</span></a></li>
+            <li><a href="badges.html">Mensajes<span class="badge badge-bodyui">New</span></a></li>
             <li><a href="alertas.html">Alertas</a></li>
             <li><a href="tarjetas.html">Tarjetas</a></li>
             <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
