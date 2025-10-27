@@ -99,7 +99,7 @@ import $ from "jquery"
             <li><a href="https://github.com/FedeManzano/bodystyle">Repositorio</a></li>
             <li><a href="../index.html">Inicio</a></li>
         </ul>
-        <a class="badge-sub com-trigger bor-pill bg-bodyui" style="margin-right: 150px"
+        <a target="_blank" href="https://mega.nz/file/gQlimBBQ#Qv_wWjzwZaywxDOr3f2vCLcClgIM9qPdtaTbJ1S13HY" class="badge-sub com-trigger bor-pill bg-bodyui" style="margin-right: 150px"
         data-info="Descarga de los archivos procesados y transpilados de la Bodystyle, no están incluidos los archivos con el código fuente.">Descarga<span class="ocultar-desde-chicos">v4.5.0</span></a>
         `
     )
@@ -128,8 +128,8 @@ import $ from "jquery"
                     data-tips="Versión procesada de Bodystyle"
                     data-pos='right'>versión 4.5.0</a>.
                 </p> 
-                <a target="_blank" href="https://mega.nz/file/cQMHGSDS#kK6bvOzeLMdLy15qLuqAwYaY_j_UnDWuyVAudZCYoTw" class="btn-cover-sm fd-bodyui mar-2 tips-ele bor-pill"
-                data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v4.0.0_dist.zip">Descargar</a>
+                <a target="_blank" href="https://mega.nz/file/gQlimBBQ#Qv_wWjzwZaywxDOr3f2vCLcClgIM9qPdtaTbJ1S13HY" class="btn-cover-sm fd-bodyui mar-2 tips-ele bor-pill"
+                data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v4.5.0.zip">Descargar</a>
             </div>
         </div> 
         `
