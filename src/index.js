@@ -5,15 +5,10 @@ import "./copiarCodigo"
 
 window.onload = () => {
   setTimeout( () => {
-    BS.DropDownInit()
     BS.CodigoHtmlInit()
-    BS.CodigoJsInit()
-    BS.CodigoCssInit()
     BS.ToolTipsInit()
     BS.NavInit(idMenu)
     BS.BotonInicioInit()
-    BS.CodigoCInit()
-    BS.CodigoJavaInit()
     $("#sidebar").fadeIn(1500)
     }, 50); 
 }
