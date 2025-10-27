@@ -6,13 +6,13 @@
     <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
 
     
-    <meta name="description" content="">
+    <meta name="description" content="Elemento que muestra las veces que se compartió un determinado elemento perteneciente al contexto en el que se encuentre.">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/bodystyle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     
-    <title>Get Started</title>
+    <title>Compartir</title>
 </head>
 <body>
 
@@ -30,9 +30,11 @@
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
-            <h1>Compartir</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ducimus distinctio doloremque aperiam fugiat,
-                 sapiente animi quam ut minima recusandae aut blanditiis tenetur. Animi earum culpa, quam incidunt nemo dolores?</p>
+            <h1 id="t1">Compartir <span class="badge badge-bodyui">4.5.0</span></h1>
+            <p>
+                Un elemento muy común que permite ver cuantas veces se compartió algo en el coontexto de la aplicación o sitio 
+                web en desarrollo.
+            </p>
             
             <div class="mar-2 boton-descarga"></div>
         </section>
@@ -40,44 +42,90 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="a1_pt">SubTitulo Artículo 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus ea nulla aliquam soluta commodi laboriosam nobis reprehenderit, 
-                labore est asperiores voluptatum beatae fuga atque rem eos nemo rerum magnam.</p>
+            <h2 id="t2">Muestra</h2>
+            <p>
+                Aquí se muestra un ejemplo de como se ve el elemento y como defir la cantidad de veces que se presinó el botón.
+            </p>
+            <div class="mt-8">
+                <label class="badge-compartir-rojo">
+                    <span>23K</span>
+                    SHARE
+                </label>
+            </div>
+            
 
 <div class="codigo">
 
 <pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
+   <div class="mt-8">
+        <label class="badge-compartir-rojo">
+            <span>23K</span>
+            SHARE
+        </label>
     </div>
 </pre>
 </div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
-<div class="codigo">
+            <h3 id="t3">Colores</h3>
+            <p>
+                Ahora la paleta de colores para utilizar el elemento que mejor se adapte al diseño requerido.
+            </p>
 
+            <div class="d-flex just-around mt-8">
+                <label class="badge-compartir-rojo">
+                    <span>23K</span>
+                    SHARE
+                </label>
+                <label class="badge-compartir-verde">
+                    <span>23K</span>
+                    SHARE
+                </label>
+                <label class="badge-compartir-azul">
+                    <span>23K</span>
+                    SHARE
+                </label>
+                <label class="badge-compartir-gris">
+                    <span>23K</span>
+                    SHARE
+                </label>
+                <label class="badge-compartir-negro">
+                    <span>23K</span>
+                    SHARE
+                </label>
+                <label class="badge-compartir-blanco">
+                    <span>23K</span>
+                    SHARE
+                </label>
+            </div>
+<div class="codigo">
 <pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
+    <div class="d-flex just-around mt-8">
+        <label class="badge-compartir-rojo">
+            <span>23K</span>
+            SHARE
+        </label>
+        <label class="badge-compartir-verde">
+            <span>23K</span>
+            SHARE
+        </label>
+        <label class="badge-compartir-azul">
+            <span>23K</span>
+            SHARE
+        </label>
+        <label class="badge-compartir-gris">
+            <span>23K</span>
+            SHARE
+        </label>
+        <label class="badge-compartir-negro">
+            <span>23K</span>
+            SHARE
+        </label>
+        <label class="badge-compartir-blanco">
+            <span>23K</span>
+            SHARE
+        </label>
     </div>
 </pre>
 </div>
-        <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
-        </p>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
 
@@ -87,14 +135,11 @@
     <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
 
     <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
-    <div class="guia-pagina">
+    <div class="lista-scroll">
         <ul>
-            <li><a href="#a1_pt">Subtitulo 1</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
+            <li><a href="#t1">Compartir</a></li>
+            <li><a href="#t2">Muestra</a></li>
+            <li><a href="#t3">Colores</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
