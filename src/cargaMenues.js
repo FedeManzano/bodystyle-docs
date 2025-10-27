@@ -99,8 +99,8 @@ import $ from "jquery"
             <li><a href="https://github.com/FedeManzano/bodystyle">Repositorio</a></li>
             <li><a href="../index.html">Inicio</a></li>
         </ul>
-        <!--DROP para el versionado -->
-        <a class="btn-verde-o  t-blanco p-1">V4.5.0</a>
+        <a class="badge-sub com-trigger bor-pill bg-bodyui" style="margin-right: 150px"
+        data-info="Descarga de los archivos procesados y transpilados de la Bodystyle, no están incluidos los archivos con el código fuente.">Descarga<span class="ocultar-desde-chicos">v4.5.0</span></a>
         `
     )
 
@@ -119,7 +119,7 @@ import $ from "jquery"
         `
         <div class="card">
             <div class="card-simple-dark">
-                <h4>Descargar Bodystyle<span class="badge badge-rojo">New</span></h4>
+                <h4>Descargar Bodystyle<span class="badge badge-bodyui">4.5.0</span></h4>
                 <small>Versión 4.5.0</small>
                 <p>
                     Con el botón que está abajo de este texto descargará
@@ -128,7 +128,7 @@ import $ from "jquery"
                     data-tips="Versión procesada de Bodystyle"
                     data-pos='right'>versión 4.5.0</a>.
                 </p> 
-                <a target="_blank" href="https://mega.nz/file/cQMHGSDS#kK6bvOzeLMdLy15qLuqAwYaY_j_UnDWuyVAudZCYoTw" class="btn-cover-sm-o btn-white-o mar-2 tips-ele"
+                <a target="_blank" href="https://mega.nz/file/cQMHGSDS#kK6bvOzeLMdLy15qLuqAwYaY_j_UnDWuyVAudZCYoTw" class="btn-cover-sm fd-bodyui mar-2 tips-ele bor-pill"
                 data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v4.0.0_dist.zip">Descargar</a>
             </div>
         </div> 
