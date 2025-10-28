@@ -497,6 +497,56 @@
                 las que se nombran igual en ambos idiomas no se mencionan.
             </div>
         </article>
+        <article class="articulo">
+            <h2 id="t13">Borrar Margenes</h2>
+            <p>
+                Es posible borrar un margen de un elemento, en muchas oportunidades tenemos definidos para un determinado 
+                elemento un margen que siempre se aplica ya que existe una propiedad CSS asignada al mismo, pero queremos de 
+                excepcional quitar ese margen y mostrar el elemento. En estos casos usamos las clases de margens vistas con el parámetro 
+                igual a 0.
+            </p>
+
+            <h4>Con Margen</h4>
+            <div class="d-flex mt-3">
+                <div class="p-1 ta-c c-white bg-red">
+                    CON 1
+                </div>
+                <div class="p-1 ta-c c-white bg-red ml-3">
+                    CON 1
+                </div>
+            </div>
+
+            <h4>Sin Margen</h4>
+            <div class="d-flex mt-3">
+                <div class="p-1 ta-c c-white bg-red">
+                    CON 1
+                </div>
+                <div class="p-1 ta-c c-white bg-red m-0">
+                    CON 1
+                </div>
+            </div>
+
+            <div class="alerta-negra mt-3">
+                Notese que podemos utilizar esta propiedad desde cualquier tipo de dispositivo por ejemplo 
+                cuando disponemos de un margen en disposivos grandes y medianos pero queremos que en dispositivos chicos 
+                no se aplique, en estos casos definimos <span class="badge badge-red">.m-s-0</span> y se borrará el margen.
+            </div>
+
+            <div class="codigo">
+<pre id="c10" class="cod-html">
+       <div class="d-flex mt-3">
+            <div class="p-1 ta-c c-white bg-red">
+                CON 1
+            </div>
+            <div class="p-1 ta-c c-white bg-red m-0"> <!--Margen de 0-->
+                CON 1
+            </div>
+        </div>
+    </pre>
+</div>
+
+
+        </article>
 
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
@@ -519,6 +569,7 @@
             <li><a href="#t10">Margenes X e Y</a></li>
             <li><a href="#t11">X e Y Tamaños</a></li>
             <li><a href="#t12">Alias</a></li>
+            <li><a href="#t13">Borrar Margenes</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
