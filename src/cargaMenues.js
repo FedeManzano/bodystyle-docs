@@ -58,6 +58,7 @@ import "./bodystyle"
         </ul>
         <a  class="titulo c-blanco t-may" data-target="#m5">JS</a>
         <ul id="m5">
+            <li><a href="gestion_errores.html">Gestion Errores<span class='badge badge-bodyui'>New</span></a></li>
             <li><a href="boton_inicio.html">Botón Inicio</a></li>
             <li><a href="colecciones_flotantes.html">Lista Fixed</a></li>
             <li><a href="dropdown.html">Dropdown</a></li>
