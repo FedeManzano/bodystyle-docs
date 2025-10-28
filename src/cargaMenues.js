@@ -49,6 +49,7 @@ import "./bodystyle"
         <a  class="titulo c-blanco t-may" data-target="#m4">Formularios</a>
         <ul id="m4">
             <li><a href="input.html">Input</a></li>
+            <li><a href="input_range.html">Input Range<span class='badge badge-bodyui'>New</span></a></li>
             <li><a href="select.html">Select</a></li>
             <li><a href="switch.html">Switch</a></li>
             <li><a href="checkbox.html">Checkbox</a></li>
@@ -67,6 +68,7 @@ import "./bodystyle"
             <li><a href="modal.html">Modals</a></li>
             <li><a href="tabs.html">Tabs</a></li>
             <li><a href="imagenes.html">Imagenes<span class='badge badge-bodyui'>New</span></a></li>
+            <li><a href="scrollspy.html">ScrollSpy<span class='badge badge-bodyui'>New</span></a></li>
         </ul>
         <a  class="titulo c-blanco t-may" data-target="#m6">Componentes</a>
         <ul id="m6">
