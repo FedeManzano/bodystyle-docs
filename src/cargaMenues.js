@@ -139,7 +139,7 @@ import "./bodystyle"
                 </p> 
                 <a target="_blank" href="https://mega.nz/file/ZEkV0ZQI#a0-_5aoELyOirQGbHlT7xM7a_mApM0GifHGOHAM9hH0" class="btn-cover-sm fd-bodyui mar-2 tips-ele bor-pill"
                 data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v4.5.0.zip" data-pos='right'>Descargar</a>
-                <a target="_blank" href="" class="btn-cover-sm-o btn-white-o mar-1 tips-ele bor-pill"
+                <a href="https://mega.nz/file/tcdUFBBL#xtHmVTqQo-EMatjHXAq_MRWgvGLp5qjurlaHhWwBLv4" target="_blank" href="" class="btn-cover-sm-o btn-white-o mar-1 tips-ele bor-pill"
                 data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bs_docs_4.5.0.zip">Docs 4.5.0</a>
             </div>
         </div> 
