@@ -74,7 +74,7 @@ En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de 
 Para disponer de la documentación se puede ingresar a: <br>
 
 **Recomendado**
-- [Descarga v1.5.0](https://mega.nz/file/cJEzHBJD#cIRF8aVdoRhwX34H5e1kuK0CLvZDeO330vchtoTY_FM)
+- [Descarga v1.5.0](https://mega.nz/file/pFNnHbZJ#ZgwVdzib3uVitWNvJSyQhFpD9ZD0DQlhcG6Cs4qxN-o)
 - [Descarga v1.0.0](https://mega.nz/file/Eds0HSgL#r8pNNctkK8UQ5cpNeH_zQk6loqFp7--uUAn9pb-Wn1g)
 
 ## Autor
