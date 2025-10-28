@@ -73,8 +73,12 @@ En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de 
 
 Para disponer de la documentación se puede ingresar a: <br>
 
+**Recomendado**
+- [Descarga v1.5.0](https://mega.nz/file/tcdUFBBL#xtHmVTqQo-EMatjHXAq_MRWgvGLp5qjurlaHhWwBLv4)
+- [Descarga v1.0.0](https://mega.nz/file/Eds0HSgL#r8pNNctkK8UQ5cpNeH_zQk6loqFp7--uUAn9pb-Wn1g)
+
+**No Recomendado**
 - [https://bodystyle.webcindario.com](https://bodystyle.webcindario.com)
-- [Descarga](https://mega.nz/file/Eds0HSgL#r8pNNctkK8UQ5cpNeH_zQk6loqFp7--uUAn9pb-Wn1g)
 
 
 ## Autor
