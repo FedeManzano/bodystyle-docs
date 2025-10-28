@@ -30,9 +30,11 @@
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
-            <h1>Imagenes <span class="badge badge-bodyui">4.5.0</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ducimus distinctio doloremque aperiam fugiat,
-                 sapiente animi quam ut minima recusandae aut blanditiis tenetur. Animi earum culpa, quam incidunt nemo dolores?</p>
+            <h1 id="t1">Imagenes <span class="badge badge-bodyui">4.5.0</span></h1>
+            <p>
+                En este apartado vamos a ver un conjunto de clases que permiter tratar imágenes, a través de CSS 
+                y de JavaScript de modo tal de disponer de cierta facilidad al momento de manipular estos elementos.
+            </p>
             
             <div class="mar-2 boton-descarga"></div>
         </section>
@@ -40,61 +42,144 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="a1_pt">SubTitulo Artículo 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus ea nulla aliquam soluta commodi laboriosam nobis reprehenderit, 
-                labore est asperiores voluptatum beatae fuga atque rem eos nemo rerum magnam.</p>
+            <h2 id="t2">Display</h2>
+            <p>
+                Con las imagenes cuadradas (mismo alto que ancho) podemos utilizar la clase 
+                <span class="badge badge-red">.img-display-[tam]</span> donde tam es un numero 
+                multiplo 8 que va desde 8 a 800PX perimtiendo generar un contenedor que ajuste al tamaño de la 
+                imagen a un valor deseado sin desbordamiento. En el caso de la imagen utilizará la clase 
+                <span class="badge badge-red">.img-responsive</span> que permitirá ajustarla al contenedor.
+            </p>
+
+            <div class="d-flex just-around mt-3">
+                <div class="img-display-8">
+                    <img class="img-responsive" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Imagen de 8 PX">
+                </div>
+                <div class="img-display-16">
+                    <img class="img-responsive" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Imagen de 8 PX">
+                </div>
+                <div class="img-display-24">
+                    <img class="img-responsive" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Imagen de 8 PX">
+                </div>
+                <div class="img-display-32">
+                    <img class="img-responsive" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Imagen de 8 PX">
+                </div>
+                <div class="img-display-40">
+                    <img class="img-responsive" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Imagen de 8 PX">
+                </div>
+                <div class="img-display-48">
+                    <img class="img-responsive" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Imagen de 8 PX">
+                </div>
+                <div class="img-display-56">
+                    <img class="img-responsive" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Imagen de 8 PX">
+                </div>
+            </div>
 
 <div class="codigo">
-
 <pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
+    <div class="d-flex just-around">
+        <div class="img-display-8">
+            <img class="img-responsive" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Imagen de 8 PX">
+        </div>
+        <div class="img-display-16">
+            <img class="img-responsive" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Imagen de 8 PX">
+        </div>
+        <div class="img-display-24">
+            <img class="img-responsive" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Imagen de 8 PX">
+        </div>
+        <div class="img-display-32">
+            <img class="img-responsive" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Imagen de 8 PX">
+        </div>
+        <div class="img-display-40">
+            <img class="img-responsive" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Imagen de 8 PX">
+        </div>
+        <div class="img-display-48">
+            <img class="img-responsive" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Imagen de 8 PX">
+        </div>
+        <div class="img-display-56">
+            <img class="img-responsive" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Imagen de 8 PX">
+        </div>
     </div>
 </pre>
 </div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
-<div class="codigo">
 
-<pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
-</pre>
-</div>
-        <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
-        </p>
+
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t3">Zoom</h2>
+            <p class="mb-3">
+                Para utilizar esta funcionalidad tenemos que inicializar el módulo 
+                correspondiente desde la lógica de la librería como se muestra a 
+                continuación y luego agregar la clase <span class="badge badge-red">.img-emp</span> a la 
+                imagen a la que se le quiera hacer zoom. 
+            </p>
 
+            <div class="img-display-248">
+                <img class="img-responsive img-exp" src="../logo/logo.png" alt="Imagen zoom">
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="img-display-248">
+        <img class="img-responsive img-exp" src="../logo/logo.png" alt="Imagen zoom">
+    </div>
+</pre>
+</div>
+
+<div class="codigo">
+<pre class="cod-js" id="c3">
+    // Inicializar el módulo imagenes 
+    BS.ImagenesInit()
+</pre>
+</div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t4">Paralax</h2>
+            <p class="mb-3">
+                La librería también cuenta con el conocido efecto paralax para cambiar el foco 
+                en la imagen generar la impresión de profundidad. para lograr esto tendremos 
+                que inicializar otro módulo de la lógica de la librería, luego encerrar a la imagen 
+                dentro del un contenedor que posee la clase <span class="badge badge-red">.paralax-contenedor</span>
+            </p>
+
+            <div style=" height: 400px;">
+                <div class="paralax-contenedor">
+                     <img class="img-responsive paralax" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Efecto paralax">
+                </div>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c4">
+    <div style=" height: 400px;">
+        <!--Descomentar el código de abajo-->
+        <!--<div class="paralax-contenedor">
+            <img class="img-responsive paralax" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Efecto paralax">
+        </div> -->
+    </div>
+</pre>
+</div>
+<div class="codigo">
+<pre class="cod-js" id="c5">
+    // Inicialización del módulo Paralax 
+    BS.ParalaxInit()
+</pre>
+</div>
+
+        </article>
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
     <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
 
     <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
-    <div class="guia-pagina">
+    <div class="lista-scroll">
         <ul>
-            <li><a href="#a1_pt">Subtitulo 1</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
+            <li><a href="#t1">Imagenes</a></li>
+            <li><a href="#t2">Display Imagen</a></li>
+            <li><a href="#t3">Zoom</a></li>
+            <li><a href="#t4">Paralax</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
@@ -107,5 +192,10 @@
         var idMenu = "#m5"
     </script>
     <script src="../js/docs-body.js"></script>
+    <script>
+        BS.ImagenesInit()
+        BS.CodigoJsInit()
+        BS.ParalaxInit()
+    </script>
 </body>
 </html>
