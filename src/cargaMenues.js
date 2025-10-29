@@ -139,8 +139,8 @@ import "./bodystyle"
                 </p> 
                 <a target="_blank" href="https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww" class="btn-cover-sm fd-bodyui mar-2 tips-ele bor-pill"
                 data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v4.5.0.zip" data-pos='right'>Descargar</a>
-                <a href="https://mega.nz/file/tcdUFBBL#xtHmVTqQo-EMatjHXAq_MRWgvGLp5qjurlaHhWwBLv4" target="_blank" href="" class="btn-cover-sm-o btn-white-o mar-1 tips-ele bor-pill"
-                data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bs_docs_4.5.0.zip">Docs 4.5.0</a>
+                <a href="#" target="_blank" href="" class="btn-cover-sm-o btn-white-o mar-1 tips-ele bor-pill"
+                data-tips="No disponible desde la copia local.">Docs 4.5.0</a>
             </div>
         </div> 
         </div>
