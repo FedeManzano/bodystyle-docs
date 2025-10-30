@@ -24,8 +24,8 @@
         <div class="bs-nav-sm align-left-list align-right-list">
             <label class="btn-menu ocultar-solo-grandes" ></label>
             <label  class="logo-container" style="cursor: pointer;">
-                <img class="com-trigger" src="./logo/logo.png" alt="Logo de Bodystyle"
-                data-info="<span class='f-w-7'>Autor <i class='bs-sunglass c-naranja fz-16 mt-1'></i>: </span><a target='_blank' href='https://github.com/FedeManzano' class='link'>Federico Manzano</a> <br> Estudiante de Ingeniería en Informática en la <span class='f-w-7'>Universidad Nacional de la Matanza.</span>" data-evt="click">
+                <img id="autor" class="disparador" src="./logo/logo.png" alt="Logo de Bodystyle"
+                data-info="" data-evt="click">
             </label>
             <div class="ocultar-desde-medianos">
                 <ul >
@@ -42,8 +42,8 @@
             
             <div class="right-content">
                 <label  class="badge-mje-right badge-mje-bodyui mr-2 mb-1">v4.8.0</label>
-                <a href=""><i class="bs-download c-white fz-30 com-trigger"
-                    data-info="Versión transpilada de <span class='f-w-7'>Bodystyle v4.8.0</span>"></i></a>
+                <a><i id="descarga_lib" class="bs-download c-white fz-30 disparador"
+                    data-info="Versión transpilada de <span class='f-w-7'>Bodystyle v4.8.0</span>" data-pos="left" data-evt="click"></i></a>
                 <a target="_blank" href="https://github.com/FedeManzano/bodystyle" class="com-trigger"
                         data-info="Repositorio de la librería disponible para ser descargado y modificado."><i class="bs-github-2 fz-30 ml-1 c-white"></i></a>
             </div>
@@ -65,14 +65,14 @@
             <h2 class="mt-1 c-gris fz-18 fz-s-16 f-w-4">Funcionalidades que permiten la rápida creación del Front-End 
                 en aplicaciones y sitios web.</h2>
             <div class="d-flex just-center flex-wrap-s mt-5">
-                <a href="./paginas/get_started.html" class="btn-lg-o btn-white-o mr-1 mr-xs-0 mb-xs-1 bor-pill tips-ele"
+                <a  href="./paginas/get_started.html" class="btn-lg-o btn-white-o mr-1 mr-xs-0 mb-xs-1 bor-pill tips-ele"
                 data-tips="Empezar a utilizar la Bodystyle" data-pos="top">Get Started</a>
-                <a target="_blank" href="#" class="btn-lg fd-gris-n bor-pill com-trigger"
-                data-info="<span class='f-w-7'>Desde Aquí puede descargarse la documentación:</span> <span class='badge badge-bodyui'>v1.5.0</span>. El sitio que usted está viendo en este momento, brindando mejor disponibilidad de los recursos provistos sin necesidad de tener que ver publicidad innecesaria. Si ya dispone de la docuemtación este enlace estará cerrado." data-pos="top">Docs v1.5.0</a>
+                <a id="descaraga_docs" target="_blank" class="btn-lg fd-gris-n bor-pill disparador"
+                data-info="" data-pos="top" data-evt="click">Docs v1.5.0</a>
             </div>
             <div class="mt-2">
                 <a target="_blank" href="https://github.com/FedeManzano/bodystyle/releases/tag/v4.5.0" class="link tips-ele"
-                data-tips="Versión 4.5.0 De Bodystyle">Releases 4.5.0</a>
+                data-tips="Versión 4.8.0 De Bodystyle">Releases 4.8.0</a>
             </div>
         </div>
     </section>
@@ -85,11 +85,67 @@
         </ul>
     </div>
 
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
     
     <script>
         BS.ToolTipsInit()
         BS.NavigationInit("#nav", true)
+        BS.PersonalizadoInit({ori: "disparador", ele: ""})
+
+        $("#descaraga_docs").attr("data-info", 
+            `
+                <div  class="card">
+                    <div  class="card-simple-dark">
+                        <h4>Documentación</h4>
+                        <small>Versión 4.8.0</small>
+                        <p>
+                            Desde este enlace vamos a poder descargar la 
+                            <a target="_blank" href='https://github.com/FedeManzano/bodystyle-docs' class='link'>Versión 1.8.0</a> de la documentación de <a target='_blank' href='https://github.com/FedeManzano/bodystyle' class='link'> Bodystyle 4.8.0.</a>.
+                            Si ya dispone de la documentación de manera local este enlace estará deshabilitado.
+                        </p> 
+                        <a target='_blank'  href=""  class="btn-cover-sm-o btn-bodyui-o  bor-pill mar-2"><i class='bs-zip fz-22 c-yellow'>&nbsp;</i>Docs_v4.8.0.zip</a>
+                    </div>
+                </div>
+            `
+        )
+
+        $("#descarga_lib").attr("data-info", 
+            `
+                <div  class="card">
+                    <div  class="card-simple-dark">
+                        <h4>Bodystyle</h4>
+                        <small>Versión 4.8.0</small>
+                        <p>
+                            Versión transpilada y procesada de la librería.
+                        </p> 
+                        <a target='_blank'  href="https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58"  class="btn-cover-sm-o btn-bodyui-o  bor-pill mar-2"><i class='bs-zip fz-22 c-yellow'>&nbsp;</i>Docs_v4.8.0.zip</a>
+                    </div>
+                </div>
+            `
+        )
+
+        $("#autor").attr("data-info", 
+            `
+                <div  class="card">
+                    <div  class="card-simple-dark ta-c">
+                        <h4>Autor</h4>
+                        <small>Federico Manzano</small>
+                        <div class="ta-c d-flex flex-column ali-center mt-3">
+                            <img src="imagenes/20191106_205049.png" height='50px' width='50px' />
+                            <p>
+                                Estudiante de Ingerniería Informática de la <span class="f-w-7 c-verde">Universidad Nacional de la Matanza.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            `
+        )
+
+
+
     </script>
 </body>
 </html>
