@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Propiedades CSS de texto para la correcta gestión y mejora de la visualización dentro de una página web.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Texto</title>
+</head>
+<body>
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO DE LA SECCIÓN --------------------------------------------->
+        <section class="encabezado">
+            <h1 class="scroll-item" id="t1">Texto</h1>
+            <p>
+                Es momento de documentar las funcionalidades de texto que provee la librería, 
+                a través de las secciónes de este documento vamos a cambiar los colores del texto,
+                el grosor de la fuente, el tamaño de la fuente y la alineación. Se van a mencionar 
+                las clases y la ubicación dentro del repositorio para realizar los ajustes necesarios en
+                función del problema a resolver.
+            </p>
+
+            <div class="alerta-negra mar-3">
+                Es importante aclarar que para esta versión se utilizó una fuente que
+                <span class="f-grosor-5 c-rojo">NO ES PROPIEDAD DEL AUTOR DE LA LIBRERÍA</span>
+                sino que pertenece a las fuentes de <span class="badge badge-gris">Google Fonts</span> 
+                <a href="https://fonts.google.com/?query=roboto" 
+                   class="link tips-ele"
+                   data-tips="Oficial <span class='badge badge-gris'>Google Fonts</span">Roboto</a> para más 
+                información visite el sitio oficial.
+            </div>
+            
+             <div class="mar-2 boton-descarga"></div>
+        </section>
+
+        <!-- ARTÍCULO 1 DE LA SECCIÓN --------------------------------------------->
+        <article class="articulo">
+            <h2 class="scroll-item" id="t2">Cabeceras</h2>
+            <p>
+                Las cabeceras H de la librería su formato, visualización y configuración de las 
+                mismas. 
+            </p>
+
+            <div class="alerta-negra mar-3">
+                Una aclaración importante el valor por defecto del tamaño de la letra (1EM) se corresponde 
+                con 16px, por lo tanto los tamaños están definidos a partir de esta unidad y pueden observarse 
+                dentro del repositorio en 
+                <span class="badge badge-gris tips-ele"
+                data-tips="<i class='fa-brands fa-sass c-rojo-ro'>&nbsp;</i>Archivo Configuraciones Generales">sass/_generales.scss</span>.
+            </div>
+
+            <h3 id="t3">Visualización de las Cabeceras</h3>
+
+            <p class="h1">Esto es un H1</p>
+            <p class="h2">Esto es un H2</p>
+            <p class="h3">Esto es un H3</p>
+            <p class="h4">Esto es un H4</p>
+            <p class="h5">Esto es un H5</p>
+            <p class="h6">Esto es un H6</p>
+            
+            <p class="mar-3">
+                También se pueden crear texto de cabeceras a partir de clases de CSS predefinidas en 
+                la librería, por ejemplo se quiere crear un H1 sin utilizar la etqueta html H1, entonces 
+                se utiliza la clase <span class="badge badge-gris">.h1</span> lo cual da como resultado lo siguiente:
+            </p>
+
+            <p class="h1">Esto es un H1</p>
+            <p class="h2">Esto es un H2</p>
+            <p class="h3">Esto es un H3</p>
+            <p class="h4">Esto es un H4</p>
+            <p class="h5">Esto es un H5</p>
+            <p class="h6">Esto es un H6</p>
+
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <!-- parrafos mostrados como cabeceras -->
+
+    <p class="h1">Esto es un H1</p>
+    <p class="h2">Esto es un H2</p>
+    <p class="h3">Esto es un H3</p>
+    <p class="h4">Esto es un H4</p>
+    <p class="h5">Esto es un H5</p>
+    <p class="h6">Esto es un H6</p>
+
+</pre>
+</div>
+            <h3 class="scroll-item" id="t4">Código de bodystyle</h3>
+            <p>
+                El siguiente código cambia el estilo de un elemento de texto y lo convierte 
+                en un elemento visualmente igual a las cabeceras.
+            </p>
+<div class="codigo">
+
+<pre class="cod-css" id="c2">
+    // Tamaños de letras
+    $letras:(
+                        h1: 2.0em,
+                        h2: 1.6em,
+                        h3: 1.2em,
+                        h4: 1.15 em,
+                        h5: 1.1 em,
+                        h6: 1.1 em,
+                        p: 1.1em,
+                        span: 1em,
+                        a: 1em
+    );
+</pre>
+</div>
+        <p class="alerta-negra">
+            Este código se encuentra en el archivo sass 
+            <span class="badge badge-rojo tips-ele"
+            data-tips="<i class='fa-brands fa-sass c-rojo-ro'>&nbsp;</i>Archivo SASS del Repositorio">sass/globales/_variables.scss</span>
+        </p>
+        </article>
+        <!-- FIN ARTÍCULO 1 DE LA SECCIÓN --------------------------------------------->
+        
+        <!-- ARTÍCULO 2 DE LA SECCIÓN --------------------------------------------->
+        <article class="articulo">
+            <h2 class="scroll-item" id="t5">Grosor de la fuente</h2>
+
+            <p>
+                Se trata de la propiedad  <span class="badge badge-gris">font-weight</span>
+                de CSS, para aumentar el tamaño del trazo la fuente. La librería dispone de 
+                un conjunto de clases bien estructuradas para llevar a cabo esta tarea sin enbargo, en esta versión 
+                se incorpora la integración en el lenguaje inglés, lo cual brinda las mismas funcionalidades con más 
+                opciones para definir al elemento afectado.
+            </p>
+
+            <h3 class="scroll-item" id="t6">Clase <span class="badge badge-gris">f-grosor-[valor]</span> o 
+                              <span class="badge badge-gris">f-w-[valor]</span>
+            </h3>
+            <p>
+                Es un conjunto de clases que trabajan con un parámetro [valor] a través del mismo
+                se definirá el trazo a utilizar. <br>
+                El parámetro va desde 1 al 9. Siendo 1 equivalente al valor 100 de la propiedad font-weight de CSS.
+            </p>
+
+            <div class="mar-3">
+
+                <!--En español -->
+                <p class="f-w-5 mab-1 c-rojo">En Español</p>
+                <p class="f-grosor-1">Esto es grosor 100</p>
+                <p class="f-grosor-2">Esto es grosor 200</p>
+                <p class="f-grosor-3">Esto es grosor 300</p>
+                <p class="f-grosor-4">Esto es grosor 400</p>
+                <p class="f-grosor-5">Esto es grosor 500</p>
+                <p class="f-grosor-6">Esto es grosor 600</p>
+                <p class="f-grosor-7">Esto es grosor 700</p>
+                <p class="f-grosor-8">Esto es grosor 800</p>
+                <p class="f-grosor-9">Esto es grosor 900</p>
+                <p class="f-grosor-b">Esto es grosor bold</p>
+
+                <p class="f-w-5 my-1 c-rojo">En Inglés</p>
+                <!--En idioma inglés-->
+                <p class="f-w-1">Esto es grosor 100</p>
+                <p class="f-w-2">Esto es grosor 200</p>
+                <p class="f-w-3">Esto es grosor 300</p>
+                <p class="f-w-4">Esto es grosor 400</p>
+                <p class="f-w-5">Esto es grosor 500</p>
+                <p class="f-w-6">Esto es grosor 600</p>
+                <p class="f-w-7">Esto es grosor 700</p>
+                <p class="f-w-8">Esto es grosor 800</p>
+                <p class="f-w-9">Esto es grosor 900</p>
+                <p class="f-w-b">Esto es grosor bold</p>
+            </div>
+
+    <div class="codigo">
+        <pre class="cod-html" id="c3">
+
+            <div class="mar-3">
+                <!-- f-grosor-[parámetro (1 - 9) | b]-->
+                <!-- En español -->
+                <p class="f-grosor-1">Esto es grosor 100</p>
+                <p class="f-grosor-2">Esto es grosor 200</p>
+                <p class="f-grosor-3">Esto es grosor 300</p>
+                <p class="f-grosor-4">Esto es grosor 400</p>
+                <p class="f-grosor-5">Esto es grosor 500</p>
+                <p class="f-grosor-6">Esto es grosor 600</p>
+                <p class="f-grosor-7">Esto es grosor 700</p>
+                <p class="f-grosor-8">Esto es grosor 800</p>
+                <p class="f-grosor-9">Esto es grosor 900</p>
+                <p class="f-grosor-b">Esto es grosor bold</p>
+
+                <!-- En inglés -->
+                <p class="f-w-1">Esto es grosor 100</p>
+                <p class="f-w-2">Esto es grosor 200</p>
+                <p class="f-w-3">Esto es grosor 300</p>
+                <p class="f-w-4">Esto es grosor 400</p>
+                <p class="f-w-5">Esto es grosor 500</p>
+                <p class="f-w-6">Esto es grosor 600</p>
+                <p class="f-w-7">Esto es grosor 700</p>
+                <p class="f-w-8">Esto es grosor 800</p>
+                <p class="f-w-9">Esto es grosor 900</p>
+                <p class="f-w-b">Esto es grosor bold</p>
+            </div>
+        </pre>
+    </div>
+
+
+        </article>
+        <!-- FIN ARTÍCULO 2 DE LA SECCIÓN --------------------------------------------->
+
+        <!-- ARTÍCULO 3 DE LA SECCIÓN --------------------------------------------->
+         <article class="articulo">
+            <h2 class="scroll-item" id="t7">Colores de Texto</h2>
+            <p>
+                A través de las clases CSS provistas podemos cambiar el color del 
+                texto sin añadir código CSS adicional. Disponemos de un conjunto de clases 
+                que permite realizar esta tarea solo desde el código HTML del sitio en desarrollo.
+            </p>
+
+            <div class="alerta-negra mar-3">
+                Para definir el color del texto las clases disponen de un formato para poder recordarlas
+                <span class="badge badge-rojo">c-[color]-[parametro ID]</span>, los nombres son bastante 
+                descriptivos pero siempre hay que tener disponible
+                la documentación.
+            </div>
+
+            <h3 id="t8">Documentación de Colores de Texto</h3>
+            <div class="fila">
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-rojo">.c-rojo</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-rojo-c">.c-rojo-c</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-rojo-o">.c-rojo-o</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-rojo-t">.c-rojo-t</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-rojo-an">.c-rojo-an</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-rojo-ro">.c-rojo-ro</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-azul">.c-azul</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-azul-c">.c-azul-c</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-azul-o fd-blanco">.c-azul-o</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-azul-ve fd-blanco">.c-azul-ve</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-azul-ve-s fd-blanco">.c-azul-s</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-azul-ve-c fd-blanco">.c-azul-c</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-azul-t fd-blanco">.c-azul-t</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-azul-vi fd-blanco">.c-azul-vi</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-verde">.c-verde</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-verde-c">.c-verde-c</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-verde-o">.c-verde-o</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-verde-t">.c-verde-t</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-verde-az fd-blanco">.c-verde-az</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-verde-am">.c-verde-am</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-gris">.c-gris</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-gris-c">.c-gris-c</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-gris-o fd-blanco">.c-gris-o</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-gris-t">.c-gris-t</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-gris-az fd-blanco">.c-gris-az</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-gris-o">.c-gris-o</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-gris-az-c fd-blanco">.c-gris-az-c</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-gris-az-o fd-blanco">.c-gris-az-o</p>
+
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-gris-n fd-blanco">.c-gris-n</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-blanco fd-negro">.c-blanco</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-negro fd-blanco">.c-negro</p>
+
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-violeta">.c-violeta</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-violeta-c">.c-violeta-c</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-violeta-o">.c-violeta-o</p>
+
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-violeta-az">.c-violeta-az</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-violeta-o">.c-violeta-o</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-violeta-ro">.c-violeta-ro</p>
+
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-naranja">.c-naranja</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-naranja-c">.c-naranja-c</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-naranja-o">.c-naranja-o</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-naranja-t">.c-naranja-t</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-naranja-ro">.c-naranja-ro</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-naranja-am">.c-naranja-am</p>
+
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-amarillo">.c-amarillo</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-amarillo-c">.c-amarillo-c</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-amarillo-o">.c-amarillo-o</p>
+
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-amarillo-t">.c-amarillo-t</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-amarillo-ve">.c-amarillo-ve</p>
+               <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-amarillo-an">.c-amarillo-an</p>
+            </div>
+
+            <h3 class="scroll-item" id="t9">Colores en Inglés</h3>
+
+            <div class="row">
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-red">.c-red</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-red-s">.c-red-s</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-red-d">.c-red-d</p>
+
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-green">.c-green</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-green-s">.c-green-s</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-green-d">.c-green-d</p>
+
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-grey">.c-grey</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-grey-s">.c-grey-s</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-grey-d bg-white">.c-grey-d</p>
+
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-violet">.c-violet</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-violet-s">.c-violet-s</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-violet-d">.c-violet-d</p>
+
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-blue">.c-blue</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-blue-s">.c-blue-s</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-blue-d bg-white">.c-blue-d</p>
+
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-yellow">.c-yellow</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-yellow-s">.c-yellow-s</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-yellow-d">.c-yellow-d</p>
+
+
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-orange">.c-orange</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-orange-s">.c-orange-s</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-orange-d">.c-orange-d</p>
+
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-black">.c-black</p>
+                <p class="cxs-6 cs-4 cm-3 cl-2 t-c c-white">.c-white-s</p>
+
+            </div>
+         </article>
+        <!-- FIN ARTÍCULO 3 DE LA SECCIÓN --------------------------------------------->
+
+        <!-- ARTÍCULO 4 DE LA SECCIÓN --------------------------------------------->
+        <article class="articulo">
+            <h2 class="scroll-item" id="t10">Alineación del texto</h2>
+            <p>
+                Es muy común que se necesite darle una alineación al texto, para esto CSS 
+                brinda la instrucción <span class="badge badge-gris">text-aligs: [center | rigth | left]</span>
+                para alinear el texto a la izquierda, al centro o a la derecha. <br>
+                Bodystile tiene incorporadas algunas clases que nos permitirán realizar lo antes mencionado pero 
+                si agregar código CSS.
+            </p>
+
+            <h3 id="t11">Texto Alineado al Centro</h3>
+            <p class="mab-3">
+                La clase utilizada para alinear al centro el texto es 
+                <span class="badge badge-gris">.a-c</span> o <span class="badge badge-gris">.ta-c</span>. 
+            </p>
+            <p class="a-c fd-rojo">Esto es un texto centrado con .a-c</p>
+            <p class="ta-c fd-rojo">Esto es un texto centrado con .ta-c</p>
+
+            <div class="codigo">
+        <pre class="cod-html" id="c4">
+        <!--Centra el texto -->
+        <p class="a-c fd-rojo">Esto es un texto centrado con .a-c</p>
+        <p class="ta-c fd-rojo">Esto es un texto centrado con .ta-c</p>
+        </pre>
+            </div>
+
+            <h3 class="scroll-item" id="t12">Texto Alineado a la Derecha</h3>
+
+             <p class="mab-3">
+                La clase utilizada para alinear a la derecha el texto es 
+                <span class="badge badge-gris">.a-d</span> o <span class="badge badge-gris">.ta-r</span>.
+            </p>
+
+            <p class="a-d fd-rojo">Esto es un texto alineado a la derecha .a-d</p>
+            <p class="ta-r fd-rojo">Esto es un texto alineado a la derecha .ta-r</p>
+
+            <div class="codigo">
+        <pre class="cod-html" id="c5">
+        <!--Alinea el texto a la derecha -->
+        <p class="a-d fd-rojo">Esto es un texto alineado a la derecha .a-d</p>
+        <p class="ta-r fd-rojo">Esto es un texto alineado a la derecha .ta-r</p>
+        </pre>
+            </div>
+
+            <h3 class="scroll-item" id="t13">Texto Alineado a la Izquierda</h3>
+            
+             <p class="mab-3">
+                La clase utilizada para alinear a la izquierda el texto es 
+                <span class="badge badge-gris">.a-i</span> o <span class="badge badge-gris">.ta-l</span>. 
+            </p>
+
+            <p class="a-i fd-rojo">Esto es un texto alineado a la izquierda a-i</p>
+            <p class="ta-l fd-rojo">Esto es un texto alineado a la izquierda ta-l</p>
+            <div class="codigo">
+        <pre class="cod-html" id="c6">
+        <!--Alinea el texto a la izquierda -->
+        <p class="a-i fd-rojo">Esto es un texto alineado a la izquierda a-i</p>
+        <p class="ta-l fd-rojo">Esto es un texto alineado a la izquierda ta-l</p>
+        </pre>
+            </div>
+
+        </article>
+        <!-- FIN ARTÍCULO 4 DE LA SECCIÓN --------------------------------------------->
+
+        <!-- ARTÍCULO 5 DE LA SECCIÓN --------------------------------------------->
+        <article class="articulo">
+            <h2 class="scroll-item" id="t14">Texto UPPER, LOWER, CAPITALIZE</h2>
+            <p>
+                Estas son tres clases muy útiles para ciuando queremos mostrar el texto
+                todo en mayúsculas, todo en minúsculas o formato título (capitalize). <br>
+                Las clases utilizadas son las siguientes: <br>
+                <ul class="lista-doc">
+                    <li>.t-min o .t-lw</li>
+                    <li>.t-may o t-up</li>
+                    <li>.t.cap</li>
+                </ul>
+
+                <p class="fd-rojo t-may">esto es un texto en mayúsculas con t-may</p>
+                <p class="fd-rojo t-up">esto es un texto en mayúsculas con t-up</p>
+                &nbsp;
+                <p class="fd-rojo t-min">esto es un texto en minúsculas con t-min</p>
+                <p class="fd-rojo t-lw">esto es un texto en minúsculas con t-lw</p>
+                &nbsp;
+                <p class="fd-rojo t-cap">esto es un texto en formato título</p>
+            <div class="codigo">
+        <pre class="cod-html" id="c7">
+        <!--Formatos de texto UPPER/LOWER/CAPITALIZE -->
+        <p class="fd-rojo t-may">esto es un texto en mayúsculas con t-may</p>
+        <p class="fd-rojo t-up">esto es un texto en mayúsculas con t-up</p>
+        &nbsp;
+        <p class="fd-rojo t-min">esto es un texto en minúsculas con t-min</p>
+        <p class="fd-rojo t-lw">esto es un texto en minúsculas con t-lw</p>
+        &nbsp;
+        <p class="fd-rojo t-cap">esto es un texto en formato título</p>
+        </pre>
+            </div>
+        </article>
+        <!-- FIN ARTÍCULO 5 DE LA SECCIÓN --------------------------------------------->        
+
+        <!-- ARTÍCULO 6 DE LA SECCIÓN --------------------------------------------->
+        <article class="articulo">
+            <h2 class="scroll-item" id="t15">Tamaño del texto</h2>
+            <p>
+                Es importante poder administrar el tamaño del texto de manera adecuada, ya que
+                el diseño del <span class="badge badge-gris">Front-End</span> va a depender 
+                en gran medida de esta propiedad. <br> 
+                En CSS la instrucción que nos permite realizar esto es 
+                <span class="badge badge-rojo">font-size</span> y a través de ella 
+                se configurará el tamaño de letra de los textos. Ahora bien, que ocurre cuando
+                necesitamos diversos tamaños de letra para un mismo elemento y de esta forma
+                ajustar el tamaño de letra de manera tal que se muestre de forma adecuada 
+                en todos los dispositivos. <br>
+                Para esta tarea la librería incluye un conjunto amplio de clases que permiten, para 
+                un mismo elemento configurar distintos tipos de tamaños de fuente. 
+            </p>
+
+            <h3 class="scroll-item" id="t16">Tamaño Global</h3>
+            <p>
+                La clase que se utilizará para definir el tamaño global de letra es: <br>
+                <span class="badge badge-gris">.fz-[tamaño]</span> donde (tamaño) es la medida en 
+                pixeles que va a tener el texto. 
+            </p>
+            <div class="mar-3">
+                <p class="fz-15 fd-rojo">Párrafo de 15px</p>
+                <p class="fz-20 fd-rojo">Párrafo de 20px</p>
+                <p class="fz-25 fd-rojo">Párrafo de 25px</p>
+                <p class="fz-30 fd-rojo">Párrafo de 30px</p>
+                <p class="fz-35 fd-rojo">Párrafo de 35px</p>
+            </div>
+            
+            <div class="codigo">
+        <pre class="cod-html" id="c8">
+        <!-- Tamaño de fuente de 15/20/25/30/35 px-->
+        <div class="mar-3">
+            <p class="fz-15 fd-rojo">Párrafo de 15px</p>
+            <p class="fz-20 fd-rojo">Párrafo de 20px</p>
+            <p class="fz-25 fd-rojo">Párrafo de 25px</p>
+            <p class="fz-30 fd-rojo">Párrafo de 30px</p>
+            <p class="fz-35 fd-rojo">Párrafo de 35px</p>
+        </div>
+        </pre>
+            </div>
+        
+        <div class="alerta-negra">
+            Es importate aclarar que los tamaños definidos arriba van a ser los mismos para 
+            todos los dispositivos que accedan al sitio, esto implica que para dispositivos 
+            de tamaño de pantalla más pequeño el texto se podría ver muy grande.
+        </div>
+
+        <h3 class="scroll-item" id="t17">Tamaño del Texto Resposive</h3>
+        <p>
+            En este apartado vamos a ver como definir diferentes tamaños de letra para un mismo 
+            elemento, de esta forma el mismo se visualizará de manera correcta en
+            todos los dispositivos. <br>
+            Es importante que el lector conozca los tamaños de pantalla tenidos en cuenta por 
+            la librería <span class="badge badge-gris">(xs, s, m, l)</span> que pueden consultar desde
+            en siguiente enlace al apartado correspondiente a tamaños de pantalla utilizados. <br>
+            <a href="medidas.html" class="link tips-ele"
+            data-tips="Medidas de Pantalla <span class='badge badge-gris'>medidas.html</span">(Ver Doc) Tamaños de Pantalla</a>. 
+        </p>
+
+        <div class="mar-3">
+            <p class="fz-xs-14 fz-s-18 fz-m-22 fz-28 c-rojo">Este es un texto definido para varios tipos de letra</p>
+        </div>
+
+        <div class="alerta-negra mar-3">
+            Si cambian el ancho del navegador donde están viendo esta documentación, van a notar que el texto 
+            cambiará su tamaño en función a las clases definidas en el mismo.
+        </div>
+
+        <p class="mar-3">
+            El formato es muy similar al fz-[tamaño] pero se agrega un parámetro adicional 
+            para diferenciar los tipos de dispositivos desde donde se verá el texto.
+        </p>
+        <div class="lista-doc">
+            <ul>
+                <li>fz-xs-[pixeles] siendo pixeles (1 - 300) para equipos XS</li>
+                <li>fz-s-[pixeles] siendo pixeles (1 - 300) para equipos S</li>
+                <li>fz-m-[pixeles] siendo pixeles (1 - 300) para equipos M</li>
+                <li>fz-[pixeles] siendo pixeles (1 - 300) para todos los equipos</li>
+            </ul>
+        </div>
+
+        <div class="codigo">
+    <pre class="cod-html" id="c9">
+        <!--Tamaño de texto definido para varios tipos de dispositivos -->
+        <div class="mar-3">
+            <p class="fz-xs-14 fz-s-18 fz-m-22 fz-28">
+                Este es un texto definido para varios tipos de letra
+            </p>
+        </div>
+    </pre>
+        </div>
+
+        <p>En el ejemplo anterior se definió al elemento con una fuente de:</p> 
+        <div class="lista-doc">
+            <ul>
+                <li>XS: 14px (Se muestra de 14px en dispositivos <a href="medidas.html" class="link tips-ele" data-pos="top" data-tips="Tamaño XS">XS</a>)</li>
+                <li>S: 18px (Se muestra de 14px en dispositivos <a href="medidas.html" class="link tips-ele" data-pos="top" data-tips="Tamaño S">S</a>)</li>
+                <li>M: 22px (Se muestra de 14px en dispositivos <a href="medidas.html" class="link tips-ele" data-pos="top" data-tips="Tamaño M">M</a>)</li>
+                <li>L: 28px (Se muestra de 14px en dispositivos <a href="medidas.html" class="link tips-ele" data-pos="top" data-tips="Tamaño L">L</a>)</li>
+            </ul>
+        </div>
+
+        <div class="alerta-negra ">
+            Para realizar todo lo mencionado se utilizaron las funcionalidades de SASS a través de los 
+            <span class="badge badge-gris">@media</span> que permiten establecer y configurar los comportamientos 
+            de los estilos en función de los tamaños de pantalla. <br>
+            <span class="f-w-7">Recomendación: </span>
+            <a target="_blank" 
+               href="https://github.com/FedeManzano/bodystyle/blob/master/sass/utilitarios/_textoTam.scss" 
+               class="link tips-ele"
+               data-tips="<i class='fa-brands fa-sass c-rojo-ro'></i>&nbsp;sass/utilitarios/_textoTam.scss"
+               data-pos="top">_textoTam.scss</a>
+        </div>
+
+        </article>
+            
+        <!-- ARTÍCULO 6 DE LA SECCIÓN --------------------------------------------->
+        
+        <div class="autor"></div>
+
+    </section>
+    
+    <div class="lista-scroll">
+         <ul>
+            <li><a href="#t1">Texto</a></li>
+            <li><a href="#t2">Cabeceras</a></li>
+            <li><a href="#t3">Visualización</a></li>
+            <li><a href="#t4">Clases Cabeceras</a></li>
+            <li><a href="#t5">Grosor Fuentes</a></li>
+            <li><a href="#t6">Clase F-GROSOR-[n]</a></li>
+            <li><a href="#t7">Colores Texto</a></li>
+            <li><a href="#t8">Doc Colores</a></li>
+            <li><a href="#t9">Colores en Inglés</a></li>
+            <li><a href="#t10">Alineación</a></li>
+            <li><a href="#t11">Centrada</a></li>
+            <li><a href="#t12">Derecha</a></li>
+            <li><a href="#t13">Izquierda</a></li>
+            <li><a href="#t14">Up, Lo, Cap</a></li>
+            <li><a href="#t15">Tamño del Texto</a></li>
+            <li><a href="#t16">Tamño Global</a></li>
+            <li><a href="#t17">Tamño Responsive</a></li>
+        </ul>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Texto"
+        var idMenu = "#m1"
+    </script>
+     <script src="../js/docs-body.js"></script>
+</body>
+</html>
+

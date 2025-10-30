@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+    
+    <meta name="description" content="Select de html modificado para una mejor visualización y mejorar la experiencia de usuario.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Select</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Select</h1>
+            <p>
+                El elemento de esta sección es el Select de html con un conjunto de estilos visuales 
+                que permiten una mejor visualización del elemento a través de estilos CSS y la lógica de 
+                javascript para el comportamiento dinámico.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Select Iniciación</h2>
+            <p>
+                Para poder utilizar este elemento tenemos que tener inicializado el módulo que se encarga 
+                de esta tarea. Es necesario agregar antes del cierre de la etiqueta body de html el archivo 
+                <span class="badge badge-gris tips-ele"
+                data-tips="<i class='fa-brands fa-square-js c-yellow'>&nbsp;</i> bodystyle.min.js">bodystyle.min.js</span>. 
+            </p>
+
+            <div class="select-mod-dark mt-3" id="select">
+                <select name="Selector" >
+                    <option value="rojo">Rojo</option>
+                    <option value="verde">Verde</option>
+                    <option value="azul">Azul</option>
+                </select>
+            </div>
+
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <!--Agregando este código inicializamos el SELECT de la librería-->
+    <script  src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
+    <script>
+         // El primer parámetro es ID del select necesario para poder iniciarlo
+         // Puede ser cualquier id pero es indispensable pasarlo por parámetro.
+         // No ovidarse el numeral delante del ID
+         BS.SelectInit().iniciar("#idselect", "borde")
+    </script>
+</pre>
+</div>
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="select-mod-dark mt-3" id="idselect"> <!--ID igual a lo que pasamos por parámetro-->
+        <select name="Selector" >
+            <option value="rojo">Rojo</option>
+            <option value="verde">Verde</option>
+            <option value="azul">Azul</option>
+        </select>
+    </div>
+</pre>
+</div>
+        <p class="alerta-negra">
+            Para que todo funcione correctamente hay asignarle a etqueta div con la clase 
+            <span class="badge badge-red">.select-mod-dark</span> un id elegido 
+            por el desarrollador y luego pasarlo a través del parámetro de la función 
+            BS.SelectInit().iniciar("#IDSeleccionado") no olvidarse el numeral delante del ID. <br>
+            Tener en cuenta que un ID es único para cada elemento del DOM que tenga uno, no puede repetirse. 
+        </p>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+
+        <article class="articulo">
+            <h2 id="t3">Temas Select</h2>
+            <p>
+                La librería cuenta con dos temas. El primero es el tema White y el segundo es el 
+                tema Dark, en ambos casos la funcionalidad es la misma. 
+            </p>
+
+            <div class="select-mod-white mt-3" id="select_white">
+                <select name="Selector" >
+                    <option value="rojo">Rojo</option>
+                    <option value="verde">Verde</option>
+                    <option value="azul">Azul</option>
+                </select>
+            </div>
+
+            <div class="select-mod-dark mt-3" id="select_dark">
+                <select name="Selector" >
+                    <option value="rojo">Rojo</option>
+                    <option value="verde">Verde</option>
+                    <option value="azul">Azul</option>
+                </select>
+            </div>
+
+
+<div class="codigo">
+    <pre id="c3" class="cod-html">
+        <!-- ID Seleccionado es s_white -->
+        <div class="select-mod-white mt-3" id="s_white">
+            <select name="Selector" >
+                <option value="rojo">Rojo</option>
+                <option value="verde">Verde</option>
+                <option value="azul">Azul</option>
+            </select>
+        </div>
+
+        <!-- ID Seleccionado es s_dark -->
+        <div class="select-mod-dark mt-3" id="s_dark">
+            <select name="Selector" >
+                <option value="rojo">Rojo</option>
+                <option value="verde">Verde</option>
+                <option value="azul">Azul</option>
+            </select>
+        </div>
+    </pre>
+</div>
+
+<div class="codigo">
+    <pre id="c4" class="cod-js">
+        BS.SelectInit().iniciar("#s_white", "borde"); // ID coincidente con lo definido en el HTML
+        BS.SelectInit().iniciar("#s_dark", "borde"); // ID coincidente con lo definido en el HTML
+    </pre>
+</div>
+        </article>
+
+
+        <article class="articulo">
+            <h2 id="t4">Efectos Hover</h2>
+            <p>
+                La librería cuenta con opciones para establecer el efecto 
+                de selección de opción en el select. Puede ser borde o fondo. <br>
+                En el caso de borde lo vimos en los ejemplos anteriores con el segundo parámetro 
+                enviado ahora veremos el segundo (fondo).
+            </p>
+
+            <div class="select-mod-dark mt-3" id="select_color">
+                <select name="Selector" >
+                    <option value="rojo">Rojo</option>
+                    <option value="verde">Verde</option>
+                    <option value="azul">Azul</option>
+                </select>
+            </div>
+
+<div class="codigo">
+    <pre id="c5" class="cod-html">
+        <!-- ID Seleccionado es s_white -->
+        <div class="select-mod-white mt-3" id="s_fondo">
+            <select name="Selector" >
+                <option value="rojo">Rojo</option>
+                <option value="verde">Verde</option>
+                <option value="azul">Azul</option>
+            </select>
+        </div>
+    </pre>
+</div>
+
+<div class="codigo">
+    <pre id="c6" class="cod-js">
+        BS.SelectInit().iniciar("#s_fondo", "fondo"); // ID coincidente con lo definido en el HTML
+    </pre>
+</div>
+        </article>
+
+
+        <article class="articulo">
+            <h2 id="t5">Ejemplo Formulario</h2>
+
+            <div class="container p-2 bg-black bor-rad-10">
+                <h2 class="m-0 mb-2 c-white">Registro Cliente</h2>
+                <div class="row">
+                    <div class="input-g cs-12 cm-6">
+                        <div class="grupo">
+                            <span class="span-grupo">Nombre</span>
+                            <input type="text" name="nombre">
+                        </div>
+                    </div>
+                    <div class="input-g cs-12 cm-6">
+                        <div class="grupo">
+                            <span class="span-grupo">Apellido</span>
+                            <input type="text" name="apellido">
+                        </div>
+                    </div>
+                    <div class="input-g cxs-12">
+                        <div class="grupo">
+                            <span class="span-grupo">@</span>
+                            <input type="email" name="apellido">
+                        </div>
+                    </div>
+                    <div class="select-mod-dark cxs-12" id="localidad">
+                        <select name="Selector" value="Localidad" >
+                            <option value="Localidad">Localidad</option>
+                            <option value="Ramos Mejia">Ramos Mejia</option>
+                            <option value="Villa Luzuriaga">Villa Luzuriaga</option>
+                            <option value="Tres de Febrero">Tres de Febrero</option>
+                        </select>
+                    </div>
+                   <div class="input-g cs-12 cm-6">
+                        <div class="grupo">
+                            <span class="span-grupo">Clave</span>
+                            <input type="password" name="password">
+                        </div>
+                    </div>
+
+                    <div class="input-g cs-12 cm-6">
+                        <div class="grupo">
+                            <span class="span-grupo">Repetir</span>
+                            <input type="password" name="repetirse">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex just-start mt-2">
+                    <div  class="check-radio-grupo">
+                        <input  id="ck"  type="checkbox"  class="checkbox">
+                        <label  for="ck"  class="cb-blanco">Acepta los Terminos</label>
+                    </div>
+                </div>
+
+                <div class="d-flex just-end mt-2">
+                    <input type="submit" class="btn-sm-o btn-white-o bor-pill">
+                </div>
+            </div>
+
+<div class="codigo">
+    <pre id="c7" class="cod-html">
+        <div class="container p-2 bg-black bor-rad-10">
+            <h2 class="m-0 mb-2 c-white">Registro Cliente</h2>
+            <div class="row">
+                <div class="input-g cs-12 cm-6">
+                    <div class="grupo">
+                        <span class="span-grupo">Nombre</span>
+                        <input type="text" name="nombre">
+                    </div>
+                </div>
+                <div class="input-g cs-12 cm-6">
+                    <div class="grupo">
+                        <span class="span-grupo">Apellido</span>
+                        <input type="text" name="apellido">
+                    </div>
+                </div>
+                <div class="input-g cxs-12">
+                    <div class="grupo">
+                        <span class="span-grupo">@</span>
+                        <input type="email" name="apellido">
+                    </div>
+                </div>
+                <div class="select-mod-dark cxs-12" id="loc">
+                    <select name="Selector" value="Localidad" >
+                        <option value="Localidad">Localidad</option>
+                        <option value="Ramos Mejia">Ramos Mejia</option>
+                        <option value="Villa Luzuriaga">Villa Luzuriaga</option>
+                        <option value="Tres de Febrero">Azul</option>
+                    </select>
+                </div>
+               <div class="input-g cs-12 cm-6">
+                    <div class="grupo">
+                        <span class="span-grupo">Clave</span>
+                        <input type="password" name="password">
+                    </div>
+                </div>
+                <div class="input-g cs-12 cm-6">
+                    <div class="grupo">
+                        <span class="span-grupo">Repetir</span>
+                        <input type="password" name="repetirse">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex just-start mt-2">
+                <div  class="check-radio-grupo">
+                    <input  id="ck"  type="checkbox"  class="checkbox">
+                    <label  for="ck"  class="cb-blanco">Acepta los Terminos</label>
+                </div>
+            </div>
+            <div class="d-flex just-end mt-2">
+                <input type="submit" class="btn-sm-o btn-white-o bor-pill">
+            </div>
+        </div>
+    </pre>
+</div>
+
+        </article>
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Select</a></li>
+            <li><a href="#t2">Select Iniciación</a></li>
+            <li><a href="#t3">Temas</a></li>
+            <li><a href="#t4">Efecto Hover</a></li>
+            <li><a href="#t5">Ejemplo</a></li>
+          
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Select"
+        var idMenu = "#m4"
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        BS.CodigoJsInit()
+        BS.SelectInit().iniciar("#select", "borde")
+        BS.SelectInit().iniciar("#select_white", "borde")
+        BS.SelectInit().iniciar("#select_dark", "borde")
+        BS.SelectInit().iniciar("#select_color", "fondo")
+        BS.SelectInit().iniciar("#localidad", "borde")
+    </script>
+</body>
+</html>

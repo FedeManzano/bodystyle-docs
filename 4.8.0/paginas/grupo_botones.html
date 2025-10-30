@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Elemento que permite juntar un conjunto de botones en un solo elemento.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Grupo de Botones</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Grupo de Botones</h1>
+            <p>
+                Al igual que el partado anterior 
+                <a  class="link tips-ele"
+                    href="botones.html"
+                    data-tips="<i class='fa-brands fa-html5 c-red'>&nbsp;</i> Sección de la documentación de botones.">(Botones)</a> vamos a ver otro elemento que permite 
+                el agrupamiento de estos elementos de una manera más compacta y definida en tres tamaños 
+                diferentes.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Grupo de Botones Tamaños</h2>
+            <p>
+                La librería cuenta con tres tamaños (LG, MD, SM) para la definición de estos elementos. <br>
+                La clase utilizada es btn-group / btn-grupo y la misma envuelve a los botones que se deseen agrupar.
+            </p>
+
+            <h3 id="t3">Grupo de Botones Medianos</h3>
+
+            <div class="container">
+                <div class="btn-group">
+                    <a href="#" class="btn bg-red">Botón 1</a>
+                    <a href="#" class="btn bg-green">Botón 2</a>
+                    <a href="#" class="btn bg-grey-d-1">Botón 3</a>
+                    <a href="#" class="btn bg-blue">Botón 4</a>
+                </div>
+            </div>
+
+    <div class="codigo">
+
+    <pre class="cod-html" id="c1">
+        <div class="container">
+            <div class="btn-group">
+                <a href="#" class="btn bg-red">Botón 1</a>
+                <a href="#" class="btn bg-green">Botón 2</a>
+                <a href="#" class="btn bg-grey-d-1">Botón 3</a>
+                <a href="#" class="btn bg-blue">Botón 4</a>
+            </div>
+        </div>
+    </pre>
+    </div>
+            <h3 id="t4">Grupo de Botones Pequeños</h3>
+            <p>
+                Para declarar botones más pequeños utilizamos btn-group-sm y los mismos se alinearán 
+                de la misma manera que en los botones medianos pero de tamaño más pequeño.
+            </p>
+             <div class="container mar-3">
+                <div class="btn-group-sm">
+                    <a href="#" class="btn bg-red">Botón 1</a>
+                    <a href="#" class="btn bg-green">Botón 2</a>
+                    <a href="#" class="btn bg-grey-d-1">Botón 3</a>
+                    <a href="#" class="btn bg-blue">Botón 4</a>
+                </div>
+            </div>
+<div class="codigo">
+    <pre class="cod-html" id="c2">
+         <div class="container">
+            <div class="btn-group-sm">
+                <a href="#" class="btn bg-red">Botón 1</a>
+                <a href="#" class="btn bg-green">Botón 2</a>
+                <a href="#" class="btn bg-grey-d-1">Botón 3</a>
+                <a href="#" class="btn bg-blue">Botón 4</a>
+            </div>
+        </div>
+    </pre>
+</div>
+        <h3 id="t5">Grupo de Botones Grandes</h3>
+        <div class="container">
+            <div class="btn-group-lg">
+                <a href="#" class="btn bg-red">Botón 1</a>
+                <a href="#" class="btn bg-green">Botón 2</a>
+                <a href="#" class="btn bg-grey-d-1">Botón 3</a>
+                <a href="#" class="btn bg-blue">Botón 4</a>
+            </div>
+        </div>
+    <div class="codigo">
+        <pre id="c3" class="cod-html">
+            <div class="btn-group-lg">
+                <a href="#" class="btn bg-red">Botón 1</a>
+                <a href="#" class="btn bg-green">Botón 2</a>
+                <a href="#" class="btn bg-grey-d-1">Botón 3</a>
+                <a href="#" class="btn bg-blue">Botón 4</a>
+            </div>
+        </pre>
+    </div>
+
+    <div class="alerta-negra">
+        Los colores de los botones pueden ser cualquiera de los documentados en la sección 
+        <a href="botones.html" class="link tips-ele"
+        data-tips="Botones Documentados">de botones</a> y los 
+        <a href="colores.html" class="link tips-ele"
+        data-tips="Colores de Fondo Documentados">Colores</a> colores de fondo en la sección colores de esta documentación.
+    </div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t6">Alias en Inglés</h2>
+            <p>
+                Desde la versión 4.0.0 se crearo alias para los grupos de botones en los tres tamaños. 
+            </p>
+
+            <table class="table-dark table-sm vertical-border table-bor-grey">
+                <thead>
+                    <tr>
+                        <th>Español</th>
+                        <th>Inglés</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>.btn-grupo</td>
+                        <td>.btn-group</td>
+                    </tr>
+                    <tr>
+                        <td>.btn-grupo-sm</td>
+                        <td>.btn-group-sm</td>
+                    </tr>
+                    <tr>
+                        <td>.btn-grupo-lg</td>
+                        <td>.btn-group-lg</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+
+
+    <div class="lista-scroll">
+         <ul>
+            <li><a href="#t1">Grupo de Botoones</a></li>
+            <li><a href="#t2">Tamaños</a></li>
+            <li><a href="#t3">Medianos</a></li>
+            <li><a href="#t4">Chicos</a></li>
+            <li><a href="#t5">Grandes</a></li>
+            <li><a href="#t6">Alias en Inglés</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Grupo Botones"
+        var idMenu = "#m2"
+    </script>
+     <script src="../js/docs-body.js"></script>
+</body>
+</html>
+
+        

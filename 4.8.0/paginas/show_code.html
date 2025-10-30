@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Permite mostrar el código fuente de los lenguajes de programación en colores representativos.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Show Code</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Show Code</h1>
+            <p>
+                Dependencia de Bodystyle para colorear el código de programación mostrado en páginas web. <br>
+                La dependencia busca colores representativos de cada lenguaje para que sea más llamativo y entendible 
+                en la web. Los lenguajes incluídos son: <br>
+            </p>
+            <div class="lista-doc m-0">
+                <ul>
+                    <li>C</li>
+                    <li>Java</li>
+                    <li>JS</li>
+                    <li>CSS</li>
+                    <li>Html</li>
+                </ul>
+            </div>
+            <p>
+                Podemos descargar la dependencia por separado a través del siguiente enlace: 
+                <a target="_blank" href="https://mega.nz/file/NVEFwYDC#5dKqYIQ1JGGwePRtBD53BzQ-zlMLUG7GOqKln1AaNAU" class="link com-trigger"
+                data-info="<span class='f-w-7'>Show Code</span> permite el coloreado del código de programación en las páginas web dentro de la etiqueta de html <span class='c-red'>pre</span> diferenciando las palabras clave de los diferentes lenguajes incorporados <br> los cuales son: <br> Java, JS, C, CSS y HTML.">Show-Code 1.1.1</a>. <br>
+                Si bien se encuentra en desarrollo y las funcionalidades que aporta son limitadas sirvió para mostrar código de toda esta documentación 
+                a través de los cuadros donde se encuentran los códigos de ejemplo.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Show Code Inicialización</h2>
+            <p>
+                Para poder utilizar las funcionalidades provistas por Show-Code es necesario agregar a nuestro proyecto el archivo 
+                de javascript de la librería <span class="badge badge-negro">bodystyle.min.js</span> este proceso de puede realizar de varias 
+                maneras como se describe en <a href="get_started.html" class="link">Get Started</a> para llevar a cabo los ejemplos que siguen a 
+                continuación lo haremos a través de su CDN.
+            </p>
+
+<div class="codigo">
+<pre class="cod-js" id="c1">
+    // CDN : https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js
+
+    // 1 OPCIÓN ESTÁTICA
+    // ------------------
+
+    // Inicializa el elemento
+    // cuando estos están dispuestos de manera estática dentro del DOM
+    BS.CodigoCInit(); Si necesitamos el código de C
+    BS.CodigoJavaInit(); Si necesitamos el código de Java
+    BS.CodigoJsInit(); Si necesitamos el código de JavaScript
+    BS.CodigoHtmlInit() Si necesitamos el código de Html
+    BS.CodigoCssInit() Si necesitamos el código de CSS
+
+    /*******************************************************************************/
+
+    // 2 OPCIÓN DINÁMICA
+    // -----------------   
+    
+    /*
+        En proyectos donde se tabaja a través de injección de elementos a través 
+        de JavaScript de manera dinámica, y el elemento que se estudia en esta sección se 
+        ingresa de esta manera, es necesario aplicar un retraso en la inicialización del 
+        módulo con el siguiente codigo.
+    */
+
+    //Si los elementos que conforman esta funcionalidad son dinámicos 
+    // Agregados a través de JS 
+    window.onload = () => {
+        setTimeout( () => {
+            BS.CodigoCInit(); Si necesitamos el código de C
+            BS.CodigoJavaInit(); Si necesitamos el código de Java
+            BS.CodigoJsInit(); Si necesitamos el código de JavaScript
+            BS.CodigoHtmlInit() Si necesitamos el código de Html
+            BS.CodigoCssInit() Si necesitamos el código de CSS
+        }, 100); 
+    }
+</pre>
+</div>
+
+            <p>
+                Luego hay que agregar en la cabecera de la página los estilos CSS utilizados por Show Code, los mismos 
+                están disponibles desde la descarga directa <a target="_blank" href="https://mega.nz/file/NVEFwYDC#5dKqYIQ1JGGwePRtBD53BzQ-zlMLUG7GOqKln1AaNAU" class="link com-trigger"
+                data-info="<span class='f-w-7'>Show Code</span> permite el coloreado del código de programación en las páginas web dentro de la etiqueta de html <span class='c-red'>pre</span> diferenciando las palabras clave de los diferentes lenguajes incorporados <br> los cuales son: <br> Java, JS, C, CSS y HTML.">Show-Code 1.1.1</a> o 
+                a través de su CDN que se mostrará a continuación. Es importante aclarar que la librería cuenta con dos temas para agregar, 
+                el tema claro y el tema oscuro, hay que elegir cual de los dos se utilizará.
+            </p>
+
+<div class="codigo">
+    <pre id="c2" class="cod-html">
+        <!--
+            Se selecciona uno de los dos no ambos.
+        -->
+        <!-- TEMA CLARO -->
+        <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/show-code/show-light.min.css">
+        
+        <!--TEMA OSCURO-->
+        <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/show-code/show-dark.min.css">
+    </pre>
+</div>
+
+            <h3 id="t3">Codigo C</h3>
+            <p>
+                Para colorear el codigo de C tenemos que añadirle a la etiqueta <span class="badge badge-black">pre</span> la clase 
+                <span class="badge badge-red">cod-c</span> y luego dentro de la misma colocar el código que se desee mostrar.
+            </p>
+<div class="codigo">
+<pre class="cod-c" id="c3">
+    #define ERROR -10
+   
+   
+    /* Declaramos una función */
+    int suma(const int n1, const int e2)
+    {
+        // Devuelve la suma realizada
+        return n1 + n2;
+    }
+
+    /** Función que utiliza punteros */
+    int sumaPunteros(const int * n1m const int * n2)
+    {
+        if(!n1 && !n2)
+            return *n1 + *n2;
+        else 
+            return ERROR;
+    }
+
+    int main()
+    {
+        int var1 = 3;
+        int var2 = 5;
+
+        printf("La suma es %d: ", var1 + var2);
+        printf("La suma es %d: ", suma(var1, var2));
+        printf("La suma es %d: ", sumaPunteros(&var1, &var2));
+        return 0;
+    }
+</pre>
+</div>
+        <h3 id="t4">Codigo Java</h3>
+        <p>
+            Para este código se utilizará la clase <span class="badge badge-red">cod-java</span> asignada a la etqueta 
+            html <span class="badge badge-black">pre</span> para mostrar el código.
+        </p>
+
+<div class="codigo">
+    <pre id="c4" class="cod-java">
+        public class Alumno extends Persona 
+        {
+            private String nroDocumento;
+            private String nombre;
+            private String apellido;
+
+            /**
+                Constructor parametrizado de la clase alumno concreta
+                @param (nroDocumento String)
+                       (nombre String)
+                       (apellido String)
+                @see Persona
+            */
+            public Alumno(String nroDocumento, String nombre, String apellido){
+                super();
+                this.nroDocumento = nroDocumento;
+                this.nombre = nombre;
+                this.apellido = apellido;
+            }
+
+            /**
+                Devuelve el nroDocumento del Alumno.
+            */
+            public String getNroDocumento()
+            {
+                return this.nroDocumento;
+            }
+
+            public String getNombre()
+            {
+                return this.nombre;
+            }
+
+            public String getApellido()
+            {
+                return this.apellido;
+            }
+
+
+            public static void main(String[] args)
+            {
+                Alumno a = new Alumno("25444444", "Federico", "Manzano");
+
+                System.out.println("Alumno: " + a.getNroDocumento() + " " + a.getNombre() + " " + a.getApellido() );
+            }
+        }
+    </pre>
+</div>
+
+        <h3 id="t5">Código JavaScript</h3>
+
+        <p>
+            Al igual que los casos anteriores se utiliza la clase <span class="badge badge-red">cod-js</span> para colorear 
+            este lenguaje.
+        </p>
+
+<div class="codigo">
+    <pre id="c5" class="cod-js">
+        // Suma dos numeros cualesquiera
+        const suma = (var1, var2) => var1 + var2
+
+        // Forma tradicional
+        function suma2(var1, var2)
+        {
+            return var1 + var2
+        }
+
+        let var1 = 5
+        let var2 = 3
+        console.log("La suma de los numeros es: " + suma2(var1,var2))
+        console.log("La suma de los numeros es: " + suma(var1,var2))
+
+        const damePersonaString = ({dni, nombre, apellido}) => dni + " " + nombre + " " + apellido 
+
+        var Persona = 
+        {
+            "dni": "25444555",
+            "apellido": "Perez",
+            "nombre": "Manuel"
+        }
+
+        console.log("Persona: " + damePersonaString(Persona))
+
+    </pre>
+</div>
+        <h3 id="t6">Código CSS</h3>
+
+        <p>
+            El código css se hace de igual manera con la clase <span class="badge badge-red">cod-css</span>
+        </p>
+
+<div class="codigo">
+    <pre id="c6" class="cod-css">
+
+        /* 
+            Clase que aplica el flexbox centralizado
+        */
+        .clase-ejemplo {
+            display: flex; 
+            justify-content: center;
+            align-item: center;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        /* Clses que empiezan con el prefijo fd-*/
+        .ejemplo2[class^=fd-] {
+            position: absolute;
+        }
+
+        /* selector por ID*/
+        #titulo {
+            display: flex;
+        }
+    </pre>
+</div>
+
+        <h3 id="t7">Código Html</h3>
+        <p>
+            El código HTML se muestra a través de la clase <span class="badge badge-red">cod-html</span> y el proceso 
+            es exactamente igual que los anteriores. El ejemplo se puede apreciar en toda esta documentación 
+            a través de los ejemplos expuestos en los diferentes temas.
+        </p>
+
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Show Code</a></li>
+            <li><a href="#t2">Inicializar</a></li>
+            <li><a href="#t3">Código C</a></li>
+            <li><a href="#t4">Código Java</a></li>
+            <li><a href="#t5">Código JS</a></li>
+            <li><a href="#t6">Código CSS</a></li>
+            <li><a href="#t7">Código Html</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Show Code"
+        var idMenu = "#m5"
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        BS.CodigoJavaInit()
+        BS.CodigoCssInit()
+        BS.CodigoJsInit()
+        BS.CodigoCInit()
+    </script>
+</body>
+</html>

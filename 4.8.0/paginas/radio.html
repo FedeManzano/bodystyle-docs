@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+
+    <meta name="description" content="Radio Button de HTML modificado con los estilos CSS de la librería.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+     <link rel="stylesheet" href="../css/bodystyle.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Radio</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Radio</h1>
+            <p>
+                Elemento de html que permite seleccionar una opción de un conjunto para definir preferencias o
+                dar una respuesta a una pregunta o seleccionar un medio de pago. <br>
+                Bodystyle brinda estilos para poder definir estos elementos a través de grupos de elementos 
+                agrupados.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Radio Button</h2>
+            <p class="mb-3">
+                Aquí un ejemplo de un radio button con la librería. Se mostrarán seis radio button 
+                pertenecientes al <span class="badge badge-grey">Grupo 1</span> lo cueal permitirá 
+                seleccionar solo uno de ellos.
+            </p>
+
+            <div class="check-radio-grupo">
+                <input id="rd-1" type="radio" class="radiobtn" name="grupo1">
+                <label for="rd-1" class="rd-azul">Opcion 1</label>
+            </div>
+            <div class="check-radio-grupo mt-1">
+                <input id="rd-2" type="radio" class="radiobtn" name="grupo1">
+                <label for="rd-2" class="rd-verde">Opcion 2</label>
+            </div>
+
+            <div class="check-radio-grupo mt-1">
+                <input id="rd-3" type="radio" class="radiobtn" name="grupo1">
+                <label for="rd-3" class="rd-gris">Opcion 3</label>
+            </div>
+            <div class="check-radio-grupo mt-1">
+                <input id="rd-4" type="radio" class="radiobtn" name="grupo1">
+                <label for="rd-4" class="rd-blanco">Opcion 4</label>
+            </div>
+            <div class="check-radio-grupo mt-1">
+                <input id="rd-5" type="radio" class="radiobtn" name="grupo1">
+                <label for="rd-5" class="rd-negro">Opcion 5</label>
+            </div>
+            <div class="check-radio-grupo mt-1">
+                <input id="rd-6" type="radio" class="radiobtn" name="grupo1">
+                <label for="rd-6" class="rd-rojo">Opcion 6</label>
+            </div>
+<div class="codigo">
+<pre class="cod-html" id="c1">
+     <div class="check-radio-grupo">
+        <input id="rd-1" type="radio" class="radiobtn" name="grupo1">
+        <label for="rd-1" class="rd-azul">Opcion 1</label>
+    </div>
+    <div class="check-radio-grupo mt-1">
+        <input id="rd-2" type="radio" class="radiobtn" name="grupo1">
+        <label for="rd-2" class="rd-verde">Opcion 2</label>
+    </div>
+    <div class="check-radio-grupo mt-1">
+        <input id="rd-3" type="radio" class="radiobtn" name="grupo1">
+        <label for="rd-3" class="rd-gris">Opcion 3</label>
+    </div>
+    <div class="check-radio-grupo mt-1">
+        <input id="rd-4" type="radio" class="radiobtn" name="grupo1">
+        <label for="rd-4" class="rd-blanco">Opcion 4</label>
+    </div>
+    <div class="check-radio-grupo mt-1">
+        <input id="rd-5" type="radio" class="radiobtn" name="grupo1">
+        <label for="rd-5" class="rd-negro">Opcion 5</label>
+    </div>
+    <div class="check-radio-grupo mt-1">
+        <input id="rd-6" type="radio" class="radiobtn" name="grupo1">
+        <label for="rd-6" class="rd-rojo">Opcion 6</label>
+    </div>
+</pre>
+</div>
+            <div class="alerta-negra my-3">
+                Es importante definir el grupo al cual pertenece el conjunto de radio buttons. <br>
+                En este caso para poder utilizar estos elementos hay que envolver al label y al input type radio 
+                dentro del contenedor <span class="badge badge-red">.check-radio-grupo</span>, luego al label agregarle la clase 
+                <span class="badge badge-red">.rd-[rojo | verde | negro | gris | blanco]</span> junto con el input type radio 
+                que tiene la clase <span class="badge badge-red">.radiobtn</span>.
+            </div>
+
+
+            <h3 id="t3">Ejemplo Formulario</h3>
+            <p>
+                Aquí un ejemplo de un formulario para poner en práctica al elemento visto en esta sección de la 
+                documentación y además ver como se integra con otros temas vistos en otras secciones.
+            </p>
+
+            <div class="container p-2 bg-black bor-rad-10 mt-3">
+                <h2 class="c-white m-0 mb-3">Registro de Usuario</h2>
+                <div class="row">
+                    <div class="input-g cs-12 cl-6">
+                        <div class="grupo-sm">
+                            <span class="span-grupo">Nombre</span>
+                            <input type="text" name="Nombre">
+                        </div>
+                    </div>
+                    <div class="input-g cs-12 cl-6">
+                        <div class="grupo-sm">
+                            <span class="span-grupo">Apellido</span>
+                            <input type="text" name="Apellido">
+                        </div>
+                    </div>
+                    <div class="input-g cs-12">
+                        <div class="grupo-sm">
+                            <span class="span-grupo">@</span>
+                            <input type="text" name="Correo">
+                            <input type="submit" name="validar" id="sub-email" class="btn c-grey" value="Validar">
+                        </div>
+                    </div>
+                    <div class="input-g cs-12 cl-6">
+                        <div class="grupo-sm">
+                            <span class="span-grupo">Clave</span>
+                            <input type="password" name="Clave">
+                        </div>
+                    </div>
+                    <div class="input-g cs-12 cl-6">
+                        <div class="grupo-sm">
+                            <span class="span-grupo">Repetir</span>
+                            <input type="password" name="Repetir">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex just-end mt-2 flex-wrap-m">
+                    <div class="check-radio-grupo mr-1  m-xs-0 ">
+                        <input id="rd-m" type="radio" class="radiobtn" name="sexo">
+                        <label for="rd-m" class="rd-verde">Masculino</label>
+                    </div>
+                    <div class="check-radio-grupo mt-xs-1">
+                        <input id="rd-f" type="radio" class="radiobtn" name="sexo">
+                        <label for="rd-f" class="rd-rojo">Femenino</label>
+                    </div>
+                </div>
+
+                <div class="d-flex just-end">
+                    <input type="submit" name="Registro" value="Registrar" class="btn-sm-o btn-white-o bor-pill mt-2">
+                </div>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="container p-2 bg-black bor-rad-10 mt-3">
+        <h3 class="c-white m-0 mb-3">Registro de Usuario</h3>
+        <div class="row">
+            <div class="input-g cs-12 cl-6">
+                <div class="grupo-sm">
+                    <span class="span-grupo">Nombre</span>
+                    <input type="text" name="Nombre">
+                </div>
+            </div>
+            <div class="input-g cs-12 cl-6">
+                <div class="grupo-sm">
+                    <span class="span-grupo">Apellido</span>
+                    <input type="text" name="Apellido">
+                </div>
+            </div>
+            <div class="input-g cs-12">
+                <div class="grupo-sm">
+                    <span class="span-grupo">@</span>
+                    <input type="text" name="Correo">
+                    <input type="submit" name="validar" id="sub-email" class="btn c-grey" value="Validar">
+                </div>
+            </div>
+            <div class="input-g cs-12 cl-6">
+                <div class="grupo-sm">
+                    <span class="span-grupo">Clave</span>
+                    <input type="password" name="Clave">
+                </div>
+            </div>
+            <div class="input-g cs-12 cl-6">
+                <div class="grupo-sm">
+                    <span class="span-grupo">Repetir</span>
+                    <input type="password" name="Repetir">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex just-end mt-2">
+            <div class="check-radio-grupo mr-1">
+                <input id="rd-m" type="radio" class="radiobtn" name="sexo">
+                <label for="rd-m" class="rd-verde">Masculino</label>
+            </div>
+            <div class="check-radio-grupo">
+                <input id="rd-f" type="radio" class="radiobtn" name="sexo">
+                <label for="rd-f" class="rd-rojo">Femenino</label>
+            </div>
+        </div
+        <div class="d-flex just-end">
+            <input type="submit" name="Registro" value="Registrar" class="btn-sm-o btn-white-o bor-pill mt-2">
+        </div>
+    </div>
+</pre>
+</div>
+        <div class="alerta-negra mt-3">
+            Este formulario fué realizado completamente con clases de la librería, todos los 
+            estilos está documentados en las secciones correspondientes a esta documentación. <br>
+            Se recomienda al lector ver: <a href="input.html" class="link tips-ele" 
+            data-tips="Documentación de los estilos de Inputs">Input</a>, <a href="grid.html" class="link tips-ele"
+            data-tips="Documentación de la grilla">Grilla</a>.
+        </div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Radio</a></li>
+            <li><a href="#t2">Radio Button</a></li>
+            <li><a href="#t3">Ejemplo</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Radio"
+        var idMenu = "#m4"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>

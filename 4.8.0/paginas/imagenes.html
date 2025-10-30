@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Sección para tratar a las imágenes, funcionalidades mas utilizadas por este tipo de elementos.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Imagenes</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Imagenes <span class="badge badge-bodyui">4.5.0</span></h1>
+            <p>
+                En este apartado vamos a ver un conjunto de clases que permiter tratar imágenes, a través de CSS 
+                y de JavaScript de modo tal de disponer de cierta facilidad al momento de manipular estos elementos.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Display</h2>
+            <p>
+                Con las imagenes cuadradas (mismo alto que ancho) podemos utilizar la clase 
+                <span class="badge badge-red">.img-display-[tam]</span> donde tam es un numero 
+                multiplo 8 que va desde 8 a 800PX perimtiendo generar un contenedor que ajuste al tamaño de la 
+                imagen a un valor deseado sin desbordamiento. En el caso de la imagen utilizará la clase 
+                <span class="badge badge-red">.img-responsive</span> que permitirá ajustarla al contenedor.
+            </p>
+
+            <div class="d-flex just-around mt-3">
+                <div class="img-display-16">
+                    <img class="img-responsive" src="../imagenes/ima1.jpg" alt="Imagen de 8 PX">
+                </div>
+                <div class="img-display-32">
+                    <img class="img-responsive" src="../imagenes/ima1.jpg" alt="Imagen de 16 PX">
+                </div>
+                <div class="img-display-64">
+                    <img class="img-responsive" src="../imagenes/ima1.jpg" alt="Imagen de 64 PX">
+                </div>
+                <div class="img-display-128">
+                    <img class="img-responsive" src="../imagenes/ima1.jpg" alt="Imagen de 128 PX">
+                </div>
+                <div class="img-display-256">
+                    <img class="img-responsive" src="../imagenes/ima1.jpg" alt="Imagen de 256 PX">
+                </div>
+                <div class="img-display-512">
+                    <img class="img-responsive" src="../imagenes/ima1.jpg" alt="Imagen de 8 PX">
+                </div>
+            </div>
+
+<div class="codigo mt-15">
+<pre class="cod-html" id="c1">
+    <div class="d-flex just-around mt-3">
+        <div class="img-display-16">
+            <img class="img-responsive" src="../imagenes/ima1.jpg" alt="Imagen de 8 PX">
+        </div>
+        <div class="img-display-32">
+            <img class="img-responsive" src="../imagenes/ima1.jpg" alt="Imagen de 16 PX">
+        </div>
+        <div class="img-display-64">
+            <img class="img-responsive" src="../imagenes/ima1.jpg" alt="Imagen de 64 PX">
+        </div>
+        <div class="img-display-128">
+            <img class="img-responsive" src="../imagenes/ima1.jpg" alt="Imagen de 128 PX">
+        </div>
+        <div class="img-display-256">
+            <img class="img-responsive" src="../imagenes/ima1.jpg" alt="Imagen de 256 PX">
+        </div>
+        <div class="img-display-512">
+            <img class="img-responsive" src="../imagenes/ima1.jpg" alt="Imagen de 8 PX">
+        </div>
+    </div>
+</pre>
+</div>
+
+
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t3">Zoom</h2>
+            <p class="mb-3">
+                Para utilizar esta funcionalidad tenemos que inicializar el módulo 
+                correspondiente desde la lógica de la librería como se muestra a 
+                continuación y luego agregar la clase <span class="badge badge-red">.img-emp</span> a la 
+                imagen a la que se le quiera hacer zoom. 
+            </p>
+
+            <div class="img-display-248">
+                <img class="img-responsive img-exp" src="../logo/logo.png" alt="Imagen zoom">
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="img-display-248">
+        <img class="img-responsive img-exp" src="../logo/logo.png" alt="Imagen zoom">
+    </div>
+</pre>
+</div>
+
+<div class="codigo">
+<pre class="cod-js" id="c3">
+    // Inicializar el módulo imagenes 
+    BS.ImagenesInit()
+</pre>
+</div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t4">Paralax</h2>
+            <p class="mb-3">
+                La librería también cuenta con el conocido efecto paralax para cambiar el foco 
+                en la imagen generar la impresión de profundidad. para lograr esto tendremos 
+                que inicializar otro módulo de la lógica de la librería, luego encerrar a la imagen 
+                dentro del un contenedor que posee la clase <span class="badge badge-red">.paralax-contenedor</span>
+            </p>
+
+            <div style=" height: 400px;">
+                <div class="paralax-contenedor">
+                     <img class="img-responsive paralax" src="../imagenes/pai.jpg" alt="Efecto paralax">
+                </div>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c4">
+    <div style=" height: 400px;">
+        <!--Descomentar el código de abajo-->
+        <!--<div class="paralax-contenedor">
+            <img class="img-responsive paralax" src="https://cdn.motor1.com/images/mgl/6ZoYyE/s3/ventas-diciembre-2024.jpg" alt="Efecto paralax">
+        </div> -->
+    </div>
+</pre>
+</div>
+<div class="codigo">
+<pre class="cod-js" id="c5">
+    // Inicialización del módulo Paralax 
+    BS.ParalaxInit()
+</pre>
+</div>
+
+        </article>
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Imagenes</a></li>
+            <li><a href="#t2">Display Imagen</a></li>
+            <li><a href="#t3">Zoom</a></li>
+            <li><a href="#t4">Paralax</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "ImagenesNew"
+        var idMenu = "#m5"
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        BS.ImagenesInit()
+        BS.CodigoJsInit()
+        BS.ParalaxInit()
+    </script>
+</body>
+</html>

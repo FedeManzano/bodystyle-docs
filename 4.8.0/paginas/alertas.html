@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Alertas en CSS para mostrar de manera adecuada la información al usuario.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Alertas</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Alertas</h1>
+            <p>
+                Son un elemento simple que se puede utilizar cuando se necesite resaltar o aclarar una cuestión que haya quedado poco clara
+                en el texto añadiendo información, enlaces o recomendaciones útiles para el usuario. <br>
+                Desde la versión 4.0.0 se añadieron alias que permiten nombrar las clases de las alertas en el lenguaje inglés.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Primer Tipo de Alertas</h2>
+            <p>
+                La librería cuenta con dos tipos de alertas, la primera es la utiliza un borde de color del lado 
+                izquierdo que es la que utilizaremos en este apartado. 
+            </p>
+
+            <div class="container mar-3">
+                <div class="alert-red">
+                    Esta es la alerta rojo para resaltar un texto determinado.
+                </div>
+                <div class="alert-blue mar-1">
+                    Esta es la alerta azul para resaltar un texto determinado.
+                </div>
+                <div class="alert-grey mar-1">
+                    Esta es la alerta gris para resaltar un texto determinado.
+                </div>
+                <div class="alert-green mar-1">
+                    Esta es la alerta verde para resaltar un texto determinado.
+                </div>
+
+                <div class="alert-black mar-1">
+                    Esta es la alerta negra para resaltar un texto determinado.
+                </div>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+   <div class="container mar-3">
+        <div class="alert-red">
+            Esta es la alerta rojo para resaltar un texto determinado.
+        </div>
+        <div class="alert-blue mar-1">
+            Esta es la alerta azul para resaltar un texto determinado.
+        </div>
+        <div class="alert-grey mar-1">
+            Esta es la alerta gris para resaltar un texto determinado.
+        </div>
+        <div class="alert-green mar-1">
+            Esta es la alerta verde para resaltar un texto determinado.
+        </div>
+        <div class="alert-black mar-1">
+            Esta es la alerta negra para resaltar un texto determinado.
+        </div>
+    </div>
+</pre>
+</div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <article class="articulo">
+            <h2 id="t3">Segundo Tipo de Alerta</h2>
+
+            <p>
+                El segundo tipo de alerta posee una opacidad menor para permitir cierto nivel 
+                de transparencia.
+            </p>
+
+            <div class="container mar-3">
+                <div class="alert-op-red">
+                    Esta es una alerta rojo del tipo dos.
+                </div>
+                <div class="alert-op-blue mar-1">
+                    Esta es una alerta azul del tipo dos.
+                </div>
+                <div class="alert-op-green mar-1">
+                    Esta es una alerta verde del tipo dos.
+                </div>
+                <div class="alert-op-black mar-1">
+                    Esta es una alerta negra del tipo dos.
+                </div>
+                <div class="alert-op-grey mar-1">
+                    Esta es una alerta gris del tipo dos.
+                </div>
+                <div class="alert-op-white mar-1">
+                    Esta es una alerta blanca del tipo dos.
+                </div>
+            </div>
+
+
+        <div class="codigo">
+            <pre id="c2" class="cod-html">
+            <div class="container mar-3">
+                <div class="alert-op-red">
+                    Esta es una alerta rojo del tipo dos.
+                </div>
+                <div class="alert-op-blue mar-1">
+                    Esta es una alerta azul del tipo dos.
+                </div>
+                <div class="alert-op-green mar-1">
+                    Esta es una alerta verde del tipo dos.
+                </div>
+                <div class="alert-op-black mar-1">
+                    Esta es una alerta negra del tipo dos.
+                </div>
+                <div class="alert-op-grey mar-1">
+                    Esta es una alerta gris del tipo dos.
+                </div>
+                <div class="alert-op-white mar-1">
+                    Esta es una alerta blanca del tipo dos.
+                </div>
+            </div>
+            </pre>
+        </div>
+
+        <div class="alerta-negra">
+            Las clases utilizadas para definir este tipo de alerta es alert-op-[color] donde color puede ser:
+            <div class="lista-doc m-0">
+                <ul>
+                    <li>red / roja</li>
+                    <li>green / verde</li>
+                    <li>black / negra</li>
+                    <li>grey / gris</li>
+                    <li>white / blanca</li>
+                    <li>blue / azul</li>
+                </ul>
+            </div>
+        </div>
+
+        </article>
+
+        <article class="articulo">
+            <h2 id="t4">Alias desde la V4.0.0</h2>
+
+            <div class="container mar-3">
+                <table class="table-dark vertical-border table-sm table-bor-grey">
+                    <thead>
+                        <tr>
+                            <th>Español</th>
+                            <th>Inglés</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>alerta-roja</td>
+                            <td>alert-red</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>alerta-azul</td>
+                            <td>alert-blue</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>alerta-verde</td>
+                            <td>alert-green</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>alerta-blanca</td>
+                            <td>alert-white</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>alerta-negra</td>
+                            <td>alert-black</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>alerta-gris</td>
+                            <td>alert-grey</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>alerta-op-roja</td>
+                            <td>alert-op-red</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>alerta-op-verde</td>
+                            <td>alert-op-green</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>alerta-op-azul</td>
+                            <td>alert-op-blue</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>alerta-op-negra</td>
+                            <td>alert-op-black</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>alerta-op-blanca</td>
+                            <td>alert-op-white</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>alerta-op-gris</td>
+                            <td>alert-op-grey</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t5">Alerta Personalizada</h2>
+            <p class="mb-3">
+                Ahora vamos a utlizar clases de otros apartados para aprovecharlos para generar 
+                alertas personalizadas, de esta maneras se le muestra al lector que las posibilidades 
+                son muchas.
+            </p>
+
+            <div class="p-2 bor-2 bg-grey c-gris-o"> Esto es una alera personalizada 1</div>
+            <div class="p-2 bor-rojo-t-2 fd-gris-n c-gris-c mt-2"> Esto es una alera personalizada 2</div>
+            <div class="p-2 bor-rojo-t-2 fd-gris-n c-gris-c mt-2 bor-rad-10"> Esto es una alera personalizada 3</div>
+            <div class="p-2 bor-azul-ve-3 fd-gris-az c-gris-c mt-2 bor-rad-10"> Esto es una alera personalizada 4</div>
+            <div class="p-2 bor-2 fd-gris c-gris-c mt-2 bor-rad-10"> Esto es una alera personalizada 5</div>
+            <div class="p-2 bor-grey-s-1 fd-verde-t c-gris-c mt-2 bor-rad-10"> Esto es una alera personalizada 6</div>
+            <div class="p-2 bor-grey-2 fd-verde-az c-gris-c mt-2 bor-rad-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, tenetur quo! Sequi veniam itaque similique. Quos, sapiente? Optio ut sunt modi recusandae! Quibusdam iusto veniam temporibus dolores nobis at officiis.</div>       
+    <div class="codigo">
+    <pre id="c3" class="cod-html">
+    <div class="p-2 bor-2 bg-grey c-gris-o"> Esto es una alera personalizada 1</div>
+    <div class="p-2 bor-rojo-t-2 fd-gris-n c-gris-c mt-2"> Esto es una alera personalizada 2</div>
+    <div class="p-2 bor-rojo-t-2 fd-gris-n c-gris-c mt-2 bor-rad-10"> Esto es una alera personalizada 3</div>
+    <div class="p-2 bor-azul-ve-3 fd-gris-az c-gris-c mt-2 bor-rad-10"> Esto es una alera personalizada 4</div>
+    <div class="p-2 bor-2 fd-gris c-gris-c mt-2 bor-rad-10"> Esto es una alera personalizada 5</div>
+    <div class="p-2 bor-grey-s-1 fd-verde-t c-gris-c mt-2 bor-rad-10"> Esto es una alera personalizada 6</div>
+    <div class="p-2 bor-grey-2 fd-verde-az c-gris-c mt-2 bor-rad-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, tenetur quo! Sequi veniam itaque similique. Quos, sapiente? Optio ut sunt modi recusandae! Quibusdam iusto veniam temporibus dolores nobis at officiis.</div>
+    </pre>
+    </div>
+
+        <div class="alerta-negra">
+            Todas las clases utilizadas pertenecen a otros apartados de la documentación:
+            <div class="lista-doc m-0">
+                <li><a href="bordes.html" class="link tips-ele" data-pos="right" data-tips="<span class='c-rojo-ro'>Documentación de bordes</span>">Bordes</a></li>
+                <li><a href="padding.html" class="link tips-ele" data-pos="right" data-tips="<span class='c-rojo-ro'>Documentación de padding</span>">Padding</a></li>
+                <li><a href="colores.html" class="link tips-ele" data-pos="right" data-tips="<span class='c-rojo-ro'>Documentación de colores</span>">Colores</a></li>
+                <li><a href="texto.html" class="link tips-ele" data-pos="right" data-tips="<span class='c-rojo-ro'>Documentación de texto</span>">Texto</a></li>
+            </div>
+        </div>
+        </article>
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Alertas</a></li>
+            <li><a href="#t2">Alertas T 1</a></li>
+            <li><a href="#t3">Alertas T 2</a></li>
+            <li><a href="#t4">Alias</a></li>
+            <li><a href="#t5">Personalizada</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Alertas"
+        var idMenu = "#m2"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>

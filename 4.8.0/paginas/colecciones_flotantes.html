@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Colección de enlaces que permite la disponibilidad del contenido durante el recorrido de toda la página.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Lista Fixed</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Lista Fixed</h1>
+            <p>
+                Listas que se posicionan a la derecha o la izquierda de la pantalla y permanece en esa posición 
+                durante toda la pantalla, de manera tal que acompaña el usuario durante todo el recorrido de la página. <br>
+                A la derecha de esta página hay una muestra del elemento de esta sección.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Inicialización</h2>
+            <p>
+                Para inicializar el elemento es necesario disponer del archivo <span class="badge badge-grey">bodystyle.min.js</span>
+                agregado en el proyecto en desarrollo, para hacer esto consultar <a href="get_started.html" class="link">Get Started</a> 
+                de la documentación. <br>
+                Luego hay que inicializar el módulo de la librería a través del objeto <span class="badge badge-negro">BS</span> que 
+                permite el acceso a todos los módulos de la librería.
+            </p>
+
+            <h3 id="t3">Parámetros del Módulo</h3>
+            <div class="tabla-responsive">
+                <table class="table-dark table-sm vertical-border selector table-bor-grey">
+                    <thead>
+                        <tr>
+                            <th>Atributo</th>
+                            <th>Valores</th>
+                            <th>Descripción</th>
+                            <th>Obligatorio</th>
+                            <th>Default</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Contexto</td>
+                            <td>ID que envuelve a toda la lista</td>
+                            <td>
+                                Importante parámetro porque permite configurar el elemento,
+                                es importante definir un ID unívoco para poder manejar ele elemento.
+                            </td>
+                            <td>SI</td>
+                            <td>vacio (no funciona)</td>
+                        </tr>
+                        <tr>
+                            <td>fondoItem</td>
+                            <td>(fd-[color]|bg-[color])</td>
+                            <td>
+                                Permite definir el color de fondo de los elementos de la lista.
+                                Son las clases de la librería que permiten configurar 
+                                el color de fondo. <a href="colores.html" class="link">Ver Colores</a> 
+                            </td>
+                            <td>NO</td>
+                            <td>fd-gris-ve-o</td>
+                        </tr>
+                        <tr>
+                            <td>colorTexto</td>
+                            <td>(c-[color])</td>
+                            <td>
+                                Permite definir el color de texto de los elementos de la lista.
+                                Son las clases de la librería que permiten configurar 
+                                el color del texto. <a href="texto.html" class="link">Ver Texto</a> 
+                            </td>
+                            <td>NO</td>
+                            <td>c-white</td>
+                        </tr>
+                        <tr>
+                            <td>altura</td>
+                            <td>Valores entero positivo</td>
+                            <td>
+                                Altura respecto el eje Y en PX donde queremos que aparezca la lista. 
+                            </td>
+                            <td>NO</td>
+                            <td>150</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+            <h3 id="t4">Ejemplo en esta Página</h3>
+
+            <p>
+                Código utilizado para implementar el elemento que se muestra a la derecha en esta misma página. <br>
+                Es importante envolver toda la lista en un contenedor con un ID único para cada lista instanciada, 
+                luego utilizar las clases <span class="badge badge-red">.lista-float-der</span> o 
+                <span class="badge badge-red">.lista-float-izq</span> que permitirán posicionar la lista a la derecha 
+                o a la izquierda con respecto a la pantalla. El paso siguiente es envolver a los items de la lista 
+                en un contenedor con la clase <span class="badge badge-red">.lista-item</span> como se muestra en el código 
+                de abajo. Por último agregamos los botones de abrir y cerrar la lista con las clases <span class="badge badge-red">.abrir</span> y
+                 <span class="badge badge-red">.cerrar</span>.
+            </p>
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <div id="lis1"> <!--IMP Es el contexto-->
+        <div class="lista-float-der">
+            <div class="lista-item"> 
+                <a href="#t1" >Lista Fixed</a>
+            </div>
+            <div class="lista-item"> 
+                <a href="#t2" >Inicialización</a>
+            </div>
+            <div class="lista-item"> 
+                <a href="#t3" >Parámetros</a>
+            </div>
+            <div class="lista-item"> 
+                <a href="#t4" >Ejemplo</a>
+            </div>
+
+            <div class="abrir bg-white forma-ventana" style="height: 20px; width: 20px;"></div>
+            <div class="cerrar bg-white forma-cerrar" style="height: 20px; width: 20px;"></div>
+        </div>
+    </div>
+</pre>
+</div>
+<div class="codigo">
+<pre class="cod-js" id="c2">
+    // CDN : https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js
+
+    // 1 OPCIÓN ESTÁTICA
+    // ------------------
+
+    // Inicializa el elemento
+    // cuando estos están dispuestos de manera estática dentro del DOM
+
+    // Notese que el ID de contexto es igual al definido en el HTML pero con el numeral delante
+    BS.ColeccionFlot().iniciar({contexto:"#lis1", fondoItem:"bg-pink-d-1", colorTexto:"c-blanco", altura:300} )
+
+     // 2 OPCIÓN DINÁMICA
+    // -----------------   
+    
+    /*
+        En proyectos donde se tabaja a través de injección de elementos a través 
+        de JavaScript de manera dinámica, y el elemento que se estudia en esta sección se 
+        ingresa de esta manera, es necesario aplicar un retraso en la inicialización del 
+        módulo con el siguiente codigo.
+    */
+
+    //Si los elementos que conforman esta funcionalidad son dinámicos 
+    // Agregados a través de JS 
+    window.onload = () => {
+        setTimeout( () => {
+            BS.ColeccionFlot().iniciar({contexto:"#lis1", fondoItem:"bg-pink-d-1", colorTexto:"c-blanco", altura:300} )
+        }, 100); 
+    }
+
+</pre>
+</div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <div id="col1">
+        <div class="lista-float-der">
+            <div class="lista-item"> 
+                <a href="#t1" >Lista Fixed</a>
+            </div>
+            <div class="lista-item"> 
+                <a href="#t2" >Inicialización</a>
+            </div>
+            <div class="lista-item"> 
+                <a href="#t3" >Parámetros</a>
+            </div>
+            <div class="lista-item"> 
+                <a href="#t4" >Ejemplo</a>
+            </div>
+
+            <div class="abrir bg-white forma-ventana" style="height: 20px; width: 20px;"></div>
+            <div class="cerrar bg-white forma-cerrar" style="height: 20px; width: 20px;"></div>
+        </div>
+    </div>
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Lista Fixed"
+        var idMenu = "#m5"
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+            BS.CodigoJsInit()
+            BS.ColeccionFlot().iniciar({contexto:"#col1", fondoItem:"bg-pink-d-1", colorTexto:"c-blanco", altura:120} )
+    </script>
+</body>
+</html>

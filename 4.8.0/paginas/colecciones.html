@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Colecciones que agrupa elementos y permiten un rápido acceso.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Colecciones</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Colecciones</h1>
+            <p>
+                En este apartado vamos a ver un elemento muy utilizado en todo sitio web para agrupar elementos 
+                de características similares, las calecciones son un forma muy intuitiva de distribuir los elementos 
+                de manera tal de mejorar la expreriencia del usuario y el recorrido a través de la aplicación o sitio web en 
+                desarrollo.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Colecciones por default</h2>
+            <p>
+                Vamos a ver como generar una colección con los estilos básicos que permitirán agrupar un conjunto de enlaces 
+                para la navegación. <br>
+                La clase utilizada como contenedor es <span class="badge badge-red">.list-container</span> y dentro de esta 
+                <span class="badge badge-red">.list-item</span> que envuelve a cada enlace de la lista.
+            </p>
+
+            <div class="container mar-3">
+                <div class="list-container bg-white">
+                    <div class="list-item">
+                        <a href="#">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#">Perfíl</a>
+                    </div>
+                </div>
+            </div>
+
+            
+
+    <div class="codigo">
+    <pre class="cod-html" id="c1">
+        <div class="container mar-3">
+            <div class="list-container bg-white">
+                <div class="list-item">
+                    <a href="#">Inicio</a>
+                </div>
+                <div class="list-item">
+                    <a href="#">Servicios</a>
+                </div>
+                <div class="list-item">
+                    <a href="#">Galeria</a>
+                </div>
+                <div class="list-item">
+                    <a href="#">Perfíl</a>
+                </div>
+            </div>
+        </div>
+    </pre>
+    </div>
+            <h3 id="t3">Colecciones en colores</h3>
+            <p>
+                Para añadirle un color a la colección tendremos que utilizar los colores de la librería 
+                los cuales están en la siguiente sección: 
+                <a href="colores.html" class="link tips-ele"
+                data-tips="Colores de fondo de la librería">Colores</a>
+            </p>
+
+
+            <div class="row mar-3">
+                <div class="list-container bg-green cxs-12 cs-12 cm-6 cl-4" id="l1">
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div>  
+                </div>
+
+                <div class="list-container bg-blue cxs-12 cs-12 cm-6 cl-4" id="l2">
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div>  
+                </div>
+                <div class="list-container fd-gris-n cxs-12 cs-12 cm-6 cl-4" id="l3">
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div>  
+                </div>
+                <div class="list-container fd-gris-az cxs-12 cs-12 cm-6 cl-4" id="l4">
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div>  
+                </div>
+
+                <div class="list-container fd-rojo cxs-12 cs-12 cm-6 cl-4" id="l5">
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div>  
+                </div>
+
+                <div class="list-container fd-naranja cxs-12 cs-12 cm-6 cl-4" id="l6">
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="alerta-negra mar-3">
+                Lo que se dispuso arriba se puede realizar con todos los colores de fondo de los cuales dispone 
+                la librería, por esta razón se le recomienda al lector que visiten esa sección. <br>
+                <a href="colores.html" class="link tips-ele"
+                data-tips="Colores de fondo de la librería">Colores</a>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="row mar-3">
+        <div class="list-container bg-green cxs-12 cs-12 cm-6 cl-4">
+            <div class="list-item">
+                <a href="#" class="c-white">Inicio</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Servicios</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Galeria</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Perfíl</a>
+            </div>  
+        </div>
+        <div class="list-container bg-blue cxs-12 cs-12 cm-6 cl-4">
+            <div class="list-item">
+                <a href="#" class="c-white">Inicio</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Servicios</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Galeria</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Perfíl</a>
+            </div>  
+        </div>
+        <div class="list-container fd-gris-n cxs-12 cs-12 cm-6 cl-4">
+            <div class="list-item">
+                <a href="#" class="c-white">Inicio</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Servicios</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Galeria</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Perfíl</a>
+            </div>  
+        </div>
+        <div class="list-container fd-gris-az cxs-12 cs-12 cm-6 cl-4">
+            <div class="list-item">
+                <a href="#" class="c-white">Inicio</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Servicios</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Galeria</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Perfíl</a>
+            </div>  
+        </div>
+        <div class="list-container fd-rojo cxs-12 cs-12 cm-6 cl-4">
+            <div class="list-item">
+                <a href="#" class="c-white">Inicio</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Servicios</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Galeria</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Perfíl</a>
+            </div>  
+        </div>
+        <div class="list-container fd-naranja cxs-12 cs-12 cm-6 cl-4">
+            <div class="list-item">
+                <a href="#" class="c-white">Inicio</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Servicios</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Galeria</a>
+            </div>
+            <div class="list-item">
+                <a href="#" class="c-white">Perfíl</a>
+            </div>  
+        </div>
+    </div>
+</pre>
+</div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <article class="articulo">
+            <h2 id="t4">Encabezados</h2>
+            <p>
+                Es posible añadirle un pie y un encabezado a la lista para describir los elementos dispuestos en esta 
+                sección, las clases <span class="badge badge-red">.list-header</span> y <span class="badge badge-red">.list-footer</span>.
+            </p>
+
+            <div class="container mar-3">
+                <div class="list-container bg-green">
+                    <div class="list-header c-white f-w-500">
+                        Titulo de la lista
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div> 
+                    <div class="list-footer c-white f-w-500">
+                        Footer de la lista
+                    </div> 
+                </div>
+            </div>
+
+
+    <div class="codigo">
+        <pre id="c3" class="cod-html">
+             <div class="container mar-3">
+                <div class="list-container bg-green">
+                    <div class="list-header c-white f-w-500">
+                        Titulo de la lista
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Inicio</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Servicios</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Galeria</a>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="c-white">Perfíl</a>
+                    </div> 
+                    <div class="list-footer c-white f-w-500">
+                        Footer de la lista
+                    </div> 
+                </div>
+            </div>
+        </pre>
+    </div>  
+        </article>
+
+        <article class="articulo">
+            <h2 id="t5">Colección Desplegable <span class="badge badge-bodyui">4.5.0</span></h2>
+            <p>
+                Desde la versión <span class="badge badge-bodyui">4.5.0</span> se añadió las colecciones 
+                desplegables, con las mimas funcionabilidades que las antes vistas pero con el cpodigo JS 
+                que permite desplegar un conjunto de opciones.
+            </p>
+            <div  class="container mar-3">
+                <div  class="list-container bg-white">
+                    <div class="lista-cabecera bg-bodyui c-white f-w-7">
+                        Cabecera
+                    </div>
+                    <div id="coleccion_desplegable">
+                        <div class="l-colapso">
+                            <a class="lista-item" data-target="#menu1">Servicios</a>
+                            <div class="desplegable fd-gris-o-2" id="menu1">
+                                <ul>
+                                    <li><a href="">500 GB de Almacenamiento</a></li>
+                                    <li><a href="">Ventas de Productos</a></li>
+                                    <li><a href="">4G / Gigabits de Datos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="l-colapso">
+                            <a class="lista-item" data-target="#menu2">Facturación</a>
+                            <div class="desplegable fd-gris-o-2" id="menu2">
+                                <ul>
+                                    <li><a href="#">Medios de Pagos</a></li>
+                                    <li><a href="#">Precios</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lista-pie bg-bodyui c-white f-w-7">
+                        Esto es el Pie
+                    </div>
+                </div>  
+            </div>
+
+            <div class="alerta-negra mt-3">
+                Para poder llevar a cabo este ejemplo hay que definir un ID global para la lista, luego 
+                cada uno de los disparadores de la lista añadirle el atributo <span class="badge-xs badge-bodyui">data-target</span> de esta forma 
+                conseguimos un vínculo entre los elementos a desplegar.
+            </div>
+
+
+<div class="codigo">
+    <pre id="c4" class="cod-html">
+        <div  class="container mar-3">
+            <!-- 
+            ESTA ES LA LISTA ANTERIOR COMENTADA 
+            Para poder utilizarla descomentar este código
+
+            <div  class="list-container bg-white">
+                <div class="lista-cabecera bg-bodyui c-white f-w-7">
+                    Cabecera
+                </div>
+                <div id="coleccion_desplegable">
+                    <div class="l-colapso">
+                        <a class="lista-item" data-target="#menu1">Servicios</a>
+                        <div class="desplegable fd-gris-o-2" id="menu1">
+                            <ul>
+                                <li><a href="">500 GB de Almacenamiento</a></li>
+                                <li><a href="">Ventas de Productos</a></li>
+                                <li><a href="">4G / Gigabits de Datos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="l-colapso">
+                        <a class="lista-item" data-target="#menu2">Facturación</a>
+                        <div class="desplegable fd-gris-o-2" id="menu2">
+                            <ul>
+                                <li><a href="#">Medios de Pagos</a></li>
+                                <li><a href="#">Precios</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="lista-pie bg-bodyui c-white f-w-7">
+                    Esto es el Pie
+                </div>
+            </div>  FIN DE LA LISTA-->
+        </div>
+    </pre>
+</div>
+        <h3 id="t6">Inicialización</h3>
+        <p>
+            Para poder utilizar este módulo es necesario inicializarlo con la función de la librería correspondiente. Es 
+            importante recalcar las dos situaciones posibles para evitar el mal funcionamiento del componente.
+        </p>
+
+        <div class="codigo">
+<pre class="cod-js" id="c6">
+    // CDN : https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js
+
+    // 1 OPCIÓN ESTÁTICA
+    // ------------------
+
+    // Inicializa el elemento
+    // cuando estos están dispuestos de manera estática dentro del DOM
+    BS.Colecciones().iniciar({ contexto : "#coleccion_desplegable", colorFondo : "bg-pink-d-1",colorTexto : "c-blanco",  colorFlechas : "#fff" })
+
+    /*******************************************************************************/
+
+    // 2 OPCIÓN DINÁMICA
+    // -----------------   
+
+    /*
+        En proyectos donde se tabaja a través de injección de elementos a través 
+        de JavaScript de manera dinámica, y el elemento que se estudia en esta sección se 
+        ingresa de esta manera, es necesario aplicar un retraso en la inicialización del 
+        módulo con el siguiente codigo.
+    */
+
+    //Si los elementos que conforman esta funcionalidad son dinámicos 
+    // Agregados a través de JS 
+    window.onload = () => {
+        setTimeout( () => {
+            BS.Colecciones().iniciar({ contexto : "#coleccion_desplegable", colorFondo : "bg-pink-d-1",colorTexto : "c-blanco",  colorFlechas : "#fff" })
+        }, 100); 
+    }
+</pre>
+</div>
+        <div class="alerta-negra">
+            Como se puede observar en el código anterior la función de inicialización recibe cuatro parámetros que van a permitir 
+            darle la funcionalidad a la lista y además los estilos para configurarla de manera correcta.
+        </div>
+
+        <h4 class="mb-3">Parámetros</h4>
+
+        <div class="table-responsive">
+            <table class="vertical-border table-sm table-dark selector table-bor-grey">
+                <thead>
+                    <tr>
+                        <th>Parámetro</th>
+                        <th>Tipo</th>
+                        <th>Descripción</th>
+                        <th>Obligatorio</th>
+                        <th>Default</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>contexto</td>
+                        <td>string</td>
+                        <td>ID de la lista a la cual apunta la funcionalidad</td>
+                        <td>SI</td>
+                        <td>Vacio</td>
+                    </tr>
+                    <tr>
+                        <td>colorFondo</td>
+                        <td>string</td>
+                        <td>Clase de la librería para establecer el color de fondo formato (fd-[color] | bg-[color])</td>
+                        <td>NO</td>
+                        <td>fd-blanco</td>
+                    </tr>
+                    <tr>
+                        <td>colorTexto</td>
+                        <td>string</td>
+                        <td>Clase de la librería para establecer el color del texto formato (c-[color] | c-[color])</td>
+                        <td>NO</td>
+                        <td>fd-negro</td>
+                    </tr>
+                    <tr>
+                        <td>colorFlechas</td>
+                        <td>string</td>
+                        <td>Color hexadecimal que permite configurar el color de las flechas EJ: #000</td>
+                        <td>NO</td>
+                        <td>#000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 id="t7">Estructura</h3>
+        <p>
+            Ahora vamos a analizar cual es la estructura de la lista de manera tal de poder utilizarla.
+        </p>
+
+<div class="codigo">
+    <pre id="c7" class="cod-html">
+        <!-- 
+            Toda la lista encerrada en con contenedor con la 
+            clase list-container 
+         -->
+        <div  class="list-container bg-white">
+
+            <!-- Luego un contenedor que posee un ID que es el contexto de la lista
+                 es a partir de este ID que se puede manipular la lista -->
+            <div id="id_coleccion">
+                <!--
+                    Luego un contenedor con la clase l-colapso
+                -->
+                <div class="l-colapso">
+                    <!-- Disparador con la clase lista-item y 
+                         el attr data-target que apunta a la lista a desplegar
+                         no ovidarse el ID -->
+                    <a class="lista-item" data-target="#id_lista_a_desplegar">Servicios</a>
+
+                    <!--
+                        Luego el último contenedor con la clase desplegable 
+                        y el ID que se asignó al data-target del elemento anterior
+                    -->
+                    <div class="desplegable fd-gris-o-2" id="id_lista_a_desplegar">
+                        <ul>
+                            <li><a href="#">Opción 1</a></li>
+                            <li><a href="#">Opción 2</a></li>
+                            <li><a href="#">Opción 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </pre>
+</div>
+
+        </article>
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Colecciones</a></li>
+            <li><a href="#t2">Default</a></li>
+            <li><a href="#t3">Colores</a></li>
+            <li><a href="#t4">Encabezados</a></li>
+            <li><a href="#t5">Desplegable <span class="badge badge-bodyui">4.5.0</span></a></li>
+            <li><a href="#t6">Inicialización</a></li>
+            <li><a href="#t7">Parámetros</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "ColeccionesNew"
+        var idMenu = "#m2"
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        BS.CodigoJsInit()
+        BS.Colecciones().iniciar({ contexto : "#coleccion_desplegable", colorFondo : "bg-pink-d-1",colorTexto : "c-blanco",  colorFlechas : "#fff" })
+        //BS.Colecciones().iniciar({ contexto : "#ejemplo_lista", colorFondo : "fd-gris-n",colorTexto : "c-blanco",  colorFlechas : "#fff" })
+    </script>
+</body>
+</html>

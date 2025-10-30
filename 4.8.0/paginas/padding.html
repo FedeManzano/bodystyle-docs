@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../logo.ico" type="image/x-icon">
+
+    <meta name="description" content="Clases CSS que permiten administrar el padding de los elementos en todos los tamaños de pantalla.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Padding</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Padding</h1>
+            <p>
+                Distancia que existe entre los límites de un elemento y su contenido, en este apartado vamos 
+                a aprender a como gestionar este espacio con las clases provistas por la librería para todos los 
+                tamaños de pantalla.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Padding General</h2>
+            <p>
+                Lo primero a evaluar es el padding general perteneciente a todos los tamaños de pantalla 
+                por igual sin alteraciones. La clase utilizada para esta tarea es <span class="badge badge-red">p-[em]</span> 
+                siendo em el tamaño del padding correspondiendose con 1em = 16px y el parámetro definido en uno son 0.5em = 8px.
+            </p>
+
+            <div class="container mt-3">
+                <span class="p-1 bg-red ta-c c-white">
+                    .p-1
+                </span>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <div class="container mt-3">
+        <!--p-1 le brinda al elemento un padding de 0.5em en todas direcciones-->
+        <span class="p-1 bg-red ta-c c-white"> 
+            .p-1
+        </span>
+    </div>
+</pre>
+</div>
+            <h3 id="t3">Padding Direccionado</h3>
+            <p>
+                La librería dispone de las clases necesarias para agregar padding en diferentes 
+                direcciones arriba, abajo, izquierda y derecha lo cual se verá en el siguente ejemplo.
+            </p>
+
+
+            <table class="table-dark vertical-border table-sm table bor-grey mt-3 selector">
+                <thead>
+                    <tr>
+                        <th>Clase</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>.pl-10</td>
+                        <td>
+                            <span class="pl-10 bg-red c-white ta-c">.pl-10</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>.pr-10</td>
+                        <td>
+                            <span class="pr-10 bg-red c-white ta-c">.pr-10</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>.pb-10</td>
+                        <td>
+                            <div class="pb-10 bg-red c-white ta-c" style="width: 45px;">.pb-10</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>.pt-10</td>
+                        <td>
+                            <div class="pt-10 bg-red c-white ta-c" style="width: 45px;">.pt-10</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <table class="table-dark vertical-border table-sm table bor-grey">
+        <thead>
+            <tr>
+                <th>Clase</th>
+                <th>Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>.pl-10</td>
+                <td>
+                    <span class="pl-10 bg-red c-white ta-c">.pl-10</span>
+                </td>
+            </tr>
+            <tr>
+                <td>.pr-10</td>
+                <td>
+                    <span class="pr-10 bg-red c-white ta-c">.pr-10</span>
+                </td>
+            </tr>
+            <tr>
+                <td>.pb-10</td>
+                <td>
+                    <div class="pb-10 bg-red c-white ta-c" style="width: 45px;">.pb-10</div>
+                </td>
+            </tr>
+            <tr>
+                <td>.pt-10</td>
+                <td>
+                    <div class="pt-10 bg-red c-white ta-c" style="width: 45px;">.pt-10</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</pre>
+</div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <article class="articulo">
+            <h2 id="t4">Padding Medidas</h2>
+            <p>
+                Se pueden utilizar las clases de padding para que el mismo sea diferente en cada dispositivo
+                donde se muestre el elemento. 
+            </p>
+
+            <div class="container mt-3">
+                <span class="p-0 pl-m-5 pr-s-5 bg-red ta-c c-white">p-0 pl-m-5 pr-s-5</span>
+            </div>
+            
+<div class="codigo">
+<pre class="cod-html" id="c3">
+    <div class="container mt-3">
+        <div class="container mt-3">
+            <span class="p-0 pl-m-5 pr-s-5 bg-red ta-c c-white">p-0 pl-m-5 pr-s-5</span>
+        </div>
+    </div>
+</pre>
+</div>
+        <div class="alerta-negra">
+            En el ejemplo anterior se tiene un padding de 0 para equipos con pantalla superior 
+            a 1030px, mientras que para equipos menores a 1030px se le añade un padding de 2.5em 
+            a la izquierda y para equipos con menos de 770px se le añade un padding derecho de 2.5em.
+        </div>
+
+        <h3 id="t5">Clases de Padding</h3>
+
+
+        <table class="mt-3 table-dark vertical-border table-sm table-bor-grey selector">
+            <thead>
+                <tr>
+                    <th>Español</th>
+                    <th>Inglés</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>.p-[em]</td>
+                    <td>.p-[em]</td>
+                    <td>Padding en todas las direcciones para todo dispositivo.</td>
+                </tr>
+                <tr>
+                    <td>.p-m-[em]</td>
+                    <td>.p-m-[em]</td>
+                    <td>Padding en todas las direcciones desde dispositivos medios.</td>
+                </tr>
+                <tr>
+                    <td>.p-s-[em]</td>
+                    <td>.p-s-[em]</td>
+                    <td>Padding en todas las direcciones desde dispositivos chicos.</td>
+                </tr>
+                <tr>
+                    <td>.p-xs-[em]</td>
+                    <td>.p-xs-[em]</td>
+                    <td>Padding en todas las direcciones desde dispositivos extra chicos.</td>
+                </tr>
+                <tr>
+                    <td>.pi-[em]</td>
+                    <td>.pl-[em]</td>
+                    <td>Padding a la izquierda para todos los tamaños de pantalla.</td>
+                </tr>
+                <tr>
+                    <td>.pd-[em]</td>
+                    <td>.pr-[em]</td>
+                    <td>Padding a la derecha para todos los tamaños de pantalla.</td>
+                </tr>
+                <tr>
+                    <td>.par-[em]</td>
+                    <td>.pt-[em]</td>
+                    <td>Padding arriba para todos los tamaños de pantalla.</td>
+                </tr>
+                <tr>
+                    <td>.pab-[em]</td>
+                    <td>.pb-[em]</td>
+                    <td>Padding abajo para todos los tamaños de pantalla.</td>
+                </tr>
+                <tr>
+                    <td>.pi-m-[em]</td>
+                    <td>.pl-m-[em]</td>
+                    <td>Padding a la izquierda para dispositivos menores a 1030px.</td>
+                </tr>
+                <tr>
+                    <td>.pd-m-[em]</td>
+                    <td>.pr-m-[em]</td>
+                    <td>Padding a la derecha para dispositivos menores a 1030px.</td>
+                </tr>
+                <tr>
+                    <td>.par-m-[em]</td>
+                    <td>.pt-m-[em]</td>
+                    <td>Padding arriba para dispositivos menores a 1030px.</td>
+                </tr>
+                <tr>
+                    <td>.pab-m-[em]</td>
+                    <td>.pb-m-[em]</td>
+                    <td>Padding abajo para dispositivos menores a 1030px.</td>
+                </tr>
+                <tr>
+                    <td>.pi-s-[em]</td>
+                    <td>.pl-s-[em]</td>
+                    <td>Padding a la izquierda para dispositivos menores a 770px.</td>
+                </tr>
+                <tr>
+                    <td>.pd-s-[em]</td>
+                    <td>.pr-s-[em]</td>
+                    <td>Padding a la derecha para dispositivos menores a 770px.</td>
+                </tr>
+                <tr>
+                    <td>.par-s-[em]</td>
+                    <td>.pt-s-[em]</td>
+                    <td>Padding arriba para dispositivos menores a 770px.</td>
+                </tr>
+                <tr>
+                    <td>.pab-s-[em]</td>
+                    <td>.pb-s-[em]</td>
+                    <td>Padding abajo para dispositivos menores a 770px.</td>
+                </tr>
+                <tr>
+                    <td>.pi-xs-[em]</td>
+                    <td>.pl-xs-[em]</td>
+                    <td>Padding a la izquierda para dispositivos menores a 400px.</td>
+                </tr>
+                <tr>
+                    <td>.pd-xs-[em]</td>
+                    <td>.pr-xs-[em]</td>
+                    <td>Padding a la derecha para dispositivos menores a 400px.</td>
+                </tr>
+                <tr>
+                    <td>.par-xs-[em]</td>
+                    <td>.pt-xs-[em]</td>
+                    <td>Padding arriba para dispositivos menores a 400px.</td>
+                </tr>
+                <tr>
+                    <td>.pab-xs-[em]</td>
+                    <td>.pb-xs-[em]</td>
+                    <td>Padding abajo para dispositivos menores a 400px.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="alerta-negra mt-3">
+            <span class="f-w-9">Recomendación:</span> <br>
+            <div class="lista-doc mb-0">
+                <ul>
+                    <li>
+                        Ver los apartados de <a href="medidas.html" class="link tips-ele"
+                        data-tips="Documentación sobre los tamaños de pantalla manejados por bodystyle">Medidas</a> para conocer las dimensiones 
+                        con las que se maneja la librería. <br>
+                    </li>
+                    <li>
+                        Ver la documentación de los <a href="margin.html" class="link tips-ele"
+                        data-tips="Documentación sobre los margenes definidos por la librería.">Margenes</a> la cual es similar al actual tema sobre el padding.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        </article>
+
+        <article class="articulo">
+            <h2 id="t6">Padding X e Y</h2>
+            <p>
+                La librería permite establecer el padding tanto arriba y abajo como a los lados con las 
+                clases px-[em] y py-[em]. <br>
+                Incluye también las clases que permiten definir esta propiedad en diferentes tamaños de 
+                pantalla.
+            </p>
+            <div class="container mt-3">
+                <div class="ancho-15 bg-red px-5">.px-5</div>
+                <div class="ancho-5 bg-red py-5 mt-1">.py-5</div>
+            </div>
+
+            <div class="alerta-negra mt-3">
+                En el ejemplo anterior se introduce un padding arriba y abajo, y en otro 
+                contenedor un padding a la izquierda y a la derecha de 2.5em.
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c4">
+    <div class="container mt-3">
+        <div class="ancho-15 bg-red px-5">.px-5</div>
+        <div class="ancho-5 bg-red py-5 mt-1">.py-5</div>
+    </div>
+</pre>
+</div>
+
+        <table class="table-dark table-sm vertical-border table-bor-grey mt-3 selector">
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Rango</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>px-[em]</td>
+                    <td>[0-15]</td>
+                </tr>
+                <tr>
+                    <td>py-[em]</td>
+                    <td>[0-15]</td>
+                </tr>
+                <tr>
+                    <td>px-m-[em]</td>
+                    <td>[0-15]</td>
+                </tr>
+                <tr>
+                    <td>py-m-[em]</td>
+                    <td>[0-15]</td>
+                </tr>
+                <tr>
+                    <td>px-s-[em]</td>
+                    <td>[0-15]</td>
+                </tr>
+                <tr>
+                    <td>py-s-[em]</td>
+                    <td>[0-15]</td>
+                </tr>
+                <tr>
+                    <td>px-xs-[em]</td>
+                    <td>[0-15]</td>
+                </tr>
+                <tr>
+                    <td>py-xs-[em]</td>
+                    <td>[0-15]</td>
+                </tr>
+            </tbody>
+        </table>
+            
+        </article>
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    
+
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Padding</a></li>
+            <li><a href="#t2">Padding General</a></li>
+            <li><a href="#t3">Direccionado</a></li>
+            <li><a href="#t4">Medidas</a></li>
+            <li><a href="#t5">Clases</a></li>
+            <li><a href="#t6">Padding X e Y</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Padding"
+        var idMenu = "#m3"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>

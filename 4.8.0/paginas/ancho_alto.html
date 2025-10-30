@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Permite definir el ancho y alto para diferentes tamaños de pantalla a un mismo elemento.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Ancho y Alto</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Ancho y Alto</h1>
+            <p>
+                En muchas ocasiones es necesario poder definir el alto y el ancho de los elementos en diferentes tamaños 
+                de pantalla, lo cual significa que para un determinado elemento podemos necesitar que tenga un alto y ancho 
+                específico que cambiará en función al tamaño del dispositivo en el que se esté mostrando. Desde CSS se puede realizar 
+                esto con las @media que permiten definir estilos personalizados en función al tamaño del dispositivo. Bodysstyle 
+                dispone de una serie de clases parametrizadas para lograr resultados semejantes sin necesidad de introducir código CSS.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Ancho y Alto Generales</h2>
+            <p>
+                Se comienza esta sección definiendo un ancho y alto general, lo cual implica ocupará el mismo porcentaje 
+                en todos los dispositivos, la medida utilizada para configurar el ancho y el alto es el (%) que va a depender del contenedor 
+                padre, por ejemplo: Cuando decimos que un elemento va a ocupar el 40% de ancho es el 40% del contenedor padre, lo mismo con el alto.
+            </p>
+
+            <p class="mt-3">Alto de 300px</p>
+            <div class="bg-red ancho-100" style="height: 300px;">
+                <div class="d-flex ali-center just-center ta-c bg-black alto-100 ancho-50 c-white">
+                    Esto es un contenedor de 100% de alto y 50% de ancho
+                </div>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <div class="bg-red ancho-100" style="height: 300px;">
+        <div class="d-flex ali-center just-center ta-c bg-black alto-100 ancho-50 c-white">
+            Esto es un contenedor de 100% de alto y 50% de ancho
+        </div>
+    </div>
+</pre>
+</div>
+
+            <div class="alerta-negra">
+                Notaremos que si achicamos el tamaño de la pantalla la proporción seguirá igual, el contenedor padre 
+                disminuirá su ancho y el contenedor hijo (el negro) seguirá ocupando un 50% del total deformando el contenido. Esto 
+                se debe a que el 50% en equipos de pantalla grande no es lo mismo que el 50% en equipos chicos. <br>
+                Las clases utilizadas en el ejemplo son: 
+                <div class="lista-doc m-0">
+                    <li>alto-100 (alto del 100%)</li>
+                    <li>ancho-50 (ancho del 50%)</li>
+                </div>
+            </div>
+            <h3 id="t3">Alto y Ancho Rrsponsive</h3>
+            <p>
+                Ahora vamos a realizar el mismo ejemplo pero añadiendo las clases pertinentes 
+                para que el contenido del contenedor hijo no se deforme.
+            </p>
+
+            <div class="bg-red ancho-100" style="height: 300px;">
+                <div class="d-flex ali-center just-center ta-c bg-black alto-100 ancho-50 ancho-m-70 ancho-s-95 ancho-xs-100 c-white">
+                    Esto es un contenedor de 100% de alto y 50% de ancho
+                </div>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="bg-red ancho-100" style="height: 300px;">
+        <div class="d-flex ali-center just-center ta-c bg-black alto-100 ancho-50 ancho-m-70 ancho-s-95 ancho-xs-100 c-white">
+            Esto es un contenedor de 100% de alto y 50% de ancho
+        </div>
+    </div>
+</pre>
+</div>
+        <p class="alerta-negra">
+            Notese que si achican la pantalla el porcentaje del ancho del contenedor hijo cada vez va a ser 
+            mayor, de esta forma logramos adaptar el diseño para que se muestre de manera correcta.
+        </p>
+
+        <p class="my-3">
+            Ahora hacemos lo mismo con el alto.
+        </p>
+        <div class="bg-red ancho-100" style="height: 300px;">
+            <div class="d-flex ali-center just-center ta-c bg-black alto-50 alto-m-70 alto-s-95 alto-xs-100 ancho-50 ancho-m-70 ancho-s-95 ancho-xs-100 c-white">
+                Esto es un contenedor de 50% de alto y 50% de ancho
+            </div>
+        </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c3">
+    <div class="bg-red ancho-100" style="height: 300px;">
+        <div class="d-flex ali-center just-center ta-c bg-black alto-50 alto-m-70 alto-s-95 alto-xs-100 ancho-50 ancho-m-70 ancho-s-95 ancho-xs-100 c-white">
+            Esto es un contenedor de 50% de alto y 50% de ancho
+        </div>
+    </div>
+</pre>
+</div>
+
+        <h3 id="t4">Resumen de Clases</h3>
+        <div class="table-responsive">
+            <table class="selector table-dark table-sm vertical-border table-bor-grey">
+            <thead>
+                <tr>
+                    <th class="ancho-25">Clase</th>
+                    <th class="ancho-25">Alias</th>
+                    <th class="ancho-25">Medida</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td >alto-[%]</td>
+                    <td>height-[%]</td>
+                    <td>Todos los dispositivos</td>
+                    <td>Porcentaje del alto que va a tener el contenedor hijo respecto a su padre.</td>
+                </tr>
+                <tr>
+                    <td>ancho-[%]</td>
+                    <td>width-[%]</td>
+                    <td>Todos los dispositivos</td>
+                    <td>Porcentaje del ancho que va a tener el contenedor hijo respecto a su padre.</td>
+                </tr>
+                <tr>
+                    <td>ancho-m-[%]</td>
+                    <td>width-m-[%]</td>
+                    <td>770px < X <= 1030px</td>
+                    <td>Porcentaje del ancho que va a tener el contenedor hijo respecto a su padre en dispositivos medios.</td>
+                </tr>
+                <tr>
+                    <td >ancho-s-[%]</td>
+                    <td >width-s-[%]</td>
+                    <td>400px < X <= 770px</td>
+                    <td>Porcentaje del ancho que va a tener el contenedor hijo respecto a su padre en dispositivos chicos.</td>
+                </tr>
+                <tr>
+                    <td >ancho-xs-[%]</td>
+                    <td >width-xs-[%]</td>
+                    <td>400px > X</td>
+                    <td>Porcentaje del ancho que va a tener el contenedor hijo respecto a su padre en dispositivos extra chicos.</td>
+                </tr>
+
+                <tr>
+                    <td >alto-m-[%]</td>
+                    <td >height-m-[%]</td>
+                    <td>770px < X <= 1030px</td>
+                    <td>Porcentaje del alto que va a tener el contenedor hijo respecto a su padre en dispositivos medios.</td>
+                </tr>
+                <tr>
+                    <td >alto-s-[%]</td>
+                    <td >height-s-[%]</td>
+                    <td>400px < X <= 770px</td>
+                    <td>Porcentaje del alto que va a tener el contenedor hijo respecto a su padre en dispositivos chicos.</td>
+                </tr>
+                <tr>
+                    <td >alto-xs-[%]</td>
+                    <td >height-xs-[%]</td>
+                    <td>400px > X</td>
+                    <td>Porcentaje del alto que va a tener el contenedor hijo respecto a su padre en dispositivos extra chicos.</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        
+
+        <div class="alerta-negra mt-3" >
+            Cualquier duda consulta la sección <a href="medidas.html" class="link tips-ele"
+            data-tips="Sección de la documentación que muestra las medidas utilizadas.">Medidas</a> en la cual se describe 
+            numericamente los tamaños manejados por la librería.
+        </div>
+
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Ancho y Alto</a></li>
+            <li><a href="#t2">Generales</a></li>
+            <li><a href="#t3">Responsive</a></li>
+            <li><a href="#t4">Resumen</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Ancho y Alto"
+        var idMenu = "#m3"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>

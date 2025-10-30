@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Tooltips elementos dinámicos que permiten darle información al usuario sobre determinado elemento.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Tooltips</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Tooltips</h1>
+            <p>
+                Elementos dinámicos que permiten guiar y brindarle información al usuario sobre un 
+                determinado elemento dentro del DOM. Este elemento mejora sustancialmente la experiencia 
+                de usurio ya que entodo momento el mismo sabrá los que significa cada una de las 
+                cosas que conforman el sitio o aplicación web. <br>
+                Este elemento pertenece al Core de bodystyle y se puede contar con el a través de la 
+                dependencia <span class="badge badge-gris com-trigger"
+                data-info="Dependencia de Bodystyle que maneja todos los elementos dinámicos.">Dynamics-Tips</span> que puede 
+                descargarse desde <a href="https://mega.nz/file/pEsyDAYY#lEve_WyproRQAN1MnZx0Mba40HgZFjcHJ9rFN95wWYk" class="link tips-ele"
+                data-tips="<i class='fa-solid fa-download c-orange'>&nbsp;</i> Descargar la depencia.">Dynamics-Tips 1.8.0</a>.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">ToolTips Iniciación</h2>
+            <p>
+                Como toda funcionalidad dinámica de la librería hay que inicializar el módulo que hace posible 
+                su funcionamiento. Lo primero es tener agregada la librería de JavaScript de la librería Bodystyle 
+                a través de métodos definidos en <br><a href="get_started.html" class="link tips-ele"
+                data-tips="Medios de descarga e instalación de bodystyle." data-pos="right">Get Started</a>.<br>
+                La forma más simple es agregar la lógica de Bodystyle es a través de su <span class="badge badge-grey com-trigger"
+                data-info="Una CDN es una Red de Distribución de Contenido (por sus siglas en inglés) que usa una red de servidores distribuidos geográficamente para entregar contenido web de manera más rápida y eficiente.">CDN</span>. 
+            </p>
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <!-- CDN de bodystyle -->
+
+    <!--DESCOMENTAR LA LINEA DE ABAJO-->
+    <!--<script  src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>-->
+
+    <!-- Iniciación de los tooltips-->
+     <script>
+        BS.ToolTipsInit() // Iniciación del módulo de tooltips para poder utilizarlos
+     </script>
+</pre>
+</div>
+            <h3 id="t3">Muestra</h3>
+            <p class="mb-3">
+                Podemos añadirle tips explicativos y descriptivos a cualquier elemento del DOM, en este caso 
+                lo voy a hacer con un botón de la librería como muestra de su funcionamiento.
+            </p>
+
+            <button class="btn bg-green tips-ele"
+            data-tips="Esto es un Tips De Bodystyle" data-pos="top">HOVER</button>
+<div class="codigo">
+
+<pre class="cod-html" id="c2">
+    <!--Tips en un botón que se muestra en la parte sumerior del elemento-->
+    <button class="btn bg-green tips-ele"
+    data-tips="Esto es un Tips De Bodystyle" data-pos="top">HOVER</button>
+</pre>
+</div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <article class="articulo">
+            <h2 id="t4">Posicionamiento</h2>
+
+            <p>
+                Dynamics-Tips está compuesto por un núcleo de posicionamiento, el cual a través de las condiciones 
+                en la cuales se quiera mostrar el elemento va a elegir donde ubicarse aprovechando el espacio de manera óptima. <br>
+                A pesar de esto es posible a través de un atributo <span class="badge badge-gris">data-pos</span> establecer 
+                la posición del tooltips que por defecto es <span class="badge badge-gris">botton</span>. Aclaración: 
+                Si se intenta ubicar un tips en una posición en la que no hay espacio, el elemento va a buscar el espacio en otra posición 
+                de manera tal de presentarse adecuadamente al usuario.
+            </p>
+
+            <div class="d-flex just-around flex-wrap mt-3">
+                <button class="btn bg-blue tips-ele"
+                data-tips="Esto es un tips izquierdo" data-pos="left">Left</button>
+
+                <button class="btn bg-blue tips-ele"
+                data-tips="Esto es un tips abajo" data-pos="botton">Botton</button>
+
+                <button class="btn bg-blue tips-ele"
+                data-tips="Esto es un tips arriba" data-pos="top">Top</button>
+
+                <button class="btn bg-blue tips-ele"
+                data-tips="Esto es un tips derecho" data-pos="right">Right</button>
+            </div>
+
+            <div class="alerta-negra mt-3">
+                Para añadirle un tips a un elemento hay que agregarle la clase <span class="badge badge-red">.tips-ele</span> y 
+                luego definir el contenido a mostrar a través del atributo <span class="badge badge-gris">data-tips</span> y luego,
+                si lo desea puede configurar la posición a través del atributo <span class="badge badge-grey">data-pos</span>.
+            </div>
+<div class="codigo">
+    <pre id="c3" class="cod-html">
+        <div class="d-flex just-around flex-wrap mt-3">
+            <button class="btn bg-blue tips-ele"
+            data-tips="Esto es un tips izquierdo" data-pos="left">Left</button>
+            <button class="btn bg-blue tips-ele"
+            data-tips="Esto es un tips abajo" data-pos="botton">Botton</button>
+            <button class="btn bg-blue tips-ele"
+            data-tips="Esto es un tips arriba" data-pos="top">Top</button>
+            <button class="btn bg-blue tips-ele"
+            data-tips="Esto es un tips derecho" data-pos="right">Right</button>
+        </div>
+    </pre>
+</div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t5">Tips y Html</h2>
+            <p>
+                Como vimos anteriormente en el atributo <span class="badge badge-grey">data-tips</span> enviamos 
+                el texto que queremos que se muestra en el tips, pero no habíamos mencionado que este texto en realidad no es texto plano
+                sino html, lo cual brinda muchas más posibilidades para su edición utilizando las clases pertinentes para mejorar 
+                su visual.
+            </p>
+
+            <button class="btn-sm-o btn-white-o bor-pill tips-ele mt-3"
+            data-tips="<span class='c-rojo-ro'>Esto es un botón Outline de <span class='badge badge-white'>Bodystyle</span></span>"
+            data-pos="right">Outline</button>
+
+    <div class="codigo">
+    <pre id="c4" class="cod-html">
+        <!-- Botón outline de la librería bodystyle-->
+        <!-- Con la clase bor-pill para generar extremos redondeados-->
+        <button class="btn-sm-o btn-white-o bor-pill tips-ele mt-3"
+        data-tips="<span class='c-rojo-ro'>Esto es un botón Outline de <span class='badge badge-white'>Bodystyle</span></span>"
+        data-pos="right">Outline</button>
+    </pre>
+    </div>
+
+            <div class="alerta-negra mt-3">
+                Podemos utilizar todas las clases provistas por la librería pertenecientes a la sección 
+                <a href="texto.html" class="link">Texto</a> de esta documentación, como así tambien iconos de 
+                fuentes provistas por ejemplo por FontAwesome.
+            </div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t6">Tips Eventos</h2>
+            <p>
+                Hasta el momento vimos un solo evento que produce cuando el usuario pasa el cursor por encima del elemento que 
+                se configura por default. Ahora vamos a ver que podemos utilizar el mismo concepto por el evento click (cuando el usuario le daclick 
+                al elemento). 
+            </p>
+
+            <a href="botones.html"></a>
+
+            <button class="btn-sm-o btn-white-o bor-pill tips-ele mt-3"
+            data-tips="<span class='badge badge-red'>Bodystyle</span> Botones outline con efecto Hover"
+            data-pos="right"
+            data-evt="click">Click</button>
+
+            <div class="alerta-negra mt-3">
+                Para habilitar el evento click debemos añadir el atributo <span class="badge badge-grey">data-evt</span> 
+                para indicarle que el tips va a mostrarse con el disparador click.
+            </div>
+
+<div class="codigo">
+    <pre id="c5" class="cod-html">
+        <button class="btn-sm-o btn-white-o bor-pill tips-ele mt-3"
+        data-tips="<span class='badge badge-red'>Bodystyle</span> Botones outline con efecto Hover"
+        data-pos="right"
+        data-evt="click">Click</button>
+    </pre>
+</div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t7">Mostrar en Elementos Dinámicos</h2>
+            <div class="alerta-negra">
+                Este artículo es sobre un caso posible que se puede dar durante el desarrollo de cualquier proyecto. <br>
+                Si queremos que un tooltips haga referencia a un determinado elemento del DOM que se añade al mismo dinámicamente 
+                (A través de JS) y no se encuentra fisicamente en el DOM cuando se renderiza la página es necesario inicializar el módulo 
+                de los tooltips de otra manera.
+            </div>
+
+    <div class="codigo">
+    <pre id="c6" class="cod-js">
+        /** 
+            Este código debe ir dentro de las etiquetas script de html 
+            justo debajo la inicialización de la librería bodystyle.min.js.
+
+            Haciendo esto podemos añadirle los tootips a cualquier elemento estático o 
+            dinámico.
+        */
+        window.onload = () => {
+        setTimeout( () => {
+            BS.ToolTipsInit();
+            }, 50); 
+        }
+    </pre>
+    </div>
+
+        </article>
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+
+
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">ToolTips</a></li>
+            <li><a href="#t2">Iniciación</a></li>
+            <li><a href="#t3">Muestra</a></li>
+            <li><a href="#t4">Posicionamiento</a></li>
+            <li><a href="#t5">Html</a></li>
+            <li><a href="#t6">Evento</a></li>
+            <li><a href="#t7">Dinámicos</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "ToolTips"
+        var idMenu = "#m5"
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        BS.CodigoJsInit()
+    </script>
+</body>
+</html>

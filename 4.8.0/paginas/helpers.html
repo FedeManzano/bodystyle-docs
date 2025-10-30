@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Clases CSS que permiten mostrar u ocultar elementos dependiendo el tamaño de la pantalla.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Helpers</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Helpers</h1>
+            <p>
+                Clases que permiten mostrar u ocultar elementos en función a la conservación del 
+                diseño. En muchas oportunidades es necesario ocultar determinados elementos para determinadas 
+                medidas de pantalla y mostrarlos en otras. <br>
+                Para poder utilizar los helpers es necesario conocer las <a href="medidas.html" class="link tips-ele"
+                data-tips="Documentación de las medidas">medidas</a>  que utiliza la librería. 
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Ocultar Solo Grandes</h2>
+            <p>
+                Con esta clase podemos ocurtar elementos solo en dispositivos grandes (mayores a 1030px de ancho).
+            </p>
+
+            <div class="p-1 bg-red ocultar-solo-grandes">Esto es un div</div>
+
+            <div class="alerta-negra mt-3">
+                Si achican el tamaño de la pantalla aparecerá un div con la leyenda 'Esto es un div'.
+            </div>
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <!-- Este elemento se oculta en dispositivos grandes -->
+    <div class="p-1 bg-red ocultar-solo-grandes">Esto es un div</div>
+
+</pre>
+</div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <article class="articulo">
+            <h2 id="t3">Ocultar Desde Medianos</h2>
+            <p>
+                La idea de esta clase es ocultar el elemento desde dispositivos medianos, 
+                lo que implica que solo se mostrará en dispositivos grandes.
+            </p>
+
+            <div class="p-1 bg-red ocultar-desde-medianos">Esto es un div</div>
+
+            <div class="alerta-negra mt-3">
+                Si achican el tamaño de la pantalla del navegador notarán que el elemento que se muetra 
+                arriba desaparece.
+            </div>
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <!-- 
+        Este elemento se oculta en todos los dispositivos
+        menos en los grandes MED > 1030px
+    -->
+    <div class="p-1 bg-red ocultar-desde-medianos">Esto es un div</div>
+</pre>
+</div>
+
+        </article>
+
+        <article class="articulo">
+            <h2 id="t4">Ocultar Desde Chicos</h2>
+            <p>
+                Sirve para ocultar elementos desde dispositivos chicos, de manera tal
+                que solo se mostrará en dispositivos medianos y grandes. 
+            </p>
+
+            <div class="p-1 bg-red ocultar-desde-chicos">Esto es un div</div>
+
+<div class="codigo">
+<pre class="cod-html" id="c3">
+    <div class="p-1 bg-red ocultar-desde-chicos">Esto es un div</div>
+</pre>
+</div>
+
+        </article>
+
+
+        <article class="articulo">
+            <h2 id="t5">Ocultar Desde X Chicos</h2>
+
+            <p>
+                Esta clase solo se ocultará en los dispositivos extra chicos mostrandose 
+                en todas las demás medidadas.
+            </p>
+            <div class="p-1 bg-red ocultar-desde-x-chicos">Esto es un div</div>
+
+<div class="codigo">
+<pre class="cod-html" id="c3">
+    <div class="p-1 bg-red ocultar-desde-x-chicos">Esto es un div</div>
+</pre>
+</div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t6">Mostrar En Solo Extra Chicos</h2>
+            <p>
+                Esta clase permite mostrar elementos solo en equipos extra chicos.
+            </p>
+            <div class="p-1 bg-red mostrar-solo-x-chicos">Esto es un div</div>
+<div class="codigo">
+<pre class="cod-html" id="c4">
+    <!-- Este elemento sólo se muestra en equipos extra chicos MED < 400px -->
+    <div class="p-1 bg-red mostrar-solo-x-chicos">Esto es un div</div>
+</pre>
+</div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t7">Mostrar Solo Chicos</h2>
+            <p>
+                Con esta clase podemos mostrar los elementos sólo en equipos chicos 
+                400 px < MED < 770px.
+            </p>
+            <div class="p-1 bg-red mostrar-solo-chicos">Esto es un div</div>
+<div class="codigo">
+<pre class="cod-html" id="c4">
+    <!-- Este elemento sólo se muestra en equipos chicos 400px < MED < 770px -->
+    <div class="p-1 bg-red mostrar-solo-chicos">Esto es un div</div>
+</pre>
+</div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t8">Mostrar Solo Medianos</h2>
+            <p>
+                Solo se muestran en equipos medianos.
+            </p>
+
+            <div class="p-1 bg-red mostrar-solo-medianos">Esto es un div</div>
+<div class="codigo">
+<pre class="cod-html" id="c5">
+    <!-- Este elemento sólo se muestra en equipos medianos 770px < MED < 1030px -->
+    <div class="p-1 bg-red mostrar-solo-medianos">Esto es un div</div>
+</pre>
+</div>
+
+        </article>
+
+        <article class="articulo">
+            <h2 id="t9">Mostrar Solo Grandes</h2>
+            <p>
+                Solo se muestra en equipos grandes MED > 1030px
+            </p>
+            <div class="p-1 bg-red mostrar-solo-grandes">Esto es un div</div>
+<div class="codigo">
+<pre class="cod-html" id="c5">
+    <!-- Este elemento sólo se muestra en equipos grandes MED > 1030px -->
+    <div class="p-1 bg-red mostrar-solo-grandes">Esto es un div</div>
+</pre>
+</div>
+        </article>
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+   
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Helpers</a></li>
+            <li><a href="#t2">Ocultar Grandes</a></li>
+            <li><a href="#t3">O. Desde Medianos</a></li>
+            <li><a href="#t4">O. Desde Chicos</a></li>
+            <li><a href="#t5">O. Desde x Chicos</a></li>
+            <li><a href="#t6">M. Solo XS</a></li>
+            <li><a href="#t7">M. Solo Chicos</a></li>
+            <li><a href="#t8">M. Solo Medianos</a></li>
+            <li><a href="#t9">M. Solo Grandes</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Helpers"
+        var idMenu = "#m3"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>

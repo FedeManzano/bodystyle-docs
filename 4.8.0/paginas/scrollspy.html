@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <meta name="description" content="Elemento que permite la guiar al usuario a través de la página por medio de un conjunto de enlaces.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>ScrollSpy</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">ScrollSpy</h1>
+            <p>
+                Elemento que sirve como guia para el usuario dentro una página, está conformado 
+                por un cojunto de enlaces que vincularán el contenido con la guia, y de esta forma 
+                le dará al usuario accesos directos a partes específicas de la página.
+            </p>
+
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Inicialización</h2>
+            <p>
+                La inicialización de este módulo no solo permitirá brindar la lógica de 
+                funcionamiento sino que le brindará al elemento un conjunto de estilos 
+                propios de Bodystyle de manera tal que el desarrollador podrá personalizar 
+                el ScrollSpy.
+            </p>
+
+             <div class="table-responsive mt-3">
+                <table class="table-sm vertical-border selector table-bor-grey table-dark">
+                    <thead>
+                        <tr>
+                            <th>Parámetro</th>
+                            <th>Valor</th>
+                            <th>Descripción</th>
+                            <th>Default</th>
+                            <th>Obligatorio</th>
+                        <tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ancho</td>
+                            <td>1-100%</td>
+                            <td>Ancho del scrollspy medido en %</td>
+                            <td>16</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>tamFuente</td>
+                            <td>1-30px</td>
+                            <td>Tamaño de la fuente en PX</td>
+                            <td>16</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>colorBorde</td>
+                            <td>fd-[color]</td>
+                            <td>Clases de colores de fondo de la librería <a href="colores.html" class="link">Ver Doc</a> 
+                                <span class="f-w-7"> Solo las clases que comienzan con fd-[color] bg no incluidas aún</span></td>
+                            <td>fd-azul</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>alturaBorde</td>
+                            <td>1-100</td>
+                            <td>Altura del borde que se agrega de manera dinámica</td>
+                            <td>3</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>separacion</td>
+                            <td>1-n PX</td>
+                            <td>Separación del scrollspy de la parte superior de la pantalla</td>
+                            <td>100</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>colorSeleccionado</td>
+                            <td>c-[color]</td>
+                            <td>Color del texto del enlace cuando es seleccionado (hexadecimal)</td>
+                            <td>#000</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>colorNoSeleccionado</td>
+                            <td>c-[color]</td>
+                            <td>Color del texto del enlace cuando no está seleccionado (hexadecimal)</td>
+                            <td>#666</td>
+                            <td>NO</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="alerta-negra mt-3">
+                Si cualquiera de los parámetros de inicialización descriptos en la tabla anterior 
+                no es correcto bodystyle le imprimirá un mensaje en la consola del navegador con el código 
+                del error y una descripción detallada del mismo. Para más información consultar: <a href="gestion_errores.html" class="link com-trigger"
+                data-info="Módulo de bodystyle que controla el correcto ingreso de parámetros y permite conocer las causas del error.">Gestor de Errores</a>
+            </div>
+            
+            <h3 id="t3">Default</h3>
+            <p>
+                En esta sección mostraremos una muestra del scrollspy por defecto, no recibe parámetros. 
+            </p>
+
+            <a href="muestras/scrollspy.html" class="btn-sm bg-bodyui mt-2 com-trigger"
+            data-info="Muestra del ScrollSpy por defecto sin la introducción de parámetros en su inicialización.">Muestra</a>
+
+
+
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <div class="container">
+        <div class="p-1 bg-red c-white mb-3" style="height: 700px;">
+            <h2 class="scroll-item" id="1">Sección 1</h2>
+            <div class="mt-2">
+                <a href="../scrollspy.html#t3" class="link">Volver a la Documentación</a>
+            </div>
+        </div>
+        <div class="p-1 bg-red c-white mb-3" style="height: 700px;">
+            <h2 class="scroll-item" id="2">Sección 2</h2>
+        </div>
+        <div class="p-1 bg-red c-white mb-3" style="height: 700px;">
+            <h2 class="scroll-item" id="3">Sección 3</h2>
+        </div>
+    </div>
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#1">Sección 1</a></li>
+            <li><a href="#2">Sección 2</a></li>
+            <li><a href="#3">Sección 3</a></li>
+        </ul>
+    </div>
+</pre>
+</div>
+<div class="codigo">
+<pre class="cod-js" id="c2">
+    BS.ScrollSpyInit()
+</pre>
+</div>
+            <div class="alerta-negra">
+                Como se puede ver en el código del ejemplo anterior hay una lista con la clase 
+                <span class="badge badge-red">.lista-scroll </span> con un conjunto de enlaces que vinculan a estos elementos con 
+                cada uno de los <span class="badge badge-red">tag h</span> de las diferentes secciones através del ID de las secciones, además 
+                es necesario agregarle la clase <span class="badge badge-red">.scroll-item</span> a cada sección a la cual se está haciendo 
+                referencia.
+            </div>
+
+
+            <h3 id="t4">Con Parámetros</h3>
+            <p>
+                Ahora vamos a ver un ejemplo ingresando parámetros en la función de inicialización para personalizar el scrollspy 
+                y poder darle una idea más clara del funcionamiento del elemento al que lee esta documentación.
+            </p>
+            
+            <a href="muestras/scroll_spy_parametros.html" class="btn-sm bg-bodyui mt-2 com-trigger"
+            data-info="Muestra del ScrollSpy con parámetros de configuración.">Muestra</a>
+
+<div class="codigo">
+<pre class="cod-html" id="c3">
+    <div class="container">
+        <div class="p-1 bg-red c-white mb-3" style="height: 700px;">
+            <h2 class="scroll-item" id="1">Sección 1</h2>
+            <div class="mt-2">
+                <a href="../scrollspy.html#t4" class="link">Volver a la Documentación</a>
+            </div>
+        </div>
+        <div class="p-1 bg-red c-white mb-3" style="height: 700px;">
+            <h2 class="scroll-item" id="2">Sección 2</h2>
+        </div>
+        <div class="p-1 bg-red c-white mb-3" style="height: 700px;">
+            <h2 class="scroll-item" id="3">Sección 3</h2>
+        </div>
+    </div>
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#1">Sección 1</a></li>
+            <li><a href="#2">Sección 2</a></li>
+            <li><a href="#3">Sección 3</a></li>
+        </ul>
+    </div>
+</pre>
+</div>
+<div class="codigo">
+<pre class="cod-js" id="c4">
+    /**
+     * Todos los parámetros están validados
+     * cualquier error que ocurra pueden consultar la consola del 
+     * navegador, ahí se les informará cual fué el error y podrán corregirlo.
+     */
+    let conf = {
+        ancho: 15, // Ancho en porcentaje del scrollspy
+        tamFuente: 17, // Tamaño de la fuenta
+        colorBorde: "fd-bodyui", // color del borde
+        alturaBorde: 30, // Altura del elemento dinámico borde
+        separacion: 150, // Separación con respecto al inicio de la pantalla propiedad TOP
+        colorSeleccionado: "#fff", // Color del enlace seleccionado
+        colorNoSeleccionado: "#ccc" // Color del enlace no seleccionado
+    }
+    
+    // Inicialización con la conf
+    BS.ScrollSpyInit(conf)
+</pre>
+</div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Scrollspy</a></li>
+            <li><a href="#t2">Inicialización</a></li>
+            <li><a href="#t3">Default</a></li>
+            <li><a href="#t4">Parámetros</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "ScrollSpyNew"
+        var idMenu = "#m5"
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        BS.CodigoJsInit()
+    </script>
+</body>
+</html>

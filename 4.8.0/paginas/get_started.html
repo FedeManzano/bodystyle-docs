@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Comienzo de la documentación de bodystyle.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    
+    <title>Get Started</title>
+</head>
+<body>
+
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display:none"></div>
+
+    <section class="pagina nav-contenido">
+
+        <section class="encabezado">
+            <h1 class="scroll-item" id="t1">Get Started</h1>
+            <p>
+                Bodystyle es una librería de Software libre para la creación de 
+                <span class="badge badge-gris com-trigger"
+                data-info="Vista de las sitios y aplicaciones web desde el lado del usuario."
+                data-evt="hover"
+                data-pos="top">Front-End</span> de sitios y aplicacines 
+                web conformada, como se analizará en aprtados posteriores, por cuatro módulos que conforman el <span class="badge badge-gris">core</span>  de 
+                la librería. A partir del core se podrán agrupar elementos de diferentes características y distribuirlos
+                de manera correcta por toda la 
+                <span class="badge badge-gris com-trigger"
+                data-info="Interfaces bien diseñadas para que el usuario pueda utilizarla sin demasiado esfuerzo.">interfaz de usuario UI</span>.<br>
+                El objetivo de este trabajo es brindarle herramientas a los desarrolladores para que puedan crear 
+                diseños innovadores y se enfoquen en la mejora continua de la 
+                <span class="badge badge-gris com-trigger"
+                data-info="Gratificación que siente el usuario al momento de utilizar una aplicación o un producto informático.">experiencia de usuario UX</span>.
+            </p> <br>
+            
+            <h4 class="m-0">Autor: <a target="_blank" href="https://github.com/FedeManzano" class="link com-trigger"
+                data-info="<span class='f-w-7'>Federico Manzano:</span>: Estudiante de Ingeniería en Informática de la <span class='f-w-7'>Universidad Nacional de la Mantanza</span>">Federico Manzano</a> </h4>
+
+            <h3>Cambios para la versión <span class="badge badge-bodyui">4.5.0</span> </h3>
+            <div class="lista-doc">
+                <ul>
+                    <li><a href="tablas.html#t12" class="link com-trigger"
+                        data-info="Permite definir tablas utilizando el scroll cuando sea necesario." data-pos="right">Alias de las tablas (table-resposive)</a></li>
+                    <li><a href="badges.html#t4" class="com-trigger link"
+                        data-info="Tamaños xs/sm/md/lg/xl para definir estos elementos." data-pos="right">Tamaños de Badges</a></li>
+                    <li><a href="etiquetas.html" class="link com-trigger"
+                        data-info="Badges del tipo etiqueta para mejorar la visualización de algunos elementos." data-pos="right">Badges Etiquetas</a></li>
+                    <li><a href="mensajes.html" class="link com-trigger"
+                        data-info="Badges del tipo mensaje permiten describir un objeto de manera intuitiva." data-pos="right">Mensajes</a></li>
+                    <li><a href="solapas.html" class="link com-trigger"
+                        data-info="Badges del tipo solapa, que marca con una leyenda a determinados contenedores." data-pos="right">Solapas</a></li>
+                    <li><a href="colecciones.html#t5" class="link com-trigger"
+                        data-info="Colecciones con una lista desplegable del tipo acordeón." data-pos="right">Colección Desplegable</a></li>
+                    <li><a href="colores.html" class="link com-trigger"
+                        data-info="Color nuevo representativo de Bodystyle: <span class='badge badge-bodyui'>COLOR</span>." data-pos="right">Color de Bodystyle</a></li>
+                    <li><a href="imagenes.html" class="link com-trigger"
+                        data-info="Funcionalidades de imagenes agregadas:<br> <ul><li>Display</li><li>Zoom</li><li>Paralax</li></ul>" data-pos="right">Imagenes</a> </li>
+                    <li><a href="scrollspy.html" class="link com-trigger" 
+                        data-info="Nuevo elemento que sirve como guia para el usuario dentro de una determinada página." data-pos="right">ScrollSpy</a></li>
+                    <li><a href="overflow.html" class="link com-trigger"
+                        data-info="Determina la visibilidad de un elemento fuera de su contenedor padre." data-pos="right">Overflow</a></li>
+                    <li><a href="gestion_errores.html" class="link com-trigger"
+                        data-info="Valida la información de entrada de los parámetros de los diferentes módulos de la librería." data-pos="right">Gestión de Errores</a></li>
+                    <li><a href="" class="link com-trigger"
+                        data-info="Esta enlace solo estadisponible para la copia de la documentación web." 
+                        data-pos="right">Descargar Documentación v4.5.0</a> <span class="badge-xs badge-bodyui">Recomendado</span></li>
+                </ul>
+            </div>
+    
+             <div class="mar-2 boton-descarga"></div>
+        </section>
+
+        <article class="articulo">
+            <h2 class="scroll-item" id="t2">Core de Bodystyle</h2>
+            <p>
+                El core de bodystyle lo conforman cuatro módulos principales que se pueden descargar por separado 
+                para disponer de lo que proveen, pero que son integrados en esta librería para tener a disposición 
+                el conjunto completo de funcionalidades para el desarrollo y diseño de la interfaz de usuaio.
+            </p>
+
+            <table class="fd-gris-n table-sm vertical-bordes table-bor-white selector mar-3">
+                <thead>
+                    <tr>
+                        <th class="c-white">ID</th>
+                        <th class="c-white">Módulo</th>
+                        <th class="c-white">Descarga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="c-white">1</td>
+                        <td class="c-white">Grilla</td>
+                        <td class="c-white"><a target="_blank" href="https://mega.nz/file/9VkXUAxS#IlslEq6oGi1BEPeRL3od0NxOLk5-x5B6xd97VOOhQIM" class="link tips-ele"
+                            data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i> bs_grid.zip"
+                            data-pos="left">Descarga</a></td>
+                    </tr>
+                    <tr>
+                        <td class="c-white">2</td>
+                        <td class="c-white">Utilitarios</td>
+                        <td class="c-white"><a target="_blank" href="https://mega.nz/file/IFUFEJYY#IFXT7wOqocaCoOe-KVPBFyYmV0li0UiNpGhBBV-X030" class="link tips-ele"
+                            data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i> bs_utils.zip"
+                            data-pos="left">Descarga</a></td>
+                    </tr>
+                    <tr>
+                        <td class="c-white">3</td>
+                        <td class="c-white">Elementos Dinámicos</td>
+                        <td class="c-white"><a target="_blank" href="https://mega.nz/file/pEsyDAYY#lEve_WyproRQAN1MnZx0Mba40HgZFjcHJ9rFN95wWYk" class="link tips-ele"
+                            data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i> bs_dynamics.zip"
+                            data-pos="left">Descarga</a></td>
+                    </tr>
+                    <tr>
+                        <td class="c-white">4</td>
+                        <td class="c-white">Show Code</td>
+                        <td class="c-white"><a target="_blank" href="https://mega.nz/file/NVEFwYDC#5dKqYIQ1JGGwePRtBD53BzQ-zlMLUG7GOqKln1AaNAU" class="link tips-ele"
+                            data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i> bs_show_code.zip"
+                            data-pos="left">Descarga</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="scroll-item" id="t3"><i class="fa-solid fa-1 c-rojo-ro"></i> Alineamiento</h3>
+            <p>
+                Este módulo se encarga de la distribución de los elementos en el sitio web en desarrollo, 
+                permite adaptar los diseños a todos los dispositivos de pantalla brindando clases predefinidas 
+                para realizar los ajustes pertinentes y mostrar el contenido de manera precisa.
+            </p>
+            <div class="lista-doc">
+                <ul>
+                    <li>
+                        Grilla <a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/sass/alineamiento/_grilla.scss" class="link tips-ele" data-tips="<i class='fa-brands fa-sass c-rojo-ro'></i>&nbsp;sass/alineamiento/_grilla.scss"
+                            data-pos="right">_grilla.scss</a>
+                    </li>
+                    <li>
+                        Flexbox <a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/sass/alineamiento/_flex-box.scss" class="link tips-ele" data-tips="<i class='fa-brands fa-sass c-rojo-ro'></i>&nbsp;sass/alineamiento/_flex-box.scss"
+                            data-pos="right">_flex-box.scss</a>
+                    </li>
+                    <li>
+                        Contenedor <a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/sass/alineamiento/_contenedor.scss" class="link tips-ele" data-tips="<i class='fa-brands fa-sass c-rojo-ro'></i>&nbsp;sass/alineamiento/_contenedor.scss"
+                            data-pos="right">_contenedor.scss</a>
+                    </li>
+                    <li>
+                        Margin-Padding <a target="_blank"  href="https://github.com/FedeManzano/bodystyle/blob/master/sass/alineamiento/_margin-padding.scss" class="link tips-ele" data-tips="<i class='fa-brands fa-sass c-rojo-ro'></i>&nbsp;sass/alineamiento/_margin-padding.scss"
+                            data-pos="right">_margin-padding.scss</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="alerta-negra mar-2">
+                Es importante aclarar que cada funcionalidad de posicionamiento queda definida a partir de parámetros 
+                que ajustan el contenido según las circunstancias. Todas estas definiciones se verán en 
+                apartados posteriores de esta documentación.
+            </div>
+            <h3 class="scroll-item" id="t4"><i class="fa-solid fa-2 c-rojo-ro"></i>&nbsp;Utilitarios</h3>
+            <p>
+                Perimiten gestionar los elementos en los diferentes tamaños de pantalla, la librería se basa en el diseño resposive, por esta razón
+                es tan impotante este módulo que permite agregar y quitar bordes, permitir que un elemento se muestre o no en pantalla,
+                que un determinado elemento se muestre de determinado ancho y alto en un dispositivo y en otro se vea completamente distinto,
+                permite gestionar el texto (alineación, tamaño, grosor y color) y otras cosas que las veremos a lo largo de 
+                la documentación. 
+            </p>
+
+            <div class="lista-doc">
+                <ul>
+                    <li>
+                        Bordes <a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/sass/utilitarios/_bordes.scss" class="link tips-ele" data-tips="<i class='fa-brands fa-sass c-rojo-ro'></i>&nbsp;sass/utilitarios/_bordes.scss"
+                            data-pos="right">_bordes.scss</a>
+                    </li>
+                    <li>
+                        Divisores <a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/sass/utilitarios/_divisores.scss" class="link tips-ele" data-tips="<i class='fa-brands fa-sass c-rojo-ro'></i>&nbsp;sass/utilitarios/_divisores.scss"
+                            data-pos="right">_divisores.scss</a>
+                    </li>
+                    <li>
+                        Medidas <a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/sass/utilitarios/_medidas.scss" class="link tips-ele" data-tips="<i class='fa-brands fa-sass c-rojo-ro'></i>&nbsp;sass/utilitarios/_medidas.scss"
+                            data-pos="right">_medidas.scss</a>
+                    </li>
+                    <li>
+                        Opacidad <a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/sass/utilitarios/_opacidad.scss" class="link tips-ele" data-tips="<i class='fa-brands fa-sass c-rojo-ro'></i>&nbsp;sass/utilitarios/_opacidad.scss"
+                            data-pos="right">_opacidad.scss</a>
+                    </li>
+                    <li>
+                        Overflow <a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/sass/utilitarios/_overflow.scss" class="link tips-ele" data-tips="<i class='fa-brands fa-sass c-rojo-ro'></i>&nbsp;sass/utilitarios/_overflow.scss"
+                            data-pos="right">_overflow.scss</a>
+                    </li>
+                    <li>
+                        Screen <a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/sass/utilitarios/_screenUtilitarios.scss" class="link tips-ele" data-tips="<i class='fa-brands fa-sass c-rojo-ro'></i>&nbsp;sass/utilitarios/_screenUtilitarios.scss"
+                            data-pos="right">_screenUtilitarios.scss</a>
+                    </li>
+                    <li>
+                        Alineación de Texto <a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/sass/utilitarios/_textoAli.scss" class="link tips-ele" data-tips="<i class='fa-brands fa-sass c-rojo-ro'></i>&nbsp;sass/utilitarios/_textoAli.scss"
+                            data-pos="right">_textoAli.scss</a>
+                    </li>
+                    <li>
+                        Color del Texto<a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/sass/utilitarios/_textoTam.scss" class="link tips-ele" data-tips="<i class='fa-brands fa-sass c-rojo-ro'></i>&nbsp;sass/utilitarios/_textoColor.scss"
+                            data-pos="right">_textoColor.scss</a>
+                    </li>
+                    <li>
+                        Tamaño del Texto<a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/sass/utilitarios/_textoTam.scss" class="link tips-ele" data-tips="<i class='fa-brands fa-sass c-rojo-ro'></i>&nbsp;sass/utilitarios/_textoTam.scss"
+                            data-pos="right">_textoTam.scss</a>
+                    </li>
+                    <li>
+                        Texto Tipo<a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/sass/utilitarios/_textoTam.scss" class="link tips-ele" data-tips="<i class='fa-brands fa-sass c-rojo-ro'></i>&nbsp;sass/utilitarios/_textoTipo.scss"
+                            data-pos="right">_textoTipo.scss</a>
+                    </li>
+                </ul>
+            </div>
+
+            <h3 class="scroll-item" id="t5"><i class="fa-solid fa-3 c-rojo-ro"></i>&nbsp;Dynamics-Tips</h3>
+            <p>
+                Es una dependencia creada por la misma persona que desarrolló la librería Bodystyle que 
+                permite incluir dentro del diseño objetos dinámicos informátivos en los puede incluirse 
+                código html con el fin de brindarle al usuario información más específica del contenido 
+                de la página.
+            </p>
+
+            <h4 class="mb-3">Repositorio</h4>
+
+            <a class="btn-sm bg-bodyui com-trigger bor-pill"
+            data-info="Dependencia <span class='f-w-9'>dynamics-tips</span> para generar elementos dinámicos y brindarle al usuario más información sobre determinadas cuestiones referidas al sitio."
+            href="https://github.com/FedericoManzano/dynamics-tips">Dynamics-Tips 1.8.0</a>
+        
+            
+            <h3 class="scroll-item" id="t6"><i class="fa-solid fa-4 c-rojo-ro"></i>&nbsp;Show Code</h3>
+            <p>
+                Dependencia realizada por el mismo desarrollador de Bodystyle que pretende poder colorear el código 
+                fuente dentro de una página web. Los lenguajes de programación admitidos por esta dependencia son: <br>
+                Java, JavaScript, C, CSS, Html.
+            </p>
+
+            <h4 class="mb-3">Repositorio</h4>
+
+            <a class="btn-sm bg-bodyui com-trigger bor-pill"
+            data-info="Dependencia <span class='f-w-9'>show-code 1.1.1</span>se utiliza para colorear el código fuente y permitir la claridad de lo mostrado en los ejemplos."
+            href="https://github.com/FedericoManzano/show-code">Show-Code 1.1.1</a>
+
+        </article>
+
+        <article class="articulo">
+            <h2 class="scroll-item" id="t7">Descarga e Instalación</h2>
+            <p>
+                Vamos a ver las diferentes formas de disponer de la librería a través de los 
+                diferentes medios según el proyecto en desarrollo.
+            </p>
+
+            <h3 class="scroll-item" id="t8">Descarga de los Archivos</h3>
+            <p class="mb-3">
+                Descargar el procesado de la librería con los archivos transpilados.
+            </p>
+
+            <a target="_blank" href="https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww" 
+            class="btn-sm bg-bodyui bor-pill tips-ele waves"
+            data-tips="<i class='fa-solid fa-download'>&nbsp;</i> Descarga de <span class='badge badge-red'>Bodystyle 4.5.0</span>"
+            data-color="fd-blanco">Bodystyle 4.5.0</a>
+
+            <h3 class="scroll-item" id="t9">CDN</h3>
+
+            <p>
+                Se puede agregar la plantilla que se encuentra a continuación para disponer de los estilos y de la lógica en JS 
+                de la librería. Los archivos enlazados son los minificados de la bodystyle para mejorar el rendimiento de 
+                la carga de la librería.
+            </p>
+
+            <h4>CDN Estilos CSS</h4>
+
+<div class="codigo">
+    <pre id="c1" class="cod-html">
+        <!--Agregar en el head de la página -->
+        <!-- DESCOMENTAR ESTE CÓDIGO CUANDO LO AGREGUEN
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
+        -->
+    </pre>
+</div>
+
+        <h4>Lógica en JS</h4>
+<div class="codigo">
+    <pre id="c2" class="cod-html">
+        <!--Agregar antes de la etiqueta de cierre del body -->
+
+        <!-- DESCOMENTAR ESTE CÓDIGO CUANDO LO AGREGUEN
+        <script src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
+        -->
+    </pre>
+</div>
+        <h4>Plantilla</h4>
+
+        <p class="mt-1">
+            La otra opción es copiar y pegar una plantilla que pueden copiar desde el repositorio: <br>
+        </p>
+
+        <a href="https://github.com/FedeManzano/bodystyle?tab=readme-ov-file#pencil2-plantilla" target="_blank" class="link tips-ele"
+        data-tips="Plantilla HTML para agregar la librería." data-pos="right">Plantilla</a>
+
+        <div class="alerta-negra mt-3">
+            <b class="c-red">La etiqueta viewport que se encuentra en el header de la plantilla es necesaria y obligatoria 
+            para el correcto funcionamiento de la librería.</b>
+        </div>
+
+        <h3 class="scroll-item" class="scroll-item" id="t10">Npm</h3>
+
+        <p>
+            Se pude agregar la librería al proyecto a través del gestor de paquetes de NodeJs NPM.
+        </p>
+
+<div class="codigo">
+    <pre id="c4" class="cod-js">
+        # npm install bodyui2
+    </pre>
+</div>
+
+        </article>
+
+        <article class="articulo">
+            <h2 class="scroll-item" id="t11">Desarrollo</h2>
+            <p>
+                Para el desarrollo de la librería se utilizó el entorno de ejecución NodeJs 22.20.0 y el gestor de paquetes 
+                11.6.1.
+            </p>
+            <h3 class="scroll-item" id="t12">Gestor de paquetes</h3>
+            <div class="row mar-3">
+                <div class="card cxs-12 cs-12 cm-6 cl-4">
+                    <div class="card-icon-dark card-cover com-trigger"
+                    data-info="<span class='f-w-7'>Node.js</span> es un entorno de ejecución de código abierto y multiplataforma que permite ejecutar código JavaScript fuera de un navegador web. </br></br><span class='f-w-7 c-red'>Sitio Oficial: https://nodejs.org/es/</span>">
+                        <div class="image-container">
+                            <img src="../imagenes/node.png" alt="Node js">
+                        </div>
+                        <div>
+                            <h4 class="mar-0">NODE JS</h4>
+                            <small>v22.20.0</small> <br>
+                            <a target="_blank" href="https://nodejs.org/es/" class="link">Sitio Oficial</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card cxs-12 cs-12 cm-6 cl-4">
+                    <div class="card-icon-dark card-cover com-trigger"
+                    data-info="<span class='f-w-7'>npm (Node Package Manager)</span> es un administrador de paquetes para el entorno de JavaScript de Node.js. </br></br><span class='f-w-7 c-red'>Sitio Oficial: https://www.npmjs.com/</span>">
+                        <div class="image-container">
+                            <img src="../imagenes/npm.png" alt="Gestor de paquetes de NODEJS">
+                        </div>
+                        <div>
+                            <h4 class="mar-0">NPM</h4>
+                            <small>v11.6.1</small> <br>
+                            <a target="_blank" href="https://www.npmjs.com/" class="link">Sitio Oficial</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="scroll-item" id="t13">JS</h3>
+            <p class="mab-3">
+                Las dependencias utilizadas para el desarrollo son WEBPACK para 
+                modularizar el código JS y BABEL para transpilar el código de JavaScript 
+                a ES5 compatible con todos los navegadores.
+            </p>
+            <div class="row">
+                <div class="card cxs-12 cs-12 cm-6 cl-4">
+                    <div class="card-icon-dark card-cover com-trigger"
+                    data-info="Webpack es un empaquetador de módulos estáticos para aplicaciones web modernas que transforma código y recursos (como JavaScript, CSS, imágenes y fuentes)">
+                        <div class="image-container">
+                            <img src="../imagenes/wp.png" alt="Webpack modularización del código fuente js.">
+                        </div>
+                        <div>
+                            <h4 class="mar-0">WEBPACK</h4>
+                            <small>v5.0.7</small> <br>
+                            <a href="https://webpack.js.org/" class="link" target="_blank">Sitio Oficial</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card cxs-12 cs-12 cm-6 cl-4">
+                    <div class="card-icon-dark card-cover com-trigger"
+                    data-info="Babel es un compilador de JavaScript que transforma código moderno (ECMAScript 2015+ o ES6+) a una versión más antigua y compatible con navegadores y entornos que no soportan las características más recientes del lenguaje.">
+                        <div class="image-container">
+                            <img src="../imagenes/ba.png" alt="">
+                        </div>
+                        <div>
+                            <h4 class="mar-0">BABEL</h4>
+                            <small>8.0.8</small> <br>
+                            <a href="https://babeljs.io/" class="link" target="_blank">Sitio Oficial</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Transpilar el código JS de Bodystyle</h3>
+    <div class="codigo">
+    <pre id="c2" class="cod-js">
+        // desde el prompt ejecutar 
+        npm run build
+    </pre>
+    </div>
+
+        <h3 class="scroll-item" id="t14">Procesador de estilos</h3>
+        <div class="card">
+            <div class="card-icon-dark com-trigger"
+            data-info="Sass es un preprocesador CSS (Syntactically Awesome Style Sheets) que extiende las capacidades de CSS añadiendo características de programación como variables, funciones, anidación y herencia">
+                <div class="image-container">
+                    <img src="../imagenes/sass.png" alt="">
+                </div>
+                <div>
+                    <h4 class="mar-0">SASS</h4>
+                    <small>v3.9.3</small> <br>
+                    <a href="https://sass-lang.com/" class="link" target="_blank">Sitio Oficial</a>
+                </div>
+            </div>
+        </div>        
+        </article>
+
+
+        <div class="autor"></div>
+    </section>
+
+    
+
+    <div class="lista-scroll ocultar-desde-medianos" >
+        <ul>
+            <li><a href="#t1">Get Started</a></li>
+            <li><a href="#t2">Core Bodystyle</a></li>
+            <li><a href="#t3">Alineamiento</a></li>
+            <li><a href="#t4">Utilitarios</a></li>
+            <li><a href="#t5">Dynamics-Tips</a></li>
+            <li><a href="#t6">Show-Code</a></li>
+            <li><a href="#t7">Instalación</a></li>
+            <li><a href="#t8">Descarga Directa</a></li>
+            <li><a href="#t9">CDN</a></li>
+            <li><a href="#t10">NPM</a></li>
+            <li><a href="#t11">Desarrollo</a></li>
+            <li><a href="#t12">Gesto Paquetes</a></li>
+            <li><a href="#t13">Js</a></li>
+            <li><a href="#t14">Sass</a></li>
+        </ul>
+    </div>
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Get Started"
+        var idMenu = "#m1"
+    </script>
+    <script src="../js/docs-body.js"></script>
+</body>
+</html>
