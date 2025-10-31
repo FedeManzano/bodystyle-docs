@@ -33,10 +33,16 @@
         <a href="../personalizados.html#t6" class="link">Vover a la DOC.</a>
     </div>
 
-
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
     <script>
         BS.PersonalizadoInit({ori: "disparador", ele: "personal_clase"})
+         window.onload = () => {
+         setTimeout( () => {
+            $("ins").remove()
+            $("iframe").remove()
+         }, 100)
+        }
     </script>
 </body>
 </html>

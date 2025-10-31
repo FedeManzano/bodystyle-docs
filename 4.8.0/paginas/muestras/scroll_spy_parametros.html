@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <meta charset="UTF-8">
         <!-- META obligatorio para poder utilizar la libreria -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -33,7 +34,7 @@
         </div>
         
 
-
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <!-- Archivo con las funcionalidades JS -->
         <script src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
         <script>
@@ -55,6 +56,13 @@
          
             // Inicialización con la conf
             BS.ScrollSpyInit(conf)
+
+             window.onload = () => {
+         setTimeout( () => {
+            $("ins").remove()
+            $("iframe").remove()
+         }, 100)
+        }
         </script>
     </body>
 </html>
