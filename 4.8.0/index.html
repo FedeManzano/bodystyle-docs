@@ -48,8 +48,8 @@
                 <label  class="badge-mje-right badge-mje-bodyui mr-2 mb-1">v4.8.0</label>
                 <a><i id="descarga_lib" class="bs-download c-white fz-30 disparador"
                     data-info="Versión transpilada de <span class='f-w-7'>Bodystyle v4.8.0</span>" data-pos="left" data-evt="click"></i></a>
-                <a target="_blank" href="https://github.com/FedeManzano/bodystyle" class="com-trigger"
-                        data-info="Repositorio de la librería disponible para ser descargado y modificado."><i class="bs-github-2 fz-30 ml-1 c-white"></i></a>
+                <a target="_blank" href="https://github.com/FedeManzano/bodystyle"><i  class="bs-github-2 fz-30 ml-1 c-white com-trigger"
+                        data-info="Repositorio de la librería disponible para ser descargado y modificado."></i></a>
             </div>
         </div>
     </nav>
@@ -70,9 +70,9 @@
                 en aplicaciones y sitios web.</h2>
             <div class="d-flex just-center flex-wrap-s mt-5">
                 <a  href="./paginas/get_started.html" class="btn-lg-o btn-white-o mr-1 mr-xs-0 mb-xs-1 bor-pill tips-ele"
-                data-tips="Empezar a utilizar la Bodystyle" data-pos="top">Get Started</a>
+                data-tips="Empezar a utilizar la Bodystyle" data-pos="top"><i class="fz-30 bs-play">&nbsp;</i>Get Started</a>
                 <a id="descaraga_docs" target="_blank" class="btn-lg fd-gris-n bor-pill disparador"
-                data-info="" data-pos="top" data-evt="click">Docs v1.8.0</a>
+                data-info="" data-pos="top" data-evt="click"><i class="fz-30 bs-zip-2">&nbsp;</i>Docs v1.8.0</a>
             </div>
             <div class="mt-2">
                 <a target="_blank" href="https://github.com/FedeManzano/bodystyle/releases/tag/v4.5.0" class="link tips-ele"
@@ -83,9 +83,15 @@
 
     <div id="bs-nav-sidebar" class="bs-nav-sidebar fd-gris-n">
         <ul>
-            <li><a href="./paginas/get_started.html">Docs</a></li>
-            <li><a href="https://github.com/FedeManzano/bodystyle">Repositorio</a></li>
-            <li><a href="#">Licencia</a></li>
+            <li><a href="./paginas/get_started.html"><i class="fz-20 bs-code">&nbsp;</i>Docs</a></li>
+            <li><a target="_blank" href="https://github.com/FedeManzano/bodystyle"><i class="bs-github-2 c-white fz-20">&nbsp;</i>Repositorio</a></li>
+            <li>
+                <a href="./paginas/iconos.html"><i class="bs-sunglass c-yellow fz-20">&nbsp;</i>Iconos <span class="badge badge-bodyui">New</span></a>
+            </li>
+            <li>
+                <a href="https://brave.com/" target="_blank" class="disparador"
+                data-info="Navegador Recomendado" data-evt="click" data-pos="right"><i class="fz-20 bs-certification"></i>Brave Browser</a>
+            </li>
         </ul>
     </div>
 
@@ -150,6 +156,24 @@
         )
 
         $("#navegador").attr("data-info", 
+            `
+                <div  class="card" style="z-index: 10000">
+                    <div  class="card-simple-dark ta-c">
+                        <h4>Navegador</h4>
+                        <small>Barave Browser</small>
+                        <div class="ta-c d-flex flex-column ali-center mt-3">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Brave_icon_lionface.png" height='50px' width='50px' />
+                            <p>
+                                Navegador Recomendado para ver la documentación.
+                            </p>
+                            <a href="https://brave.com/"" class="link">Descargar</a>
+                        </div>
+                    </div>
+                </div>
+            `
+        )
+
+        $("#navegador2").attr("data-info", 
             `
                 <div  class="card" style="z-index: 10000">
                     <div  class="card-simple-dark ta-c">
