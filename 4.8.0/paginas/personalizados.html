@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Núcleo de posicionamiento dinámico que permite posicionar cualquier tipo de elementos.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    
+    <title>Tips Propios</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Tips Propios</h1>
+            <p>
+                En otras secciones de esta documentación vimos los <a href="tooltips.html" class="link">ToolTips</a> y 
+                los <a href="comentarios.html" class="link">Comentarios</a> para posicionar esos elementos e informar 
+                que hace un determinado elemento. Ahora vamos crear nuetros propis tips con sus estilos personalizados 
+                para mostrar la información como mejor se ajuste a las necesidades.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Inicialización</h2>
+            <p>
+                Para disponer de esta funcionalidad hay que inicializar el módulo 
+                correspondiente que permitirá el posicionamiento dinámico en donde lo definamos.
+            </p>
+
+<div class="codigo">
+<pre class="cod-js" id="c1">
+    /*
+         Forma 1: 
+                Si los elementos a los cuales les asociaremos 
+         un elemento dinámico se incluyen dentro del HTML de manera 
+         estática utilizaremos esta forma.
+    */
+    BS.PersonalizadoInit({ori: "clase del elemento disparador", ele: "estilos css"})
+
+    /**
+        Forma 2:
+                Si los elementos a los cuales queremos asociar un elemento dinámico
+        se incluyen dentro del HTML de forma dinámica utilizaremos esta forma. 
+    */
+    window.onload = () => {
+        setTimeout( () => {
+            BS.PersonalizadoInit({ori: "clase del elemento disparador", ele: "estilos css"})
+        }, 100) // 100 ms de retardo
+    }
+</pre>
+</div>
+            <div class="alerta-negra">
+                Para ambos casos es necesario disponer del archivo 
+                <a id="archivo_js"  href="https://github.com/FedeManzano/bodystyle/blob/master/dist/js/bodystyle.min.js" class="link disparador"
+                data-info="Archivo JS de la librería bodystyle tiene que estar añadido al proyecto en desarrollo para utlizar los tips personalidos">
+                    <i class="bs-js c-yellow"></i>
+                    bodystyle.min.js
+                </a>
+                una vez agregado se puede inicializar el módulo que servirá para toda la página y cargará con las clases personalizadas un elemento.
+            </div>
+            <h3 id="t3">Muestra</h3>
+            <p class="mb-3">
+                Se toma para este ejmplo la alerta roja de la librería que están documentas en appartados anteriores en la sección de 
+                CSS, <a href="alertas.html" class="link">Ver Alertas</a>. 
+            </p>
+
+            <a href="#" class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado." data-pos="right">HOVER</a>
+
+            <div class="alerta-negra mt-3">
+                El botón anterior a través del evento HOVER (cuando el cursor pasa por encima del elemento) muestra 
+                una alerta de la librería, de esta forma se logra personalizar al tooltips. Es importate aclarar 
+                que hay que definir un nombre de clase, en este caso la clase es <span class="badge badge-red">.disparador</span> 
+                y agregarsela al elemento, luego le pasamos como parámetro a la función de inicialización esta clase a través 
+                del objeto JSON de configuración.
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <!--Este es el elemento disparador del tooltips personalizado 
+        Como se puede ver tiene asignada la clase disparador y el atributo data-info que es donde 
+        se suministrará el contenido a mostrar, luego se establece la posición con el attr data-pos que por default 
+        es (bottom).
+    -->
+    <a href="#" class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado." data-pos="right">HOVER</a>
+</pre>
+</div>
+<div class="codigo">
+<pre class="cod-js" id="c3">
+    BS.PersonalizadoInit({ori: "disparador", ele: "alert-op-red"})
+</pre>
+</div>
+        
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Tips Propios</a></li>
+            <li><a href="">Template literal</a></li>
+            <li><a href="">Boton Flotante</a></li>
+            <li><a href="">Servicios</a></li>
+            <li><a href="">Template literal</a></li>
+            <li><a href="">Boton Flotante</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Tips PropiosNew"
+        var idMenu = "#m5"
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        BS.CodigoJsInit()
+        
+
+       
+
+    </script>
+</body>
+</html>
