@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet"  href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
+    <title>Personalizado</title>
+</head>
+<body>
+
+    <div class="contaner mt-5">
+        <a id="id_disparador" class="btn-sm fd-bodyui disparador" data-info="" data-pos="right">HOVER</a>
+    </div>
+
+    <div class="container mt-3">
+        <a id="id_disparador" href="../personalizados.html#t7" class="link">Vover a la DOC.</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
+    <script>
+        BS.PersonalizadoInit({ori: "disparador", ele: ""})
+         $("#id_disparador").attr("data-info", `
+            <div  class="card">
+                <div  class="card-simple-dark">
+                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                    <small>Pequeña descripción</small>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                    </p> 
+                    <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                </div>
+            </div>
+        `)
+    </script>
+</body>
+</html>

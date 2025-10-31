@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet"  href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
+    <style>
+        .personal_clase {
+                padding: 5px;
+                border-radius: 5px;
+                background-color: #000000e0;
+                color: white;
+                position: absolute;
+                max-width: fit-content;
+                
+    }
+    </style>
+    
+    <title>Personalizado</title>
+</head>
+<body>
+
+    <div class="contaner mt-5">
+        <div class="d-flex just-around">
+            <button class="disparador btn-sm bg-bodyui" data-info="A la derecha" data-pos="right">RIGHT</button>
+            <button class="disparador btn-sm bg-bodyui" data-info="A la izquierda" data-pos="left">LEFT</button>
+            <button class="disparador btn-sm bg-bodyui" data-info="Arriba" data-pos="top">TOP</button>
+            <button class="disparador btn-sm bg-bodyui" data-info="Abajo">BOTTOM</button>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <a href="../personalizados.html#t6" class="link">Vover a la DOC.</a>
+    </div>
+
+
+    <script src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
+    <script>
+        BS.PersonalizadoInit({ori: "disparador", ele: "personal_clase"})
+    </script>
+</body>
+</html>

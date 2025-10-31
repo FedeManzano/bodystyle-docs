@@ -12,6 +12,18 @@
     <link rel="stylesheet" href="../css/bodystyle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+
+    <style>
+            .personal_clase {
+                padding: 5px;
+                border-radius: 5px;
+                background-color: #0000007c;
+                color: white;
+                position: absolute;
+                max-width: fit-content;
+                
+            }
+        </style>
     
     <title>Tips Propios</title>
 </head>
@@ -113,9 +125,150 @@
     BS.PersonalizadoInit({ori: "disparador", ele: "alert-op-red"})
 </pre>
 </div>
+
+        <div class="alerta-negra">
+            Es importante aclarar que el attr <span class="badge badge-black">data-info</span> recibe código html, esto implica 
+            que también se le pueden asignar estilos al contenido del tooltips personalizados. 
+        </div>
         
+        <h3 id="t4">Evento Click</h3>
+        <p class="mb-3">
+            Lo que vimos antes fue con el evento HOVER (por default), en muchas oportunidades vamos a querer 
+            realizar lo mismo de antes pero con el evento click, para esto le agregaremos un atributo al disparador que es 
+            el <span class="badge badge-black">data-evt</span> con el valor <span class="badge badge-grey">click</span>.
+        </p>
+
+         <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="right" data-evt="click">CLICK ME!</a>
+        
+<div class="codigo">
+    <pre id="c4" class="cod-html">
+        <!-- Evento click con el attr data-evt="click" -->
+         <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="right" data-evt="click">CLICK ME!</a>
+    </pre>
+</div>
+
+        <div class="alerta-negra">
+            La inicialización fue hecha anteriormente, ya no es necesario inicializar el módulo nuevamente la inicialización 
+            durará todo el tiempo que el usuario esté dentro de la página.
+        </div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t5">Posiciones</h2>
+            <p>
+                El posicionamiento puede ser (izquierda/left), (derecha/right), (arriba/top) o (abajo/bottom).
+            </p>
+
+            <div class="d-flex just-around flex-wrap mt-3">
+                 <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="right">RIGHT</a>
+                 <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="left">LEFT</a>
+                <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="top">TOP</a>
+                <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click">BOTTOM</a>
+            </div>
+
+<div class="codigo">
+    <pre id="c5" class="cod-html">
+        <!-- Esto es un ejemplo de posicionamiento en todas las direcciones-->
+        <div class="d-flex just-around mt-3">
+            <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="right">RIGHT</a>
+            <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="left">LEFT</a>
+            <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="top">TOP</a>
+            <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click">BOTTOM</a>
+        </div>
+    </pre>
+</div>
+        </article>
+        <article class="articulo">
+            <h2 id="t6">Clase Personalizada</h2>
+            <p>
+                Hasta ahora vimos como crear un tips personalizado con las clases de la librería pero que pasa cuando queremos 
+                asignarle una clase seleccionada por el desarrollado (que no pertenece a librería)?. Es lo veremos a continuación, 
+                primero debemos crear una clase para poder asignarla.
+            </p>
+
+
+<div class="codigo">
+    <pre id="c6" class="cod-html">
+        <div class="contaner mt-5">
+            <div class="d-flex just-around">
+                <button class="disparador btn-sm bg-bodyui" data-info="A la derecha" data-pos="right">RIGHT</button>
+                <button class="disparador btn-sm bg-bodyui" data-info="A la izquierda" data-pos="left">LEFT</button>
+                <button class="disparador btn-sm bg-bodyui" data-info="Arriba" data-pos="top">TOP</button>
+                <button class="disparador btn-sm bg-bodyui" data-info="Abajo">BOTTOM</button>
+            </div>
+        </div>
+    </pre>
+</div>
+<div class="codigo">
+    <pre id="c7" class="cod-css">
+        .personal_clase {
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #0000007c;
+            color: white;
+            max-width: fit-content;
+        }
+    </pre>
+</div>
+<div class="codigo">
+<pre class="cod-js" id="c8">
+    BS.PersonalizadoInit({ori: "disparador", ele: "personal_clase"})
+</pre>
+</div>
+
+
+        <a href="./muestras/personalizado_clase.html" class="link">Muestra de este Ejemplo</a>
+
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t7">Objetos Personalizados</h2>
+            <p>
+                Ahora nos dedicaremos a un ejemplo más complicado, demanera tal de poder 
+                asignar un contenedor complejo a los diferentes disparadores, para esta tarea 
+                deberemos crear un contenedor dinámico (desde JS) para despues poder asignarselo 
+                al attr <span class="badge badge-negro">data-info</span> del disparador.
+            </p>
+
+<div class="codigo">
+    <pre id="c9" class="cod-js">
+        /**
+            El ID que se presenta debajo es el ID del disparador necesario para 
+            poder acceder a su data-info y configurarlo.
+        */
+        // IMPORTANTE ESTOS USANDO jquery
+        // PARA ESTE EJEMPLO https://jquery.com
+        $("#id_disparador").attr("data-info", `
+            <div  class="card">
+                <div  class="card-simple-dark">
+                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                    <small>Pequeña descripción</small>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                    </p> 
+                    <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                </div>
+            </div>
+        `)
+    </pre>
+</div>
+
+<div class="codigo">
+    <pre id="10" class="cod-html">
+    <!--Notese con el attr queda vacío para agregar información dinamicamante.-->
+    <a id="id_disparador" class="btn-sm fd-bodyui disparador" data-info="" data-pos="right">HOVER</a>
+    </pre>
+</div>
+<div class="codigo">
+    <pre id="11" class="cod-js">
+        BS.PersonalizadoInit({ori: "disparador", ele: ""}) // Notese que elemento va vacío
+    </pre>
+</div>
+
+        <a href="muestras/personalizado_objeto.html" class="link">Muestra de Este Ejemplo</a>
+
+
+        </article>
 
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
@@ -126,11 +279,12 @@
     <div class="lista-scroll">
         <ul>
             <li><a href="#t1">Tips Propios</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
+            <li><a href="#t2">Inicialización</a></li>
+            <li><a href="#t3">Muestra Hover</a></li>
+            <li><a href="#t4">Evento Click</a></li>
+            <li><a href="#t5">Posiciones</a></li>
+            <li><a href="#t6">Clase Personalizada</a></li>
+            <li><a href="#t7">Objeto Personalizado</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
@@ -147,10 +301,7 @@
     <script src="../js/docs-body.js"></script>
     <script>
         BS.CodigoJsInit()
-        
-
-       
-
+        BS.CodigoCssInit()
     </script>
 </body>
 </html>
