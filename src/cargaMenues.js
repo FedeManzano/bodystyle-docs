@@ -144,8 +144,8 @@ import "./bodystyle"
                 </p> 
                 <a target="_blank" href="https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58" class="btn-cover-sm fd-bodyui mar-2 disparador bor-pill"
                 data-info="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v4.8.0.zip" data-pos='right'>Descargar</a>
-                <a href="#" target="_blank" href="" class="btn-cover-sm-o btn-white-o mar-1 tips-ele bor-pill"
-                data-tips="No disponible desde la copia local.">Docs 1.8.0</a>
+                <a href="#" target="_blank" href="https://mega.nz/file/lYURlIqR#m1svvvF4HoXmy6vwsTaSZCJmOy2O1FzExELVTQ1XZfA" class="btn-cover-sm-o btn-white-o mar-1 com-trigger bor-pill"
+                data-info="Descarga de esta misma documentación pero sin anuncios.">Docs 1.8.0</a>
             </div>
         </div> 
         </div>
