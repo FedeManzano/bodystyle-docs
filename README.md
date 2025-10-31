@@ -4,7 +4,7 @@
 </p>
 
 
-# :green_book: Docs [Bodystyle 4.5.0](https://github.com/FedeManzano/bodystyle)
+# :green_book: Docs [Bodystyle](https://github.com/FedeManzano/bodystyle)
 
 ![LICENSE](https://img.shields.io/badge/LICENSE-MIT-purple)
 ![MEGA](https://img.shields.io/badge/MEGA-Download-green)
