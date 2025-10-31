@@ -26,6 +26,9 @@ window.onload = () => {
     } 
 
     BS.ScrollSpyInit(conf)
+
+    BS.PersonalizadoInit({ori: "disparador", ele: "alert-op-red"})
+
     }, 100); 
 }
 

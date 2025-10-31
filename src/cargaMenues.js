@@ -28,6 +28,7 @@ import "./bodystyle"
             <li><a href="solapas.html">Solapas<span class="badge badge-bodyui">New</span></a></li>
             <li><a href="compartir.html">Compartir<span class="badge badge-bodyui">New</span></a></li>
             <li><a href="mensajes.html">Mensajes<span class="badge badge-bodyui">New</span></a></li>
+            <li><a href="iconos.html">Íconos<span class="badge badge-bodyui">New</span></a></li>
             <li><a href="alertas.html">Alertas</a></li>
             <li><a href="tarjetas.html">Tarjetas</a></li>
             <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
@@ -63,6 +64,7 @@ import "./bodystyle"
             <li><a href="colecciones_flotantes.html">Lista Fixed</a></li>
             <li><a href="dropdown.html">Dropdown</a></li>
             <li><a href="tooltips.html">ToolTips</a></li>
+            <li><a href="personalizados.html">Tips Propios<span class='badge badge-bodyui'>New</span></a></li>
             <li><a href="comentarios.html">Comentarios</a></li>
             <li><a href="show_code.html">Show Code</a></li>
             <li><a href="toast.html">Toasts</a></li>
@@ -106,8 +108,11 @@ import "./bodystyle"
             <li><a href="https://github.com/FedeManzano/bodystyle">Repositorio</a></li>
             <li><a href="../index.html">Inicio</a></li>
         </ul>
-        <a target="_blank" href="https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww" class='ocultar-desde-x-chicos badge-sub tips-ele bor-pill bg-bodyui pl-xs-0' style="margin-right: 150px"
-        data-tips='<span><i class="fa-solid fa-book c-bodyui">&nbsp</i><span>Librería Procesada. v4.5.0'>Descarga<span class="ocultar-desde-chicos">v4.5.0</span></a>
+        <a  target="_blank" 
+            href="https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58" 
+            class='ocultar-desde-x-chicos badge-sub bor-pill bg-bodyui pl-xs-0 disparador' 
+            style="margin-right: 150px"
+            data-info="Descarga de los archivos procesados de Bodystyle v4.8.0.">Descarga<span class="ocultar-desde-chicos">v4.8.0</span></a>
         `
     )
 
@@ -127,20 +132,20 @@ import "./bodystyle"
         <div class="ancho-55 ancho-m-75 ancho-s-90 ancho-xs-100">
         <div class="card">
             <div class="card-simple-dark card-cover">
-                <h4>Descargar Bodystyle<span class="badge badge-bodyui">4.5.0</span></h4>
-                <small>Versión 4.5.0</small>
+                <h4>Descargar Bodystyle<span class="badge badge-bodyui">4.8.0</span></h4>
+                <small>Versión 4.8.0</small>
                 <p>
                     Con el botón que está abajo de este texto descargará
                     la versión procesada de la librería en su 
                     <a href='https://github.com/FedeManzano/bodystyle' target='_blank' class='link tips-ele '
                     data-tips="Versión procesada de Bodystyle"
-                    data-pos='right'>versión 4.5.0</a>, el segundo botón es para descargar esta misma documentación
+                    data-pos='right'>versión 4.8.0</a>, el segundo botón es para descargar esta misma documentación
                     para no tener que ver publicidad que el hosting introduce sin permiso.
                 </p> 
-                <a target="_blank" href="https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww" class="btn-cover-sm fd-bodyui mar-2 tips-ele bor-pill"
-                data-tips="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v4.5.0.zip" data-pos='right'>Descargar</a>
+                <a target="_blank" href="https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58" class="btn-cover-sm fd-bodyui mar-2 disparador bor-pill"
+                data-info="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v4.8.0.zip" data-pos='right'>Descargar</a>
                 <a href="#" target="_blank" href="" class="btn-cover-sm-o btn-white-o mar-1 tips-ele bor-pill"
-                data-tips="No disponible desde la copia local.">Docs 4.5.0</a>
+                data-tips="No disponible desde la copia local.">Docs 1.8.0</a>
             </div>
         </div> 
         </div>
