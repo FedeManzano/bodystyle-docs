@@ -544,7 +544,122 @@
         </div>
 
         </article>
-            
+        
+        <article class="articulo">
+        <h2 id="t18">Line Height <span class="badge badge-bodyui">4.8.0</span></h2>
+        <p class="mb-3">
+            En este apartado veremos como configurar el interlineado en diferentes tamaños 
+            de pantalla, esto quiere decir que un texto puede tener un determinado interlineado en equipos
+            grandes y otro en equipos chicos o extra chicos.
+        </p>
+        <p class="lh-15 bg-red mb-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem illo pariatur soluta blanditiis tempore? Quo, 
+            dignissimos corrupti commodi molestias praesentium repellat ratione rerum quis ad, earum rem obcaecati dolorem dolores.
+        </p>
+         <p class="lh-20 bg-red mb-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem illo pariatur soluta blanditiis tempore? Quo, 
+            dignissimos corrupti commodi molestias praesentium repellat ratione rerum quis ad, earum rem obcaecati dolorem dolores.
+        </p>
+        <p class="lh-25 bg-red mb-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem illo pariatur soluta blanditiis tempore? Quo, 
+            dignissimos corrupti commodi molestias praesentium repellat ratione rerum quis ad, earum rem obcaecati dolorem dolores.
+        </p>
+        <p class="lh-30 bg-red mb-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem illo pariatur soluta blanditiis tempore? Quo, 
+            dignissimos corrupti commodi molestias praesentium repellat ratione rerum quis ad, earum rem obcaecati dolorem dolores.
+        </p>
+<div class="codigo">
+    <pre id="c10" class="cod-html">
+        <p class="lh-15 bg-red">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem illo pariatur soluta blanditiis tempore? Quo, 
+            dignissimos corrupti commodi molestias praesentium repellat ratione rerum quis ad, earum rem obcaecati dolorem dolores.
+        </p>
+         <p class="lh-20 bg-red">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem illo pariatur soluta blanditiis tempore? Quo, 
+            dignissimos corrupti commodi molestias praesentium repellat ratione rerum quis ad, earum rem obcaecati dolorem dolores.
+        </p>
+        <p class="lh-25 bg-red">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem illo pariatur soluta blanditiis tempore? Quo, 
+            dignissimos corrupti commodi molestias praesentium repellat ratione rerum quis ad, earum rem obcaecati dolorem dolores.
+        </p>
+        <p class="lh-30 bg-red">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem illo pariatur soluta blanditiis tempore? Quo, 
+            dignissimos corrupti commodi molestias praesentium repellat ratione rerum quis ad, earum rem obcaecati dolorem dolores.
+        </p>
+    </pre>
+</div>
+        <div class="alerta-negra">
+            La clase que utilizamos para establecer el interlineado es <span class="badge badge-red">.lh-[PX]</span> donde 
+            PX es la cantidad de pixeles del interlineado que comienza de 15 a 100 como máximo. 
+        </div>
+
+        <h3 id="t19">Line Height Responsive</h3>
+        <p class="mab-3">
+            A veces es necesario definir varios interlineados para diferentes tipos de pantalla, esto implica
+            que un texto se va a presentar de diferente manera según los intereses de los desarrolladores.
+        </p>
+
+        <p class="lh-30 lh-m-25 lh-s-20 lh-xs-18 bg-red">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem illo pariatur soluta blanditiis tempore? Quo, 
+            dignissimos corrupti commodi molestias praesentium repellat ratione rerum quis ad, earum rem obcaecati dolorem dolores.
+        </p>
+
+<div class="codigo">
+    <pre id="c11" class="cod-html">
+        <p class="lh-30 lh-m-25 lh-s-20 lh-xs-18 bg-red">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem illo pariatur soluta blanditiis tempore? Quo, 
+            dignissimos corrupti commodi molestias praesentium repellat ratione rerum quis ad, earum rem obcaecati dolorem dolores.
+        </p>
+    </pre>
+</div>
+
+        <div class="alerta-negra">
+            Notese que se cambia el tamaño de pantalla el interlineado cambiará y se reducirá conforme 
+            se vaya achicando la pantalla.
+        </div>
+
+        <h3 id="t20">Resumen de clases</h3>
+
+        <div class="table-responsive">
+            <table class="table-dark selector table-sm vertical-border table-bor-grey">
+                <thead>
+                    <tr>
+                        <th>Clase</th>
+                        <th>Rango</th>
+                        <th>Tamaño</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>lh-[PX]</td>
+                        <td>15-100</td>
+                        <td>Todos los dispositivos</td>
+                        <td>Ajusta el interlineado en todos los dispositivos</td>
+                    </tr>
+                    <tr>
+                        <td>lh-m-[PX]</td>
+                        <td>15-100</td>
+                        <td>774PX < X < 1030PX</td>
+                        <td>Ajusta el interlineado en dispositivos medianos</td>
+                    </tr>
+                    <tr>
+                        <td>lh-s-[PX]</td>
+                        <td>15-100</td>
+                        <td>400PX < X < 774PX</td>
+                        <td>Ajusta el interlineado en dispositivos chicos</td>
+                    </tr>
+                    <tr>
+                        <td>lh-xs-[PX]</td>
+                        <td>15-100</td>
+                        <td>400PX > X </td>
+                        <td>Ajusta el interlineado en dispositivos xchicos</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        </article>
         <!-- ARTÍCULO 6 DE LA SECCIÓN --------------------------------------------->
         
         <div class="autor"></div>
@@ -570,6 +685,9 @@
             <li><a href="#t15">Tamño del Texto</a></li>
             <li><a href="#t16">Tamño Global</a></li>
             <li><a href="#t17">Tamño Responsive</a></li>
+            <li><a href="#t18">Line Height</a></li>
+            <li><a href="#t19">LH Responsive</a></li>
+            <li><a href="#t20">Tabla Resumen</a></li>
         </ul>
     </div>
     
