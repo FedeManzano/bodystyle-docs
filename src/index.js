@@ -29,6 +29,8 @@ window.onload = () => {
 
     BS.PersonalizadoInit({ori: "disparador", ele: "alert-op-red"})
 
+    $("ins").remove()
+    $("iframe").remove()
     }, 100); 
 }
 
