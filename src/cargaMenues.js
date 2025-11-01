@@ -132,7 +132,7 @@ import "./bodystyle"
         <div class="ancho-55 ancho-m-75 ancho-s-90 ancho-xs-100">
         <div class="card">
             <div class="card-simple-dark card-cover">
-                <h4>Descargar Bodystyle<span class="badge badge-bodyui">4.8.0</span></h4>
+                <h4>Descargar Bodystyle<span class="badge badge-bodyui"><i class="bs-tag c-white">&nbsp;</i>4.8.0</span></h4>
                 <small>Versión 4.8.0</small>
                 <p>
                     Con el botón que está abajo de este texto descargará

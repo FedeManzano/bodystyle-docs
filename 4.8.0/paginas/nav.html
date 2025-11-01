@@ -10,6 +10,7 @@
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     
     <title>Nav</title>
@@ -107,7 +108,7 @@
             <nav class="bs-nav mt-2">
                 <div class="bs-nav-sm align-left-list">
                     <a href="#" class="logo-container">
-                        <img src="../imagenes/20191106_205049.png"  alt="Foto de perfil">
+                        <img class="bor-rad-por-50" src="../imagenes/20191106_205049.png"  alt="Foto de perfil">
                     </a>
                     <ul>
                         <li><a href="#">Inicio</a></li>
@@ -120,7 +121,7 @@
             <nav class="bs-nav mt-2">
                 <div class="bs-nav-md align-left-list">
                     <a href="#" class="logo-container">
-                        <img src="../imagenes/20191106_205049.png"  alt="Foto de perfil">
+                        <img class="bor-rad-por-50" src="../imagenes/20191106_205049.png"  alt="Foto de perfil">
                     </a>
                     <ul>
                         <li><a href="#">Inicio</a></li>
@@ -132,7 +133,7 @@
             <nav class="bs-nav mt-2">
                 <div class="bs-nav-lg align-left-list">
                     <a href="#" class="logo-container">
-                        <img src="../imagenes/20191106_205049.png" alt="Foto de perfil">
+                        <img class="bor-rad-por-50" src="../imagenes/20191106_205049.png" alt="Foto de perfil">
                     </a>
                     <ul>
                         <li><a href="#">Inicio</a></li>
@@ -276,7 +277,9 @@
             Los colores son diversos, se puede utilizar toda la paleta de colores de la librería, por simplicidad 
             solo vamos a defir algunos pero es importante que revisen esa parte de la documentación 
             <a href="colores.html" class="link tips-ele"
-            data-tips="Colores documentados de la librería">Fondos</a>. 
+            data-tips="Colores documentados de la librería">Fondos</a>. <br>
+            Desde la versión 4.8.0 se añadieron <a href="iconos.html" class="link tips-ele" data-tips="Sección de la docs para los íconos">Íconos</a> 
+            a la librería y debajo hay un ejemplo de como incorporar estos elementos al nav.
         </p>
 
         <nav class="bs-nav bg-pink-d-1">
@@ -337,13 +340,12 @@
                     <img src="../imagenes/20191106_205049.png"  alt="Foto de perfil">
                 </a>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Porfolio</a></li>
-                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#"><i class="bs-home fz-24"></i></a></li>
+                    <li><a href="#"><i class="bs-smiling-face fz-24 c-yellow"></i></a></li>
+                    <li><a href="#"><i class="bs-picture-2 fz-24"></i></a></li>
                 </ul>
             </div>
         </nav>
-
 <div class="codigo">
     <pre id="c5" class="cod-html">
         <nav id="nav" class="bs-nav bg-pink-d-1" data-target="#bs-nav-sidebar">
@@ -398,15 +400,15 @@
             </div>
         </nav>
     
-        <nav id="nav" class="bs-nav fd-facebook mt-1" data-target="#bs-nav-sidebar">
+        <nav class="bs-nav fd-facebook mt-1">
             <div class="bs-nav-md align-right-list">
                 <a href="#" class="logo-container">
                     <img src="../imagenes/20191106_205049.png"  alt="Foto de perfil">
                 </a>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Porfolio</a></li>
-                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#"><i class="bs-home fz-24"></i></a></li>
+                    <li><a href="#"><i class="bs-smiling-face fz-24 c-yellow"></i></a></li>
+                    <li><a href="#"><i class="bs-picture-2 fz-24"></i></a></li>
                 </ul>
             </div>
         </nav>
