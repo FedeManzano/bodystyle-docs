@@ -97,11 +97,11 @@
                     <i class="bs-js c-yellow"></i>
                     bodystyle.min.js
                 </a>
-                una vez agregado se puede inicializar el módulo que servirá para toda la página y cargará con las clases personalizadas un elemento.
+                una vez agregado se puede inicializar el módulo que servirá para toda la página y permitirá la carga con las clases personalizadas al elemento dinámico.
             </div>
             <h3 id="t3">Muestra</h3>
             <p class="mb-3">
-                Se toma para este ejmplo la alerta roja de la librería que están documentas en appartados anteriores en la sección de 
+                Se toma para este ejmplo la alerta roja de la librería que están documentadas en apartados anteriores en la sección de 
                 CSS, <a href="alertas.html" class="link">Ver Alertas</a>. 
             </p>
 
@@ -111,8 +111,8 @@
                 El botón anterior a través del evento HOVER (cuando el cursor pasa por encima del elemento) muestra 
                 una alerta de la librería, de esta forma se logra personalizar al tooltips. Es importate aclarar 
                 que hay que definir un nombre de clase, en este caso la clase es <span class="badge badge-red">.disparador</span> 
-                y agregarsela al elemento, luego le pasamos como parámetro a la función de inicialización esta clase a través 
-                del objeto JSON de configuración.
+                y agregarsela al elemento disparador, luego le pasamos como parámetro a la función de inicialización esta clase a través 
+                del objeto <span class="badge badge-black">JSON</span> de la configuración.
             </div>
 
 <div class="codigo">
@@ -127,13 +127,19 @@
 </div>
 <div class="codigo">
 <pre class="cod-js" id="c3">
+    /** 
+        La clase disparador se tomó como ejemplo 
+        puede ser cualquiera, lo importante es que 
+        el Objeto Disparador tenga la misma clase que se 
+        envía por parámmetro en el origen.
+    */
     BS.PersonalizadoInit({ori: "disparador", ele: "alert-op-red"})
 </pre>
 </div>
 
         <div class="alerta-negra">
             Es importante aclarar que el attr <span class="badge badge-black">data-info</span> recibe código html, esto implica 
-            que también se le pueden asignar estilos al contenido del tooltips personalizados. 
+            que también se le pueden asignar estilos al contenido de los tooltips personalizados. 
         </div>
         
         <h3 id="t4">Evento Click</h3>
@@ -187,7 +193,7 @@
             <h2 id="t6">Clase Personalizada</h2>
             <p>
                 Hasta ahora vimos como crear un tips personalizado con las clases de la librería pero que pasa cuando queremos 
-                asignarle una clase seleccionada por el desarrollado (que no pertenece a librería)?. Es lo veremos a continuación, 
+                asignarle una clase seleccionada por el desarrollador (que no pertenece a librería)?. Es lo veremos a continuación, 
                 primero debemos crear una clase para poder asignarla.
             </p>
 
@@ -217,6 +223,7 @@
 </div>
 <div class="codigo">
 <pre class="cod-js" id="c8">
+    // El attr (ele) recibe la clase personalizada.
     BS.PersonalizadoInit({ori: "disparador", ele: "personal_clase"})
 </pre>
 </div>
@@ -229,9 +236,9 @@
         <article class="articulo">
             <h2 id="t7">Objetos Personalizados</h2>
             <p>
-                Ahora nos dedicaremos a un ejemplo más complicado, demanera tal de poder 
+                Ahora nos dedicaremos a un ejemplo más complicado, de manera tal de poder 
                 asignar un contenedor complejo a los diferentes disparadores, para esta tarea 
-                deberemos crear un contenedor dinámico (desde JS) para despues poder asignarselo 
+                deberemos crear un contenedor dinámico (desde JS) para después poder asignarselo 
                 al attr <span class="badge badge-negro">data-info</span> del disparador.
             </p>
             <h3 id="t8">Ejemplo 1</h3>
@@ -267,6 +274,7 @@
 </div>
 <div class="codigo">
     <pre id="11" class="cod-js">
+        // El atributo (ele) de la configuración va vacío o inexistente (en este caso no es obligatorio).
         BS.PersonalizadoInit({ori: "disparador", ele: ""}) // Notese que elemento va vacío
     </pre>
 </div>
@@ -303,6 +311,11 @@
         </div>
     </pre>
 </div>
+
+        <div class="alerta-negra">
+            Como se puede observar se añadieron <a href="iconos.html" class="link">Íconos</a> a la librería que 
+            en este ejempo se utilizarán para ilustrar este ejemplo.
+        </div>
 
 <div class="codigo">
     <pre id="13" class="cod-html">
