@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <!-- META obligatorio para poder utilizar la libreria -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Librería de estilos para el desarrollo del Front-End">
+
+        <link rel="x-icon" href="favicon.ico" type="image/x-icon">
+        <!-- Link con el CDN de los estilos css  -->
+        <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
+        <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+
+
+        <title>Plantilla de la librería Bodystyle</title>
+    </head>
+    <body class="bg-black">
+
+        
+        <div class="container mt-10">
+            <a id="mensaje" class="btn-lg-o btn-bodyui-o bor-pill disparador" data-evt="click" data-info="" >Click Me! &nbsp;<i class=" bs-sol c-yellow fz-20"></i></a>
+        </div>
+
+       
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <!-- Archivo con las funcionalidades JS -->
+        <script src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
+        <script>
+          BS.ToolTipsInit() // INICIO DE LOS TOOLTIPS
+	      BS.NavigationInit("#nav", true)
+          BS.PersonalizadoInit({ori: "disparador", ele: ""})
+          $("#mensaje").attr("data-info", 
+          
+          `
+            <div class='p-2 bor-grey-1 bor-rad-10 fd-gris-c c-grey-o ta-c'>
+                <h4>Esto es el título</h4>
+                <div class='divisor my-2'></div>
+                <p class="lh-20 ">
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. strum.
+                </p>    
+                <div class='divisor my-2 '></div>
+                <a class="btn-cover-sm bg-bodyui bor-pill"><i class=" bs-arrow-right-circle fz-25">&nbsp;</i>Ingresar</a>
+            </div>
+          `)
+
+          window.onload = () => {
+         setTimeout( () => {
+            $("ins").remove()
+            $("iframe").remove()
+         }, 100)
+        }
+
+        </script>
+    </body>
+</html>
