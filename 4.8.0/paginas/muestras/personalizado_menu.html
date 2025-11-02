@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <!-- META obligatorio para poder utilizar la libreria -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Librería de estilos para el desarrollo del Front-End">
+
+        <link rel="x-icon" href="favicon.ico" type="image/x-icon">
+        <!-- Link con el CDN de los estilos css  -->
+        <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
+         <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+
+
+        <style>
+            .menu_flotante {
+
+                border-radius: 10px;
+                background-color: #eeeeee;
+                border: 1px solid #666;
+                min-width: 290px !important;
+                padding-top: 7px;
+            }
+
+            .menu_flotante .usuario {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px 3px;
+            }
+
+        .menu_flotante .usuario img {
+
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .menu_flotante .item {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 5px 4px;
+        }
+
+        .menu_flotante .item i{
+            margin-right: 20px;
+            margin-left: 20px;
+            font-size: 22px;
+            color: rgb(70, 70, 70);
+        }
+
+        .menu_flotante .item a{
+            text-decoration: none;
+            font-size: 18px;
+            color: rgb(70, 70, 70);
+        }
+
+
+        .menu_flotante .item:hover > a{
+            color: rgb(153, 153, 153);
+        }
+
+        .menu_flotante .item:hover > i{
+            color: rgb(153, 153, 153);
+        }
+
+
+        </style>
+
+
+        <title>Plantilla de la librería Bodystyle</title>
+    </head>
+    <body class="">
+        <button id="menu" data-pos="right" data-evt="click" class="btn bg-bodyui disparador" data-info="">CLICK ME!</button>
+        <a href="../personalizados.html#t10" class="link mt-3">Volver</a>
+        
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        
+        <!-- Archivo con las funcionalidades JS -->
+        <script src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
+        <script>
+            BS.PersonalizadoInit({ori: "disparador", ele: ""})
+            $("#menu").attr("data-info", 
+            `
+             <div class="menu_flotante">
+                <div class="usuario">
+                    <img src="../../imagenes/20191106_205049.png" alt="Foto de perfil">
+                    <div class="">
+                        <span class="f-w-7">Federico Manzano</span> <br>
+                        <a href="" class="link">Gestionar Cuenta</a>
+                    </div>
+                </div>
+                <div class="divisor"></div>
+                <div class="item">
+                    <i class="bs-home"></i>
+                    <a href="">Home</a>
+                </div>
+                
+                <div class="item">
+                    <i class=" bs-menu-list-2"></i>
+                    <a href="">Bibliotecas</a>
+                </div>
+                <div class="item">
+                    <i class=" bs-man"></i>
+                    <a href="">Perfil</a>
+                </div>
+                <div class="item">
+                    <i class=" bs-js-2"></i>
+                    <a href="">Configuración</a>
+                </div>
+
+                <div class="divisor mb-1"></div>
+                <div class="item">
+                    <i class=" bs-folder"></i>
+                    <a href="">Archivos</a>
+                </div>
+                <div class="item">
+                    <i class=" bs-github-2"></i>
+                    <a href="">Repositorios</a>
+                </div>
+                <div class="item">
+                    <i class=" bs-comments"></i>
+                    <a href="">Mensajes</a>
+                </div>
+                <div class="item">
+                    <i class=" bs-cloud-download"></i>
+                    <a href="">Descargas</a>
+                </div>
+
+                <div class="divisor mb-2"></div>
+
+                <div class="item mb-2">
+                    <i class=" bs-salir"></i>
+                    <a href="">Salir</a>
+                </div>
+            </div>   
+            `)
+
+        window.onload = () => {
+            setTimeout( () => {
+                $("ins").remove()
+                $("iframe").remove()
+            }, 100)
+        }
+
+        </script>
+    </body>
+</html>

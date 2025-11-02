@@ -23,6 +23,62 @@
                 max-width: fit-content;
                 
             }
+
+            .menu_flotante {
+
+                border-radius: 10px;
+                background-color: #eeeeee;
+                border: 1px solid #666;
+                min-width: 290px !important;
+                padding-top: 7px;
+            }
+
+            .menu_flotante .usuario {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px 3px;
+            }
+
+        .menu_flotante .usuario img {
+
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .menu_flotante .item {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 5px 4px;
+        }
+
+        .menu_flotante .item i{
+            margin-right: 20px;
+            margin-left: 20px;
+            font-size: 22px;
+            color: rgb(70, 70, 70);
+        }
+
+        .menu_flotante .item a{
+            text-decoration: none;
+            font-size: 18px;
+            color: rgb(70, 70, 70);
+        }
+
+
+        .menu_flotante .item:hover > a{
+            color: rgb(153, 153, 153);
+        }
+
+        .menu_flotante .item:hover > i{
+            color: rgb(153, 153, 153);
+        }
+
+
+
         </style>
     
     <title>Tips Propios</title>
@@ -299,7 +355,7 @@
                 <a class="btn-cover-sm bg-bodyui bor-pill"><i class=" bs-arrow-right-circle fz-25">&nbsp;</i>Ingresar</a>
             </div>
 <div class="codigo">
-    <pre id="12" class="cod-html">
+    <pre id="c12" class="cod-html">
        <div class='p-2 bor-grey-1 bor-rad-10 fd-gris-c c-grey-o ta-c' style="width: 270px;">
             <h4>Esto es el título</h4>
             <div class='divisor my-2'></div>
@@ -318,7 +374,7 @@
         </div>
 
 <div class="codigo">
-    <pre id="13" class="cod-html">
+    <pre id="c13" class="cod-html">
         <!--Elemento disparador con un ID mensaje para identicarlo -->
         <!-- Notese que el attr data-info esta vacío -->
         <a id="mensaje" class="btn-lg-o btn-bodyui-o bor-pill disparador" data-evt="click" data-info="" >Disp &nbsp;<i class=" bs-sol c-yellow fz-20"></i></a>
@@ -351,6 +407,239 @@
 </div>
         <a href="muestras/perosnalizado_ej2.html" class="link">Muestra Funcionando</a>
 
+        <h3 id="t10">Ejemplo 3</h3>
+        <p>
+            En el siguiente ejemplo utilizaremos un menu muy utilizado las funcionalidades 
+            de este apartado. El objetivo es que cuando se hace click en un botón se despliega el menú 
+            a la derecha del botón.
+        </p>
+
+        <h4>CSS</h4>
+<div class="codigo">
+    <pre id="c15" class="cod-css">
+             
+        .menu_flotante {
+            border-radius: 10px;
+            background-color: #eeeeee;
+            border: 1px solid #666;
+            min-width: 290px !important;
+            padding-top: 7px;
+        }
+        .menu_flotante .usuario {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 3px;
+        }
+        .menu_flotante .usuario img {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .menu_flotante .item {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 5px 4px;
+        }
+        .menu_flotante .item i{
+            margin-right: 20px;
+            margin-left: 20px;
+            font-size: 22px;
+            color: rgb(70, 70, 70);
+        }
+        .menu_flotante .item a{
+            text-decoration: none;
+            font-size: 18px;
+            color: rgb(70, 70, 70);
+        }
+        .menu_flotante .item:hover > a{
+            color: rgb(153, 153, 153);
+        }
+        .menu_flotante .item:hover > i{
+            color: rgb(153, 153, 153);
+        }
+    </pre>
+</div>
+
+        <h4>html</h4>
+<div class="codigo">
+    <pre id="c16" class="cod-html">
+        <div class="menu_flotante" style="max-width: 290px;">
+            <div class="usuario">
+                <img src="../imagenes/20191106_205049.png" alt="Foto de perfil">
+                <div class="">
+                    <span class="f-w-7">Federico Manzano</span> <br>
+                    <a href="" class="link">Gestionar Cuenta</a>
+                </div>
+            </div>
+            <div class="divisor"></div>
+            <div class="item">
+                <i class="bs-home"></i>
+                <a href="">Home</a>
+            </div>
+            
+            <div class="item">
+                <i class=" bs-menu-list-2"></i>
+                <a href="">Bibliotecas</a>
+            </div>
+            <div class="item">
+                <i class=" bs-man"></i>
+                <a href="">Perfil</a>
+            </div>
+            <div class="item">
+                <i class=" bs-js-2"></i>
+                <a href="">Configuración</a>
+            </div>
+            <div class="divisor mb-1"></div>
+            <div class="item">
+                <i class=" bs-folder"></i>
+                <a href="">Archivos</a>
+            </div>
+            <div class="item">
+                <i class=" bs-github-2"></i>
+                <a href="">Repositorios</a>
+            </div>
+            <div class="item">
+                <i class=" bs-comments"></i>
+                <a href="">Mensajes</a>
+            </div>
+            <div class="item">
+                <i class=" bs-cloud-download"></i>
+                <a href="">Descargas</a>
+            </div>
+            <div class="divisor mb-2"></div>
+            <div class="item mb-2">
+                <i class=" bs-salir"></i>
+                <a href="">Salir</a>
+            </div>
+        </div> 
+    </pre>
+</div>
+
+            <h4 class="mb-3">Apariencia</h4>
+            <div class="menu_flotante" style="max-width: 290px;">
+                <div class="usuario">
+                    <img src="../imagenes/20191106_205049.png" alt="Foto de perfil">
+                    <div class="">
+                        <span class="f-w-7">Federico Manzano</span> <br>
+                        <a href="" class="link">Gestionar Cuenta</a>
+                    </div>
+                </div>
+                <div class="divisor"></div>
+                <div class="item">
+                    <i class="bs-home"></i>
+                    <a href="">Home</a>
+                </div>
+                
+                <div class="item">
+                    <i class=" bs-menu-list-2"></i>
+                    <a href="">Bibliotecas</a>
+                </div>
+                <div class="item">
+                    <i class=" bs-man"></i>
+                    <a href="">Perfil</a>
+                </div>
+                <div class="item">
+                    <i class=" bs-js-2"></i>
+                    <a href="">Configuración</a>
+                </div>
+
+                <div class="divisor mb-1"></div>
+                <div class="item">
+                    <i class=" bs-folder"></i>
+                    <a href="">Archivos</a>
+                </div>
+                <div class="item">
+                    <i class=" bs-github-2"></i>
+                    <a href="">Repositorios</a>
+                </div>
+                <div class="item">
+                    <i class=" bs-comments"></i>
+                    <a href="">Mensajes</a>
+                </div>
+                <div class="item">
+                    <i class=" bs-cloud-download"></i>
+                    <a href="">Descargas</a>
+                </div>
+
+                <div class="divisor mb-2"></div>
+
+                <div class="item mb-2">
+                    <i class=" bs-salir"></i>
+                    <a href="">Salir</a>
+                </div>
+            </div>  
+            
+            <div class="alerta-negra mt-3">
+                La inicialización del elemento se realiza con la misma función utilizada en los ejemplos anteriores, 
+                solo se realiza una sola vez.
+            </div>
+
+            <h4 class="mab-3">Inserción del Elemento</h4>
+            <p>
+                Ahora hay que añadir el codigo html visto anteriormente dentro del attr 
+                <span class="badge badge-black">data-info</span> del elemento disparador.
+            </p>
+<div class="codigo">
+    <pre id="c14" class="cod-js">
+        $("#menu").attr("data-info", 
+        `
+         <div class="menu_flotante">
+            <div class="usuario">
+                <img src="./f_perfil_editada.png" alt="Foto de perfil">
+                <div class="">
+                    <span class="f-w-7">Federico Manzano</span> <br>
+                    <a href="" class="link">Gestionar Cuenta</a>
+                </div>
+            </div>
+            <div class="divisor"></div>
+            <div class="item">
+                <i class="bs-home"></i>
+                <a href="">Home</a>
+            </div>
+            
+            <div class="item">
+                <i class=" bs-menu-list-2"></i>
+                <a href="">Bibliotecas</a>
+            </div>
+            <div class="item">
+                <i class=" bs-man"></i>
+                <a href="">Perfil</a>
+            </div>
+            <div class="item">
+                <i class=" bs-js-2"></i>
+                <a href="">Configuración</a>
+            </div>
+            <div class="divisor mb-1"></div>
+            <div class="item">
+                <i class=" bs-folder"></i>
+                <a href="">Archivos</a>
+            </div>
+            <div class="item">
+                <i class=" bs-github-2"></i>
+                <a href="">Repositorios</a>
+            </div>
+            <div class="item">
+                <i class=" bs-comments"></i>
+                <a href="">Mensajes</a>
+            </div>
+            <div class="item">
+                <i class=" bs-cloud-download"></i>
+                <a href="">Descargas</a>
+            </div>
+            <div class="divisor mb-2"></div>
+            <div class="item mb-2">
+                <i class=" bs-salir"></i>
+                <a href="">Salir</a>
+            </div>
+        </div>   
+        `)
+    </pre>
+</div>
+
+        <a href="muestras/personalizado_menu.html" class="link">Muestra Del Menú</a>
         </article>
 
         <!--AUTOR--------------------------------------------------------------------->
@@ -370,6 +659,7 @@
             <li><a href="#t7">Objeto Personalizado</a></li>
             <li><a href="#t8">Ejemplo 1</a></li>
             <li><a href="#t9">Ejemplo 2</a></li>
+            <li><a href="#t10">Ejemplo 3</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
