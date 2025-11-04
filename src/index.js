@@ -1,7 +1,7 @@
 
 import "../node_modules/bodyui2/dist/js/bodystyle.min"
-import "./dist/menu"
-import "./dist/copiar"
+import "./copiarCodigo"
+import "./cargaMenues"
 
 window.onload = () => {
   setTimeout( () => {

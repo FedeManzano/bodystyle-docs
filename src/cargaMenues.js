@@ -1,5 +1,5 @@
 import $ from "jquery"
-import "./bodystyle"
+import "../node_modules/bodyui2/dist/js/bodystyle.min"
 (() => {
 
 
