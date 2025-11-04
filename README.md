@@ -11,7 +11,7 @@
 ![DOCS-VERSION](https://img.shields.io/badge/Documentation-V1.8.0-blue)
 ![DOCS-DOWNLOAD](https://img.shields.io/badge/Documentation-Download-blue)
 
-En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de la librería de estilos para el desarrollo de Front-End [Bodystyle](https://github.com/FedeManzano/bodystyle). La conformación es un sitio web guiado con todas las funcionalidades descriptas detalladamente para una correcta implementación en cualquier sitio web en desarrollo.
+En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de la biblioteca de estilos para el desarrollo de Front-End [Bodystyle](https://github.com/FedeManzano/bodystyle). La conformación es un sitio web guiado con todas las funcionalidades descriptas detalladamente para una correcta implementación en cualquier sitio web en desarrollo.
 
 ## Estructura
 
