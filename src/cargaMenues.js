@@ -144,7 +144,7 @@ import "../node_modules/bodyui2/dist/js/bodystyle.min"
                 </p> 
                 <a target="_blank" href="https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58" class="btn-cover-sm fd-bodyui mar-2 disparador bor-pill"
                 data-info="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v4.8.0.zip" data-pos='right'>Descargar</a>
-                <a target="_blank" href="https://mega.nz/file/gAEUwYRI#BsVB4AXRzkke4Qbo4D8PR7LcvvwDqQYXnjDvCs5MOKI" class="btn-cover-sm-o btn-white-o mar-1 tips-ele bor-pill"
+                <a target="_blank" href="https://mega.nz/file/4c1ggChQ#uPpobno10HaNf1il6-5KQu2ZL14WxJug75dGTCr3cHo" class="btn-cover-sm-o btn-white-o mar-1 tips-ele bor-pill"
                 data-tips="Descarga de esta misma documentación.">Docs 1.8.0</a>
             </div>
         </div> 
