@@ -77,7 +77,7 @@ Para disponer de la documentación se puede ingresar a: <br>
 **Recomendado**
 - :link: [Descarga v1.8.0](https://mega.nz/file/gAEUwYRI#BsVB4AXRzkke4Qbo4D8PR7LcvvwDqQYXnjDvCs5MOKI) **Última Versión**
 - :link: [Todas las Versiones](https://mega.nz/folder/VdMHERDR#gjbVQoWuKsIjNYJ39X1Dcw)
-- :world: [Sitio Docs](https://bodystyle.webcindario.com)
+- :earth_americas: [Sitio Docs](https://bodystyle.webcindario.com)
 
 
 ## Autor
