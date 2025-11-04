@@ -1,7 +1,7 @@
 
-import "./bodystyle"
-import "./cargaMenues"
-import "./copiarCodigo"
+import "../node_modules/bodyui2/dist/js/bodystyle.min"
+import "./dist/menu"
+import "./dist/copiar"
 
 window.onload = () => {
   setTimeout( () => {
@@ -9,7 +9,7 @@ window.onload = () => {
     BS.ToolTipsInit()
     BS.NavInit(idMenu)
     BS.BotonInicioInit()
-    $("#sidebar").fadeIn(1500)
+    $("#sidebar").fadeIn(350)
 
     $("h1, h2, h3").removeClass("scroll-item")
     $("h1, h2, h3").addClass("scroll-item")
