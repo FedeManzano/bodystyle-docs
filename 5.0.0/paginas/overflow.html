@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Overflow permite definir la visibilidad de un elemento por fuera de su contenedor padre.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Overflow</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Overflow <span class="badge badge-red">4.5.0</span></h1>
+            <p>
+                Compuesto por tres clases que permiten definir el la visibilidad de un contenedor 
+                por fuera de su contenedor padre.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Overflow Clases</h2>
+            <p>Se utilizan tres clases que permiten tres estados diferentes de visibilidad. La propiedad CSS utilizada 
+                es <span class="badge badge-red">overflow</span>. Las clases de Bodystyle implicadas son: 
+            </p>
+            <div class="lista-doc">
+                <li>.ov-hidden</li>
+                <li>.ov-visivle</li>
+                <li>.ov-scroll</li>
+            </div>
+
+<div class="codigo">
+
+<pre class="cod-css" id="c1">
+    /* No permite que el contenedor hijo salga de los límites del contendor padre.*/
+    .ov-hidden {
+        overflow: hidden !important;
+    }
+    
+    /* Permite que el contenedor hijo salga de los límites del contenedor padre.*/
+    .ov-visible {
+        overflow: visible !important;
+    }
+
+    /*
+        No permite que el contenedor hijo no salga del contenedor padre pero 
+        introduce un scroll en el elemento para que se vea el contenido.
+    */
+    .ov-scroll {
+        overflow: scroll !important;
+    }
+</pre>
+</div>
+            <h3 id="t3">Muestra .ov-hidden</h3>
+            <p class="mb-3">
+                Vamos a realizar un ejemplo sobre los bordes redondeados, cuando redondeamos los bordes de un 
+                contenedor padre y el mismo contienen un elemento de las mismas dimensiones no se verán los bordes redondeados ya que 
+                por defecto la propiedad es visible.
+            </p>
+
+            <div class="bg-black bor-rad-10" style="width: 120px; height: 120px;">
+                <div class="bg-red" style="width: 120px; height: 120px;"></div>
+            </div>
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="bg-black bor-rad-10" style="width: 120px; height: 120px;">
+        <div class="bg-red" style="width: 120px; height: 120px;"></div>
+    </div>
+</pre>
+</div>
+        <div class="alerta-negra mb-3">
+            Notese que el contenido del elemento interno no permite ver los bordes redondos del ejemplo, ahora bien 
+            que sucede si aplicamos la clase ov-hidden. 
+        </div>
+
+        <div class="bg-black bor-rad-10 ov-hidden" style="width: 120px; height: 120px;">
+            <div class="bg-red" style="width: 120px; height: 120px;"></div>
+        </div>
+<div class="codigo">
+<pre class="cod-html" id="c3">
+    <div class="bg-black bor-rad-10 ov-hidden" style="width: 120px; height: 120px;">
+        <div class="bg-red" style="width: 120px; height: 120px;"></div>
+    </div>
+</pre>
+</div>
+        <div class="alerta-negra mb-3">
+            En este ejemplo se puede observar la utilidad del elemento contenedor limita la visibilidad 
+            del contenedor hijo, ahora se pueden ver los bordes redondeados. 
+        </div>
+
+        <h3 id="t4">Muestra .ov-visible</h3>
+
+        <p>
+            En muchas oportunidades es necesario establecer que se pueda ver el elemento apun cuando este sobresalga del 
+            contenedor padre.
+        </p>
+
+        <div class="bg-black bor-rad-10 ov-hidden" style="width: 120px; height: 120px;">
+            <div  class="card"> <!-- Comienza la tarjeta simple -->
+                <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                    <small>Pequeña descripción</small>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                    </p> 
+                    <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                </div><!-- FIN Tarjeta oscura -->
+            </div>
+        </div>
+
+        <div class="alerta-negra my-3">
+            Notese que el elemento hijo (la tarje no puede verse) y es necesario para este elemento que pueda verse, entonces 
+            utilizaremos la clase <span class="badge badge-red">.ov-visible</span>.
+        </div>
+
+        <div class="bg-black bor-rad-10 ov-visible" style="width: 120px; height: 120px;">
+            <div  class="card"> <!-- Comienza la tarjeta simple -->
+                <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                    <small>Pequeña descripción</small>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                    </p> 
+                    <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                </div><!-- FIN Tarjeta oscura -->
+            </div>
+        </div>
+<div class="codigo mt-12">
+<pre class="cod-html" id="c4">
+    <div class="bg-black bor-rad-10 ov-visible" style="width: 120px; height: 120px;">
+        <div  class="card">
+            <div  class="card-simple-dark">
+                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+        <h3 id="t5">Muestra .ov-scroll</h3>
+        <p class="mb-3">
+            Ahora bien, podemos utilizar una clase que no permita que el contenedor hijo salga 
+            del contenedor padre, pero que aún asi se muestre correctamente. Esta clase es 
+            <span class="badge badge-red">.ov-scroll</span>. 
+        </p>
+
+
+        <div class="bg-black bor-rad-10 ov-scroll" style="width: 120px; height: 120px;">
+            <div  class="card">
+                <div  class="card-simple-dark">
+                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                    <small>Pequeña descripción</small>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                    </p> 
+                    <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                </div>
+            </div>
+        </div>
+
+
+<div class="codigo ">
+<pre class="cod-html" id="c5">
+    <div class="bg-black bor-rad-10 ov-scroll" style="width: 120px; height: 120px;">
+        <div  class="card">
+            <div  class="card-simple-dark">
+                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+
+
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Overflow</a></li>
+            <li><a href="#t2">Clases</a></li>
+            <li><a href="#t3">Ov Hidden</a></li>
+            <li><a href="#t4">Ov Visible</a></li>
+            <li><a href="#t5">Ov Scroll</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "OverflowNew"
+        var idMenu = "#m1"
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        BS.CodigoCssInit()
+    </script>
+</body>
+</html>

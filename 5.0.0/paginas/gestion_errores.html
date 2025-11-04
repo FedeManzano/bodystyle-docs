@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Módulo de gestión de errores de la librería.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Gestión Errores</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Gestión Errores</h1>
+            <p>
+                La lógica de la librería contiene un conjunto de módulos que reciben parámetros de configuración 
+                los cuales son validados para que la inicialización de los elementos no sea incorrecta, para esta tarea 
+                se utiliza un módulo de gestión de errores que informa del error, en caso de producirse, a través de la 
+                consola del navegador. 
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Códigos y Mensajes de Error</h2>
+            <p>
+                En el siguiente código se detallan los diferentes errores y causas, a pair de ellos 
+                se puede identificar el error suministrado por Bodystyle al momento de inicializar un 
+                componente con parámetros inválidos.
+            </p>
+
+<div class="codigo">
+<pre class="cod-js" id="c1">
+    (function(){
+        const ERR = {
+            clasesColorFondo: {
+                validacion: /^((fd|bg)-.+)/,
+                mensaje: "01 Error color de fondo: \n Las clases background-color comienzan con el prefijo fd-"
+            },
+            hexadecimal: {
+                validacion: /^#([a-f]|[A-F]|[0-9]){3,}$/,
+                mensaje: "02 Número hexadecimal del color: \n Los numeros hexadecimales de los colores comienzan con #valor (A-F 0-9)"
+            },
+            clasesColorTexto:{
+                validacion: /^c-./,
+                mensaje: "03 Clase color de texto: \n Las clases referentes a los colores del texto comienzan con el prefijo c-"
+            },
+            id: {
+                validacion: /^#./,
+                mensaje: "04 Problema con el ID: \n El id que ingresa a las funciones tiene que estar precedido por el caracter #"
+            },
+
+            positivos: {
+                validacion: (val) => val > 0,
+                mensaje: "05 Numero negativo: \n revise el valor entero ingresado ya que el parametro solicitado debe ser + mayor que 0"
+            },
+
+            hover: {
+                mensaje: "06 Efecto hover erroneo: \n Los valores posibles para el efecto hover del componente select son {none|borde|fondo}"
+            },
+
+            efecto: {
+                validacion: (val) => val === "lateral" || val === "fade",
+                mensaje:  "07 Efecto slider erroneo: \n Los valores posibles para el efecto son {lateral|fade}"
+            },
+
+            posicion: {
+                validacion: (val) => val === "arriba" ||  val === "abajo" || val === "izquierda" || val === "derecha",  
+                mensaje: "08 posición erronea: \n Los valores posibles la posición son {arriba|abajo|izquierda|derecha}"
+            }
+        }
+
+        window.ERR = ERR
+    })()
+
+    export default ERR
+</pre>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Gestión de Errores</a></li>
+            <li><a href="#t2">Errores y Códigos</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Gestion ErroresNew"
+        var idMenu = "#m5"
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        BS.CodigoJsInit()
+    </script>
+</body>
+</html>

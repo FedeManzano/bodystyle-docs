@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Núcleo de posicionamiento dinámico que permite posicionar cualquier tipo de elementos.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+
+    <style>
+            .personal_clase {
+                padding: 5px;
+                border-radius: 5px;
+                background-color: #0000007c;
+                color: white;
+                position: absolute;
+                max-width: fit-content;
+                
+            }
+
+            .menu_flotante {
+
+                border-radius: 10px;
+                background-color: #eeeeee;
+                border: 1px solid #666;
+                min-width: 290px !important;
+                padding-top: 7px;
+            }
+
+            .menu_flotante .usuario {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px 3px;
+            }
+
+        .menu_flotante .usuario img {
+
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .menu_flotante .item {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 5px 4px;
+        }
+
+        .menu_flotante .item i{
+            margin-right: 20px;
+            margin-left: 20px;
+            font-size: 22px;
+            color: rgb(70, 70, 70);
+        }
+
+        .menu_flotante .item a{
+            text-decoration: none;
+            font-size: 18px;
+            color: rgb(70, 70, 70);
+        }
+
+
+        .menu_flotante .item:hover > a{
+            color: rgb(153, 153, 153);
+        }
+
+        .menu_flotante .item:hover > i{
+            color: rgb(153, 153, 153);
+        }
+
+
+
+        </style>
+    
+    <title>Tips Propios</title>
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav class="nav-body nav-prop">
+        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Tips Propios</h1>
+            <p>
+                En otras secciones de esta documentación vimos los <a href="tooltips.html" class="link disparador"
+                data-info="Otro elemento dinámico proporcionado por la biblioteca Bodystyle.">ToolTips</a> y 
+                los <a href="comentarios.html" class="link disparador"
+                data-info="Comentarios con mucho texto que se agregan al ejecuar un evento click o hover.">Comentarios</a> para posicionar e informar 
+                que hace un determinado elemento. Ahora vamos crear nuetros propios tips con sus estilos personalizados 
+                para mostrar la información como mejor se ajuste a las necesidades. <br>
+                Es importate recalcar que esta funcionalidad lo aporta el Core de posicionamiento <a href="https://github.com/FedericoManzano/dynamics-tips" class="link disparador"
+                data-info="<span class='f-w-7'>Dinamics-Tips v1.8.0</span> Dependencia de Bodystyle que gestióna todo el posicionamiento dinámico.">Dinamics Tips v1.8.0</a> que permite 
+                la correcta gestión de toda la dinámica de la biblioteca.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Inicialización</h2>
+            <p>
+                Para disponer de esta funcionalidad hay que inicializar el módulo 
+                correspondiente que permitirá el posicionamiento dinámico en donde lo definamos.
+            </p>
+
+<div class="codigo">
+<pre class="cod-js" id="c1">
+    /*
+         Forma 1: 
+                Si los elementos a los cuales les asociaremos 
+         un elemento dinámico se incluyen dentro del HTML de manera 
+         estática utilizaremos esta forma.
+    */
+    BS.PersonalizadoInit({ori: "clase del elemento disparador", ele: "estilos css"})
+
+    /**
+        Forma 2:
+                Si los elementos a los cuales queremos asociar un elemento dinámico
+        se incluyen dentro del HTML de forma dinámica utilizaremos esta forma. 
+    */
+    window.onload = () => {
+        setTimeout( () => {
+            BS.PersonalizadoInit({ori: "clase del elemento disparador", ele: "estilos css"})
+        }, 100) // 100 ms de retardo
+    }
+</pre>
+</div>
+            <div class="alerta-negra">
+                Para ambos casos es necesario disponer del archivo 
+                <a id="archivo_js"  href="https://github.com/FedeManzano/bodystyle/blob/master/dist/js/bodystyle.min.js" class="link disparador"
+                data-info="Archivo JS de la biblioteca bodystyle tiene que estar añadido al proyecto en desarrollo para utlizar los tips personalidos">
+                    <i class="bs-js c-yellow"></i>
+                    bodystyle.min.js
+                </a>
+                una vez agregado se puede inicializar el módulo que servirá para toda la página y permitirá la carga con las clases personalizadas al elemento dinámico.
+            </div>
+            <h3 id="t3">Muestra</h3>
+            <p class="mb-3">
+                Se toma para este ejmplo la alerta roja de la biblioteca que están documentadas en apartados anteriores en la sección de 
+                CSS, <a href="alertas.html" class="link">Ver Alertas</a>. 
+            </p>
+
+            <a href="#" class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado." data-pos="right">HOVER</a>
+
+            <div class="alerta-negra mt-3">
+                El botón anterior a través del evento HOVER (cuando el cursor pasa por encima del elemento) muestra 
+                una alerta de la biblioteca, de esta forma se logra personalizar al tooltips. Es importate aclarar 
+                que hay que definir un nombre de clase, en este caso la clase es <span class="badge badge-red">.disparador</span> 
+                y agregarsela al elemento disparador, luego le pasamos como parámetro a la función de inicialización esta clase a través 
+                del objeto <span class="badge badge-black">JSON</span> de la configuración.
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <!--Este es el elemento disparador del tooltips personalizado 
+        Como se puede ver tiene asignada la clase disparador y el atributo data-info que es donde 
+        se suministrará el contenido a mostrar, luego se establece la posición con el attr data-pos que por default 
+        es (bottom).
+    -->
+    <a href="#" class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado." data-pos="right">HOVER</a>
+</pre>
+</div>
+<div class="codigo">
+<pre class="cod-js" id="c3">
+    /** 
+        La clase disparador se tomó como ejemplo 
+        puede ser cualquiera, lo importante es que 
+        el Objeto Disparador tenga la misma clase que se 
+        envía por parámmetro en el origen.
+    */
+    BS.PersonalizadoInit({ori: "disparador", ele: "alert-op-red"})
+</pre>
+</div>
+
+        <div class="alerta-negra">
+            Es importante aclarar que el attr <span class="badge badge-black">data-info</span> recibe código html, esto implica 
+            que también se le pueden asignar estilos al contenido de los tooltips personalizados. 
+        </div>
+        
+        <h3 id="t4">Evento Click</h3>
+        <p class="mb-3">
+            Lo que vimos antes fue con el evento HOVER (por default), en muchas oportunidades vamos a querer 
+            realizar lo mismo de antes pero con el evento click, para esto le agregaremos un atributo al disparador que es 
+            el <span class="badge badge-black">data-evt</span> con el valor <span class="badge badge-grey">click</span>.
+        </p>
+
+         <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="right" data-evt="click">CLICK ME!</a>
+        
+<div class="codigo">
+    <pre id="c4" class="cod-html">
+        <!-- Evento click con el attr data-evt="click" -->
+         <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="right" data-evt="click">CLICK ME!</a>
+    </pre>
+</div>
+
+        <div class="alerta-negra">
+            La inicialización fue hecha anteriormente, ya no es necesario inicializar el módulo nuevamente la inicialización 
+            durará todo el tiempo que el usuario esté dentro de la página.
+        </div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t5">Posiciones</h2>
+            <p>
+                El posicionamiento puede ser (izquierda/left), (derecha/right), (arriba/top) o (abajo/bottom).
+            </p>
+
+            <div class="d-flex just-around flex-wrap mt-3">
+                 <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="right">RIGHT</a>
+                 <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="left">LEFT</a>
+                <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="top">TOP</a>
+                <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click">BOTTOM</a>
+            </div>
+
+<div class="codigo">
+    <pre id="c5" class="cod-html">
+        <!-- Esto es un ejemplo de posicionamiento en todas las direcciones-->
+        <div class="d-flex just-around mt-3">
+            <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="right">RIGHT</a>
+            <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="left">LEFT</a>
+            <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="top">TOP</a>
+            <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click">BOTTOM</a>
+        </div>
+    </pre>
+</div>
+        </article>
+        <article class="articulo">
+            <h2 id="t6">Clase Personalizada</h2>
+            <p>
+                Hasta ahora vimos como crear un tips personalizado con las clases de la biblioteca pero que pasa cuando queremos 
+                asignarle una clase seleccionada por el desarrollador (que no pertenece a biblioteca)?. Es lo veremos a continuación, 
+                primero debemos crear una clase para poder asignarla.
+            </p>
+
+
+<div class="codigo">
+    <pre id="c6" class="cod-html">
+        <div class="contaner mt-5">
+            <div class="d-flex just-around">
+                <button class="disparador btn-sm bg-bodyui" data-info="A la derecha" data-pos="right">RIGHT</button>
+                <button class="disparador btn-sm bg-bodyui" data-info="A la izquierda" data-pos="left">LEFT</button>
+                <button class="disparador btn-sm bg-bodyui" data-info="Arriba" data-pos="top">TOP</button>
+                <button class="disparador btn-sm bg-bodyui" data-info="Abajo">BOTTOM</button>
+            </div>
+        </div>
+    </pre>
+</div>
+<div class="codigo">
+    <pre id="c7" class="cod-css">
+        .personal_clase {
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #0000007c;
+            color: white;
+            max-width: fit-content;
+        }
+    </pre>
+</div>
+<div class="codigo">
+<pre class="cod-js" id="c8">
+    // El attr (ele) recibe la clase personalizada.
+    BS.PersonalizadoInit({ori: "disparador", ele: "personal_clase"})
+</pre>
+</div>
+
+
+        <a href="./muestras/personalizado_clase.html" class="link">Muestra de este Ejemplo</a>
+
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t7">Objetos Personalizados</h2>
+            <p>
+                Ahora nos dedicaremos a un ejemplo más complicado, de manera tal de poder 
+                asignar un contenedor complejo a los diferentes disparadores, para esta tarea 
+                deberemos crear un contenedor dinámico (desde JS) para después poder asignarselo 
+                al attr <span class="badge badge-negro">data-info</span> del disparador.
+            </p>
+            <h3 id="t8">Ejemplo 1</h3>
+
+<div class="codigo">
+    <pre id="c9" class="cod-js">
+        /**
+            El ID que se presenta debajo es el ID del disparador necesario para 
+            poder acceder a su data-info y configurarlo.
+        */
+        // IMPORTANTE ESTOS USANDO jquery
+        // PARA ESTE EJEMPLO https://jquery.com
+        $("#id_disparador").attr("data-info", `
+            <div  class="card">
+                <div  class="card-simple-dark">
+                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                    <small>Pequeña descripción</small>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                    </p> 
+                    <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                </div>
+            </div>
+        `)
+    </pre>
+</div>
+
+<div class="codigo">
+    <pre id="10" class="cod-html">
+    <!--Notese con el attr queda vacío para agregar información dinamicamante.-->
+    <a id="id_disparador" class="btn-sm fd-bodyui disparador" data-info="" data-pos="right">HOVER</a>
+    </pre>
+</div>
+<div class="codigo">
+    <pre id="11" class="cod-js">
+        // El atributo (ele) de la configuración va vacío o inexistente (en este caso no es obligatorio).
+        BS.PersonalizadoInit({ori: "disparador", ele: ""}) // Notese que elemento va vacío
+    </pre>
+</div>
+
+        <a href="muestras/personalizado_objeto.html" class="link">Muestra de Este Ejemplo</a>
+
+
+            <h3 id="t9">Ejemplo2</h3>
+            <p class="mb-3">
+                Ahora vamos a tratar de utilizar un elemento creado completamente con clases de la biblioteca 
+                como objeto dinámico asociado a un elemento disparador que va a permitir mostrarlo. <br>
+                Para visualizar mejor el ejemplo primero vamos a ver como se vería el objeto dinámico de forma estática.
+            </p>
+
+            <div class='p-2 bor-grey-1 bor-rad-10 fd-gris-c c-grey-o ta-c' style="width: 270px;">
+                <h4 class="c-black m-0">Esto es el título</h4>
+                <div class='divisor my-2'></div>
+                <p class="lh-20 c-black">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. strum.
+                </p>    
+                <div class='divisor my-2 '></div>
+                <a class="btn-cover-sm bg-bodyui bor-pill"><i class=" bs-arrow-right-circle fz-25">&nbsp;</i>Ingresar</a>
+            </div>
+<div class="codigo">
+    <pre id="c12" class="cod-html">
+       <div class='p-2 bor-grey-1 bor-rad-10 fd-gris-c c-grey-o ta-c' style="width: 270px;">
+            <h4>Esto es el título</h4>
+            <div class='divisor my-2'></div>
+            <p class="lh-20">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. strum.
+            </p>    
+            <div class='divisor my-2 '></div>
+            <a class="btn-cover-sm bg-bodyui bor-pill"><i class=" bs-arrow-right-circle fz-25">&nbsp;</i>Ingresar</a>
+        </div>
+    </pre>
+</div>
+
+        <div class="alerta-negra">
+            Como se puede observar se añadieron <a href="iconos.html" class="link">Íconos</a> a la biblioteca que 
+            en este ejempo se utilizarán para ilustrar este ejemplo.
+        </div>
+
+<div class="codigo">
+    <pre id="c13" class="cod-html">
+        <!--Elemento disparador con un ID mensaje para identicarlo -->
+        <!-- Notese que el attr data-info esta vacío -->
+        <a id="mensaje" class="btn-lg-o btn-bodyui-o bor-pill disparador" data-evt="click" data-info="" >Disp &nbsp;<i class=" bs-sol c-yellow fz-20"></i></a>
+    </pre>
+</div>
+
+<div class="codigo">
+    <pre id="c14" class="cod-js">
+        // Inicializa el módulo de elementos dinámicos personalizados
+        // Notese que segundo parámetro para lo que vamos a hacer no es obligatorio 
+        // El elemento disparador va a tener la clase disparador
+        BS.PersonalizadoInit({ori: "disparador", ele: ""})
+
+        /**
+            Con JQUERY le inyectamos el elemento al atributo data-info del 
+            disparador para que esté a disposición de la lógica del posicionamiento
+        */
+        $("#mensaje").attr("data-info", `
+          <div class='p-2 bor-grey-1 bor-rad-10 fd-gris-c c-grey-o ta-c'>
+              <h4>Esto es el título</h4>
+              <div class='divisor my-2'></div>
+              <p class="lh-20 ">
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. strum.
+              </p>    
+              <div class='divisor my-2 '></div>
+              <a class="btn-cover-sm bg-bodyui bor-pill"><i class=" bs-arrow-right-circle fz-25">&nbsp;</i>Ingresar</a>
+          </div>
+        `)
+    </pre>
+</div>
+        <a href="muestras/perosnalizado_ej2.html" class="link">Muestra Funcionando</a>
+
+        <h3 id="t10">Ejemplo 3</h3>
+        <p>
+            En el siguiente ejemplo utilizaremos un menu muy utilizado las funcionalidades 
+            de este apartado. El objetivo es que cuando se hace click en un botón se despliega el menú 
+            a la derecha del botón.
+        </p>
+
+        <h4>CSS</h4>
+<div class="codigo">
+    <pre id="c15" class="cod-css">
+             
+        .menu_flotante {
+            border-radius: 10px;
+            background-color: #eeeeee;
+            border: 1px solid #666;
+            min-width: 290px !important;
+            padding-top: 7px;
+        }
+        .menu_flotante .usuario {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 3px;
+        }
+        .menu_flotante .usuario img {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .menu_flotante .item {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 5px 4px;
+        }
+        .menu_flotante .item i{
+            margin-right: 20px;
+            margin-left: 20px;
+            font-size: 22px;
+            color: rgb(70, 70, 70);
+        }
+        .menu_flotante .item a{
+            text-decoration: none;
+            font-size: 18px;
+            color: rgb(70, 70, 70);
+        }
+        .menu_flotante .item:hover > a{
+            color: rgb(153, 153, 153);
+        }
+        .menu_flotante .item:hover > i{
+            color: rgb(153, 153, 153);
+        }
+    </pre>
+</div>
+
+        <h4>html</h4>
+<div class="codigo">
+    <pre id="c16" class="cod-html">
+        <div class="menu_flotante" style="max-width: 290px;">
+            <div class="usuario">
+                <img src="../imagenes/20191106_205049.png" alt="Foto de perfil">
+                <div class="">
+                    <span class="f-w-7">Federico Manzano</span> <br>
+                    <a href="" class="link">Gestionar Cuenta</a>
+                </div>
+            </div>
+            <div class="divisor"></div>
+            <div class="item">
+                <i class="bs-home"></i>
+                <a href="">Home</a>
+            </div>
+            
+            <div class="item">
+                <i class=" bs-menu-list-2"></i>
+                <a href="">Bibliotecas</a>
+            </div>
+            <div class="item">
+                <i class=" bs-man"></i>
+                <a href="">Perfil</a>
+            </div>
+            <div class="item">
+                <i class=" bs-js-2"></i>
+                <a href="">Configuración</a>
+            </div>
+            <div class="divisor mb-1"></div>
+            <div class="item">
+                <i class=" bs-folder"></i>
+                <a href="">Archivos</a>
+            </div>
+            <div class="item">
+                <i class=" bs-github-2"></i>
+                <a href="">Repositorios</a>
+            </div>
+            <div class="item">
+                <i class=" bs-comments"></i>
+                <a href="">Mensajes</a>
+            </div>
+            <div class="item">
+                <i class=" bs-cloud-download"></i>
+                <a href="">Descargas</a>
+            </div>
+            <div class="divisor mb-2"></div>
+            <div class="item mb-2">
+                <i class=" bs-salir"></i>
+                <a href="">Salir</a>
+            </div>
+        </div> 
+    </pre>
+</div>
+
+            <h4 class="mb-3">Apariencia</h4>
+            <div class="menu_flotante" style="max-width: 290px;">
+                <div class="usuario">
+                    <img src="../imagenes/20191106_205049.png" alt="Foto de perfil">
+                    <div class="">
+                        <span class="f-w-7">Federico Manzano</span> <br>
+                        <a href="" class="link">Gestionar Cuenta</a>
+                    </div>
+                </div>
+                <div class="divisor"></div>
+                <div class="item">
+                    <i class="bs-home"></i>
+                    <a href="">Home</a>
+                </div>
+                
+                <div class="item">
+                    <i class=" bs-menu-list-2"></i>
+                    <a href="">Bibliotecas</a>
+                </div>
+                <div class="item">
+                    <i class=" bs-man"></i>
+                    <a href="">Perfil</a>
+                </div>
+                <div class="item">
+                    <i class=" bs-js-2"></i>
+                    <a href="">Configuración</a>
+                </div>
+
+                <div class="divisor mb-1"></div>
+                <div class="item">
+                    <i class=" bs-folder"></i>
+                    <a href="">Archivos</a>
+                </div>
+                <div class="item">
+                    <i class=" bs-github-2"></i>
+                    <a href="">Repositorios</a>
+                </div>
+                <div class="item">
+                    <i class=" bs-comments"></i>
+                    <a href="">Mensajes</a>
+                </div>
+                <div class="item">
+                    <i class=" bs-cloud-download"></i>
+                    <a href="">Descargas</a>
+                </div>
+
+                <div class="divisor mb-2"></div>
+
+                <div class="item mb-2">
+                    <i class=" bs-salir"></i>
+                    <a href="">Salir</a>
+                </div>
+            </div>  
+            
+            <div class="alerta-negra mt-3">
+                La inicialización del elemento se realiza con la misma función utilizada en los ejemplos anteriores, 
+                solo se realiza una sola vez.
+            </div>
+
+            <h4 class="mab-3">Inserción del Elemento</h4>
+            <p>
+                Ahora hay que añadir el codigo html visto anteriormente dentro del attr 
+                <span class="badge badge-black">data-info</span> del elemento disparador.
+            </p>
+<div class="codigo">
+    <pre id="c14" class="cod-js">
+        $("#menu").attr("data-info", 
+        `
+         <div class="menu_flotante">
+            <div class="usuario">
+                <img src="./f_perfil_editada.png" alt="Foto de perfil">
+                <div class="">
+                    <span class="f-w-7">Federico Manzano</span> <br>
+                    <a href="" class="link">Gestionar Cuenta</a>
+                </div>
+            </div>
+            <div class="divisor"></div>
+            <div class="item">
+                <i class="bs-home"></i>
+                <a href="">Home</a>
+            </div>
+            
+            <div class="item">
+                <i class=" bs-menu-list-2"></i>
+                <a href="">Bibliotecas</a>
+            </div>
+            <div class="item">
+                <i class=" bs-man"></i>
+                <a href="">Perfil</a>
+            </div>
+            <div class="item">
+                <i class=" bs-js-2"></i>
+                <a href="">Configuración</a>
+            </div>
+            <div class="divisor mb-1"></div>
+            <div class="item">
+                <i class=" bs-folder"></i>
+                <a href="">Archivos</a>
+            </div>
+            <div class="item">
+                <i class=" bs-github-2"></i>
+                <a href="">Repositorios</a>
+            </div>
+            <div class="item">
+                <i class=" bs-comments"></i>
+                <a href="">Mensajes</a>
+            </div>
+            <div class="item">
+                <i class=" bs-cloud-download"></i>
+                <a href="">Descargas</a>
+            </div>
+            <div class="divisor mb-2"></div>
+            <div class="item mb-2">
+                <i class=" bs-salir"></i>
+                <a href="">Salir</a>
+            </div>
+        </div>   
+        `)
+    </pre>
+</div>
+
+        <a href="muestras/personalizado_menu.html" class="link">Muestra Del Menú</a>
+        </article>
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Tips Propios</a></li>
+            <li><a href="#t2">Inicialización</a></li>
+            <li><a href="#t3">Muestra Hover</a></li>
+            <li><a href="#t4">Evento Click</a></li>
+            <li><a href="#t5">Posiciones</a></li>
+            <li><a href="#t6">Clase Personalizada</a></li>
+            <li><a href="#t7">Objeto Personalizado</a></li>
+            <li><a href="#t8">Ejemplo 1</a></li>
+            <li><a href="#t9">Ejemplo 2</a></li>
+            <li><a href="#t10">Ejemplo 3</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Tips PropiosNew"
+        var idMenu = "#m5"
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        BS.CodigoJsInit()
+        BS.CodigoCssInit()
+    </script>
+</body>
+</html>
