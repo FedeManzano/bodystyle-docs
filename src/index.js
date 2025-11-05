@@ -1,5 +1,5 @@
 
-import "../node_modules/bodyui2/dist/js/bodystyle.min"
+import "./bodystyle"
 import "./cargaMenues"
 import "./copiarCodigo"
 
@@ -8,6 +8,7 @@ window.onload = () => {
     BS.CodigoHtmlInit()
     BS.ToolTipsInit()
     BS.NavInit(idMenu)
+    BS.SidebarDropInit({idNav: "#nav", idSidebar: "#sidebar", submenu:idMenu})
     BS.BotonInicioInit()
     $("#sidebar").fadeIn(350)
 

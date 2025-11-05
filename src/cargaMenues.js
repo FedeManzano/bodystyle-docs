@@ -1,5 +1,6 @@
 import $ from "jquery"
-import "../node_modules/bodyui2/dist/js/bodystyle.min"
+import "./bodystyle"
+
 (() => {
 
 
@@ -98,21 +99,25 @@ import "../node_modules/bodyui2/dist/js/bodystyle.min"
     }
     
 
-    $(".nav-body").append
+    $(".bs-nav").append
     (
         `
-        <p class="nav-logo logo pl-0" style="width: 75px !important; height: 75px !important;">
-            <img src="../imagenes/20191106_205049.png">
-        </p>
-        <ul class="lista d-flex ocultar-desde-medianos">
-            <li><a href="https://github.com/FedeManzano/bodystyle">Repositorio</a></li>
-            <li><a href="../index.html">Inicio</a></li>
-        </ul>
-        <a  target="_blank" 
-            href="https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58" 
-            class='ocultar-desde-x-chicos badge-sub bor-pill bg-bodyui pl-xs-0 disparador' 
-            style="margin-right: 150px"
-            data-info="Descarga de los archivos procesados de Bodystyle v4.8.0.">Descarga<span class="ocultar-desde-chicos">v4.8.0</span></a>
+        <div  class="bs-nav-md align-right-list">
+            <a  class="btn-menu"></a>
+            <a  href="#"  class="logo-container">
+                <img  src="../logo/logo.png"  alt="Foto de perfil">
+            </a>
+            <div  class="ocultar-desde-medianos">
+                <ul>
+                    <li><a  href="../index.html">Inicio</a></li>
+                    <li><a  href="https://github.com/FedeManzano/bodystyle">Repositorio</a></li>
+                </ul>
+            </div>
+            <div  class="right-content">
+                <label  class="badge-mje-right badge-mje-bodyui mr-2 mb-1"><i class="fz-16 bs-tag">&nbsp;</i>v4.8.0</label>
+                <a href="" class="btn-sm-o btn-white-o bor-pill">Descargar</a>
+            </div>
+        </div>
         `
     )
 
