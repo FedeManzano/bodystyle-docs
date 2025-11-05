@@ -7,10 +7,8 @@ window.onload = () => {
   setTimeout( () => {
     BS.CodigoHtmlInit()
     BS.ToolTipsInit()
-    BS.NavInit(idMenu)
     BS.SidebarDropInit({idNav: "#nav", idSidebar: "#sidebar", submenu:idMenu})
     BS.BotonInicioInit()
-    $("#sidebar").fadeIn(350)
 
     $("h1, h2, h3").removeClass("scroll-item")
     $("h1, h2, h3").addClass("scroll-item")
