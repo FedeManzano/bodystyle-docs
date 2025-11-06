@@ -18,6 +18,11 @@ import "./bodystyle"
                 <li><a href="get_started.html">Get Started</a></li>
                 <li><a href="medidas.html">Medidas</a></li>
                 <li><a href="colores.html">Colores</a></li>
+                <li><a href="tablas.html">Tablas</a></li>
+                <li><a href="texto.html">Texto</a></li>
+                <li><a href="opacidad.html">Opacidad</a></li>
+                <li><a href="bordes.html">Bordes</a></li>
+                <li><a href="overflow.html">Overflow</a></li>
             </ul>
         </div>
         <div class="bs-sidebar-title waves" data-target="#l2">
