@@ -9,7 +9,7 @@ import "./bodystyle"
     $("#sidebar").html
     (
     `   <div class="bs-sidebar-title waves" data-target="#l1">
-            <label>Inicio</label>
+            <label>INICIACIÓN</label>
         </div>
         
         <div class="bs-sidebar-drop-list" id="l1">
@@ -26,20 +26,25 @@ import "./bodystyle"
             </ul>
         </div>
         <div class="bs-sidebar-title waves" data-target="#l2">
-            <label>Repositorios</label>
+            <label>CSS</label>
         </div>
         
         <div class="bs-sidebar-drop-list" id="l2">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Perfiles</a></li>
-                <li><a href="">Estadísticas</a></li>
-                <li><a href="">Correos</a></li>
+                <li><a href="botones.html">Botones</a></li>
+                <li><a href="grupo_botones.html">Grupo Botones</a></li>
+                <li><a href="badges.html">Badges</a></li>
+                <li><a href="etiquetas.html">Etiquetas</a></li>
+                <li><a href="solapas.html">Solapas</a></li>
+                <li><a href="compartir.html">Compartir</a></li>
+                <li><a href="mensajes.html">Mensajes</a></li>
+                <li><a href="iconos.html">Íconos</a></li>
+                <li><a href="alertas.html">Alertas</a></li>
             </ul>
         </div>
 
         <div class="bs-sidebar-title waves" data-target="#l3">
-            <label>Archivos</label>
+            <label>ALINEAMIENTO</label>
         </div>
    
         <div class="bs-sidebar-drop-list" id="l3">
@@ -52,10 +57,36 @@ import "./bodystyle"
         </div>
 
         <div class="bs-sidebar-title waves" data-target="#l4">
-            <label>Cuentas</label>
+            <label>FORMULARIOS</label>
+        </div>
+   
+        <div class="bs-sidebar-drop-list" id="l4">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+
+        <div class="bs-sidebar-title waves" data-target="#l5">
+            <label>JS</label>
         </div>
         
-        <div class="bs-sidebar-drop-list" id="l4">
+        <div class="bs-sidebar-drop-list" id="l5">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+
+        <div class="bs-sidebar-title waves" data-target="#l6">
+            <label>COMPONENTES</label>
+        </div>
+        
+        <div class="bs-sidebar-drop-list" id="l6">
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">Perfiles</a></li>

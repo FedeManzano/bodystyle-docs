@@ -15,11 +15,15 @@
 </head>
 <body>
 
-    <nav class="nav-body nav-prop">
-        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+        <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
     </nav>
-     <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
     <section class="pagina nav-contenido">
 
@@ -271,8 +275,12 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script> 
         var enlace = "Colores"
-        var idMenu = "#m1"
+        var idMenu = "#l1"
+        
     </script>
     <script src="../js/docs-body.js"></script>
+    <script>
+        $("#l1 ul li:nth-child(4)").children("a").addClass("c-bodyui")
+    </script>
 </body>
 </html>
