@@ -40,6 +40,10 @@ import "./bodystyle"
                 <li><a href="mensajes.html">Mensajes</a></li>
                 <li><a href="iconos.html">Íconos</a></li>
                 <li><a href="alertas.html">Alertas</a></li>
+                <li><a href="tarjetas.html">Tarjetas</a></li>
+                <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+                <li><a href="colecciones.html">Colecciones</a></li>
+                <li><a href="efecto3d.html">Efecto 3D</a></li>
             </ul>
         </div>
 
@@ -88,10 +92,11 @@ import "./bodystyle"
         
         <div class="bs-sidebar-drop-list" id="l6">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Perfiles</a></li>
-                <li><a href="">Estadísticas</a></li>
-                <li><a href="">Correos</a></li>
+                <li><a href="nav.html">Nav</a></li>
+                <li><a href="sidebar.html">Sidebar</a></li>
+                <li><a href="sidebar_drop.html">Sidebar Drop</a></li>
+                <li><a href="preogress.html">Progress Bar</a></li>
+                <li><a href="preloader.html">Preloader</a></li>
             </ul>
         </div>
 
