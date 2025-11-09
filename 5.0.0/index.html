@@ -44,12 +44,12 @@
                 </ul>
             </div>
             
-            <div class="right-content">
-                <label  class="badge-mje-right badge-mje-bodyui mr-2 mb-1"><i class="fz-16 bs-tag">&nbsp;</i>v5.0.0</label>
-                <a style="cursor: pointer;"><i id="descarga_lib" class="bs-download c-white fz-30 disparador"
-                    data-info="Versión transpilada de <span class='f-w-7'>Bodystyle v5.0.0</span>" data-pos="left" data-evt="click"></i></a>
-                <a target="_blank" href="https://github.com/FedeManzano/bodystyle"><i  class="bs-github-2 fz-30 ml-1 c-white com-trigger"
-                        data-info="Repositorio de la biblioteca disponible para ser descargado y modificado."></i></a>
+        <div class="right-content">
+            <label  class="badge-mje-right badge-mje-bodyui mr-2 mb-1"><i class="fz-16 bs-tag">&nbsp;</i>v5.0.0</label>
+            <a style="cursor: pointer;"><i id="descarga_lib" class="bs-download c-white fz-30 disparador"
+                data-info="Versión transpilada de <span class='f-w-7'>Bodystyle v5.0.0</span>" data-pos="left" data-evt="click"></i></a>
+            <div class="ocultar-desde-x-chicos">
+                 <button class="btn-sm fd-verde-o-4 bor-pill  ml-2 dropdown-toggle"  data-target="#releases"><i class="bs-tag fz-16">&nbsp;</i>All <span class="divisorH"></span></button> 
             </div>
         </div>
     </nav>
@@ -94,6 +94,18 @@
         </ul>
     </div>
 
+    <div id="releases" class="dropdown fd-gris-az-c bor-rad-20">
+        <ul>
+            <li><a href="" class="c-white"><i class="bs-tag">&nbsp;</i> Release 5.0.0 (Latest)</a></li>
+            <div class="divisor my-1"></div>
+            <li><a href="" class="c-white"><i class="bs-tag">&nbsp;</i> Release 4.8.2</a></li>
+            <li><a href="" class="c-white"><i class="bs-tag">&nbsp;</i> Release 4.8.0</a></li>
+            <li><a href="" class="c-white"><i class="bs-tag">&nbsp;</i> Release 4.5.0</a></li>
+            <li><a href="" class="c-white"><i class="bs-tag">&nbsp;</i> Release 4.0.0</a></li>
+            <li><a href="" class="c-white"><i class="bs-tag">&nbsp;</i> Release 3.5.0</a></li>
+        </ul>
+    </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -103,6 +115,7 @@
         BS.ToolTipsInit()
         BS.NavigationInit("#nav", true)
         BS.PersonalizadoInit({ori: "disparador", ele: ""})
+        BS.DropDownInit()
 
         $("#descaraga_docs").attr("data-info", 
             `
