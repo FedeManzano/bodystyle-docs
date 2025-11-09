@@ -9,7 +9,7 @@ import "./bodystyle"
     $("#sidebar").html
     (
     `   <div class="bs-sidebar-title waves" data-target="#l1">
-            <label>INICIACIÓN</label>
+            <label><i class="fa-solid fa-play fz-25 c-red">&nbsp;</i>INICIACIÓN</label>
         </div>
         
         <div class="bs-sidebar-drop-list" id="l1">
@@ -26,7 +26,7 @@ import "./bodystyle"
             </ul>
         </div>
         <div class="bs-sidebar-title waves" data-target="#l2">
-            <label>CSS</label>
+            <label><i class="fa-brands fa-css3 fz-25 c-blue-s">&nbsp;</i>CSS</label>
         </div>
         
         <div class="bs-sidebar-drop-list" id="l2">
@@ -44,7 +44,7 @@ import "./bodystyle"
         </div>
 
         <div class="bs-sidebar-title waves" data-target="#l3">
-            <label>ALINEAMIENTO</label>
+            <label><i class="fa-solid fa-boxes-stacked fz-25 c-violet-s">&nbsp;</i>ALINEAMIENTO</label>
         </div>
    
         <div class="bs-sidebar-drop-list" id="l3">
@@ -57,7 +57,7 @@ import "./bodystyle"
         </div>
 
         <div class="bs-sidebar-title waves" data-target="#l4">
-            <label>FORMULARIOS</label>
+            <label><i class="fa-solid fa-envelope-open-text fz-25 c-naranja-c">&nbsp;</i>FORMULARIOS</label>
         </div>
    
         <div class="bs-sidebar-drop-list" id="l4">
@@ -70,7 +70,7 @@ import "./bodystyle"
         </div>
 
         <div class="bs-sidebar-title waves" data-target="#l5">
-            <label>JS</label>
+            <label><i class="fa-brands fa-square-js fz-25 c-yellow"></i>JS</label>
         </div>
         
         <div class="bs-sidebar-drop-list" id="l5">
@@ -83,7 +83,7 @@ import "./bodystyle"
         </div>
 
         <div class="bs-sidebar-title waves" data-target="#l6">
-            <label>COMPONENTES</label>
+            <label><i class="fa-solid fa-map-location-dot fz-25 c-verde-am">&nbsp;</i>COMPONENTES</label>
         </div>
         
         <div class="bs-sidebar-drop-list" id="l6">
