@@ -413,6 +413,67 @@
         </div>
         </article>
 
+        <article class="articulo">
+            <h2 id="10">Borrar Bordes Redondeados<span class="badge badge-bodyui">v5.0.0</span></h2>
+            <p>
+                A partir de la versión 5.0.0 se añaden las clases pertinentes para elimimar 
+                el bordes redondeados con las clases <span class="badge badge-red">.bor-rad-0</span> y 
+                <span class="badge badge-red">.bor-rad-por-0</span> que permitirán llevar el radio del borde a cero.
+            </p>
+
+            <h3 id="t11">Ejemplo</h3>
+            <p class="mb-3">
+                Los grupos de botones de la librería cuentan con un borde por defecto que afecta al 
+                primero botón y al último generando bordes redondeados de 4px. En muchas oportunidades 
+                necesitaremos utilizar estos elementos pero sin los bordes redondeados.
+            </p>
+
+            <div class="btn-group d-flex just-start">
+                <button class="btn bg-bodyui">Inicio</button>
+                <button class="btn bg-bodyui">Servicios</button>
+                <button class="btn bg-bodyui">Perfiles</button>
+            </div>
+
+            <div class="alerta-negra my-3">
+                Como se puede observar los elemento 1 y 3 del grupo definido tienen bordes redondeados por defecto 
+                lo cual puede no ser bueno en algunos casos.
+            </div>
+
+            <div class="btn-group d-flex just-start">
+                <button class="btn bg-bodyui bor-rad-0">Inicio</button>
+                <button class="btn bg-bodyui bor-rad-0">Servicios</button>
+                <button class="btn bg-bodyui bor-rad-0">Perfiles</button>
+            </div>
+
+            <div class="alerta-negra my-3">
+                Como se puede observar los elemento 1 y 3 del grupo ya no tienen bordes redondeados, como ejemplo 
+                es útil pero es importante que sepa que se puede utilizar en cualquier elemento, en este caso por simplicidad
+                se tomaron los grupos de botones.
+            </div>
+
+    <div class="codigo">
+        <pre id="c5" class="cod-html">
+            <!--Con bordes redondeados -->
+            <div class="btn-group d-flex just-start">
+                <button class="btn bg-bodyui">Inicio</button>
+                <button class="btn bg-bodyui">Servicios</button>
+                <button class="btn bg-bodyui">Perfiles</button>
+            </div>
+
+            <!--Sin bordes redondeados -->
+            <div class="btn-group d-flex just-start">
+                <button class="btn bg-bodyui bor-rad-0">Inicio</button>
+                <button class="btn bg-bodyui bor-rad-0">Servicios</button>
+                <button class="btn bg-bodyui bor-rad-0">Perfiles</button>
+            </div>
+        </pre>
+    </div>
+
+
+
+
+        </article>
+
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
@@ -429,6 +490,8 @@
             <li><a href="#t7">Borde Negro</a></li>
             <li><a href="#t8">Borde de Colores</a></li>
             <li><a href="#t9">Colores Disponibles</a></li>
+            <li><a href="#t10">Borrar Bordes</a></li>
+            <li><a href="#t11">Ejemplos</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
