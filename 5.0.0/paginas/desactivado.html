@@ -219,6 +219,46 @@
         BS.TabInit().iniciarBorde({contexto: "#tab",colorFuente: "c-black", colorFondo: "bg-white", colorBorde: "bg-black"})
     </pre>
 </div>
+
+        <h4 class="mb-3">Activar</h4>
+        <p class="mb-3">
+            Vamos a ver un ejemplo en el un elemento desativado se activa dinámicamente utilizando 
+            <a href="https://jquery.com/" class="link tips-ele" data-tips="Página oficial de Jquery">Jquery</a>
+            para crear la funcionalidad del botón activador. 
+        </p>
+        <a href="get_started.html" id="link_desact" class="link desactivado">Enlace Desactivado</a>
+        <div class="mt-3 d-flex just-around ali-baseline flex-wrap">
+            
+            <button id="activador" class="btn bg-blue">Activar</button>
+            <button id="desactivador" class="btn bg-red">Desactivar</button>
+        </div>
+      
+<div class="codigo">
+<pre class="cod-html" id="c5">
+    <a href="#" id="link_desact" class="link desactivado">Enlace Desactivado</a>
+    <div class="mt-3 d-flex just-around ali-baseline flex-wrap">
+        <button id="activador" class="btn bg-blue">Activar</button>
+        <button id="desactivador" class="btn bg-red">Desactivar</button>
+    </div>
+</pre>
+</div> 
+
+<div class="codigo">
+<pre class="cod-js" id="c6">
+    $("#activador").click(() => {
+       // Se remueve la clase desactivado
+       $("#link_desact").removeClass("desactivado")
+       
+       // Cuando se activa el enlace 
+       // se reconfigura el atributo href 
+       $("#link_desact").attr("href", "#")
+    })
+    $("#desactivador").click(() => {
+       $("#link_desact").addClass("desactivado")
+    })
+</pre>
+</div> 
+
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
 
@@ -253,6 +293,15 @@
         $("#l1 ul li:nth-child(10)").children("a").addClass("c-bodyui")
         BS.CodeJsInit()
          BS.TabInit().iniciarBorde({contexto: "#tab1",colorFuente: "c-black", colorFondo: "bg-white", colorBorde: "bg-black"})
+
+         $("#activador").click(() => {
+            $("#link_desact").removeClass("desactivado")
+            $("#link_desact").attr("href", "#")
+         })
+
+         $("#desactivador").click(() => {
+            $("#link_desact").addClass("desactivado")
+         })
     </script>
 </body>
 </html>
