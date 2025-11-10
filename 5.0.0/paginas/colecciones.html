@@ -565,6 +565,36 @@
     </pre>
 </div>
 
+        <h3 id="t8">Destroy <span class="badge badge-bodyui">v5.0.0</span></h3>
+        <p>
+            Si queremos desvincular la lógica de la librería del elemento <span class="badge badge-bodyui">Colecciones</span>
+            de manera tal de liberar recursos es necesario utilizar el método <span class="badge badge-black">destroy</span>
+            que provee el módulo visto en este apartado. <br>
+            En este caso la función <span class="badge badge-black">BS.Colecciones()</span> entrega una instancia
+            de la clase <a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Colecciones.js" class="link com-trigger" data-info="Clase Coleccion que proveee la lógica para generar el efecto acordeón analizado en la sección anterior.">Colecciones</a>
+            que permitirá almacenar esta instancia en una variable, y en el momento más oportuno podemos ejecutar el método <span class="badge badge-black">destroy()</span>.
+        </p>
+<div class="codigo">
+    <pre id="c8" class="cod-js">
+        // Esto es una instacia de la clase Coleccion
+        let col = BS.Colecciones()
+
+        // Iniciación como vimos anteriormente EJ: 
+        col.iniciar({ contexto : "#coleccion_desplegable", colorFondo : "bg-pink-d-1",colorTexto : "c-blanco",  colorFlechas : "#fff" })
+
+        // Ahora en el momento más oportuno podemos devincular 
+        // la lógica liberando recursos con el método destroy
+        col.destroy("#coleccion_desplegable") // Notese que se envía por parámetro el ID de la lista 
+        
+    </pre>
+</div>
+
+            <div class="alerta-negra">
+                Notese que cuando se llama al método destroy las flechas que acompañan a cada elemento 
+                desplegable dentro de la lista desaparecerá y la capacidad de desplegar el submenú asociado 
+                ya no estará disponible.
+            </div>
+
         </article>
 
         <!--AUTOR--------------------------------------------------------------------->
@@ -583,6 +613,7 @@
             <li><a href="#t5">Desplegable <span class="badge badge-bodyui">4.5.0</span></a></li>
             <li><a href="#t6">Inicialización</a></li>
             <li><a href="#t7">Parámetros</a></li>
+            <li><a href="#t8">Destroy <span class="badge badge-bodyui">5.0.0</span></a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
