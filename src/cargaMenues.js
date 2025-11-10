@@ -9,7 +9,7 @@ import "./bodystyle"
     $("#sidebar").html
     (
     `   <div class="bs-sidebar-title waves" data-target="#l1">
-            <label><i class="fa-solid fa-play fz-20 c-bodyui">&nbsp;</i>&nbsp;INICIACIÓN</label>
+            <label><i class="fa-solid fa-play fz-20 c-bodyui">&nbsp;</i>&nbsp;Iniciación</label>
         </div>
         
         <div class="bs-sidebar-drop-list" id="l1">
@@ -23,10 +23,11 @@ import "./bodystyle"
                 <li><a href="opacidad.html">Opacidad</a></li>
                 <li><a href="bordes.html">Bordes</a></li>
                 <li><a href="overflow.html">Overflow</a></li>
+                <li><a href="desactivado.html">Desactivado</a></li>
             </ul>
         </div>
         <div class="bs-sidebar-title waves" data-target="#l2">
-            <label><i class="fa-brands fa-css3 fz-20 c-bodyui">&nbsp;</i>&nbsp;CSS</label>
+            <label><i class="fa-brands fa-css3 fz-20 c-bodyui">&nbsp;</i>&nbsp;Css</label>
         </div>
         
         <div class="bs-sidebar-drop-list" id="l2">
@@ -44,24 +45,29 @@ import "./bodystyle"
                 <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
                 <li><a href="colecciones.html">Colecciones</a></li>
                 <li><a href="efecto3d.html">Efecto 3D</a></li>
+                <li><a href="efecto_hover.html">Efecto Hover</a></li>
+                <li><a href="formas.html">Formas</a></li>
             </ul>
         </div>
 
         <div class="bs-sidebar-title waves" data-target="#l3">
-            <label><i class="fa-solid fa-boxes-stacked fz-20 c-bodyui">&nbsp;</i>&nbsp;ALINEAMIENTO</label>
+            <label><i class="fa-solid fa-boxes-stacked fz-20 c-bodyui">&nbsp;</i>&nbsp;Alineamiento</label>
         </div>
    
         <div class="bs-sidebar-drop-list" id="l3">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Perfiles</a></li>
-                <li><a href="">Estadísticas</a></li>
-                <li><a href="">Correos</a></li>
+                <li><a href="contenedor.html">Contenedor</a></li>
+                <li><a href="helpers.html">Helpers</a></li>
+                <li><a href="margin.html">Margin</a></li>
+                <li><a href="padding.html">Padding</a></li>
+                <li><a href="flexbox.html">Flexbox</a></li>
+                <li><a href="grid.html">Grid</a></li>
+                <li><a href="ancho_alto.html">Ancho y Alto</a></li>
             </ul>
         </div>
 
         <div class="bs-sidebar-title waves" data-target="#l4">
-            <label><i class="fa-solid fa-envelope-open-text fz-20 c-bodyui">&nbsp;</i>&nbsp;FORMULARIOS</label>
+            <label><i class="fa-solid fa-envelope-open-text fz-20 c-bodyui">&nbsp;</i>&nbsp;Formularios</label>
         </div>
    
         <div class="bs-sidebar-drop-list" id="l4">
@@ -74,7 +80,7 @@ import "./bodystyle"
         </div>
 
         <div class="bs-sidebar-title waves" data-target="#l5">
-            <label><i class="fa-brands fa-square-js fz-20 c-bodyui"></i>&nbsp;JS</label>
+            <label><i class="fa-brands fa-square-js fz-20 c-bodyui"></i>&nbsp;Js</label>
         </div>
         
         <div class="bs-sidebar-drop-list" id="l5">
@@ -87,7 +93,7 @@ import "./bodystyle"
         </div>
 
         <div class="bs-sidebar-title waves" data-target="#l6">
-            <label><i class="fa-solid fa-map-location-dot fz-20 c-bodyui">&nbsp;</i>&nbsp;COMPONENTES</label>
+            <label><i class="fa-solid fa-map-location-dot fz-20 c-bodyui">&nbsp;</i>&nbsp;Componentes</label>
         </div>
         
         <div class="bs-sidebar-drop-list" id="l6">

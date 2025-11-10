@@ -36,6 +36,7 @@ En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de 
         - :page_facing_up: <i>comentarios.html</i>
         - :page_facing_up: <i>compartir.html</i>
         - :page_facing_up: <i>contenedor.html</i>
+        - :page_facing_up: <i>desactivado.html</i>
         - :page_facing_up: <i>dropdown.html</i>
         - :page_facing_up: <i>efecto_hover.html</i>
         - :page_facing_up: <i>efecto3d.html</i>
