@@ -16,14 +16,14 @@
 </head>
 <body>
 
-    <!--NAV INI -------------------------------------------------------------------------------------------->
-    <nav class="nav-body nav-prop">
-        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+   <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
     </nav>
     <!--NAV FIN -------------------------------------------------------------------------------------------->
 
     <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
-    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
     <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
@@ -93,7 +93,7 @@
             <button class="btn bg-blue bor-pill activar-modal" data-target="#mod1">Disparador</button>
 
             <div class="modal-fondo" id="mod1">
-                <div class="modal ancho-50">
+                <div class="modal ancho-50 ancho-m-70 ancho-s-90 ancho-xs-99">
                     <div class="modal-cuerpo ta-c fd-blanco">
                         <p class="c-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quaerat similique reprehenderit unde cupiditate fuga voluptatem repudiandae labore! Soluta harum, ducimus et vel facere voluptates eligendi nemo vitae fugit?</p>
                     </div>
@@ -109,21 +109,21 @@
 <div class="codigo">
 <pre class="cod-html" id="c2">
     <!--Elemento disparador CLASE: activar-modal ID: #modal1 -->
-    <button class="btn bg-blue bor-pill activar-modal" data-target="#modal1">Disparador</button>
+    <button class="btn bg-blue bor-pill activar-modal" data-target="#mo">Disparador</button>
 
-    <!-- Código del Modal -->
-    <div class="modal-fondo" id="modal1"> <!--ID Igual al data-target del disparador -->
-        <div class="modal ancho-50">
-            <div class="modal-cuerpo ta-c fd-blanco"> <!--Modal Cuerpo aquí va el contenido del modal-->
+    <!--
+    <div class="modal-fondo" id="mo">
+        <div class="modal ancho-50 ancho-m-70 ancho-s-90 ancho-xs-99">
+            <div class="modal-cuerpo ta-c fd-blanco">
                 <p class="c-black">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Reiciendis qui quaerat similique reprehenderit unde cupiditate fuga 
-                    voluptatem repudiandae labore! Soluta harum, ducimus et vel 
-                    facere voluptates eligendi nemo vitae fugit?
+                    Reiciendis qui quaerat similique reprehenderit unde cupiditate fuga voluptatem 
+                    repudiandae labore! Soluta harum, ducimus et vel facere voluptates 
+                    eligendi nemo vitae fugit?
                 </p>
             </div>
         </div>
-    </div>
+    </div>-->
 </pre>
 </div>
         <div class="alerta-negra">
@@ -143,7 +143,7 @@
              <button class="btn bg-blue bor-pill activar-modal" data-target="#mod2">Disparador</button>
 
             <div class="modal-fondo" id="mod2">
-                <div class="modal ancho-50 fd-gris-n">
+                <div class="modal ancho-50 ancho-m-70 ancho-s-90 ancho-xs-99 fd-gris-n">
                     <div class="modal-cuerpo ta-c c-gris-c">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quaerat similique reprehenderit unde cupiditate fuga voluptatem repudiandae labore! Soluta harum, ducimus et vel facere voluptates eligendi nemo vitae fugit?</p>
                     </div>
@@ -154,13 +154,18 @@
 <div class="codigo">
     <pre id="c3" class="cod-html">
         <button class="btn bg-blue bor-pill activar-modal" data-target="#mod2">Disparador</button>
+        <!--
         <div class="modal-fondo" id="mod2">
-            <div class="modal ancho-50 fd-gris-n">
+            <div class="modal ancho-50 ancho-m-70 ancho-s-90 ancho-xs-99 fd-gris-n">
                 <div class="modal-cuerpo ta-c c-gris-c">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quaerat similique reprehenderit unde cupiditate fuga voluptatem repudiandae labore! Soluta harum, ducimus et vel facere voluptates eligendi nemo vitae fugit?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Reiciendis qui quaerat similique reprehenderit unde cupiditate 
+                        fuga voluptatem repudiandae labore! Soluta harum, ducimus et 
+                        vel facere voluptates eligendi nemo vitae fugit?
+                    </p>
                 </div>
             </div>
-        </div>       
+        </div> -->     
     </pre>
 </div>
         </article>
@@ -177,78 +182,95 @@
 
             <button class="btn bg-blue bor-pill activar-modal" data-target="#mod4">Disparador</button>
             <div class="modal-fondo" id="mod4">
-                <form autocomplete="off">
-                    <div class="modal ancho-25 ancho-m-45 ancho-s-75 ancho-xs-90 fd-gris-n">
-                        <div class="modal-cuerpo ta-c c-gris-c">
-                            <h2  class="m-0 mb-3 c-blanco ta-l">Login</h2>
-                            <div  class="flex-column">
-                                <div  class="input-g">
-                                    <div  class="grupo">
-                                        <span  class="span-grupo">Username</span>
-                                        <input  type="text"  name="usuario"  required="">
-                                    </div>
-                                    <div  class="grupo mt-3">
-                                        <span  class="span-grupo">Password</span>
-                                        <input  type="password"  name="clave"  required="">
-                                    </div>
-                                </div>
-                                <div  class="d-flex just-end">
-                                    <div  class="check-radio-grupo">
-                                        <input  type="checkbox"  id="rec_login">
-                                        <label  for="rec_login"  class="cb-verde mt-1">Recordar Clave</label>
-                                    </div>
-                                </div>
-                                <div  class="d-flex flex-column-reverse just-between ali-stretch mt-5 flex-wrap flex-column-reverse-s ali-stretch-s">
-                                    <div  class="btn-grupo-lg">
-                                        <input  type="submit"  name="Registrarse"  class="btn-sm bg-grey"  value="Registro">
-                                        <input  type="submit"  name="Ingresar"  class="btn-sm bg-green"  value="Ingresar">
-                                    </div>
-                                </div>
-                                <div  class="mt-2">
-                                    <a  href="#"  class="link mt-3">Olvidó su clave</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-<div class="codigo">
-    <pre id="c4" class="cod-html">
-        <div class="modal-fondo" id="mod4">
-            <div class="modal ancho-45 width-m-50 ancho-s-75 ancho-xs-90 fd-gris-n">
-                <div class="modal-cuerpo ta-c c-gris-c">
+                <div  class="modal ancho-25 ancho-m-35 ancho-s-65 ancho-xs-99">
+                    <div  class="modal-cuerpo  fd-negro">
+                            <div  class="d-flex just-center">
+                                <div  class="bg-black p-3 bor-rad-10">
+                                    <form  action=""  autocomplete="off">
+                                        <h2  class="m-0 mb-3 c-blanco">Login</h2>
+                                        <div  class="flex-column">
+                                            <div  class="input-g">
+                                                <div  class="grupo">
+                                                    <span  class="span-grupo fd-gris-az c-white"><i  class="bs-man"></i></span>
+                                                    <input  type="text"  name="usuario"  class="fd-gris-az c-white"  required="">
+                                                </div>
+                                                 <div  class="grupo mt-3">
+                                                    <span  class="span-grupo fd-gris-az c-white"><i  class="bs-key"></i></span>
+                                                    <input  type="password"  name="clave"  class="fd-gris-az c-white"  required="">
+                                                </div>
+                                            </div>
+                                        
+                                            <div  class="d-flex just-end">
+                                                <div  class="check-radio-grupo">
+                                                    <input  type="checkbox"  id="rec_login">
+                                                    <label  for="rec_login"  class="cb-blanco mt-1">Recordar Clave</label>
+                                                </div>
+                                            </div>
+                                            <div  class="d-flex flex-column-reverse just-between ali-stretch mt-5 flex-wrap flex-column-reverse-s ali-stretch-s">
+                                            
+                                                <div  class="btn-grupo-lg">
+                                                    <input  type="submit"  name="Registrarse"  class="btn-sm fd-gris-az"  value="Registro">
+                                                    <input  type="submit"  name="Ingresar"  class="btn-sm bg-white c-black"  value="Ingresar">
+                                                </div>
 
-                    <h2  class="m-0 mb-3 c-blanco ta-l">Login</h2>
-                    <div  class="flex-column">
-                        <div  class="input-g">
-                            <div  class="grupo">
-                                <span  class="span-grupo">Username</span>
-                                <input  type="text"  name="usuario"  required="">
-                            </div>
-                            <div  class="grupo mt-3">
-                                <span  class="span-grupo">Password</span>
-                                <input  type="password"  name="clave"  required="">
-                            </div>
-                        </div>
-                        <div  class="d-flex just-end">
-                            <div  class="check-radio-grupo">
-                                <input  type="checkbox"  id="rec_login">
-                                <label  for="rec_login"  class="cb-verde mt-1">Recordar Clave</label>
-                            </div>
-                        </div>
-                        <div  class="d-flex flex-column-reverse just-between ali-stretch mt-5 flex-wrap flex-column-reverse-s ali-stretch-s">
-                            <div  class="btn-grupo-lg">
-                                <input  type="submit"  name="Registrarse"  class="btn-sm bg-grey"  value="Registro">
-                                <input  type="submit"  name="Ingresar"  class="btn-sm bg-green"  value="Ingresar">
-                            </div>
-                        </div>
-                        <div  class="mt-2">
-                            <a  href="#"  class="link mt-3">Olvidó su clave</a>
-                        </div>
+                                            </div>
+                                            <div  class="mt-2">
+                                                <a  href="#"  class="link mt-3">Olvidó su clave</a>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>        
+
                     </div>
                 </div>
             </div>
-        </div>
+<div class="codigo">
+    <pre id="c4" class="cod-html">
+        <button class="btn bg-blue bor-pill activar-modal" data-target="#mod4">Disparador</button>
+        <!--<div class="modal-fondo" id="mod4">
+            <div  class="modal ancho-25 ancho-m-35 ancho-s-65 ancho-xs-99">
+                <div  class="modal-cuerpo  fd-negro">
+                        <div  class="d-flex just-center">
+                            <div  class="bg-black p-3 bor-rad-10">
+                                <form  action=""  autocomplete="off">
+                                    <h2  class="m-0 mb-3 c-blanco">Login</h2>
+                                    <div  class="flex-column">
+                                        <div  class="input-g">
+                                            <div  class="grupo">
+                                                <span  class="span-grupo fd-gris-az c-white"><i  class="bs-man"></i></span>
+                                                <input  type="text"  name="usuario"  class="fd-gris-az c-white"  required="">
+                                            </div>
+                                             <div  class="grupo mt-3">
+                                                <span  class="span-grupo fd-gris-az c-white"><i  class="bs-key"></i></span>
+                                                <input  type="password"  name="clave"  class="fd-gris-az c-white"  required="">
+                                            </div>
+                                        </div>
+                                    
+                                        <div  class="d-flex just-end">
+                                            <div  class="check-radio-grupo">
+                                                <input  type="checkbox"  id="rec_login">
+                                                <label  for="rec_login"  class="cb-blanco mt-1">Recordar Clave</label>
+                                            </div>
+                                        </div>
+                                        <div  class="d-flex flex-column-reverse just-between ali-stretch mt-5 flex-wrap flex-column-reverse-s ali-stretch-s">
+                                        
+                                            <div  class="btn-grupo-lg">
+                                                <input  type="submit"  name="Registrarse"  class="btn-sm fd-gris-az"  value="Registro">
+                                                <input  type="submit"  name="Ingresar"  class="btn-sm bg-white c-black"  value="Ingresar">
+                                            </div>
+                                        </div>
+                                        <div  class="mt-2">
+                                            <a  href="#"  class="link mt-3">Olvidó su clave</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>        
+                </div>
+            </div>
+        </div> -->
     </pre>
 </div>
         </article>
@@ -295,7 +317,8 @@
           
 <div class="codigo">
     <pre id="c5" class="cod-html">
-        <div class="modal-fondo" id="mod5">
+        <button class="btn bg-blue bor-pill activar-modal" data-target="#mod5">Disparador</button>
+        <!--<div class="modal-fondo" id="mod5">
             <div class="modal ancho-50 ancho-m-60 ancho-s-70 ancho-xs-90 fd-gris-n">
                 <div class="modal-cuerpo ta-c c-gris-c">
                     <div  id="tab3">
@@ -324,7 +347,7 @@
                     </div>
                 </div>
             </div>
-        </div>     
+        </div>  -->   
     </pre>
 </div>
         </article>
@@ -368,7 +391,7 @@
         </div>
     </pre>
 </div>
-        </article>
+        </article> 
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
@@ -394,11 +417,13 @@
     <!--JS -------------------------------------------------------------------------------------------------------------->
      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script> 
-        var enlace = "Modals"
-        var idMenu = "#m5"
+        var enlace = "Modales"
+        var idMenu = "#l5"
+        
     </script>
     <script src="../js/docs-body.js"></script>
     <script>
+         $("#l5 ul li:nth-child(4)").children("a").addClass("c-bodyui")
         BS.ModalInit()
         BS.TabInit().iniciarBorde({contexto: "#tab3",colorFuente: "c-white", colorFondo: "bg-pink-d-1", colorBorde: "fd-blanco"})
         BS.CodigoJsInit()

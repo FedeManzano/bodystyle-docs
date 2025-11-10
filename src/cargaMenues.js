@@ -85,10 +85,10 @@ import "./bodystyle"
         
         <div class="bs-sidebar-drop-list" id="l5">
             <ul>
-                <li><a href="">Home</a></li>
+                <li><a href="">m</a></li>
                 <li><a href="">Perfiles</a></li>
                 <li><a href="">Estadísticas</a></li>
-                <li><a href="">Correos</a></li>
+                <li><a href="modal.html">Modales</a></li>
             </ul>
         </div>
 
