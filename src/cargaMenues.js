@@ -93,7 +93,7 @@ import "./bodystyle"
         </div>
 
         <div class="bs-sidebar-title waves" data-target="#l6">
-            <label><i class="fa-solid fa-map-location-dot fz-20 c-bodyui">&nbsp;</i>&nbsp;Componentes</label>
+            <label><i class="fa-solid fa-map-location-dot fz-20 c-bodyui">&nbsp;</i>&nbsp;Navegación</label>
         </div>
         
         <div class="bs-sidebar-drop-list" id="l6">
