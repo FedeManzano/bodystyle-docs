@@ -14,14 +14,14 @@
 </head>
 <body>
 
-    <!--NAV INI -------------------------------------------------------------------------------------------->
-    <nav class="nav-body nav-prop">
-        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+        <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
     </nav>
     <!--NAV FIN -------------------------------------------------------------------------------------------->
 
     <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
-    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
     <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
@@ -181,6 +181,70 @@
 </div>
         </article>
 
+        <article class="articulo">
+            <h2 id="t10">Alias en Inglés <span class="badge badge-bodyui">v5.0.0</span></h2>
+            <p>
+                Desde la versión 5.0.0 se añadieron los alias para poder utilizar las funcionalidades
+                provistas pero en idioma inglés, a continuación se muestra una tabla con 
+                las equivalencias.
+            </p>
+
+
+            <div class="table-responsive mt-3">
+                <table class="table-sm vertical-border selector table-bor-grey table-dark">
+                    <thead>
+                        <tr>
+                            <th>Clases en Español</th>
+                            <th>Clases en Inglés</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>.ocultar-solo-grandes</td>
+                            <td>.hide-only-large</td>
+                            <td>Permite ocultar elementos en dispositivos con pantallas mas grandes que 1030px</td>
+                        </tr>
+                        <tr>
+                            <td>.ocultar-desde-medianos</td>
+                            <td>.hide-from-medium</td>
+                            <td>Permite ocultar elementos en dispositivos de pantalla menores a 1030px</td>
+                        </tr>
+                        <tr>
+                            <td>.ocultar-desde-chicos</td>
+                            <td>.hide-from-small</td>
+                            <td>Permite ocultar elementos en dispositivos de pantalla menores a 770px</td>
+                        </tr>
+                        <tr>
+                            <td>.ocultar-desde-x-chicos</td>
+                            <td>.hide-from-x-small</td>
+                            <td>Permite ocultar elementos en dispositivos de pantalla menores a 400px</td>
+                        </tr>
+                        <tr>
+                            <td>.mostrar-solo-x-chicos</td>
+                            <td>.show-only-x-small</td>
+                            <td>Permite mostrar elementos solo en dispositivos de pantalla menores a 400px</td>
+                        </tr>
+
+                        <tr>
+                            <td>.mostrar-solo-chicos</td>
+                            <td>.show-only-small</td>
+                            <td>Permite mostrar elementos solo en dispositivos de pantalla menores a 770px y mayores a 400px</td>
+                        </tr>
+                        <tr>
+                            <td>.mostrar-solo-medianos</td>
+                            <td>.show-only-medium</td>
+                            <td>Permite mostrar elementos solo en dispositivos de pantalla mayores a 770px y menores 1030px</td>
+                        </tr>
+                        <tr>
+                            <td>.mostrar-solo-grandes</td>
+                            <td>.show-only-large</td>
+                            <td>Permite mostrar elementos solo en dispositivos de pantalla mayores 1030px</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
@@ -199,6 +263,7 @@
             <li><a href="#t7">M. Solo Chicos</a></li>
             <li><a href="#t8">M. Solo Medianos</a></li>
             <li><a href="#t9">M. Solo Grandes</a></li>
+            <li><a href="#t10">Alias</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
@@ -208,8 +273,12 @@
      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script> 
         var enlace = "Helpers"
-        var idMenu = "#m3"
+        var idMenu = "#l3"
+        
     </script>
     <script src="../js/docs-body.js"></script>
+    <script>
+        $("#l3 ul li:nth-child(2)").children("a").addClass("c-bodyui")
+    </script>
 </body>
 </html>
