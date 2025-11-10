@@ -248,7 +248,7 @@
     $("#activador").click(() => {
        // Se remueve la clase desactivado
        $("#link_desact").removeClass("desactivado")
-       
+
        // Cuando se activa el enlace 
        // se reconfigura el atributo href 
        $("#link_desact").attr("href", "#")
@@ -258,6 +258,11 @@
     })
 </pre>
 </div> 
+
+        <div class="alerta-negra">
+            Notese que cuando se activa el elemento es necesario volver a cargarle los atributos que fueron removidos 
+            esto se debe a que cuando se deshabilita se remueve todo del elemento, luego de manera lógica hay que cargarlos nuevamente.
+        </div>
 
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
