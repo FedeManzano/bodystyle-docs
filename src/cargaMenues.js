@@ -141,7 +141,7 @@ import "./bodystyle"
             </div>
             <div  class="right-content">
                 <label  class="badge-mje-right badge-mje-bodyui mr-2 mb-1"><i class="fz-16 bs-tag">&nbsp;</i>v5.0.0</label>
-                <a href="" class="btn-sm-o btn-white-o bor-pill disparador" data-info="Versión Transpilada y procesada de bodystyle 5.0.0">Descargar</a>
+                <a target="_blank" href="https://mega.nz/file/kFUUWBoA#Zk1PF8Lb97HDQRtIWe6X-8PNoP2h4zUgXBwPx_XEcUk" class="btn-sm-o btn-white-o bor-pill disparador" data-info="Versión Transpilada y procesada de bodystyle 5.0.0">Descargar</a>
             </div>
         </div>
         `
@@ -173,9 +173,9 @@ import "./bodystyle"
                     data-pos='right'>versión 5.0.0</a>, el segundo botón es para descargar esta misma documentación
                     para no tener que ver publicidad que el hosting introduce sin permiso.
                 </p> 
-                <a target="_blank" href="https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58" class="btn-cover-sm fd-bodyui mar-2 disparador bor-pill"
+                <a target="_blank" href="https://mega.nz/file/kFUUWBoA#Zk1PF8Lb97HDQRtIWe6X-8PNoP2h4zUgXBwPx_XEcUk" class="btn-cover-sm fd-bodyui mar-2 disparador bor-pill"
                 data-info="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v5.0.0.zip" data-pos='right'>Descargar</a>
-                <a target="_blank" href="https://mega.nz/file/4c1ggChQ#uPpobno10HaNf1il6-5KQu2ZL14WxJug75dGTCr3cHo" class="btn-cover-sm-o btn-white-o mar-1 tips-ele bor-pill"
+                <a target="_blank" class="desactivado btn-cover-sm-o btn-white-o mar-1 tips-ele bor-pill"
                 data-tips="Descarga de esta misma documentación.">Docs 2.0.0</a>
             </div>
         </div> 
