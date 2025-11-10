@@ -532,7 +532,7 @@
                 no se aplique, en estos casos definimos <span class="badge badge-red">.m-s-0</span> y se borrará el margen.
             </div>
 
-            <div class="codigo">
+<div class="codigo">
 <pre id="c10" class="cod-html">
        <div class="d-flex mt-3">
             <div class="p-1 ta-c c-white bg-red">
@@ -545,7 +545,40 @@
     </pre>
 </div>
 
+        <h3 id="t14">Ejemplo Practico</h3>
+        <p class="mb-3">
+            En este ejemplo tomaremos dos botones dispuestos en con display flex a través 
+            de las clases de <a href="flexbox.html" class="link com-trigger" data-info="Clases provistas por Bodystyle para alinear los elementos utilizando Flexbox de CSS 3">Flexbox</a>
+            cuando la pantalla es pequeña (menor a 770px) queremos que estos dos botones tomen una configuración flex-direction: column y se coloquen uno 
+            abajo del otro con un margen de 8px, mientras que cuando los dispositivos son de una pantalla mayores a 770px los elementos se ubicarán
+            uno al lado del otro con un margen de 8px a la izquirda.
+        </p>
 
+        <div class="d-flex just-start flex-column-s ali-start-s">
+            <button class="btn fd-gris mr-1 mr-s-0">IZQUIERDA</button>
+            <button class="btn fd-gris mt-s-1">DERECHA</button>
+        </div>
+
+        <div class="alerta-negra mt-3">
+            Como se puede observar cuando se achica la pantalla va a existir un margen derecho en el primer botón
+            que separa a los elementos cuando están hubicados de manera horizontal, pero cuando se colocan uno abajo del otro 
+            es el segundo botón el que tiene el margen arriba. Para lograr esto es necesario reiniciar el margen derecha del primer 
+            botón con la clase <span class="badge badge-red">.mt-s-1</span>.
+        </div>
+
+<div class="codigo">
+    <pre id="c11" class="cod-html">
+       <div class="d-flex just-start flex-column-s ali-start-s">
+            <!--En todos los dispositivos tiene un mr-1 pero 
+            se reinicia con mr-s-0 -->
+            <button class="btn fd-gris mr-1 mr-s-0">IZQUIERDA</button>
+
+            <!--El segundo botón toma un mt-s-1 para separarse del 
+            anterior en equipos chicos cuando estén los elementos encolumnados -->
+            <button class="btn fd-gris mt-s-1">DERECHA</button>
+        </div>
+    </pre>
+</div>
         </article>
 
         <!--AUTOR--------------------------------------------------------------------->
@@ -570,6 +603,7 @@
             <li><a href="#t11">X e Y Tamaños</a></li>
             <li><a href="#t12">Alias</a></li>
             <li><a href="#t13">Borrar Margenes</a></li>
+            <li><a href="#t14">Ejemplo Práctico</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
