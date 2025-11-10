@@ -39,7 +39,7 @@ import "./bodystyle"
                 <li><a href="solapas.html">Solapas</a></li>
                 <li><a href="compartir.html">Compartir</a></li>
                 <li><a href="mensajes.html">Mensajes</a></li>
-                <li><a href="iconos.html">Íconos</a></li>
+                <li><a href="iconos.html">Iconos</a></li>
                 <li><a href="alertas.html">Alertas</a></li>
                 <li><a href="tarjetas.html">Tarjetas</a></li>
                 <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
@@ -117,8 +117,8 @@ import "./bodystyle"
                 let texto = $(e).text()
                 if(texto === enlace)
                 {
-                        $(e).children().addClass("active")
-                        $(e).children().append(`<i class="fa-solid fa-arrow-left pi-1">&nbsp</i>`)
+                    $(e).children().addClass("active")
+                    $(e).children().append(`<i class="fa-solid fa-arrow-left pi-1">&nbsp</i>`)
                 }
             })
         })
