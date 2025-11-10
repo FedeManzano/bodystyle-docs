@@ -16,15 +16,14 @@
 </head>
 <body>
 
-    <!--NAV INI -------------------------------------------------------------------------------------------->
-    <nav class="nav-body nav-prop">
-        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+      <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
     </nav>
     <!--NAV FIN -------------------------------------------------------------------------------------------->
 
     <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
-    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
-    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
 
     <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
     <section class="pagina nav-contenido">
@@ -389,8 +388,9 @@
             <li><a href="#t1">Efecto 3d</a></li>
             <li><a href="#t2">Aplicación</a></li>
             <li><a href="#t3">Muestra</a></li>
-            <li><a href="#t4">Ejemplo Simple</a></li>
-            <li><a href="#t5">Ejemplo Complejo</a></li>
+            <li><a href="#t4">Estructura</a></li>
+            <li><a href="#t5">Ejemplo Simple</a></li>
+            <li><a href="#t6">Ejemplo Complejo</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
@@ -400,8 +400,12 @@
      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script> 
         var enlace = "Efecto 3D"
-        var idMenu = "#m2"
+        var idMenu = "#l2"
+        
     </script>
     <script src="../js/docs-body.js"></script>
+    <script>
+        $("#l2 ul li:nth-child(13)").children("a").addClass("c-bodyui")
+    </script>
 </body>
 </html>
