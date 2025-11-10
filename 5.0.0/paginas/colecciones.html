@@ -14,14 +14,14 @@
 </head>
 <body>
 
-    <!--NAV INI -------------------------------------------------------------------------------------------->
-    <nav class="nav-body nav-prop">
-        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+     <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
     </nav>
     <!--NAV FIN -------------------------------------------------------------------------------------------->
 
     <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
-    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
     <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
@@ -589,13 +589,15 @@
 
     <!------------------------------------------------------------------------------------------------------------------->
     <!--JS -------------------------------------------------------------------------------------------------------------->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script> 
-        var enlace = "ColeccionesNew"
-        var idMenu = "#m2"
+        var enlace = "Colecciones"
+        var idMenu = "#l2"
+        
     </script>
     <script src="../js/docs-body.js"></script>
     <script>
+        $("#l2 ul li:nth-child(12)").children("a").addClass("c-bodyui")
         BS.CodigoJsInit()
         BS.Colecciones().iniciar({ contexto : "#coleccion_desplegable", colorFondo : "bg-pink-d-1",colorTexto : "c-blanco",  colorFlechas : "#fff" })
         //BS.Colecciones().iniciar({ contexto : "#ejemplo_lista", colorFondo : "fd-gris-n",colorTexto : "c-blanco",  colorFlechas : "#fff" })
