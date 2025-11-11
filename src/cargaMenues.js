@@ -27,7 +27,7 @@ import "./bodystyle"
             </ul>
         </div>
         <div class="bs-sidebar-title waves" data-target="#l2">
-            <label><i class="fa-brands fa-css3 fz-20 c-bodyui">&nbsp;</i>&nbsp;Css</label>
+            <label><i class="fa-brands fa-css3 fz-20 c-blue-s">&nbsp;</i>&nbsp;Css</label>
         </div>
         
         <div class="bs-sidebar-drop-list" id="l2">
@@ -51,7 +51,7 @@ import "./bodystyle"
         </div>
 
         <div class="bs-sidebar-title waves" data-target="#l3">
-            <label><i class="fa-solid fa-boxes-stacked fz-20 c-bodyui">&nbsp;</i>&nbsp;Alineamiento</label>
+            <label><i class="fa-solid fa-boxes-stacked fz-20 c-grey-s">&nbsp;</i>&nbsp;Alineamiento</label>
         </div>
    
         <div class="bs-sidebar-drop-list" id="l3">
@@ -67,7 +67,7 @@ import "./bodystyle"
         </div>
 
         <div class="bs-sidebar-title waves" data-target="#l4">
-            <label><i class="fa-solid fa-envelope-open-text fz-20 c-bodyui">&nbsp;</i>&nbsp;Formularios</label>
+            <label><i class="fa-solid fa-envelope-open-text fz-20 c-orange">&nbsp;</i>&nbsp;Formularios</label>
         </div>
    
         <div class="bs-sidebar-drop-list" id="l4">
@@ -85,7 +85,7 @@ import "./bodystyle"
         </div>
 
         <div class="bs-sidebar-title waves" data-target="#l5">
-            <label><i class="fa-brands fa-square-js fz-20 c-bodyui"></i>&nbsp;Js</label>
+            <label><i class="fa-brands fa-square-js fz-20 c-yellow"></i>&nbsp;Js</label>
         </div>
         
         <div class="bs-sidebar-drop-list" id="l5">
@@ -107,7 +107,7 @@ import "./bodystyle"
         </div>
 
         <div class="bs-sidebar-title waves" data-target="#l6">
-            <label><i class="fa-solid fa-map-location-dot fz-20 c-bodyui">&nbsp;</i>&nbsp;Navegación</label>
+            <label><i class="fa-solid fa-map-location-dot fz-20 c-green">&nbsp;</i>&nbsp;Navegación</label>
         </div>
         
         <div class="bs-sidebar-drop-list" id="l6">
