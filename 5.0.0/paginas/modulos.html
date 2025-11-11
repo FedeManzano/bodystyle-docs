@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Todos los módulos de la biblioteca enumerados y cuantificados.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Módulos</title>
+</head>
+<body>
+
+    
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Módulos</h1>
+            <p>
+                Una forma de apreciar la biblioteca Bodystyle es a través de los estilos implementados en sass y procesados 
+                a css, la otra forma es la lógica que acompaña a los elementos establecida en JS. En este apartado veremos 
+                como se compone la lógica de la librería con el fin de documentar y cuantificar cada uno de los módulos, como así 
+                también los mensajes de errores en caso de una inválida inicialización.
+            </p>
+
+
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Generalidades</h2>
+            <p>
+                Bodystyle se compone por 27 módulos separados escritos en lenguaje JS en los cuales muchos de ellos 
+                tienen que ser inicializados con las funciones perinentes según se los necesite. <br>
+                Para lograr esta tarea es necesario disponer el archivo que contiene a los módulos y permita la inicialización 
+                antes mencionada.
+            </p>
+
+
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <!-- Utilización de la lógica de la biblioteca -->
+    <!-- Donde path el la ruta de la ubicación del archivo bodystyle.min.js -->
+    <script src="[path]/bodystyle.min.js"></script>
+
+    <script>
+        // Dentro de las etiquetas script de html
+        // Objeto BS encargado de brindar acceso a cada módulo de la librería
+        BS.[modulo a iniciar] // A lo largo de la documentación de mostrará detalladamente como iniciarlos
+    </script>
+</pre>
+</div>
+            <h3>Listado de módulos</h3>
+            <p class="mb-3">
+                Como se mencionó anteriormente Bodystyle cuenta con 27 módulos los cuales se detallarán a continuación.
+            </p>
+            <div class="table-responsive" style="overflow-x: scroll; white-space: nowrap;">
+                <table class="table-sm vertical-border selector table-dark table-bor-grey">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Parámetros</th>
+                            <th>Tipos</th>
+                            <th>Iniciación</th>
+                            <th>Destrucción</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Alertas</td>
+                            <td>NO</td>
+                            <td>N/A</td>
+                            <td>Auto</td>
+                            <td>N/A</td>
+                            <td>Brinda la posibilidad de cerrar las alertas definidas en la página no requiere inicialización manual lo realiza de manera automática</td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>BotonInicio</td>
+                            <td>NO</td>
+                            <td>N/A</td>
+                            <td>BS.BotonInicioInit()</td>
+                            <td>BS.BotonInicioDestroy()</td>
+                            <td>Botón que se muestra en la parte inferior de la página y que le permite al usuario volver al inicia de la misma con un click</td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>CódigoC</td>
+                            <td>SI</td>
+                            <td>JSON</td>
+                            <td>
+                                Función: BS.CodeCInit
+                                <ul class="ml-3"> 
+                                    <li>texto</li>
+                                    <li>lineas</li>
+                                </ul> 
+                            </td>
+                            <td>N/A</td>
+                            <td>Permite colorear el código en lenguaje C dentro de las etiquetas pre de HTML</td>
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                            <td>CódigoCSS</td>
+                            <td>SI</td>
+                            <td>JSON</td>
+                            <td>
+                                Función: BS.CodeCssInit
+                                <ul class="ml-3"> 
+                                    <li>texto</li>
+                                    <li>lineas</li>
+                                </ul> 
+                            </td>
+                            <td>N/A</td>
+                            <td>Permite colorear el código en lenguaje CSS dentro de las etiquetas pre de HTML</td>
+                        </tr>
+                        <tr>
+                            <td>05</td>
+                            <td>CódigoHTML</td>
+                            <td>SI</td>
+                            <td>JSON</td>
+                            <td>
+                                Función: BS.CodeHtmlInit
+                                <ul class="ml-3"> 
+                                    <li>texto</li>
+                                    <li>lineas</li>
+                                </ul> 
+                            </td>
+                            <td>N/A</td>
+                            <td>Permite colorear el código en lenguaje HTML dentro de las etiquetas pre de HTML</td>
+                        </tr>
+                        <tr>
+                            <td>05</td>
+                            <td>CódigoJAVA</td>
+                            <td>SI</td>
+                            <td>JSON</td>
+                            <td>
+                                Función: BS.CodeJavaInit
+                                <ul class="ml-3"> 
+                                    <li>texto</li>
+                                    <li>lineas</li>
+                                </ul>
+                            </td>
+                            <td>N/A</td>
+                            <td>Permite colorear el código en lenguaje JAVA dentro de las etiquetas pre de HTML</td>
+                        </tr>
+                        <tr>
+                            <td>06</td>
+                            <td>CódigoJS</td>
+                            <td>SI</td>
+                            <td>JSON</td>
+                            <td>
+                                Función: BS.CodeJsInit
+                                <ul class="ml-3"> 
+                                    <li>texto</li>
+                                    <li>lineas</li>
+                                </ul>
+                            </td>
+                            <td>N/A</td>
+                            <td>Permite colorear el código en lenguaje JS dentro de las etiquetas pre de HTML</td>
+                        </tr>
+                        <tr>
+                            <td>07</td>
+                            <td>Colecciones</td>
+                            <td>SI</td>
+                            <td>JSON</td>
+                            <td> 
+                                Función: BS.Colecciones 
+                                <ul class="ml-3"> 
+                                    <li>contexto</li>
+                                    <li>colorFondo</li>
+                                    <li>colorTexto</li>
+                                    <li>colorFlechas</li>
+                                </ul> 
+                                
+                            <td>BS.Colecciones().destroy("ID Colección")</td>
+                            <td>Permite desplegar un submenu de cada items de la colección con el efecto acordeón.</td>
+                        </tr>
+                        <tr>
+                            <td>08</td>
+                            <td>ColecciónFlotante</td>
+                            <td>SI</td>
+                            <td>JSON</td>
+                            <td>
+                                Función: BS.ColeccionFlotante
+                                <ul class="ml-3"> 
+                                    <li>contexto</li>
+                                    <li>fondoItem</li>
+                                    <li>colorTexto</li>
+                                    <li>altura</li>
+                                </ul> 
+                            </td>
+                            <td>BS.ColeccionFloatante().destroy("ID Colección")</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="mt-3">
+                Para poder visualizar correctamente los expresado en la tabla se incluye en esta documentación el código de inicialización 
+                de todos los módulos comentados y documentados.
+            </p>
+<div class="codigo">
+<pre class="cod-js" id="c2">
+            
+        
+        /*!
+         * BodyStyle v5.0.0
+         * Copyright Federico Manzano
+         * Licencia MIT
+         * Repositorio (https://github.com/FedeManzano/bodystyle)
+         */
+        
+        import Modal from "./modulos/Modal"
+        import Waves from  "./modulos/Waves"
+        import DropDown from "./modulos/Dropdown"
+        import Toast from "./modulos/Toast"
+        import ScrollSpy from "./modulos/ScrollSpy"
+        import ToolTips from "./modulos/ToolTips"
+        import Imagenes from "./modulos/Imagenes"
+        import Range from "./modulos/Range"
+        import Paralax from "./modulos/Paralax"
+        import BotonInicio from "./modulos/BotonInicio"
+        import Alerta from "./modulos/Alerta"
+        import Tab from "./modulos/Tabs"
+        import GruposInput from "./modulos/GruposInput"
+        import Desactivado from "./modulos/Desactivado"
+        import Coleccion from "./modulos/Colecciones"
+        import ColeccionFlotante from "./modulos/ColeccionFlotante"
+        import InputHandler from "./modulos/InputHandler"
+        import Select from "./modulos/Select"
+        import Html from "./modulos/CodigoHtml"
+        import Js from "./modulos/CodigoJs"
+        import Css from "./modulos/CodigoCss"
+        import Java from "./modulos/CodigoJava"
+        import C from "./modulos/CodigoC"
+        import ComentarioDinamico from "./modulos/ComentarioDinamico"
+        import Personalizado from "./modulos/Personalizado"
+        import Navigation from "./modulos/Navigation"
+        import SidebarDrop from "./modulos/SidebarDrop"
+        
+        (function(){
+        
+            /************************** MÓDULOS INICIADOS AUTOMÁTICAMNTE ******************/
+            /******************************************************************************/
+        
+            // Inicia automáticamente el efecto WAVES
+            // Para elementos dinámicos es necesario la inicialización manual
+            Waves.iniciar()
+        
+            // Inicia las funcionalidades del input range
+            Range.iniciar()
+        
+            // Permite cerrar una alerta
+            Alerta.iniciar()
+        
+            // Permite agregar un dropdown al input-g
+            // de la librería
+            GruposInput.iniciar()
+        
+            // Remueve todos los eventos html del elemento afectado
+            Desactivado.iniciar()
+        
+            // Permite manejar a los input file    
+            InputHandler.iniciar()
+        
+            // Inicializa al módulo de comentarios dinámicos
+            // Para elementos dinámicos se tiene que inicializar manulamente
+            // con la función correspondiente.
+            ComentarioDinamico.iniciar()
+        
+            /**************************** Input Handler *************************************/
+            const InputHandlerInit = () => InputHandler.iniciar()
+        
+            /**************************** Desactivado *************************************/
+            const DesactivadoInit = () => Desactivado.iniciar()
+        
+            /**************************** WAVES EFFECT *************************************/
+        
+            /**
+             * Función de iniciación del efecto Waves
+             */
+            const WavesInit =  () => {
+                Waves.destroy() 
+                Waves.iniciar() 
+            }
+        
+            /**
+             * Desvincula los eventos involucrados 
+             * en el efecto liberando recursos no utilizados
+             * @returns 
+             */
+            const WavesDestroy = () => Waves.destroy() 
+        
+        
+            /************************* Objetos Dinámicos  **********************************/
+        
+            /**
+             * Función de inicialización de los elementos dinámicos
+             * Dropdown, Comentarios y tootips. Consume más recursos 
+             * que inicializar cada uno de estos elementos por separado.
+             */
+            const DynamicsInit = () => {
+                ComentarioDinamico.destroy()
+                ComentarioDinamico.iniciar()
+                ToolTips.iniciar()
+                DropDown.iniciar()
+            }
+        
+            /**
+             * Función de desvinculación de eventos que producen
+             * los elementos dinámicos, Dropdown, Tooltips y Comentarios.
+             * Tiene el problema que desvincula a todos los elementos antes mencionados
+             * Si solo queremos devincular uno de ellos hay que utilizar su función 
+             * específica.
+             */
+            const DynamicsDestroy = () => {
+                ComentarioDinamico.destroy()
+                ToolTips.destroy()
+                DropDown.destroy()
+            }
+        
+            /**
+             * Función que inicializa los comentarios dinámicos,
+             * los mismos se inicializan automáticamente cuando se 
+             * dispone del archivo transpilado de bodystyle, pero para 
+             * utilizar este elemento en objetos dinámicos es necesario 
+             * utilizar esta función.
+             */
+            const ComentariosInit = () => {
+                ComentarioDinamico.destroy()
+                ComentarioDinamico.iniciar()
+            }
+        
+            /**
+             * Comentarios desvinculados de los elementos asociados. 
+             * Se liberan los recursos utilizados cuando ya no se necesite 
+             * utilizar este elemento.
+             */
+            const ComentariosDestroy = () => ComentarioDinamico.destroy()
+        
+            /**
+             * @param {ori,ele} config deonde ori es la clase asociada al elemento disparador,
+             * y ele es la/s clases asociadas al elemento dinámico personalizado.
+             */
+            const PersonalizadoInit = (config) => Personalizado.iniciar(config)
+        
+            /**
+             * Función de destrucción y desvinculación de eventos 
+             * asociados al tips personalizado.
+             */
+            const PersonalizadoDestroy = () => Personalizado.destroy()
+        
+            /**
+             * Menú desplegable asociado a un determinado elemento
+             * esta función vincula esta lista con un elemento del DOM. 
+             */
+            const DropDownInit = () => DropDown.iniciar()
+        
+            /**
+             * Desvinculación de eventos entre el elemento disparador 
+             * y el drop.
+             */
+            const DropDownDestroy = () => DropDown.destroy()
+        
+            /**
+             * Elementos dinámicos asociados a un elemento que permiten 
+             * una breve descripción de lo que realizan. Esta función 
+             * permite su inicialización, esto de debe a que no se inica de 
+             * manera automática.
+             */
+            const ToolTipsInit = () => ToolTips.iniciar()
+        
+            /**
+             * Desvinculación de los eventos asociados a 
+             * los tootips.
+             */
+            const ToolTipsDestroy = () => ToolTips.destroy()
+        
+        
+            /************************* Código Pintado  **********************************/
+        
+            /**
+             * Perimite inicializar el módulo para pintar el código
+             * html dentro las etiquetas pre de html.
+             */
+            const CodigoHtmlInit = (config) => Html.iniciar(config)
+        
+             /**
+             * Perimite inicializar el módulo para pintar el código
+             * JS dentro las etiquetas pre de html.
+             */
+            const CodigoJsInit = (config) => Js.iniciar(config)
+        
+            /**
+             * Perimite inicializar el módulo para pintar el código
+             * CSS dentro las etiquetas pre de html.
+             */
+            const CodigoCssInit = (config) => Css.iniciar(config)
+        
+            /**
+             * Perimite inicializar el módulo para pintar el código
+             * JAVA dentro las etiquetas pre de html.
+             */
+            const CodigoJavaInit = (config) => Java.iniciar(config)
+        
+            /**
+             * Perimite inicializar el módulo para pintar el código
+             * C dentro las etiquetas pre de html.
+             */
+            const CodigoCInit = (config) => C.iniciar(config)
+        
+            /************************* Navegación **********************************/
+        
+            /**
+             * Permite inicializar la barra de navegación y vincular 
+             * este elemento con el sidebar simple.
+             * @param {ID de contexto de la barra de navegación} id 
+             * @param {Establece si la navegación tiene borde o no} border 
+             */
+            const NavigationInit = (id, border) => Navigation.Init(id, border)
+        
+            /**
+             * Permite desvincular los eventos que se utilizan para 
+             * mostrar el sidebar simple asociados al NAV.
+             */
+            const NavigationDestroy = () => Navigation.Destroy()
+        
+            /**
+             * Permite inicializar el vínculo entre el NAV con el SIDEBAR 
+             * plegable.
+             * @param {idNav, idSidebar} conf Objeto JSON que contiene el ID del NAV y el ID del SIDEBAR 
+             */
+            const SidebarDropInit = (conf) => SidebarDrop.Init(conf)
+        
+            /************************* Colecciones **********************************/
+        
+            /**
+             * @returns Instancia del objeto Coleccon
+             * @see /modulos/Coleccion
+             */
+            const Colecciones = () => new Coleccion 
+        
+            /************************* Imagenes *******************************************/
+        
+            /**
+             * Permite inicializar módulo que genera el efecto 
+             * paralax.
+             */
+            const ParalaxInit = () => Paralax.iniciar()
+        
+            /**
+             * Inicializa el módulo que permite realizarle 
+             * zoom a la imagen.
+             */
+            const ImagenesInit = ()=> Imagenes.iniciar()
+        
+            /**
+             * Desvincula los eventos asociados al click que permite 
+             * establecer el zoom en una imagen.
+             */
+            const ImagenesDestroy = ()=> Imagenes.destroy()
+        
+            /************************* ScrollSpy *******************************************/
+            /**
+             * Elemento que se utiliza como guia para el usuario dentro de la página
+             * los atributos de inicialización son:
+             *      - ancho: PX ancho del scrollspy
+             *      - tamFuente: Tamaño de la fuente de los enlaces
+             *      - colorBorde: fd-[color] bg-[color] define el color del borde señalador
+             *      - alturaBorde: PX altura del borde que compone el señalador de enlaces
+             *      - separacion:  Separación del scrollspy respecto el inicio de la página
+             *      - colorSeleccionado: Color hexadecimal que define el enlace seleccionado
+             *      - colorNoSeleccionado: Color Hexadecimal que define el color de los enlaces no seleccionados
+             * @param {ancho, tamFuente, colorBorde, alturaBorde, separacion, colorSeleccionado, colorNoSeleccionado} config  
+             */
+            const ScrollSpyInit = (config) => ScrollSpy.iniciar(config)
+        
+            /**
+             * Permite desvincular el evento scroll de la ventana
+             * para maximixar recursos.
+             */
+            const ScrollSpyDestroy = () => ScrollSpy.destroy()
+        
+            /************************* Modal *******************************************/
+            /**
+             * Inicializa el módulo de las ventanas Modales
+             */
+            const ModalInit = () => Modal.iniciar()
+        
+            /**
+             * Desvincula los eventos de las ventanas modales
+             */
+            const ModalDestroy = () => Modal.destroy()
+        
+            /************************* Botón de Inicio *******************************************/
+        
+            /**
+             * Permite la inicialización del módulo para crear y mostrar
+             * el botón que le brinda la posibilidad al usuario volver 
+             * al scroll = 0. 
+             */
+            const BotonInicioInit = () => BotonInicio.iniciar()
+        
+            /**
+             * Permite desvincular el evento window.scroll y
+             * el evento click asociados el botón.
+             */
+            const BotonInicioDestroy = () => BotonInicio.destroy()
+        
+            /************************* Tabs *******************************************/
+        
+            /**
+             * Devuelve una instancia de la clase Tab
+             * a través de ella se inicializa el módulo corrspondiente
+             * y poder gestionar la lógica de este elemento.
+             */
+            const TabInit = () => new Tab
+        
+            /************************* Colecciones Flotantes *******************************************/
+        
+            /**
+             * Devuelve una instancia que permite a través de ella 
+             * gestionar la lógica de las colecciones fijas dentro 
+             * del DOM.
+             */
+            const ColeccionFlot = () => new ColeccionFlotante
+        
+            /************************* Colecciones Flotantes *******************************************/
+        
+            /**
+             * Devuelve una instancia que permite gestionar 
+             * los elementos Select de html brindando estilos 
+             * nuevos a este lemento. 
+             */
+            const SelectInit = () => new Select
+        
+        
+            /**
+             * Objeto JSON visible desde el exterior que permite acceder e inicializar 
+             * todos los módulos de la librería.
+             */
+            const BS = {
+                
+                //////////////////////////////////////////////////
+                /////////////////////DINÁMICOS ///////////////////
+                DynamicsAutoInit: () => DynamicsInit(),
+                DynamicsAutoDestroy: () => DynamicsDestroy(),
+            
+                // Personalizado
+                PersonalizadoInit: (config) => PersonalizadoInit(config),
+                PersonalizadoDestroy: () => PersonalizadoDestroy(),
+            
+                PersonalizedInit: (conf) => PersonalizadoInit(conf),
+                PersonalizedDestroy: () => PersonalizadoDestroy(),
+            
+                 // Dropdown
+                DropDownInit: (config) => DropDownInit(config),
+                DropDownDestroy: (elemento) => DropDownDestroy(elemento),
+            
+                // Toast
+                Toast: (config) => Toast.ejecutar(config),
+            
+                // Tooltips
+                ToolTipsInit: () =>  ToolTipsInit(),
+                ToolTipsDestroy: () => ToolTipsDestroy(),
+            
+                // Comentarios
+                CommentInit: () => ComentariosInit(),
+                CommentDestroy: () => ComentariosDestroy(),
+            
+                // Comentarios Alias
+                ComentariosInit: () => ComentariosInit(),
+                ComentariosDestroy: () => ComentariosDestroy(),
+            
+                //////////////////////////////////////////////////
+                ///////////////////// FIN DINÁMICOS ///////////////////
+            
+                // Modales
+                ModalInit: (config) => ModalInit(config),
+                ModalDestroy: () => ModalDestroy(),
+                
+                // ScrollSpy
+                ScrollSpyInit: (config) => ScrollSpyInit(config),
+                ScrollSpyDestroy: () => ScrollSpyDestroy(),
+            
+                // Imagenes
+                ImagenesInit: () => ImagenesInit(),
+                ImagenesDestroy: () => ImagenesDestroy(),
+            
+                // Deshabilitado
+                Deshabilitar: () => Deshabilitar(),
+            
+                // Paralax
+                ParalaxInit: () => ParalaxInit(),
+            
+                // botonInicio
+                BotonInicioInit: () => BotonInicioInit(),
+                BotonInicioDestroy: () => BotonInicioDestroy(),
+            
+                // Tabs
+                TabInit: () => TabInit(),
+            
+                // Colecciones
+                Colecciones: () => Colecciones(),
+                ColeccionFlot: () => ColeccionFlot(),
+            
+                // Select 
+                SelectInit: () => SelectInit(),
+            
+                // Template
+                TemplateDestroy: () => TemplateDestroy(),
+            
+                SidebarDropInit: (conf)=> SidebarDropInit(conf),
+                NavigationInit: (id, border) => NavigationInit(id, border),
+                NavigationDestroy: () => NavigationDestroy(),
+            
+                WavesInit: () => WavesInit(),
+                WavesDestroy: () => WavesDestroy(),
+            
+                //////////////////////////////////////////////////
+                ///////////////////// CÓDIGO PINTADO /////////////
+            
+                CodigoHtmlInit: (config) =>  CodigoHtmlInit(config),
+                CodigoCssInit: (config) =>  CodigoCssInit(config),
+                CodigoJsInit: (config) =>  CodigoJsInit(config),
+                CodigoJavaInit: (config) =>  CodigoJavaInit(config),
+                CodigoCInit: (config) =>  CodigoCInit(config),
+            
+                // Alias
+                CodeHtmlInit: (config) =>  CodigoHtmlInit(config),
+                CodeCssInit: (config) =>  CodigoCssInit(config),
+                CodeJsInit: (config) =>  CodigoJsInit(config),
+                CodeJavaInit: (config) =>  CodigoJavaInit(config),
+                CodeCInit: (config) =>  CodigoCInit(config),
+            
+            
+                CodeAutoInit: (config) => {
+                    CodigoHtmlInit(config)
+                    CodigoCssInit(config)
+                    CodigoJsInit(config)
+                    CodigoJavaInit(config)
+                    CodigoCInit(config)
+                },
+            
+                CodigoAutoInit: (config) => {
+                    CodigoHtmlInit(config)
+                    CodigoCssInit(config)
+                    CodigoJsInit(config)
+                    CodigoJavaInit(config)
+                    CodigoCInit(config)
+                },
+            
+                //////////////////////////////////////////////////
+                /////////////////////FIN CÓDIGO PINTADO /////////////
+            
+                /**Inicializa la capacidad de modificar un elemento .desactivado */
+                DesactivadoInit: () => DesactivadoInit(),
+                InactiveInit: () => DesactivadoInit(),
+            
+                // Permite cargar la clase i-error en campos requeridos
+                // Permite seleccionar un archivo desde input file
+                InputHandlerInit: () => InputHandlerInit()
+            }
+        
+            
+            window.BS = BS
+        })()
+        
+        
+        // Exporta obj que posee todos los accesos
+        // a las funcionalidades de la biblioteca
+        export default BS
+
+
+</pre>
+</div>
+        <p class="alerta-negra">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
+             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
+              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
+        </p>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="guia-pagina">
+        <ul>
+            <li><a href="#a1_pt">Subtitulo 1</a></li>
+            <li><a href="">Template literal</a></li>
+            <li><a href="">Boton Flotante</a></li>
+            <li><a href="">Servicios</a></li>
+            <li><a href="">Template literal</a></li>
+            <li><a href="">Boton Flotante</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Módulos"
+        var idMenu = "#l5"
+        
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        BS.CodeJsInit()
+        $("#l5 ul li:nth-child(1)").children("a").addClass("c-bodyui")
+    </script>
+</body>
+</html>

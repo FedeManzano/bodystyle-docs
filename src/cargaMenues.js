@@ -90,10 +90,19 @@ import "./bodystyle"
         
         <div class="bs-sidebar-drop-list" id="l5">
             <ul>
-                <li><a href="">m</a></li>
-                <li><a href="">Perfiles</a></li>
-                <li><a href="">Estadísticas</a></li>
+                <li><a href="modulos.html">Módulos</a></li>
+                <li><a href="gestion_errores.html">Gestion Errores</a></li>
+                <li><a href="boton_inicio.html">Botón Inicio</a></li>
                 <li><a href="modal.html">Modales</a></li>
+                <li><a href="tooltips.html">ToolTips</a></li>
+                <li><a href="comentarios.html">Comentarios</a></li>
+                <li><a href="dropdown.html">Dropdown</a></li>
+                <li><a href="personalizados.html">Tips Propios</a></li>
+                <li><a href="colecciones_flotantes.html">Lista Fixed</a></li>
+                <li><a href="scrollspy.html">ScrollSpy</a></li>
+                <li><a href="imagenes.html">Imagenes</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+                <li><a href="toast.html">Toasts</a></li>
             </ul>
         </div>
 
