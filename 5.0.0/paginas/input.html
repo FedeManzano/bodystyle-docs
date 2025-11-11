@@ -10,19 +10,20 @@
 
     <link rel="stylesheet" href="../css/bodystyle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
     
     <title>Input</title>
 </head>
 <body>
 
     <!--NAV INI -------------------------------------------------------------------------------------------->
-    <nav class="nav-body nav-prop">
-        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
     </nav>
     <!--NAV FIN -------------------------------------------------------------------------------------------->
 
     <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
-    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
     <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
@@ -389,6 +390,80 @@
     </pre>
 </div>
         </article> 
+        <article class="articulo">
+            <h2 id="t8">Input Icon</h2>
+            <p class="mab-3">
+                Ahora vamos a ver ejemplos de otro modelo de input en el cual se incorporan <a href="iconos.html" class="link tips-ele"
+                data-tips="Documentación de Íconos">íconos</a>. Para realizar esto vamos a encerrar al ícono y al input dentro 
+                de un div con la clase <span class="badge badge-red">.input-icon</span>. 
+            </p>
+
+            <div class="row">
+                <div class="cs-12 cm-6 input-icon">
+                    <i class="bs-search fz-20 c-red"></i>
+                    <input type="search" name="buscar" id="buscar">
+                </div>
+                <div class="cs-12 cm-6 input-icon">
+                    <i class="bs-man fz-20"></i>
+                    <input type="text" name="nombre" id="nombre">
+                </div>
+                <div class="cs-12 cm-6 input-icon">
+                    <i class="bs-phone-call fz-20 c-green"></i>
+                    <input type="text" name="telefono" id="telefono">
+                </div>
+                <div class="cs-12 cm-6 input-icon">
+                    <i class="bs-key fz-20 c-naranja"></i>
+                    <input type="password" name="pass" id="pass">
+                </div>
+            </div>
+<div class="codigo">
+    <pre id="c8" class="cod-html">
+        <div class="row">
+            <div class="cs-12 cm-6 input-icon">
+                <i class="bs-search fz-20 c-red"></i>
+                <input type="search" name="buscar" id="buscar">
+            </div>
+            <div class="cs-12 cm-6 input-icon">
+                <i class="bs-man fz-20"></i>
+                <input type="text" name="nombre" id="nombre">
+            </div>
+            <div class="cs-12 cm-6 input-icon">
+                <i class="bs-phone-call fz-20 c-green"></i>
+                <input type="text" name="telefono" id="telefono">
+            </div>
+        </div>     
+    </pre>
+</div>
+        <h3 id="t9">Required</h3>
+        <p class="mb-3">
+            Así como los demás modelos de input que se vieron en los apartados anteriores 
+            en este caso si se tiene el archivo con la lógica de Bodystyle incorporada con 
+            el archivo <span class="badge badge-black">bodystyle.min.js</span> esto ejecutará 
+            un módulo que se carga por defecto que es el <span class="badge badge-black">InputHandler</span> que no 
+            necesita inicialización.
+        </p>
+
+        <div class="cs-12 cm-6 input-icon">
+            <i class="bs-man fz-20"></i>
+            <input type="text" name="nombre" id="nombre" required>
+        </div>
+
+<div class="codigo">
+    <pre id="c9" class="cod-html">
+        <div class="cs-12 cm-6 input-icon">
+            <i class="bs-man fz-20"></i>
+            <input type="text" name="nombre" id="nombre" required>
+        </div>
+    </pre>
+</div>
+
+        <div class="alerta-negra">
+            Notese que si se pierde el foco del campo anterirmente definido y el mismo está 
+            vacío es le agregará un borde rojo con la clase interna <span class="badge badge-red">.i-error</span> 
+            para indicarle al usuario que el campo es requerido.
+        </div>
+
+        </article>
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
@@ -406,17 +481,23 @@
             <li><a href="#t5">Grilla</a></li>
             <li><a href="#t6">Tamaños</a></li>
             <li><a href="#t7">Temas</a></li>
+            <li><a href="#t8">Input Icon</a></li>
+            <li><a href="#t9">Required</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
     <!--JS -------------------------------------------------------------------------------------------------------------->
-     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script> 
         var enlace = "Input"
-        var idMenu = "#m4"
+        var idMenu = "#l4"
+        
     </script>
     <script src="../js/docs-body.js"></script>
+    <script>
+        $("#l4 ul li:nth-child(1)").children("a").addClass("c-bodyui")
+    </script>
 </body>
 </html>

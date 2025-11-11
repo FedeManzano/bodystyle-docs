@@ -72,10 +72,15 @@ import "./bodystyle"
    
         <div class="bs-sidebar-drop-list" id="l4">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Perfiles</a></li>
-                <li><a href="">Estadísticas</a></li>
-                <li><a href="">Correos</a></li>
+                <li><a href="input.html">Input</a></li>
+                <li><a href="grupos_form.html">Grupos Form</a></li>
+                <li><a href="input_range.html">Input Range</a></li>
+                <li><a href="select.html">Select</a></li>
+                <li><a href="checkbox.html">Checkbox</a></li>
+                <li><a href="radio.html">Radio</a></li>
+                <li><a href="switch.html">Switch</a></li>
+                <li><a href="input_file.html">Input File</a></li>
+                <li><a href="formularios.html">Formularios</a></li>
             </ul>
         </div>
 
