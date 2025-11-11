@@ -102,6 +102,7 @@ import "./bodystyle"
                 <li><a href="scrollspy.html">ScrollSpy</a></li>
                 <li><a href="imagenes.html">Imagenes</a></li>
                 <li><a href="tabs.html">Tabs</a></li>
+                <li><a href="show_code.html">Show Code</a></li>
                 <li><a href="toast.html">Toasts</a></li>
             </ul>
         </div>
