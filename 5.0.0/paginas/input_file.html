@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Input del tipo file que permite seleccionar archivos desde el PC del usuario.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <title>Input File</title>
+</head>
+<body>
+
+    
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Input File</h1>
+            <p>
+                Input dell tipo file que permite seleccionar un archivo desde el PC del usuario. En este apartado vamos a aprender como 
+                utilizar este elemento con los estilos que provee la librería.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Muestra</h2>
+            <p class="mb-3">
+                A continuación se realizará un ejemplo de como utilizar este elemento con los estilos de Bodystyle. <br>
+                Para que el elemento funcione deben tener el archivo <span class="badge badge-black">bodystyle.min.js</span>
+                agregado al proyecto o la página donde estén trabajando.
+            </p>
+
+            <div class="ancho-50 ancho-m-70 ancho-s-90 ancho-xs-100">
+                <label for="file" class="f-label com-trigger" data-info="Seleccionar Archivo"><i class="bs-file"></i></label>
+                <input type="file" name="file" id="file" class="input-file">
+            </div>
+
+            <div class="alerta-negra">
+                Para poder introducir el ícono es necesario ver primero el apartado corrspondiente a este tema en <a href="iconos.html" class="link tips-ele"
+                data-tips="Íconos de Bodystyle.">Íconos</a>
+            </div>
+
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <div class="ancho-50 ancho-m-70 ancho-s-90 ancho-xs-100">
+        <!-- Se incorpora la clase f-label para el label y la clase .input-file para el input-->
+        <label for="file" class="f-label"><i class="bs-file"></i></label>
+        <input type="file" name="file" id="file" class="input-file">
+    </div>
+</pre>
+</div>
+            <h3 id="t3">Colores</h3>
+            <p class="mb-3">
+                Podemos seleccionar cualquier color de la <a href="colores.html" class="link">Paleta</a> de bodystyle 
+                aca dejo algunos ejemplos.
+            </p>
+
+            <div class="ancho-50 ancho-m-70 ancho-s-90 ancho-xs-100">
+                <label for="rojo" class="f-label bg-red"><i class="bs-file"></i></label>
+                <input type="file" name="rojo" id="rojo" class="input-file">
+            </div>
+            <div class="ancho-50 ancho-m-70 ancho-s-90 ancho-xs-100 mt-1">
+                <label for="verde" class="f-label bg-green"><i class="bs-file"></i></label>
+                <input type="file" name="verde" id="verde" class="input-file">
+            </div>
+            <div class="ancho-50 ancho-m-70 ancho-s-90 ancho-xs-100 mt-1">
+                <label for="negro" class="f-label bg-black"><i class="bs-file"></i></label>
+                <input type="file" name="negro" id="negro" class="input-file">
+            </div>
+<div class="codigo">
+
+<pre class="cod-html" id="c2">
+    <div class="ancho-50 ancho-m-70 ancho-s-90 ancho-xs-100">
+        <label for="rojo" class="f-label bg-red"><i class="bs-file"></i></label>
+        <input type="file" name="rojo" id="rojo" class="input-file">
+    </div>
+    <div class="ancho-50 ancho-m-70 ancho-s-90 ancho-xs-100 mt-1">
+        <label for="verde" class="f-label bg-green"><i class="bs-file"></i></label>
+        <input type="file" name="verde" id="verde" class="input-file">
+    </div>
+    <div class="ancho-50 ancho-m-70 ancho-s-90 ancho-xs-100 mt-1">
+        <label for="negro" class="f-label bg-black"><i class="bs-file"></i></label>
+        <input type="file" name="negro" id="negro" class="input-file">
+    </div>
+</pre>
+</div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Input File</a></li>
+            <li><a href="#t2">Muestra</a></li>
+            <li><a href="#t3">Colores</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script> 
+        var enlace = "Input File"
+        var idMenu = "#l4"
+        
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        $("#l4 ul li:nth-child(8)").children("a").addClass("c-bodyui")
+    </script>
+</body>
+</html>
