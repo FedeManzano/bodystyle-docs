@@ -52,6 +52,7 @@ En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de 
         - :page_facing_up: <i>margin.html</i>
         - :page_facing_up: <i>medidas.html</i>
         - :page_facing_up: <i>modal.html</i>
+        - :page_facing_up: <i>modulos.html</i>
         - :page_facing_up: <i>nav.html</i>
         - :page_facing_up: <i>opacidad.html</i>
         - :page_facing_up: <i>padding.html</i>
