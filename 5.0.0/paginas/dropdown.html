@@ -26,13 +26,13 @@
 <body>
 
     <!--NAV INI -------------------------------------------------------------------------------------------->
-    <nav class="nav-body nav-prop">
-        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
     </nav>
     <!--NAV FIN -------------------------------------------------------------------------------------------->
 
     <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
-    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
     <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
@@ -73,6 +73,9 @@
     // cuando estos están dispuestos de manera estática dentro del DOM
     BS.DropDownInit();
 
+    // Desde la versión 5.0.0
+    // BS.DynamicsAutoInit() // Inicializa todos los elementos dinámicos (Dropdown, Tooltips y Comentarios)
+
     /*******************************************************************************/
 
     // 2 OPCIÓN DINÁMICA
@@ -90,6 +93,9 @@
     window.onload = () => {
         setTimeout( () => {
             BS.DropDownInit();
+
+            // Desde la versión 5.0.0
+            // BS.DynamicsAutoInit() // Inicializa todos los elementos dinámicos (Dropdown, Tooltips y Comentarios)
         }, 100); 
     }
 </pre>
@@ -227,6 +233,39 @@
 
 
         </article>
+        <article class="articulo">
+            <h2 id="t7">Destroy <span class="badge badge-bodyui">5.0.0</span></h2>
+            <p>
+                Es posible desvincular la lógica de los Dropdown en un momento determinado 
+                para liberar recursos y mejorar la eficiencia de la página en desarrollo. Para 
+                esta tarea utilizaremos la función <span class="badge badge-black">Destroy</span>.
+            </p>
+
+<div class="codigo">
+    <pre id="c5" class="cod-js">
+        // Se desactivan los dropdown de la página
+        BS.DropDownDestroy()
+
+        // Desde la versión 5.0.0
+        // BS.DynamicsAutoDestroy() // Destruye todos los elementos dinámicos (Dropdown, Tooltips y Comentarios)
+    </pre>
+</div>
+        <button id="desactivador" class="btn fd-bodyui">Desactivar Dordown</button>
+
+<div class="codigo">
+    <pre id="c6" class="cod-js">
+        $("#desactivador").on("click", () => {
+            BS.DropDownDestroy()
+            BS.Toast({html: "Dropdown Destruidos", clases: ["bg-red"]})
+        })
+    </pre>
+</div>
+
+        <div class="alerta-negra">
+            Notese que si se dirige a los dropdown definidos en esta página luego de presionar el 
+            botón "Desactivar Dordown" estos ya no funcionarán.
+        </div>
+        </article>
         <!---ARTICULO INI ------------------------------------------------------------->
 
         <!--AUTOR--------------------------------------------------------------------->
@@ -265,6 +304,7 @@
             <li><a href="#t4">Ejemplo</a></li>
             <li><a href="#t5">Hover</a></li>
             <li><a href="#t6">Posición</a></li>
+            <li><a href="#t7">Destroy</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
@@ -273,13 +313,19 @@
     <!--JS -------------------------------------------------------------------------------------------------------------->
      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script> 
-        var enlace = "Dropdown"
-        var idMenu = "#m5"
+        var enlace = "Comentarios"
+        var idMenu = "#l5"
+        
     </script>
     <script src="../js/docs-body.js"></script>
     <script>
-        BS.DropDownInit()
+        $("#l5 ul li:nth-child(8)").children("a").addClass("c-bodyui")
         BS.CodigoJsInit()
+        BS.DropDownInit()
+        $("#desactivador").on("click", () => {
+            BS.DropDownDestroy()
+            BS.Toast({html: "Dropdown Destruidos", clases: ["bg-red"]})
+        })
     </script>
 </body>
 </html>
