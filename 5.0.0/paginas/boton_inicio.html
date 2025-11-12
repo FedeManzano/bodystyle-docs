@@ -65,14 +65,21 @@
 
         <div class="codigo">
 <pre class="cod-js" id="c1">
-    /*
-            Dentro de etiquetas script de html debajo del archivo bodystyle.min.js 
-            agregar el siguiente código. 
-    */
+    // Destruye el botón
     BS.BotonInicioDestroy() 
 </pre>
 </div>
 
+        <button id="desactivador" class="btn fd-bodyui">Desactivar Botón</button>
+
+                <div class="codigo">
+<pre class="cod-js" id="c1">
+    $("#desactivador").on("click", () => {
+        BS.BotonInicioDestroy()
+        BS.Toast({html: "Botón destruido"})
+    })
+</pre>
+</div>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
 
@@ -103,7 +110,11 @@
     <script src="../js/docs-body.js"></script>
     <script>
         BS.CodeJsInit()
-        $("#l5 ul li:nth-child(3)").children("a").addClass("c-bodyui")
+        $("#l5 ul li:nth-child(4)").children("a").addClass("c-bodyui")
+        $("#desactivador").on("click", () => {
+            BS.BotonInicioDestroy()
+            BS.Toast({html: "Botón destruido"})
+        })
     </script>
 </body>
 </html>

@@ -16,14 +16,14 @@
 </head>
 <body>
 
-    <!--NAV INI -------------------------------------------------------------------------------------------->
-    <nav class="nav-body nav-prop">
-        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+     <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
     </nav>
     <!--NAV FIN -------------------------------------------------------------------------------------------->
 
     <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
-    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
     <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
@@ -65,6 +65,50 @@
     <!--<script  src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>-->
 </pre>
 </div>
+
+            <div class="alerta-negra">
+                En caso de que el elemento/s al que se le quiere asignar el comentario son dinámicos 
+                (Se inyectan a través de js pero no existen como tal en el HTML) va a ser necesario inicializarlo 
+                manualmente con las funciones provista por la biblioteca.
+            </div>
+            <div class="codigo">
+<pre class="cod-js" id="c2">
+    window.onload = () => {
+        // se define un timeout para generar un retraso 
+        // en la inicialización del comentario 
+
+        setTimeout( () => {
+
+            BS.CommentInit() // Con este código se podrá mostrar el comentario 
+            // en cualquier elemento sea dinámico o estático.
+
+        }, 100) // 100ms
+
+    }
+</pre>
+</div>
+            <div class="alerta-negra">
+                Desde la versión 5.0.0 se incorpora la función automática de inicialización que se utiliza 
+                para cargar los Dropdown, Tooltips y Comentarios, estos tres elementos serán inicializados 
+                con una única función.
+            </div>
+            <div class="codigo">
+<pre class="cod-js" id="c3">
+    window.onload = () => {
+        // se define un timeout para generar un retraso 
+        // en la inicialización del comentario 
+
+        setTimeout( () => {
+
+            BS.DynamicsAutoInit() // Con este código se podrá mostrar el comentario 
+            // en cualquier elemento sea dinámico o estático.
+
+        }, 100) // 100ms
+    }
+</pre>
+</div>
+
+
             <h3 id="t3">Muestra</h3>
             <p class="mb-3">
                 Ahora veamos una muestra de como utilizar un comentario con mucho texto en un elemento 
@@ -74,7 +118,7 @@
             <button class="btn-sm-o btn-blue-o com-trigger"
             data-info="Este elemento es un botón outline proveisto por <span class='f-w-9 c-red'> Bodystyle UI </span> para mejorar la apariencia de estos botones y mejorar la experiencia del usuario en el sitio que se esté desarrollando.">HOVER</button>
 <div class="codigo">
-<pre class="cod-html" id="c2">
+<pre class="cod-html" id="c4">
     <!-- Es comentario bastante largo pero se muestra de manera adecuada -->
      <button class="btn-sm-o btn-blue-o com-trigger"
             data-info="Este elemento es un botón outline proveisto por <span class='f-w-9 c-red'> Bodystyle UI </span> para mejorar la apariencia de estos botones y mejorar la experiencia del usuario en el sitio que se esté desarrollando.">HOVER</button>
@@ -115,7 +159,7 @@
 
 
 <div class="codigo">
-<pre class="cod-html" id="c3">
+<pre class="cod-html" id="c5">
     <div class="mt-3 d-flex just-around flex-wrap">
         <button class="btn fd-azul com-trigger"
         data-info="Esto es un comentario en un botón azul del lado derecho" data-pos="right">Right</button>
@@ -143,7 +187,7 @@
             data-info="Botón Outline de Bodystyle de color rojo y con efecto hover de fondo para cuando el usuario pasa el cursor por encima del elemento. <br> <a href='botones.html' class='link'>Ver Documentación</a>" data-evt="click">Click !</button>
             
     <div class="codigo">
-    <pre id="c5" class="cod-html">
+    <pre id="c6" class="cod-html">
         
      <button class="btn-sm-o btn-red-o com-trigger bor-pill"
      data-info="Botón Outline de Bodystyle de color rojo y con efecto hover de fondo para cuando el usuario pasa el cursor por encima del elemento. <br> <a href='botones.html' class='link'>Ver Documentación</a>" data-evt="click">Click !</button>   
@@ -167,13 +211,17 @@
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
-    <!------------------------------------------------------------------------------------------------------------------->
     <!--JS -------------------------------------------------------------------------------------------------------------->
      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script> 
         var enlace = "Comentarios"
-        var idMenu = "#m5"
+        var idMenu = "#l5"
+        
     </script>
     <script src="../js/docs-body.js"></script>
+    <script>
+        $("#l5 ul li:nth-child(7)").children("a").addClass("c-bodyui")
+        BS.CodigoJsInit()
+    </script>
 </body>
 </html>

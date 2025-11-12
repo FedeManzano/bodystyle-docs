@@ -92,6 +92,7 @@ import "./bodystyle"
             <ul>
                 <li><a href="modulos.html">Módulos</a></li>
                 <li><a href="gestion_errores.html">Gestion Errores</a></li>
+                <li><a href="auto_iniciacion.html">Auto Iniciación</a></li>
                 <li><a href="boton_inicio.html">Botón Inicio</a></li>
                 <li><a href="modal.html">Modales</a></li>
                 <li><a href="tooltips.html">ToolTips</a></li>
