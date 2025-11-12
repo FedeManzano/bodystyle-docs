@@ -118,7 +118,7 @@ import "./bodystyle"
                 <li><a href="nav.html">Nav</a></li>
                 <li><a href="sidebar.html">Sidebar</a></li>
                 <li><a href="sidebar_drop.html">Sidebar Drop</a></li>
-                <li><a href="preogress.html">Progress Bar</a></li>
+                <li><a href="progressbar.html">Progress Bar</a></li>
                 <li><a href="preloader.html">Preloader</a></li>
             </ul>
         </div>
