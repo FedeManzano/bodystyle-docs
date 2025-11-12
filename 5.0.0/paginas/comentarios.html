@@ -194,6 +194,37 @@
     </pre>
     </div>
         </article>
+        <article class="articulo">
+            <h2 id="t6">Método Destroy</h2>
+            <p>
+                Para liberar recursos y desasignar eventos es necesario destruir los comentarios, para 
+                esta tarea Bodystyle cuenta con una función que lleva a cabo esta tarea.
+            </p>
+
+ <div class="codigo">
+    <pre id="c7" class="cod-js">
+        // Con esta función de deshabilitan los comentarios
+        BS.CommentDestroy()
+    </pre>
+</div>    
+
+        <button id="desactivador" class="btn fd-bodyui">Desactivar Comentarios</button>
+
+        <div class="alerta-negra mt-3">
+            Notará que después de presionar el botón "Desactivar Comentarios" los comentarios de la página 
+            dejaron de funcionar.
+        </div>
+
+<div class="codigo">
+    <pre id="c8" class="cod-js">
+        $("#desactivador").on("click", () => {
+            BS.CommentDestroy()
+            BS.Toast({html: "Comentarios Destruidos", clases: ["bg-red"]})
+        })
+    </pre>
+</div> 
+
+        </article>
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
@@ -207,6 +238,7 @@
             <li><a href="#t3">Muestra</a></li>
             <li><a href="#t4">Posicionamiento</a></li>
             <li><a href="#t5">Eventos</a></li>
+            <li><a href="#t6">Destroy</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
@@ -222,6 +254,10 @@
     <script>
         $("#l5 ul li:nth-child(7)").children("a").addClass("c-bodyui")
         BS.CodigoJsInit()
+        $("#desactivador").on("click", () => {
+            BS.CommentDestroy()
+            BS.Toast({html: "Comentarios Destruidos", clases: ["bg-red"]})
+        })
     </script>
 </body>
 </html>
