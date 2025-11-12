@@ -30,6 +30,8 @@ window.onload = () => {
     
     $("ins").remove()
     $("iframe").remove()
+
+    BS.WavesInit()
     }, 100); 
 }
 

@@ -6,13 +6,13 @@
     <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
 
     
-    <meta name="description" content="">
+    <meta name="description" content="Efecto dinámico que se produce cuando se le da click a un elemento.">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/bodystyle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     
-    <title>Get Started</title>
+    <title>Waves</title>
 </head>
 <body>
 
@@ -31,9 +31,13 @@
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
-            <h1>Get Started</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ducimus distinctio doloremque aperiam fugiat,
-                 sapiente animi quam ut minima recusandae aut blanditiis tenetur. Animi earum culpa, quam incidunt nemo dolores?</p>
+            <h1 id="t1">Waves</h1>
+            <p>
+                Elementos dinámicos que se añaden para generar el efecto cuando se da click a un elemento. 
+                Desde la versión <span class="badge badge-red">5.0.0</span> se incluyen los elementos dinámicos (elementos que no están 
+                definidos en el HTML, sino que se incluyen a través de JS). En este caso es necesario inicializar el módulo Waves, caso contrario 
+                se inicaliza automáticamente al incrorporar el archivo <span class="badge badge-black">bodystyle.min.js</span> al proyecto.
+            </p>
             
             <div class="mar-2 boton-descarga"></div>
         </section>
@@ -41,61 +45,105 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="a1_pt">SubTitulo Artículo 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus ea nulla aliquam soluta commodi laboriosam nobis reprehenderit, 
-                labore est asperiores voluptatum beatae fuga atque rem eos nemo rerum magnam.</p>
-
+            <h2 id="t2">Inicialización</h2>
+            <p>
+                Para protectos dinámicos en los cuales los elementos se incluyen al HTML en tiempo de ejecución, es necesario 
+                la inicialización de los waves como se muestra a continuación.
+            </p>
 <div class="codigo">
+<pre class="cod-js" id="c1">
 
-<pre class="cod-html" id="c1">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
+    /**
+        Inicialización para proyectos con elementos dinámicos 
+        que necesitan un retraso a la espera de la carga de estos elementos.
+    */
+    window.onload = () => {
+        setTimeout( () => {
+            BS.WavesInit()
+        }, 100)
+    }
+    
 </pre>
 </div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga dolorem, ab hic autem culpa, 
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
-<div class="codigo">
+            <h3 id="t3">Muestra</h3>
 
-<pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
+            <div id="boton_dinamico"></div>
+<div class="codigo">
+<pre class="cod-js" id="c2">
+    $("#boton_dinamico").append(
+    `
+        <button class='btn bg-bodyui waves'>Dinamico Click!</button>    
+    `)
 </pre>
 </div>
-        <p class="alerta-negra">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-             veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-              sint fugiat quos ducimus voluptatum, nemo ipsa atque?
-        </p>
+        <div class="alerta-negra">
+            Notese que al elementos que necesitemos que muestre el efecto le añadimos 
+            la clase <span class="badge badge-red">.waves</span> como se muestra en el código anterior.
+        </div>
         </article>
-        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t4">Colores</h2>
+            <p>
+                es posible añadirle colores al efecto, para esta tarea es necesario agregar el atributo 
+                <span class="badge badge-negro">data-color</span> y dentro una clase perteneciente a Bodystyle 
+                con el color de fondo del elemento que produce el efecto.
+             </p>
 
+             <div class="d-flex just-around flex-column-s ali-start mt-3">
+                <button class='btn bg-bodyui waves' data-color="bg-green">Click Verde!</button>
+                <button class='btn bg-bodyui waves mt-s-1' data-color="bg-blue">Click Azul!</button> 
+                <button class='btn bg-bodyui waves ' data-color="bg-yellow">Click Amarillo!</button>
+                <button class='btn bg-bodyui waves mt-s-1' data-color="bg-violet">Click Violeta!</button>
+             </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c3">
+    <div class="d-flex just-around flex-column-s ali-start mt-3">
+        <button class='btn bg-bodyui waves' data-color="bg-green">Click Verde!</button>
+        <button class='btn bg-bodyui waves mt-s-1' data-color="bg-blue">Click Azul!</button> 
+        <button class='btn bg-bodyui waves ' data-color="bg-yellow">Click Amarillo!</button>
+        <button class='btn bg-bodyui waves mt-s-1' data-color="bg-violet">Click Violeta!</button>
+    </div>
+</pre>
+</div>
+              
+        </article>
+        <article class="articulo">
+            <h2 id="t5">Destroy</h2>
+            <p class="mb-3">
+                Es posible eliminar la lógica del comportamiento del efecto, de manera tal 
+                de optimizar recursos sin tocar el HTML. La forma es llamando a función que destruye los 
+                elementos WAVES.
+            </p>
+
+            <button id="desactivador" class="btn fd-bodyui">Desactivar Waves</button>
+
+            <div class="alerta-negra mt-3">
+                Si presiona el botón el efecto Waves se elimina de los elementos sin modificar el HTML.
+            </div>
+
+<div class="codigo">
+    <pre id="c5" class="cod-js">
+        $("#desactivador").on("click", () => {
+            BS.WavesDestroy()
+            BS.Toast({html: "Waves Eliminados", clases: ["bg-red"]})
+        })
+    </pre>
+</div>
+        </article>
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
     <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
 
     <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
-    <div class="guia-pagina">
+    <div class="lista-scroll">
         <ul>
-            <li><a href="#a1_pt">Subtitulo 1</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
+            <li><a href="#t1">Waves</a></li>
+            <li><a href="#t2">Inicialización</a></li>
+            <li><a href="#t3">Muestra</a></li>
+            <li><a href="#t4">Colores</a></li>
+            <li><a href="#t5">Destroy</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
@@ -110,7 +158,19 @@
     </script>
     <script src="../js/docs-body.js"></script>
     <script>
+        BS.CodeJsInit()
+ 
         $("#l5 ul li:nth-child(16)").children("a").addClass("c-bodyui")
+
+        $("#boton_dinamico").append(
+        `
+            <button class='btn bg-bodyui waves'>Dinamico Click!</button>    
+        `)
+
+        $("#desactivador").on("click", () => {
+            BS.WavesDestroy()
+            BS.Toast({html: "Waves Eliminados", clases: ["bg-red"]})
+        })
     </script>
 </body>
 </html>
