@@ -254,6 +254,20 @@
         // Dropdown, Comentarios y Tooltips
     </pre>
 </div>
+        <button id="desactivador" class="btn fd-bodyui">Desactivar Tips</button>
+        <div class="alerta-negra mt-3">
+            Notará que después de presionar el botón "Desativar Tips" los tips de la página 
+            dejaron de funcionar.
+        </div>
+
+<div class="codigo">
+    <pre id="c8" class="cod-js">
+        $("#desactivador").on("click", () => {
+            BS.ToolTipsDestroy()
+            BS.Toast({html: "Tips Destruidos", clases: ["bg-red"]})
+        })
+    </pre>
+</div>
         </article>
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
@@ -289,7 +303,10 @@
     <script>
         $("#l5 ul li:nth-child(6)").children("a").addClass("c-bodyui")
         BS.CodigoJsInit()
-    
+        $("#desactivador").on("click", () => {
+            BS.ToolTipsDestroy()
+            BS.Toast({html: "Tips Destruidos", clases: ["bg-red"]})
+        })
     </script>
 </body>
 </html>
