@@ -86,13 +86,13 @@
 <body>
 
     <!--NAV INI -------------------------------------------------------------------------------------------->
-    <nav class="nav-body nav-prop">
-        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
     </nav>
     <!--NAV FIN -------------------------------------------------------------------------------------------->
 
     <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
-    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
     <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
@@ -132,7 +132,15 @@
          un elemento dinámico se incluyen dentro del HTML de manera 
          estática utilizaremos esta forma.
     */
-    BS.PersonalizadoInit({ori: "clase del elemento disparador", ele: "estilos css"})
+
+    OBJ JSON Con los siguientes attr 
+    let conf = {
+        ori: "Clase del elemento Disparador", // Ej: .disparador 
+        ele: "Clases que afectan al elemento dinámico" // EJ: bg-red c-white
+    }
+
+    BS.PersonalizadoInit(conf)
+    // BS.PersonalizeInit(conf) // Alias desde la versión 5.0.0
 
     /**
         Forma 2:
@@ -141,7 +149,8 @@
     */
     window.onload = () => {
         setTimeout( () => {
-            BS.PersonalizadoInit({ori: "clase del elemento disparador", ele: "estilos css"})
+            BS.PersonalizadoInit(conf)
+            // BS.PersonalizeInit(conf) // Alias desde la versión 5.0.0
         }, 100) // 100 ms de retardo
     }
 </pre>
@@ -642,6 +651,22 @@
         <a href="muestras/personalizado_menu.html" class="link">Muestra Del Menú</a>
         </article>
 
+        <article class="articulo">
+            <h2 id="t11">Destroy <span class="badge badge-red">5.0.0</span></h2>
+            <p>
+                A partir de la versión 5.0.0 se añade la posibilidad de desvincular la lógica 
+                de los elementos dinámicos vistos en esta sección de la documentación para optimizar recursos.
+            </p>
+
+<div class="codigo">
+    <pre id="c15" class="cod-js">
+        BS.PersonalizadoDestroy()
+        // BS.PersonalizeDestroy() // Alias en inglés hace lo mismo
+    </pre>
+</div>
+
+        </article>
+
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
@@ -668,15 +693,18 @@
     <!--JS -------------------------------------------------------------------------------------------------------------->
      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script> 
-        var enlace = "Tips PropiosNew"
-        var idMenu = "#m5"
-    </script>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        var enlace = "Tips Propios"
+        var idMenu = "#l5"
+     </script>
     <script src="../js/docs-body.js"></script>
     <script>
+        $("#l5 ul li:nth-child(9)").children("a").addClass("c-bodyui")
         BS.CodigoJsInit()
         BS.CodigoCssInit()
+        $("#desactivador").on("click", () => {
+            BS.PersonalizadoDestroy()
+            BS.Toast({html: "Tips Destruidos", clases: ["bg-red"]})
+        })
     </script>
 </body>
 </html>
