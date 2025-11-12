@@ -142,7 +142,7 @@ import "./bodystyle"
     }
     
 
-    $(".bs-nav").append
+    $("#nav").append
     (
         `
         <div  class="bs-nav-md align-right-list">
