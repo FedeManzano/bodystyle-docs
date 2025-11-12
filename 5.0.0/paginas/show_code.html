@@ -17,13 +17,13 @@
 <body>
 
     <!--NAV INI -------------------------------------------------------------------------------------------->
-    <nav class="nav-body nav-prop">
-        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
     </nav>
     <!--NAV FIN -------------------------------------------------------------------------------------------->
 
     <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
-    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
     <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
@@ -129,7 +129,46 @@
     </pre>
 </div>
 
-            <h3 id="t3">Codigo C</h3>
+            <h3 id="t3">Alias <span class="badge badge-red">5.0.0</span></h3>
+            <p>
+                Desde la versión 5.0.0 se añadieron alias para las funciones de inicialización para incorporar 
+                el lenguaje inglés a la biblioteca.
+            </p>
+
+            <div class="table-responsive mt-3">
+                <table class="table-sm vertical-border selector table-dark table-bor-grey">
+                    <thead>
+                        <tr>
+                            <th>Español</th>
+                            <th>Inglés</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>BS.CodigoCInit</td>
+                            <td>BS.CodeCInit</td>
+                        </tr>
+                        <tr>
+                            <td>BS.CodigoJavaInit</td>
+                            <td>BS.CodeJavaInit</td>
+                        </tr>
+                        <tr>
+                            <td>BS.CodigoCssInit</td>
+                            <td>BS.CodeCssInit</td>
+                        </tr>
+                        <tr>
+                            <td>BS.CodigoHtmlInit</td>
+                            <td>BS.CodeHtmlInit</td>
+                        </tr>
+                        <tr>
+                            <td>BS.CodigoJsInit</td>
+                            <td>BS.CodeJsInit</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="t4">Codigo C</h3>
             <p>
                 Para colorear el codigo de C tenemos que añadirle a la etiqueta <span class="badge badge-black">pre</span> la clase 
                 <span class="badge badge-red">cod-c</span> y luego dentro de la misma colocar el código que se desee mostrar.
@@ -167,7 +206,7 @@
     }
 </pre>
 </div>
-        <h3 id="t4">Codigo Java</h3>
+        <h3 id="t5">Codigo Java</h3>
         <p>
             Para este código se utilizará la clase <span class="badge badge-red">cod-java</span> asignada a la etqueta 
             html <span class="badge badge-black">pre</span> para mostrar el código.
@@ -224,7 +263,7 @@
     </pre>
 </div>
 
-        <h3 id="t5">Código JavaScript</h3>
+        <h3 id="t6">Código JavaScript</h3>
 
         <p>
             Al igual que los casos anteriores se utiliza la clase <span class="badge badge-red">cod-js</span> para colorear 
@@ -260,7 +299,7 @@
 
     </pre>
 </div>
-        <h3 id="t6">Código CSS</h3>
+        <h3 id="t7">Código CSS</h3>
 
         <p>
             El código css se hace de igual manera con la clase <span class="badge badge-red">cod-css</span>
@@ -292,7 +331,7 @@
     </pre>
 </div>
 
-        <h3 id="t7">Código Html</h3>
+        <h3 id="t8">Código Html</h3>
         <p>
             El código HTML se muestra a través de la clase <span class="badge badge-red">cod-html</span> y el proceso 
             es exactamente igual que los anteriores. El ejemplo se puede apreciar en toda esta documentación 
@@ -301,6 +340,45 @@
 
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t9">Auto Inicialización <span class="badge badge-bodyui">5.0.0</span></h2>
+            <p>
+                Desde la versión 5.0.0 se añade la función de auinicialización de todos los módulos 
+                que se encargan de pintar el el código fuente. Es importante aclarar que el consumo de memoria 
+                de esta función es mayor a las otras debido a la cantidad de módulos que se inicializan.
+            </p>
+
+                    <div class="codigo">
+<pre class="cod-js" id="c7">
+    // 1 OPCIÓN ESTÁTICA
+    // ------------------
+
+    // Inicializa el elemento
+    // cuando estos están dispuestos de manera estática dentro del DOM
+    BS.CodeAutoInit() // Los inicializa a todos
+
+    /*******************************************************************************/
+
+    // 2 OPCIÓN DINÁMICA
+    // -----------------   
+    
+    /*
+        En proyectos donde se tabaja a través de injección de elementos a través 
+        de JavaScript de manera dinámica, y el elemento que se estudia en esta sección se 
+        ingresa de esta manera, es necesario aplicar un retraso en la inicialización del 
+        módulo con el siguiente codigo.
+    */
+
+    //Si los elementos que conforman esta funcionalidad son dinámicos 
+    // Agregados a través de JS 
+    window.onload = () => {
+        setTimeout( () => {
+            BS.CodeAutoInit() // Los inicializa a todos
+        }, 100); 
+    }
+</pre>
+</div>
+        </article>
 
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
@@ -313,21 +391,24 @@
         <ul>
             <li><a href="#t1">Show Code</a></li>
             <li><a href="#t2">Inicializar</a></li>
-            <li><a href="#t3">Código C</a></li>
-            <li><a href="#t4">Código Java</a></li>
-            <li><a href="#t5">Código JS</a></li>
-            <li><a href="#t6">Código CSS</a></li>
-            <li><a href="#t7">Código Html</a></li>
+            <li><a href="#t3">Alias</a></li>
+            <li><a href="#t4">Código C</a></li>
+            <li><a href="#t5">Código Java</a></li>
+            <li><a href="#t6">Código JS</a></li>
+            <li><a href="#t7">Código CSS</a></li>
+            <li><a href="#t8">Código Html</a></li>
+            <li><a href="#t9">Automático</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
     <!--JS -------------------------------------------------------------------------------------------------------------->
-     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script> 
         var enlace = "Show Code"
-        var idMenu = "#m5"
+        var idMenu = "#l5"
+        
     </script>
     <script src="../js/docs-body.js"></script>
     <script>
@@ -335,6 +416,7 @@
         BS.CodigoCssInit()
         BS.CodigoJsInit()
         BS.CodigoCInit()
+        $("#l5 ul li:nth-child(14)").children("a").addClass("c-bodyui")
     </script>
 </body>
 </html>

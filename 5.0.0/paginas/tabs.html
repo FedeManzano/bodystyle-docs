@@ -17,13 +17,13 @@
 <body>
 
     <!--NAV INI -------------------------------------------------------------------------------------------->
-    <nav class="nav-body nav-prop">
-        <label class="boton-desplegable " data-trigger="#sidebar"></label>
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
     </nav>
     <!--NAV FIN -------------------------------------------------------------------------------------------->
 
     <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
-    <div id="sidebar" class="nav-sidebar-desplegable" style="background-color: rgb(21,21,21); display: none;"></div>
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
     <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
@@ -539,7 +539,7 @@
         </div>    
     </pre>
 </div>
-            <h3 id="t7">Tarjetas</h3>
+            <h3 id="t6">Tarjetas</h3>
 
             <div id="ta5">
                 <div class="tab-borde">
@@ -765,6 +765,51 @@
 </div>
         </article>
 
+        <article class="articulo">
+            <h2 id="t7">Destroy</h2>
+            <p class="mb-3">
+                A partir de la versión 5.0.0 se pude desvincular la lóca de los elementos tabs 
+                de las vistas, es necesario entender que la función de inicialización del Tab en 
+                realidad lo que devuelve es una instancia de una clase definida en JS. <br>
+                Se recomienda ver el código fuente para entenderlo mejor: <a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Tabs.js" class="link com-trigger"
+                data-info="Código fuente de la clase Tabs de Bodystyle">Tabs.js</a>.
+            </p>
+
+            <button id="desactivador" class="btn fd-bodyui com-trigger" data-info="Si presiona este botón se desactivarán todos los tabs de esta página, para asegurarse es recomendado volver hacia atras y probar que los tabs ya no funcionan.">Desactivar Tabs</button>
+        
+<div class="codigo">
+    <pre id="c10" class="cod-js">
+        // Evento click del botón
+        $("#desactivador").on("click", () => {
+
+            /**
+                BS.TabInit() devuelve una instancia nueva de la clase tabs, por esta razón 
+                al momento de destruir el tabs debemos pasarle el ID por parámetro a la 
+                método destroy.
+            */
+
+            // Deshabilita el #ta1
+            BS.TabInit().destroy("#ta1")
+
+            // Deshabilita el #ta2
+            BS.TabInit().destroy("#ta2")
+
+            // Deshabilita el #ta3
+            BS.TabInit().destroy("#ta3")
+
+            // Deshabilita el #ta4
+            BS.TabInit().destroy("#ta4")
+
+            // Deshabilita el #ta5
+            BS.TabInit().destroy("#ta5")
+
+            // Muestra El toast por pantalla
+            BS.Toast({html: "Tabs Destruidos", clases: ["bg-red"]})
+        })
+    </pre>
+</div>
+        </article>
+
 
 
         <!---ARTICULO INI ------------------------------------------------------------->
@@ -786,6 +831,7 @@
             <li><a href="#t5">Contenido Complejo</a></li>
             <li><a href="#t6">Login-Refistro</a></li>
             <li><a href="#t7">Tarjetas</a></li>
+            <li><a href="#t8">Destroy</a></li>
         </ul>
 
     </div>
@@ -793,20 +839,33 @@
 
     <!------------------------------------------------------------------------------------------------------------------->
     <!--JS -------------------------------------------------------------------------------------------------------------->
-     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script> 
         var enlace = "Tabs"
-        var idMenu = "#m5"
+        var idMenu = "#l5"
+        
     </script>
     <script src="../js/docs-body.js"></script>
 
     <script>
+        $("#l5 ul li:nth-child(13)").children("a").addClass("c-bodyui")
         BS.TabInit().iniciarBorde({contexto: "#ta1"})
         BS.TabInit().iniciarBorde({contexto: "#ta2",colorFuente: "c-white", colorFondo: "bg-black", colorBorde: "fd-blanco"})
         BS.TabInit().iniciarBorde({contexto: "#ta3",colorFuente: "c-white", colorFondo: "bg-pink-d-1", colorBorde: "fd-blanco"})
         BS.TabInit().iniciarBorde({contexto: "#ta4",colorFuente: "c-white", colorFondo: "bg-pink-d-1", colorBorde: "fd-blanco"})
         BS.TabInit().iniciarBorde({contexto: "#ta5",colorFuente: "c-white", colorFondo: "fd-azul-ve", colorBorde: "fd-blanco"})
         BS.CodigoJsInit()
+
+        $("#desactivador").on("click", () => {
+            BS.TabInit().destroy("#ta1")
+            BS.TabInit().destroy("#ta2")
+            BS.TabInit().destroy("#ta3")
+            BS.TabInit().destroy("#ta4")
+            BS.TabInit().destroy("#ta5")
+            BS.Toast({html: "Tabs Destruidos", clases: ["bg-red"]})
+        })
     </script>
 </body>
 </html>
