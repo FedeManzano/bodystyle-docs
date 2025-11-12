@@ -105,6 +105,7 @@ import "./bodystyle"
                 <li><a href="tabs.html">Tabs</a></li>
                 <li><a href="show_code.html">Show Code</a></li>
                 <li><a href="toast.html">Toasts</a></li>
+                <li><a href="waves.html">Waves</a></li>
             </ul>
         </div>
 
