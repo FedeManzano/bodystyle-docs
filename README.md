@@ -61,6 +61,8 @@ En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de 
         - :page_facing_up: <i>progressbar.html</i>
         - :page_facing_up: <i>radio.html</i>
         - :page_facing_up: <i>select.html</i>
+        - :page_facing_up: <i>sidebar.html</i>
+        - :page_facing_up: <i>sidebar_drop.html</i>
         - :page_facing_up: <i>solapas.html</i>
         - :page_facing_up: <i>switch.html</i>
         - :page_facing_up: <i>tablas.html</i>
