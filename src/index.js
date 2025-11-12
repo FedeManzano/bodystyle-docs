@@ -5,8 +5,8 @@ import "./copiarCodigo"
 
 window.onload = () => {
   setTimeout( () => {
-    BS.DesactivadoInit()
     BS.CodigoHtmlInit()
+    BS.CommentInit()
     BS.ToolTipsInit()
     BS.SidebarDropInit({idNav: "#nav", idSidebar: "#sidebar", submenu:idMenu})
     BS.BotonInicioInit()
@@ -27,7 +27,7 @@ window.onload = () => {
 
     BS.ScrollSpyInit(conf)
     BS.PersonalizadoInit({ori: "disparador", ele: "alert-op-red"})
-    
+    BS.DesactivadoInit()
     $("ins").remove()
     $("iframe").remove()
 
