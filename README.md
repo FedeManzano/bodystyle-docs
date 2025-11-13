@@ -8,7 +8,7 @@
 
 ![LICENSE](https://img.shields.io/badge/LICENSE-MIT-purple)
 ![MEGA](https://img.shields.io/badge/MEGA-Download-green)
-![DOCS-VERSION](https://img.shields.io/badge/Documentation-V1.8.0-blue)
+![DOCS-VERSION](https://img.shields.io/badge/Documentation-V2.0.0-blue)
 ![DOCS-DOWNLOAD](https://img.shields.io/badge/Documentation-Download-blue)
 
 En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de la biblioteca de estilos para el desarrollo de Front-End [Bodystyle](https://github.com/FedeManzano/bodystyle). La conformación es un sitio web guiado con todas las funcionalidades descriptas detalladamente para una correcta implementación en cualquier sitio web en desarrollo.
@@ -79,7 +79,7 @@ En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de 
 Para disponer de la documentación se puede ingresar a: <br>
 
 **Recomendado**
-- :link: [Descarga v1.8.0](https://mega.nz/file/gAEUwYRI#BsVB4AXRzkke4Qbo4D8PR7LcvvwDqQYXnjDvCs5MOKI) **Última Versión**
+- :link: [Descarga v2.0.0](https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk) **Última Versión**
 - :link: [Todas las Versiones](https://mega.nz/folder/VdMHERDR#gjbVQoWuKsIjNYJ39X1Dcw)
 - :earth_americas: [Sitio Docs](https://bodystyle.webcindario.com)
 

@@ -190,9 +190,9 @@ import "./bodystyle"
                     data-pos='right'>versión 5.0.0</a>, el segundo botón es para descargar esta misma documentación
                     para no tener que ver publicidad que el hosting introduce sin permiso.
                 </p> 
-                <a target="_blank" href="https://mega.nz/file/UQk3WQhS#e_TBHmfNXsHuJzE9rxir387MSVM_NFv8SdEZe1VAlZI" class="btn-cover fd-bodyui mar-2 disparador bor-pill"
+                <a target="_blank" href="https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk" class="btn-cover fd-bodyui mar-2 disparador bor-pill"
                 data-info="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v5.0.0.zip" data-pos='right'>Descargar</a>
-                <a target="_blank" class="desactivado btn-cover fd-white mar-1 com-trigger bor-pill"
+                <a target="_blank" class="btn-cover fd-white mar-1 com-trigger bor-pill"
                 data-info="Descarga de esta misma documentación, si ya la posee en el ambito local este botón estará deshabilitado.">Docs 2.0.0</a>
             </div>
         </div> 
