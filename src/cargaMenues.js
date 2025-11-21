@@ -192,7 +192,7 @@ import "./bodystyle"
                 </p> 
                 <a target="_blank" href="https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk" class="btn-cover fd-bodyui mar-2 disparador bor-pill"
                 data-info="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v5.0.0.zip" data-pos='right'>Descargar</a>
-                <a target="_blank" class="btn-cover fd-white mar-1 com-trigger bor-pill"
+                <a href="https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk" target="_blank" class="btn-cover fd-blanco mar-1 com-trigger bor-pill"
                 data-info="Descarga de esta misma documentación, si ya la posee en el ambito local este botón estará deshabilitado.">Docs 2.0.0</a>
             </div>
         </div> 
