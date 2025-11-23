@@ -5,10 +5,10 @@ import "./bodystyle"
 
 
     const Init = () => {
-        
-    $("#sidebar").html
-    (
-    `   <div class="bs-sidebar-title" data-target="#l1">
+
+        $("#sidebar").html
+            (
+                `   <div class="bs-sidebar-title" data-target="#l1">
             <label><i class="fa-solid fa-play fz-20 c-bodyui">&nbsp;</i>&nbsp;Iniciación</label>
         </div>
         
@@ -125,26 +125,24 @@ import "./bodystyle"
 
         `
 
-    )
+            )
 
-    if(enlace !== null && enlace !== undefined)
-    {
-        $("#sidebar ul").each((n, e) => {
-            $(e).children().each((n,e) => {
-                let texto = $(e).text()
-                if(texto === enlace)
-                {
-                    $(e).children().addClass("active")
-                    $(e).children().append(`<i class="fa-solid fa-arrow-left pi-1">&nbsp</i>`)
-                }
+        if (enlace !== null && enlace !== undefined) {
+            $("#sidebar ul").each((n, e) => {
+                $(e).children().each((n, e) => {
+                    let texto = $(e).text()
+                    if (texto === enlace) {
+                        $(e).children().addClass("active")
+                        $(e).children().append(`<i class="fa-solid fa-arrow-left pi-1">&nbsp</i>`)
+                    }
+                })
             })
-        })
-    }
-    
+        }
 
-    $("#nav").append
-    (
-        `
+
+        $("#nav").append
+            (
+                `
         <div  class="bs-nav-md align-right-list">
             <a  class="btn-menu"></a>
             <a  href="#"  class="logo-container">
@@ -157,31 +155,42 @@ import "./bodystyle"
                 </ul>
             </div>
             <div  class="right-content">
-                <label  class="badge-mje-right badge-mje-bodyui mr-2 mb-1"><i class="fz-16 bs-tag">&nbsp;</i>v5.0.0</label>
-                <a target="_blank" href="https://mega.nz/file/UQk3WQhS#e_TBHmfNXsHuJzE9rxir387MSVM_NFv8SdEZe1VAlZI" class="btn-sm-o btn-white-o bor-pill disparador" data-info="Versión Transpilada y procesada de bodystyle 5.0.0">Descargar</a>
+                <label  class="badge-mje-right badge-mje-bodyui mr-2 mb-1 ocultar-desde-x-chicos"><i class="fz-16 bs-tag">&nbsp;</i>v5.0.0</label>
+                <div class="ocultar-desde-x-chicos"><a target="_blank" href="https://mega.nz/file/UQk3WQhS#e_TBHmfNXsHuJzE9rxir387MSVM_NFv8SdEZe1VAlZI" class="ocultar-desde-x-chicos btn-sm-o btn-white-o bor-pill disparador" data-info="Versión Transpilada y procesada de bodystyle 5.0.0">Descargar</a></div>
+                <!-- Botón oficial de GitHub (más interactivo) -->
+                <div class="ml-3">
+                    <a class="github-button fd-gris-n" href="https://github.com/FedeManzano/bodystyle"
+                        data-icon="octicon-star" data-size="large" data-show-count="true"
+                        aria-label="Star FedeManzano/bodystyle on GitHub">Star</a>
+                </div>    
             </div>
         </div>
         `
-    )
+            )
 
-    $(".autor").html
-    (
-        `
+        $(".autor").html
+            (
+                `
         <h4>Autor</h4>
         <a href="https://github.com/FedeManzano" class="link tips-ele" target='_blank'
         data-tips="Copyright&nbsp<i class='fa-solid fa-copyright c-red'>&nbsp</i>FedericoManzano"
         data-pos='right'>Federico Manzano</a>
         `
-    )
+            )
 
-    $(".boton-descarga").html
-    (
-        `
+        $(".boton-descarga").html
+            (
+                `
         <div class="ancho-55 ancho-m-75 ancho-s-90 ancho-xs-100">
         <div class="card">
             <div class="card-simple-dark card-cover">
                 <h4>Descargar Bodystyle<span class="badge badge-bodyui"><i class="bs-tag c-white">&nbsp;</i>5.0.0</span></h4>
                 <small>Versión 5.0.0</small>
+                <div class='mt-1'>
+                    <a class="github-button fd-gris-n" href="https://github.com/FedeManzano/bodystyle"
+                        data-icon="octicon-star" data-size="large" data-show-count="true"
+                        aria-label="Star FedeManzano/bodystyle on GitHub">Star</a>
+                </div> 
                 <p>
                     Con el botón que está abajo de este texto descargará
                     la versión procesada de la librería en su 
@@ -198,7 +207,7 @@ import "./bodystyle"
         </div> 
         </div>
         `
-    )
+            )
 
     }
 
