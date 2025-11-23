@@ -3,86 +3,187 @@
   <img src="https://bodystyle.webcindario.com/logo/logo.png" width="200px" />
 </p>
 
+<h1 align="center">📚 Documentación Bodystyle</h1>
 
-# :green_book: Docs [Bodystyle](https://github.com/FedeManzano/bodystyle)
+<p align="center">
+  <a href="https://github.com/FedeManzano/bodystyle"><img src="https://img.shields.io/badge/Bodystyle-v5.0.0-red" alt="Bodystyle Version"></a>
+  <a href="https://github.com/FedeManzano/bodystyle/blob/master/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-purple" alt="License"></a>
+  <a href="https://bodystyle.webcindario.com"><img src="https://img.shields.io/badge/Docs-Online-blue" alt="Documentation"></a>
+  <a href="https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk"><img src="https://img.shields.io/badge/Download-MEGA-green" alt="Download"></a>
+</p>
 
-![LICENSE](https://img.shields.io/badge/LICENSE-MIT-purple)
-![MEGA](https://img.shields.io/badge/MEGA-Download-green)
-![DOCS-VERSION](https://img.shields.io/badge/Documentation-V2.0.0-blue)
-![DOCS-DOWNLOAD](https://img.shields.io/badge/Documentation-Download-blue)
+<p align="center">
+  Documentación completa de <strong>Bodystyle</strong>, la biblioteca de estilos CSS para el desarrollo Front-End moderno y responsive.
+</p>
 
-En este repositorio se encuentra el proyecto que documenta la versión 4.0.0 de la biblioteca de estilos para el desarrollo de Front-End [Bodystyle](https://github.com/FedeManzano/bodystyle). La conformación es un sitio web guiado con todas las funcionalidades descriptas detalladamente para una correcta implementación en cualquier sitio web en desarrollo.
+---
 
-## Estructura
+## 🎯 Sobre este Repositorio
 
-- :green_book: <b>Docs</b>
-    - :open_file_folder: <b>css</b>
-        - :page_facing_up: <i>bodystyle.min.css</i>
-    - :open_file_folder: <b>imagenes</b>
-        - IMAGENES DE LA DOC.
-    - :open_file_folder: <b>js</b>
-        - :page_facing_up: <i>docs-body.js</i>
-    - :open_file_folder: <b>paginas</b>
-        - :page_facing_up: <i>alertas.html</i>
-        - :page_facing_up: <i>ancho_alto.html</i>
-        - :page_facing_up: <i>badges.html</i>
-        - :page_facing_up: <i>bordes.html</i>
-        - :page_facing_up: <i>botones.html</i>
-        - :page_facing_up: <i>boton_inicio.html</i>
-        - :page_facing_up: <i>breadcrumbs.html</i>
-        - :page_facing_up: <i>colecciones.html</i>
-        - :page_facing_up: <i>colecciones_flotantes.html</i>
-        - :page_facing_up: <i>colores.html</i>
-        - :page_facing_up: <i>comentarios.html</i>
-        - :page_facing_up: <i>compartir.html</i>
-        - :page_facing_up: <i>contenedor.html</i>
-        - :page_facing_up: <i>desactivado.html</i>
-        - :page_facing_up: <i>dropdown.html</i>
-        - :page_facing_up: <i>efecto_hover.html</i>
-        - :page_facing_up: <i>efecto3d.html</i>
-        - :page_facing_up: <i>etiquetas.html</i>
-        - :page_facing_up: <i>flexbox.html</i>
-        - :page_facing_up: <i>formas.html</i>
-        - :page_facing_up: <i>formularios.html</i>
-        - :page_facing_up: <i>get_started.html</i>
-        - :page_facing_up: <i>grid.html</i>
-        - :page_facing_up: <i>grupo_botones.html</i>
-        - :page_facing_up: <i>imagenes.html</i>
-        - :page_facing_up: <i>input.html</i>
-        - :page_facing_up: <i>margin.html</i>
-        - :page_facing_up: <i>medidas.html</i>
-        - :page_facing_up: <i>modal.html</i>
-        - :page_facing_up: <i>modulos.html</i>
-        - :page_facing_up: <i>nav.html</i>
-        - :page_facing_up: <i>opacidad.html</i>
-        - :page_facing_up: <i>padding.html</i>
-        - :page_facing_up: <i>personalizados.html</i>
-        - :page_facing_up: <i>preloader.html</i>
-        - :page_facing_up: <i>progressbar.html</i>
-        - :page_facing_up: <i>radio.html</i>
-        - :page_facing_up: <i>select.html</i>
-        - :page_facing_up: <i>sidebar.html</i>
-        - :page_facing_up: <i>sidebar_drop.html</i>
-        - :page_facing_up: <i>solapas.html</i>
-        - :page_facing_up: <i>switch.html</i>
-        - :page_facing_up: <i>tablas.html</i>
-        - :page_facing_up: <i>tabs.html</i>
-        - :page_facing_up: <i>tarjetas.html</i>
-        - :page_facing_up: <i>texto.html</i>
-        - :page_facing_up: <i>toast.html</i>
-        - :page_facing_up: <i>tooltips.html</i>
-    - :page_facing_up: <i>index.html</i>
-    - :page_facing_up: <i>logo.ico</i>
+Este repositorio contiene la **documentación oficial** de [Bodystyle](https://github.com/FedeManzano/bodystyle), una biblioteca de estilos CSS de código abierto diseñada para facilitar el desarrollo de interfaces de usuario modernas y responsivas.
 
-## Descarga
+La documentación está organizada como un sitio web interactivo con ejemplos prácticos, código de muestra y guías detalladas para cada componente de la biblioteca.
 
-Para disponer de la documentación se puede ingresar a: <br>
+### 📦 Versiones Documentadas
 
-**Recomendado**
-- :link: [Descarga v2.0.0](https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk) **Última Versión**
-- :link: [Todas las Versiones](https://mega.nz/folder/VdMHERDR#gjbVQoWuKsIjNYJ39X1Dcw)
-- :earth_americas: [Sitio Docs](https://bodystyle.webcindario.com)
+- **v5.0.0** - Versión actual (recomendada)
+- **v4.8.0** - Versión estable anterior
+- **v4.5.0** - Versión legacy
+- **v4.0.0** - Versión inicial
 
+## ✨ Características de Bodystyle
 
-## Autor
-[Federico Manzano](https://github.com/FedeManzano)
+- 🎨 **Componentes UI completos** - Botones, formularios, tarjetas, modales, navegación y más
+- 📱 **Diseño Responsive** - Sistema de grilla flexible adaptable a todos los dispositivos
+- 🎭 **Temas personalizables** - Paleta de colores extensa y fácil de personalizar
+- ⚡ **Ligera y rápida** - Optimizada para rendimiento
+- 🔧 **Utilitarios CSS** - Clases helper para spacing, colores, tipografía y más
+- 🌐 **Soporte bilingüe** - Clases en español e inglés
+- 📚 **Documentación completa** - Ejemplos y guías para cada componente
+
+## 🚀 Inicio Rápido
+
+### Opción 1: CDN (Recomendado para pruebas)
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bodystyle CSS -->
+    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
+    
+    <title>Mi Proyecto con Bodystyle</title>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Hola Bodystyle!</h1>
+        <button class="btn bg-bodyui">Mi Botón</button>
+    </div>
+    
+    <!-- Bodystyle JS -->
+    <script src="https://rawcdn.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
+</body>
+</html>
+```
+
+### Opción 2: NPM (Recomendado para proyectos)
+
+```bash
+npm install bodyui2
+```
+
+### Opción 3: Descarga Directa
+
+Descarga los archivos compilados desde [MEGA](https://mega.nz/file/UQk3WQhS#e_TBHmfNXsHuJzE9rxir387MSVM_NFv8SdEZe1VAlZI)
+
+## 📖 Documentación
+
+### 🌐 Documentación Online
+Visita la documentación completa en: **[bodystyle.webcindario.com](https://bodystyle.webcindario.com)**
+
+### 💾 Descarga de la Documentación
+
+**Recomendado** - Descarga sin anuncios del hosting:
+- 📥 [Documentación v5.0.0](https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk) - **Última versión**
+- 📦 [Todas las versiones](https://mega.nz/folder/VdMHERDR#gjbVQoWuKsIjNYJ39X1Dcw)
+
+## 📂 Estructura del Proyecto
+
+```
+bs_docs/
+├── 5.0.0/              # Documentación v5.0.0 (actual)
+│   ├── css/            # Estilos de Bodystyle
+│   ├── js/             # Scripts de Bodystyle
+│   ├── imagenes/       # Recursos visuales
+│   └── paginas/        # Páginas de documentación
+│       ├── get_started.html
+│       ├── alertas.html
+│       ├── botones.html
+│       ├── formularios.html
+│       ├── grid.html
+│       ├── flexbox.html
+│       ├── tablas.html
+│       ├── modal.html
+│       ├── nav.html
+│       └── ... (60+ páginas)
+├── 4.8.0/              # Documentación v4.8.0
+├── 4.5.0/              # Documentación v4.5.0
+├── 4.0.0/              # Documentación v4.0.0
+└── README.md           # Este archivo
+```
+
+## 🛠️ Tecnologías Utilizadas
+
+### Desarrollo
+- **SASS** v3.9.3 - Preprocesador CSS
+- **Webpack** v5.0.7 - Empaquetador de módulos
+- **Babel** v8.0.8 - Transpilador JavaScript
+- **Node.js** v22.20.0 - Entorno de ejecución
+- **npm** v11.6.1 - Gestor de paquetes
+
+### Dependencias
+- **[dynamics-tips](https://github.com/FedericoManzano/dynamics-tips)** v1.8.0 - Tooltips y elementos dinámicos
+- **[show-code](https://github.com/FedericoManzano/show-code)** v1.1.1 - Resaltado de sintaxis
+
+## 📋 Componentes Documentados
+
+La documentación incluye guías completas para:
+
+### Layout y Estructura
+- Sistema de Grilla (Grid)
+- Flexbox
+- Contenedores
+- Margin y Padding
+
+### Componentes UI
+- Alertas
+- Badges
+- Botones y Grupos de Botones
+- Breadcrumbs
+- Tarjetas (Cards)
+- Colecciones
+- Dropdown
+- Formularios e Inputs
+- Modales
+- Navegación (Nav)
+- Sidebar
+- Tablas
+- Tabs y Solapas
+- Toast
+- Tooltips
+
+### Utilitarios
+- Bordes
+- Colores
+- Efectos (Hover, 3D, Waves)
+- Medidas
+- Opacidad
+- Overflow
+- Texto (alineación, tamaño, color)
+
+## 🤝 Contribuir
+
+¿Encontraste un error en la documentación o tienes una sugerencia? 
+
+1. Abre un [issue](https://github.com/FedeManzano/bodystyle/issues) en el repositorio principal
+2. Describe el problema o mejora sugerida
+3. Si es posible, incluye capturas de pantalla
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](https://github.com/FedeManzano/bodystyle/blob/master/LICENSE) para más detalles.
+
+## 👨‍💻 Autor
+
+**Federico Manzano**
+- GitHub: [@FedeManzano](https://github.com/FedeManzano)
+- Repositorio Bodystyle: [github.com/FedeManzano/bodystyle](https://github.com/FedeManzano/bodystyle)
+
+---
+
+<p align="center">
+  Hecho con ❤️ por <a href="https://github.com/FedeManzano">Federico Manzano</a>
+</p>

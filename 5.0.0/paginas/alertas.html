@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +10,21 @@
 
     <link rel="stylesheet" href="../css/bodystyle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    
+
     <title>Alertas</title>
 </head>
+
 <body>
 
-     <!--NAV INI -------------------------------------------------------------------------------------------->
+    <!--NAV INI -------------------------------------------------------------------------------------------->
     <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
-        
+
     </nav>
     <!--NAV FIN -------------------------------------------------------------------------------------------->
 
     <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
-    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n"
+        style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
     <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
@@ -30,11 +33,13 @@
         <section class="encabezado">
             <h1 id="t1">Alertas</h1>
             <p>
-                Son un elemento simple que se puede utilizar cuando se necesite resaltar o aclarar una cuestión que haya quedado poco clara
+                Son un elemento simple que se puede utilizar cuando se necesite resaltar o aclarar una cuestión que haya
+                quedado poco clara
                 en el texto añadiendo información, enlaces o recomendaciones útiles para el usuario. <br>
-                Desde la versión 4.0.0 se añadieron alias que permiten nombrar las clases de las alertas en el lenguaje inglés.
+                Desde la versión 4.0.0 se añadieron alias que permiten nombrar las clases de las alertas en el lenguaje
+                inglés.
             </p>
-            
+
             <div class="mar-2 boton-descarga"></div>
         </section>
         <!-- ENCABEZADO FIN ------------------------------------------------------>
@@ -43,13 +48,13 @@
         <article class="articulo">
             <h2 id="t2">Primer Tipo de Alertas</h2>
             <p>
-                La biblioteca cuenta con dos tipos de alertas, la primera es la utiliza un borde de color del lado 
-                izquierdo que es la que utilizaremos en este apartado. 
+                La biblioteca cuenta con dos tipos de alertas, la primera utiliza un borde de color del lado
+                izquierdo que es la que utilizaremos en este apartado.
             </p>
 
             <div class="container mar-3">
                 <div class="alert-red">
-                    Esta es la alerta rojo para resaltar un texto determinado.
+                    Esta es la alerta roja para resaltar un texto determinado.
                 </div>
                 <div class="alert-blue mar-1">
                     Esta es la alerta azul para resaltar un texto determinado.
@@ -66,11 +71,11 @@
                 </div>
             </div>
 
-<div class="codigo">
-    <pre class="cod-html" id="c1">
+            <div class="codigo">
+                <pre class="cod-html" id="c1">
     <div class="container mar-3">
             <div class="alert-red">
-                Esta es la alerta rojo para resaltar un texto determinado.
+                Esta es la alerta roja para resaltar un texto determinado.
             </div>
             <div class="alert-blue mar-1">
                 Esta es la alerta azul para resaltar un texto determinado.
@@ -86,7 +91,7 @@
             </div>
         </div>
     </pre>
-</div>
+            </div>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
 
@@ -94,7 +99,7 @@
             <h2 id="t3">Segundo Tipo de Alerta</h2>
 
             <p>
-                El segundo tipo de alerta posee una opacidad menor para permitir cierto nivel 
+                El segundo tipo de alerta posee una opacidad menor para permitir cierto nivel
                 de transparencia.
             </p>
 
@@ -120,8 +125,8 @@
             </div>
 
 
-        <div class="codigo">
-            <pre id="c2" class="cod-html">
+            <div class="codigo">
+                <pre id="c2" class="cod-html">
             <div class="container mar-3">
                 <div class="alert-op-red">
                     Esta es una alerta rojo del tipo dos.
@@ -143,21 +148,21 @@
                 </div>
             </div>
             </pre>
-        </div>
-
-        <div class="alerta-negra">
-            Las clases utilizadas para definir este tipo de alerta es alert-op-[color] donde color puede ser:
-            <div class="lista-doc m-0">
-                <ul>
-                    <li>red / roja</li>
-                    <li>green / verde</li>
-                    <li>black / negra</li>
-                    <li>grey / gris</li>
-                    <li>white / blanca</li>
-                    <li>blue / azul</li>
-                </ul>
             </div>
-        </div>
+
+            <div class="alerta-negra">
+                Las clases utilizadas para definir este tipo de alerta son alert-op-[color] donde color puede ser:
+                <div class="lista-doc m-0">
+                    <ul>
+                        <li>red / roja</li>
+                        <li>green / verde</li>
+                        <li>black / negra</li>
+                        <li>grey / gris</li>
+                        <li>white / blanca</li>
+                        <li>blue / azul</li>
+                    </ul>
+                </div>
+            </div>
 
         </article>
 
@@ -242,46 +247,53 @@
         <article class="articulo">
             <h2 id="t5">Alerta Personalizada</h2>
             <p class="mb-3">
-                Ahora vamos a utlizar clases de otros apartados para aprovecharlos para generar 
-                alertas personalizadas, de esta maneras se le muestra al lector que las posibilidades 
+                Ahora vamos a utilizar clases de otros apartados para aprovecharlas para generar
+                alertas personalizadas, de esta manera se le muestra al lector que las posibilidades
                 son muchas.
             </p>
 
-            <div class="p-2 bor-2 bg-grey c-gris-o"> Esto es una alera personalizada 1</div>
-            <div class="p-2 bor-rojo-t-2 fd-gris-n c-gris-c mt-2"> Esto es una alera personalizada 2</div>
-            <div class="p-2 bor-rojo-t-2 fd-gris-n c-gris-c mt-2 bor-rad-10"> Esto es una alera personalizada 3</div>
-            <div class="p-2 bor-azul-ve-3 fd-gris-az c-gris-c mt-2 bor-rad-10"> Esto es una alera personalizada 4</div>
-            <div class="p-2 bor-2 fd-gris c-gris-c mt-2 bor-rad-10"> Esto es una alera personalizada 5</div>
-            <div class="p-2 bor-grey-s-1 fd-verde-t c-gris-c mt-2 bor-rad-10"> Esto es una alera personalizada 6</div>
-            <div class="p-2 bor-grey-2 fd-verde-az c-gris-c mt-2 bor-rad-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, tenetur quo! Sequi veniam itaque similique. Quos, sapiente? Optio ut sunt modi recusandae! Quibusdam iusto veniam temporibus dolores nobis at officiis.</div>       
-    <div class="codigo">
-    <pre id="c3" class="cod-html">
-    <div class="p-2 bor-2 bg-grey c-gris-o"> Esto es una alera personalizada 1</div>
-    <div class="p-2 bor-rojo-t-2 fd-gris-n c-gris-c mt-2"> Esto es una alera personalizada 2</div>
-    <div class="p-2 bor-rojo-t-2 fd-gris-n c-gris-c mt-2 bor-rad-10"> Esto es una alera personalizada 3</div>
-    <div class="p-2 bor-azul-ve-3 fd-gris-az c-gris-c mt-2 bor-rad-10"> Esto es una alera personalizada 4</div>
-    <div class="p-2 bor-2 fd-gris c-gris-c mt-2 bor-rad-10"> Esto es una alera personalizada 5</div>
-    <div class="p-2 bor-grey-s-1 fd-verde-t c-gris-c mt-2 bor-rad-10"> Esto es una alera personalizada 6</div>
+            <div class="p-2 bor-2 bg-grey c-gris-o"> Esto es una alerta personalizada 1</div>
+            <div class="p-2 bor-rojo-t-2 fd-gris-n c-gris-c mt-2"> Esto es una alerta personalizada 2</div>
+            <div class="p-2 bor-rojo-t-2 fd-gris-n c-gris-c mt-2 bor-rad-10"> Esto es una alerta personalizada 3</div>
+            <div class="p-2 bor-azul-ve-3 fd-gris-az c-gris-c mt-2 bor-rad-10"> Esto es una alerta personalizada 4</div>
+            <div class="p-2 bor-2 fd-gris c-gris-c mt-2 bor-rad-10"> Esto es una alerta personalizada 5</div>
+            <div class="p-2 bor-grey-s-1 fd-verde-t c-gris-c mt-2 bor-rad-10"> Esto es una alerta personalizada 6</div>
+            <div class="p-2 bor-grey-2 fd-verde-az c-gris-c mt-2 bor-rad-10">Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Sunt, tenetur quo! Sequi veniam itaque similique. Quos, sapiente? Optio ut sunt modi
+                recusandae! Quibusdam iusto veniam temporibus dolores nobis at officiis.</div>
+            <div class="codigo">
+                <pre id="c3" class="cod-html">
+    <div class="p-2 bor-2 bg-grey c-gris-o"> Esto es una alerta personalizada 1</div>
+    <div class="p-2 bor-rojo-t-2 fd-gris-n c-gris-c mt-2"> Esto es una alerta personalizada 2</div>
+    <div class="p-2 bor-rojo-t-2 fd-gris-n c-gris-c mt-2 bor-rad-10"> Esto es una alerta personalizada 3</div>
+    <div class="p-2 bor-azul-ve-3 fd-gris-az c-gris-c mt-2 bor-rad-10"> Esto es una alerta personalizada 4</div>
+    <div class="p-2 bor-2 fd-gris c-gris-c mt-2 bor-rad-10"> Esto es una alerta personalizada 5</div>
+    <div class="p-2 bor-grey-s-1 fd-verde-t c-gris-c mt-2 bor-rad-10"> Esto es una alerta personalizada 6</div>
     <div class="p-2 bor-grey-2 fd-verde-az c-gris-c mt-2 bor-rad-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, tenetur quo! Sequi veniam itaque similique. Quos, sapiente? Optio ut sunt modi recusandae! Quibusdam iusto veniam temporibus dolores nobis at officiis.</div>
     </pre>
-    </div>
-
-        <div class="alerta-negra">
-            Todas las clases utilizadas pertenecen a otros apartados de la documentación:
-            <div class="lista-doc m-0">
-                <li><a href="bordes.html" class="link tips-ele" data-pos="right" data-tips="<span class='c-rojo-ro'>Documentación de bordes</span>">Bordes</a></li>
-                <li><a href="padding.html" class="link tips-ele" data-pos="right" data-tips="<span class='c-rojo-ro'>Documentación de padding</span>">Padding</a></li>
-                <li><a href="colores.html" class="link tips-ele" data-pos="right" data-tips="<span class='c-rojo-ro'>Documentación de colores</span>">Colores</a></li>
-                <li><a href="texto.html" class="link tips-ele" data-pos="right" data-tips="<span class='c-rojo-ro'>Documentación de texto</span>">Texto</a></li>
             </div>
-        </div>
+
+            <div class="alerta-negra">
+                Todas las clases utilizadas pertenecen a otros apartados de la documentación:
+                <div class="lista-doc m-0">
+                    <li><a href="bordes.html" class="link tips-ele" data-pos="right"
+                            data-tips="<span class='c-rojo-ro'>Documentación de bordes</span>">Bordes</a></li>
+                    <li><a href="padding.html" class="link tips-ele" data-pos="right"
+                            data-tips="<span class='c-rojo-ro'>Documentación de padding</span>">Padding</a></li>
+                    <li><a href="colores.html" class="link tips-ele" data-pos="right"
+                            data-tips="<span class='c-rojo-ro'>Documentación de colores</span>">Colores</a></li>
+                    <li><a href="texto.html" class="link tips-ele" data-pos="right"
+                            data-tips="<span class='c-rojo-ro'>Documentación de texto</span>">Texto</a></li>
+                </div>
+            </div>
         </article>
 
         <article class="articulo">
             <h2 id="t6">Cerrar Alerta</h2>
             <p class="mab-3">
-                Prapoder cerrar la alerta debemos disponer del archivo con la lógica de la librería agregado 
-                al proyecto, luego con la clase <span class="badge badge-red">.alert-close</span> o <span class="badge badge-red">.alerta-cerrar</span>
+                Para poder cerrar la alerta debemos disponer del archivo con la lógica de la librería agregado
+                al proyecto, luego con la clase <span class="badge badge-red">.alert-close</span> o <span
+                    class="badge badge-red">.alerta-cerrar</span>
                 nos aparecerá <span class="badge badge-black">X</span> para desaparecer la alerta.
             </p>
             <div class="alerta-roja alerta-cerrar">
@@ -292,8 +304,8 @@
                 Esta es la alerta rojo para resaltar un texto determinado.
             </div>
 
-    <div class="codigo">
-    <pre id="c4" class="cod-html">
+            <div class="codigo">
+                <pre id="c4" class="cod-html">
         <div class="alerta-roja alerta-cerrar">
             Esta es la alerta rojo para resaltar un texto determinado.
         </div>
@@ -302,7 +314,7 @@
             Esta es la alerta rojo para resaltar un texto determinado.
         </div>
     </pre>
-    </div>
+            </div>
         </article>
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
@@ -323,15 +335,16 @@
 
     <!------------------------------------------------------------------------------------------------------------------->
     <!--JS -------------------------------------------------------------------------------------------------------------->
-     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
         var enlace = "Alertas"
         var idMenu = "#l2"
-        
+
     </script>
     <script src="../js/docs-body.js"></script>
     <script>
         $("#l2 ul li:nth-child(9)").children("a").addClass("c-bodyui")
     </script>
 </body>
+
 </html>
