@@ -99,25 +99,25 @@
     (function(){
 
         const inicializar = () => {
-            $(".desactivado, .desactivado *").removeAttr("onclick")
-            $(".desactivado, .desactivado *").removeAttr("ondblclick")
-            $(".desactivado, .desactivado *").removeAttr("onmousedown")
-            $(".desactivado, .desactivado *").removeAttr("onmouseleave")
-            $(".desactivado, .desactivado *").removeAttr("onmouseout")
-            $(".desactivado, .desactivado *").removeAttr("onkeydown")
-            $(".desactivado, .desactivado *").removeAttr("onkeypress")
-            $(".desactivado, .desactivado *").removeAttr("onkeyup")
-            $(".desactivado, .desactivado *").removeAttr("href")
-            $(".desactivado, .desactivado *").removeAttr("onfocus")
-            $(".desactivado, .desactivado *").removeAttr("onblur")
-            $(".desactivado, .desactivado *").removeAttr("onchange")
-            $(".desactivado, .desactivado *").removeAttr("onselect")
-            $(".desactivado, .desactivado *").removeAttr("onreset")
-            $(".desactivado, .desactivado *").removeAttr("onsubmit")
-            $("input.desactivado").attr("readonly", true)
-            $("*.desactivado *").attr("readonly", true)
-            $("*.desactivado *").addClass("desactivado")
-            $("input.desactivado").siblings("label").removeAttr("for")
+            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onclick"))
+            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("ondblclick"))
+            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onmousedown"))
+            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onmouseleave"))
+            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onmouseout"))
+            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onkeydown"))
+            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onkeypress"))
+            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onkeyup"))
+            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("href"))
+            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onfocus"))
+            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onblur"))
+            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onchange"))
+            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onselect"))
+            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onreset"))
+            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onsubmit"))
+            document.querySelectorAll("input.desactivado").forEach(el => el.setAttribute("readonly", true))
+            document.querySelectorAll("*.desactivado *").forEach(el => el.setAttribute("readonly", true))
+            document.querySelectorAll("*.desactivado *").forEach(el => el.classList.add("desactivado"))
+            document.querySelectorAll("input.desactivado").forEach(el => { const label = el.previousElementSibling?.tagName === "LABEL" ? el.previousElementSibling : el.nextElementSibling; if (label?.tagName === "LABEL") label.removeAttribute("for"); })
         }
 
         var Desactivado = {
@@ -245,7 +245,7 @@
 
 <div class="codigo">
 <pre class="cod-js" id="c6">
-    $("#activador").click(() => {
+    document.getElementById("activador").addEventListener("click",() => {
        // Se remueve la clase desactivado
        document.getElementById("link_desact").classList.remove("desactivado")
 
@@ -253,7 +253,7 @@
        // se reconfigura el atributo href 
        document.getElementById("link_desact").setAttribute("href", "#")
     })
-    $("#desactivador").click(() => {
+    document.getElementById("desactivador").addEventListener("click",() => {
        document.getElementById("link_desact").classList.add("desactivado")
     })
 </pre>
@@ -297,12 +297,12 @@
         BS.CodeJsInit()
          BS.TabInit().iniciarBorde({contexto: "#tab1",colorFuente: "c-black", colorFondo: "bg-white", colorBorde: "bg-black"})
 
-         $("#activador").click(() => {
+         document.getElementById("activador").addEventListener("click",() => {
             document.getElementById("link_desact").classList.remove("desactivado")
             document.getElementById("link_desact").setAttribute("href", "#")
          })
 
-         $("#desactivador").click(() => {
+         document.getElementById("desactivador").addEventListener("click",() => {
             document.getElementById("link_desact").classList.add("desactivado")
          })
     </script>
