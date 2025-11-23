@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -70,7 +70,7 @@
             <div id="boton_dinamico"></div>
 <div class="codigo">
 <pre class="cod-js" id="c2">
-    $("#boton_dinamico").append(
+    document.getElementById("boton_dinamico").insertAdjacentHTML("beforeend", 
     `
         <button class='btn bg-bodyui waves'>Dinamico Click!</button>    
     `)
@@ -124,7 +124,7 @@
 
 <div class="codigo">
     <pre id="c5" class="cod-js">
-        $("#desactivador").on("click", () => {
+        document.getElementById("desactivador").addEventListener("click", () => {
             BS.WavesDestroy()
             BS.Toast({html: "Waves Eliminados", clases: ["bg-red"]})
         })
@@ -149,9 +149,7 @@
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
-    <!--JS -------------------------------------------------------------------------------------------------------------->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script> 
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
         var enlace = "Waves"
         var idMenu = "#l5"
         
@@ -160,14 +158,14 @@
     <script>
         BS.CodeJsInit()
  
-        $("#l5 ul li:nth-child(16)").children("a").addClass("c-bodyui")
+        document.querySelector("#l5 ul li:nth-child(16) a")?.classList.add("c-bodyui");
 
-        $("#boton_dinamico").append(
+        document.getElementById("boton_dinamico").insertAdjacentHTML("beforeend", 
         `
             <button class='btn bg-bodyui waves'>Dinamico Click!</button>    
         `)
 
-        $("#desactivador").on("click", () => {
+        document.getElementById("desactivador").addEventListener("click", () => {
             BS.WavesDestroy()
             BS.Toast({html: "Waves Eliminados", clases: ["bg-red"]})
         })

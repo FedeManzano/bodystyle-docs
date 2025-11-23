@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -104,7 +104,7 @@
         </div>
 <div class="codigo">
 <pre class="cod-js" id="c3">
-    $("#desactivador").on("click", () => {
+    document.getElementById("desactivador").addEventListener("click", () => {
         BS.DynamicsAutoDestroy() // DESACTIVA TODOS LOS ELEMENTOS DINÁMICOS
         
         // Muestra el toast avisando lo sicedido
@@ -141,9 +141,7 @@
         </ul>
     </div>
     <!------------------------------------------------------------------------------------------------------------------->
-    <!--JS -------------------------------------------------------------------------------------------------------------->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script> 
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
         var enlace = "Auto Iniciación"
         var idMenu = "#l5"
         
@@ -152,9 +150,9 @@
     <script>
         BS.CodeJsInit()
         BS.DropDownInit()
-        $("#l5 ul li:nth-child(3)").children("a").addClass("c-bodyui")
+        document.querySelector("#l5 ul li:nth-child(3) a")?.classList.add("c-bodyui");
 
-        $("#desactivador").on("click", () => {
+        document.getElementById("desactivador").addEventListener("click", () => {
             BS.DynamicsAutoDestroy()
             BS.Toast({html: "<span class='c-white'>Elemementos Dinámicos Eliminados</span>", clases: ["bg-red"]})
         })

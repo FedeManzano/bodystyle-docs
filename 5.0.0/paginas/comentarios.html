@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -217,7 +217,7 @@
 
 <div class="codigo">
     <pre id="c8" class="cod-js">
-        $("#desactivador").on("click", () => {
+        document.getElementById("desactivador").addEventListener("click", () => {
             BS.CommentDestroy()
             BS.Toast({html: "Comentarios Destruidos", clases: ["bg-red"]})
         })
@@ -243,18 +243,16 @@
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
-    <!--JS -------------------------------------------------------------------------------------------------------------->
-     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script> 
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
         var enlace = "Comentarios"
         var idMenu = "#l5"
         
     </script>
     <script src="../js/docs-body.js"></script>
     <script>
-        $("#l5 ul li:nth-child(7)").children("a").addClass("c-bodyui")
+        document.querySelector("#l5 ul li:nth-child(7) a")?.classList.add("c-bodyui");
         BS.CodigoJsInit()
-        $("#desactivador").on("click", () => {
+        document.getElementById("desactivador").addEventListener("click", () => {
             BS.CommentDestroy()
             BS.Toast({html: "Comentarios Destruidos", clases: ["bg-red"]})
         })

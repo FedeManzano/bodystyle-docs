@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -327,16 +327,14 @@
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
-    <!--JS -------------------------------------------------------------------------------------------------------------->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script> 
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
         var enlace = "Select"
         var idMenu = "#l4"
         
     </script>
     <script src="../js/docs-body.js"></script>
     <script>
-        $("#l4 ul li:nth-child(4)").children("a").addClass("c-bodyui")
+        document.querySelector("#l4 ul li:nth-child(4) a")?.classList.add("c-bodyui");
         BS.CodigoJsInit()
         BS.SelectInit().iniciar("#select", "borde")
         BS.SelectInit().iniciar("#select_white", "borde")

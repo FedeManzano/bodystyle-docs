@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="UTF-8">
@@ -21,18 +21,13 @@
             <a id="mensaje" class="btn-lg-o btn-bodyui-o bor-pill disparador" data-evt="click" data-info="" >Click Me! &nbsp;<i class=" bs-sol c-yellow fz-20"></i></a>
             
             <a href="../personalizados.html" class="link mt-2">Volver</a>
-        </div>
-
-       
-
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <!-- Archivo con las funcionalidades JS -->
+        </div><!-- Archivo con las funcionalidades JS -->
         <script src="../../js/bodystyle.min.js"></script>
         <script>
           BS.ToolTipsInit() // INICIO DE LOS TOOLTIPS
 	      BS.NavigationInit("#nav", true)
           BS.PersonalizadoInit({ori: "disparador", ele: ""})
-          $("#mensaje").attr("data-info", 
+          document.getElementById("mensaje").setAttribute("data-info", 
           
           `
             <div class='p-2 bor-grey-1 bor-rad-10 fd-gris-c c-grey-o ta-c'>
@@ -48,8 +43,8 @@
 
           window.onload = () => {
          setTimeout( () => {
-            $("ins").remove()
-            $("iframe").remove()
+            document.querySelectorAll("ins").forEach(e => e.remove())
+            document.querySelectorAll("iframe").forEach(e => e.remove())
          }, 100)
         }
 

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="UTF-8">
@@ -31,11 +31,7 @@
                 <li><a href="#2">Sección 2</a></li>
                 <li><a href="#3">Sección 3</a></li>
             </ul>
-        </div>
-        
-
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <!-- Archivo con las funcionalidades JS -->
+        </div><!-- Archivo con las funcionalidades JS -->
         <script src="../../js/bodystyle.min.js"></script>
         <script>
 
@@ -59,8 +55,8 @@
 
              window.onload = () => {
          setTimeout( () => {
-            $("ins").remove()
-            $("iframe").remove()
+            document.querySelectorAll("ins").forEach(e => e.remove())
+            document.querySelectorAll("iframe").forEach(e => e.remove())
          }, 100)
         }
         </script>

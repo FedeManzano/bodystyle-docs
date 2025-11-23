@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -664,16 +664,14 @@
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
-    <!--JS -------------------------------------------------------------------------------------------------------------->
-     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script> 
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
         var enlace = "Nav"
         var idMenu = "#l6"
         
     </script>
     <script src="../js/docs-body.js"></script>
     <script>
-        $("#l6 ul li:nth-child(1)").children("a").addClass("c-bodyui")
+        document.querySelector("#l6 ul li:nth-child(1) a")?.classList.add("c-bodyui");
         BS.CodigoJsInit()
     </script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>`r`n</body>

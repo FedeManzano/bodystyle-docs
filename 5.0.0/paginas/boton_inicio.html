@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -74,7 +74,7 @@
 
                 <div class="codigo">
 <pre class="cod-js" id="c1">
-    $("#desactivador").on("click", () => {
+    document.getElementById("desactivador").addEventListener("click", () => {
         BS.BotonInicioDestroy()
         BS.Toast({html: "Botón destruido"})
     })
@@ -100,9 +100,7 @@
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
-    <!--JS -------------------------------------------------------------------------------------------------------------->
-   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script> 
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
         var enlace = "Botón Inicio"
         var idMenu = "#l5"
         
@@ -110,8 +108,8 @@
     <script src="../js/docs-body.js"></script>
     <script>
         BS.CodeJsInit()
-        $("#l5 ul li:nth-child(4)").children("a").addClass("c-bodyui")
-        $("#desactivador").on("click", () => {
+        document.querySelector("#l5 ul li:nth-child(4) a")?.classList.add("c-bodyui");
+        document.getElementById("desactivador").addEventListener("click", () => {
             BS.BotonInicioDestroy()
             BS.Toast({html: "Botón destruido"})
         })

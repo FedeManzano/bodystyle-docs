@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -37,18 +37,15 @@
             <li><a href="#">Graleria</a></li>
             <li><a href="#">Repositorio</a></li>
         </ul>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="../../js/bodystyle.min.js"></script>
+    </div><script src="../../js/bodystyle.min.js"></script>
     <script>
         BS.NavigationInit("#nav", true)
 
         
         window.onload = () => {
          setTimeout( () => {
-            $("ins").remove()
-            $("iframe").remove()
+            document.querySelectorAll("ins").forEach(e => e.remove())
+            document.querySelectorAll("iframe").forEach(e => e.remove())
          }, 100)
         }
     </script>

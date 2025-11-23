@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -30,15 +30,11 @@
         <div class="p-3 c-white fd-gris-n mt-10" style="height: 400px;">
             Esto es contenido de la página <a href="../nav.html#t8" class="link">Volver a la DOC</a>
         </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-
-    <script>
+    </div><script>
         window.onload = () => {
          setTimeout( () => {
-            $("ins").remove()
-            $("iframe").remove()
+            document.querySelectorAll("ins").forEach(e => e.remove())
+            document.querySelectorAll("iframe").forEach(e => e.remove())
          }, 100)
         }
     </script>

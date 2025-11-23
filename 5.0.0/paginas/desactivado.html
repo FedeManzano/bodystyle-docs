@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -247,14 +247,14 @@
 <pre class="cod-js" id="c6">
     $("#activador").click(() => {
        // Se remueve la clase desactivado
-       $("#link_desact").removeClass("desactivado")
+       document.getElementById("link_desact").classList.remove("desactivado")
 
        // Cuando se activa el enlace 
        // se reconfigura el atributo href 
-       $("#link_desact").attr("href", "#")
+       document.getElementById("link_desact").setAttribute("href", "#")
     })
     $("#desactivador").click(() => {
-       $("#link_desact").addClass("desactivado")
+       document.getElementById("link_desact").classList.add("desactivado")
     })
 </pre>
 </div> 
@@ -286,26 +286,24 @@
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
-    <!--JS -------------------------------------------------------------------------------------------------------------->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script> 
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
         var enlace = "Desactivado"
         var idMenu = "#l1"
         
     </script>
     <script src="../js/docs-body.js"></script>
     <script>
-        $("#l1 ul li:nth-child(10)").children("a").addClass("c-bodyui")
+        document.querySelector("#l1 ul li:nth-child(10) a")?.classList.add("c-bodyui");
         BS.CodeJsInit()
          BS.TabInit().iniciarBorde({contexto: "#tab1",colorFuente: "c-black", colorFondo: "bg-white", colorBorde: "bg-black"})
 
          $("#activador").click(() => {
-            $("#link_desact").removeClass("desactivado")
-            $("#link_desact").attr("href", "#")
+            document.getElementById("link_desact").classList.remove("desactivado")
+            document.getElementById("link_desact").setAttribute("href", "#")
          })
 
          $("#desactivador").click(() => {
-            $("#link_desact").addClass("desactivado")
+            document.getElementById("link_desact").classList.add("desactivado")
          })
     </script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>`r`n</body>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -209,15 +209,13 @@
     </div>
 
     <!------------------------------------------------------------------------------------------------------------------->
-    <!--JS -------------------------------------------------------------------------------------------------------------->
-      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script> 
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
         var enlace = "Lista Fixed"
         var idMenu = "#l5"
      </script>
     <script src="../js/docs-body.js"></script>
     <script>
-        $("#l5 ul li:nth-child(10)").children("a").addClass("c-bodyui")
+        document.querySelector("#l5 ul li:nth-child(10) a")?.classList.add("c-bodyui");
         BS.CodigoJsInit()
         BS.ColeccionFlot().iniciar({contexto:"#col1", fondoItem:"bg-pink-d-1", colorTexto:"c-blanco", altura:120} )
        

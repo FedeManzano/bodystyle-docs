@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="UTF-8">
@@ -74,15 +74,11 @@
     </head>
     <body class="">
         <button id="menu" data-pos="right" data-evt="click" class="btn bg-bodyui disparador" data-info="">CLICK ME!</button>
-        <a href="../personalizados.html#t10" class="link mt-3">Volver</a>
-        
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        
-        <!-- Archivo con las funcionalidades JS -->
+        <a href="../personalizados.html#t10" class="link mt-3">Volver</a><!-- Archivo con las funcionalidades JS -->
         <script src="../../js/bodystyle.min.js"></script>
         <script>
             BS.PersonalizadoInit({ori: "disparador", ele: ""})
-            $("#menu").attr("data-info", 
+            document.getElementById("menu").setAttribute("data-info", 
             `
              <div class="menu_flotante">
                 <div class="usuario">
@@ -140,8 +136,8 @@
 
         window.onload = () => {
             setTimeout( () => {
-                $("ins").remove()
-                $("iframe").remove()
+                document.querySelectorAll("ins").forEach(e => e.remove())
+                document.querySelectorAll("iframe").forEach(e => e.remove())
             }, 100)
         }
 

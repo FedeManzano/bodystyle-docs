@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -279,9 +279,7 @@
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
-    <!--JS -------------------------------------------------------------------------------------------------------------->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script> 
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
         var enlace = "Iconos"
         var idMenu = "#l2"
         
@@ -289,16 +287,16 @@
     <script src="../js/docs-body.js"></script>
    
     <script>
-        $("#l2 ul li:nth-child(8)").children("a").addClass("c-bodyui")
-        $(".icono").on("click", (e) => {
-            let html = $(e.target).html()
+        document.querySelector("#l2 ul li:nth-child(8) a")?.classList.add("c-bodyui");
+        document.querySelectorAll(".icono").forEach(el => el.addEventListener("click", (e) => {
+            let html = e.target.innerHTML
             if(html.length === 0)
-               html = $(e.target).parent().html()
+               html = e.target.parentElement.innerHTML
 
             html = html.replace("fz-30", "")
             html = html.replace("fz-20", "")
-            var aux = $("<textarea>");
-            $("body").append(aux); 
+            var aux = document.createElement("textarea");
+            document.body.appendChild(aux); 
 
             aux.val(html);
             aux.select(); 

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -14,13 +14,10 @@
 
     <div class="container mt-3">
         <a id="id_disparador" href="../personalizados.html#t7" class="link">Vover a la DOC.</a>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="../../js/bodystyle.min.js"></script>
+    </div><script src="../../js/bodystyle.min.js"></script>
     <script>
         BS.PersonalizadoInit({ori: "disparador", ele: ""})
-         $("#id_disparador").attr("data-info", `
+         document.getElementById("id_disparador").setAttribute("data-info", `
             <div  class="card">
                 <div  class="card-simple-dark">
                     <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
@@ -35,8 +32,8 @@
 
          window.onload = () => {
          setTimeout( () => {
-            $("ins").remove()
-            $("iframe").remove()
+            document.querySelectorAll("ins").forEach(e => e.remove())
+            document.querySelectorAll("iframe").forEach(e => e.remove())
          }, 100)
         }
     </script>

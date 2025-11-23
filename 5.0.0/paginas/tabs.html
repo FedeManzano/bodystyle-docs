@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -780,7 +780,7 @@
 <div class="codigo">
     <pre id="c10" class="cod-js">
         // Evento click del botón
-        $("#desactivador").on("click", () => {
+        document.getElementById("desactivador").addEventListener("click", () => {
 
             /**
                 BS.TabInit() devuelve una instancia nueva de la clase tabs, por esta razón 
@@ -840,9 +840,7 @@
     <!------------------------------------------------------------------------------------------------------------------->
     <!--JS -------------------------------------------------------------------------------------------------------------->
      <!------------------------------------------------------------------------------------------------------------------->
-    <!--JS -------------------------------------------------------------------------------------------------------------->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script> 
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
         var enlace = "Tabs"
         var idMenu = "#l5"
         
@@ -850,7 +848,7 @@
     <script src="../js/docs-body.js"></script>
 
     <script>
-        $("#l5 ul li:nth-child(13)").children("a").addClass("c-bodyui")
+        document.querySelector("#l5 ul li:nth-child(13) a")?.classList.add("c-bodyui");
         BS.TabInit().iniciarBorde({contexto: "#ta1"})
         BS.TabInit().iniciarBorde({contexto: "#ta2",colorFuente: "c-white", colorFondo: "bg-black", colorBorde: "fd-blanco"})
         BS.TabInit().iniciarBorde({contexto: "#ta3",colorFuente: "c-white", colorFondo: "bg-pink-d-1", colorBorde: "fd-blanco"})
@@ -858,7 +856,7 @@
         BS.TabInit().iniciarBorde({contexto: "#ta5",colorFuente: "c-white", colorFondo: "fd-azul-ve", colorBorde: "fd-blanco"})
         BS.CodigoJsInit()
 
-        $("#desactivador").on("click", () => {
+        document.getElementById("desactivador").addEventListener("click", () => {
             BS.TabInit().destroy("#ta1")
             BS.TabInit().destroy("#ta2")
             BS.TabInit().destroy("#ta3")

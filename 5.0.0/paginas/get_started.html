@@ -542,16 +542,14 @@
 
 
 
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script><script>
         var enlace = "Get Started"
         var idMenu = "#l1"
 
     </script>
     <script src="../js/docs-body.js"></script>
     <script>
-        $("#l1 ul li:nth-child(2)").children("a").addClass("c-bodyui")
+        document.querySelector("#l1 ul li:nth-child(2) a")?.classList.add("c-bodyui");
     </script>
 </body>
 

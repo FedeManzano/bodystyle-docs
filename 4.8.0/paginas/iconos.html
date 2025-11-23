@@ -286,15 +286,15 @@
     </script>
     <script src="../js/docs-body.js"></script>
     <script>
-        $(".icono").on("click", (e) => {
-            let html = $(e.target).html()
+        document.querySelectorAll(".icono").forEach(el => el.addEventListener("click", (e) => {
+            let html = e.target.innerHTML
             if(html.length === 0)
-               html = $(e.target).parent().html()
+               html = e.target.parentElement.innerHTML
 
             html = html.replace("fz-30", "")
             html = html.replace("fz-20", "")
-            var aux = $("<textarea>");
-            $("body").append(aux); 
+            var aux = document.createElement("textarea");
+            document.body.appendChild(aux); 
 
             aux.val(html);
             aux.select(); 

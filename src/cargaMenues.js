@@ -1,4 +1,4 @@
-import $ from "jquery"
+
 import "./bodystyle"
 
 (() => {
@@ -6,9 +6,9 @@ import "./bodystyle"
 
     const Init = () => {
 
-        $("#sidebar").html
-            (
-                `   <div class="bs-sidebar-title" data-target="#l1">
+        document.getElementById("sidebar").innerHTML =
+
+            `   <div class="bs-sidebar-title" data-target="#l1">
             <label><i class="fa-solid fa-play fz-20 c-bodyui">&nbsp;</i>&nbsp;Iniciación</label>
         </div>
         
@@ -125,24 +125,28 @@ import "./bodystyle"
 
         `
 
-            )
-
         if (enlace !== null && enlace !== undefined) {
-            $("#sidebar ul").each((n, e) => {
-                $(e).children().each((n, e) => {
-                    let texto = $(e).text()
+            const sidebarUls = document.querySelectorAll('#sidebar ul');
+
+            for (const ul of sidebarUls) {
+                const children = ul.children; // Obtiene los <li>
+
+                for (const li of children) {
+                    let texto = li.textContent;
                     if (texto === enlace) {
-                        $(e).children().addClass("active")
-                        $(e).children().append(`<i class="fa-solid fa-arrow-left pi-1">&nbsp</i>`)
+                        const link = li.querySelector('a'); // Obtiene el <a> dentro del <li>
+                        if (link) {
+                            link.classList.add('active');
+                            link.insertAdjacentHTML('beforeend', `<i class="fa-solid fa-arrow-left pi-1">&nbsp</i>`);
+                        }
                     }
-                })
-            })
+                }
+            }
         }
 
 
-        $("#nav").append
-            (
-                `
+        document.getElementById("nav").innerHTML =
+            `
         <div  class="bs-nav-md align-right-list">
             <a  class="btn-menu"></a>
             <a  href="#"  class="logo-container">
@@ -166,21 +170,18 @@ import "./bodystyle"
             </div>
         </div>
         `
-            )
 
-        $(".autor").html
-            (
-                `
+
+        document.querySelector(".autor").innerHTML =
+            `
         <h4>Autor</h4>
         <a href="https://github.com/FedeManzano" class="link tips-ele" target='_blank'
         data-tips="Copyright&nbsp<i class='fa-solid fa-copyright c-red'>&nbsp</i>FedericoManzano"
         data-pos='right'>Federico Manzano</a>
         `
-            )
 
-        $(".boton-descarga").html
-            (
-                `
+        document.querySelector(".boton-descarga").innerHTML =
+            `
         <div class="ancho-55 ancho-m-75 ancho-s-90 ancho-xs-100">
         <div class="card">
             <div class="card-simple-dark card-cover">
@@ -207,7 +208,6 @@ import "./bodystyle"
         </div> 
         </div>
         `
-            )
 
     }
 

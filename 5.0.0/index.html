@@ -127,12 +127,7 @@
             <li><a target="_blank" href="https://github.com/FedericoManzano/bodystyle/releases/tag/v3.5.0"
                     class="c-white"><i class="bs-tag">&nbsp;</i> Release 3.5.0</a></li>
         </ul>
-    </div>
-
-
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/bodystyle.min.js"></script>
+    </div><script src="./js/bodystyle.min.js"></script>
 
     <script>
         BS.ToolTipsInit()
@@ -140,7 +135,7 @@
         BS.PersonalizadoInit({ ori: "disparador", ele: "" })
         BS.DropDownInit()
 
-        $("#descaraga_docs").attr("data-info",
+        document.getElementById("descaraga_docs").setAttribute("data-info",
             `
                 <div  class="card">
                     <div  class="card-simple-dark">
@@ -157,7 +152,7 @@
             `
         )
 
-        $("#descarga_lib").attr("data-info",
+        document.getElementById("descarga_lib").setAttribute("data-info",
             `
                 <div  class="card">
                     <div  class="card-simple-dark">
@@ -172,7 +167,7 @@
             `
         )
 
-        $("#autor").attr("data-info",
+        document.getElementById("autor").setAttribute("data-info",
             `
                 <div  class="card">
                     <div  class="card-simple-dark ta-c">
@@ -190,7 +185,7 @@
             `
         )
 
-        $("#navegador").attr("data-info",
+        document.getElementById("navegador").setAttribute("data-info",
             `
                 <div  class="card" style="z-index: 10000">
                     <div  class="card-simple-dark ta-c">
@@ -208,7 +203,7 @@
             `
         )
 
-        $("#navegador2").attr("data-info",
+        document.getElementById("navegador2").setAttribute("data-info",
             `
                 <div  class="card" style="z-index: 10000">
                     <div  class="card-simple-dark ta-c">
@@ -228,8 +223,8 @@
 
         window.onload = () => {
             setTimeout(() => {
-                $("ins").remove()
-                $("iframe").remove()
+                document.querySelectorAll("ins").forEach(e => e.remove())
+                document.querySelectorAll("iframe").forEach(e => e.remove())
             }, 100)
         }
 

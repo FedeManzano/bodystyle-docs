@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -439,21 +439,19 @@
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
-    <!--JS -------------------------------------------------------------------------------------------------------------->
-     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script> 
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
         var enlace = "Modales"
         var idMenu = "#l5"
         
     </script>
     <script src="../js/docs-body.js"></script>
     <script>
-         $("#l5 ul li:nth-child(5)").children("a").addClass("c-bodyui")
+         document.querySelector("#l5 ul li:nth-child(5) a")?.classList.add("c-bodyui");
         BS.ModalInit()
         BS.TabInit().iniciarBorde({contexto: "#tab3",colorFuente: "c-white", colorFondo: "bg-pink-d-1", colorBorde: "fd-blanco"})
         BS.CodigoJsInit()
 
-         $("#desactivador").on("click", () => {
+         document.getElementById("desactivador").addEventListener("click", () => {
             BS.ModalDestroy()
             BS.Toast({html: "Modals Destruidas", clases: ["bg-red"]})
         })

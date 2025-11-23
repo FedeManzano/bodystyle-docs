@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -316,7 +316,7 @@
         */
         // IMPORTANTE ESTOS USANDO jquery
         // PARA ESTE EJEMPLO https://jquery.com
-        $("#id_disparador").attr("data-info", `
+        document.getElementById("id_disparador").setAttribute("data-info", `
             <div  class="card">
                 <div  class="card-simple-dark">
                     <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
@@ -401,7 +401,7 @@
             Con JQUERY le inyectamos el elemento al atributo data-info del 
             disparador para que esté a disposición de la lógica del posicionamiento
         */
-        $("#mensaje").attr("data-info", `
+        document.getElementById("mensaje").setAttribute("data-info", `
           <div class='p-2 bor-grey-1 bor-rad-10 fd-gris-c c-grey-o ta-c'>
               <h4>Esto es el título</h4>
               <div class='divisor my-2'></div>
@@ -593,7 +593,7 @@
             </p>
 <div class="codigo">
     <pre id="c14" class="cod-js">
-        $("#menu").attr("data-info", 
+        document.getElementById("menu").setAttribute("data-info", 
         `
          <div class="menu_flotante">
             <div class="usuario">
@@ -690,18 +690,16 @@
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
-    <!--JS -------------------------------------------------------------------------------------------------------------->
-     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script> 
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
         var enlace = "Tips Propios"
         var idMenu = "#l5"
      </script>
     <script src="../js/docs-body.js"></script>
     <script>
-        $("#l5 ul li:nth-child(9)").children("a").addClass("c-bodyui")
+        document.querySelector("#l5 ul li:nth-child(9) a")?.classList.add("c-bodyui");
         BS.CodigoJsInit()
         BS.CodigoCssInit()
-        $("#desactivador").on("click", () => {
+        document.getElementById("desactivador").addEventListener("click", () => {
             BS.PersonalizadoDestroy()
             BS.Toast({html: "Tips Destruidos", clases: ["bg-red"]})
         })

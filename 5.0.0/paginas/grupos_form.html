@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -170,23 +170,23 @@
 </div>
 <div class="codigo">
     <pre id="c3" class="cod-js">
-        $("#repetir, #pass, #nombre, #apellido, #email").keyup( () => {
+        document.getElementById("repetir, #pass, #nombre, #apellido, #email").addEventListener("keyup", () => {
             
-            let clave = $("#pass").val()
-            let rep = $("#repetir").val()
+            let clave = document.getElementById("pass").value
+            let rep = document.getElementById("repetir").value
             if( 
-                $("#nombre").val()    !== ""  &&  $("#nombre").val()    !== undefined   && 
-                $("#apellido").val()  !== ""  &&  $("#apellido").val()  !== undefined   &&
-                $("#email").val()     !== ""  &&  $("#email").val()     !== undefined   &&
-                $("#pass").val()      !== ""  &&  $("#pass").val()      !== undefined   &&
+                document.getElementById("nombre").value    !== ""  &&  document.getElementById("nombre").value    !== undefined   && 
+                document.getElementById("apellido").value  !== ""  &&  document.getElementById("apellido").value  !== undefined   &&
+                document.getElementById("email").value     !== ""  &&  document.getElementById("email").value     !== undefined   &&
+                document.getElementById("pass").value      !== ""  &&  document.getElementById("pass").value      !== undefined   &&
                 clave === rep
             )
             {
-                $("#enviar").removeClass("desactivado")
+                document.getElementById("enviar").classList.remove("desactivado")
             }   
             else 
             {
-                $("#enviar").addClass("desactivado")
+                document.getElementById("enviar").classList.add("desactivado")
             }
         })
     </pre>
@@ -215,35 +215,33 @@
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
-    <!--JS -------------------------------------------------------------------------------------------------------------->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script> 
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
         var enlace = "Grupos Form"
         var idMenu = "#l4"
         
     </script>
     <script src="../js/docs-body.js"></script>
     <script>
-        $("#l4 ul li:nth-child(2)").children("a").addClass("c-bodyui")
+        document.querySelector("#l4 ul li:nth-child(2) a")?.classList.add("c-bodyui");
 
         BS.CodeJsInit()
-        $("#repetir, #pass, #nombre, #apellido, #email").keyup( () => {
+        document.getElementById("repetir, #pass, #nombre, #apellido, #email").addEventListener("keyup", () => {
             
-            let clave = $("#pass").val()
-            let rep = $("#repetir").val()
+            let clave = document.getElementById("pass").value
+            let rep = document.getElementById("repetir").value
             if( 
-                $("#nombre").val()    !== ""  &&  $("#nombre").val()    !== undefined   && 
-                $("#apellido").val()  !== ""  &&  $("#apellido").val()  !== undefined   &&
-                $("#email").val()     !== ""  &&  $("#email").val()     !== undefined   &&
-                $("#pass").val()      !== ""  &&  $("#pass").val()      !== undefined   &&
+                document.getElementById("nombre").value    !== ""  &&  document.getElementById("nombre").value    !== undefined   && 
+                document.getElementById("apellido").value  !== ""  &&  document.getElementById("apellido").value  !== undefined   &&
+                document.getElementById("email").value     !== ""  &&  document.getElementById("email").value     !== undefined   &&
+                document.getElementById("pass").value      !== ""  &&  document.getElementById("pass").value      !== undefined   &&
                 clave === rep
             )
             {
-                $("#enviar").removeClass("desactivado")
+                document.getElementById("enviar").classList.remove("desactivado")
             }   
             else 
             {
-                $("#enviar").addClass("desactivado")
+                document.getElementById("enviar").classList.add("desactivado")
             }
         })
     </script>

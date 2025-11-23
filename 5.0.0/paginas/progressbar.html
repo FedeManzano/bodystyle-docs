@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -116,14 +116,14 @@
 <div class="codigo">
 <pre class="cod-js" id="c3">
     const Aumentar = () => {
-        let ancho = $("#pb1").children().width()
-        if($("#pb1").width() >= ancho + 30)
-            $("#pb1").children().width(ancho + 30)
+        let ancho = document.getElementById("pb1").children[0].offsetWidth
+        if(document.getElementById("pb1").offsetWidth >= ancho + 30)
+            document.getElementById("pb1").children[0].style.width = ancho + 30 + "px"
         else 
-            $("#pb1").children().css("width", "100%")
+            document.getElementById("pb1").children[0].style.width = "100%"
     }
     const Reiniciar = () => {
-        $("#pb1").children().width(0)
+        document.getElementById("pb1").children[0].style.width = 0 + "px"
     }
 </pre>  
 </div>
@@ -198,27 +198,25 @@
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
-    <!--JS -------------------------------------------------------------------------------------------------------------->
-     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script> 
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
         var enlace = "Progress Bar"
         var idMenu = "#l6"
     </script>
     <script src="../js/docs-body.js"></script>
 
     <script>
-        $("#l6 ul li:nth-child(4)").children("a").addClass("c-bodyui")
+        document.querySelector("#l6 ul li:nth-child(4) a")?.classList.add("c-bodyui");
         const Aumentar = () => {
-            let ancho = $("#pb1").children().width()
+            let ancho = document.getElementById("pb1").children[0].offsetWidth
 
-            if($("#pb1").width() > ancho + 30)
-                $("#pb1").children().width(ancho + 30)
+            if(document.getElementById("pb1").offsetWidth > ancho + 30)
+                document.getElementById("pb1").children[0].style.width = ancho + 30 + "px"
             else 
-                $("#pb1").children().css("width", "100%")
+                document.getElementById("pb1").children[0].style.width = "100%"
         }
 
         const Reiniciar = () => {
-            $("#pb1").children().width(0)
+            document.getElementById("pb1").children[0].style.width = 0 + "px"
         }
     </script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>`r`n</body>
