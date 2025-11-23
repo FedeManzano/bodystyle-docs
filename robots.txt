@@ -1,0 +1,52 @@
+# robots.txt para Bodystyle Documentation
+# https://bodystyle.webcindario.com
+
+# Permitir a todos los bots rastrear todo el sitio
+User-agent: *
+Allow: /
+
+# Bloquear acceso a archivos de configuración y desarrollo
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /sass/
+Disallow: /.git/
+Disallow: /dist/
+Disallow: /*.json$
+Disallow: /*.config.js$
+
+# Bloquear archivos temporales y de sistema
+Disallow: /*.log$
+Disallow: /.htaccess
+Disallow: /.babelrc
+
+# Permitir explícitamente las versiones de documentación
+Allow: /5.0.0/
+Allow: /4.8.0/
+Allow: /4.5.0/
+Allow: /4.0.0/
+
+# Permitir recursos importantes
+Allow: /logo/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.ico$
+
+# Sitemap
+Sitemap: https://bodystyle.webcindario.com/sitemap.xml
+
+# Configuración específica para bots principales
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /logo/
+Allow: /imagenes/
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay para bots agresivos (opcional)
+User-agent: *
+Crawl-delay: 1
