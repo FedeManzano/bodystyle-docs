@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <!-- META obligatorio para poder utilizar la libreria -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Link con el CDN de los estilos css  -->
+        <link rel="stylesheet" href="../../css/bo.css">
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="p-1 bg-red c-white mb-3" style="height: 700px;">
+                <h2 class="scroll-item" id="1">Sección 1</h2>
+                <div class="mt-2">
+                    <a href="../scrollspy.html#t3" class="link">Volver a la Documentación</a>
+                </div>
+            </div>
+            <div class="p-1 bg-red c-white mb-3" style="height: 700px;">
+                <h2 class="scroll-item" id="2">Sección 2</h2>
+            </div>
+            <div class="p-1 bg-red c-white mb-3" style="height: 700px;">
+                <h2 class="scroll-item" id="3">Sección 3</h2>
+            </div>
+        </div>
+
+        <div class="lista-scroll">
+            <ul>
+                <li><a href="#1">Sección 1</a></li>
+                <li><a href="#2">Sección 2</a></li>
+                <li><a href="#3">Sección 3</a></li>
+            </ul>
+        </div><!-- Archivo con las funcionalidades JS -->
+        <script src="../../js/bodystyle.min.js"></script>
+        <script>
+          BS.ToolTipsInit() // INICIO DE LOS TOOLTIPS
+          BS.ScrollSpyInit()
+
+              window.onload = () => {
+                setTimeout( () => {
+                    document.querySelectorAll("ins").forEach(e => e.remove())
+                    document.querySelectorAll("iframe").forEach(e => e.remove())
+                }, 100)
+            }
+        </script>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>`r`n</body>
+</html>

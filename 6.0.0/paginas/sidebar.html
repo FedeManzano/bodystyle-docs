@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Barra de navegación lateral, complementaria a la barra de navegación principal.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Sidebar</title>
+</head>
+<body>
+
+    
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Sidebar</h1>
+            <p>
+                Elemento que es manejado por la barra de navegación principal a través el botón de menú, que a través 
+                de las clases pertinentes toma la forma de las tres barras acostadas y sirve como disparador para desplegar 
+                el sidebar.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Inicialización</h2>
+            <p>
+                Para inicializar el sidebar primero tenemos que iniciallizar el nav principal que es el que 
+                va a controlar la barra lateral. <br>
+                es importante recalcar que si ambos elementos (nav y el sidebar) se añaden al html de forma dinámica (se agregan al html en tiempo
+                de ejecución) es necesario iniciar el componente de otra forma, tal y como se describe debajo de este texto.
+            </p>
+
+<div class="codigo">
+<pre class="cod-js" id="c1">
+    // Forma 1: Tradicional (No dinámica)
+    BS.NavigationInit("#ID") // Donde ID es el ID del nav principal 
+
+    // Forma 2: Dinámica 
+    window.onload = () => setTimeout( () => BS.NavigationInit("#ID"), 100)
+</pre>
+</div>
+            <h3 id="t3">Muestra Default</h3>
+            <p class="mb-3">
+                Para comenzar vamos a definir un Nav por default con su sidebar para mostrar como utilizar estos componentes.
+            </p>
+            <a href="muestras/sidebar_1.html" class="link com-trigger" data-info="En esta muestra se verá como es el nav y el sidebar asociado por default.">Sidebar Simple</a>
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <!-- Nav con un ID #nav para envolverlo y manejarlo -->
+    <!--
+        Notese, que el nav tiene el data-target que apunta a 
+        #bs-nav-sidebar que es el ID del sidebar 
+    -->
+    <!--
+        El ID del sidebar los pueden elegir ustedes pero tiene 
+        que coincidir con lo cargado en el data-target 
+    -->
+    <nav id="nav"  class="bs-nav bs-nav-fixed" data-target="#bs-nav-sidebar">
+        <div  class="bs-nav-md align-left-list">
+            <!-- 
+                Botón de menú que funciona como disparador 
+                de la aparición del sidebar 
+            -->
+            <a class="btn-menu" ></a>
+
+            <!--Lista de opciones del nan principal -->
+            <div>
+                <ul>
+                    <li><a  href="#">Inicio</a></li>
+                    <li><a  href="#">Porfolio</a></li>
+                    <li><a  href="#">Galeria</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!--
+        Este es el sidebar con la clase .bs-nav-sidebar
+        y en este caso, el ID bs-nav-sidebar que es a elección
+        pero tiene que coincidir con el data-target del NAV
+    -->
+    <div id="bs-nav-sidebar" class="bs-nav-sidebar">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Porfolio</a></li>
+            <li><a href="#">Graleria</a></li>
+            <li><a href="#">Repositorio</a></li>
+        </ul>
+    </div>
+</pre>
+</div>
+        <div class="alerta-negra">
+            Para más información recurrir a la sección <a href="nav.html" class="link">Nav</a> que muestra 
+            como definir los diferentes elementos del Nav principal.
+        </div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t4">Navegación Fija</h2>
+            <p class="mb-3">
+                Ahora vamos a v er como podemos realizar lo anterior pero lograr que el NAV y el SIDEBAR 
+                se trasladen a lo largo de toda la página dejando fija toda la navegación. <br>
+                Para este objetivo al NAV hay que agregarle la clase <span class="badge badge-red">.bs-nav-fixed</span> y problema resuelto.
+            </p>
+
+             <a href="muestras/sidebar_2.html" class="link com-trigger" data-info="En esta muestra se verá como es el nav y el sidebar asociado con posicionamiento fijo.">Sidebar Fijo</a>
+        
+        <div class="codigo">
+<pre class="cod-html" id="c3">
+    <!-- Se añade la clase .bs-nav-fixed-->
+    <nav id="nav2"  class="bs-nav bs-nav-fixed" data-target="#bs-nav-sidebar2">
+        <div  class="bs-nav-md align-left-list">
+            <!-- 
+                Botón de menú que funciona como disparador 
+                de la aparición del sidebar 
+            -->
+            <a class="btn-menu" ></a>
+
+            <!--Lista de opciones del nan principal -->
+            <div>
+                <ul>
+                    <li><a  href="#">Inicio</a></li>
+                    <li><a  href="#">Porfolio</a></li>
+                    <li><a  href="#">Galeria</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="bs-nav-sidebar2" class="bs-nav-sidebar">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Porfolio</a></li>
+            <li><a href="#">Graleria</a></li>
+            <li><a href="#">Repositorio</a></li>
+        </ul>
+    </div>
+</pre>
+</div>
+        </article>
+        <article class="articulo">
+            <h2 id="t5">Colores e Íconos</h2>
+            <p class="mb-3">
+                La personalización de estos dos elementos se puede llevar a cabo con 
+                <a href="iconos.html" class="link tips-ele" data-tips="Íconos documentados">Íconos</a> y 
+                los <a href="colores.html" class="link tips-ele" data-tips="Colores documentados">Colores</a> de la biblioteca. <br>
+                A modo de ejemplo vamos a definir algunos estilos para personalización de estos componentes.
+            </p>
+
+            <a href="muestras/sidebar_3.html" class="link com-trigger" data-info="Muestra de como utilizar la navegación personalizada.">Colores e Íconos</a>
+
+
+<div class="codigo">
+<pre class="cod-html" id="c4">
+   <nav id="nav3"  class="bs-nav bg-pink-d-1 bs-nav-bor-black bs-nav-fixed" data-target="#bs-nav-sidebar">
+        <div  class="bs-nav-md align-left-list">
+            <a  class="btn-menu"></a>
+            <a  href="#"  class="logo-container">
+                <img  src="../../logo/logo.png"  alt="Foto de perfil">
+            </a>
+            <ul>
+                <li><a  href="#">Inicio</a></li>
+                <li><a  href="#">Porfolio</a></li>
+                <li><a  href="#">Galeria</a></li>
+            </ul>
+            <div class="right-content">
+                <a href="#"><i class="bs-github fz-22 c-white p-1"></i></a>
+                <a href="#"><i class="bs-download fz-22 c-white p-1"></i></a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="bs-nav-sidebar" class="bs-nav-sidebar fd-gris-c c-white">
+        <ul>
+            <li><a href="#" class="c-black"><i class="bs-home fz-20 c-red">&nbsp;</i>Inicio</a></li>
+            <li><a href="#" class="c-black"><i class="bs-tag fz-20 c-gris-o">&nbsp;</i>Servicios</a></li>
+            <li><a href="#" class="c-black"><i class="bs-happy fz-20 c-yellow">&nbsp;</i>Porfolio</a></li>
+            <li><a href="#" class="c-black"><i class="bs-instagram fz-20 c-red">&nbsp;</i>Graleria</a></li>
+            <li><a href="#" class="c-black"><i class="bs-whatsapp fz-20 c-green">&nbsp;</i>Repositorio</a></li>
+        </ul>
+    </div>
+
+</pre>
+</div>
+
+
+        </article>
+        <article class="articulo">
+            <h2 id="t6">Responsive</h2>
+            <p class="mb-3">
+                Otra forma de utilizar el sidebar es para reemplazar las opciones del menu del nav. Para 
+                dispositivos de tamaño de pantalla más pequeños ocultamos el menú del NAV y lo reemplazamos por del 
+                sidebar. <br>
+                Para realizar esta tarea no apoyaremos en los <a href="helpers.html" class="link com-trigger" 
+                data-info="Utilitarios que permiten mostrar u ocultar elementos dependiendo en que tamaño de pantalla se muestren.">Helpers</a>.
+            </p>
+
+            <a href="muestras/sidebar_4.html" class="link com-trigger" data-info="Utilización del sidebar para ocultar las opciones del nav.">Muestra Responsive</a>
+<div class="codigo">
+<pre class="cod-html" id="c5">
+
+    <nav id="nav4"  class="bs-nav bg-pink-d-1 bs-nav-bor-black bs-nav-fixed" data-target="#bs-nav-sidebar4">
+        <div  class="bs-nav-md align-left-list">
+            <a  class="btn-menu hide-only-large"></a>
+            <a  href="#"  class="logo-container">
+                <img  src="../../logo/logo.png"  alt="Foto de perfil">
+            </a>
+            <div class="hide-from-medium">
+                <ul>
+                    <li><a  href="#">Inicio</a></li>
+                    <li><a  href="#">Porfolio</a></li>
+                    <li><a  href="#">Galeria</a></li>
+                </ul>
+            </div>
+            
+            <div class="right-content">
+                <a href="#"><i class="bs-github fz-22 c-white p-1"></i></a>
+                <a href="#"><i class="bs-download fz-22 c-white p-1"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <div id="bs-nav-sidebar4" class="bs-nav-sidebar fd-gris-c c-white">
+        <ul>
+            <li><a href="#" class="c-black"><i class="bs-home fz-20 c-red">&nbsp;</i>Inicio</a></li>
+            <li><a href="#" class="c-black"><i class="bs-tag fz-20 c-gris-o">&nbsp;</i>Servicios</a></li>
+            <li><a href="#" class="c-black"><i class="bs-happy fz-20 c-yellow">&nbsp;</i>Porfolio</a></li>
+            <li><a href="#" class="c-black"><i class="bs-instagram fz-20 c-red">&nbsp;</i>Graleria</a></li>
+            <li><a href="#" class="c-black"><i class="bs-whatsapp fz-20 c-green">&nbsp;</i>Repositorio</a></li>
+        </ul>
+    </div>
+</pre>
+</div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t7">Destroy</h2>
+            <p>
+                Si lo queremos es desvincular la lógica que une al sidebar 
+                y al nav principal para optimizar recuros tenemos que llamar a la función destroy 
+                que brinda esta posibilidad.
+            </p>
+
+<div class="codigo">
+    <pre id="c6" class="cod-js">
+        BS.NavigationDestroy()
+    </pre>
+</div>
+
+
+        </article>
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Sidebar</a></li>
+            <li><a href="#t2">Inicialización</a></li>
+            <li><a href="#t3">Muestra</a></li>
+            <li><a href="#t4">Navegación Fija</a></li>
+            <li><a href="#t5">Colores e Íconos</a></li>
+            <li><a href="#t6">Nav Responsive</a></li>
+            <li><a href="#t7">Destroy</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
+        var enlace = "Sidebar"
+        var idMenu = "#l6"
+        
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        BS.CodeJsInit()
+        document.querySelector("#l6 ul li:nth-child(2) a")?.classList.add("c-bodyui");
+    </script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>`r`n</body>
+</html>

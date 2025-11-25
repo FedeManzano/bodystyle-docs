@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Sidebar que contiene encada uno de sus elementos internos un menú desplegable con el efecto acordeón.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Sidebar Dropdown</title>
+</head>
+<body>
+
+    
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Sidebar Dropdown</h1>
+            <p>
+                En este aprtado vamos a ver el sidebar dropdown, una barra lateral en la cual cada uno de sus elementos internos 
+                despliga un submenu de opciones. La muestra de este componente puede apreciarse a su izquirda en el sidebar de 
+                esta documentación.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Inicialización</h2>
+            <p>
+                Al igual que los demás módulos dinámicos existe dos formas de iniciaclización. Si el sideber y 
+                labarra de navegación principal (NAV) se encuentran en el HTML (Estático) vamos a utilizar la primera forma de inicialización 
+                en caso contrario, si la navegación y el sidebar se agregar a través de JS (Dinámico) inicializaremos el módulo de la segunda forma.
+            </p>
+
+<div class="codigo">
+<pre class="cod-js" id="c1">
+    /** LA PRIMERA FORMA **/
+
+    // Un Objeto JSON con dos atributos
+    // El primero: es el ID del la barra de navegación principal 
+    // El Segundo: El ID del sidebar que contendrá todos los menues
+    BS.SidebarDropInit({idNav: "#nav", idSidebar: "#sidebar"})
+
+    /** LA SEGUNDA FORMA **/
+
+    // Igual a la primera pero se le aplica un retraso
+    // a la inicialización del elemento para encontrar, unavez inicializado 
+    // los elementos dentro del HTML
+    window.onload = () => setTimeout(() => BS.SidebarDropInit({idNav: "#nav", idSidebar: "#sidebar"}), 100)
+</pre>
+</div>
+            <div class="alerta-negra">
+               <span class="c-red">
+                    Notese que se envía por parámetro el ID del nav y el ID del sidebar, por esta razón es obligatorio 
+                    identificar a cada elemento para que funcione adecuadamente el conjunto de componentes.
+               </span> 
+            </div>
+            <h3 id="t3">Muestra</h3>
+            <p class="mb-3">
+                Antes de comenzar la explicación es bueno ver un ejemplo y su código HTML asociado para 
+                entender la explicación posterior.
+            </p>
+
+            <a target="_blank" href="muestras/sidebar_drop_1.html" class="link com-trigger" data-info="Este es el sidebardrop por defecto, aquí se podrá ver la estructura básica que permite que el elemento funcione">Muestra Default</a>
+
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <!-- Como puede observarse el NAV tiene un ID único -->
+    <!--Las clases bs-nav y bs-nav-fixed permiten definirle los estilos -->
+    <nav id="nav"  class="bs-nav bs-nav-fixed">
+        <div  class="bs-nav-md align-left-list">
+
+            <!-- Botón disparador y controlador del sidebar-->
+            <a  class="btn-menu"></a>
+
+            <!--Logo perteneciente a la entidad o persona -->
+            <a  href="#"  class="logo-container">
+                <img  src="../../logo/logo.png"  alt="Foto de perfil">
+            </a>
+
+            <!--Lista con el menú principal del nav -->
+            <div>
+                <ul>
+                    <li><a  href="#">Inicio</a></li>
+                    <li><a  href="#">Porfolio</a></li>
+                    <li><a  href="#">Galeria</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 
+        Aca está el SIDEBAR, notese el id ya que tiene que tener uno
+        y ser el mismo que el que se envía por parámetro de la función 
+        de inicialización.
+
+        La clase bs-sidebar-drop-light TEMA CLARO
+        La clase bs-sidebar-drop-dark  TEMA OSCURO
+     --> 
+    <div id="sidebar" class="bs-sidebar-drop-light ">
+
+        <!--
+            Cada elemento está asociado a un submenu 
+            el attr (data-target) va a apuntar 
+            al listado a desplegar, en este caso #l1 y contendrá 
+            la clase "bs-sidebar-title"    
+        -->
+        <div class="bs-sidebar-title" data-target="#l1">
+            <label>Inicio</label>
+        </div>
+        
+        <!-- 
+            Este es el submenu que desplegará el elemento (Inicio).
+            Notese que lleva la clase ("bs-sidebar-drop-list") con 
+            el ID = l1 necesario para vincular el elemento anterior 
+            con el submenú a desplegar
+         -->
+        <div class="bs-sidebar-drop-list" id="l1">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+        <div class="bs-sidebar-title" data-target="#l2">
+            <label>Repositorios</label>
+        </div>
+        
+        <div class="bs-sidebar-drop-list" id="l2">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+
+        <div class="bs-sidebar-title" data-target="#l3">
+            <label>Archivos</label>
+        </div>
+   
+        <div class="bs-sidebar-drop-list" id="l3">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+
+        <div class="bs-sidebar-title" data-target="#l4">
+            <label>Cuentas</label>
+        </div>
+        
+        <div class="bs-sidebar-drop-list" id="l4">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+    </div>
+</pre>
+</div>
+        <div class="alerta-negra">
+            Si hace pruebas con el ejemplo anterior notará que en dispositivos menores a 1030px 
+            el sidebar se ocultará, mientras que en dispositivos con un tamaño de pantalla mayor 
+            al mencionado anteriomente el sidebardrop se mostrará automáticamente, permitiendo así 
+            la correcta distribución de los elementos. <br>
+            Cuando la pantalla es más pequeña que 1030px es posible ocultar el sidebardrop haciendo click 
+            en cualquier parte de la pantalla para mejorar la experiencia de usuario.
+        </div>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t4">Temas</h2>
+            <p class="mb-3">
+                Anteriomente vimos un sidebardrop de tema claro, bodystyle provee el 
+                mismo elemento pero de tema oscuro solamente cambiando la clase <span class="badge badge-red">.bs-sidebar-drop-light</span> por
+                <span class="badge badge-red">.bs-sidebar-drop-dark</span>.
+            </p>
+            <a target="_blank" href="muestras/sidebar_drop_2.html" class="link com-trigger" data-info="Sidebardrop con el tema oscuro para que lo vea de ejemplo">Tema Oscuro</a>
+<div class="codigo">
+<pre class="cod-html" id="c4">
+    <!-- Como puede observarse el NAV tiene un ID único -->
+    <!--Las clases bs-nav y bs-nav-fixed permiten definirle los estilos -->
+    <nav id="nav"  class="bs-nav bs-nav-fixed">
+        <div  class="bs-nav-md align-left-list">
+
+            <!-- Botón disparador y controlador del sidebar-->
+            <a  class="btn-menu"></a>
+
+            <!--Logo perteneciente a la entidad o persona -->
+            <a  href="#"  class="logo-container">
+                <img  src="../../logo/logo.png"  alt="Foto de perfil">
+            </a>
+
+            <!--Lista con el menú principal del nav -->
+            <div>
+                <ul>
+                    <li><a  href="#">Inicio</a></li>
+                    <li><a  href="#">Porfolio</a></li>
+                    <li><a  href="#">Galeria</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 
+        Aca está el SIDEBAR, notese el id ya que tiene que tener uno
+        y ser el mismo que el que se envía por parámetro de la función 
+        de inicialización.
+
+        La clase bs-sidebar-drop-light TEMA CLARO
+        La clase bs-sidebar-drop-dark  TEMA OSCURO
+     --> 
+    <div id="sidebar" class="bs-sidebar-drop-dark ">
+
+        <!--
+            Cada elemento está asociado a un submenu 
+            el attr (data-target) va a apuntar 
+            al listado a desplegar, en este caso #l1 y contendrá 
+            la clase "bs-sidebar-title"    
+        -->
+        <div class="bs-sidebar-title" data-target="#l1">
+            <label>Inicio</label>
+        </div>
+        
+        <!-- 
+            Este es el submenu que desplegará el elemento (Inicio).
+            Notese que lleva la clase ("bs-sidebar-drop-list") con 
+            el ID = l1 necesario para vincular el elemento anterior 
+            con el submenú a desplegar
+         -->
+        <div class="bs-sidebar-drop-list" id="l1">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+        <div class="bs-sidebar-title" data-target="#l2">
+            <label>Repositorios</label>
+        </div>
+        
+        <div class="bs-sidebar-drop-list" id="l2">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+
+        <div class="bs-sidebar-title" data-target="#l3">
+            <label>Archivos</label>
+        </div>
+   
+        <div class="bs-sidebar-drop-list" id="l3">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+
+        <div class="bs-sidebar-title" data-target="#l4">
+            <label>Cuentas</label>
+        </div>
+        
+        <div class="bs-sidebar-drop-list" id="l4">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+    </div>
+</pre>
+</div>
+        <div class="alerta-negra">
+            Notese que la personalización puede continuar, los estilos de colores de fondo 
+            pueden modificarse de tal manera de ajustar el diseño a nuestras necesidades.
+            Recomensación: 
+            <div class="lista-doc m-0">
+                <ul>
+                    <li><a href="colores.html" class="link tips-ele" data-tips="Colores de fondos documentados" data-pos="right">Colores</a></li>
+                    <li><a href="texto.html" class="link tips-ele" data-tips="Propiedades de texto Documentadas" data-pos="right">Texto</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        </article>
+        <article class="articulo">
+            <h2 id="t6">Submenu Abierto</h2>
+            <p class="mab-2">
+                En muchas oportunidades queremos que el usuario, cuando ingresa a la página vea un submenú 
+                ya desplegado para situarlo y que la experiencia de usuario sea mayor, para esta tarea 
+                se inicializa el módulo con un atributo mas <span class="badge badge-negro">submenu</span> que contendra 
+                el ID del submenú que queramos que aparezca desplegado.
+            </p>
+
+            <a target="_blank" href="muestras/sidebar_drop_3.html" class="link com-trigger" data-info="Sidebardrop personalizada con íconos y estilos propios de otras secciones de la documentación y con el submenu 2 desplegado.">Despliegue Muestra</a>
+
+<div class="codigo">
+    <pre id="c5" class="cod-js">
+        BS.SidebarDropInit({idNav: "#idNav", idSidebar:"#idSidebar", submenu: "#idSubmenu"})
+    </pre>
+</div>
+
+<div class="codigo">
+    <pre id="c6" class="cod-html">
+
+    <nav id="nav"  class="bs-nav bg-bodyui  bs-nav-fixed bs-nav-bor-white">
+        <div  class="bs-nav-md align-left-list">
+            <a  class="btn-menu"></a>
+            <a  href="#"  class="logo-container">
+                <img  src="../../logo/logo.png"  alt="Foto de perfil">
+            </a>
+            <div>
+                <ul>
+                    <li><a  href="#">Inicio</a></li>
+                    <li><a  href="#">Porfolio</a></li>
+                    <li><a  href="#">Galeria</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+     <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="border-right: 1px solid rgb(247, 247, 247);">
+        <div class="bs-sidebar-title" data-target="#l1">
+            <label><i class="bs-home fz-20 c-orange">&nbsp;</i>Inicio</label>
+        </div>
+        
+        <div class="bs-sidebar-drop-list" id="l1">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+        <div class="bs-sidebar-title" data-target="#l2">
+            <label><i class="bs-github-2 fz-20">&nbsp;</i>Repositorios</label>
+        </div>
+        
+        <div class="bs-sidebar-drop-list" id="l2">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+
+        <div class="bs-sidebar-title" data-target="#l3">
+            <label><i class="bs-file fz-20 c-violet">&nbsp;</i>Archivos</label>
+        </div>
+   
+        <div class="bs-sidebar-drop-list" id="l3">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+
+        <div class="bs-sidebar-title" data-target="#l4">
+            <label><i class="bs-happy fz-20 c-yellow">&nbsp;</i>Cuentas</label>
+        </div>
+        
+        <div class="bs-sidebar-drop-list" id="l4">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    </pre>
+</div>
+
+        </article>
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Sidebar Dropdown</a></li>
+            <li><a href="#t2">Inicialización</a></li>
+            <li><a href="#t3">Muestra Default</a></li>
+            <li><a href="#t4">Tema Oscuro</a></li>
+            <li><a href="#t5">Submenu Desplegado</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
+        var enlace = "Sidebar Drop"
+        var idMenu = "#l6"
+        
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        BS.CodeJsInit()
+        document.querySelector("#l6 ul li:nth-child(3) a")?.classList.add("c-bodyui");
+    </script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>`r`n</body>
+</html>
