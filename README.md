@@ -6,7 +6,7 @@
 <h1 align="center">📚 Documentación Bodystyle</h1>
 
 <p align="center">
-  <a href="https://github.com/FedeManzano/bodystyle"><img src="https://img.shields.io/badge/Bodystyle-v5.0.0-red" alt="Bodystyle Version"></a>
+  <a href="https://github.com/FedeManzano/bodystyle"><img src="https://img.shields.io/badge/Bodystyle-v5.8.0-red" alt="Bodystyle Version"></a>
   <a href="https://github.com/FedeManzano/bodystyle/blob/master/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-purple" alt="License"></a>
   <a href="https://bodystyle.webcindario.com"><img src="https://img.shields.io/badge/Docs-Online-blue" alt="Documentation"></a>
   <a href="https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk"><img src="https://img.shields.io/badge/Download-MEGA-green" alt="Download"></a>
@@ -26,10 +26,17 @@ La documentación está organizada como un sitio web interactivo con ejemplos pr
 
 ### 📦 Versiones Documentadas
 
-- **v5.0.0** - Versión actual (recomendada)
-- **v4.8.0** - Versión estable anterior
+- **v5.8.0** - Versión actual (recomendada)
+- **v5.0.0** - Versión estable anterior
+- **v4.8.0** - Versión legacy
 - **v4.5.0** - Versión legacy
 - **v4.0.0** - Versión inicial
+
+## 🎉 Novedades en v5.8.0
+
+- ⚡ **Migración a Vanilla JS** - Se eliminó la dependencia de jQuery, utilizando JavaScript nativo para un mejor rendimiento.
+- 📉 **Reducción del Bundle** - El tamaño del bundle se redujo de **244 KB a 180 KB** (26% de reducción).
+- 🚀 **Mejor Rendimiento** - Carga más rápida y menor consumo de recursos.
 
 ## ✨ Características de Bodystyle
 
@@ -87,14 +94,14 @@ Visita la documentación completa en: **[bodystyle.webcindario.com](https://body
 ### 💾 Descarga de la Documentación
 
 **Recomendado** - Descarga sin anuncios del hosting:
-- 📥 [Documentación v5.0.0](https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk) - **Última versión**
+- 📥 [Documentación v5.0.0](https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk) - **Versión anterior**
 - 📦 [Todas las versiones](https://mega.nz/folder/VdMHERDR#gjbVQoWuKsIjNYJ39X1Dcw)
 
 ## 📂 Estructura del Proyecto
 
 ```
 bs_docs/
-├── 5.0.0/              # Documentación v5.0.0 (actual)
+├── 5.8.0/              # Documentación v5.8.0 (actual)
 │   ├── css/            # Estilos de Bodystyle
 │   ├── js/             # Scripts de Bodystyle
 │   ├── imagenes/       # Recursos visuales
@@ -109,6 +116,7 @@ bs_docs/
 │       ├── modal.html
 │       ├── nav.html
 │       └── ... (60+ páginas)
+├── 5.0.0/              # Documentación v5.0.0
 ├── 4.8.0/              # Documentación v4.8.0
 ├── 4.5.0/              # Documentación v4.5.0
 ├── 4.0.0/              # Documentación v4.0.0

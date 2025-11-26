@@ -59,55 +59,35 @@
                     Manzano</a> </h4>
 
             <h3>Cambios para la versión <span class="badge badge-bodyui"><i
-                        class="bs-tag c-white">&nbsp;</i>5.0.0</span> </h3>
+                        class="bs-tag c-white">&nbsp;</i>5.8.0</span> </h3>
             <div class="lista-doc">
                 <ul>
-                    <li><a href="sidebar_drop.html" class="link com-trigger"
-                            data-info="Sideber con menues desplegables en su interior, se aplica el efecto acordeón para su funcionamiento"
-                            data-pos="right">Nueva sidebar desplegable</a></li>
-
                     <li class="com-trigger"
-                        data-info="Para la versión 5.0.0 se documentó todo el código fuente de la lógica de Bodystyle."
-                        data-pos="right">Documentación del código de los módulos</li>
-
-                    <li><a href="grupos_form.html" class="link com-trigger"
-                            data-info="Nuevos estilos de formularios, con grupos de elementos que brindan gran variedad de este tipo de elementos."
-                            data-pos="right">Nuevos estilos de formularios</a></li>
-
-                    <li><a href="alertas.html#t6" class="link com-trigger"
-                            data-info="A partir de esta versión se añade la posibilidad de cerrar alertas."
-                            data-pos="right">Cerrar Alertas</a></li>
-
-                    <li class="link com-trigger"
-                        data-info="Funciones que permiten desvincular a los eventos de los eventos quitandoles la funcionalidad asociada a la lógica de la biblioteca."
-                        data-pos="right">Métodos destroy</li>
-
-                    <li><a href="waves.html" class="link com-trigger"
-                            data-info="en esta versión se añade esta funcionalidad que permite inicializar este módulo manualmente y poder aplicarlo a elementos que se añaden de manera dinámica."
-                            data-pos="right">Efecto waves función de inicialización (Dinámicos)</a></li>
-
+                        data-info="Se eliminó la dependencia de jQuery para todos los módulos internos de Bodystyle, utilizando ahora Vanilla JavaScript nativo."
+                        data-pos="right">Migración a Vanilla JS</li>
                     <li class="com-trigger"
-                        data-info="A partir de la versión 5.0.0 existen funciones que permite la inicialización automática de varios módulos. Elementos dinámicos y show-sintax."
-                        data-pos="left">Auto Iniciación de los elementos dinámicos</li>
-
-                    <li><a href="desactivado.html" class="link com-trigger"
-                            data-info="Se documentó todo lo referente a elementos desactivados, no poseen eventos asociados y cambian su apariencia."
-                            data-pos="right">Desactivado</a></li>
-
-                    <li><a href="" class="link com-trigger"
-                            data-info="Se establecen los alias a las clases de los helpers utilitarios en inglés."
-                            data-pos="right">Alias Helpers</a></li>
-
-                    <li><a href="" class="link com-trigger"
-                            data-info="En esta versión se incorporan los inputs con íconos para tener más variedad en la definición de formularios."
-                            data-pos="right">Input Íconos</a></li>
-
-                    <li><a target="_blank"
-                            href="https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk"
-                            class="link com-trigger"
-                            data-info="Descarga de la documentación pero sin anuncios del hosting."
-                            data-pos="right">Descargar Documentación v5.0.0</a> <span
-                            class="badge-xs badge-bodyui">Recomendado</span></li>
+                        data-info="Gracias a la migración a Vanilla JS, el tamaño del bundle se redujo de 244 KB a 180 KB, una mejora del 26%."
+                        data-pos="right">Reducción del Bundle (180 KB)</li>
+                    <li class="com-trigger"
+                        data-info="La eliminación de dependencias y la optimización del código resultan en una carga más rápida y un mejor rendimiento general."
+                        data-pos="right">Mejor Rendimiento</li>
+                    <li class="com-trigger"
+                        data-info="Se implementaron test unitarios para verificar que los módulos funcionen correctamente."
+                        data-pos="right">Test Unitarios <span class="badge badge-green">87%</span></li>
+                    <li class="com-trigger" data-info="Se agregaron Animaciones para ser reutilizadas."
+                        data-pos="right"><a href="#" class="link">Animaciones</a></li>
+                    <li class="com-trigger"
+                        data-info="A partir de la migración se añadieron la posibilidad de usar Bodystyle en Angular, React y Vue."
+                        data-pos="right">Bodystyle en Angular, React y Vue.</li>
+                    <li class="com-trigger"
+                        data-info="Ahora bodystyle es compatible con typescript sin necesidad de instalar @types."
+                        data-pos="right">Typescript Compatible</li>
+                    <li class="com-trigger"
+                        data-info="Elementos activados y desactivados sólo con añadir o quitar la clase CSS .desactivado. Mejora sustancial a la versión 5.0.0"
+                        data-pos="right"><a href="desactivado.html" class="link">Elemento Desactivado</a></li>
+                    <li class="com-trigger"
+                        data-info="Documentación de la versión 3.0.0 de Bodystyle. Posibilidad de disponer de la documentación de forma local. Si usted ya posee la documentación este enlace estará desactivado."
+                        data-pos="right"><a href="#" class="link desactivado">Documentación 3.0.0</a></li>
                 </ul>
             </div>
 
@@ -209,7 +189,8 @@
                 </ul>
             </div>
             <div class="alerta-negra mar-2">
-                Es importante aclarar que cada funcionalidad de posicionamiento queda definida a partir de parámetros
+                Es importante aclarar que cada funcionalidad de posicionamiento queda definida a partir de
+                parámetros
                 que ajustan el contenido según las circunstancias. Todas estas definiciones se verán en
                 apartados posteriores de esta documentación.
             </div>
@@ -219,9 +200,11 @@
                 diseño responsive,
                 por esta razón es tan importante este módulo que permite agregar y quitar bordes, permitir que un
                 elemento se muestre o no en pantalla,
-                que un determinado elemento se muestre de determinado ancho y alto en un dispositivo y en otro se vea
+                que un determinado elemento se muestre de determinado ancho y alto en un dispositivo y en otro se
+                vea
                 completamente distinto,
-                permite gestionar el texto (alineación, tamaño, grosor y color) y otras funcionalidades que las veremos
+                permite gestionar el texto (alineación, tamaño, grosor y color) y otras funcionalidades que las
+                veremos
                 a lo largo de
                 la documentación.
             </p>
@@ -319,7 +302,8 @@
             <h3 class="scroll-item" id="t6"><i class="fa-solid fa-4 c-rojo-ro"></i>&nbsp;Show Code</h3>
             <p>
                 Dependencia realizada por el mismo desarrollador de Bodystyle que pretende poder colorear el código
-                fuente dentro de una página web. Los lenguajes de programación admitidos por esta dependencia son: <br>
+                fuente dentro de una página web. Los lenguajes de programación admitidos por esta dependencia son:
+                <br>
                 Java, JavaScript, C, CSS, Html.
             </p>
 
@@ -343,17 +327,18 @@
                 Descargar el procesado de la biblioteca con los archivos transpilados.
             </p>
 
-            <a target="_blank" href="https://mega.nz/file/UQk3WQhS#e_TBHmfNXsHuJzE9rxir387MSVM_NFv8SdEZe1VAlZI"
+            <a target="_blank" href="https://mega.nz/file/wMF0GBKZ#_Z_xmxODWC6WAfqUF7fB0zowVo2qJYvc6BJn6nYkmjc"
                 class="btn-sm bg-bodyui bor-pill tips-ele waves"
-                data-tips="<i class='fa-solid fa-download'>&nbsp;</i> Descarga de <span class='badge badge-red'>Bodystyle 4.8.0</span>"
-                data-color="fd-blanco">Bodystyle 5.0.0</a>
+                data-tips="<i class='fa-solid fa-download'>&nbsp;</i> Descarga de <span class='badge badge-red'>Bodystyle 5.8.0</span>"
+                data-color="fd-blanco">Bodystyle 5.8.0</a>
 
             <h3 class="scroll-item" id="t9">CDN</h3>
 
             <p>
                 Se puede agregar la plantilla que se encuentra a continuación para disponer de los estilos y de la
                 lógica en JS
-                de la biblioteca. Los archivos enlazados son los minificados de la bodystyle para mejorar el rendimiento
+                de la biblioteca. Los archivos enlazados son los minificados de la bodystyle para mejorar el
+                rendimiento
                 de
                 la utilización de la biblioteca.
             </p>
@@ -361,9 +346,11 @@
             <div class="alerta-negra mt-3">
                 Es importante aclarar que la incorporación de la biblioteca a través del CDN es para pruebas y para
                 probar
-                las funcionalidades aportadas. Si se trata del desarrollo de un proyecto las alternativas adecuadas para
+                las funcionalidades aportadas. Si se trata del desarrollo de un proyecto las alternativas adecuadas
+                para
                 esta labor
-                son: <span class="badge badge-black">La descarga directa</span> o incorporar la biblioteca a través de
+                son: <span class="badge badge-black">La descarga directa</span> o incorporar la biblioteca a través
+                de
                 <span class="badge badge-black">NPM</span>.
             </div>
 
@@ -542,7 +529,8 @@
 
 
 
-    <script async defer src="https://buttons.github.io/buttons.js"></script><script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script>
         var enlace = "Get Started"
         var idMenu = "#l1"
 

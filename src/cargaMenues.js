@@ -148,8 +148,8 @@ import "./bodystyle"
         document.getElementById("nav").innerHTML =
             `
         <div  class="bs-nav-md align-right-list">
-            <a  class="btn-menu"></a>
-            <a  href="#"  class="logo-container">
+            <a  class="btn-menu" aria-label="Abrir menú"></a>
+            <a  href="#"  class="logo-container" aria-label="Ir al inicio">
                 <img class='bor-rad-por-50' src="../imagenes/20191106_205049.png"  alt="Foto de perfil">
             </a>
             <div  class="ocultar-desde-medianos">
@@ -159,8 +159,8 @@ import "./bodystyle"
                 </ul>
             </div>
             <div  class="right-content">
-                <label  class="badge-mje-right badge-mje-bodyui mr-2 mb-1 ocultar-desde-x-chicos"><i class="fz-16 bs-tag">&nbsp;</i>v5.0.0</label>
-                <div class="ocultar-desde-x-chicos"><a target="_blank" href="https://mega.nz/file/UQk3WQhS#e_TBHmfNXsHuJzE9rxir387MSVM_NFv8SdEZe1VAlZI" class="ocultar-desde-x-chicos btn-sm-o btn-white-o bor-pill disparador" data-info="Versión Transpilada y procesada de bodystyle 5.0.0">Descargar</a></div>
+                <label  class="badge-mje-right badge-mje-bodyui mr-2 mb-1 ocultar-desde-x-chicos"><i class="fz-16 bs-tag">&nbsp;</i>v5.8.0</label>
+                <div class="ocultar-desde-x-chicos"><a target="_blank" href="https://mega.nz/file/wMF0GBKZ#_Z_xmxODWC6WAfqUF7fB0zowVo2qJYvc6BJn6nYkmjc" class="ocultar-desde-x-chicos btn-sm-o btn-white-o bor-pill disparador" data-info="Versión Transpilada y procesada de bodystyle 5.8.0">Descargar</a></div>
                 <!-- Botón oficial de GitHub (más interactivo) -->
                 <div class="ml-3">
                     <a class="github-button fd-gris-n" href="https://github.com/FedeManzano/bodystyle"
@@ -185,8 +185,8 @@ import "./bodystyle"
         <div class="ancho-55 ancho-m-75 ancho-s-90 ancho-xs-100">
         <div class="card">
             <div class="card-simple-dark card-cover">
-                <h4>Descargar Bodystyle<span class="badge badge-bodyui"><i class="bs-tag c-white">&nbsp;</i>5.0.0</span></h4>
-                <small>Versión 5.0.0</small>
+                <h4>Descargar Bodystyle<span class="badge badge-bodyui"><i class="bs-tag c-white">&nbsp;</i>5.8.0</span></h4>
+                <small>Versión 5.8.0</small>
                 <div class='mt-1'>
                     <a class="github-button fd-gris-n" href="https://github.com/FedeManzano/bodystyle"
                         data-icon="octicon-star" data-size="large" data-show-count="true"
@@ -197,13 +197,13 @@ import "./bodystyle"
                     la versión procesada de la librería en su 
                     <a href='https://github.com/FedeManzano/bodystyle' target='_blank' class='link tips-ele '
                     data-tips="Versión procesada de Bodystyle"
-                    data-pos='right'>versión 5.0.0</a>, el segundo botón es para descargar esta misma documentación
+                    data-pos='right'>versión 5.8.0</a>, el segundo botón es para descargar esta misma documentación
                     para no tener que ver publicidad que el hosting introduce sin permiso.
                 </p> 
-                <a target="_blank" href="https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk" class="btn-cover fd-bodyui mar-2 disparador bor-pill"
-                data-info="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v5.0.0.zip" data-pos='right'>Descargar</a>
-                <a href="https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk" target="_blank" class="btn-cover fd-blanco mar-1 com-trigger bor-pill"
-                data-info="Descarga de esta misma documentación, si ya la posee en el ambito local este botón estará deshabilitado.">Docs 2.0.0</a>
+                <a target="_blank" href="https://mega.nz/file/wMF0GBKZ#_Z_xmxODWC6WAfqUF7fB0zowVo2qJYvc6BJn6nYkmjc" class="btn-cover fd-bodyui mar-2 disparador bor-pill"
+                data-info="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v5.8.0.zip" data-pos='right'>Descargar</a>
+                <a href="" target="_blank" class="btn-cover fd-blanco mar-1 com-trigger bor-pill"
+                data-info="Descarga de esta misma documentación, si ya la posee en el ambito local este botón estará deshabilitado.">Docs 3.0.0</a>
             </div>
         </div> 
         </div>
