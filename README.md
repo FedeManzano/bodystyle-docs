@@ -84,7 +84,7 @@ npm install bodyui2
 
 ### Opción 3: Descarga Directa
 
-Descarga los archivos compilados desde [MEGA](https://mega.nz/file/UQk3WQhS#e_TBHmfNXsHuJzE9rxir387MSVM_NFv8SdEZe1VAlZI)
+Descarga los archivos compilados desde [MEGA](https://mega.nz/file/IEtFjbhL#9avwQbK0EicykZx_vGLWaMUemt53lhvpDZHRYykynNw)
 
 ## 📖 Documentación
 
