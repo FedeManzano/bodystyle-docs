@@ -1,9 +1,19 @@
 const indicesBusqueda = [
     {
+        title: "Home",
+        url: "../index.html",
+        tags: [
+            "inicio",
+            "index",
+            "home",
+            "principal",
+            "portada"
+        ]
+    },
+    {
         title: "Get Started",
         url: "get_started.html",
         tags: [
-            "inicio",
             "empezar",
             "guia",
             "introduccion",
@@ -18,6 +28,7 @@ const indicesBusqueda = [
             "boton",
             "button",
             "buttons",
+            "css"
         ]
     },
     {
@@ -28,7 +39,178 @@ const indicesBusqueda = [
             "botones",
             "grupos botones",
             "button group",
-            "group"
+            "group",
+            "css"
+        ]
+    },
+
+    {
+        title: "Grilla",
+        url: "grid.html",
+        tags: [
+            "alineamieto",
+            "grid",
+            "grilla",
+            "flex",
+            "flexbox",
+            "container",
+            "row",
+            "fila",
+            "column",
+            "columna",
+            "col",
+            "columna"
+        ]
+    },
+    {
+        title: "Flexbox",
+        url: "flexbox.html",
+        tags: [
+            "alineamieto",
+            "grid",
+            "grilla",
+            "flex",
+            "flexbox",
+            "container",
+            "responsive",
+            "row",
+            "fila",
+            "column",
+            "columna",
+            "col",
+            "columna"
+        ]
+    },
+
+    {
+        title: "Contenedor",
+        url: "contenedor.html",
+        tags: [
+            "alineamiento",
+            "grid",
+            "grilla",
+            "flex",
+            "flexbox",
+            "container",
+            "responsive",
+            "row",
+            "fila",
+            "column",
+            "columna",
+            "col",
+            "columna"
+        ]
+    },
+
+    {
+        title: "Margin",
+        url: "margin.html",
+        tags: [
+            "margin",
+            "margen",
+            "padding",
+            "espaciado",
+            "espaciado interno",
+            "espaciado externo",
+            "responsive",
+            "flexbox",
+            "alineamiento"
+        ]
+    },
+    {
+        title: "Padding",
+        url: "padding.html",
+        tags: [
+            "margin",
+            "margen",
+            "padding",
+            "espaciado",
+            "espaciado interno",
+            "espaciado externo",
+            "responsive",
+            "flexbox",
+            "alineamiento"
+        ]
+    },
+    {
+        title: "Ancho y Alto",
+        url: "ancho_alto.html",
+        tags: [
+            "ancho",
+            "alto",
+            "width",
+            "height",
+            "responsive",
+            "flexbox",
+            "grid",
+            "grilla",
+            "alineamiento"
+        ]
+    },
+    {
+        title: "Helpers",
+        url: "helpers.html",
+        tags: [
+            "ayudantes",
+            "helpers",
+            "responsive",
+            "screen",
+            "responsive",
+            "flexbox",
+            "grid",
+            "grilla",
+            "alineamiento"
+        ]
+    },
+    {
+        title: "Badges",
+        url: "badges.html",
+        tags: [
+            "badges",
+            "badge",
+            "botones",
+            "badge simple",
+            "css"
+        ]
+    },
+    {
+        title: "Mensajes",
+        url: "mensajes.html",
+        tags: [
+            "mensajes",
+            "message",
+            "botones",
+            "badge",
+            "alert",
+            "alerta",
+            "css"
+        ]
+    },
+    {
+        title: "Solapas",
+        url: "solapas.html",
+        tags: [
+            "solapas",
+            "flap",
+            "flaps",
+            "solapa",
+            "badge",
+            "css"
+        ]
+    },
+    {
+        title: "Compartir",
+        url: "compartir.html",
+        tags: [
+            "compartir",
+            "badge",
+            "badges",
+            "share",
+            "button",
+            "boton",
+            "css",
+            "buttons",
+            "botones"
         ]
     },
 ]
