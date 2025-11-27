@@ -1,5 +1,5 @@
 
-import "./bodystyle"
+import "bodyui2/dist/js/bodystyle.min"
 
 (() => {
 
