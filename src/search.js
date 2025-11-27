@@ -17,7 +17,9 @@ const indicesBusqueda = [
             "empezar",
             "guia",
             "introduccion",
-            "comienzo"
+            "comienzo",
+            "started",
+            "start",
         ]
     },
     {
@@ -211,6 +213,42 @@ const indicesBusqueda = [
             "css",
             "buttons",
             "botones"
+        ]
+    },
+
+    {
+        title: "Íconos",
+        url: "iconos.html",
+        tags: [
+            "iconos",
+            "css",
+            "icono",
+            "icon",
+            "íconos",
+            "ícono"
+        ]
+    },
+
+    {
+        title: "Alertas",
+        url: "alertas.html",
+        tags: [
+            "alerta",
+            "css",
+            "alertas",
+            "alert",
+            "alerts"
+        ]
+    },
+    {
+        title: "Tarjetas",
+        url: "tarjetas.html",
+        tags: [
+            "card",
+            "css",
+            "tarjeta",
+            "tarjetas",
+            "cards"
         ]
     },
 ]
