@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
 
-
     <meta name="description" content="Biblioteca de estilos para el desarrollo del Front-End">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -14,15 +13,12 @@
     <link rel="stylesheet"
         href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
 
-</html>
-
-
-<title>Bodystyle Biblioteca de Estilos</title>
+    <title>Bodystyle Biblioteca de Estilos</title>
 </head>
 
 <body class="body">
 
-
+    <!--NAV INI -------------------------------------------------------------------------------------------->
     <nav id="nav" class="bs-nav fd-trasparente bs-nav-fixed" data-target="#bs-nav-sidebar">
         <div class="bs-nav-sm align-left-list align-right-list">
             <label class="btn-menu ocultar-solo-grandes"></label>
@@ -65,6 +61,8 @@
             </div>
         </div>
     </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
     <!-- CABECERA DE LA PÁGINA -->
     <section class="d-flex just-center ta-c fd-gris-n "
         style="position: relative; width: 100%;min-height: 100%; position: absolute; user-select: none;">
@@ -115,117 +113,8 @@
 
 
     <script src="./js/bodystyle.min.js"></script>
+    <script src="./js/index.min.js"></script>
 
-    <script>
-        BS.ToolTipsInit()
-        BS.NavigationInit("#nav", true)
-        BS.PersonalizadoInit({ ori: "disparador", ele: "" })
-        BS.DropDownInit()
-
-        window.onload = () => {
-            setTimeout(() => {
-                BS.DesactivadoInit()
-            }, 100);
-        }
-
-
-
-        document.getElementById("descaraga_docs").setAttribute("data-info",
-            `
-                <div  class="card">
-                    <div  class="card-simple-dark">
-                        <h4>Documentación</h4>
-                        <small>Versión 3.0.0</small>
-                        <p>
-                            Desde este enlace vamos a poder descargar la 
-                            <a target="_blank" href='https://github.com/FedeManzano/bodystyle-docs' class='link'>Versión 3.0.0</a> de la documentación de <a target='_blank' href='https://github.com/FedeManzano/bodystyle' class='link'> Bodystyle 5.8.0</a>.
-                            Si ya dispone de la documentación de manera local este enlace estará deshabilitado.
-                        </p> 
-                        <a target='_blank'  href="https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk"  class="btn-cover-sm-o btn-bodyui-o  bor-pill mar-2 desactivado"><i class='bs-zip fz-22 c-yellow'>&nbsp;</i>Docs_v3.0.0.zip</a>
-                    </div>
-                </div>
-            `
-        )
-
-        document.getElementById("descarga_lib").setAttribute("data-info",
-            `
-                <div  class="card">
-                    <div  class="card-simple-dark">
-                        <h4>Bodystyle</h4>
-                        <small>Versión 5.8.0</small>
-                        <p>
-                            Versión transpilada y procesada de la biblioteca.
-                        </p> 
-                        <a target='_blank'  href="https://mega.nz/file/IEtFjbhL#9avwQbK0EicykZx_vGLWaMUemt53lhvpDZHRYykynNw"  class="btn-cover-sm-o btn-bodyui-o  bor-pill mar-2"><i class='bs-zip fz-22 c-yellow'>&nbsp;</i>Bodystyle_v5.8.0.zip</a>
-                    </div>
-                </div>
-            `
-        )
-
-        document.getElementById("autor").setAttribute("data-info",
-            `
-                <div  class="card">
-                    <div  class="card-simple-dark ta-c">
-                        <h4>Autor</h4>
-                        <small>Federico Manzano</small>
-                        <div class="ta-c d-flex flex-column ali-center mt-3">
-                            <img src="imagenes/20191106_205049.png" height='50px' width='50px' />
-                            <p>
-                                Estudiante de Ingerniería Informática de la <span class="f-w-7 c-verde">Universidad Nacional de la Matanza.</span> <br>
-                            </p>
-                            <a target="_blank" href="https://github.com/FedeManzano" class="link">@FedeManzano</a>
-                        </div>
-                    </div>
-                </div>
-            `
-        )
-
-        document.getElementById("navegador").setAttribute("data-info",
-            `
-                <div  class="card" style="z-index: 10000">
-                    <div  class="card-simple-dark ta-c">
-                        <h4>Navegador</h4>
-                        <small>Barave Browser</small>
-                        <div class="ta-c d-flex flex-column ali-center mt-3">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Brave_icon_lionface.png" height='50px' width='50px' />
-                            <p>
-                                Navegador Recomendado para ver la documentación.
-                            </p>
-                            <a href="https://brave.com/"" class="link">Descargar</a>
-                        </div>
-                    </div>
-                </div>
-            `
-        )
-
-        document.getElementById("navegador2").setAttribute("data-info",
-            `
-                <div  class="card" style="z-index: 10000">
-                    <div  class="card-simple-dark ta-c">
-                        <h4>Navegador</h4>
-                        <small>Barave Browser</small>
-                        <div class="ta-c d-flex flex-column ali-center mt-3">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Brave_icon_lionface.png" height='50px' width='50px' />
-                            <p>
-                                Navegador Recomendado para ver la documentación.
-                            </p>
-                            <a href="https://brave.com/"" class="link">Descargar</a>
-                        </div>
-                    </div>
-                </div>
-            `
-        )
-
-        window.onload = () => {
-            setTimeout(() => {
-                document.querySelectorAll("ins").forEach(e => e.remove())
-                document.querySelectorAll("iframe").forEach(e => e.remove())
-            }, 100)
-        }
-
-
-
-    </script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 

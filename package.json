@@ -6,7 +6,8 @@
   "author": "Federico Manzano",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "minify": "powershell -ExecutionPolicy Bypass -File minify-js.ps1"
   },
   "devDependencies": {
     "@babel/core": "^7.28.4",

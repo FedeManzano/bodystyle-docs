@@ -97,6 +97,10 @@ Visita la documentación completa en: **[bodystyle.webcindario.com](https://body
 - 📥 [Documentación v5.0.0](https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk) - **Versión anterior**
 - 📦 [Todas las versiones](https://mega.nz/folder/VdMHERDR#gjbVQoWuKsIjNYJ39X1Dcw)
 
+### 📋 Historial de Cambios
+- 📝 [CHANGELOG.md](CHANGELOG.md) - Historial completo de cambios
+- 🌐 [Changelog Visual](changelog.html) - Versión HTML interactiva
+
 ## 📂 Estructura del Proyecto
 
 ```
@@ -120,6 +124,8 @@ bs_docs/
 ├── 4.8.0/              # Documentación v4.8.0
 ├── 4.5.0/              # Documentación v4.5.0
 ├── 4.0.0/              # Documentación v4.0.0
+├── CHANGELOG.md        # Historial de cambios
+├── changelog.html      # Changelog visual
 └── README.md           # Este archivo
 ```
 
