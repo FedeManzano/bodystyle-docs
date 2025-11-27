@@ -6,13 +6,13 @@
     <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
 
     
-    <meta name="description" content="Elemento dinÃ¡mico que le permite al usuario volver al inicio de la pÃ¡gina.">
+    <meta name="description" content="Elemento dinámico que le permite al usuario volver al inicio de la página.">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/bodystyle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     
-    <title>BotÃ³n Inicio</title>
+    <title>Botón Inicio</title>
     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/boton_inicio.html">
 </head>
 <body>
@@ -26,14 +26,14 @@
     <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
-    <!--CONTENIDO DE LA PÃGINA (INICIO) -------------------------------------------------------------------->
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
-            <h1 id="t1">BotÃ³n Inicio</h1>
+            <h1 id="t1">Botón Inicio</h1>
             <p>
-                Elemento simple y dinÃ¡mico que le permite al usuario volver al inicio de la pÃ¡gina. El botÃ³n 
-                se muestra cuando el scroll se posiciona a 100px del inicio de la pÃ¡gina.
+                Elemento simple y dinámico que le permite al usuario volver al inicio de la página. El botón 
+                se muestra cuando el scroll se posiciona a 100px del inicio de la página.
             </p>
             
             <div class="mar-2 boton-descarga"></div>
@@ -42,42 +42,42 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="t2">InicializaciÃ³n</h2>
+            <h2 id="t2">Inicialización</h2>
             <p>
                 Para inicializar este elemento hay que disponer del archivo <span class="badge badge-grey">bodystyle.min.js</span>
-                agregado al proyecto y luego iniciar el mÃ³dulo correspondiente al botÃ³n de inicio. <br>
-                Esta documentaciÃ³n posee el botÃ³n en la parte inferior derecha de cada pÃ¡gina y sirve como muestra de como se verÃ­a 
+                agregado al proyecto y luego iniciar el módulo correspondiente al botón de inicio. <br>
+                Esta documentación posee el botón en la parte inferior derecha de cada página y sirve como muestra de como se vería 
                 el elemento en un sitio en desarrollo.
             </p>
 <div class="codigo">
 <pre class="cod-js" id="c1">
     /*
             Dentro de etiquetas script de html debajo del archivo bodystyle.min.js 
-            agregar el siguiente cÃ³digo. 
+            agregar el siguiente código. 
     */
-    BS.BotonInicioInit() // AutomÃ¡ticamente aparecerÃ¡ el BotÃ³n
+    BS.BotonInicioInit() // Automáticamente aparecerá el Botón
 </pre>
 </div>
         <h3 id="t3">Destroy</h3>
         <p>
-            Para desvincular el botÃ³n de la pÃ¡gina en la cual se encuentre es necesario 
-            utilizar la funciÃ³n destroy.
+            Para desvincular el botón de la página en la cual se encuentre es necesario 
+            utilizar la función destroy.
         </p>
 
         <div class="codigo">
 <pre class="cod-js" id="c1">
-    // Destruye el botÃ³n
+    // Destruye el botón
     BS.BotonInicioDestroy() 
 </pre>
 </div>
 
-        <button id="desactivador" class="btn fd-bodyui">Desactivar BotÃ³n</button>
+        <button id="desactivador" class="btn fd-bodyui">Desactivar Botón</button>
 
                 <div class="codigo">
 <pre class="cod-js" id="c1">
     document.getElementById("desactivador").addEventListener("click", () => {
         BS.BotonInicioDestroy()
-        BS.Toast({html: "BotÃ³n destruido"})
+        BS.Toast({html: "Botón destruido"})
     })
 </pre>
 </div>
@@ -87,22 +87,22 @@
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
-    <!--CONTENIDO DE LA PÃGINA (FINAL) --------------------------------------------------------------------->
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
 
-    <!--GUIA DE LA PÃGINA INI------------------------------------------------------------------------------->
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
     
     <div class="lista-scroll">
         <ul>
-            <li><a href="#t1">BotÃ³n Inicio</a></li>
-            <li><a href="#t2">InicializaciÃ³n</a></li>
+            <li><a href="#t1">Botón Inicio</a></li>
+            <li><a href="#t2">Inicialización</a></li>
             <li><a href="#t3">Destroy</a></li>
         </ul>
     </div>
-    <!--GUIA DE LA PÃGINA FIN------------------------------------------------------------------------------->
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
     <!--JS --------------------------------------------------------------------------------------------------------------><script> 
-        var enlace = "BotÃ³n Inicio"
+        var enlace = "Botón Inicio"
         var idMenu = "#l5"
         
     </script>
@@ -112,7 +112,7 @@
         document.querySelector("#l5 ul li:nth-child(4) a")?.classList.add("c-bodyui");
         document.getElementById("desactivador").addEventListener("click", () => {
             BS.BotonInicioDestroy()
-            BS.Toast({html: "BotÃ³n destruido"})
+            BS.Toast({html: "Botón destruido"})
         })
     </script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>`r`n</body>

@@ -6,7 +6,7 @@
     <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
 
     
-    <meta name="description" content="NÃºcleo de posicionamiento dinÃ¡mico que permite posicionar cualquier tipo de elementos.">
+    <meta name="description" content="Núcleo de posicionamiento dinámico que permite posicionar cualquier tipo de elementos.">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/bodystyle.min.css">
@@ -96,21 +96,21 @@
     <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
-    <!--CONTENIDO DE LA PÃGINA (INICIO) -------------------------------------------------------------------->
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
             <h1 id="t1">Tips Propios</h1>
             <p>
-                En otras secciones de esta documentaciÃ³n vimos los <a href="tooltips.html" class="link disparador"
-                data-info="Otro elemento dinÃ¡mico proporcionado por la biblioteca Bodystyle.">ToolTips</a> y 
+                En otras secciones de esta documentación vimos los <a href="tooltips.html" class="link disparador"
+                data-info="Otro elemento dinámico proporcionado por la biblioteca Bodystyle.">ToolTips</a> y 
                 los <a href="comentarios.html" class="link disparador"
                 data-info="Comentarios con mucho texto que se agregan al ejecuar un evento click o hover.">Comentarios</a> para posicionar e informar 
                 que hace un determinado elemento. Ahora vamos crear nuetros propios tips con sus estilos personalizados 
-                para mostrar la informaciÃ³n como mejor se ajuste a las necesidades. <br>
+                para mostrar la información como mejor se ajuste a las necesidades. <br>
                 Es importate recalcar que esta funcionalidad lo aporta el Core de posicionamiento <a href="https://github.com/FedericoManzano/dynamics-tips" class="link disparador"
-                data-info="<span class='f-w-7'>Dinamics-Tips v1.8.0</span> Dependencia de Bodystyle que gestiÃ³na todo el posicionamiento dinÃ¡mico.">Dinamics Tips v1.8.0</a> que permite 
-                la correcta gestiÃ³n de toda la dinÃ¡mica de la biblioteca.
+                data-info="<span class='f-w-7'>Dinamics-Tips v1.8.0</span> Dependencia de Bodystyle que gestióna todo el posicionamiento dinámico.">Dinamics Tips v1.8.0</a> que permite 
+                la correcta gestión de toda la dinámica de la biblioteca.
             </p>
             
             <div class="mar-2 boton-descarga"></div>
@@ -119,10 +119,10 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="t2">InicializaciÃ³n</h2>
+            <h2 id="t2">Inicialización</h2>
             <p>
-                Para disponer de esta funcionalidad hay que inicializar el mÃ³dulo 
-                correspondiente que permitirÃ¡ el posicionamiento dinÃ¡mico en donde lo definamos.
+                Para disponer de esta funcionalidad hay que inicializar el módulo 
+                correspondiente que permitirá el posicionamiento dinámico en donde lo definamos.
             </p>
 
 <div class="codigo">
@@ -130,28 +130,28 @@
     /*
          Forma 1: 
                 Si los elementos a los cuales les asociaremos 
-         un elemento dinÃ¡mico se incluyen dentro del HTML de manera 
-         estÃ¡tica utilizaremos esta forma.
+         un elemento dinámico se incluyen dentro del HTML de manera 
+         estática utilizaremos esta forma.
     */
 
     OBJ JSON Con los siguientes attr 
     let conf = {
         ori: "Clase del elemento Disparador", // Ej: .disparador 
-        ele: "Clases que afectan al elemento dinÃ¡mico" // EJ: bg-red c-white
+        ele: "Clases que afectan al elemento dinámico" // EJ: bg-red c-white
     }
 
     BS.PersonalizadoInit(conf)
-    // BS.PersonalizeInit(conf) // Alias desde la versiÃ³n 5.0.0
+    // BS.PersonalizeInit(conf) // Alias desde la versión 5.0.0
 
     /**
         Forma 2:
-                Si los elementos a los cuales queremos asociar un elemento dinÃ¡mico
-        se incluyen dentro del HTML de forma dinÃ¡mica utilizaremos esta forma. 
+                Si los elementos a los cuales queremos asociar un elemento dinámico
+        se incluyen dentro del HTML de forma dinámica utilizaremos esta forma. 
     */
     window.onload = () => {
         setTimeout( () => {
             BS.PersonalizadoInit(conf)
-            // BS.PersonalizeInit(conf) // Alias desde la versiÃ³n 5.0.0
+            // BS.PersonalizeInit(conf) // Alias desde la versión 5.0.0
         }, 100) // 100 ms de retardo
     }
 </pre>
@@ -159,53 +159,53 @@
             <div class="alerta-negra">
                 Para ambos casos es necesario disponer del archivo 
                 <a id="archivo_js"  href="https://github.com/FedeManzano/bodystyle/blob/master/dist/js/bodystyle.min.js" class="link disparador"
-                data-info="Archivo JS de la biblioteca bodystyle tiene que estar aÃ±adido al proyecto en desarrollo para utlizar los tips personalidos">
+                data-info="Archivo JS de la biblioteca bodystyle tiene que estar añadido al proyecto en desarrollo para utlizar los tips personalidos">
                     <i class="bs-js c-yellow"></i>
                     bodystyle.min.js
                 </a>
-                una vez agregado se puede inicializar el mÃ³dulo que servirÃ¡ para toda la pÃ¡gina y permitirÃ¡ la carga con las clases personalizadas al elemento dinÃ¡mico.
+                una vez agregado se puede inicializar el módulo que servirá para toda la página y permitirá la carga con las clases personalizadas al elemento dinámico.
             </div>
             <h3 id="t3">Muestra</h3>
             <p class="mb-3">
-                Se toma para este ejmplo la alerta roja de la biblioteca que estÃ¡n documentadas en apartados anteriores en la secciÃ³n de 
+                Se toma para este ejmplo la alerta roja de la biblioteca que están documentadas en apartados anteriores en la sección de 
                 CSS, <a href="alertas.html" class="link">Ver Alertas</a>. 
             </p>
 
-            <a href="#" class="btn-sm fd-bodyui disparador" data-info="Este es un botÃ³n de Bodystyle con el color bodyui personalizado." data-pos="right">HOVER</a>
+            <a href="#" class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado." data-pos="right">HOVER</a>
 
             <div class="alerta-negra mt-3">
-                El botÃ³n anterior a travÃ©s del evento HOVER (cuando el cursor pasa por encima del elemento) muestra 
+                El botón anterior a través del evento HOVER (cuando el cursor pasa por encima del elemento) muestra 
                 una alerta de la biblioteca, de esta forma se logra personalizar al tooltips. Es importate aclarar 
                 que hay que definir un nombre de clase, en este caso la clase es <span class="badge badge-red">.disparador</span> 
-                y agregarsela al elemento disparador, luego le pasamos como parÃ¡metro a la funciÃ³n de inicializaciÃ³n esta clase a travÃ©s 
-                del objeto <span class="badge badge-black">JSON</span> de la configuraciÃ³n.
+                y agregarsela al elemento disparador, luego le pasamos como parámetro a la función de inicialización esta clase a través 
+                del objeto <span class="badge badge-black">JSON</span> de la configuración.
             </div>
 
 <div class="codigo">
 <pre class="cod-html" id="c2">
     <!--Este es el elemento disparador del tooltips personalizado 
         Como se puede ver tiene asignada la clase disparador y el atributo data-info que es donde 
-        se suministrarÃ¡ el contenido a mostrar, luego se establece la posiciÃ³n con el attr data-pos que por default 
+        se suministrará el contenido a mostrar, luego se establece la posición con el attr data-pos que por default 
         es (bottom).
     -->
-    <a href="#" class="btn-sm fd-bodyui disparador" data-info="Este es un botÃ³n de Bodystyle con el color bodyui personalizado." data-pos="right">HOVER</a>
+    <a href="#" class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado." data-pos="right">HOVER</a>
 </pre>
 </div>
 <div class="codigo">
 <pre class="cod-js" id="c3">
     /** 
-        La clase disparador se tomÃ³ como ejemplo 
+        La clase disparador se tomó como ejemplo 
         puede ser cualquiera, lo importante es que 
         el Objeto Disparador tenga la misma clase que se 
-        envÃ­a por parÃ¡mmetro en el origen.
+        envía por parámmetro en el origen.
     */
     BS.PersonalizadoInit({ori: "disparador", ele: "alert-op-red"})
 </pre>
 </div>
 
         <div class="alerta-negra">
-            Es importante aclarar que el attr <span class="badge badge-black">data-info</span> recibe cÃ³digo html, esto implica 
-            que tambiÃ©n se le pueden asignar estilos al contenido de los tooltips personalizados. 
+            Es importante aclarar que el attr <span class="badge badge-black">data-info</span> recibe código html, esto implica 
+            que también se le pueden asignar estilos al contenido de los tooltips personalizados. 
         </div>
         
         <h3 id="t4">Evento Click</h3>
@@ -215,18 +215,18 @@
             el <span class="badge badge-black">data-evt</span> con el valor <span class="badge badge-grey">click</span>.
         </p>
 
-         <a class="btn-sm fd-bodyui disparador" data-info="Este es un botÃ³n de Bodystyle con el color bodyui personalizado a travÃ©s del evento click" data-pos="right" data-evt="click">CLICK ME!</a>
+         <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="right" data-evt="click">CLICK ME!</a>
         
 <div class="codigo">
     <pre id="c4" class="cod-html">
         <!-- Evento click con el attr data-evt="click" -->
-         <a class="btn-sm fd-bodyui disparador" data-info="Este es un botÃ³n de Bodystyle con el color bodyui personalizado a travÃ©s del evento click" data-pos="right" data-evt="click">CLICK ME!</a>
+         <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="right" data-evt="click">CLICK ME!</a>
     </pre>
 </div>
 
         <div class="alerta-negra">
-            La inicializaciÃ³n fue hecha anteriormente, ya no es necesario inicializar el mÃ³dulo nuevamente la inicializaciÃ³n 
-            durarÃ¡ todo el tiempo que el usuario estÃ© dentro de la pÃ¡gina.
+            La inicialización fue hecha anteriormente, ya no es necesario inicializar el módulo nuevamente la inicialización 
+            durará todo el tiempo que el usuario esté dentro de la página.
         </div>
         </article>
 
@@ -237,20 +237,20 @@
             </p>
 
             <div class="d-flex just-around flex-wrap mt-3">
-                 <a class="btn-sm fd-bodyui disparador" data-info="Este es un botÃ³n de Bodystyle con el color bodyui personalizado a travÃ©s del evento click" data-pos="right">RIGHT</a>
-                 <a class="btn-sm fd-bodyui disparador" data-info="Este es un botÃ³n de Bodystyle con el color bodyui personalizado a travÃ©s del evento click" data-pos="left">LEFT</a>
-                <a class="btn-sm fd-bodyui disparador" data-info="Este es un botÃ³n de Bodystyle con el color bodyui personalizado a travÃ©s del evento click" data-pos="top">TOP</a>
-                <a class="btn-sm fd-bodyui disparador" data-info="Este es un botÃ³n de Bodystyle con el color bodyui personalizado a travÃ©s del evento click">BOTTOM</a>
+                 <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="right">RIGHT</a>
+                 <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="left">LEFT</a>
+                <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="top">TOP</a>
+                <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click">BOTTOM</a>
             </div>
 
 <div class="codigo">
     <pre id="c5" class="cod-html">
         <!-- Esto es un ejemplo de posicionamiento en todas las direcciones-->
         <div class="d-flex just-around mt-3">
-            <a class="btn-sm fd-bodyui disparador" data-info="Este es un botÃ³n de Bodystyle con el color bodyui personalizado a travÃ©s del evento click" data-pos="right">RIGHT</a>
-            <a class="btn-sm fd-bodyui disparador" data-info="Este es un botÃ³n de Bodystyle con el color bodyui personalizado a travÃ©s del evento click" data-pos="left">LEFT</a>
-            <a class="btn-sm fd-bodyui disparador" data-info="Este es un botÃ³n de Bodystyle con el color bodyui personalizado a travÃ©s del evento click" data-pos="top">TOP</a>
-            <a class="btn-sm fd-bodyui disparador" data-info="Este es un botÃ³n de Bodystyle con el color bodyui personalizado a travÃ©s del evento click">BOTTOM</a>
+            <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="right">RIGHT</a>
+            <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="left">LEFT</a>
+            <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click" data-pos="top">TOP</a>
+            <a class="btn-sm fd-bodyui disparador" data-info="Este es un botón de Bodystyle con el color bodyui personalizado a través del evento click">BOTTOM</a>
         </div>
     </pre>
 </div>
@@ -259,7 +259,7 @@
             <h2 id="t6">Clase Personalizada</h2>
             <p>
                 Hasta ahora vimos como crear un tips personalizado con las clases de la biblioteca pero que pasa cuando queremos 
-                asignarle una clase seleccionada por el desarrollador (que no pertenece a biblioteca)?. Es lo veremos a continuaciÃ³n, 
+                asignarle una clase seleccionada por el desarrollador (que no pertenece a biblioteca)?. Es lo veremos a continuación, 
                 primero debemos crear una clase para poder asignarla.
             </p>
 
@@ -302,9 +302,9 @@
         <article class="articulo">
             <h2 id="t7">Objetos Personalizados</h2>
             <p>
-                Ahora nos dedicaremos a un ejemplo mÃ¡s complicado, de manera tal de poder 
+                Ahora nos dedicaremos a un ejemplo más complicado, de manera tal de poder 
                 asignar un contenedor complejo a los diferentes disparadores, para esta tarea 
-                deberemos crear un contenedor dinÃ¡mico (desde JS) para despuÃ©s poder asignarselo 
+                deberemos crear un contenedor dinámico (desde JS) para después poder asignarselo 
                 al attr <span class="badge badge-negro">data-info</span> del disparador.
             </p>
             <h3 id="t8">Ejemplo 1</h3>
@@ -320,8 +320,8 @@
         document.getElementById("id_disparador").setAttribute("data-info", `
             <div  class="card">
                 <div  class="card-simple-dark">
-                    <h4>TÃ­tulo de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
-                    <small>PequeÃ±a descripciÃ³n</small>
+                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                    <small>Pequeña descripción</small>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
                     </p> 
@@ -334,14 +334,14 @@
 
 <div class="codigo">
     <pre id="10" class="cod-html">
-    <!--Notese con el attr queda vacÃ­o para agregar informaciÃ³n dinamicamante.-->
+    <!--Notese con el attr queda vacío para agregar información dinamicamante.-->
     <a id="id_disparador" class="btn-sm fd-bodyui disparador" data-info="" data-pos="right">HOVER</a>
     </pre>
 </div>
 <div class="codigo">
     <pre id="11" class="cod-js">
-        // El atributo (ele) de la configuraciÃ³n va vacÃ­o o inexistente (en este caso no es obligatorio).
-        BS.PersonalizadoInit({ori: "disparador", ele: ""}) // Notese que elemento va vacÃ­o
+        // El atributo (ele) de la configuración va vacío o inexistente (en este caso no es obligatorio).
+        BS.PersonalizadoInit({ori: "disparador", ele: ""}) // Notese que elemento va vacío
     </pre>
 </div>
 
@@ -351,12 +351,12 @@
             <h3 id="t9">Ejemplo2</h3>
             <p class="mb-3">
                 Ahora vamos a tratar de utilizar un elemento creado completamente con clases de la biblioteca 
-                como objeto dinÃ¡mico asociado a un elemento disparador que va a permitir mostrarlo. <br>
-                Para visualizar mejor el ejemplo primero vamos a ver como se verÃ­a el objeto dinÃ¡mico de forma estÃ¡tica.
+                como objeto dinámico asociado a un elemento disparador que va a permitir mostrarlo. <br>
+                Para visualizar mejor el ejemplo primero vamos a ver como se vería el objeto dinámico de forma estática.
             </p>
 
             <div class='p-2 bor-grey-1 bor-rad-10 fd-gris-c c-grey-o ta-c' style="width: 270px;">
-                <h4 class="c-black m-0">Esto es el tÃ­tulo</h4>
+                <h4 class="c-black m-0">Esto es el título</h4>
                 <div class='divisor my-2'></div>
                 <p class="lh-20 c-black">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. strum.
@@ -367,7 +367,7 @@
 <div class="codigo">
     <pre id="c12" class="cod-html">
        <div class='p-2 bor-grey-1 bor-rad-10 fd-gris-c c-grey-o ta-c' style="width: 270px;">
-            <h4>Esto es el tÃ­tulo</h4>
+            <h4>Esto es el título</h4>
             <div class='divisor my-2'></div>
             <p class="lh-20">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. strum.
@@ -379,32 +379,32 @@
 </div>
 
         <div class="alerta-negra">
-            Como se puede observar se aÃ±adieron <a href="iconos.html" class="link">Ãconos</a> a la biblioteca que 
-            en este ejempo se utilizarÃ¡n para ilustrar este ejemplo.
+            Como se puede observar se añadieron <a href="iconos.html" class="link">Íconos</a> a la biblioteca que 
+            en este ejempo se utilizarán para ilustrar este ejemplo.
         </div>
 
 <div class="codigo">
     <pre id="c13" class="cod-html">
         <!--Elemento disparador con un ID mensaje para identicarlo -->
-        <!-- Notese que el attr data-info esta vacÃ­o -->
+        <!-- Notese que el attr data-info esta vacío -->
         <a id="mensaje" class="btn-lg-o btn-bodyui-o bor-pill disparador" data-evt="click" data-info="" >Disp &nbsp;<i class=" bs-sol c-yellow fz-20"></i></a>
     </pre>
 </div>
 
 <div class="codigo">
     <pre id="c14" class="cod-js">
-        // Inicializa el mÃ³dulo de elementos dinÃ¡micos personalizados
-        // Notese que segundo parÃ¡metro para lo que vamos a hacer no es obligatorio 
+        // Inicializa el módulo de elementos dinámicos personalizados
+        // Notese que segundo parámetro para lo que vamos a hacer no es obligatorio 
         // El elemento disparador va a tener la clase disparador
         BS.PersonalizadoInit({ori: "disparador", ele: ""})
 
         /**
             Con JQUERY le inyectamos el elemento al atributo data-info del 
-            disparador para que estÃ© a disposiciÃ³n de la lÃ³gica del posicionamiento
+            disparador para que esté a disposición de la lógica del posicionamiento
         */
         document.getElementById("mensaje").setAttribute("data-info", `
           <div class='p-2 bor-grey-1 bor-rad-10 fd-gris-c c-grey-o ta-c'>
-              <h4>Esto es el tÃ­tulo</h4>
+              <h4>Esto es el título</h4>
               <div class='divisor my-2'></div>
               <p class="lh-20 ">
                  Lorem ipsum dolor sit amet consectetur adipisicing elit. strum.
@@ -420,8 +420,8 @@
         <h3 id="t10">Ejemplo 3</h3>
         <p>
             En el siguiente ejemplo utilizaremos un menu muy utilizado las funcionalidades 
-            de este apartado. El objetivo es que cuando se hace click en un botÃ³n se despliega el menÃº 
-            a la derecha del botÃ³n.
+            de este apartado. El objetivo es que cuando se hace click en un botón se despliega el menú 
+            a la derecha del botón.
         </p>
 
         <h4>CSS</h4>
@@ -500,7 +500,7 @@
             </div>
             <div class="item">
                 <i class=" bs-js-2"></i>
-                <a href="">ConfiguraciÃ³n</a>
+                <a href="">Configuración</a>
             </div>
             <div class="divisor mb-1"></div>
             <div class="item">
@@ -553,7 +553,7 @@
                 </div>
                 <div class="item">
                     <i class=" bs-js-2"></i>
-                    <a href="">ConfiguraciÃ³n</a>
+                    <a href="">Configuración</a>
                 </div>
 
                 <div class="divisor mb-1"></div>
@@ -583,13 +583,13 @@
             </div>  
             
             <div class="alerta-negra mt-3">
-                La inicializaciÃ³n del elemento se realiza con la misma funciÃ³n utilizada en los ejemplos anteriores, 
+                La inicialización del elemento se realiza con la misma función utilizada en los ejemplos anteriores, 
                 solo se realiza una sola vez.
             </div>
 
-            <h4 class="mab-3">InserciÃ³n del Elemento</h4>
+            <h4 class="mab-3">Inserción del Elemento</h4>
             <p>
-                Ahora hay que aÃ±adir el codigo html visto anteriormente dentro del attr 
+                Ahora hay que añadir el codigo html visto anteriormente dentro del attr 
                 <span class="badge badge-black">data-info</span> del elemento disparador.
             </p>
 <div class="codigo">
@@ -620,7 +620,7 @@
             </div>
             <div class="item">
                 <i class=" bs-js-2"></i>
-                <a href="">ConfiguraciÃ³n</a>
+                <a href="">Configuración</a>
             </div>
             <div class="divisor mb-1"></div>
             <div class="item">
@@ -649,20 +649,20 @@
     </pre>
 </div>
 
-        <a href="muestras/personalizado_menu.html" class="link">Muestra Del MenÃº</a>
+        <a href="muestras/personalizado_menu.html" class="link">Muestra Del Menú</a>
         </article>
 
         <article class="articulo">
             <h2 id="t11">Destroy <span class="badge badge-red">5.0.0</span></h2>
             <p>
-                A partir de la versiÃ³n 5.0.0 se aÃ±ade la posibilidad de desvincular la lÃ³gica 
-                de los elementos dinÃ¡micos vistos en esta secciÃ³n de la documentaciÃ³n para optimizar recursos.
+                A partir de la versión 5.0.0 se añade la posibilidad de desvincular la lógica 
+                de los elementos dinámicos vistos en esta sección de la documentación para optimizar recursos.
             </p>
 
 <div class="codigo">
     <pre id="c15" class="cod-js">
         BS.PersonalizadoDestroy()
-        // BS.PersonalizeDestroy() // Alias en inglÃ©s hace lo mismo
+        // BS.PersonalizeDestroy() // Alias en inglés hace lo mismo
     </pre>
 </div>
 
@@ -671,13 +671,13 @@
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
-    <!--CONTENIDO DE LA PÃGINA (FINAL) --------------------------------------------------------------------->
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
 
-    <!--GUIA DE LA PÃGINA INI------------------------------------------------------------------------------->
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
     <div class="lista-scroll">
         <ul>
             <li><a href="#t1">Tips Propios</a></li>
-            <li><a href="#t2">InicializaciÃ³n</a></li>
+            <li><a href="#t2">Inicialización</a></li>
             <li><a href="#t3">Muestra Hover</a></li>
             <li><a href="#t4">Evento Click</a></li>
             <li><a href="#t5">Posiciones</a></li>
@@ -688,7 +688,7 @@
             <li><a href="#t10">Ejemplo 3</a></li>
         </ul>
     </div>
-    <!--GUIA DE LA PÃGINA FIN------------------------------------------------------------------------------->
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
     <!--JS --------------------------------------------------------------------------------------------------------------><script> 

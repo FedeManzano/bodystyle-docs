@@ -6,13 +6,13 @@
     <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
 
     
-    <meta name="description" content="Todos los mÃ³dulos de la biblioteca enumerados y cuantificados.">
+    <meta name="description" content="Todos los módulos de la biblioteca enumerados y cuantificados.">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/bodystyle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     
-    <title>MÃ³dulos</title>
+    <title>Módulos</title>
     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/modulos.html">
 </head>
 <body>
@@ -28,16 +28,16 @@
     <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
-    <!--CONTENIDO DE LA PÃGINA (INICIO) -------------------------------------------------------------------->
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
-            <h1 id="t1">MÃ³dulos</h1>
+            <h1 id="t1">Módulos</h1>
             <p>
-                Una forma de apreciar la biblioteca Bodystyle es a travÃ©s de los estilos implementados en sass y procesados 
-                a css, la otra forma es la lÃ³gica que acompaÃ±a a los elementos establecida en JS. En este apartado veremos 
-                como se compone la lÃ³gica de la librerÃ­a con el fin de documentar y cuantificar cada uno de los mÃ³dulos, como asÃ­ 
-                tambiÃ©n los mensajes de errores en caso de una invÃ¡lida inicializaciÃ³n.
+                Una forma de apreciar la biblioteca Bodystyle es a través de los estilos implementados en sass y procesados 
+                a css, la otra forma es la lógica que acompaña a los elementos establecida en JS. En este apartado veremos 
+                como se compone la lógica de la librería con el fin de documentar y cuantificar cada uno de los módulos, como así 
+                también los mensajes de errores en caso de una inválida inicialización.
             </p>
 
 
@@ -50,9 +50,9 @@
         <article class="articulo">
             <h2 id="t2">Generalidades</h2>
             <p>
-                Bodystyle se compone por 27 mÃ³dulos separados escritos en lenguaje JS en los cuales muchos de ellos 
-                tienen que ser inicializados con las funciones perinentes segÃºn se los necesite. <br>
-                Para lograr esta tarea es necesario disponer el archivo que contiene a los mÃ³dulos y permita la inicializaciÃ³n 
+                Bodystyle se compone por 27 módulos separados escritos en lenguaje JS en los cuales muchos de ellos 
+                tienen que ser inicializados con las funciones perinentes según se los necesite. <br>
+                Para lograr esta tarea es necesario disponer el archivo que contiene a los módulos y permita la inicialización 
                 antes mencionada.
             </p>
 
@@ -60,20 +60,20 @@
 
 <div class="codigo">
 <pre class="cod-html" id="c1">
-    <!-- UtilizaciÃ³n de la lÃ³gica de la biblioteca -->
-    <!-- Donde path el la ruta de la ubicaciÃ³n del archivo bodystyle.min.js -->
+    <!-- Utilización de la lógica de la biblioteca -->
+    <!-- Donde path el la ruta de la ubicación del archivo bodystyle.min.js -->
     <script src="[path]/bodystyle.min.js"></script>
 
     <script>
         // Dentro de las etiquetas script de html
-        // Objeto BS encargado de brindar acceso a cada mÃ³dulo de la librerÃ­a
-       // BS.[modulo a iniciar] // A lo largo de la documentaciÃ³n de mostrarÃ¡ detalladamente como iniciarlos
+        // Objeto BS encargado de brindar acceso a cada módulo de la librería
+       // BS.[modulo a iniciar] // A lo largo de la documentación de mostrará detalladamente como iniciarlos
     </script>
 </pre>
 </div>
-            <h3>Listado de mÃ³dulos</h3>
+            <h3>Listado de módulos</h3>
             <p class="mb-3">
-                Como se mencionÃ³ anteriormente Bodystyle cuenta con 27 mÃ³dulos los cuales se detallarÃ¡n a continuaciÃ³n.
+                Como se mencionó anteriormente Bodystyle cuenta con 27 módulos los cuales se detallarán a continuación.
             </p>
             <div class="table-responsive" style="overflow-x: scroll; white-space: nowrap;">
                 <table class="table-sm vertical-border selector table-dark table-bor-grey">
@@ -81,116 +81,116 @@
                         <tr>
                             <th>ID</th>
                             <th>Nombre</th>
-                            <th>ParÃ¡metros</th>
+                            <th>Parámetros</th>
                             <th>Tipos</th>
-                            <th>IniciaciÃ³n</th>
-                            <th>DestrucciÃ³n</th>
-                            <th>DescripciÃ³n</th>
+                            <th>Iniciación</th>
+                            <th>Destrucción</th>
+                            <th>Descripción</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>01</td>
                             <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Alertas.js" class="link tips-ele"
-                                data-tips="CÃ³digo Fuente">Alertas</a></td>
+                                data-tips="Código Fuente">Alertas</a></td>
                             <td>NO</td>
                             <td>N/A</td>
                             <td>Auto</td>
                             <td>N/A</td>
-                            <td>Brinda la posibilidad de cerrar las alertas definidas en la pÃ¡gina no requiere inicializaciÃ³n manual lo realiza de manera automÃ¡tica</td>
+                            <td>Brinda la posibilidad de cerrar las alertas definidas en la página no requiere inicialización manual lo realiza de manera automática</td>
                         </tr>
                         <tr>
                             <td>02</td>
-                            <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/BotonInicio.js" class="link tips-ele" data-tips="CÃ³digo Fuente">BotonInicio</a></td>
+                            <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/BotonInicio.js" class="link tips-ele" data-tips="Código Fuente">BotonInicio</a></td>
                             <td>NO</td>
                             <td>N/A</td>
                             <td>BS.BotonInicioInit()</td>
                             <td>BS.BotonInicioDestroy()</td>
-                            <td>BotÃ³n que se muestra en la parte inferior de la pÃ¡gina y que le permite al usuario volver al inicia de la misma con un click</td>
+                            <td>Botón que se muestra en la parte inferior de la página y que le permite al usuario volver al inicia de la misma con un click</td>
                         </tr>
                         <tr>
                             <td>03</td>
-                            <td>CÃ³digoC</td>
+                            <td>CódigoC</td>
                             <td>SI</td>
                             <td>JSON</td>
                             <td>
-                                FunciÃ³n: BS.CodeCInit
+                                Función: BS.CodeCInit
                                 <ul class="ml-3"> 
                                     <li>texto</li>
                                     <li>lineas</li>
                                 </ul> 
                             </td>
                             <td>N/A</td>
-                            <td>Permite colorear el cÃ³digo en lenguaje C dentro de las etiquetas pre de HTML</td>
+                            <td>Permite colorear el código en lenguaje C dentro de las etiquetas pre de HTML</td>
                         </tr>
                         <tr>
                             <td>04</td>
-                            <td>CÃ³digoCSS</td>
+                            <td>CódigoCSS</td>
                             <td>SI</td>
                             <td>JSON</td>
                             <td>
-                                FunciÃ³n: BS.CodeCssInit
+                                Función: BS.CodeCssInit
                                 <ul class="ml-3"> 
                                     <li>texto</li>
                                     <li>lineas</li>
                                 </ul> 
                             </td>
                             <td>N/A</td>
-                            <td>Permite colorear el cÃ³digo en lenguaje CSS dentro de las etiquetas pre de HTML</td>
+                            <td>Permite colorear el código en lenguaje CSS dentro de las etiquetas pre de HTML</td>
                         </tr>
                         <tr>
                             <td>05</td>
-                            <td>CÃ³digoHTML</td>
+                            <td>CódigoHTML</td>
                             <td>SI</td>
                             <td>JSON</td>
                             <td>
-                                FunciÃ³n: BS.CodeHtmlInit
+                                Función: BS.CodeHtmlInit
                                 <ul class="ml-3"> 
                                     <li>texto</li>
                                     <li>lineas</li>
                                 </ul> 
                             </td>
                             <td>N/A</td>
-                            <td>Permite colorear el cÃ³digo en lenguaje HTML dentro de las etiquetas pre de HTML</td>
+                            <td>Permite colorear el código en lenguaje HTML dentro de las etiquetas pre de HTML</td>
                         </tr>
                         <tr>
                             <td>05</td>
-                            <td>CÃ³digoJAVA</td>
+                            <td>CódigoJAVA</td>
                             <td>SI</td>
                             <td>JSON</td>
                             <td>
-                                FunciÃ³n: BS.CodeJavaInit
+                                Función: BS.CodeJavaInit
                                 <ul class="ml-3"> 
                                     <li>texto</li>
                                     <li>lineas</li>
                                 </ul>
                             </td>
                             <td>N/A</td>
-                            <td>Permite colorear el cÃ³digo en lenguaje JAVA dentro de las etiquetas pre de HTML</td>
+                            <td>Permite colorear el código en lenguaje JAVA dentro de las etiquetas pre de HTML</td>
                         </tr>
                         <tr>
                             <td>06</td>
-                            <td>CÃ³digoJS</td>
+                            <td>CódigoJS</td>
                             <td>SI</td>
                             <td>JSON</td>
                             <td>
-                                FunciÃ³n: BS.CodeJsInit
+                                Función: BS.CodeJsInit
                                 <ul class="ml-3"> 
                                     <li>texto</li>
                                     <li>lineas</li>
                                 </ul>
                             </td>
                             <td>N/A</td>
-                            <td>Permite colorear el cÃ³digo en lenguaje JS dentro de las etiquetas pre de HTML</td>
+                            <td>Permite colorear el código en lenguaje JS dentro de las etiquetas pre de HTML</td>
                         </tr>
                         <tr>
                             <td>07</td>
                             <td><a href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Colecciones.js" class="link tips-ele" 
-                                data-tips="CÃ³digo Fuente">Colecciones</a></td>
+                                data-tips="Código Fuente">Colecciones</a></td>
                             <td>SI</td>
                             <td>JSON</td>
                             <td> 
-                                FunciÃ³n: BS.Colecciones 
+                                Función: BS.Colecciones 
                                 <ul class="ml-3"> 
                                     <li>contexto</li>
                                     <li>colorFondo</li>
@@ -198,17 +198,17 @@
                                     <li>colorFlechas</li>
                                 </ul> 
                                 
-                            <td>BS.Colecciones().destroy("ID ColecciÃ³n")</td>
-                            <td>Permite desplegar un submenu de cada items de la colecciÃ³n con el efecto acordeÃ³n.</td>
+                            <td>BS.Colecciones().destroy("ID Colección")</td>
+                            <td>Permite desplegar un submenu de cada items de la colección con el efecto acordeón.</td>
                         </tr>
                         <tr>
                             <td>08</td>
                             <td><a href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/ColeccionesFloatante.js" class="link tips-ele" 
-                                data-tips="CÃ³digo Fuente">ColeccionesFloatante</a></td>
+                                data-tips="Código Fuente">ColeccionesFloatante</a></td>
                             <td>SI</td>
                             <td>JSON</td>
                             <td>
-                                FunciÃ³n: BS.ColeccionFlotante
+                                Función: BS.ColeccionFlotante
                                 <ul class="ml-3"> 
                                     <li>contexto</li>
                                     <li>fondoItem</li>
@@ -216,8 +216,8 @@
                                     <li>altura</li>
                                 </ul> 
                             </td>
-                            <td>BS.ColeccionFloatante().destroy("ID ColecciÃ³n")</td>
-                            <td>Permite mostrar una lista fija a un lado de la pÃ¡gina para utilizarse como guia.</td>
+                            <td>BS.ColeccionFloatante().destroy("ID Colección")</td>
+                            <td>Permite mostrar una lista fija a un lado de la página para utilizarse como guia.</td>
                         </tr>
                         <tr>
                             <td>09</td>
@@ -242,7 +242,7 @@
                         <tr>
                             <td>10</td>
                             <td><a href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Desactivado.js" class="link tips-ele" 
-                                data-tips="CÃ³digo Fuente">Desactivado</a></td>
+                                data-tips="Código Fuente">Desactivado</a></td>
                             <td>NO</td>
                             <td>N/A</td>
                             <td>
@@ -252,7 +252,7 @@
                                 </ul>
                             </td>
                             <td>N/A</td>
-                            <td>Permite temporalmente desactivar un elemento en funciÃ³n del estado en el que se encuentre un determinado proceso.</td>
+                            <td>Permite temporalmente desactivar un elemento en función del estado en el que se encuentre un determinado proceso.</td>
                         </tr>
                         <tr>
                             <td>11</td>
@@ -276,7 +276,7 @@
                         <tr>
                             <td>12</td>
                             <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/src/modulos/GruposInput.js" class="link tips-ele"
-                                data-tips="CÃ³digo Fuente">Grupos Input</a></td>
+                                data-tips="Código Fuente">Grupos Input</a></td>
                             <td>NO</td>
                             <td>N/A</td>
                             <td>
@@ -285,13 +285,13 @@
                             <td>
                                 N/A
                             </td>
-                            <td>Permite el manejor de los grupos de formularios y la gestiÃ³n de los campos requeridos.</td>
+                            <td>Permite el manejor de los grupos de formularios y la gestión de los campos requeridos.</td>
                         </tr>
 
                         <tr>
                             <td>13</td>
                             <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/src/modulos/Imagenes.js" class="link com-trigger"
-                                data-tips="CÃ³digo Fuente">Imagenes</a></td>
+                                data-tips="Código Fuente">Imagenes</a></td>
                             <td>NO</td>
                             <td>N/A</td>
                             <td>
@@ -305,7 +305,7 @@
                         <tr>
                             <td>14</td>
                             <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/src/modulos/InputHandler.js" class="link com-trigger"
-                                data-tips="CÃ³digo Fuente">Input Handler</a></td>
+                                data-tips="Código Fuente">Input Handler</a></td>
                             <td>NO</td>
                             <td>N/A</td>
                             <td>
@@ -320,7 +320,7 @@
                         <tr>
                             <td>15</td>
                             <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/src/modulos/Modal.js" class="link com-trigger"
-                                data-tips="CÃ³digo Fuente">Modales</a></td>
+                                data-tips="Código Fuente">Modales</a></td>
                             <td>NO</td>
                             <td>N/A</td>
                             <td>
@@ -334,7 +334,7 @@
                         <tr>
                             <td>16</td>
                             <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/src/modulos/Navigation.js" class="link tips-ele"
-                                data-tips="CÃ³digo Fuente">Navigation</a></td>
+                                data-tips="Código Fuente">Navigation</a></td>
                             <td>SI</td>
                             <td>string <br> bool</td>
                             <td>
@@ -343,12 +343,12 @@
                             <td>
                                 BS.NavigationDestroy()
                             </td>
-                            <td>Permite gestionar la navegaciÃ³n de la pÃ¡gina.</td>
+                            <td>Permite gestionar la navegación de la página.</td>
                         </tr>
                         <tr>
                             <td>17</td>
                             <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/src/modulos/Paralax.js" class="link tips-ele"
-                                data-tips="CÃ³digo Fuente">Paralax</a></td>
+                                data-tips="Código Fuente">Paralax</a></td>
                             <td>NO</td>
                             <td>N/A</td>
                             <td>
@@ -357,12 +357,12 @@
                             <td>
                                 N/A
                             </td>
-                            <td>Permite establecer el efecto paralax en las imÃ¡genes</td>
+                            <td>Permite establecer el efecto paralax en las imágenes</td>
                         </tr>
                         <tr>
                             <td>18</td>
                             <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/src/modulos/Personalizado.js" class="link tips-ele"
-                                data-tips="CÃ³digo Fuente">Personalizado</a></td>
+                                data-tips="Código Fuente">Personalizado</a></td>
                             <td>SI</td>
                             <td>JSON</td>
                             <td>
@@ -377,7 +377,7 @@
                         <tr>
                             <td>19</td>
                             <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/src/modulos/Range.js" class="link tips-ele"
-                                data-tips="CÃ³digo Fuente">Range</a></td>
+                                data-tips="Código Fuente">Range</a></td>
                             <td>NO</td>
                             <td>N/A</td>
                             <td>
@@ -391,11 +391,11 @@
                         <tr>
                             <td>20</td>
                             <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/src/modulos/ScrollSpy.js" class="link tips-ele"
-                                data-tips="CÃ³digo Fuente">Range</a></td>
+                                data-tips="Código Fuente">Range</a></td>
                             <td>SI</td>
                             <td>JSON</td>
                             <td>
-                                FunciÃ³n BS.ScrollSpyInit()
+                                Función BS.ScrollSpyInit()
                                 <ul class="ml-3">
                                     <li>ancho</li>
                                     <li>tamFuente</li>
@@ -409,13 +409,13 @@
                             <td>
                                 BS.ScrollSpyDestroy()
                             </td>
-                            <td>Permite generar una gruia de pÃ¡gina para el usuario.</td>
+                            <td>Permite generar una gruia de página para el usuario.</td>
                         </tr>
 
                         <tr>
                             <td>21</td>
                             <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/src/modulos/Select.js" class="link tips-ele"
-                                data-tips="CÃ³digo Fuente">Select</a></td>
+                                data-tips="Código Fuente">Select</a></td>
                             <td>SI</td>
                             <td>JSON</td>
                             <td>
@@ -433,7 +433,7 @@
                         <tr>
                             <td>22</td>
                             <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/src/modulos/SidebarDrop.js" class="link tips-ele"
-                                data-tips="CÃ³digo Fuente">Sidebar Drop</a></td>
+                                data-tips="Código Fuente">Sidebar Drop</a></td>
                             <td>SI</td>
                             <td>JSON</td>
                             <td>
@@ -452,7 +452,7 @@
                         <tr>
                             <td>24</td>
                             <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/src/modulos/Tabs.js" class="link tips-ele"
-                                data-tips="CÃ³digo Fuente">Sidebar Drop</a></td>
+                                data-tips="Código Fuente">Sidebar Drop</a></td>
                             <td>SI</td>
                             <td>JSON</td>
                             <td>
@@ -467,7 +467,7 @@
                             <td>
                                BS.TabInit().destroy("ID")
                             </td>
-                            <td>Permite agregar un menÃº de tipo tabs con opciones.</td>
+                            <td>Permite agregar un menú de tipo tabs con opciones.</td>
                         </tr>
                         <tr>
                             <td>25</td>
@@ -493,12 +493,12 @@
                             <td>
                                BS.ToolTipsDestroy()
                             </td>
-                            <td>Permite mostrar un elemento dinÃ¡mico informativo para el usuario.</td>
+                            <td>Permite mostrar un elemento dinámico informativo para el usuario.</td>
                         </tr>
                          <tr>
                             <td>27</td>
                             <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/tree/master/src/modulos/Waves.js" class="link tips-ele"
-                                data-tips="CÃ³digo Fuente">Waves</a></td>
+                                data-tips="Código Fuente">Waves</a></td>
                             <td>NO</td>
                             <td>N/A</td>
                             <td>
@@ -514,16 +514,16 @@
                 </table>
             </div>
             <p class="mt-3">
-                Para poder visualizar correctamente los expresado en la tabla se incluye en esta documentaciÃ³n el cÃ³digo de inicializaciÃ³n 
-                de todos los mÃ³dulos comentados y documentados en <a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/app.js" class="link com-trigger"
-                data-info="Desde este enlace se puden ver todas las funciones de inicializaciÃ³n de los diferentes mÃ³dulos de la biblioteca, comentados y documentados.">app.js</a>.
+                Para poder visualizar correctamente los expresado en la tabla se incluye en esta documentación el código de inicialización 
+                de todos los módulos comentados y documentados en <a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/app.js" class="link com-trigger"
+                data-info="Desde este enlace se puden ver todas las funciones de inicialización de los diferentes módulos de la biblioteca, comentados y documentados.">app.js</a>.
             </p>
 
-            <h3 id="t3">CÃ³digos de Error</h3>
+            <h3 id="t3">Códigos de Error</h3>
             <p class="mb-3">
-                Para los mÃ³dulos descriptos anteriormente y que necesitan parÃ¡metros de entrada, Bodystyle 
-                tiene internamente un mÃ³dulo de gestiÃ³n de errores uqe muestra, en caso de que se produzca un error, un mensaje 
-                a travÃ©s de la consola del navegador con un determinado formato que le permite al desarrollador donde estuvo 
+                Para los módulos descriptos anteriormente y que necesitan parámetros de entrada, Bodystyle 
+                tiene internamente un módulo de gestión de errores uqe muestra, en caso de que se produzca un error, un mensaje 
+                a través de la consola del navegador con un determinado formato que le permite al desarrollador donde estuvo 
                 la falla.
             </p>
 
@@ -532,9 +532,9 @@
             </div>
 
             <p class="mt-3">
-                Los dos primeros dÃ­gitos pertenecen al ID del mÃ³dulo y los demÃ¡s dÃ­gitos al codigo del error, en este caso 
-                serÃ­a un ID erroneo que se enviÃ³ por parÃ¡metro. <br>
-                Para conocer todos los cÃ³digos de errores <a href="gestion_errores.html" class="link">Ver GestiÃ³n de Errores</a>. 
+                Los dos primeros dígitos pertenecen al ID del módulo y los demás dígitos al codigo del error, en este caso 
+                sería un ID erroneo que se envió por parámetro. <br>
+                Para conocer todos los códigos de errores <a href="gestion_errores.html" class="link">Ver Gestión de Errores</a>. 
             </p>
         
         </article>
@@ -543,21 +543,21 @@
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
-    <!--CONTENIDO DE LA PÃGINA (FINAL) --------------------------------------------------------------------->
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
 
-    <!--GUIA DE LA PÃGINA INI------------------------------------------------------------------------------->
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
     <div class="lista-scroll">
         <ul>
-            <li><a href="#t1">MÃ³dulos</a></li>
+            <li><a href="#t1">Módulos</a></li>
             <li><a href="#t2">Listado</a></li>
             
         </ul>
     </div>
-    <!--GUIA DE LA PÃGINA FIN------------------------------------------------------------------------------->
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
     <!--JS --------------------------------------------------------------------------------------------------------------><script> 
-        var enlace = "MÃ³dulos"
+        var enlace = "Módulos"
         var idMenu = "#l5"
         
     </script>

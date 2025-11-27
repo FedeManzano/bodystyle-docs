@@ -6,7 +6,7 @@
     <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
 
     
-    <meta name="description" content="Barra de navegaciÃ³n lateral, complementaria a la barra de navegaciÃ³n principal.">
+    <meta name="description" content="Barra de navegación lateral, complementaria a la barra de navegación principal.">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/bodystyle.min.css">
@@ -28,13 +28,13 @@
     <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
-    <!--CONTENIDO DE LA PÃGINA (INICIO) -------------------------------------------------------------------->
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
             <h1 id="t1">Sidebar</h1>
             <p>
-                Elemento que es manejado por la barra de navegaciÃ³n principal a travÃ©s el botÃ³n de menÃº, que a travÃ©s 
+                Elemento que es manejado por la barra de navegación principal a través el botón de menú, que a través 
                 de las clases pertinentes toma la forma de las tres barras acostadas y sirve como disparador para desplegar 
                 el sidebar.
             </p>
@@ -45,20 +45,20 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="t2">InicializaciÃ³n</h2>
+            <h2 id="t2">Inicialización</h2>
             <p>
                 Para inicializar el sidebar primero tenemos que iniciallizar el nav principal que es el que 
                 va a controlar la barra lateral. <br>
-                es importante recalcar que si ambos elementos (nav y el sidebar) se aÃ±aden al html de forma dinÃ¡mica (se agregan al html en tiempo
-                de ejecuciÃ³n) es necesario iniciar el componente de otra forma, tal y como se describe debajo de este texto.
+                es importante recalcar que si ambos elementos (nav y el sidebar) se añaden al html de forma dinámica (se agregan al html en tiempo
+                de ejecución) es necesario iniciar el componente de otra forma, tal y como se describe debajo de este texto.
             </p>
 
 <div class="codigo">
 <pre class="cod-js" id="c1">
-    // Forma 1: Tradicional (No dinÃ¡mica)
+    // Forma 1: Tradicional (No dinámica)
     BS.NavigationInit("#ID") // Donde ID es el ID del nav principal 
 
-    // Forma 2: DinÃ¡mica 
+    // Forma 2: Dinámica 
     window.onload = () => setTimeout( () => BS.NavigationInit("#ID"), 100)
 </pre>
 </div>
@@ -66,7 +66,7 @@
             <p class="mb-3">
                 Para comenzar vamos a definir un Nav por default con su sidebar para mostrar como utilizar estos componentes.
             </p>
-            <a href="muestras/sidebar_1.html" class="link com-trigger" data-info="En esta muestra se verÃ¡ como es el nav y el sidebar asociado por default.">Sidebar Simple</a>
+            <a href="muestras/sidebar_1.html" class="link com-trigger" data-info="En esta muestra se verá como es el nav y el sidebar asociado por default.">Sidebar Simple</a>
 <div class="codigo">
 <pre class="cod-html" id="c2">
     <!-- Nav con un ID #nav para envolverlo y manejarlo -->
@@ -81,8 +81,8 @@
     <nav id="nav"  class="bs-nav bs-nav-fixed" data-target="#bs-nav-sidebar">
         <div  class="bs-nav-md align-left-list">
             <!-- 
-                BotÃ³n de menÃº que funciona como disparador 
-                de la apariciÃ³n del sidebar 
+                Botón de menú que funciona como disparador 
+                de la aparición del sidebar 
             -->
             <a class="btn-menu" ></a>
 
@@ -99,7 +99,7 @@
     
     <!--
         Este es el sidebar con la clase .bs-nav-sidebar
-        y en este caso, el ID bs-nav-sidebar que es a elecciÃ³n
+        y en este caso, el ID bs-nav-sidebar que es a elección
         pero tiene que coincidir con el data-target del NAV
     -->
     <div id="bs-nav-sidebar" class="bs-nav-sidebar">
@@ -114,29 +114,29 @@
 </pre>
 </div>
         <div class="alerta-negra">
-            Para mÃ¡s informaciÃ³n recurrir a la secciÃ³n <a href="nav.html" class="link">Nav</a> que muestra 
+            Para más información recurrir a la sección <a href="nav.html" class="link">Nav</a> que muestra 
             como definir los diferentes elementos del Nav principal.
         </div>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="t4">NavegaciÃ³n Fija</h2>
+            <h2 id="t4">Navegación Fija</h2>
             <p class="mb-3">
                 Ahora vamos a v er como podemos realizar lo anterior pero lograr que el NAV y el SIDEBAR 
-                se trasladen a lo largo de toda la pÃ¡gina dejando fija toda la navegaciÃ³n. <br>
+                se trasladen a lo largo de toda la página dejando fija toda la navegación. <br>
                 Para este objetivo al NAV hay que agregarle la clase <span class="badge badge-red">.bs-nav-fixed</span> y problema resuelto.
             </p>
 
-             <a href="muestras/sidebar_2.html" class="link com-trigger" data-info="En esta muestra se verÃ¡ como es el nav y el sidebar asociado con posicionamiento fijo.">Sidebar Fijo</a>
+             <a href="muestras/sidebar_2.html" class="link com-trigger" data-info="En esta muestra se verá como es el nav y el sidebar asociado con posicionamiento fijo.">Sidebar Fijo</a>
         
         <div class="codigo">
 <pre class="cod-html" id="c3">
-    <!-- Se aÃ±ade la clase .bs-nav-fixed-->
+    <!-- Se añade la clase .bs-nav-fixed-->
     <nav id="nav2"  class="bs-nav bs-nav-fixed" data-target="#bs-nav-sidebar2">
         <div  class="bs-nav-md align-left-list">
             <!-- 
-                BotÃ³n de menÃº que funciona como disparador 
-                de la apariciÃ³n del sidebar 
+                Botón de menú que funciona como disparador 
+                de la aparición del sidebar 
             -->
             <a class="btn-menu" ></a>
 
@@ -164,15 +164,15 @@
 </div>
         </article>
         <article class="articulo">
-            <h2 id="t5">Colores e Ãconos</h2>
+            <h2 id="t5">Colores e Íconos</h2>
             <p class="mb-3">
-                La personalizaciÃ³n de estos dos elementos se puede llevar a cabo con 
-                <a href="iconos.html" class="link tips-ele" data-tips="Ãconos documentados">Ãconos</a> y 
+                La personalización de estos dos elementos se puede llevar a cabo con 
+                <a href="iconos.html" class="link tips-ele" data-tips="Íconos documentados">Íconos</a> y 
                 los <a href="colores.html" class="link tips-ele" data-tips="Colores documentados">Colores</a> de la biblioteca. <br>
-                A modo de ejemplo vamos a definir algunos estilos para personalizaciÃ³n de estos componentes.
+                A modo de ejemplo vamos a definir algunos estilos para personalización de estos componentes.
             </p>
 
-            <a href="muestras/sidebar_3.html" class="link com-trigger" data-info="Muestra de como utilizar la navegaciÃ³n personalizada.">Colores e Ãconos</a>
+            <a href="muestras/sidebar_3.html" class="link com-trigger" data-info="Muestra de como utilizar la navegación personalizada.">Colores e Íconos</a>
 
 
 <div class="codigo">
@@ -215,13 +215,13 @@
             <h2 id="t6">Responsive</h2>
             <p class="mb-3">
                 Otra forma de utilizar el sidebar es para reemplazar las opciones del menu del nav. Para 
-                dispositivos de tamaÃ±o de pantalla mÃ¡s pequeÃ±os ocultamos el menÃº del NAV y lo reemplazamos por del 
+                dispositivos de tamaño de pantalla más pequeños ocultamos el menú del NAV y lo reemplazamos por del 
                 sidebar. <br>
                 Para realizar esta tarea no apoyaremos en los <a href="helpers.html" class="link com-trigger" 
-                data-info="Utilitarios que permiten mostrar u ocultar elementos dependiendo en que tamaÃ±o de pantalla se muestren.">Helpers</a>.
+                data-info="Utilitarios que permiten mostrar u ocultar elementos dependiendo en que tamaño de pantalla se muestren.">Helpers</a>.
             </p>
 
-            <a href="muestras/sidebar_4.html" class="link com-trigger" data-info="UtilizaciÃ³n del sidebar para ocultar las opciones del nav.">Muestra Responsive</a>
+            <a href="muestras/sidebar_4.html" class="link com-trigger" data-info="Utilización del sidebar para ocultar las opciones del nav.">Muestra Responsive</a>
 <div class="codigo">
 <pre class="cod-html" id="c5">
 
@@ -264,8 +264,8 @@
         <article class="articulo">
             <h2 id="t7">Destroy</h2>
             <p>
-                Si lo queremos es desvincular la lÃ³gica que une al sidebar 
-                y al nav principal para optimizar recuros tenemos que llamar a la funciÃ³n destroy 
+                Si lo queremos es desvincular la lógica que une al sidebar 
+                y al nav principal para optimizar recuros tenemos que llamar a la función destroy 
                 que brinda esta posibilidad.
             </p>
 
@@ -280,21 +280,21 @@
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
-    <!--CONTENIDO DE LA PÃGINA (FINAL) --------------------------------------------------------------------->
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
 
-    <!--GUIA DE LA PÃGINA INI------------------------------------------------------------------------------->
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
     <div class="lista-scroll">
         <ul>
             <li><a href="#t1">Sidebar</a></li>
-            <li><a href="#t2">InicializaciÃ³n</a></li>
+            <li><a href="#t2">Inicialización</a></li>
             <li><a href="#t3">Muestra</a></li>
-            <li><a href="#t4">NavegaciÃ³n Fija</a></li>
-            <li><a href="#t5">Colores e Ãconos</a></li>
+            <li><a href="#t4">Navegación Fija</a></li>
+            <li><a href="#t5">Colores e Íconos</a></li>
             <li><a href="#t6">Nav Responsive</a></li>
             <li><a href="#t7">Destroy</a></li>
         </ul>
     </div>
-    <!--GUIA DE LA PÃGINA FIN------------------------------------------------------------------------------->
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
     <!--JS --------------------------------------------------------------------------------------------------------------><script> 

@@ -30,41 +30,46 @@
             <div class="ocultar-desde-medianos">
                 <ul>
                     <li><a href="./paginas/get_started.html" class="tips-ele"
-                            data-tips="Ingreso a la documentaciÃ³n">Docs</a></li>
+                            data-tips="Ingreso a la documentación">Docs</a></li>
                     <li><a href="#" class="com-trigger"
-                            data-info="<span class='f-w-7'>Licencia MIT:</span> Es una licencia de software libre muy permisiva y sencilla que permite usar, copiar, modificar, distribuir y vender software con mÃ­nimas restricciones. <br> <a target='_blank' href='https://github.com/FedeManzano/bodystyle/blob/master/LICENSE' class='link'>Ver Licencia</a>"
+                            data-info="<span class='f-w-7'>Licencia MIT:</span> Es una licencia de software libre muy permisiva y sencilla que permite usar, copiar, modificar, distribuir y vender software con mínimas restricciones. <br> <a target='_blank' href='https://github.com/FedeManzano/bodystyle/blob/master/LICENSE' class='link'>Ver Licencia</a>"
                             data-evt="click">Licencia</a></li>
                     <li>
                         <a href="./paginas/iconos.html"><i class="bs-sunglass c-yellow fz-20">&nbsp;</i>Iconos <span
                                 class="badge badge-bodyui">New</span></a>
                     </li>
-                    <li>
-                        <a id="navegador" target="_blank" class="disparador" data-info="" data-evt="click">Brave
-                            Browser</a>
-                    </li>
                 </ul>
             </div>
 
-            <div class="right-content">
+            <div class="right-content ocultar-desde-x-chicos">
+
 
                 <label class="badge-mje-right badge-mje-bodyui mr-2 mb-1"><i
                         class="fz-16 bs-tag">&nbsp;</i>v5.8.0</label>
                 <a style="cursor: pointer;"><i id="descarga_lib" class="bs-download c-white fz-30 disparador"
-                        data-info="VersiÃ³n transpilada de <span class='f-w-7'>Bodystyle v5.8.0</span>" data-pos="left"
+                        data-info="Versión transpilada de <span class='f-w-7'>Bodystyle v5.8.0</span>" data-pos="left"
                         data-evt="click"></i></a>
 
-                <!-- BotÃ³n oficial de GitHub (mÃ¡s interactivo) -->
+                <!-- Botón oficial de GitHub (más interactivo) -->
                 <div class="ml-3">
                     <a class="github-button fd-gris-n" href="https://github.com/FedeManzano/bodystyle"
                         data-icon="octicon-star" data-size="large" data-show-count="true"
                         aria-label="Star FedeManzano/bodystyle on GitHub">Star</a>
+                </div>
+
+                <div class="input-g ancho-100 ml-2 ocultar-desde-chicos">
+                    <div class="grupo">
+                        <span class="span-grupo fd-gris-n c-white"> <i class="bs-search"></i></span>
+                        <input id="buscador" onkeypress="handleSearch(event)" type="search" placeholder="Buscar"
+                            class="fd-gris-n c-white">
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
     <!--NAV FIN -------------------------------------------------------------------------------------------->
 
-    <!-- CABECERA DE LA PÃGINA -->
+    <!-- CABECERA DE LA PÁGINA -->
     <section class="d-flex just-center ta-c fd-gris-n "
         style="position: relative; width: 100%;min-height: 100%; position: absolute; user-select: none;">
         <div class="forma-triangulo-recto-inf-der ov-visible"
@@ -80,7 +85,7 @@
             </div>
 
             <h1 class="mt-1 c-gris-c fz-28 fz-s-25 f-w-4">Biblioteca de CSS y JS</h1>
-            <h2 class="mt-1 c-gris fz-18 fz-s-16 f-w-4">Utilidades en CSS y JS para la rÃ¡pida creaciÃ³n del Front-End.
+            <h2 class="mt-1 c-gris fz-18 fz-s-16 f-w-4">Utilidades en CSS y JS para la rápida creación del Front-End.
             </h2>
             <div class="d-flex just-center flex-wrap-s mt-5">
                 <a href="./paginas/get_started.html" class="btn-lg-o btn-white-o mr-1 mr-xs-0 mb-xs-1 bor-pill tips-ele"
@@ -91,7 +96,7 @@
             </div>
             <div class="mt-2">
                 <a target="_blank" href="https://github.com/FedeManzano/bodystyle/releases/tag/v5.8.0"
-                    class="link tips-ele" data-tips="VersiÃ³n 5.8.0 De Bodystyle">Releases 5.8.0</a>
+                    class="link tips-ele" data-tips="Versión 5.8.0 De Bodystyle">Releases 5.8.0</a>
             </div>
         </div>
     </section>
@@ -117,6 +122,64 @@
     <script src="./js/index.min.js"></script>
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+    <script>
+        // Búsqueda simple
+        function handleSearch(event) {
+            if (event.key === 'Enter') {
+                const query = document.getElementById('buscador').value.toLowerCase();
+
+                // Mapeo de términos comunes a páginas
+                const searchMap = {
+                    'boton': './paginas/botones.html',
+                    'botones': './paginas/botones.html',
+                    'button': './paginas/botones.html',
+                    'grid': './paginas/grid.html',
+                    'grilla': './paginas/grid.html',
+                    'flex': './paginas/flexbox.html',
+                    'flexbox': './paginas/flexbox.html',
+                    'form': './paginas/formularios.html',
+                    'formulario': './paginas/formularios.html',
+                    'input': './paginas/input.html',
+                    'modal': './paginas/modal.html',
+                    'nav': './paginas/nav.html',
+                    'navegacion': './paginas/nav.html',
+                    'tabla': './paginas/tablas.html',
+                    'table': './paginas/tablas.html',
+                    'color': './paginas/colores.html',
+                    'colores': './paginas/colores.html',
+                    'inicio': './index.html',
+                    'home': './index.html',
+                    'started': './paginas/get_started.html',
+                    'comenzar': './paginas/get_started.html',
+                    'toast': './paginas/toast.html',
+                    'toasts': './paginas/toast.html',
+                    'navegacion': './paginas/nav.html',
+                    'nav': './paginas/nav.html',
+                    'navbar': './paginas/nav.html',
+                    'barra': './paginas/nav.html',
+                    'sidebar': './paginas/sidebar.html',
+                    'barra-lateral': './paginas/sidebar.html',
+                    'lateral': './paginas/sidebar.html',
+                    'lateral': './paginas/sidebar.html',
+                };
+
+                // Buscar coincidencia
+                for (const [key, url] of Object.entries(searchMap)) {
+                    if (query.includes(key)) {
+                        window.location.href = url;
+                        return;
+                    }
+                }
+
+                // Si no hay coincidencia, ir a get started
+                if (query.length > 0) {
+                    window.location.href = './paginas/get_started.html';
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>

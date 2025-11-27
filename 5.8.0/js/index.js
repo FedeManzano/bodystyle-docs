@@ -51,7 +51,7 @@ document.getElementById("autor").setAttribute("data-info",
                         <div class="ta-c d-flex flex-column ali-center mt-3">
                             <img src="imagenes/20191106_205049.png" height='50px' width='50px' />
                             <p>
-                                Estudiante de Ingerniería Informática de la <span class="f-w-7 c-verde">Universidad Nacional de la Matanza.</span> <br>
+                                Estudiante de Ingeniería Informática de la <span class="f-w-7 c-verde">Universidad Nacional de la Matanza.</span> <br>
                             </p>
                             <a target="_blank" href="https://github.com/FedeManzano" class="link">@FedeManzano</a>
                         </div>
@@ -65,7 +65,7 @@ document.getElementById("navegador").setAttribute("data-info",
                 <div  class="card" style="z-index: 10000">
                     <div  class="card-simple-dark ta-c">
                         <h4>Navegador</h4>
-                        <small>Barave Browser</small>
+                        <small>Brave Browser</small>
                         <div class="ta-c d-flex flex-column ali-center mt-3">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Brave_icon_lionface.png" height='50px' width='50px' />
                             <p>
@@ -83,7 +83,7 @@ document.getElementById("navegador2").setAttribute("data-info",
                 <div  class="card" style="z-index: 10000">
                     <div  class="card-simple-dark ta-c">
                         <h4>Navegador</h4>
-                        <small>Barave Browser</small>
+                        <small>Brave Browser</small>
                         <div class="ta-c d-flex flex-column ali-center mt-3">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Brave_icon_lionface.png" height='50px' width='50px' />
                             <p>
