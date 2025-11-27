@@ -26,8 +26,8 @@ const indicesBusqueda = [
         tags: [
             "grupos",
             "botones",
-            "grupos Botones",
-            "button Group",
+            "grupos botones",
+            "button group",
             "group"
         ]
     },
