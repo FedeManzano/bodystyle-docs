@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
 
     
-    <meta name="description" content="Barra de navegación de la biblioteca Bodystyle.">
+    <meta name="description" content="Barra de navegaciÃ³n de la biblioteca Bodystyle.">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/bodystyle.min.css">
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     
     <title>Nav</title>
+    <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/nav.html">
 </head>
 <body>
 
@@ -27,14 +28,14 @@
     <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
-    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <!--CONTENIDO DE LA PÃGINA (INICIO) -------------------------------------------------------------------->
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
             <h1 id="t1">Nav</h1>
             <p>
-                En esta sección vamos a ver como utilizar la barra de navegación de Bodystyle a través de las 
-                diferentes configuraciones que se le pueden dar a este elemento en función de las necesidades 
+                En esta secciÃ³n vamos a ver como utilizar la barra de navegaciÃ³n de Bodystyle a travÃ©s de las 
+                diferentes configuraciones que se le pueden dar a este elemento en funciÃ³n de las necesidades 
                 del desarrollo.
             </p>
             
@@ -44,64 +45,64 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="t2">Inicialización</h2>
+            <h2 id="t2">InicializaciÃ³n</h2>
             <p>
-                Dependiendo de las funcionalidades que necesitemos de la barra de navegación vamos a tener que 
-                inicializar el módulo correspondiente a este elemento. <br>
-                En esta documentación se mostrarán todos los casos posibles de como colocar el nav a diferentes circunstancias. <br>
-                La recomendación es ver <a href="get_started.html" class="link">Get Started</a> página en la cual se muestra 
-                como añadir la lógica de la biblioteca.
+                Dependiendo de las funcionalidades que necesitemos de la barra de navegaciÃ³n vamos a tener que 
+                inicializar el mÃ³dulo correspondiente a este elemento. <br>
+                En esta documentaciÃ³n se mostrarÃ¡n todos los casos posibles de como colocar el nav a diferentes circunstancias. <br>
+                La recomendaciÃ³n es ver <a href="get_started.html" class="link">Get Started</a> pÃ¡gina en la cual se muestra 
+                como aÃ±adir la lÃ³gica de la biblioteca.
             </p>
 
 <div class="codigo">
     <pre id="c1" class="cod-js">
     // CDN : https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js
 
-    // 1 OPCIÓN ESTÁTICA
+    // 1 OPCIÃ“N ESTÃTICA
     // ------------------
 
     // Inicializa el elemento
-    // cuando estos están dispuestos de manera estática dentro del DOM
+    // cuando estos estÃ¡n dispuestos de manera estÃ¡tica dentro del DOM
     /**
-     * CUATRO PARÁMETROS DE LOS CUALES EL PRIMERO ES OBLIGATORIO 
+     * CUATRO PARÃMETROS DE LOS CUALES EL PRIMERO ES OBLIGATORIO 
      * contexto: ID que se utiliza para definir el contexto
      * colorFuente: Color del texto del tab (Estilos de texto)
      * colorFondo: Color del fondo del tab (Clases colores)
      * colorBorde: Borde selector (Color de fondo)
      */
-    BS.NavigationInit("#ID_ DEL_ NAV") // Importante parámetro porque permite definir el contexto 
-                                // Donde se aplicarán las diferentes funciones y eventos.
+    BS.NavigationInit("#ID_ DEL_ NAV") // Importante parÃ¡metro porque permite definir el contexto 
+                                // Donde se aplicarÃ¡n las diferentes funciones y eventos.
     
     /****************************************************************************/
 
-    // 2 OPCIÓN DINÁMICA
+    // 2 OPCIÃ“N DINÃMICA
     // -----------------   
 
     /*
-        En proyectos donde se tabaja a través de injección de elementos a través 
-        de JavaScript de manera dinámica, y el elemento que se estudia en esta sección se 
-        ingresa de esta manera, es necesario aplicar un retraso en la inicialización del 
-        módulo con el siguiente codigo.
+        En proyectos donde se tabaja a travÃ©s de injecciÃ³n de elementos a travÃ©s 
+        de JavaScript de manera dinÃ¡mica, y el elemento que se estudia en esta secciÃ³n se 
+        ingresa de esta manera, es necesario aplicar un retraso en la inicializaciÃ³n del 
+        mÃ³dulo con el siguiente codigo.
     */
 
-    //Si los elementos que conforman esta funcionalidad son dinámicos 
-    // Agregados a través de JS 
+    //Si los elementos que conforman esta funcionalidad son dinÃ¡micos 
+    // Agregados a travÃ©s de JS 
     window.onload = () => {
         setTimeout( () => {
-           BS.NavigationInit("#ID_ DEL_ NAV") // Importante parámetro porque permite definir el contexto 
-                                       // Donde se aplicarán las diferentes funciones y eventos.
+           BS.NavigationInit("#ID_ DEL_ NAV") // Importante parÃ¡metro porque permite definir el contexto 
+                                       // Donde se aplicarÃ¡n las diferentes funciones y eventos.
         }, 100); 
     }
     </pre>
 </div>
             <h3 id="t3">Muestra Por Default</h3>
             <p class="mb-3">
-                El nav por default de la biblioteca se muestra a continuación. <br>
+                El nav por default de la biblioteca se muestra a continuaciÃ³n. <br>
                 <span class="c-orange">
-                Es importante aclarar que el Nav se intentará adaptar a cualquier tipo de pantalla 
-                y sin las funcionalidades de javascript la lista de enlaces de la barra de navegación 
-                no se verá en equipos menores a 1030px, por esta razón es necesario conocer todo lo 
-                que podemos hacer con los estilos y también como inicializar la lógica del manejo del elemento. 
+                Es importante aclarar que el Nav se intentarÃ¡ adaptar a cualquier tipo de pantalla 
+                y sin las funcionalidades de javascript la lista de enlaces de la barra de navegaciÃ³n 
+                no se verÃ¡ en equipos menores a 1030px, por esta razÃ³n es necesario conocer todo lo 
+                que podemos hacer con los estilos y tambiÃ©n como inicializar la lÃ³gica del manejo del elemento. 
                 </span>
             </p>
 
@@ -193,13 +194,13 @@
         <div class="alerta-negra">
             Este es el Nav por default, a partir de esto vamos a comenzar a agregar elementos y clases para obtener un resultado 
             mas personalido. <br>
-            Como se puede observar hay dos medidas, md y lg que según las circunstacias puede ser mejor uno que otro, eso le toca al lector 
-            la elección del nav mas conveniente.
+            Como se puede observar hay dos medidas, md y lg que segÃºn las circunstacias puede ser mejor uno que otro, eso le toca al lector 
+            la elecciÃ³n del nav mas conveniente.
         </div>
 
         <h3 id="t4">Estructura</h3>
         <p>
-            Conociendo la estructura es más fácil recordar como se compone este elemento y es mas sencillo 
+            Conociendo la estructura es mÃ¡s fÃ¡cil recordar como se compone este elemento y es mas sencillo 
             incorporarlo.
         </p>
 
@@ -219,16 +220,16 @@
                     <img src="../imagenes/20191106_205049.png" alt="Foto de perfil">
                 </a>
 
-                <!-- Luego la lista donde estarán los enlaces -->
+                <!-- Luego la lista donde estarÃ¡n los enlaces -->
                 <ul>
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#">Porfolio</a></li>
                     <li><a href="#">Galeria</a></li>
                 </ul>
 
-                <!--Contenido a la derecha Todavía no definido-->
+                <!--Contenido a la derecha TodavÃ­a no definido-->
                 <div class="right-content">
-                    <!-- Se mostrará el contenido a la derecha del NAV-->
+                    <!-- Se mostrarÃ¡ el contenido a la derecha del NAV-->
                 </div>
 
             </div> <!--FIN Contenedor secundario -->
@@ -275,10 +276,10 @@
         <h3 id="t6">Colores</h3>
         <p class="mb-3">
             Los colores son diversos, se puede utilizar toda la paleta de colores de la biblioteca, por simplicidad 
-            solo vamos a defir algunos pero es importante que revisen esa parte de la documentación 
+            solo vamos a defir algunos pero es importante que revisen esa parte de la documentaciÃ³n 
             <a href="colores.html" class="link tips-ele"
             data-tips="Colores documentados de la biblioteca">Fondos</a>. <br>
-            Desde la versión 4.8.0 se añadieron <a href="iconos.html" class="link tips-ele" data-tips="Sección de la docs para los íconos">Íconos</a> 
+            Desde la versiÃ³n 4.8.0 se aÃ±adieron <a href="iconos.html" class="link tips-ele" data-tips="SecciÃ³n de la docs para los Ã­conos">Ãconos</a> 
             a la biblioteca y debajo hay un ejemplo de como incorporar estos elementos al nav.
         </p>
 
@@ -417,8 +418,8 @@
 
         <h3 id="t7">Borde Inferior</h3>
         <p class="mb-3">
-            Es posible mejorar la visual del nav con un borde inferior que se colocará 
-            justo debajo de los límites de la barra de navegación.
+            Es posible mejorar la visual del nav con un borde inferior que se colocarÃ¡ 
+            justo debajo de los lÃ­mites de la barra de navegaciÃ³n.
         </p>
 
         <nav id="nav" class="bs-nav bg-pink-d-1 bs-nav-bor-white">
@@ -492,7 +493,7 @@
         </nav>
 
         <div class="alerta-negra mt-3">
-            La clase utilizada para añadir contenido a la derecha del nav es 
+            La clase utilizada para aÃ±adir contenido a la derecha del nav es 
             <span class="badge badge-red">.right-content</span>. 
         </div>
 
@@ -521,8 +522,8 @@
 
         <h3 id="t9">Nav Fija</h3>
         <p>
-            Disponemos de una clase que permite que la barra de navegación se mantenga fija en la parte 
-            superior de la pantalla, de esta forma estará presente a los largo del recorrido de todo el contenido 
+            Disponemos de una clase que permite que la barra de navegaciÃ³n se mantenga fija en la parte 
+            superior de la pantalla, de esta forma estarÃ¡ presente a los largo del recorrido de todo el contenido 
             permitiendole al usuario utilizar el nav en todo momento. <br>
         </p>
 
@@ -531,7 +532,7 @@
 
 <div class="codigo">
     <pre id="c7" class="cod-html">
-        <!-- Se añade al contenedor principal la clase [.bs-nav-fixed]-->
+        <!-- Se aÃ±ade al contenedor principal la clase [.bs-nav-fixed]-->
         <nav  class="bs-nav bg-pink-d-1 bs-nav-bor-black bs-nav-fixed" >
             <div  class="bs-nav-md align-right-list">
                 <a  href="#"  class="logo-container">
@@ -549,15 +550,15 @@
 
             <h3 id="t10">Nav Resposive</h3>
             <p class="mb-3">
-                Ahora llegamos a la parte de la documentación en la que aplicamos lo visto hasta ahora 
-                pero agregamos la lógica de javascript para desplegar un sidebar que permite ver el contenido 
+                Ahora llegamos a la parte de la documentaciÃ³n en la que aplicamos lo visto hasta ahora 
+                pero agregamos la lÃ³gica de javascript para desplegar un sidebar que permite ver el contenido 
                 de manera adecuada en todos los dispositvos.
             </p>
 
             <a href="muestras/nav_resposnsive.html" class="link tips-ele"
             data-tips="Una muestra del nav Responsive" data-pos="right">Ver Una Muestra</a>
 
-            <h4>Código Html</h4>
+            <h4>CÃ³digo Html</h4>
 <div class="codigo">
     <pre id="c8" class="cod-html">
 
@@ -568,7 +569,7 @@
         <nav id="na"  class="bs-nav bg-pink-d-1 bs-nav-bor-black bs-nav-fixed" data-target="#bs-nav-sidebar">
             <div  class="bs-nav-md align-right-list">
 
-                <!--Botón que se oculta solo en dispositivos Grande Med >= 1030px no se muestra -->
+                <!--BotÃ³n que se oculta solo en dispositivos Grande Med >= 1030px no se muestra -->
                 <a class="btn-menu ocultar-solo-grandes" ></a>
 
 
@@ -595,7 +596,7 @@
             Lista lateral la misma contiene un ID = al configurado en el (data-target) del nav
             y lleva la clase [bs-nav-sidebar] para configurarle los estilos de este elemento.
             Este elemento puede estar en cualquier parte del dom, no tiene limitaciones 
-            ya que el enlace del sidebar con el nav es a través del data-target.
+            ya que el enlace del sidebar con el nav es a travÃ©s del data-target.
         -->
         <div id="bs-nav-sidebar" class="bs-nav-sidebar fd-gris-n">
             <ul>
@@ -608,19 +609,19 @@
         </div>
     </pre>
 </div>
-        <h4>Código de Inicialización del Ejemplo</h4>
+        <h4>CÃ³digo de InicializaciÃ³n del Ejemplo</h4>
 <div class="codigo">
     <pre id="c10" class="cod-js">
         /** 
-            La inicialización del elemento se lleva a cabo a través del ID 
-            de la barra de navegación para que la biblioteca conozca el contexto 
-            del elemento en el que está trabajando. 
-            Luego, como es un Nav que posee un borde inferior pasamos un segundo parámetro
+            La inicializaciÃ³n del elemento se lleva a cabo a travÃ©s del ID 
+            de la barra de navegaciÃ³n para que la biblioteca conozca el contexto 
+            del elemento en el que estÃ¡ trabajando. 
+            Luego, como es un Nav que posee un borde inferior pasamos un segundo parÃ¡metro
             con un valor true. 
         */
 
         // el ID en este ejemplo es #nav, ustedes
-        // pasan el parámetro de Id que configuraron
+        // pasan el parÃ¡metro de Id que configuraron
         BS.NavigationInit("#na", true)
 
     </pre>
@@ -629,8 +630,8 @@
         <div class="alerta-negra">
             Todos los estilos son configurables desde afuera, en este caso para el ejemplo 
             se seleccionaron determinados estilos para mostrar el nav, pero los estilos 
-            son intercambiables tanto de Nav como del sidebar que aparece en tamaños de pantalla 
-            de dispositivos más pequeños. <br>
+            son intercambiables tanto de Nav como del sidebar que aparece en tamaÃ±os de pantalla 
+            de dispositivos mÃ¡s pequeÃ±os. <br>
             <div class="lista-doc m-0">
                 <li><a href="colores.html" class="link">Colores de Fondo</a></li>
                 <li><a href="texto.html" class="link">Texto</a></li>
@@ -643,14 +644,14 @@
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
-    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+    <!--CONTENIDO DE LA PÃGINA (FINAL) --------------------------------------------------------------------->
 
-    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <!--GUIA DE LA PÃGINA INI------------------------------------------------------------------------------->
 
     <div class="lista-scroll">
         <ul>
             <li><a href="#t1">Nav</a></li>
-            <li><a href="#t2">Inicialización</a></li>
+            <li><a href="#t2">InicializaciÃ³n</a></li>
             <li><a href="#t3">Muestra</a></li>
             <li><a href="#t4">Estructura</a></li>
             <li><a href="#t5">A. a la Derecha</a></li>
@@ -661,7 +662,7 @@
             <li><a href="#t10">Responsive</a></li>
         </ul>
     </div>
-    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+    <!--GUIA DE LA PÃGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
     <!--JS --------------------------------------------------------------------------------------------------------------><script> 

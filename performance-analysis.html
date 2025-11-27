@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Análisis de Rendimiento - Bodystyle Docs</title>
+    <title>AnÃ¡lisis de Rendimiento - Bodystyle Docs</title>
     <style>
         * {
             margin: 0;
@@ -219,12 +219,13 @@
             color: #2c5282;
         }
     </style>
+    <link rel="canonical" href="https://bodystyle.webcindario.com/performance-analysis.html">
 </head>
 
 <body>
     <div class="container">
-        <h1>📊 Análisis de Rendimiento</h1>
-        <p class="subtitle">Comparación: jQuery vs Vanilla JavaScript</p>
+        <h1>ðŸ“Š AnÃ¡lisis de Rendimiento</h1>
+        <p class="subtitle">ComparaciÃ³n: jQuery vs Vanilla JavaScript</p>
 
         <div class="metrics-grid">
             <div class="metric-card">
@@ -233,7 +234,7 @@
                 <div class="metric-label">docs-body.js (actual)</div>
             </div>
             <div class="metric-card">
-                <h3>Reducción</h3>
+                <h3>ReducciÃ³n</h3>
                 <div class="metric-value">~30 KB</div>
                 <div class="metric-label">jQuery eliminado</div>
             </div>
@@ -250,13 +251,13 @@
         </div>
 
         <div class="comparison-section">
-            <h2>📦 Comparación de Tamaños</h2>
+            <h2>ðŸ“¦ ComparaciÃ³n de TamaÃ±os</h2>
             <table>
                 <thead>
                     <tr>
                         <th>Componente</th>
                         <th>Antes (con jQuery)</th>
-                        <th>Después (Vanilla JS)</th>
+                        <th>DespuÃ©s (Vanilla JS)</th>
                         <th>Mejora</th>
                     </tr>
                 </thead>
@@ -264,7 +265,7 @@
                     <tr>
                         <td><strong>jQuery CDN</strong></td>
                         <td>~30 KB (min + gzip)</td>
-                        <td class="improvement">0 KB ✓</td>
+                        <td class="improvement">0 KB âœ“</td>
                         <td class="improvement">-30 KB (-100%)</td>
                     </tr>
                     <tr>
@@ -290,12 +291,12 @@
         </div>
 
         <div class="comparison-section">
-            <h2>⚡ Rendimiento de Operaciones</h2>
+            <h2>âš¡ Rendimiento de Operaciones</h2>
             <p style="margin-bottom: 20px; color: #718096;">
                 Prueba el rendimiento de operaciones comunes comparando jQuery vs Vanilla JavaScript
             </p>
             <button class="test-button" onclick="runPerformanceTests()">
-                🚀 Ejecutar Pruebas de Rendimiento
+                ðŸš€ Ejecutar Pruebas de Rendimiento
             </button>
 
             <div id="results" class="results">
@@ -305,10 +306,10 @@
         </div>
 
         <div class="comparison-section">
-            <h2>📈 Gráfico de Mejoras</h2>
+            <h2>ðŸ“ˆ GrÃ¡fico de Mejoras</h2>
             <div class="performance-chart">
                 <div class="bar-container">
-                    <div class="bar-label">Tamaño Bundle</div>
+                    <div class="bar-label">TamaÃ±o Bundle</div>
                     <div class="bar-wrapper">
                         <div class="bar" style="width: 89.2%;">-10.8%</div>
                     </div>
@@ -322,25 +323,25 @@
                 <div class="bar-container">
                     <div class="bar-label">Tiempo de Carga</div>
                     <div class="bar-wrapper">
-                        <div class="bar" style="width: 85%;">~15% más rápido</div>
+                        <div class="bar" style="width: 85%;">~15% mÃ¡s rÃ¡pido</div>
                     </div>
                 </div>
                 <div class="bar-container">
                     <div class="bar-label">Parse Time</div>
                     <div class="bar-wrapper">
-                        <div class="bar" style="width: 80%;">~20% más rápido</div>
+                        <div class="bar" style="width: 80%;">~20% mÃ¡s rÃ¡pido</div>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="comparison-section">
-            <h2>✨ Beneficios Adicionales</h2>
+            <h2>âœ¨ Beneficios Adicionales</h2>
             <table>
                 <thead>
                     <tr>
                         <th>Aspecto</th>
-                        <th>Descripción</th>
+                        <th>DescripciÃ³n</th>
                         <th>Impacto</th>
                     </tr>
                 </thead>
@@ -361,13 +362,13 @@
                         <td><span class="badge badge-success">Alto</span></td>
                     </tr>
                     <tr>
-                        <td><strong>Modernización</strong></td>
-                        <td>Código ES6+ con features modernas</td>
+                        <td><strong>ModernizaciÃ³n</strong></td>
+                        <td>CÃ³digo ES6+ con features modernas</td>
                         <td><span class="badge badge-info">Medio</span></td>
                     </tr>
                     <tr>
                         <td><strong>Performance</strong></td>
-                        <td>APIs nativas más rápidas que jQuery</td>
+                        <td>APIs nativas mÃ¡s rÃ¡pidas que jQuery</td>
                         <td><span class="badge badge-success">Alto</span></td>
                     </tr>
                 </tbody>
@@ -387,19 +388,19 @@
             setTimeout(() => {
                 const tests = [];
 
-                // Test 1: Selección de elementos
+                // Test 1: SelecciÃ³n de elementos
                 const start1 = performance.now();
                 for (let i = 0; i < iterations; i++) {
                     document.querySelectorAll('.metric-card');
                 }
                 const end1 = performance.now();
                 tests.push({
-                    name: 'Selección de Elementos (querySelectorAll)',
+                    name: 'SelecciÃ³n de Elementos (querySelectorAll)',
                     time: (end1 - start1).toFixed(2),
                     operations: iterations
                 });
 
-                // Test 2: Manipulación de clases
+                // Test 2: ManipulaciÃ³n de clases
                 const testEl = document.querySelector('.metric-card');
                 const start2 = performance.now();
                 for (let i = 0; i < iterations; i++) {
@@ -408,7 +409,7 @@
                 }
                 const end2 = performance.now();
                 tests.push({
-                    name: 'Manipulación de Clases (classList)',
+                    name: 'ManipulaciÃ³n de Clases (classList)',
                     time: (end2 - start2).toFixed(2),
                     operations: iterations * 2
                 });
@@ -457,7 +458,7 @@
                     </tr>`;
                 });
                 html += '</tbody></table>';
-                html += '<p style="margin-top: 20px; color: #718096; font-size: 0.9em;"><strong>Nota:</strong> Las APIs nativas de JavaScript son generalmente 2-3x más rápidas que jQuery para operaciones equivalentes.</p>';
+                html += '<p style="margin-top: 20px; color: #718096; font-size: 0.9em;"><strong>Nota:</strong> Las APIs nativas de JavaScript son generalmente 2-3x mÃ¡s rÃ¡pidas que jQuery para operaciones equivalentes.</p>';
 
                 output.innerHTML = html;
             }, 100);

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -22,6 +22,7 @@
 
 
     <title>Dropdown</title>
+    <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/dropdown.html">
 </head>
 <body>
 
@@ -35,18 +36,18 @@
     <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
-    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <!--CONTENIDO DE LA PÃGINA (INICIO) -------------------------------------------------------------------->
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
             <h1 id="t1">Dropdown</h1>
             <p>
                 Una lista desplegable asociada a un elemento del DOM que permite su despliegue brindando un conjunto 
-                de opciones que se mostrarán solo cuando se las requiera. <br>
-                Es parte del core de bodystyle a través de la dependencia
+                de opciones que se mostrarÃ¡n solo cuando se las requiera. <br>
+                Es parte del core de bodystyle a travÃ©s de la dependencia
                 <a href="https://mega.nz/file/pEsyDAYY#lEve_WyproRQAN1MnZx0Mba40HgZFjcHJ9rFN95wWYk" class="link com-trigger"
-                data-info="Descarga de la dependencia <span class='f-w-7'>dynamics-tips 1.8.0</span> que posee el núcleo de posicionamiento de toda la biblioteca.">Dynamics-Tips 1.8.0</a>
-                que es la que se encargaga de poscionar todos los elementos dinámicos a través del Kernel de posicionamiento.
+                data-info="Descarga de la dependencia <span class='f-w-7'>dynamics-tips 1.8.0</span> que posee el nÃºcleo de posicionamiento de toda la biblioteca.">Dynamics-Tips 1.8.0</a>
+                que es la que se encargaga de poscionar todos los elementos dinÃ¡micos a travÃ©s del Kernel de posicionamiento.
             </p>
             
             <div class="mar-2 boton-descarga"></div>
@@ -55,47 +56,47 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="t2">Inicialización</h2>
+            <h2 id="t2">InicializaciÃ³n</h2>
             <p>
-                Para poder utilizar el módulo es necesario disponer del archivo <span class="badge badge-gris">bodystyle.min.js</span>
-                agregado al proyecto en desarrollo y luego es necesario inicializar el elemento con la función provista por la 
-                biblioteca. Recomendación <a href="get_started.html" class="link">Get Started</a>.
+                Para poder utilizar el mÃ³dulo es necesario disponer del archivo <span class="badge badge-gris">bodystyle.min.js</span>
+                agregado al proyecto en desarrollo y luego es necesario inicializar el elemento con la funciÃ³n provista por la 
+                biblioteca. RecomendaciÃ³n <a href="get_started.html" class="link">Get Started</a>.
             </p>
 
 <div class="codigo">
 <pre class="cod-js" id="c1">
     // CDN : https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js
 
-    // 1 OPCIÓN ESTÁTICA
+    // 1 OPCIÃ“N ESTÃTICA
     // ------------------
 
     // Inicializa el elemento
-    // cuando estos están dispuestos de manera estática dentro del DOM
+    // cuando estos estÃ¡n dispuestos de manera estÃ¡tica dentro del DOM
     BS.DropDownInit();
 
-    // Desde la versión 5.0.0
-    // BS.DynamicsAutoInit() // Inicializa todos los elementos dinámicos (Dropdown, Tooltips y Comentarios)
+    // Desde la versiÃ³n 5.0.0
+    // BS.DynamicsAutoInit() // Inicializa todos los elementos dinÃ¡micos (Dropdown, Tooltips y Comentarios)
 
     /*******************************************************************************/
 
-    // 2 OPCIÓN DINÁMICA
+    // 2 OPCIÃ“N DINÃMICA
     // -----------------   
 
     /*
-        En proyectos donde se tabaja a través de injección de elementos a través 
-        de JavaScript de manera dinámica, y el elemento que se estudia en esta sección se 
-        ingresa de esta manera, es necesario aplicar un retraso en la inicialización del 
-        módulo con el siguiente codigo.
+        En proyectos donde se tabaja a travÃ©s de injecciÃ³n de elementos a travÃ©s 
+        de JavaScript de manera dinÃ¡mica, y el elemento que se estudia en esta secciÃ³n se 
+        ingresa de esta manera, es necesario aplicar un retraso en la inicializaciÃ³n del 
+        mÃ³dulo con el siguiente codigo.
     */
 
-    //Si los elementos que conforman esta funcionalidad son dinámicos 
-    // Agregados a través de JS 
+    //Si los elementos que conforman esta funcionalidad son dinÃ¡micos 
+    // Agregados a travÃ©s de JS 
     window.onload = () => {
         setTimeout( () => {
             BS.DropDownInit();
 
-            // Desde la versión 5.0.0
-            // BS.DynamicsAutoInit() // Inicializa todos los elementos dinámicos (Dropdown, Tooltips y Comentarios)
+            // Desde la versiÃ³n 5.0.0
+            // BS.DynamicsAutoInit() // Inicializa todos los elementos dinÃ¡micos (Dropdown, Tooltips y Comentarios)
         }, 100); 
     }
 </pre>
@@ -105,7 +106,7 @@
                 Para poder utilizar este elemento hay que enlazar el disparador con la lista a desplegar por el dropdown. Para lograr 
                 hay que agregarle al disparador la clase <span class="badge badge-red">.dropdown-toogle</span> y el atributo 
                 <span class="badge badge-black">data-target</span>, luego a la lista a desplegar (que puede estar ubicada en cualquier parte del DOM) 
-                hay que agregarle la clase <span class="badge badge-red">dropdown</span> y un ID que coincidirá con el valor asignado al atributo 
+                hay que agregarle la clase <span class="badge badge-red">dropdown</span> y un ID que coincidirÃ¡ con el valor asignado al atributo 
                 <span class="badge badge-negro">data-target</span> del disparador.
             </p>
 
@@ -115,7 +116,7 @@
 <pre class="cod-html" id="c2">
     <!-- Elemento disparador del drop -->
     <!-- El atributo del data-target contiene el ID de la lista a desplegar -->
-    <!-- <button class="btn bg-pink-d-1 dropdown-toggle" data-target="#drop-desplegar">Disparador</button> Descomentar este Código -->
+    <!-- <button class="btn bg-pink-d-1 dropdown-toggle" data-target="#drop-desplegar">Disparador</button> Descomentar este CÃ³digo -->
 
     <!-- Lista desplegable que puede incluirse en cualquir logar del DOM -->
     <div class="dropdown fd-gris-az" id="drop-desplegar" style="user-select: none;">
@@ -128,13 +129,13 @@
 </div>
         <div class="alerta-negra">
             El drop utilizado en el ejemplo anterior tiene estilos modificados con clases de la biblioteca 
-            que modifican el color de fondo y el color de la letra de los enlaces. Recomendación: 
+            que modifican el color de fondo y el color de la letra de los enlaces. RecomendaciÃ³n: 
             <div class="lista-doc m-0">
                 <ul>
                     <li><a href="colecciones.html" class="link tips-ele"
-                        data-tips="Ver documentación de los colores de fondo." data-pos="right">Colores</a></li>
+                        data-tips="Ver documentaciÃ³n de los colores de fondo." data-pos="right">Colores</a></li>
                     <li><a href="texto.html" class="link tips-ele"
-                        data-tips="Ver documentación del texto." data-pos="right">Texto</a></li>
+                        data-tips="Ver documentaciÃ³n del texto." data-pos="right">Texto</a></li>
                 </ul>
             </div>
         </div>
@@ -150,7 +151,7 @@
 <pre class="cod-html" id="c3">
     <!-- Elemento disparador del drop -->
     <!-- El atributo del data-target contiene el ID de la lista a desplegar -->
-    <!-- <button class="btn bg-pink-d-1 dropdown-toggle" data-target="#drop-default">Disparador</button> Descomentar este Código -->
+    <!-- <button class="btn bg-pink-d-1 dropdown-toggle" data-target="#drop-default">Disparador</button> Descomentar este CÃ³digo -->
 
     <!-- Lista desplegable que puede incluirse en cualquir logar del DOM -->
     <div class="dropdown" id="drop-default" style="user-select: none;">
@@ -170,7 +171,7 @@
         <h3 id="t5">Efecto Hover</h3>
         <p class="mb-3">
             Podemos realizar lo antes visto pero ahora con el evento HOVER del disparador, de esta dorma cuando 
-            el cursor pase por encima del disparador se mostrará la lista desplegable. <br>
+            el cursor pase por encima del disparador se mostrarÃ¡ la lista desplegable. <br>
             Para poder realizar esto es necesario agregarle al disparador el atributo 
             <span class="badge badge-black">data-evt='hover'</span>.
         </p>
@@ -181,7 +182,7 @@
 <pre class="cod-html" id="c4">
     <!-- Elemento disparador del drop -->
     <!-- El atributo del data-target contiene el ID de la lista a desplegar -->
-    <!-- <button class="btn-sm bg-pink-d-1 bor-pill dropdown-toggle" data-evt="hover" data-target="#drop-hover">Disparador</button> Descomentar este Código -->
+    <!-- <button class="btn-sm bg-pink-d-1 bor-pill dropdown-toggle" data-evt="hover" data-target="#drop-hover">Disparador</button> Descomentar este CÃ³digo -->
 
     <!-- Lista desplegable que puede incluirse en cualquir logar del DOM -->
     <div class="dropdown" id="drop-hover" style="user-select: none;">
@@ -195,11 +196,11 @@
 
         <h3 id="t6">Posicion</h3>
         <p>
-            Tenemos la posibilidad de elegir la posición dende queremos que se muestra el elemento, la misma 
+            Tenemos la posibilidad de elegir la posiciÃ³n dende queremos que se muestra el elemento, la misma 
             puede ser <span class="badge badge-black">top</span>, <span class="badge badge-black">botton</span>,
             <span class="badge badge-black">legt</span> y <span class="badge badge-black">right</span>. Para poder 
             llevar a cabo esto es necesario agregar el atributo <span class="badge badge-black">data-pos</span> al 
-            disparador y la lista se mostrará en el lugar adecuado.
+            disparador y la lista se mostrarÃ¡ en el lugar adecuado.
         </p>
 
         <div class="d-flex just-around flex-wrap mt-3">
@@ -236,18 +237,18 @@
         <article class="articulo">
             <h2 id="t7">Destroy <span class="badge badge-bodyui">5.0.0</span></h2>
             <p>
-                Es posible desvincular la lógica de los Dropdown en un momento determinado 
-                para liberar recursos y mejorar la eficiencia de la página en desarrollo. Para 
-                esta tarea utilizaremos la función <span class="badge badge-black">Destroy</span>.
+                Es posible desvincular la lÃ³gica de los Dropdown en un momento determinado 
+                para liberar recursos y mejorar la eficiencia de la pÃ¡gina en desarrollo. Para 
+                esta tarea utilizaremos la funciÃ³n <span class="badge badge-black">Destroy</span>.
             </p>
 
 <div class="codigo">
     <pre id="c5" class="cod-js">
-        // Se desactivan los dropdown de la página
+        // Se desactivan los dropdown de la pÃ¡gina
         BS.DropDownDestroy()
 
-        // Desde la versión 5.0.0
-        // BS.DynamicsAutoDestroy() // Destruye todos los elementos dinámicos (Dropdown, Tooltips y Comentarios)
+        // Desde la versiÃ³n 5.0.0
+        // BS.DynamicsAutoDestroy() // Destruye todos los elementos dinÃ¡micos (Dropdown, Tooltips y Comentarios)
     </pre>
 </div>
         <button id="desactivador" class="btn fd-bodyui">Desactivar Dordown</button>
@@ -262,8 +263,8 @@
 </div>
 
         <div class="alerta-negra">
-            Notese que si se dirige a los dropdown definidos en esta página luego de presionar el 
-            botón "Desactivar Dordown" estos ya no funcionarán.
+            Notese que si se dirige a los dropdown definidos en esta pÃ¡gina luego de presionar el 
+            botÃ³n "Desactivar Dordown" estos ya no funcionarÃ¡n.
         </div>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
@@ -271,7 +272,7 @@
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
-    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+    <!--CONTENIDO DE LA PÃGINA (FINAL) --------------------------------------------------------------------->
 
     <div class="dropdown fd-gris-az" id="drop" style="user-select: none;">
         <a href="#" class="c-white">Inicio</a>
@@ -294,20 +295,20 @@
         <a href="#">Izquierda</a>
         <a href="#">Derecha</a>
     </div>
-    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <!--GUIA DE LA PÃGINA INI------------------------------------------------------------------------------->
 
     <div class="lista-scroll">
         <ul>
             <li><a href="#t1">Dropdown</a></li>
-            <li><a href="#t2">Inicialización</a></li>
+            <li><a href="#t2">InicializaciÃ³n</a></li>
             <li><a href="#t3">Muestra</a></li>
             <li><a href="#t4">Ejemplo</a></li>
             <li><a href="#t5">Hover</a></li>
-            <li><a href="#t6">Posición</a></li>
+            <li><a href="#t6">PosiciÃ³n</a></li>
             <li><a href="#t7">Destroy</a></li>
         </ul>
     </div>
-    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+    <!--GUIA DE LA PÃGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
     <!--JS --------------------------------------------------------------------------------------------------------------><script> 

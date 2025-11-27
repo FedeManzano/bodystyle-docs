@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Grilla de la biblioteca, permite la administración del espacio y el reacomodamiento de los elementos en una página web.">
+    <meta name="description" content="Grilla de la biblioteca, permite la administraciÃ³n del espacio y el reacomodamiento de los elementos en una pÃ¡gina web.">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
 
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     
     <title>Grid</title>
+    <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/grid.html">
 </head>
 <body>
 
@@ -25,7 +26,7 @@
     <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
-    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <!--CONTENIDO DE LA PÃGINA (INICIO) -------------------------------------------------------------------->
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
@@ -33,7 +34,7 @@
             <p>
                 La grilla de la biblioteca es la herramienta mas importante del alineamiento de los elementos 
                 dentro del DOM, junto con Flexbox y la capacidad de ajustar el Margin y el Padding, la grilla permite 
-                el reacomodamiento automático de los elementos en todos los tamaños de pantalla sin salirse del diseño 
+                el reacomodamiento automÃ¡tico de los elementos en todos los tamaÃ±os de pantalla sin salirse del diseÃ±o 
                 y mostrando el contenido de manera correcta.
             </p>
             
@@ -65,7 +66,7 @@
             </div>
 
             <div class="alerta-negra">
-                Cada columna está representada en el ejemplo anterior por un número y la clase 
+                Cada columna estÃ¡ representada en el ejemplo anterior por un nÃºmero y la clase 
                 para definar la grilla es <span class="badge badge-red">.row / .fila</span>
             </div>
 
@@ -91,12 +92,12 @@
 
             <div class="alerta-negra">
                 En este caso se define la clase <span class="badge badge-red">.cl-1</span> lo que implica 
-                que cada elemento va a ocupar 1 columna en todos los tamaños de pantalla sin importar el tamaño. 
+                que cada elemento va a ocupar 1 columna en todos los tamaÃ±os de pantalla sin importar el tamaÃ±o. 
             </div>
 
             <h3 id="t3">Varias Columnas</h3>
             <p>
-                La forma de que un elemento ocupe varias clolumnas lo definimos con el parámetro que acompaña a la 
+                La forma de que un elemento ocupe varias clolumnas lo definimos con el parÃ¡metro que acompaÃ±a a la 
                 clase <span class="badge badge-red">cl-[n]</span> donde n es el numero de columnas que ocupa cada elemento.
             </p>
 
@@ -135,8 +136,8 @@
 
 
             <div class="alerta-negra">
-                Como se puede observar en el ejemplo cada elemento ocupa 3 columnas, por esta razón 
-                hay 4 elementos por fila lo que se deduce a partir de la siguiente expresión 
+                Como se puede observar en el ejemplo cada elemento ocupa 3 columnas, por esta razÃ³n 
+                hay 4 elementos por fila lo que se deduce a partir de la siguiente expresiÃ³n 
                 <span class="badge badge-red">12 Columnas / 3 Columnas = 4 elementos por fila</span>.
             </div>
 
@@ -183,13 +184,13 @@
 
 
         <article class="articulo">
-            <h2 id="t4">Tamaños de Pantalla</h2>
+            <h2 id="t4">TamaÃ±os de Pantalla</h2>
             <p>
                 En los ejemplos anteriores definimos la grilla junto con lo que ocupa cada elemento 
-                en la misma para todos los tamaños de pantalla, lo que implica que si definimos una cantida fija 
-                de columnas esta se mantendra constante en cada dispositivo sin importar su tamaño. <br>
+                en la misma para todos los tamaÃ±os de pantalla, lo que implica que si definimos una cantida fija 
+                de columnas esta se mantendra constante en cada dispositivo sin importar su tamaÃ±o. <br>
                 Ahora bien, que sucede cuando queremos definir que un elemento ocupe n columnas en los dispositivos 
-                mayores 1030px de pantalla y m columnas para dispositivos de pantalla mas pequeña.
+                mayores 1030px de pantalla y m columnas para dispositivos de pantalla mas pequeÃ±a.
             </p>
 
              <div class="row my-3">
@@ -226,10 +227,10 @@
 </pre>
 </div>
         <div class="alerta-negra">
-            Como se puede observar en el ejemplo anterior se añadió a cada elemento la clase 
+            Como se puede observar en el ejemplo anterior se aÃ±adiÃ³ a cada elemento la clase 
             <span class="badge badge-red">cm-[n]</span> lo cual implica que en dispositivos menores
-            a 1030px de ancho la cantidad de columnas asignadas a cada elemento va a ser de 6, por lo tanto la configuración de elementos 
-            se presenta a partir de la siguiente expresión: <br>
+            a 1030px de ancho la cantidad de columnas asignadas a cada elemento va a ser de 6, por lo tanto la configuraciÃ³n de elementos 
+            se presenta a partir de la siguiente expresiÃ³n: <br>
             <span class="badge badge-red">12 Columnas / 4 Columnas = 3</span> y <span class="badge badge-red">12 Columnas / 6 Columnas = 2</span> esto 
             quiere decir que en dispositivos grandes (mayores a 1030px) la cantidad de columnas de cada elemento va a ser de 3, mientras que en dispositivos 
             menosres a 1030px va a ser de 2.
@@ -239,7 +240,7 @@
             <thead>
                 <tr>
                     <th>Clase</th>
-                    <th>Descripción</th>
+                    <th>DescripciÃ³n</th>
                     <th>Rango</th>
                 </tr>
             </thead>
@@ -280,8 +281,8 @@
         <h3 id="t5">Ejemplo Completo</h3>
         <p>
             Ahora definimos un ejemplo en el que los elementos en los dispositivos mayores a 1030px 
-            ocuparán 3 columnas, en dispositivos medianos menores a 1030px ocuparán 4 columnas, en dispositivos chicos 
-            ocuparán 6 columnas y en dispositivos extra chicos menores a 400px ocuparan 12 columnas (100% de la grilla).
+            ocuparÃ¡n 3 columnas, en dispositivos medianos menores a 1030px ocuparÃ¡n 4 columnas, en dispositivos chicos 
+            ocuparÃ¡n 6 columnas y en dispositivos extra chicos menores a 400px ocuparan 12 columnas (100% de la grilla).
         </p> 
 
         <div class="row">
@@ -322,12 +323,12 @@
             <h2 id="t6">Grid Offset</h2>
             <p>
                 En los ejemplos anteriores cada elementos ocupaba un conjunto de 
-                columnas predefinido para cada tamaño de pantalla, pero en algunas oportunidades 
+                columnas predefinido para cada tamaÃ±o de pantalla, pero en algunas oportunidades 
                 es necesario definir para cada elemento un cojunto de columnas manualmente de manera tal 
-                que cada elemento tenga una configuración diferente a la de los otros elementos. <br>
-                Para esta tarea se utiliza la clase <span class="badge badge-red">.offset-[tamaño]-[inicio]-[n]</span> donde 
-                inicio es la columna donde comienza el elemento, n es la cantidad de columnas que ocupa y tamaño (l,m,s,xs) es 
-                el tamaño de la pantalla en la que se debe mostrar el elemento.
+                que cada elemento tenga una configuraciÃ³n diferente a la de los otros elementos. <br>
+                Para esta tarea se utiliza la clase <span class="badge badge-red">.offset-[tamaÃ±o]-[inicio]-[n]</span> donde 
+                inicio es la columna donde comienza el elemento, n es la cantidad de columnas que ocupa y tamaÃ±o (l,m,s,xs) es 
+                el tamaÃ±o de la pantalla en la que se debe mostrar el elemento.
             </p>
 
             <div class="row mt-3">
@@ -378,7 +379,7 @@
         <div class="alerta-negra">
             Lo mismo sucede a la inversa, por ejemplo: Queremos que el elemento uno en disposivos grandes 
             ocupe 5 columnas comenzando de la 2, pero en los demas dispositovos solo ocupe una cantidad de 
-            columnas igual que los demás comenzando de la columna 1. 
+            columnas igual que los demÃ¡s comenzando de la columna 1. 
         </div>
 
         <div class="row mt-3">
@@ -389,7 +390,7 @@
 
         <div class="alerta-negra mt-3">
             Como se puede observar en el ejemplo anterior ahora el elemento 1 ocupa 5 columnas 
-            en dispositivos grandes (Mayores a 1030px) y en los demás dispositivos solo ocupa 4. <br>
+            en dispositivos grandes (Mayores a 1030px) y en los demÃ¡s dispositivos solo ocupa 4. <br>
             La columna 1 para equipos grandes queda desocupada.
         </div>
 
@@ -436,7 +437,7 @@
                 <tr>
                     <th>Clase</th>
                     <th>Medida</th>
-                    <th>Descripción</th>
+                    <th>DescripciÃ³n</th>
                 </tr>
             </thead>
             <tbody>
@@ -467,21 +468,21 @@
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
-    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+    <!--CONTENIDO DE LA PÃGINA (FINAL) --------------------------------------------------------------------->
 
-    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <!--GUIA DE LA PÃGINA INI------------------------------------------------------------------------------->
 
     <div class="lista-scroll">
         <ul>
             <li><a href="#t1">Grid</a></li>
             <li><a href="#t2">Grid Row-Fila</a></li>
             <li><a href="#t3">Varias Columnas</a></li>
-            <li><a href="#t4">Tamaños</a></li>
+            <li><a href="#t4">TamaÃ±os</a></li>
             <li><a href="#t5">Ejemplo</a></li>
             <li><a href="#t6">Offset</a></li>
         </ul>
     </div>
-    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+    <!--GUIA DE LA PÃGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
     <!--JS --------------------------------------------------------------------------------------------------------------><script> 

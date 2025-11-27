@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,13 +6,14 @@
     <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
 
     
-    <meta name="description" content="Elemento dinámico que muestra un mensaje en la página en función a un disparador.">
+    <meta name="description" content="Elemento dinÃ¡mico que muestra un mensaje en la pÃ¡gina en funciÃ³n a un disparador.">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/bodystyle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     
     <title>Toast</title>
+    <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/toast.html">
 </head>
 <body>
 
@@ -26,16 +27,16 @@
     <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
     <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
 
-    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <!--CONTENIDO DE LA PÃGINA (INICIO) -------------------------------------------------------------------->
     <section class="pagina nav-contenido">
         <!-- ENCABEZADO INI ------------------------------------------------------>
         <section class="encabezado">
             <h1 id="t1">Toast</h1>
             <p>
-                Elemento dinámico proveniente de la dependencia <span class="badge badge-grey">Dynamics-Tips 1.8.0</span> que permite 
-                mostrar mensajes dinámicos en pantalla con animaciones y estilos personalizados, este elemento está 
-                gestionado por el núcleo de posicionamiento de la dependencia antes mencionada y se puede disponer por separado a 
-                través del siguiente enlace 
+                Elemento dinÃ¡mico proveniente de la dependencia <span class="badge badge-grey">Dynamics-Tips 1.8.0</span> que permite 
+                mostrar mensajes dinÃ¡micos en pantalla con animaciones y estilos personalizados, este elemento estÃ¡ 
+                gestionado por el nÃºcleo de posicionamiento de la dependencia antes mencionada y se puede disponer por separado a 
+                travÃ©s del siguiente enlace 
                 <a href="https://mega.nz/file/pEsyDAYY#lEve_WyproRQAN1MnZx0Mba40HgZFjcHJ9rFN95wWYk" class="link com-trigger"
                 data-info="Descarga de la dependencia <span class='f-w-9 c-red'>Dynamics-Tips 1.8.0</span>. <br> Son los archivos procesados realizados por el mismo autor de esta <span class='badge badge-red'>Biblioteca Bodystyle</span>">Dynamics-Tips 1.8.0</a>.
             </p>
@@ -46,13 +47,13 @@
 
         <!---ARTICULO INI ------------------------------------------------------------->
         <article class="articulo">
-            <h2 id="t2">Toast Iniciación</h2>
+            <h2 id="t2">Toast IniciaciÃ³n</h2>
             <p>
-                Para poder utilizar este módulo al igual que demás módulos de JavaScript de la biblioteca 
+                Para poder utilizar este mÃ³dulo al igual que demÃ¡s mÃ³dulos de JavaScript de la biblioteca 
                 es necesario vincular a nuestro proyecto el archivo procesado y transpilado de la biblioteca
-                lo cual ya se mencionó en la página de bienvenida <a href="get_started.html" class="link">Get Started</a>
+                lo cual ya se mencionÃ³ en la pÃ¡gina de bienvenida <a href="get_started.html" class="link">Get Started</a>
                 en la cual se muestran varias formas de instalar la biblioteca en nuestro proyecto, iguamente para llevar a cabo 
-                los ejemplos lo más rápido y sencillo es realizar esto a través de su CDN.
+                los ejemplos lo mÃ¡s rÃ¡pido y sencillo es realizar esto a travÃ©s de su CDN.
             </p>
 <div class="codigo">
 <pre class="cod-html" id="c1">
@@ -63,13 +64,13 @@
 </div>
             <h3 id="t3">Muestra</h3>
             <p class="mb-3">
-                Vamos a ver un ejemplo básico que se establece por default para realizar una introducción al tema.
+                Vamos a ver un ejemplo bÃ¡sico que se establece por default para realizar una introducciÃ³n al tema.
             </p>
 
             <button class="btn bg-bodyui bor-pill waves" onclick="BS.Toast()">Click !</button>
 
             <div class="alerta-negra mt-3">
-                Como se puede observar ese es un toast por defecto, así se verá el efecto en todos los ejemplos
+                Como se puede observar ese es un toast por defecto, asÃ­ se verÃ¡ el efecto en todos los ejemplos
                 personalizados. Es importate aclarar que pude ser inicializado con texto pero en realidad lo que muestra el elemento 
                 es HTML.
             </div>
@@ -89,24 +90,24 @@
             </p>
 
 
-            <button class="btn bg-bodyui bor-pill waves" onclick="BS.Toast({html: 'Acaba de dar Click en un botón azul'})">Click !</button>
+            <button class="btn bg-bodyui bor-pill waves" onclick="BS.Toast({html: 'Acaba de dar Click en un botÃ³n azul'})">Click !</button>
 
 <div class="codigo">
 <pre class="cod-html" id="c3">
     <!--Toast con texto peronalizado-->
-    <button class="btn fd-azul bor-pill" onclick="BS.Toast({html: 'Acaba de dar Click en un botón azul'})">Click !</button>
+    <button class="btn fd-azul bor-pill" onclick="BS.Toast({html: 'Acaba de dar Click en un botÃ³n azul'})">Click !</button>
 </pre>
 </div>
         <div class="alerta-negra">
-            Como se puede ver en el código anterior el toast recibe un JSON con el atributo <span class="badge badge-negro">html</span>
-            este es uno de los parámetros de configuración.
+            Como se puede ver en el cÃ³digo anterior el toast recibe un JSON con el atributo <span class="badge badge-negro">html</span>
+            este es uno de los parÃ¡metros de configuraciÃ³n.
         </div>
         </article>
         
         <article class="articulo">
             <h2 id="t5">Html en el Toast</h2>
             <p class="mb-3">
-                Ahora vamos a añadirle estilos al texto que enviamos a través de etquetas HTML a través 
+                Ahora vamos a aÃ±adirle estilos al texto que enviamos a travÃ©s de etquetas HTML a travÃ©s 
                 de clases que posea el desarrollador o las de la biblioteca. 
             </p>
             <button class="btn bg-bodyui bor-pill waves" onclick="BS.Toast({html: `<span class='c-rojo-ro'>Biblioteca de estilos <span class='badge badge-red'>Bodystyle</span></span>`})">Click !</button>
@@ -122,15 +123,15 @@
         <article class="articulo">
             <h2 id="t6">Clases Css en el Toast</h2>
             <p>
-                Para realizar esto lo conveniente es crear una función de javaScript separada, esto debe a que 
-                si lo hacemos desde el propio elemento disparador el código se puede volver inmanejable. Por esta razón 
-                el arreglo con las clases CSS que modificarán el Toast se configurarán en una función.
+                Para realizar esto lo conveniente es crear una funciÃ³n de javaScript separada, esto debe a que 
+                si lo hacemos desde el propio elemento disparador el cÃ³digo se puede volver inmanejable. Por esta razÃ³n 
+                el arreglo con las clases CSS que modificarÃ¡n el Toast se configurarÃ¡n en una funciÃ³n.
             </p>
 <div class="codigo">
 <pre class="cod-js" id="c5">
     MensajeError = () => {
         let conf = {
-            html: `<span class="c-white f-w-9">El botón presionado envía este mensaje</span>`, // Html del mensaje 
+            html: `<span class="c-white f-w-9">El botÃ³n presionado envÃ­a este mensaje</span>`, // Html del mensaje 
             clases: ['bg-red', 'bor-rad-10', 'bor-gris-c-3'] // Clases que modifican la pariencia del toast
         }
         BS.Toast(conf)
@@ -157,7 +158,7 @@
 </div>
 
         <div class="alerta-negra">
-            En el segundo parámetro que recibe la función toast se envía un arreglo de clases 
+            En el segundo parÃ¡metro que recibe la funciÃ³n toast se envÃ­a un arreglo de clases 
             estas pueden ser muy diversas y es el usuario el que las selecciona, a partir de esto 
             la flexibilidad que ofrece el elemento es muy alta.
         </div>
@@ -168,7 +169,7 @@
 <pre class="cod-js" id="c7">
     MensajeSuccessIcono = () => {
         let conf = {
-            // Se envía el mensaje con un ícono de FontAwesome
+            // Se envÃ­a el mensaje con un Ã­cono de FontAwesome
             html: `<span class="c-white f-w-7">Este es un mensaje de Success <i class="fa-solid fa-check c-white f-w-9"></i></span>`, // Html del mensaje 
             clases: ['fd-verde-az', 'bor-rad-5', 'bor-grey-s-1']
         }
@@ -180,10 +181,10 @@
         </article>
 
         <article class="articulo">
-            <h2 id="t7">Tiempo de Duración del Toast</h2>
+            <h2 id="t7">Tiempo de DuraciÃ³n del Toast</h2>
             <p>
-                También podemos configurar la duración del toast de manera tal que permanezca 
-                el tiempo deseado, por defecto son 2000ms pero este tiempo es configurable a través del campo 
+                TambiÃ©n podemos configurar la duraciÃ³n del toast de manera tal que permanezca 
+                el tiempo deseado, por defecto son 2000ms pero este tiempo es configurable a travÃ©s del campo 
                 <span class="badge badge-negro">tiempo</span>.
             </p>
 
@@ -207,7 +208,7 @@
             <p>
                 Se le puede dar la posibilidad al usuario de cerrar el toast cuando quiera, para eso 
                 es necesario configurar el toast con el atributo <span class="badge badge-negro">cerrar</span> en 
-                el JSON de configuración con el valor true.
+                el JSON de configuraciÃ³n con el valor true.
             </p>
 
             <button class="btn bg-green bor-pill mt-3" onclick="CerrarToast()">Cerrar !</button>
@@ -220,7 +221,7 @@
                 html: `Este toast dura 5 seguendos`, // Html del mensaje 
                 clases: ['fd-verde-az','bor-grey-s-1', 'bor-pill'],
                 tiempo: 5000,
-                cerrar: true // Con esto le da la opción al usuario
+                cerrar: true // Con esto le da la opciÃ³n al usuario
             }
             BS.Toast(conf)
         } 
@@ -234,8 +235,8 @@
 </div>
 
         <div class="alerta-negra">
-            Recomendación final: Para aprovechar este elemento en su totalidas es necesario 
-            conocer las clases de colores y las funcionalidades establecidas para la configuración
+            RecomendaciÃ³n final: Para aprovechar este elemento en su totalidas es necesario 
+            conocer las clases de colores y las funcionalidades establecidas para la configuraciÃ³n
             de los bordes de los elementos. 
             <div class="lista-doc m-0">
                 <ul>
@@ -248,21 +249,21 @@
         <!--AUTOR--------------------------------------------------------------------->
         <div class="autor"></div>
     </section>
-    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+    <!--CONTENIDO DE LA PÃGINA (FINAL) --------------------------------------------------------------------->
 
     <div class="lista-scroll">
         <ul>
             <li><a href="#t1">Toast</a></li>
-            <li><a href="#t2">Inicialización</a></li>
+            <li><a href="#t2">InicializaciÃ³n</a></li>
             <li><a href="#t3">Muestra</a></li>
             <li><a href="#t4">Contenido</a></li>
             <li><a href="#t5">Html</a></li>
             <li><a href="#t6">Clases CSS</a></li>
-            <li><a href="#t7">Duración</a></li>
+            <li><a href="#t7">DuraciÃ³n</a></li>
             <li><a href="#t8">Cerrar</a></li>
         </ul>
     </div>
-    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+    <!--GUIA DE LA PÃGINA FIN------------------------------------------------------------------------------->
 
     <!------------------------------------------------------------------------------------------------------------------->
     <!--JS --------------------------------------------------------------------------------------------------------------><script> 
@@ -277,7 +278,7 @@
         BS.CodigoJsInit()
         MensajeError = () => {
             let conf = {
-                html: `<span class="c-white f-w-9">El botón presionado envía este mensaje</span>`, // Html del mensaje 
+                html: `<span class="c-white f-w-9">El botÃ³n presionado envÃ­a este mensaje</span>`, // Html del mensaje 
                 clases: ['bg-red', 'bor-rad-10', 'bor-grey-s-3']
             }
             BS.Toast(conf)
