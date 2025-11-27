@@ -2,6 +2,7 @@
 import "bodyui2/dist/js/bodystyle.min"
 import "./cargaMenues"
 import "./copiarCodigo"
+import Busqueda from "./search"
 
 window.onload = () => {
   setTimeout(() => {
@@ -40,6 +41,8 @@ window.onload = () => {
     })
 
     BS.WavesInit()
+
+    Busqueda.Init()
   }, 100);
 }
 

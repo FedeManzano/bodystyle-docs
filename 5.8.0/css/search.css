@@ -1,0 +1,21 @@
+.option-seach {
+  padding: 7px;
+  border-radius: 5px;
+  position: absolute;
+  max-width: 350px;
+  min-width: 300px;
+  z-index: 100000000 !important;
+  background-color: hsl(195, 7%, 11%);
+  display: none;
+  border: 1px solid #ccc;
+}
+.option-seach a {
+  display: block;
+  color: #ccc;
+  padding: 5px 10px;
+}
+.option-seach a:hover {
+  color: #fff;
+}
+
+/*# sourceMappingURL=search.css.map */
