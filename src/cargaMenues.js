@@ -160,7 +160,7 @@ import "bodyui2/dist/js/bodystyle.min"
             </div>
             <div  class="right-content">
                 <label  class="badge-mje-right badge-mje-bodyui mr-2 mb-1 ocultar-desde-x-chicos"><i class="fz-16 bs-tag">&nbsp;</i>v5.8.0</label>
-                <div class="ocultar-desde-x-chicos"><a target="_blank" href="https://mega.nz/file/wMF0GBKZ#_Z_xmxODWC6WAfqUF7fB0zowVo2qJYvc6BJn6nYkmjc" class="ocultar-desde-x-chicos btn-sm-o btn-white-o bor-pill disparador" data-info="Versión Transpilada y procesada de bodystyle 5.8.0">Descargar</a></div>
+                <div class="ocultar-desde-x-chicos"><a target="_blank" href="https://mega.nz/file/IEtFjbhL#9avwQbK0EicykZx_vGLWaMUemt53lhvpDZHRYykynNw" class="ocultar-desde-x-chicos btn-sm-o btn-white-o bor-pill disparador" data-info="Versión Transpilada y procesada de bodystyle 5.8.0">Descargar</a></div>
                 <!-- Botón oficial de GitHub (más interactivo) -->
                 <div class="ml-3">
                     <a class="github-button fd-gris-n" href="https://github.com/FedeManzano/bodystyle"
@@ -200,7 +200,7 @@ import "bodyui2/dist/js/bodystyle.min"
                     data-pos='right'>versión 5.8.0</a>, el segundo botón es para descargar esta misma documentación
                     para no tener que ver publicidad que el hosting introduce sin permiso.
                 </p> 
-                <a target="_blank" href="https://mega.nz/file/wMF0GBKZ#_Z_xmxODWC6WAfqUF7fB0zowVo2qJYvc6BJn6nYkmjc" class="btn-cover fd-bodyui mar-2 disparador bor-pill"
+                <a target="_blank" href="https://mega.nz/file/IEtFjbhL#9avwQbK0EicykZx_vGLWaMUemt53lhvpDZHRYykynNw" class="btn-cover fd-bodyui mar-2 disparador bor-pill"
                 data-info="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v5.8.0.zip" data-pos='right'>Descargar</a>
                 <a href="" target="_blank" class="btn-cover fd-blanco mar-1 com-trigger bor-pill"
                 data-info="Descarga de esta misma documentación, si ya la posee en el ambito local este botón estará deshabilitado.">Docs 3.0.0</a>
