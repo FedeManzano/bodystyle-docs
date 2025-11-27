@@ -40,7 +40,12 @@
                 mostrarle al usuario que temporalmente esos elementos no están activos. <br>
                 En sitios dinámicos es ncesario disponer de la capacidad de apagar un elemento en determinadas
                 circunstancias y es por ello que utilizaremos la clase <span
-                    class="badge badge-red">.desactivado</span>.
+                    class="badge badge-red">.desactivado</span>. <br>
+                Desde la versión 5.8.0 se ha implementado la capacidad de revertir cambios en los elementos, es decir
+                que cuando la clase <span class="badge badge-red">.desactivado</span> se le aplica a un elemento,
+                se desactivan todos los eventos asociados a él y su apariencia y cuando se le quita la clase,
+                se activan todos los eventos asociados a él y su apariencia de manera automática. <br>
+                <strong>Ya no es necesario volver a añadirle los atributos removidos manualmente.</strong>
             </p>
 
             <div class="mar-2 boton-descarga"></div>
@@ -77,7 +82,6 @@
             </div>
 
             <div class="codigo">
-
                 <pre class="cod-html" id="c1">
     <button class="btn bg-bodyui mt-3 desactivado com-trigger" data-info="Esto es un botón desactivado, todos los eventos asociados al mismo se encuentran inactivos como así también su apariencia.">Botón Inactivo</button>
     <div class="mt-1">
@@ -92,52 +96,13 @@
             <h3 id="t3">Código del Módulo</h3>
             <p>
                 Para poder explicar mejor que realiza el módulo lo mejor es ver el código fuente
-                que lleva a cabo esta tarea.
+                que lleva a cabo esta tarea. <br><a
+                    href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Desactivado.js"
+                    class="link tips-ele"
+                    data-tips="<i class='fa-solid fa-code c-yellow'>&nbsp;&nbsp;</i> Código fuente del módulo">Código
+                    fuente</a>
             </p>
-            <div class="codigo">
-                <pre class="cod-js" id="c2">
-    import $ from 'jquery'
-    /**
-     * Módulo (11) Se encarga se retirarle todos los eventos html
-     * a los elementos que contengan la clase .desactivado.
-     * Módulo que se inicializa de manera automática, sin necesidad de llamar a 
-     * la función de inicialización. 
-     */
-    (function(){
 
-        const inicializar = () => {
-            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onclick"))
-            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("ondblclick"))
-            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onmousedown"))
-            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onmouseleave"))
-            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onmouseout"))
-            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onkeydown"))
-            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onkeypress"))
-            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onkeyup"))
-            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("href"))
-            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onfocus"))
-            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onblur"))
-            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onchange"))
-            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onselect"))
-            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onreset"))
-            document.querySelectorAll(".desactivado, .desactivado *").forEach(el => el.removeAttribute("onsubmit"))
-            document.querySelectorAll("input.desactivado").forEach(el => el.setAttribute("readonly", true))
-            document.querySelectorAll("*.desactivado *").forEach(el => el.setAttribute("readonly", true))
-            document.querySelectorAll("*.desactivado *").forEach(el => el.classList.add("desactivado"))
-            document.querySelectorAll("input.desactivado").forEach(el => { const label = el.previousElementSibling?.tagName === "LABEL" ? el.previousElementSibling : el.nextElementSibling; if (label?.tagName === "LABEL") label.removeAttribute("for"); })
-        }
-
-        var Desactivado = {
-            iniciar: () => {
-                inicializar();
-            }
-        }
-        window.Desactivado = Desactivado
-    })()
-
-    export default Desactivado
-</pre>
-            </div>
             <div class="alerta-negra">
                 Esta funcionalidad se puede aplicar a cualquier elemento del dom, removiendo todos los
                 eventos asociados a este elemento, y temporalmente dejandolo inhabilitado.
@@ -231,10 +196,9 @@
             <h4 class="mb-3">Activar</h4>
             <p class="mb-3">
                 Vamos a ver un ejemplo en el un elemento desativado se activa dinámicamente utilizando
-                <a href="https://jquery.com/" class="link tips-ele" data-tips="Página oficial de Jquery">Jquery</a>
-                para crear la funcionalidad del botón activador.
+                Vanilla JS para crear la funcionalidad del botón activador.
             </p>
-            <a href="get_started.html" id="link_desact" class="link desactivado">Enlace Desactivado</a>
+            <a href="desactivado.html#t4" id="link_desact" class="link desactivado">Enlace Desactivado</a>
             <div class="mt-3 d-flex just-around ali-baseline flex-wrap">
 
                 <button id="activador" class="btn bg-blue">Activar</button>
@@ -255,23 +219,13 @@
                 <pre class="cod-js" id="c6">
     document.getElementById("activador").addEventListener("click",() => {
        // Se remueve la clase desactivado
+       // Automáticamente se reconfigura el atributo href
        document.getElementById("link_desact").classList.remove("desactivado")
-
-       // Cuando se activa el enlace 
-       // se reconfigura el atributo href 
-       document.getElementById("link_desact").setAttribute("href", "#")
     })
     document.getElementById("desactivador").addEventListener("click",() => {
        document.getElementById("link_desact").classList.add("desactivado")
     })
 </pre>
-            </div>
-
-            <div class="alerta-negra">
-                Notese que cuando se activa el elemento es necesario volver a cargarle los atributos que fueron
-                removidos
-                esto se debe a que cuando se deshabilita se remueve todo del elemento, luego de manera lógica hay que
-                cargarlos nuevamente.
             </div>
 
         </article>
@@ -310,7 +264,6 @@
 
         document.getElementById("activador").addEventListener("click", () => {
             document.getElementById("link_desact").classList.remove("desactivado")
-            document.getElementById("link_desact").setAttribute("href", "#")
         })
 
         document.getElementById("desactivador").addEventListener("click", () => {
