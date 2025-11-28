@@ -285,7 +285,304 @@ const indicesBusqueda = [
             "css",
             "hover"
         ]
+    },
+    {
+        title: "Formas",
+        url: "formas.html",
+        tags: [
+            "forms",
+            "css",
+            "figuras",
+            "formas"
+        ]
+    },
+    {
+        title: "Input",
+        url: "input.html",
+        tags: [
+            "input",
+            "formularios",
+            "forms",
+            "campo",
+            "campos"
+        ]
+    },
+    {
+        title: "Grupos Formularios",
+        url: "grupos_form.html",
+        tags: [
+            "groups",
+            "grupos",
+            "group",
+            "grupo",
+            "formularios"
+        ]
+    },
+    {
+        title: "Input Range",
+        url: "input_range.html",
+        tags: [
+            "range",
+            "rango",
+            "slider",
+            "input",
+            "formularios"
+        ]
+    },
+    {
+        title: "Select",
+        url: "select.html",
+        tags: [
+            "select",
+            "selector",
+            "combobox",
+            "formularios"
+        ]
+    },
+    {
+        title: "Checkbox",
+        url: "checkbox.html",
+        tags: [
+            "checkbox",
+            "formularios"
+        ]
+    },
+    {
+        title: "Radio Button",
+        url: "radio.html",
+        tags: [
+            "radio",
+            "radio button",
+            "formularios"
+        ]
+    },
+    {
+        title: "Switch",
+        url: "switch.html",
+        tags: [
+            "switch",
+            "formularios"
+        ]
+    },
+    {
+        title: "Input File",
+        url: "input_file.html",
+        tags: [
+            "input file",
+            "file",
+            "input",
+            "archivo",
+            "seleccionar",
+            "formularios"
+        ]
+    },
+    {
+        title: "Formularios",
+        url: "formularios.html",
+        tags: [
+            "formularios",
+            "inputs"
+        ]
+    },
+    {
+        title: "Módulos",
+        url: "modulos.html",
+        tags: [
+            "modulos",
+            "modulo",
+            "js"
+        ]
+    },
+    {
+        title: "Gestión Errores",
+        url: "gestion_errores.html",
+        tags: [
+            "errores",
+            "js"
+        ]
+    },
+    {
+        title: "Auto Iniciación",
+        url: "auto_iniciacion.html",
+        tags: [
+            "inicializacion",
+            "modulo",
+            "js"
+        ]
+    },
+    {
+        title: "Modales",
+        url: "modal.html",
+        tags: [
+            "modals",
+            "modal",
+            "js"
+        ]
+    },
+    {
+        title: "Tooltips",
+        url: "tooltips.html",
+        tags: [
+            "tooltips",
+            "dinamicos",
+            "js"
+        ]
+    },
+    {
+        title: "Comentarios",
+        url: "comentarios.html",
+        tags: [
+            "comentarios",
+            "dinamicos",
+            "js"
+        ]
+    },
+    {
+        title: "Dropdown",
+        url: "dropdown.html",
+        tags: [
+            "dropdown",
+            "dinamicos",
+            "js"
+        ]
+    },
+    {
+        title: "Tips Propios",
+        url: "personalizados.html",
+        tags: [
+            "tips",
+            "tooltips",
+            "personalizados",
+            "js",
+            "dinamicos"
+        ]
+    },
+    {
+        title: "List Fixed",
+        url: "coleccion_flotante.html",
+        tags: [
+            "colecciones",
+            "fixed",
+            "js"
+        ]
+    },
+    {
+        title: "ScrollSpy",
+        url: "scrollspy.html",
+        tags: [
+            "scrollspy",
+            "guia",
+            "js"
+        ]
+    },
+    {
+        title: "Imagenes",
+        url: "imagenes.html",
+        tags: [
+            "imagenes",
+            "js"
+        ]
+    },
+    {
+        title: "Tabs",
+        url: "tab.html",
+        tags: [
+            "tab",
+            "solapas",
+            "menu",
+            "js"
+        ]
+    },
+    {
+        title: "Show Code",
+        url: "show_code.html",
+        tags: [
+            "sintaxis",
+            "resaltar",
+            "codigo",
+            "code",
+            "js"
+        ]
+    },
+    {
+        title: "Toasts",
+        url: "toast.html",
+        tags: [
+            "toasts",
+            "mensajes",
+            "dinamicos",
+            "js"
+        ]
+    },
+    {
+        title: "Waves",
+        url: "waves.html",
+        tags: [
+            "waves",
+            "efecto",
+            "effect",
+            "js",
+            "click"
+        ]
+    },
+    {
+        title: "Navigation",
+        url: "nav.html",
+        tags: [
+            "menu",
+            "nav",
+            "responsive",
+            "navigation",
+            "navegacion"
+        ]
+    },
+    {
+        title: "Sidebar",
+        url: "sidebar.html",
+        tags: [
+            "sidebar",
+            "lateral",
+            "menu",
+            "nav",
+            "responsive",
+            "navigation",
+            "navegacion"
+        ]
+    },
+    {
+        title: "Sidebar Dropdown",
+        url: "sidebar_drop.html",
+        tags: [
+            "sidebar",
+            "lateral",
+            "dropdown",
+            "desplegable",
+            "menu",
+            "nav",
+            "responsive",
+            "navigation",
+            "navegacion"
+        ]
+    },
+    {
+        title: "Preloader",
+        url: "preloader.html",
+        tags: [
+            "preloader",
+            "navigation",
+            "navegacion"
+        ]
+    },
+    {
+        title: "Progressbar",
+        url: "progressbar.html",
+        tags: [
+            "progressbar",
+            "navigation",
+            "navegacion"
+        ]
     }
+
 ]
 
 let buscador = {

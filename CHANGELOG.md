@@ -9,6 +9,11 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
 ## [3.0.0] - 2025-11-27
 
+### ✨ Agregado
+- **Buscador en la documentación**: Implementada funcionalidad de búsqueda con índice actualizado
+  - Agregados nuevos términos al índice: Formas, Input, Grupos Formularios
+- **SEO**: Implementadas etiquetas `rel="canonical"` en 64 páginas para evitar contenido duplicado
+
 ### 🔧 Corregido
 - **Error crítico de HTML**: Eliminada etiqueta `</html>` prematura en `index.html` que rompía la estructura del documento
 - Restaurada estructura HTML correcta con `<head>` y `<body>` en sus posiciones apropiadas
@@ -22,7 +27,7 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 ## [Unreleased]
 
 ### 🎯 Planeado
-- Implementar buscador en la documentación
+
 - Migrar a GitHub Pages o Netlify
 - Crear guías de migración entre versiones
 - Traducción al inglés
