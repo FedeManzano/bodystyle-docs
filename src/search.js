@@ -251,6 +251,41 @@ const indicesBusqueda = [
             "cards"
         ]
     },
+    {
+        title: "Breadcrumbs",
+        url: "breadcrumbs.html",
+        tags: [
+            "breadcrumbs",
+            "css"
+        ]
+    },
+
+    {
+        title: "Colecciones",
+        url: "colecciones.html",
+        tags: [
+            "colecciones",
+            "css"
+        ]
+    },
+    {
+        title: "Efecto 3D",
+        url: "efecto3d.html",
+        tags: [
+            "efecto 3d",
+            "css",
+            "3d"
+        ]
+    },
+    {
+        title: "Efecto Hover",
+        url: "efecto_hover.html",
+        tags: [
+            "efecto hover",
+            "css",
+            "hover"
+        ]
+    }
 ]
 
 let buscador = {
@@ -262,8 +297,8 @@ const Posicionar = () => {
     if (!buscador.campo) return;
     let posBuscador = buscador.campo.getBoundingClientRect()
     buscador.option.style.position = 'absolute'
-    buscador.option.style.top = (posBuscador.top + posBuscador.height + 10) + "px"
-    buscador.option.style.left = posBuscador.left + "px"
+    buscador.option.style.top = (window.scrollY + posBuscador.top + posBuscador.height + 10) + "px"
+    buscador.option.style.left = (window.scrollX + posBuscador.left) + "px"
 }
 
 const Init = () => {
@@ -324,7 +359,12 @@ const Search = () => {
         });
     });
 
-    buscador.option.style.display = hayResultados ? "block" : "none";
+    if (hayResultados) {
+        Posicionar();
+        buscador.option.style.display = "block";
+    } else {
+        buscador.option.style.display = "none";
+    }
 }
 
 const ExisteOpcion = (title, buscador) => {
