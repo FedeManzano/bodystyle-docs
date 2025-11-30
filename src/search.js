@@ -581,6 +581,15 @@ const indicesBusqueda = [
             "navigation",
             "navegacion"
         ]
+    },
+    {
+        title: "Animaciones",
+        url: "animaciones.html",
+        tags: [
+            "animaciones",
+            "js",
+            "javascript"
+        ]
     }
 
 ]

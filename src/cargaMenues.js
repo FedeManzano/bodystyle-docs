@@ -106,6 +106,7 @@ import "bodyui2/dist/js/bodystyle.min"
                 <li><a href="show_code.html">Show Code</a></li>
                 <li><a href="toast.html">Toasts</a></li>
                 <li><a href="waves.html">Waves</a></li>
+                <li><a href="animaciones.html">Animaciones</a></li>
             </ul>
         </div>
 
