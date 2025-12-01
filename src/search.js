@@ -23,6 +23,79 @@ const indicesBusqueda = [
         ]
     },
     {
+        title: "Texto",
+        url: "texto.html",
+        tags: [
+            "basicos",
+            "basicos",
+            "guia",
+            "texto",
+            "text"
+        ]
+    },
+    {
+        title: "Overflow",
+        url: "overflow.html",
+        tags: [
+            "overflow",
+            "desbordamiento",
+            "basico",
+            "basicos",
+            "básico"
+        ]
+    },
+    {
+        title: "Medidas",
+        url: "medidas.html",
+        tags: [
+            "medidas",
+            "brakpoint",
+            "basico",
+            "basicos",
+            "básico"
+        ]
+    },
+    {
+        title: "Colores",
+        url: "colores.html",
+        tags: [
+            "colores",
+            "basico",
+            "basicos",
+            "básico"
+        ]
+    },
+    {
+        title: "Tablas",
+        url: "tablas.html",
+        tags: [
+            "tablas",
+            "basico",
+            "basicos",
+            "básico"
+        ]
+    },
+    {
+        title: "Bordes",
+        url: "bordes.html",
+        tags: [
+            "bordes",
+            "basico",
+            "basicos",
+            "básico"
+        ]
+    },
+    {
+        title: "Desactivado",
+        url: "desactivado.html",
+        tags: [
+            "desactivado",
+            "basico",
+            "basicos",
+            "básico"
+        ]
+    },
+    {
         title: "Botones",
         url: "botones.html",
         tags: [
