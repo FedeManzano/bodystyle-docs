@@ -101,28 +101,74 @@
         }
     </pre>
             </div>
-            <h3>Subtitulo</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat aut ullam odit ut fuga
-                dolorem, ab hic autem culpa,
-                blanditiis vel expedita, ad quia voluptate! Libero sunt consequuntur eveniet.</p>
+            <h3 id="t3">Importar Módulos Individuales</h3>
+            <p>
+                Bodystyle está construido con módulos, por lo que puedes importar solo los módulos que necesites. <br>
+                Si la instalación fue realizada a través de <span class="badge badge-red">NPM</span> dispones de los
+                archivos necesarios para la importación de cada uno ede ellos.
+
+            </p>
+
+            <h4>Importar Módulos Individuales</h4>
+
             <div class="codigo">
 
-                <pre class="cod-html" id="c2">
-    <!--Estos es un comentario pintado-->
-    <div>
-        <ul>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-            <li><a href="">enlace1</a></li>
-        </ul>
-    </div>
+                <pre class="cod-js" id="c3">
+    import { fadeIn } from "bodyui2/src/modulos/Animaciones";
+    import { fadeOut } from "bodyui2/src/modulos/Animaciones";
 </pre>
             </div>
             <p class="alerta-negra">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni
-                veritatis placeat vel, unde aliquid numquam officia. Dolorem maiores sapiente ad odit
-                sint fugiat quos ducimus voluptatum, nemo ipsa atque?
+                Lo anteriormente expuesto se realiza desde el Package de Bodystyle. <br>
+                Si la instalación fue realizada a través de <span class="badge badge-red">NPM</span> dispones de los
+                archivos necesarios para la importación de cada uno de ellos.
             </p>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t4">Parámetros</h2>
+            <p>
+                Cada función puede recibir 3 parámetros:
+            </p>
+            <div class="lista-doc">
+                <ul>
+                    <li>elemento: El elemento que se va a animar. <span class="badge badge-black">HTMLElement</span>
+                    </li>
+                    <li>duracion: La duración de la animación en milisegundos. <span class="badge badge-black">MS</span>
+                    </li>
+                    <li>callback: Una función que se ejecutará al final de la animación. <span
+                            class="badge badge-black">Function</span></li>
+                </ul>
+            </div>
+
+            <div class="table-resposive">
+                <table class="table-sm selector table-bor-grey table-dark">
+                    <thead>
+                        <tr>
+                            <th>Parámetro</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>elemento</td>
+                            <td>HTMLElement</td>
+                            <td>El elemento que se va a animar.</td>
+                        </tr>
+                        <tr>
+                            <td>duracion</td>
+                            <td>MS</td>
+                            <td>La duración de la animación en milisegundos.</td>
+                        </tr>
+                        <tr>
+                            <td>callback</td>
+                            <td>Function</td>
+                            <td>Una función que se ejecutará al final de la animación.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </article>
         <!---ARTICULO INI ------------------------------------------------------------->
 
@@ -136,10 +182,8 @@
         <ul>
             <li><a href="#t1">Animaciones</a></li>
             <li><a href="#t2">Muestra</a></li>
-            <li><a href="">Boton Flotante</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Template literal</a></li>
-            <li><a href="">Boton Flotante</a></li>
+            <li><a href="#t3">Importar Módulos</a></li>
+            <li><a href="#t4">Parámetros</a></li>
         </ul>
     </div>
     <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
