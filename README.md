@@ -95,8 +95,7 @@ Visita la documentación completa en: **[bodystyle.webcindario.com](https://body
 
 **Recomendado** - Descarga sin anuncios del hosting:
 
-- 📥 Documentación v5.8.0 **(En desarrollo)** - **Versión actual**
-- 📥 [Documentación v5.0.0](https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk) 
+- 📥 [Documentación v5.8.0](https://mega.nz/file/dFMVnaSD#Bl1jtd8F_wN4Egd-_ijJdodQPOkI0owOw8N3kT7sgCo) **Lasted Versión actual**
 - 📦 [Todas las versiones](https://mega.nz/folder/VdMHERDR#gjbVQoWuKsIjNYJ39X1Dcw)
 
 ### 📋 Historial de Cambios
