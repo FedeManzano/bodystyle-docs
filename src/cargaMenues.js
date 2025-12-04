@@ -160,8 +160,8 @@ import "./bodystyle.js"
                 </ul>
             </div>
             <div  class="right-content">
-                <label  class="badge-mje-right badge-mje-bodyui mr-2 mb-1 ocultar-desde-x-chicos"><i class="fz-16 bs-tag">&nbsp;</i>v5.8.0</label>
-                <div class="ocultar-desde-x-chicos"><a target="_blank" href="https://mega.nz/file/IEtFjbhL#9avwQbK0EicykZx_vGLWaMUemt53lhvpDZHRYykynNw" class="ocultar-desde-x-chicos btn-sm-o btn-white-o bor-pill disparador" data-info="Versión Transpilada y procesada de bodystyle 5.8.0">Descargar</a></div>
+                <label  class="badge-mje-right badge-mje-bodyui mr-2 mb-1 ocultar-desde-x-chicos"><i class="fz-16 bs-tag">&nbsp;</i>v6.0.0</label>
+                <div class="ocultar-desde-x-chicos"><a target="_blank" href="https://mega.nz/file/pVFWWBDa#cxmhYVVSguG1mPhhqUruEEKNmvXuvbYH0lWBlGxJD_s" class="ocultar-desde-x-chicos btn-sm-o btn-white-o bor-pill disparador" data-info="Versión Transpilada y procesada de bodystyle 6.0.0">Descargar</a></div>
                 <!-- Botón oficial de GitHub (más interactivo) -->
                 <div class="ml-3">
                     <a class="github-button fd-gris-n" href="https://github.com/FedeManzano/bodystyle"
@@ -186,8 +186,8 @@ import "./bodystyle.js"
         <div class="ancho-55 ancho-m-75 ancho-s-90 ancho-xs-100">
         <div class="card">
             <div class="card-simple-dark card-cover">
-                <h4>Descargar Bodystyle<span class="badge badge-bodyui"><i class="bs-tag c-white">&nbsp;</i>5.8.0</span></h4>
-                <small>Versión 5.8.0</small>
+                <h4>Descargar Bodystyle<span class="badge badge-bodyui"><i class="bs-tag c-white">&nbsp;</i>6.0.0</span></h4>
+                <small>Versión 6.0.0</small>
                 <div class='mt-1'>
                     <a class="github-button fd-gris-n" href="https://github.com/FedeManzano/bodystyle"
                         data-icon="octicon-star" data-size="large" data-show-count="true"
@@ -198,13 +198,13 @@ import "./bodystyle.js"
                     la versión procesada de la librería en su 
                     <a href='https://github.com/FedeManzano/bodystyle' target='_blank' class='link tips-ele '
                     data-tips="Versión procesada de Bodystyle"
-                    data-pos='right'>versión 5.8.0</a>, el segundo botón es para descargar esta misma documentación
+                    data-pos='right'>versión 6.0.0</a>, el segundo botón es para descargar esta misma documentación
                     para no tener que ver publicidad que el hosting introduce sin permiso.
                 </p> 
-                <a target="_blank" href="https://mega.nz/file/IEtFjbhL#9avwQbK0EicykZx_vGLWaMUemt53lhvpDZHRYykynNw" class="btn-cover fd-bodyui mar-2 disparador bor-pill"
-                data-info="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v5.8.0.zip" data-pos='right'>Descargar</a>
-                <a href="https://mega.nz/file/dFMVnaSD#Bl1jtd8F_wN4Egd-_ijJdodQPOkI0owOw8N3kT7sgCo" target="_blank" class="btn-cover fd-blanco mar-1 com-trigger bor-pill"
-                data-info="Descarga de esta misma documentación, si ya la posee en el ambito local este botón estará deshabilitado.">Docs 3.0.0</a>
+                <a target="_blank" href="https://mega.nz/file/pVFWWBDa#cxmhYVVSguG1mPhhqUruEEKNmvXuvbYH0lWBlGxJD_s" class="btn-cover fd-bodyui mar-2 disparador bor-pill"
+                data-info="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v6.0.0.zip" data-pos='right'>Descargar</a>
+                <a href="https://mega.nz/file/dFMVnaSD#Bl1jtd8F_wN4Egd-_ijJdodQPOkI0owOw8N3kT7sgCo" target="_blank" class="btn-cover fd-blanco mar-1 com-trigger bor-pill desactivado"
+                data-info="Descarga de esta misma documentación, si ya la posee en el ambito local este botón estará deshabilitado.">Docs 3.5.0</a>
             </div>
         </div> 
         </div>
