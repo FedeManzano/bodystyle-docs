@@ -21,7 +21,7 @@ document.getElementById("descaraga_docs").setAttribute("data-info",
                             <a target="_blank" href='https://github.com/FedeManzano/bodystyle-docs' class='link'>Versión 3.5.0</a> de la documentación de <a target='_blank' href='https://github.com/FedeManzano/bodystyle' class='link'> Bodystyle 6.0.0</a>.
                             Si ya dispone de la documentación de manera local este enlace estará deshabilitado.
                         </p> 
-                        <a target='_blank'  href="https://mega.nz/file/dFMVnaSD#Bl1jtd8F_wN4Egd-_ijJdodQPOkI0owOw8N3kT7sgCo"  class="btn-cover-sm-o btn-bodyui-o  bor-pill mar-2 desactivado"><i class='bs-zip fz-22 c-yellow'>&nbsp;</i>Docs_v3.5.0.zip</a>
+                        <a target='_blank'  href="https://mega.nz/file/xAVDmSAb#IxB6nkPe3h4TrPF2qwETQ0cCKBS90I0DUc-4iQtii8Q"  class="btn-cover-sm-o btn-bodyui-o  bor-pill mar-2"><i class='bs-zip fz-22 c-yellow'>&nbsp;</i>Docs_v3.5.0.zip</a>
                     </div>
                 </div>
             `

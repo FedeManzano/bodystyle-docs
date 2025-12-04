@@ -203,7 +203,7 @@ import "./bodystyle.js"
                 </p> 
                 <a target="_blank" href="https://mega.nz/file/pVFWWBDa#cxmhYVVSguG1mPhhqUruEEKNmvXuvbYH0lWBlGxJD_s" class="btn-cover fd-bodyui mar-2 disparador bor-pill"
                 data-info="<i class='fa-solid fa-file-zipper c-orange'>&nbsp</i>bodystyle_v6.0.0.zip" data-pos='right'>Descargar</a>
-                <a href="https://mega.nz/file/dFMVnaSD#Bl1jtd8F_wN4Egd-_ijJdodQPOkI0owOw8N3kT7sgCo" target="_blank" class="btn-cover fd-blanco mar-1 com-trigger bor-pill desactivado"
+                <a href="https://mega.nz/file/xAVDmSAb#IxB6nkPe3h4TrPF2qwETQ0cCKBS90I0DUc-4iQtii8Q" target="_blank" class="btn-cover fd-blanco mar-1 com-trigger bor-pill"
                 data-info="Descarga de esta misma documentación, si ya la posee en el ambito local este botón estará deshabilitado.">Docs 3.5.0</a>
             </div>
         </div> 
