@@ -1,5 +1,5 @@
 
-import "bodyui2/dist/js/bodystyle.min"
+import "./bodystyle.js"
 import "./cargaMenues"
 import "./copiarCodigo"
 import Busqueda from "./search"

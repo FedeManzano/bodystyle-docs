@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+
+    <meta name="description" content="">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <title>Animaciones</title>
+</head>
+
+<body>
+
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n"
+        style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!--Campo de busqueda-->
+        <div class='input-g ancho-40 ancho-m-60 ancho-s-75 ancho-xs-90'>
+            <div class="grupo">
+                <span class="span-grupo fd-gris-n c-white"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" placeholder="Buscar..." id="buscador" class="fd-gris-n c-white">
+            </div>
+        </div>
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Animaciones <span class="badge badge-red">5.8.0</span></h1>
+            <p>
+                En este apartado vamos a ver un conjunto de animaciones muy utilizadas
+                en el ambito del desarrollo web, la composición de estas animaciones
+                es muy sencilla y está conformado por:
+            </p>
+            <div class="lista-doc">
+                <ul>
+                    <li>Fadein</li>
+                    <li>Fadeout</li>
+                </ul>
+            </div>
+
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Muestra</h2>
+            <p>
+                Vamos a ver una muestra de cada una para luego mostrar yn documentatar como llamar a estas
+                animaciones desde el objeto BS provisto por Bodystyle.
+            </p>
+
+            <div id="elemento"
+                class="mt-3 bg-red p-3 py-10 ta-c c-white ancho-35 ancho-m-50 ancho-s-75 ancho-xs-100 d-flex just-center ali-center">
+                <p>Elemento</p>
+            </div>
+
+
+            <div class="d-flex just-around flex-wrap mt-3 ">
+                <button class="btn fd-bodyui mt-s-1" onclick="fadein()">Fadein</button>
+                <button class="btn fd-bodyui mt-s-1" onclick="fadeout()">Fadeout</button>
+            </div>
+
+            <div class="codigo">
+                <pre class="cod-html" id="c1">
+        <div class="d-flex just-around flex-wrap mt-3 ">
+            <button class="btn fd-bodyui mt-s-1" onclick="fadein()">Fadein</button>
+            <button class="btn fd-bodyui mt-s-1" onclick="fadeout()">Fadeout</button>
+        </div>
+    </pre>
+            </div>
+
+            <div class="codigo">
+                <pre class="cod-js" id="c2">
+        function fadein() {
+            let elemento = document.querySelector("#elemento");
+            let duracion = 500
+            BS.fadeIn(elemento, duracion, () => console.log("Animacion terminada"));
+        }
+
+        function fadeout() {
+            let elemento = document.querySelector("#elemento");
+            let duracion = 500
+            BS.fadeOut(elemento, duracion, () => console.log("Animacion terminada"));
+        }
+    </pre>
+            </div>
+            <h3 id="t3">Importar Módulos Individuales</h3>
+            <p>
+                Bodystyle está construido con módulos, por lo que puedes importar solo los módulos que necesites. <br>
+                Si la instalación fue realizada a través de <span class="badge badge-red">NPM</span> dispones de los
+                archivos necesarios para la importación de cada uno ede ellos.
+
+            </p>
+
+            <h4>Importar Módulos Individuales</h4>
+
+            <div class="codigo">
+
+                <pre class="cod-js" id="c3">
+    import { fadeIn } from "bodyui2/src/modulos/Animaciones";
+    import { fadeOut } from "bodyui2/src/modulos/Animaciones";
+</pre>
+            </div>
+            <p class="alerta-negra">
+                Lo anteriormente expuesto se realiza desde el Package de Bodystyle. <br>
+                Si la instalación fue realizada a través de <span class="badge badge-red">NPM</span> dispones de los
+                archivos necesarios para la importación de cada uno de ellos.
+            </p>
+        </article>
+
+        <article class="articulo">
+            <h2 id="t4">Parámetros</h2>
+            <p>
+                Cada función puede recibir 3 parámetros:
+            </p>
+            <div class="lista-doc">
+                <ul>
+                    <li>elemento: El elemento que se va a animar. <span class="badge badge-black">HTMLElement</span>
+                    </li>
+                    <li>duracion: La duración de la animación en milisegundos. <span class="badge badge-black">MS</span>
+                    </li>
+                    <li>callback: Una función que se ejecutará al final de la animación. <span
+                            class="badge badge-black">Function</span></li>
+                </ul>
+            </div>
+
+            <div class="table-resposive">
+                <table class="table-sm selector table-bor-grey table-dark">
+                    <thead>
+                        <tr>
+                            <th>Parámetro</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>elemento</td>
+                            <td>HTMLElement</td>
+                            <td>El elemento que se va a animar.</td>
+                        </tr>
+                        <tr>
+                            <td>duracion</td>
+                            <td>MS</td>
+                            <td>La duración de la animación en milisegundos.</td>
+                        </tr>
+                        <tr>
+                            <td>callback</td>
+                            <td>Function</td>
+                            <td>Una función que se ejecutará al final de la animación.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!-- GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Animaciones</a></li>
+            <li><a href="#t2">Muestra</a></li>
+            <li><a href="#t3">Importar Módulos</a></li>
+            <li><a href="#t4">Parámetros</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!-- Lista de busqueda -->
+    <div class="option-seach" id="option-seach"></div>
+
+
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script>
+        var enlace = "Animaciones"
+        var idMenu = "#l5"
+
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        document.querySelector("#l5 ul li:nth-child(17) a")?.classList.add("c-bodyui");
+        BS.CodeJsInit()
+
+        function fadein() {
+            let elemento = document.querySelector("#elemento");
+            let duracion = 500
+            BS.fadeIn(elemento, duracion, () => console.log("Animacion terminada"));
+        }
+
+        function fadeout() {
+            let elemento = document.querySelector("#elemento");
+            let duracion = 500
+            BS.fadeOut(elemento, duracion, () => console.log("Animacion terminada"));
+        }
+    </script>
+</body>
+
+</html>

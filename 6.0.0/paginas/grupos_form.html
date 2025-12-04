@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Un conjunto de elementos que permite generar un modelo de formulario para html.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Grupos Form</title>
+    <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/grupos_form.html">
+</head>
+<body>
+
+    
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!--Campo de busqueda-->
+        <div class='input-g ancho-40 ancho-m-60 ancho-s-75 ancho-xs-90'>
+            <div class="grupo">
+                <span class="span-grupo fd-gris-n c-white"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" placeholder="Buscar..." id="buscador" class="fd-gris-n c-white">
+            </div>
+        </div>
+
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Grupos Form</h1>
+            <p>
+                Encierran a un conjunto de elementos que permiten definir un modelo de formularios provistos 
+                por bodystyle para la correcta visualización de los formularios.
+            </p>
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Form Group</h2>
+            <p class="mb-3">
+                Vamos a ver un ejemplo de como definir este tipo de modelos en la práctica con un ejemplo concreto. <br>
+                Para realizar esto vamos a envolver a los elementos con una clase <span class="badge badge-red">.form-group</span> 
+                que permitira definir el modelo.
+            </p>
+
+            <form autocomplete="off">
+                <div class="row p-2 bg-white bor-rad-10">
+                    <div class="form-group cs-12 cm-6">
+                        <label>Nombre</label>
+                        <input type="text" name="nombre"  placeholder="Ingrese su Nombre">
+                        <small>Ej: Alberto</small>
+                    </div>
+                    <div class="form-group cs-12 cm-6">
+                        <label>Apellido</label>
+                        <input type="text" name="apellido"  placeholder="Ingrese su Apellido">
+                        <small>Ej: Perez</small>
+                    </div>
+                </div>
+            </form>
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <form autocomplete="off">
+        <div class="row p-2 bg-white bor-rad-10">
+            <div class="form-group cs-12 cm-6">
+                <label>Nombre</label>
+                <input type="text" name="nombre" placeholder="Ingrese su Nombre">
+                <small>Ej: Alberto</small>
+            </div>
+            <div class="form-group cs-12 cm-6">
+                <label>Apellido</label>
+                <input type="text" name="apellido" placeholder="Ingrese su Apellido">
+                <small>Ej: Perez</small>
+            </div>
+        </div>
+    </form>
+</pre>
+</div>
+            <h3 id="t3">Ejemplo de Formulario</h3>
+            <p>
+                Con esta idea ahora veremos un ejemplo de un formulario completo con diferentes campos 
+                para poder ingresar los datos suministrados por el usuario.
+            </p>
+
+    <div class="mt-3 bor-grey-1 bor-rad-10 p-3 " style="background-color: rgb(249, 249, 249);">
+        <h2 class="fz-30 c-black">Registro de Usuario</h2>
+        <form autocomplete="off">
+            <div class="row">
+                <div class="form-group cm-12 cl-6">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required >
+                    <small>Su primer nombre Ej: Alberto</small>
+                </div>
+                <div class="form-group cm-12 cl-6">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" required>
+                    <small>Su primer apellido Ej: Perez</small>
+                </div>
+                <div class="form-group cxs-12 cs-6 cl-6 m-xs-0">
+                    <label for="email">Correo</label>
+                    <input type="email" name="email" id="email" placeholder="Ingrese su correo" required>
+                    <small>Ej: jhondoe@mail.com</small>
+                </div>
+                <div class="btn-group-lg cxs-12 cs-6 cl-6 mt-3 just-start">
+                    <button class="btn fd-azul bor-pill waves com-trigger" data-info="Botón utilizado para saber si el correo existe dentro de los datos de la aplicación.">Verificar</button>
+                </div>
+                <div class="form-group cm-12 cl-6">
+                    <label for="pass">Clave</label>
+                    <input type="password" name="password" id="pass" placeholder="Seleccione una clave" required>
+                    <small>De 8 a 16 con mayusculas, minusculas y caracter.</small>
+                </div>
+                <div class="form-group cm-12 cl-6">
+                    <label for="repetir">Repetir</label>
+                    <input type="password" name="repetir" id="repetir" placeholder="Repita la clave" required>
+                    <small>Repetir la clave.</small>
+                </div>
+                <div class="cl-12 d-flex just-end">
+                    <input id="enviar" type="submit" class="btn-lg bor-pill fd-verde desactivado com-trigger" data-info="Botón que envía el formulario, permanece desactivado hasta que se completen los campos de manera adecuada." >
+                </div>
+            </div>
+        </form>
+    </div>
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="mt-3 bor-grey-1 bor-rad-10 p-3 " style="background-color: rgb(249, 249, 249);">
+        <h2 class="fz-30 c-black">Registro de Usuario</h2>
+        <form autocomplete="off">
+            <div class="row">
+                <div class="form-group cm-12 cl-6">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required >
+                    <small>Su primer nombre Ej: Alberto</small>
+                </div>
+                <div class="form-group cm-12 cl-6">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" required>
+                    <small>Su primer apellido Ej: Perez</small>
+                </div>
+                <div class="form-group cxs-12 cs-6 cl-6 m-xs-0">
+                    <label for="email">Correo</label>
+                    <input type="email" name="email" id="email" placeholder="Ingrese su correo" required>
+                    <small>Ej: jhondoe@mail.com</small>
+                </div>
+                <div class="btn-group-lg cxs-12 cs-6 cl-6 mt-3 just-start">
+                    <button class="btn fd-azul bor-pill waves com-trigger" data-info="Botón utilizado para saber si el correo existe dentro de los datos de la aplicación.">Verificar</button>
+                </div>
+                <div class="form-group cm-12 cl-6">
+                    <label for="pass">Clave</label>
+                    <input type="password" name="password" id="pass" placeholder="Seleccione una clave" required>
+                    <small>De 8 a 16 con mayusculas, minusculas y caracter.</small>
+                </div>
+                <div class="form-group cm-12 cl-6">
+                    <label for="repetir">Repetir</label>
+                    <input type="password" name="repetir" id="repetir" placeholder="Repita la clave" required>
+                    <small>Repetir la clave.</small>
+                </div>
+                <div class="cl-12 d-flex just-end">
+                    <input id="enviar" type="submit" class="btn-lg bor-pill fd-verde desactivado com-trigger" data-info="Botón que envía el formulario, permanece desactivado hasta que se completen los campos de manera adecuada." >
+                </div>
+            </div>
+        </form>
+    </div>
+</pre>
+</div>
+<div class="codigo">
+    <pre id="c3" class="cod-js">
+        document.getElementById("repetir, #pass, #nombre, #apellido, #email").addEventListener("keyup", () => {
+            
+            let clave = document.getElementById("pass").value
+            let rep = document.getElementById("repetir").value
+            if( 
+                document.getElementById("nombre").value    !== ""  &&  document.getElementById("nombre").value    !== undefined   && 
+                document.getElementById("apellido").value  !== ""  &&  document.getElementById("apellido").value  !== undefined   &&
+                document.getElementById("email").value     !== ""  &&  document.getElementById("email").value     !== undefined   &&
+                document.getElementById("pass").value      !== ""  &&  document.getElementById("pass").value      !== undefined   &&
+                clave === rep
+            )
+            {
+                document.getElementById("enviar").classList.remove("desactivado")
+            }   
+            else 
+            {
+                document.getElementById("enviar").classList.add("desactivado")
+            }
+        })
+    </pre>
+</div>
+        <div class="alerta-negra">
+            En el ejemplo anterior se utilizaron la funcionalidad <a href="desactivado.html" class="link">Desactivado</a>
+            y algunas validaciones simples para poder brindarle lógica al formulario. Cuando los datos no están dentro 
+            de los parámetros de validación el botón enviar permanece desactivado.
+        </div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Grupos Form</a></li>
+            <li><a href="#t2">Ejemplo</a></li>
+            <li><a href="#t3">Ejemplo Completo</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    
+    <!-- Lista de busqueda -->
+    <div class="option-seach" id="option-seach"></div>
+
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
+        var enlace = "Grupos Form"
+        var idMenu = "#l4"
+        
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        document.querySelector("#l4 ul li:nth-child(2) a")?.classList.add("c-bodyui");
+
+        BS.CodeJsInit()
+        document.getElementById("repetir, #pass, #nombre, #apellido, #email").addEventListener("keyup", () => {
+            
+            let clave = document.getElementById("pass").value
+            let rep = document.getElementById("repetir").value
+            if( 
+                document.getElementById("nombre").value    !== ""  &&  document.getElementById("nombre").value    !== undefined   && 
+                document.getElementById("apellido").value  !== ""  &&  document.getElementById("apellido").value  !== undefined   &&
+                document.getElementById("email").value     !== ""  &&  document.getElementById("email").value     !== undefined   &&
+                document.getElementById("pass").value      !== ""  &&  document.getElementById("pass").value      !== undefined   &&
+                clave === rep
+            )
+            {
+                document.getElementById("enviar").classList.remove("desactivado")
+            }   
+            else 
+            {
+                document.getElementById("enviar").classList.add("desactivado")
+            }
+        })
+    </script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>`r`n</body>
+</html>

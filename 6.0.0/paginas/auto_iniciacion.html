@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Función que permite la autoiniciación de los elementos dinámicos (Tooptips, Dropdown y Comentarios).">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Auto Iniciación</title>
+    <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/auto_iniciacion.html">
+</head>
+<body>
+
+    
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!--Campo de busqueda-->
+        <div class='input-g ancho-40 ancho-m-60 ancho-s-75 ancho-xs-90'>
+            <div class="grupo">
+                <span class="span-grupo fd-gris-n c-white"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" placeholder="Buscar..." id="buscador" class="fd-gris-n c-white">
+            </div>
+        </div>
+
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Auto Iniciación <span class="badge badge-red">v5.0.0</span></h1>
+            <p>
+                A partir de la versión 5.0.0 de definieron funciones de iniciación que permitirán disponer de los elementos dinámicos 
+                con una sola función. Tanto el Dropdown, Tooltips y Comentarios se inicializarán todos juntos. <br>
+                Las funciones individuales seguirán estando para poder inicializar cada uno de ellos de manera separada para 
+                optimizar recursos.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Utilización</h2>
+            <p>
+                Vamos a ver en este apartado como inicializar todos los elementos dinámicos juntos 
+                y como liberarlos cuando no se utilicen más. 
+            </p>
+
+            <h3 id="t3">Iniciación</h3>
+
+<div class="codigo">
+<pre class="cod-js" id="c1">
+    /**
+        Dentro de los script de html ejecutar:
+    */
+
+    // Esta función va a permitir iniciar: 
+    // Dropdown, Tooltips y Comentarios
+    BS.DynamicsAutoInit()
+</pre>
+</div>
+            <div class="alerta-negra">
+                <span class="c-red">Importante</span>: Solo utilizar esta función cuando se necesiten todos los elementos dinámicos 
+                si esto no es de esa manera lo mejor es optar por la inicialización individual. <br>
+                La inicialización es por defecto, no recibe parámetros de inicialización, por esta razón 
+                si se require agregar estos elementos de otra forma es imperioso realizarlo de manera individual.
+            </div>
+
+            <h3 class="mb-3">Muestra</h3>
+            <p class="mb-3">
+               Vamos a ver una muestra de los tres elementos dinámicos funcionando.
+            </p>
+
+            <div class="d-flex just-around ali-start flex-column-s">
+                <button class="btn-sm bg-bodyui tips-ele" data-tips="Esto es un Tips !!">Tips</button>
+                <button class="btn-sm bg-bodyui com-trigger mt-s-1" data-info="Esto es un Comentario !!">Comentario</button>
+                <button class="btn-sm bg-bodyui dropdown-toggle" data-target="#list">Dropdown</button>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="d-flex just-around ali-start flex-column-s">
+        <button class="btn-sm bg-bodyui tips-ele" data-tips="Esto es un Tips !!">Tips</button>
+        <button class="btn-sm bg-bodyui com-trigger mt-s-1" data-info="Esto es un Comentario !!">Comentario</button>
+        <button class="btn-sm bg-bodyui dropdown-toggle m-0 mt-s-1" data-target="#list">Dropdown</button>
+    </div>  
+</pre>
+</div>
+        <div class="alerta-negra mb-3">
+           Ahora bien, que pasa si queremos liberar recursos y desvincular la lógica de todos los elementos dinámicos 
+           a través de una función destroy(). 
+        </div>
+
+        <button id="desactivador" class="btn bg-red">Desactivar Todos</button>
+
+        <div class="alerta-negra mt-3">
+            Después de dar click en el botón "Desactivar Todos" notarán que los elementos dinámicos dejaron de funcionar. <br>
+            La función para realizar esto es BS.DynamicsAutoDestroy() la cual anula el funcionamiento de los eventos y libera recursos.
+        </div>
+<div class="codigo">
+<pre class="cod-js" id="c3">
+    document.getElementById("desactivador").addEventListener("click", () => {
+        BS.DynamicsAutoDestroy() // DESACTIVA TODOS LOS ELEMENTOS DINÁMICOS
+        
+        // Muestra el toast avisando lo sicedido
+        BS.Toast({html: "<span class='c-white'>Elemementos Dinámicos Eliminados</span>", clases: ["bg-red"]})
+    })
+</pre>
+</div>
+
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Auto Iniciación</a></li>
+            <li><a href="#t2">Utilización</a></li>
+            <li><a href="#t3">Muestra</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+
+    <div class="dropdown" id="list">
+        <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Item 4</a></li>
+        </ul>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------->
+    
+    <!-- Lista de busqueda -->
+    <div class="option-seach" id="option-seach"></div>
+
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
+        var enlace = "Auto Iniciación"
+        var idMenu = "#l5"
+        
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        BS.CodeJsInit()
+        BS.DropDownInit()
+        document.querySelector("#l5 ul li:nth-child(3) a")?.classList.add("c-bodyui");
+
+        document.getElementById("desactivador").addEventListener("click", () => {
+            BS.DynamicsAutoDestroy()
+            BS.Toast({html: "<span class='c-white'>Elemementos Dinámicos Eliminados</span>", clases: ["bg-red"]})
+        })
+    </script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>`r`n</body>
+</html>

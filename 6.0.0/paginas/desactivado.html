@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+
+    <meta name="description" content="Propiedades CSS y JS para elementos desactivados momentaneamente dentro del DOM.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <title>Desactivado</title>
+    <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/desactivado.html">
+</head>
+
+<body>
+
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n"
+        style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!--Campo de busqueda-->
+        <div class='input-g ancho-40 ancho-m-60 ancho-s-75 ancho-xs-90'>
+            <div class="grupo">
+                <span class="span-grupo fd-gris-n c-white"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" placeholder="Buscar..." id="buscador" class="fd-gris-n c-white">
+            </div>
+        </div>
+
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Desactivado</h1>
+            <p>
+                Funcionalidades que desvinculan los eventos asociados a los elementos y cambia su apariencia para
+                mostrarle al usuario que temporalmente esos elementos no están activos. <br>
+                En sitios dinámicos es ncesario disponer de la capacidad de apagar un elemento en determinadas
+                circunstancias y es por ello que utilizaremos la clase <span
+                    class="badge badge-red">.desactivado</span>. <br>
+                Desde la versión 5.8.0 se ha implementado la capacidad de revertir cambios en los elementos, es decir
+                que cuando la clase <span class="badge badge-red">.desactivado</span> se le aplica a un elemento,
+                se desactivan todos los eventos asociados a él y su apariencia y cuando se le quita la clase,
+                se activan todos los eventos asociados a él y su apariencia de manera automática. <br>
+                <strong>Ya no es necesario volver a añadirle los atributos removidos manualmente.</strong>
+            </p>
+
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Muestra de Elementos</h2>
+            <p>
+                Para clarificar de lo que trata esta sección de la documentación le aplicaremos
+                la clase <span class="badge badge-red">.desactivado</span> a un botón, un enlace y
+                un input.
+            </p>
+
+            <button class="btn bg-bodyui mt-3 desactivado com-trigger"
+                data-info="Esto es un botón desactivado, todos los eventos asociados al mismo se encuentran inactivos como así también su apariencia.">Botón
+                Inactivo</button>
+            <div class="mt-1">
+                <a href="#" class="link desactivado">Enlace Desactivado</a>
+            </div>
+
+            <div class="mt-1">
+                <input type="text" id="desactivado" class="link desactivado" />
+            </div>
+
+            <div class="alerta-negra mt-3">
+                Utilizando esta clase e incluyendo el archivo de js de la librería antes de la finalización
+                de la etqueta html <span class="badge badge-negro">body</span> se consigue anular completamente
+                el elemento afectado por la clase <span class="badge badge-red">.desactivado</span>. <br>
+                Para saber como incorporar el archivo con la lógica ver <a href="get_started.html" class="link tips-ele"
+                    data-tips="<i class='fa-solid fa-play  c-red'>&nbsp;</i> Sección descarga e instalación">Get
+                    Started</a>.
+            </div>
+
+            <div class="codigo">
+                <pre class="cod-html" id="c1">
+    <button class="btn bg-bodyui mt-3 desactivado com-trigger" data-info="Esto es un botón desactivado, todos los eventos asociados al mismo se encuentran inactivos como así también su apariencia.">Botón Inactivo</button>
+    <div class="mt-1">
+        <a href="#" class="link desactivado">Enlace Desactivado</a>
+    </div>
+
+    <div class="mt-1">
+        <input type="text"id="desactivado" class="link desactivado" />
+    </div>
+</pre>
+            </div>
+            <h3 id="t3">Código del Módulo</h3>
+            <p>
+                Para poder explicar mejor que realiza el módulo lo mejor es ver el código fuente
+                que lleva a cabo esta tarea. <br><a
+                    href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Desactivado.js"
+                    class="link tips-ele"
+                    data-tips="<i class='fa-solid fa-code c-yellow'>&nbsp;&nbsp;</i> Código fuente del módulo">Código
+                    fuente</a>
+            </p>
+
+            <div class="alerta-negra">
+                Esta funcionalidad se puede aplicar a cualquier elemento del dom, removiendo todos los
+                eventos asociados a este elemento, y temporalmente dejandolo inhabilitado.
+            </div>
+
+            <h3 id="t4">Ejemplos</h3>
+            <p class="mb-3">
+                Vamos a mostrar un conjunto de ejemplos en los cuales se aplica este concepto y
+                no permitiendo la utilidad del elemento.
+            </p>
+
+            <h4 class="mab-3">Checkbox</h4>
+
+            <div class="check-radio-grupo desactivado">
+                <input id="ck-azul" type="checkbox" class="checkbox">
+                <label for="ck-azul" class="cb-azul com-trigger"
+                    data-info="Checkbox grupo con la clase desactivado.">Azul</label>
+            </div>
+            <div class="codigo">
+                <pre class="cod-html" id="c3">
+    <div  class="check-radio-grupo desactivado">
+        <input  id="ck-azul"  type="checkbox"  class="checkbox">
+        <label  for="ck-azul"  class="cb-azul">Azul</label>
+    </div>
+</pre>
+            </div>
+            <h4 class="mb-3">Tabs</h4>
+            <div id="tab1" class="desactivado">
+                <div class="tab-borde">
+                    <div class="op-tab-borde">
+                        <ul>
+                            <label data-target="#inicio">Inicio</label>
+                            <label data-target="#servicios">Servicios</label>
+                            <label data-target="#galeria">Galeria</label>
+                            <label data-target="#porfolio">Porfolio</label>
+                        </ul>
+                    </div>
+                    <div id="inicio" class="contenido-tab p-1 d-flex just-center ali-center">
+                        <p>Hola soy el inicio del tab!!</p>
+                    </div>
+                    <div id="servicios" class="contenido-tab p-1 d-flex just-center ali-center">
+                        <p>Hola soy los servicios del tab!!</p>
+                    </div>
+                    <div id="galeria" class="contenido-tab p-1 d-flex just-center ali-center">
+                        <p>Hola soy la galeria del tab!!</p>
+                    </div>
+                    <div id="porfolio" class="contenido-tab p-1 d-flex just-center ali-center">
+                        <p>Hola soy el porfolio del tab!!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="codigo">
+                <pre class="cod-html" id="c4">
+    <!--
+    <div  id="tab" class="desactivado">
+        <div  class="tab-borde">
+            <div  class="op-tab-borde">
+                <ul>
+                    <label  data-target="#inicio">Inicio</label>
+                    <label  data-target="#servicios">Servicios</label>
+                    <label  data-target="#galeria">Galeria</label>
+                    <label  data-target="#porfolio">Porfolio</label>
+                </ul>
+            </div>
+            <div  id="inicio"  class="contenido-tab p-1 d-flex just-center ali-center">
+                <p>Hola soy el inicio del tab!!</p>
+            </div>
+            <div  id="servicios"  class="contenido-tab p-1 d-flex just-center ali-center">
+                <p>Hola soy los servicios del tab!!</p>
+            </div>
+            <div  id="galeria"  class="contenido-tab p-1 d-flex just-center ali-center">
+                <p>Hola soy la galeria del tab!!</p>
+            </div>
+            <div  id="porfolio"  class="contenido-tab p-1 d-flex just-center ali-center">
+                <p>Hola soy el porfolio del tab!!</p>
+            </div>
+        </div>
+    </div>
+-->
+</pre>
+            </div>
+
+            <div class="codigo">
+                <pre id="c5" class="cod-js">
+        // Inicialización del Tab 
+        // Muestra de un tab desactivado
+        BS.TabInit().iniciarBorde({contexto: "#tab",colorFuente: "c-black", colorFondo: "bg-white", colorBorde: "bg-black"})
+    </pre>
+            </div>
+
+            <h4 class="mb-3">Activar</h4>
+            <p class="mb-3">
+                Vamos a ver un ejemplo en el un elemento desativado se activa dinámicamente utilizando
+                Vanilla JS para crear la funcionalidad del botón activador.
+            </p>
+            <a href="desactivado.html#t4" id="link_desact" class="link desactivado">Enlace Desactivado</a>
+            <div class="mt-3 d-flex just-around ali-baseline flex-wrap">
+
+                <button id="activador" class="btn bg-blue">Activar</button>
+                <button id="desactivador" class="btn bg-red">Desactivar</button>
+            </div>
+
+            <div class="codigo">
+                <pre class="cod-html" id="c5">
+    <a href="#" id="link_desact" class="link desactivado">Enlace Desactivado</a>
+    <div class="mt-3 d-flex just-around ali-baseline flex-wrap">
+        <button id="activador" class="btn bg-blue">Activar</button>
+        <button id="desactivador" class="btn bg-red">Desactivar</button>
+    </div>
+</pre>
+            </div>
+
+            <div class="codigo">
+                <pre class="cod-js" id="c6">
+    document.getElementById("activador").addEventListener("click",() => {
+       // Se remueve la clase desactivado
+       // Automáticamente se reconfigura el atributo href
+       document.getElementById("link_desact").classList.remove("desactivado")
+    })
+    document.getElementById("desactivador").addEventListener("click",() => {
+       document.getElementById("link_desact").classList.add("desactivado")
+    })
+</pre>
+            </div>
+
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+
+
+
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Desactivado</a></li>
+            <li><a href="#t2">Muestra</a></li>
+            <li><a href="#t3">Código</a></li>
+            <li><a href="#t4">Ejemplos</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    
+    <!-- Lista de busqueda -->
+    <div class="option-seach" id="option-seach"></div>
+
+    <!--JS -------------------------------------------------------------------------------------------------------------->
+    <script>
+        var enlace = "Desactivado"
+        var idMenu = "#l1"
+
+    </script>
+    <script src="../js/docs-body.js"></script>
+    <script>
+        document.querySelector("#l1 ul li:nth-child(10) a")?.classList.add("c-bodyui");
+        BS.CodeJsInit()
+        BS.TabInit().iniciarBorde({ contexto: "#tab1", colorFuente: "c-black", colorFondo: "bg-white", colorBorde: "bg-black" })
+
+        document.getElementById("activador").addEventListener("click", () => {
+            document.getElementById("link_desact").classList.remove("desactivado")
+        })
+
+        document.getElementById("desactivador").addEventListener("click", () => {
+            document.getElementById("link_desact").classList.add("desactivado")
+        })
+    </script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>`r`n
+</body>
+
+</html>

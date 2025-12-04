@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="MDpQT_peJOq320be3gLKCE5Zv1gjCOow0ajpAZwCvfk" />
+
+    
+    <meta name="description" content="Progressbar, elemento que permite ver el estado de un proceso en ejecución, como por ejemplo una descarga.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <title>Progressbar</title>
+    <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/progressbar.html">
+</head>
+<body>
+
+    <!--NAV INI -------------------------------------------------------------------------------------------->
+    <nav id="nav" class="bs-nav bs-nav-fixed fd-gris-n bs-nav-bor-grey-s" style="z-index: 100000000 !important;">
+        
+    </nav>
+    <!--NAV FIN -------------------------------------------------------------------------------------------->
+
+    <!--SIDEBAR INI ---------------------------------------------------------------------------------------->
+    <div id="sidebar" class="bs-sidebar-drop-dark fd-gris-n" style="z-index: 999999 !important; border-right: 1px solid #ccc !important;"></div>
+    <!--SIDEBAR FIN ---------------------------------------------------------------------------------------->
+
+    <!--CONTENIDO DE LA PÁGINA (INICIO) -------------------------------------------------------------------->
+    <section class="pagina nav-contenido">
+        <!--Campo de busqueda-->
+        <div class='input-g ancho-40 ancho-m-60 ancho-s-75 ancho-xs-90'>
+            <div class="grupo">
+                <span class="span-grupo fd-gris-n c-white"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" placeholder="Buscar..." id="buscador" class="fd-gris-n c-white">
+            </div>
+        </div>
+
+        <!-- ENCABEZADO INI ------------------------------------------------------>
+        <section class="encabezado">
+            <h1 id="t1">Progressbar</h1>
+            <p>
+                A través de este elemento el usuario podrá ver el estado de algún proceso en ejecución como por ejemplo 
+                la descarga de algún documento.
+            </p>
+            
+            <div class="mar-2 boton-descarga"></div>
+        </section>
+        <!-- ENCABEZADO FIN ------------------------------------------------------>
+
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t2">Tamaños</h2>
+            <p class="mb-3">
+                Existen en la biblioteca tres tamaños para definir estos elementos, (sm | md | lg) el valor medio es por default
+                entonces no es necesario agregarlo alnombre de la clase. <br>
+                La configuración es a través de dos contenedores uno dentro del otro en los cuales el primero de ellos 
+                va a mostrar lo que falta y el segundo va a mostrar el avance. <br>
+                Las clases utilizadas son para el contenedor externo <span class="badge badge-red">.progress-bar</span> y para 
+                el interno <span class="badge badge-red">.progress-[color]</span> donde color es el color del estado completado. 
+            </p>
+
+            <div class="container">
+                <div class="progress-bar-sm">
+                    <div class="progress-rojo ancho-70"></div>
+                </div>
+                <div class="progress-bar mt-1">
+                    <div class="progress-rojo ancho-55"></div>
+                </div>
+                <div class="progress-bar-lg mt-1">
+                    <div class="progress-rojo ancho-80"></div>
+                </div>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c1">
+    <div class="container">
+        <div class="progress-bar-sm">
+            <div class="progress-rojo ancho-70"></div>
+        </div>
+        <div class="progress-bar mt-1">
+            <div class="progress-rojo ancho-55"></div>
+        </div>
+        <div class="progress-bar-lg mt-1">
+            <div class="progress-rojo ancho-80"></div>
+        </div>
+    </div>
+</pre>
+</div>
+            <h3 id="t3">Muestra Avance</h3>
+            <p class="mb-3">
+                Vamos a ver un ejemplo muy sencillo de como avanza el progress bar cuando presionamos un botón. <br>
+                Cada vez que presionamos el botón aumentamos el ancho del elemento que lleva la clase <span class="badge badge-red">progress-[color]</span>
+            </p>
+
+            <div class="container">
+                <div id="pb1" class="progress-bar mt-1">
+                    <div class="progress-rojo" style="width: 0;"></div>
+                </div>
+                
+                <div class="btn-grupo-lg mt-2">
+                    <button onclick="Aumentar()" class="btn bg-pink-d-1">Aumentar</button>
+                    <button onclick="Reiniciar()" class="btn fd-verde">Reiniciar</button>
+                </div>
+            </div>
+
+            <h4>Código Html</h4>
+<div class="codigo">
+<pre class="cod-html" id="c2">
+    <div class="container">
+        <div id="pb1" class="progress-bar mt-1">
+            <div class="progress-rojo" style="width: 0;"></div>
+        </div>
+        
+        <div class="btn-grupo-lg mt-2">
+            <button onclick="Aumentar()" class="btn bg-pink-d-1">Aumentar</button>
+            <button onclick="Reiniciar()" class="btn fd-verde">Reiniciar</button>
+        </div>
+    </div>
+</pre>
+</div>
+        <h4>Código JS</h4>
+
+<div class="codigo">
+<pre class="cod-js" id="c3">
+    const Aumentar = () => {
+        let ancho = document.getElementById("pb1").children[0].offsetWidth
+        if(document.getElementById("pb1").offsetWidth >= ancho + 30)
+            document.getElementById("pb1").children[0].style.width = ancho + 30 + "px"
+        else 
+            document.getElementById("pb1").children[0].style.width = "100%"
+    }
+    const Reiniciar = () => {
+        document.getElementById("pb1").children[0].style.width = 0 + "px"
+    }
+</pre>  
+</div>
+        <div class="alerta-negra">
+            Notese que las funciones de JS modifican el ancho del contenedor con la clase .progress-[color] y es a partir 
+            de esto que podemos establecer el estado de carga de un determinado proceso.
+        </div>
+        </article>
+        <!---ARTICULO INI ------------------------------------------------------------->
+        <article class="articulo">
+            <h2 id="t4">Colores</h2>
+            <p>
+                Ahora es momento de presentar la paleta de colores del elemento progressbar.
+            </p>
+
+            <div class="container mt-3">
+                <div class="progress-bar">
+                    <div class="progress-rojo" style="width: 70%;"></div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-verde mt-1" style="width: 70%;"></div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-azul mt-1" style="width: 70%;"></div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-negro mt-1" style="width: 70%;"></div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-gris mt-1" style="width: 70%;"></div>
+                </div>
+            </div>
+
+<div class="codigo">
+<pre class="cod-html" id="c4">
+    <div class="container mt-3">
+        <div class="progress-bar">
+            <div class="progress-rojo" style="width: 70%;"></div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-verde mt-1" style="width: 70%;"></div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-azul mt-1" style="width: 70%;"></div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-negro mt-1" style="width: 70%;"></div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-gris mt-1" style="width: 70%;"></div>
+        </div>
+    </div>
+</pre>  
+</div>
+
+        </article>
+        <!--AUTOR--------------------------------------------------------------------->
+        <div class="autor"></div>
+    </section>
+    <!--CONTENIDO DE LA PÁGINA (FINAL) --------------------------------------------------------------------->
+
+    <!--GUIA DE LA PÁGINA INI------------------------------------------------------------------------------->
+    
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#t1">Progressbar</a></li>
+            <li><a href="#t2">Tamaños</a></li>
+            <li><a href="#t3">Muestra</a></li>
+            <li><a href="#t4">Colores</a></li>
+        </ul>
+    </div>
+    <!--GUIA DE LA PÁGINA FIN------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    
+    <!-- Lista de busqueda -->
+    <div class="option-seach" id="option-seach"></div>
+
+    <!--JS --------------------------------------------------------------------------------------------------------------><script> 
+        var enlace = "Progress Bar"
+        var idMenu = "#l6"
+    </script>
+    <script src="../js/docs-body.js"></script>
+
+    <script>
+        document.querySelector("#l6 ul li:nth-child(4) a")?.classList.add("c-bodyui");
+        const Aumentar = () => {
+            let ancho = document.getElementById("pb1").children[0].offsetWidth
+
+            if(document.getElementById("pb1").offsetWidth > ancho + 30)
+                document.getElementById("pb1").children[0].style.width = ancho + 30 + "px"
+            else 
+                document.getElementById("pb1").children[0].style.width = "100%"
+        }
+
+        const Reiniciar = () => {
+            document.getElementById("pb1").children[0].style.width = 0 + "px"
+        }
+    </script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>`r`n</body>
+</html>
