@@ -1,7 +1,5 @@
 (function () {
 
-
-
     let indexPre = 1;
     document.querySelectorAll("pre").forEach(pre => {
         pre.id = "c" + indexPre;
@@ -101,7 +99,6 @@
         icono.addEventListener("mouseleave", () => {
             icono.style.opacity = "0.3"
         })
-
     })
 
 
@@ -189,12 +186,15 @@
     document.getElementById("info_general").innerHTML =
         `<div class="alert">
             <h4 class="c-blue-s"><i class=" bs-info c-blue-s fz-28">&nbsp;</i>Información</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis sit aliquam aspernatur quas?
-                    Voluptas aspernatur excepturi quas, delectus fugiat ut, minus, sapiente atque voluptatum magnam illo
-                    explicabo ab illum ea.</p>
+            <p>
+                Desde el botón que se encuentra abajo de esta alerta, puedes descargar la biblioteca Bodystyle en su <span class="c-red"><i class="bs-tags fz-14">&nbsp;</i>versión 6.5.0</span> 
+                con los archivos procesados y transpilados. <br>
+                Si lo que está buscando es el codigo fuente, puede encontrarlo en el repositorio oficial de
+                <a class="link" href="https://github.com/FedeManzano/bodystyle" target="_blank">GitHub</a>.
+            </p>
         </div>
         <div>
-            <a href="#" class="btn-lg-o btn-bodyui-o bor-pill tips-ele" data-tips="Descarga del documento." data-pos="right"><i class="bs-download fz-28">&nbsp;</i>Descargar</a>
+            <a href="#" class="btn-lg-o btn-bodyui-o bor-pill tips-ele" data-tips="Descarga de la biblioteca." data-pos="right"><i class="bs-download fz-28">&nbsp;</i>Descargar</a>
         </div>`
 
     document.getElementById("autor_content").innerHTML =
