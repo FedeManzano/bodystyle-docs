@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bodystyle.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+
+    <title>Bodystyle</title>
+</head>
+
+<body>
+
+    <!-- Nav con un ID #nav para envolverlo y manejarlo -->
+    <!--
+        Notese, que el nav tiene el data-target que apunta a 
+        #bs-nav-sidebar que es el ID del sidebar 
+    -->
+    <!--
+        El ID del sidebar los pueden elegir ustedes pero tiene 
+        que coincidir con lo cargado en el data-target 
+    -->
+    <nav id="nav" class="bs-nav bs-nav-fixed gradiente-linear-carbon" data-target="#bs-nav-sidebar">
+        <div class="bs-nav-lg align-left-list">
+            <!-- 
+                Botón de menú que funciona como disparador 
+                de la aparición del sidebar 
+            -->
+            <a class="btn-menu ocultar-solo-grandes"></a>
+
+            <a href="#" class="logo-container">
+                <img src="./images/logo_bodystyle.svg" alt="Foto de perfil">
+            </a>
+            <!--Lista de opciones del nan principal -->
+            <div class="ocultar-desde-medianos">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Galería</a></li>
+                </ul>
+            </div>
+            <div class="right-content">
+                <a href=""><i class="bs-download fz-33 c-white"></i></a>
+                <a href=""><i class="bs-github-2 ml-2 fz-33 c-white"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!--
+        Este es el sidebar con la clase .bs-nav-sidebar
+        y en este caso, el ID bs-nav-sidebar que es a elección
+        pero tiene que coincidir con el data-target del NAV
+    -->
+    <div id="bs-nav-sidebar" class="bs-nav-sidebar gradiente-linear-carbon">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Galería</a></li>
+            <li><a href="#">Repositorio</a></li>
+        </ul>
+    </div>
+
+
+    <section id="main" class="alto-100">
+
+        <div class="d-flex ancho-100 alto-100 flex-wrap-m">
+            <div class="d-flex alto-100 ancho-50 ancho-m-100 flex-wrap-m">
+                <div class="d-flex  ali-center alto-100 ancho-100 flex-column just-center p-3 pt-s-10">
+                    <h1 class="c-white fz-110 fz-m-140 fz-s-85 fz-xs-60 ta-c">Bodystyle</h1>
+                    <h2 class="c-white fz-30 fz-m-35 fz-s-25 fz-xs-20 ta-c f-w-3 mt-2">Framework para la rápida creación
+                        del Frontend de sitios y aplicaciones web</h2>
+                    <div class="d-flex just-center flex-wrap-s mt-10">
+                        <a href="" class="btn-cover-lg-o btn-bodyui-o bor-pill">Get Started</a>
+                        <a href="" class="btn-cover-lg-o btn-white-o bor-pill ml-1 ml-s-0 mt-s-1">Repositorio</a>
+                    </div>
+                    <div class="ta-c mt-6">
+                        <a href="" class="link">Release v6.5.0</a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex ancho-50 alto-100 ancho-m-100 pt-1  ali-start pt-3">
+                <img src="./images/logo_bodystyle.svg" alt="Hero Image" class="ancho-85">
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+    <script src="./js/bodystyle.bundled.js"></script>
+    <script>
+        BS.NavigationInit("#nav");
+        BS.fadeIn(document.getElementById("main"), 1200);
+    </script>
+</body>
+
+</html>
