@@ -6,6 +6,21 @@
 $mb: 25px;
 
 
+.scroll-item {
+    position: relative;
+    transition: all 0.3s ease;
+}
+.scroll-item.active {
+    color: #ff1515;
+    text-shadow: 0 0 20px rgba(255, 21, 21, 0.3);
+}
+
+
+.lista-doc {
+    margin-left: 40px;
+    margin-bottom: $mb;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -16,8 +31,23 @@ html {
         font-weight: 400;
     }
 
+    h2::after {
+        content: '';
+        display: block;
+        height: 3px;
+        background: linear-gradient(90deg, #ff1515 0%, transparent 100%);
+        margin-top: 12px;
+        border-radius: 2px;
+    }
+
+    #nav {
+        backdrop-filter: blur(10px);
+        background: rgba(10, 10, 10, 0.8);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
     .codigo {
-        background-color: #10151a !important;
+        background: linear-gradient(135deg, #10151a 0%, #141820 100%) !important;
         padding: 10px !important;
         padding-top: 37px !important;
         border-radius: 12px;
@@ -31,6 +61,42 @@ html {
         position: relative;
         overflow: hidden;
         transition: all 0.3s ease;
+
+        // Estilos del scrollbar - Webkit (Chrome, Safari, Edge)
+        &::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #ff1515, #cc0f0f);
+            border-radius: 4px;
+            
+            &:hover {
+                background: linear-gradient(180deg, #ff3333, #ff1515);
+            }
+        }
+
+        // Firefox
+        scrollbar-color: #ff1515 transparent;
+        scrollbar-width: thin;
+
+        // Línea izquierda colorida con gradiente
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 35px;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #ff1515, transparent);
+            box-shadow: 0 0 10px rgba(255, 21, 21, 0.4);
+            border-radius: 0 3px 3px 0;
+        }
 
         // Efecto de brillo superior sutil
         &::before {
@@ -101,6 +167,31 @@ html {
             position: relative;
             z-index: 2;
             margin: 0;
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            // Estilos del scrollbar - Webkit (Chrome, Safari, Edge)
+            &::-webkit-scrollbar {
+                height: 8px;
+                width: 8px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: linear-gradient(180deg, #ff1515, #cc0f0f);
+                border-radius: 4px;
+                
+                &:hover {
+                    background: linear-gradient(180deg, #ff3333, #ff1515);
+                }
+            }
+
+            // Firefox
+            scrollbar-color: #ff1515 transparent;
+            scrollbar-width: thin;
         }
     }
 
@@ -125,11 +216,44 @@ html {
         margin-bottom: $mb;
         overflow: hidden;
         position: relative;
+
+        // Estilos del scrollbar - Webkit (Chrome, Safari, Edge)
+        &::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #ff1515, #cc0f0f);
+            border-radius: 4px;
+            
+            &:hover {
+                background: linear-gradient(180deg, #ff3333, #ff1515);
+            }
+        }
+
+        // Firefox
+        scrollbar-color: #ff1515 transparent;
+        scrollbar-width: thin;
     }
 
     .article {
         padding-top: 15px;
         margin-top: 45px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.02) 100%);
+        border-radius: 8px;
+        padding: 24px;
+        transition: all 0.3s ease;  
+
+        &:hover {
+            border-color: rgba(255, 21, 21, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transform: translateY(-4px);
+        }   
     }
 
     @media screen and (max-width: 1030px) {
@@ -150,15 +274,15 @@ html {
     }
 
     h2 {
-        font-size: 2em;
+        font-size: 1.7em;
     }
 
     h3 {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     h4 {
-        font-size: 1.25em;
+        font-size: 1em;
     }
 
     h5 {
@@ -192,6 +316,16 @@ html {
 
     html {
         background: #f2f2f2;
+    }
+
+    .lista-doc
+    {
+        ul {
+            li{
+                margin-bottom: 8px;
+                color: rgb(48, 48, 48);
+            }
+        }
     }
     #main {
 
@@ -298,7 +432,19 @@ html {
 
 
         .article {
+            background: linear-gradient(135deg, rgba(255,255,255,0.6) 0%, rgba(240,244,248,0.4) 100%);
+            border: 1px solid rgba(0, 0, 0, 0.08);
             border-top: 5px solid #ccc;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                border-color: rgba(0, 0, 0, 0.15);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                transform: translateY(-2px);
+            }
         }
 
         h1,
@@ -312,7 +458,6 @@ html {
         }
 
         h1,
-        h2,
         h3 {
             border-bottom: 1px solid #ccc;
         }
@@ -364,6 +509,16 @@ html {
 .theme-dark {
 
 
+
+    .lista-doc
+    {
+        ul {
+            li{
+                margin-bottom: 8px;
+                color: rgb(236, 236, 236);
+            }
+        }
+    }
     #main {
 
         border: 1px solid #757575;
@@ -447,7 +602,19 @@ html {
         }
 
         .article {
+            background: linear-gradient(135deg, rgba(20,20,20,0.6) 0%, rgba(30,25,35,0.4) 100%);
+            border: 1px solid rgba(255, 21, 21, 0.15);
             border-top: 5px solid #6d6d6d;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                border-color: rgba(255, 21, 21, 0.25);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 21, 21, 0.1);
+                transform: translateY(-2px);
+            }
         }
 
         h1,
@@ -461,7 +628,6 @@ html {
         }
 
         h1,
-        h2,
         h3 {
             border-bottom: 1px solid #757575;
         }
@@ -516,3 +682,4 @@ html {
         }
     }
 }
+

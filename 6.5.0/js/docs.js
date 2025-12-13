@@ -1,5 +1,6 @@
 (function () {
 
+    
     let indexPre = 1;
     document.querySelectorAll("pre").forEach(pre => {
         pre.id = "c" + indexPre;
@@ -108,14 +109,16 @@
     document.getElementById("sidebar").innerHTML =
         `
         <div class="bs-sidebar-title" data-target="#l1">
-            <label>Inicio</label>
+            <label><i class="bs-play c-bodyui fz-20">&nbsp;</i>Inicio</label>
         </div>
         <div class="bs-sidebar-drop-list" id="l1">
             <ul>
-                <li><a href="">Home</a></li>
-                    <li><a href="">Perfiles</a></li>
-                    <li><a href="">Estadísticas</a></li>
-                    <li><a href="">Correos</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="get_started.html">Get Started</a></li>
+                    <li><a href="">Medidas</a></li>
+                    <li><a href="">Colores</a></li>
+                    <li><a href="">Tablas</a></li>
+                    <li><a href="">Tablas</a></li>
                 </ul>
             </div>
             <div class="bs-sidebar-title" data-target="#l2">
@@ -267,27 +270,28 @@
 
     // Cargar el tema guardado al iniciar la página
     document.addEventListener('DOMContentLoaded', function () {
-        const savedTheme = localStorage.getItem('theme');
+        
+        const savedTheme = localStorage.getItem('theme') || 'dark'; // Por defecto: dark
         const switchElement = document.getElementById('sw');
 
-        // Si hay un tema guardado, aplicarlo
+        // Aplicar el tema guardado o dark por defecto
         if (savedTheme === 'dark') {
             LoadThemeDark()
-            switchElement.checked = true;
+            switchElement.checked = false;
         } else {
             LoadThemeLight()
-            switchElement.checked = false;
+            switchElement.checked = true;
         }
     });
 
     // Guardar la preferencia cuando cambia el switch
     document.getElementById("sw").addEventListener("change", function () {
         if (this.checked) {
-            LoadThemeDark()
-            localStorage.setItem('theme', 'dark'); // Guardar en localStorage
-        } else {
             LoadThemeLight()
             localStorage.setItem('theme', 'light'); // Guardar en localStorage
+        } else {
+            LoadThemeDark()
+            localStorage.setItem('theme', 'dark'); // Guardar en localStorage
         }
     });
 })()
