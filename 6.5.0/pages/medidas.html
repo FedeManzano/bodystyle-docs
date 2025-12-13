@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Breakpoint resposive para generar los diseños adaptativos de Bodystyle.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/medidas.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Bodystyle</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+            <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo fd-bodyui c-white" aria-hidden="true"><i class="bs-search"></i></span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Medidas</h1>
+            <p>
+                Este es un apartado muy importante ya que Bodystyle utiliza un sistema de breakpoints
+                responsivos para adaptar los diseños a diferentes tamaños de pantalla. A continuación, se detallan
+                los diferentes breakpoints que se pueden utilizar y como pueden ser modificados los valores desde 
+                un lugar del repositorio específico.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Sass</h2>
+                <p>
+                    Desde <span class="c-rojo-ro"><i class="bs-sass fz-25"></i></span>
+                    podemos modificar los valores de los breakpoints para adaptarlos a nuestras necesidades.
+                    Los valores por defecto son los siguientes:
+                </p>
+                <div class="table-responsive">
+                    <table class="selector">
+                        <thead>
+                            <tr>
+                                <th>Medida</th>
+                                <th>Desde (PX)</th>
+                                <th>Hasta (PX)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>XS</td>
+                                <td>0</td>
+                                <td>400px</td>
+                            </tr>
+                            <tr>
+                                <td>SM</td>
+                                <td>401px</td>
+                                <td>768px</td>
+                            </tr>
+                            <tr>
+                                <td>MD</td>
+                                <td>769px</td>
+                                <td>1030px</td>
+                            </tr>
+                            <tr>
+                                <td>LG</td>
+                                <td>1031px</td>
+                                <td>INF</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="alert mt-3">
+                    <h4 class="c-yellow"><i class=" bs-warning c-yellow fz-28">&nbsp;</i>Advertencia</h4>
+                    <p>
+                        Es importante recalcar que la variable que se presenta a continuación es global, por lo tanto 
+                        los cambios realizados a la misma afectarán a todo el framework. Por esta razón hay que ser prudentes 
+                        para no romper la estructura del mismo.
+                    </p>
+                </div>
+
+                <p>
+                    En el archivo <a href="https://github.com/FedeManzano/bodystyle/blob/master/sass/globales/_variables.scss" class="link">sass/globales/_variables</a> dentro del 
+                    repositorio encontraremos el siguiente código, que permitira modificar o agregar brakpoint al bodystyle:
+                </p>
+
+
+<div class="codigo">
+    <label for="cod-css" 
+    class="label">
+        <a href="https://github.com/FedeManzano/bodystyle/blob/master/sass/globales/_variables.scss" class="link com-trigger" target="_blank"
+        data-info="<span>Variable global de breakpoints para la grilla y otros elementos respetando las medias definidas en la tabla anterior.</span>">_variables.scss</a>
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="pt-1">
+    /* Configuración */
+
+    $tamaños:(
+                xs: 400px,
+                s: 770px,
+                m: 1030px,
+                l: 1200px, /// Mayor 
+    );
+</pre>
+</div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Ejemplo Práctico</h2>
+                <p>
+                    Ahora veremos un ejemplo práctico utilizadondo la grilla de Bodystyle con los diferentes breakpoints.
+                    Si bien la documentación de la grilla se verá en apartados posteriores, es bastate sensillo 
+                    entender de que se tratan las medidas a paratir de esta funcionalidad.
+                </p>
+
+                <div class="row">
+                    <div class="bg-red p-2 c-white ta-c cxs-12 cs-6 cm-4 cl-3">1</div>
+                    <div class="bg-red p-2 c-white ta-c cxs-12 cs-6 cm-4 cl-3">2</div>
+                    <div class="bg-red p-2 c-white ta-c cxs-12 cs-6 cm-4 cl-3">3</div>
+                    <div class="bg-red p-2 c-white ta-c cxs-12 cs-6 cm-4 cl-3">4</div>
+                </div>
+
+                <div class="alert mt-3">
+                    <h4 class="c-blue-s"><i class=" bs-info c-blue-s fz-28">&nbsp;</i>Información</h4>
+                    <p>
+                        Notese que si se cambia el ancho de la pantalla del navegador, los elementos
+                        se adaptan a las diferentes medidas definidas anteriormente.
+                    </p>
+                </div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Ejemplo de código HTML -->
+    <div class="row">
+        <div class="bg-red p-2 c-white ta-c cxs-12 cs-6 cm-4 cl-3">1</div>
+        <div class="bg-red p-2 c-white ta-c cxs-12 cs-6 cm-4 cl-3">2</div>
+        <div class="bg-red p-2 c-white ta-c cxs-12 cs-6 cm-4 cl-3">3</div>
+        <div class="bg-red p-2 c-white ta-c cxs-12 cs-6 cm-4 cl-3">4</div>
+    </div>
+</pre>
+</div>
+
+
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">Medidas</a></li>
+            <li><a href="#2">Sass</a></li>
+            <li><a href="#3">Ejemplo Práctico</a></li>
+            <li><a href="#autor">Autor</a></li>
+        </ul>
+    </div>
+
+    <script src="../js/bodystyle.bundled.js"></script>
+    <script src="../js/docs.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l1" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoCssInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l1 ul li a")[2].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

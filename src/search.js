@@ -741,6 +741,17 @@ const Search = () => {
     if (hayResultados) {
         Posicionar();
         buscador.option.style.display = "block";
+        
+        // Agregar eventos click a todos los enlaces
+        const enlaces = buscador.option.querySelectorAll('a');
+        enlaces.forEach(enlace => {
+            enlace.addEventListener('click', (e) => {
+                e.preventDefault();
+                buscador.campo.value = "";
+                buscador.option.style.display = "none";
+                window.location.href = enlace.href;
+            });
+        });
     } else {
         buscador.option.style.display = "none";
     }

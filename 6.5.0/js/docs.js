@@ -115,7 +115,7 @@
             <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="get_started.html">Get Started</a></li>
-                    <li><a href="">Medidas</a></li>
+                    <li><a href="medidas.html">Medidas</a></li>
                     <li><a href="">Colores</a></li>
                     <li><a href="">Tablas</a></li>
                     <li><a href="">Tablas</a></li>
@@ -343,8 +343,13 @@
         { 
             nombre: "GetStarted", 
             enlace: "get_started.html",
-            tags: ["inicialización", "comenzar", "empezar", "setup", "instalación", "start", "get started" ] 
+            tags: ["inicialización", "comenzar", "empezar", "setup", "instalación", "start"] 
         },
+        {
+            nombre: "Medidas", 
+            enlace: "medidas.html",
+            tags: ["breakpoints", "medidas", "responsive", "adaptativo", "diseño", "design", "responsive design" ]
+        }
     ]
 
     let ul = document.createElement("ul");
@@ -353,8 +358,6 @@
     let indexEnlaceSeleccionado = -1;
 
     const PosicionarListaBusqueda =  () => {
-
-
         let buscador = document.getElementById("buscador");
         
         if(!buscador) return;
@@ -363,7 +366,7 @@
 
         let lista = document.getElementById("lista-busqueda");
 
-        lista.style.left = offsetLeft + "px";
+        lista.style.left = (offsetLeft - 75) + "px";
         lista.style.top = (offsetTop + buscador.offsetHeight + 10) + "px";
     }
 
@@ -484,9 +487,6 @@
 
         RealizarBusqueda(termino);              
     });
-
-
-
 })()
 
 
