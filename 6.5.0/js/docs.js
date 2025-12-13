@@ -164,14 +164,13 @@
                 <a class="btn-menu"></a>
 
                 <a href="#" class="logo-container">
-                    <img src="../images/logo_bodystyle.svg" alt="Foto de perfil">
+                    <img id="logo_marca" class="disparador" data-info="" class="bor-rad-por-50" src="../images/logo_bodystyle.svg" alt="Foto de perfil">
                 </a>
 
                 <div class="ocultar-desde-medianos">
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Galería</a></li>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="https://github.com/FedeManzano/bodystyle">Repositorio</a></li>
                     </ul>
                 </div>
                 <div class="right-content">
@@ -205,7 +204,7 @@
         <div class="f-flex just-center">
             <h6 class="ta-c fz-18">
                 Con mucho <i class="bs-heart c-red fz-20 mt-1">&nbsp;</i>
-                <a href="https://github.com/FedeManzano" target="_blank" class="link">Federico Manzano</a>
+                <a id="autor_enlace" href="https://github.com/FedeManzano" target="_blank" class="link disparador" data-info="">Federico Manzano</a>
             </h6>
         </div>`
 
@@ -294,6 +293,29 @@
             localStorage.setItem('theme', 'dark'); // Guardar en localStorage
         }
     });
+
+    let info_autor = 
+    `
+    <div class="card"> <!-- Comienza la tarjeta simple -->
+        <div  class="card-simple-dark">
+            <h4>Autor</h4>
+            <small class="mb-3">Federico Manzano</small>
+           
+            <div class="img-display-128 m-a pt-1">
+                <img class="img-responsive bor-rad-por-50" src="../images/perfil.png" alt="Foto de perfil">
+            </div>
+            <p>
+               Federico Manzano es un desarrollador web apasionado por crear soluciones innovadoras y eficientes. 
+               Con experiencia en diversas tecnologías, se especializa en el desarrollo front-end y back-end, 
+               siempre buscando mejorar la experiencia del usuario a través de interfaces intuitivas y funcionales.
+            </p> 
+            
+        </div>
+    </div>
+    `
+
+    document.getElementById("logo_marca").dataset.info = info_autor;
+    document.getElementById("autor_enlace").dataset.info = info_autor;
 })()
 
 
