@@ -116,7 +116,7 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="get_started.html">Get Started</a></li>
                     <li><a href="medidas.html">Medidas</a></li>
-                    <li><a href="">Colores</a></li>
+                    <li><a href="colores.html">Colores</a></li>
                     <li><a href="">Tablas</a></li>
                     <li><a href="">Tablas</a></li>
                 </ul>
@@ -349,6 +349,11 @@
             nombre: "Medidas", 
             enlace: "medidas.html",
             tags: ["breakpoints", "medidas", "responsive", "adaptativo", "diseño", "design", "responsive design" ]
+        },
+        {
+            nombre: "Colores", 
+            enlace: "colores.html",
+            tags: ["colores", "fondos", "background", "paleta", "colors", "palette" ]
         }
     ]
 
