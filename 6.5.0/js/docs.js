@@ -343,7 +343,7 @@
         { 
             nombre: "GetStarted", 
             enlace: "get_started.html",
-            tags: ["inicialización", "comenzar", "empezar", "setup", "instalación" ] 
+            tags: ["inicialización", "comenzar", "empezar", "setup", "instalación", "start", "get started" ] 
         },
     ]
 
