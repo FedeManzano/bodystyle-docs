@@ -22,13 +22,32 @@
 
 <body>
 
+    
+
     <section class="theme-light mb-3">
+
+        <div id="lista-busqueda" class="search-list"></div>
         <!--Barra de navegación -->
         <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
 
         <div id="sidebar" class="bs-sidebar-drop-light "></div>
 
         <section id="main">
+            <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo fd-bodyui c-white" aria-hidden="true"><i class="bs-search"></i></span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+
             <h1 id="1" class="scroll-item">Get Started</h1>
             <p>
                 Bodystyle biblioteca de Software libre para la creación del
@@ -130,9 +149,9 @@
                 </p>
                 <div class="lista-doc">
                     <ul>
-                        <li><a href="" class="link tips-ele" data-tips="<i class='bs-code c-yellow'>&nbsp;</i>Archivos Procesados" data-pos="right">Descarga Directa</a></li>
-                        <li><a href="" class="link tips-ele" data-tips="<i class='bs-code c-yellow'>&nbsp;</i>CDN de archivos base" data-pos="right">CDN</a></li>
-                        <li><a href="" class="link tips-ele" data-tips="<i class='bs-code c-yellow'>&nbsp;</i>A través de NPM" data-pos="right">NPM</a></li>
+                        <li><a href="#4" class="link tips-ele" data-tips="<i class='bs-code c-yellow'>&nbsp;</i>Archivos Procesados" data-pos="right">Descarga Directa</a></li>
+                        <li><a href="#5" class="link tips-ele" data-tips="<i class='bs-code c-yellow'>&nbsp;</i>CDN de archivos base" data-pos="right">CDN</a></li>
+                        <li><a href="#6" class="link tips-ele" data-tips="<i class='bs-code c-yellow'>&nbsp;</i>A través de NPM" data-pos="right">NPM</a></li>
                     </ul>
                 </div>
 
@@ -241,7 +260,7 @@ bs_vX.X.X/
                     </p>
                 </div>
 
-                                <h3 class="scroll-item" id="6">NPM</h3>
+                <h3 class="scroll-item" id="6">NPM</h3>
                 <p>
                     Bodystyle también se puede instalar y gestionar a través de NPM (Node Package Manager), lo que facilita la
                     integración de la biblioteca en proyectos basados en Node.js y permite una gestión más eficiente de los 
@@ -359,7 +378,7 @@ bs_vX.X.X/
                 </p>
 
                 
-                <a  href="https://github.com/FedeManzano/bodystyle?tab=readme-ov-file#-inicio-r%C3%A1pido" class="btn-lg-o btn-bodyui-o bor-pill com-trigger"
+                <a target="_blank" href="https://github.com/FedeManzano/bodystyle?tab=readme-ov-file#-inicio-r%C3%A1pido" class="btn-lg-o btn-bodyui-o bor-pill com-trigger"
                 data-info="Es un template rápido para probar y aprender, <span class='f-w-7'>No recomendado para producción</span>">Template</a>
 
 

@@ -10,6 +10,7 @@ $mb: 25px;
     position: relative;
     transition: all 0.3s ease;
 }
+
 .scroll-item.active {
     color: #ff1515;
     text-shadow: 0 0 20px rgba(255, 21, 21, 0.3);
@@ -75,7 +76,7 @@ html {
         &::-webkit-scrollbar-thumb {
             background: linear-gradient(180deg, #ff1515, #cc0f0f);
             border-radius: 4px;
-            
+
             &:hover {
                 background: linear-gradient(180deg, #ff3333, #ff1515);
             }
@@ -183,7 +184,7 @@ html {
             &::-webkit-scrollbar-thumb {
                 background: linear-gradient(180deg, #ff1515, #cc0f0f);
                 border-radius: 4px;
-                
+
                 &:hover {
                     background: linear-gradient(180deg, #ff3333, #ff1515);
                 }
@@ -230,7 +231,7 @@ html {
         &::-webkit-scrollbar-thumb {
             background: linear-gradient(180deg, #ff1515, #cc0f0f);
             border-radius: 4px;
-            
+
             &:hover {
                 background: linear-gradient(180deg, #ff3333, #ff1515);
             }
@@ -244,16 +245,16 @@ html {
     .article {
         padding-top: 15px;
         margin-top: 45px;
-        background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.02) 100%);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0.02) 100%);
         border-radius: 8px;
         padding: 24px;
-        transition: all 0.3s ease;  
+        transition: all 0.3s ease;
 
         &:hover {
             border-color: rgba(255, 21, 21, 0.3);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             transform: translateY(-4px);
-        }   
+        }
     }
 
     @media screen and (max-width: 1030px) {
@@ -314,19 +315,76 @@ html {
 
 .theme-light {
 
+    .search-list {
+        position: absolute;
+        max-width: 500px;
+        min-width: 350px;
+        padding: 15px;
+        background: linear-gradient(135deg, #e7e7e7 50%, #ffffff 100%);
+        box-shadow: 0 0 5px rgba(182, 182, 182, 0.5),
+            0 4px 12px rgba(0, 0, 0, 0.3),
+            inset 0 1px 0px rgba(129, 129, 129, 0.558);
+        display: none;
+        border-radius: 15px;
+
+        z-index: 4;
+        overflow: hidden;
+
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(180deg, #b5b5b5 25%, #7a7a7a 50%, #585858 75%, #3c3c3c 100%);
+        }
+
+        &:hover {
+            box-shadow: 0 0 7px rgba(168, 168, 168, 0.6),
+                0 6px 16px rgba(0, 0, 0, 0.4),
+                inset 0 2px 0px rgba(106, 106, 106, 0.475);
+            transform: translateY(-2px);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                a {
+                    color: black;
+                    text-decoration: none;
+                    display: block;
+                    padding: 8px 12px;
+                    border-radius: 8px;
+                    transition: background 0.3s ease;
+
+                    &:hover {
+                        background: rgba(87, 87, 87, 0.1);
+                    }
+                }
+            }
+        }
+    }
+
     html {
         background: #f2f2f2;
     }
 
-    .lista-doc
-    {
+    .lista-doc {
         ul {
-            li{
+            li {
                 margin-bottom: 8px;
                 color: rgb(48, 48, 48);
             }
         }
     }
+
     #main {
 
         border: 1px solid #ccc;
@@ -432,7 +490,7 @@ html {
 
 
         .article {
-            background: linear-gradient(135deg, rgba(255,255,255,0.6) 0%, rgba(240,244,248,0.4) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(240, 244, 248, 0.4) 100%);
             border: 1px solid rgba(0, 0, 0, 0.08);
             border-top: 5px solid #ccc;
             border-radius: 8px;
@@ -509,16 +567,72 @@ html {
 .theme-dark {
 
 
+    .search-list {
+        position: absolute;
+        max-width: 500px;
+        min-width: 350px;
+        padding: 15px;
+        background: linear-gradient(135deg, #1a1a1a 50%, #0d0d0d 100%);
+        box-shadow: 0 0 5px rgba(192, 14, 14, 0.5),
+            0 4px 12px rgba(0, 0, 0, 0.6),
+            inset 0 1px 0 rgba(192, 192, 192, 0.558);
+        left: 400px;
+        border-radius: 15px;
 
-    .lista-doc
-    {
+        z-index: 4;
+        overflow: hidden;
+
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(180deg, #ff0000 25%, #d00000 50%, #ac0000 75%, #1c0000 100%);
+        }
+
+        &:hover {
+            box-shadow: 0 0 7px rgba(255, 21, 21, 0.6),
+                0 6px 16px rgba(0, 0, 0, 0.7),
+                inset 0 2px 0px rgba(186, 186, 186, 0.2);
+            transform: translateY(-2px);
+        }
+
         ul {
-            li{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                a {
+                    color: white;
+                    text-decoration: none;
+                    display: block;
+                    padding: 8px 12px;
+                    border-radius: 8px;
+                    transition: background 0.3s ease;
+
+                    &:hover {
+                        background: rgba(255, 21, 21, 0.1);
+                    }
+                }
+            }
+        }
+    }
+
+    .lista-doc {
+        ul {
+            li {
                 margin-bottom: 8px;
                 color: rgb(236, 236, 236);
             }
         }
     }
+
     #main {
 
         border: 1px solid #757575;
@@ -602,7 +716,7 @@ html {
         }
 
         .article {
-            background: linear-gradient(135deg, rgba(20,20,20,0.6) 0%, rgba(30,25,35,0.4) 100%);
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.6) 0%, rgba(30, 25, 35, 0.4) 100%);
             border: 1px solid rgba(255, 21, 21, 0.15);
             border-top: 5px solid #6d6d6d;
             border-radius: 8px;
@@ -682,4 +796,3 @@ html {
         }
     }
 }
-
