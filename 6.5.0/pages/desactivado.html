@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Capacidad de Bodystyle para añadir atributos y remover atributos para desactivar los elementos.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/desactivado.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Bodystyle</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo fd-bodyui c-white" aria-hidden="true"><i class="bs-search"></i></span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Desactivado</h1>
+            <p>
+                Es una funcionalidad de Bodystyle que permite desactivar elementos HTML de forma sencilla utilizando la clase <span class="badge badge-red">.desactivado</span> 
+                Esto implica que cuando un elemento/componente posee la clase desactivado, todos sus atributos son removidos pero, cuando la 
+                clase antes mencianada es removida, los atributos originales son restaurados automáticamente.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Inicialización</h2>
+                <p>
+                    Esta funcionalidad utiliza uno de los módulos de Bodystyle que se encuentra en 
+                    <span class="c-red">src/modulos/Desactivado.js</span> y utilizando un el observador 
+                    mutation observer, detecta cuando un elemento recibe o pierde la clase <span class="badge badge-red">.desactivado</span>.
+                </p>
+                
+
+                <div class="alert mt-3">
+                    <h4 class="c-yellow"><i class=" bs-info c-yellow fz-28">&nbsp;</i>Advertencia</h4>
+                    <p>
+                        Es importante aclarar que el módulo de esta sección se inicializa automáticamente, pero 
+                        en proyectos dinámicos por ejemplo con frameworks como React, Vue o Angular, puede ser necesario
+                        inicializarlo manualmente utilizando el siguiente código:
+                    </p>
+                </div>
+
+<div class="codigo">
+    <label for="cod-js" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    /**
+        * Inicializa la funcionalidad de desactivado
+        En cada proyecto dinámico puede ser necesario inicializarlo manualmente
+        en el lugar correcto en función al framework que se utilice 
+        Por Ejemplo Angular: ngOnInit, ngAfterViewInit React: componentDidMount, Vue: mounted, etc.
+    */
+    BS.DesactivadoInit();
+</pre>
+</div>
+
+            <h3 class="scroll-item" id="3">Muestra en Botón</h3>
+
+            <p>
+                A continuación se muestra un ejemplo práctico de un botón que puede ser desactivado y activado
+                dinámicamente utilizando la clase <span class="badge badge-red">.desactivado</span>.
+            </p>
+
+            <button id="boton_ejemplo"  class="btn-lg fd-bodyui bor-pill desactivado tips-ele"
+            data-tips="Botón desactivado" data-pos="top" onclick="mostrarToast()">Click Me!</button>
+
+
+            <div class="d-flex just-around flex-wrap-xs mt-3">
+                <button onclick="activar()" class="btn fd-bodyui bor-pill">Activar</button>
+                <button onclick="desactivar()" class="btn fd-azul bor-pill mt-xs-1">Desactivar</button>
+            </div>
+
+<div class="codigo mt-3">
+<label for="cod-js" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex just-around flex-wrap-xs mt-3">
+        <button onclick="activar()" class="btn fd-bodyui bor-pill">Activar</button>
+        <button onclick="desactivar()" class="btn fd-azul bor-pill mt-xs-1">Desactivar</button>
+    </div>
+</pre>
+</div>
+
+<div class="codigo mt-3">
+<label for="cod-js" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+
+    // Función para mostrar un toast cuando el botón está activado
+    function mostrarToast(){
+        BS.Toast({
+            html: "¡Hola! Este es un botón activado.",
+            clases: ["bg-green"],
+            duracion: 3000
+        });
+    }
+
+
+    // Remover la clase .desactivado para activar el botón
+    function activar(){
+        document.getElementById("boton_ejemplo").classList.remove("desactivado");
+    }
+
+    // Agregar la clase .desactivado para desactivar el botón
+    function desactivar(){
+        document.getElementById("boton_ejemplo").classList.add("desactivado");
+    }
+</pre>
+</div>
+
+            </article>
+
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Observador</h2>
+                <p>
+                    El módulo de desactivado utiliza un observador de mutaciones (Mutation Observer) para detectar
+                    cambios en el DOM relacionados con la clase <span class="badge badge-red">.desactivado</span>. 
+                    Esto permite que cualquier elemento que reciba o pierda esta clase tenga sus atributos 
+                    gestionados automáticamente.
+                </p>
+<div class="codigo">
+<label for="cod-js" 
+    class="label">
+        JS
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    /**
+     * Inicializa el módulo y configura el MutationObserver
+     */
+    const inicializar = () => {
+        // Procesar elementos existentes
+        procesarElementosDesactivados();
+
+        // Configurar MutationObserver para detectar cambios en clases
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    const elemento = mutation.target;
+
+                    if (elemento.classList.contains('desactivado')) {
+                        // Se añadió la clase .desactivado
+                        desactivarElemento(elemento);
+                    } else if (atributosOriginales.has(elemento)) {
+                        // Se removió la clase .desactivado y tenemos atributos guardados
+                        restaurarElemento(elemento);
+                    }
+                }
+            });
+        });
+
+        // Observar cambios en todo el documento
+        observer.observe(document.body, {
+            attributes: true,
+            attributeFilter: ['class'],
+            subtree: true
+        });
+
+        // También observar nuevos nodos añadidos al DOM
+        const nodeObserver = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                mutation.addedNodes.forEach((node) => {
+                    if (node.nodeType === 1) { // Es un elemento
+                        if (node.classList && node.classList.contains('desactivado')) {
+                            desactivarElemento(node);
+                        }
+                        // Buscar elementos desactivados dentro del nodo añadido
+                        const desactivados = node.querySelectorAll && node.querySelectorAll('.desactivado');
+                        if (desactivados) {
+                            desactivados.forEach(elem => desactivarElemento(elem));
+                        }
+                    }
+                });
+            });
+        });
+
+        nodeObserver.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    };
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">Desactivado</a></li>
+            <li><a href="#2">Inicialización</a></li>
+            <li><a href="#3">Ejemplo Muestra</a></li>
+            <li><a href="#4">Observador Mutation</a></li>
+            <li><a href="#autor">Autor</a></li>
+        </ul>
+    </div>
+
+    <script src="../js/bodystyle.bundled.js"></script>
+    <script src="../js/docs.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l1" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l1 ul li a")[4].classList.add("c-red");
+
+
+        function mostrarToast(){
+            BS.Toast({
+                html: "¡Hola! Este es un botón activado.",
+                clases: ["bg-green"],
+                duracion: 3000
+            });
+        }
+
+        function activar(){
+            document.getElementById("boton_ejemplo").classList.remove("desactivado");
+        }
+
+        function desactivar(){
+            document.getElementById("boton_ejemplo").classList.add("desactivado");
+        }
+    </script>
+</body>
+
+</html>
+
+

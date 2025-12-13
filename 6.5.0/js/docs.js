@@ -117,7 +117,7 @@
                     <li><a href="get_started.html">Get Started</a></li>
                     <li><a href="medidas.html">Medidas</a></li>
                     <li><a href="colores.html">Colores</a></li>
-                    <li><a href="">Tablas</a></li>
+                    <li><a href="desactivado.html">Desactivado</a></li>
                     <li><a href="">Tablas</a></li>
                 </ul>
             </div>
