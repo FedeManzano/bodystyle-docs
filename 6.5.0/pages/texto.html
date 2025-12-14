@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Comienzo de la documentación de bodystyle.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/get_started.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Bodystyle</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo fd-bodyui c-white" aria-hidden="true"><i class="bs-search"></i></span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Texto</h1>
+            <p>
+                En esta sección daremos ejemplos concretos sobre todas las funcionalidades que acompañar al texto, 
+                un conjunto de clases que permitirán mejorar la presentación del mismo. <br>
+                A continuación se muestra una tabla de ejemplo para ilustrar el uso de las tablas en Bodystyle.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Alineación</h2>
+                <p>
+                    Existen clases dentro de Bodystyle que permiten alinear el texto a la derecha, a la izquierda o al centro 
+                    según sea necesario. A continuación se muestran ejemplos de cada una de estas clases:
+                </p>
+
+                <div class="bg-red-d-1 p-2 c-white ta-l">
+                    Esto es un texto alineado a la izquierda. (clase: .ta-l)
+                </div>
+                <div class="bg-red-d-1 p-2 c-white ta-r">
+                    Esto es un texto alineado a la derecha. (clase: .ta-r)
+                </div>
+                <div class="bg-red-d-1 p-2 c-white ta-c">
+                    Esto es un texto alineado a la centrado. (clase: .ta-c)
+                </div>
+
+                <div class="alert mt-3">
+                    <h4 class="c-blue-s"><i class=" bs-info c-blue-s fz-28">&nbsp;</i>Información</h4>
+                    <p>
+                        Para poder definir estos ejemplos se utilizaron las clases de
+                        <strong>.ta-l</strong>, <strong>.ta-r</strong> y <strong>.ta-c</strong> respectivamente y 
+                        las clases de alineamiento como el <strong>p-[n]</strong> y colores de texto.
+                    </p>
+                </div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Texto alineado a la izquierda con la clase .ta-l -->
+    <div class="bg-red-d-1 p-2 c-white ta-l">
+        Esto es un texto alineado a la izquierda. (clase: .ta-l)
+    </div>
+    <!-- Texto alineado a la derecha con la clase .ta-r -->
+    <div class="bg-red-d-1 p-2 c-white ta-r">
+        Esto es un texto alineado a la derecha. (clase: .ta-r)
+    </div>
+    <!-- Texto alineado a la centrado con la clase .ta-c -->
+    <div class="bg-red-d-1 p-2 c-white ta-c">
+        Esto es un texto alineado a la centrado. (clase: .ta-c)
+    </div>
+</pre>
+</div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Colores</h2>
+                <p>
+                    Al igual que los colores de <a href="./colores.html" class="link tips-ele" data-tips="Colores de Fondos" data-pos="top">Fondos</a>
+                    el texto también cuenta con las clases para ser coloreado, en este caso se utiliza el siguiente formato: <br>
+                    <strong class="c-red">.c-[nombre del color]</strong> <br>
+                    A continuación se muestran algunos ejemplos de colores aplicados al texto:
+                </p>
+
+                <h3 id="4" class="scroll-item">Paleta de Colores</h3>
+
+                <div class="row">
+                    <div class="c-rojo p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-rojo</div>
+                    <div class="c-rojo-c p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-rojo-c</div>
+                    <div class="c-rojo-o p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-rojo-o</div>
+                    <div class="c-rojo-t p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-rojo-t</div>
+                    <div class="c-rojo-ro p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-rojo-ro</div>
+                    <div class="c-rojo-an p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-rojo-an</div>
+                    <div class="c-azul p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-azul</div>
+                    <div class="c-azul-c p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-azul-c</div>
+                    <div class="c-azul-t p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-azul-t</div>
+                    <div class="c-azul-o p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-azul-o</div>
+                    <div class="c-azul-ve p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-azul-ve</div>
+                    <div class="c-azul-vi p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-azul-vi</div>
+                    <div class="c-verde p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-verde</div>
+                    <div class="c-verde-c p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-verde-c</div>
+                    <div class="c-verde-o p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-verde-o</div>
+                    <div class="c-verde-t p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-verde-t</div>
+                    <div class="c-verde-az p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-verde-az</div>
+                    <div class="c-verde-am p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-verde-am</div>
+                    <div class="c-gris p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-gris</div>
+                    <div class="c-gris-c p-2 bg-gris-n ta-c cxs-12 cs-6 cm-4 cl-3">.c-gris-c</div>
+                    <div class="c-gris-o p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-gris-o</div>
+                    <div class="c-gris-t p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-gris-t</div>
+                    <div class="c-gris-az p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-gris-az</div>
+                    <div class="c-gris-n p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-gris-n</div>
+                    <div class="c-gris-az-o p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-gris-az-o</div>
+                    <div class="c-violeta p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violeta</div>
+                    <div class="c-violeta-c p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violeta-c</div>
+                    <div class="c-violeta-o p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violeta-o</div>
+                    <div class="c-violeta-t p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violeta-t</div>
+                    <div class="c-violeta-az p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violeta-az</div>
+                    <div class="c-violeta-ro p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violeta-ro</div>
+                    <div class="c-naranja p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-naranja</div>
+                    <div class="c-naranja-c p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-naranja-c</div>
+                    <div class="c-naranja-o p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-naranja-o</div>
+                    <div class="c-naranja-t p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-naranja-t</div>
+                    <div class="c-naranja-ro p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-naranja-ro</div>
+                    <div class="c-naranja-am p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-naranja-am</div>
+                    <div class="c-amarillo p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-amarillo</div>
+                    <div class="c-amarillo-c p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-amarillo-c</div>
+                    <div class="c-amarillo-o p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-amarillo-o</div>
+                    <div class="c-amarillo-t p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-amarillo-t</div>
+                    <div class="c-amarillo-ve p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-amarillo-ve</div>
+                    <div class="c-amarillo-an p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-amarillo-an</div>
+                    <div class="c-blanco p-2 bg-gris-n ta-c cxs-12 cs-6 cm-4 cl-3">.c-blanco</div>
+                    <div class="c-black p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-black</div>
+                    <div class="c-bodyui p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-bodyui</div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Paleta de colores en español -->
+    <div class="row">
+        <div class="c-rojo p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-rojo</div>
+        <div class="c-rojo-c p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-rojo-c</div>
+        <div class="c-rojo-o p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-rojo-o</div>
+        <div class="c-rojo-t p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-rojo-t</div>
+        <div class="c-rojo-ro p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-rojo-ro</div>
+        <div class="c-rojo-an p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-rojo-an</div>
+        <div class="c-azul p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-azul</div>
+        <div class="c-azul-c p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-azul-c</div>
+        <div class="c-azul-t p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-azul-t</div>
+        <div class="c-azul-o p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-azul-o</div>
+        <div class="c-azul-ve p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-azul-ve</div>
+        <div class="c-azul-vi p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-azul-vi</div>
+        <div class="c-verde p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-verde</div>
+        <div class="c-verde-c p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-verde-c</div>
+        <div class="c-verde-o p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-verde-o</div>
+        <div class="c-verde-t p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-verde-t</div>
+        <div class="c-verde-az p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-verde-az</div>
+        <div class="c-verde-am p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-verde-am</div>
+        <div class="c-gris p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-gris</div>
+        <div class="c-gris-c p-2 bg-gris-n ta-c cxs-12 cs-6 cm-4 cl-3">.c-gris-c</div>
+        <div class="c-gris-o p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-gris-o</div>
+        <div class="c-gris-t p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-gris-t</div>
+        <div class="c-gris-az p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-gris-az</div>
+        <div class="c-gris-n p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-gris-n</div>
+        <div class="c-gris-az-o p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-gris-az-o</div>
+        <div class="c-violeta p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violeta</div>
+        <div class="c-violeta-c p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violeta-c</div>
+        <div class="c-violeta-o p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violeta-o</div>
+        <div class="c-violeta-t p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violeta-t</div>
+        <div class="c-violeta-az p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violeta-az</div>
+        <div class="c-violeta-ro p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violeta-ro</div>
+        <div class="c-naranja p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-naranja</div>
+        <div class="c-naranja-c p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-naranja-c</div>
+        <div class="c-naranja-o p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-naranja-o</div>
+        <div class="c-naranja-t p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-naranja-t</div>
+        <div class="c-naranja-ro p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-naranja-ro</div>
+        <div class="c-naranja-am p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-naranja-am</div>
+        <div class="c-amarillo p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-amarillo</div>
+        <div class="c-amarillo-c p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-amarillo-c</div>
+        <div class="c-amarillo-o p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-amarillo-o</div>
+        <div class="c-amarillo-t p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-amarillo-t</div>
+        <div class="c-amarillo-ve p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-amarillo-ve</div>
+        <div class="c-amarillo-an p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-amarillo-an</div>
+        <div class="c-blanco p-2 bg-gris-n ta-c cxs-12 cs-6 cm-4 cl-3">.c-blanco</div>
+        <div class="c-black p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-black</div>
+        <div class="c-bodyui p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-bodyui</div>
+    </div>
+</pre>
+</div>
+
+
+            <h3 id="5" class="scroll-item">Alias en Inglés</h3>
+            <p>
+                Además de los nombres en español, Bodystyle también incluye alias en inglés para las clases de colores de texto. 
+                A continuación se muestran algunos ejemplos de estos alias:
+            </p>
+
+            <div class="row">
+                <div class="c-red p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-red</div>
+                <div class="c-red-d p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-red-d</div>
+                <div class="c-red-s p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-red-s</div>
+        
+                
+                <div class="c-blue p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-blue</div>
+                <div class="c-blue-s p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-blue-s</div>
+                <div class="c-blue-d p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-blue-o</div>
+                <div class="c-green p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-green</div>
+                <div class="c-green-s p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-green-s</div>
+                <div class="c-green-d p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-green-d</div>
+               
+                <div class="c-grey p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-grey</div>
+                <div class="c-grey-s p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-grey-s</div>
+                <div class="c-grey-d p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-grey-d</div>
+
+                <div class="c-violet p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violet</div>
+                <div class="c-violet-s p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violet-s</div>
+                <div class="c-violet-d p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violet-d</div>
+
+                <div class="c-orange p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-orange</div>
+                <div class="c-orange-s p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-orange-s</div>
+                <div class="c-orange-d p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-orange-d</div>
+
+                <div class="c-yellow p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-yellow</div>
+                <div class="c-yellow-s p-2 bg-gris-n ta-c cxs-12 cs-6 cm-4 cl-3">.c-yellow-s</div>
+                <div class="c-yellow-d p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-yellow-d</div>
+
+                <div class="c-black p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-black</div>
+                <div class="c-white p-2 bg-gris-n ta-c cxs-12 cs-6 cm-4 cl-3">.c-white</div>
+            </div>
+
+            <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Paleta de colores en inglés -->
+    <div class="row">
+        <div class="c-red p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-red</div>
+        <div class="c-red-d p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-red-d</div>
+        <div class="c-red-s p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-red-s</div>
+        <div class="c-blue p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-blue</div>
+        <div class="c-blue-s p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-blue-s</div>
+        <div class="c-blue-d p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-blue-o</div>
+        <div class="c-green p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-green</div>
+        <div class="c-green-s p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-green-s</div>
+        <div class="c-green-d p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-green-d</div>
+        <div class="c-grey p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-grey</div>
+        <div class="c-grey-s p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-grey-s</div>
+        <div class="c-grey-d p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-grey-d</div>
+        <div class="c-violet p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violet</div>
+        <div class="c-violet-s p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violet-s</div>
+        <div class="c-violet-d p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-violet-d</div>
+        <div class="c-orange p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-orange</div>
+        <div class="c-orange-s p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-orange-s</div>
+        <div class="c-orange-d p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-orange-d</div>
+        <div class="c-yellow p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-yellow</div>
+        <div class="c-yellow-s p-2 bg-gris-n ta-c cxs-12 cs-6 cm-4 cl-3">.c-yellow-s</div>
+        <div class="c-yellow-d p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-yellow-d</div>
+        <div class="c-black p-2 bg-gray-s ta-c cxs-12 cs-6 cm-4 cl-3">.c-black</div>
+        <div class="c-white p-2 bg-gris-n ta-c cxs-12 cs-6 cm-4 cl-3">.c-white</div>
+    </div>
+</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h2 id="6" class="scroll-item">Grosor</h2>
+                <p>
+                    La biblioteca Bodystyle también ofrece clases para modificar el grosor del texto. A continuación se muestran algunos ejemplos de estas clases:
+                </p>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Ejemplo de código HTML -->
+    <div class="c-white">Estos es un ejemplo de código</div>
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">Texto</a></li>
+            <li><a href="#2">Alineamiento</a></li>
+            <li><a href="#3">Colores</a></li>
+            <li><a href="#4">Paleta de Colores</a></li>
+            <li><a href="#5">Alias</a></li>
+            <li><a href="#6">Grosor</a></li>
+            <li><a href="#autor">Autor</a></li>
+        </ul>
+    </div>
+
+    <script src="../js/bodystyle.bundled.js"></script>
+    <script src="../js/docs.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l1" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l1 ul li a")[5].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

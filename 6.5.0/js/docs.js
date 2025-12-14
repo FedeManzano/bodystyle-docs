@@ -118,7 +118,7 @@
                     <li><a href="medidas.html">Medidas</a></li>
                     <li><a href="colores.html">Colores</a></li>
                     <li><a href="desactivado.html">Desactivado</a></li>
-                    <li><a href="">Tablas</a></li>
+                    <li><a href="texto.html">Texto</a></li>
                 </ul>
             </div>
             <div class="bs-sidebar-title" data-target="#l2">
