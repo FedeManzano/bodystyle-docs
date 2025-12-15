@@ -109,17 +109,17 @@
     document.getElementById("sidebar").innerHTML =
         `
         <div class="bs-sidebar-title" data-target="#l1">
-            <label><i class="bs-play c-bodyui fz-20">&nbsp;</i>Inicio</label>
+            <label>🚀 Inicio</label>
         </div>
         <div class="bs-sidebar-drop-list" id="l1">
             <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="get_started.html">Get Started</a></li>
-                    <li><a href="medidas.html">Medidas</a></li>
-                    <li><a href="colores.html">Colores</a></li>
-                    <li><a href="desactivado.html">Desactivado</a></li>
-                    <li><a href="texto.html">Texto</a></li>
-                    <li><a href="tablas.html">Tablas</a></li>
+                    <li><a href="../index.html">✨ Home</a></li>
+                    <li><a href="get_started.html">🚀 Get Started</a></li>
+                    <li><a href="medidas.html">💡Medidas</a></li>
+                    <li><a href="colores.html">🎨 Colores</a></li>
+                    <li><a href="desactivado.html">❌ Desactivado</a></li>
+                    <li><a href="texto.html">📝Texto</a></li>
+                    <li><a href="tablas.html">📊 Tablas</a></li>
                 </ul>
             </div>
             <div class="bs-sidebar-title" data-target="#l2">
@@ -261,7 +261,7 @@
 
         if(spanBusqueda && inputBusqueda) {
             spanBusqueda.classList.add("c-white");
-            spanBusqueda.classList.add("fd-bodyui");
+            spanBusqueda.classList.add("fd-gris-n");
             inputBusqueda.classList.add("c-white");
             inputBusqueda.classList.add("fd-gris-n");
         }
@@ -285,7 +285,7 @@
 
         if(spanBusqueda && inputBusqueda) {
             spanBusqueda.classList.remove("c-white");
-            spanBusqueda.classList.remove("fd-bodyui");
+            spanBusqueda.classList.remove("fd-gris-n");
             inputBusqueda.classList.remove("c-white");
             inputBusqueda.classList.remove("fd-gris-n");
         }
