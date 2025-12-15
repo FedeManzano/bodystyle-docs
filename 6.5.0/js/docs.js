@@ -367,6 +367,16 @@
             nombre: "Texto", 
             enlace: "texto.html",
             tags: ["texto", "text", "font", "font size", "grosor", "weight" ]
+        },
+        {
+            nombre: "Tablas", 
+            enlace: "tablas.html",
+            tags: ["tablas", "tables", "table", "data", "grid" ]
+        },
+        {
+            nombre: "Bordes", 
+            enlace: "bordes.html",
+            tags: ["bordes", "borders", "border", "radio", "radius", "grosor", "thickness" ]
         }
     ]
 
