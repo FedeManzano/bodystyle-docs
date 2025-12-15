@@ -124,7 +124,7 @@
                 </ul>
             </div>
             <div class="bs-sidebar-title" data-target="#l2">
-                <label>Repositorios</label>
+                <label>🌈 CSS</label>
             </div>
             <div class="bs-sidebar-drop-list" id="l2">
                 <ul>
