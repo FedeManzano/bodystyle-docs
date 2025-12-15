@@ -119,6 +119,7 @@
                     <li><a href="colores.html">Colores</a></li>
                     <li><a href="desactivado.html">Desactivado</a></li>
                     <li><a href="texto.html">Texto</a></li>
+                    <li><a href="tablas.html">Tablas</a></li>
                 </ul>
             </div>
             <div class="bs-sidebar-title" data-target="#l2">
@@ -354,6 +355,11 @@
             nombre: "Colores", 
             enlace: "colores.html",
             tags: ["colores", "fondos", "background", "paleta", "colors", "palette" ]
+        },
+        {
+            nombre: "Texto", 
+            enlace: "texto.html",
+            tags: ["texto", "text", "font", "font size", "grosor", "weight" ]
         }
     ]
 
