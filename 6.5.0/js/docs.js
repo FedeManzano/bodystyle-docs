@@ -251,7 +251,10 @@
         document.getElementById("sidebar").classList.add("bs-sidebar-drop-dark")
         document.querySelector("html, body").style.backgroundColor = "#1a1a1a";
         document.querySelectorAll("table").forEach((table) => {
-            table.classList.add("table-dark")
+            table.classList.add("fd-gris-n")
+            table.querySelectorAll("th, td").forEach((celda) => {
+                celda.classList.add("c-white")
+            })
         })
         let spanBusqueda = document.getElementById("span_buscador");
         let inputBusqueda = document.getElementById("buscador");
@@ -271,7 +274,10 @@
         document.getElementById("sidebar").classList.add("bs-sidebar-drop-light")
         document.querySelector("html, body").style.backgroundColor = "#fff";
         document.querySelectorAll("table").forEach((table) => {
-            table.classList.remove("table-dark")
+            table.classList.remove("fd-gris-n")
+            table.querySelectorAll("th, td").forEach((celda) => {
+                celda.classList.remove("c-white")
+            })
         })
 
         let spanBusqueda = document.getElementById("span_buscador");

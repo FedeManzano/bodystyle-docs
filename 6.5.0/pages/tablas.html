@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Tablas con estilos para mejorar la visual de estos elementos.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/tablas.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Bodystyle</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo fd-bodyui c-white" aria-hidden="true"><i class="bs-search"></i></span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1  id="1" class="scroll-item">Tablas</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                En este apartado haremos una revisión de los estilos de tablas provistas 
+                por Bodystyle para mejorar la visual de estos elementos. <br>
+                Como todo los demás está sujeto a modificaciones por parte del desarrollador, lo que implica 
+                se le brinda una base sólida para comenzar a trabajar con tablas estilizadas.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Tabla Default</h2>
+                <p>
+                    Con solo añadir el archivo de estilos de bodystyle ya se aplican estilos básicos a las tablas,
+                    mejorando su visualización sin necesidad de agregar clases adicionales.
+                </p>
+
+                <div class="table-responsive">
+                    <table class="fd-blanco">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Email</th>
+                                <th>Telefono</th>
+                                <th>Direccion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="c-black">Juan</td>
+                                <td class="c-black">Pérez</td>
+                                <td class="c-black">juan.perez@email.com</td>
+                                <td class="c-black">+54 11 4567-8901</td>
+                                <td class="c-black">Av. Corrientes 1234</td>
+                            </tr>
+                            <tr>
+                                <td class="c-black">María</td>
+                                <td class="c-black">Gómez</td>
+                                <td class="c-black">maria.gomez@email.com</td>
+                                <td class="c-black">+54 11 5678-9012</td>
+                                <td class="c-black">Calle Florida 5678</td>
+                            </tr>
+                            <tr>
+                                <td class="c-black">Carlos</td>
+                                <td class="c-black">López</td>
+                                <td class="c-black">carlos.lopez@email.com</td>
+                                <td class="c-black">+54 351 234-5678</td>
+                                <td class="c-black">Calle San Martín 910</td>
+                            </tr>
+                        </tbody>
+                    </table>    
+                </div>
+
+                
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>juan.perez@email.com</td>
+                    <td>+54 11 4567-8901</td>
+                    <td>Av. Corrientes 1234</td>
+                </tr>
+                <tr>
+                    <td>María</td>
+                    <td>Gómez</td>
+                    <td>maria.gomez@email.com</td>
+                    <td>+54 11 5678-9012</td>
+                    <td>Calle Florida 5678</td>
+                </tr>
+                <tr>
+                    <td>Carlos</td>
+                    <td>López</td>
+                    <td>carlos.lopez@email.com</td>
+                    <td>+54 351 234-5678</td>
+                    <td>Calle San Martín 910</td>
+                </tr>
+            </tbody>
+        </table>    
+    </div>    
+</pre>
+</div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Personalizada</h2>
+                <p>
+                    Para definir los estilos visuales podemos ayudarnos con los estilos de bodystyle 
+                    correspondientes a otras secciones de esta documentación, como colores de fondo, colores de texto, bordes, etc.
+                    A continuación se muestra un ejemplo de una tabla personalizada utilizando clases de bodystyle.
+                </p>
+
+                <div class="table-responsive">
+                    <table class="fd-gris-n">
+                        <thead>
+                            <tr>
+                                <th class="c-white">Nombre</th>
+                                <th class="c-white">Apellido</th>
+                                <th class="c-white">Email</th>
+                                <th class="c-white">Telefono</th>
+                                <th class="c-white">Direccion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="c-white">Juan</td>
+                                <td class="c-white">Pérez</td>
+                                <td class="c-white">juan.perez@email.com</td>
+                                <td class="c-white">+54 11 4567-8901</td>
+                                <td class="c-white">Av. Corrientes 1234</td>    
+                            </tr>
+                            <tr>
+                                <td class="c-white">María</td>
+                                <td class="c-white">González</td>
+                                <td class="c-white">maria.gonzalez@email.com</td>
+                                <td class="c-white">+54 11 5678-9012</td>
+                                <td class="c-white">Calle Florida 567</td>
+                            </tr>
+                            <tr>
+                                <td class="c-white">Carlos</td>
+                                <td class="c-white">Rodríguez</td>
+                                <td class="c-white">carlos.rodriguez@email.com</td>
+                                <td class="c-white">+54 351 234-5678</td>
+                                <td class="c-white">San Martín 890</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="table-responsive">
+        <table class="fd-gris-n">
+            <thead>
+                <tr>
+                    <th class="c-white">Nombre</th>
+                    <th class="c-white">Apellido</th>
+                    <th class="c-white">Email</th>
+                    <th class="c-white">Telefono</th>
+                    <th class="c-white">Direccion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="c-white">Juan</td>
+                    <td class="c-white">Pérez</td>
+                    <td class="c-white">juan.perez@email.com</td>
+                    <td class="c-white">+54 11 4567-8901</td>
+                    <td class="c-white">Av. Corrientes 1234</td>    
+                </tr>
+                <tr>
+                    <td class="c-white">María</td>
+                    <td class="c-white">González</td>
+                    <td class="c-white">maria.gonzalez@email.com</td>
+                    <td class="c-white">+54 11 5678-9012</td>
+                    <td class="c-white">Calle Florida 567</td>
+                </tr>
+                <tr>
+                    <td class="c-white">Carlos</td>
+                    <td class="c-white">Rodríguez</td>
+                    <td class="c-white">carlos.rodriguez@email.com</td>
+                    <td class="c-white">+54 351 234-5678</td>
+                    <td class="c-white">San Martín 890</td>
+                </tr>
+        </table>
+    </div>  
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Responsive</h2>
+                <p>
+                    Disponemos de una clase <span class="badge badge-red">.table-responsive</span> que permite 
+                    en equipos de pantalla menores e iguales a 1030px agregar el scroll horizontal a las tablas,
+                    evitando que el diseño se rompa o que la tabla se vea comprimida.
+                </p>
+
+                <div class="table-responsive">
+                    <table class="fd-blanco">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Email</th>
+                                <th>Telefono</th>
+                                <th>Direccion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="c-black">Juan</td>
+                                <td class="c-black">Pérez</td>
+                                <td class="c-black">juan.perez@email.com</td>
+                                <td class="c-black">+54 11 4567-8901</td>
+                                <td class="c-black">Av. Corrientes 1234</td>    
+                            </tr>
+                            <tr>
+                                <td class="c-black">María</td>
+                                <td class="c-black">González</td>
+                                <td class="c-black">maria.gonzalez@email.com</td>
+                                <td class="c-black">+54 11 5678-9012</td>
+                                <td class="c-black">Calle Florida 567</td>
+                            </tr>
+                            <tr>
+                                <td class="c-black">Carlos</td>
+                                <td class="c-black">Rodríguez</td>
+                                <td class="c-black">carlos.rodriguez@email.com</td>
+                                <td class="c-black">+54 351 234-5678</td>
+                                <td class="c-black">San Martín 890</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="table-responsive">
+        <table class="fd-blanco">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="c-black">Juan</td>
+                    <td class="c-black">Pérez</td>
+                    <td class="c-black">juan.perez@email.com</td>
+                    <td class="c-black">+54 11 4567-8901</td>
+                    <td class="c-black">Av. Corrientes 1234</td>    
+                </tr>
+                <tr>
+                    <td class="c-black">María</td>
+                    <td class="c-black">González</td>
+                    <td class="c-black">maria.gonzalez@email.com</td>
+                    <td class="c-black">+54 11 5678-9012</td>
+                    <td class="c-black">Calle Florida 567</td>
+                </tr>
+                <tr>
+                    <td class="c-black">Carlos</td>
+                    <td class="c-black">Rodríguez</td>
+                    <td class="c-black">carlos.rodriguez@email.com</td>
+                    <td class="c-black">+54 351 234-5678</td>
+                    <td class="c-black">San Martín 890</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</pre>
+</div>
+                <div class="alert mt-3">
+                    <h4 class="c-blue-s"><i class=" bs-info c-blue-s fz-28">&nbsp;</i>Información</h4>
+                    <p>
+                        Cuando los equipos en los que se muestre la tabla sean menores o iguales a 1030px 
+                        aparecerá el scroll horizontal para poder visualizar toda la tabla sin que se rompa el diseño.           
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="5" class="scroll-item">Tabla SM</h2>
+                <p>
+                    También contamos con una variante de tabla más compacta, la cual reduce el padding 
+                    de las celdas para mostrar más información en menos espacio. Esta variante es útil 
+                    cuando se trabaja con tablas que contienen una gran cantidad de datos.
+                </p>
+
+                <div class="table-responsive">
+                    <table class="table-sm fd-blanco">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Email</th>
+                                <th>Telefono</th>
+                                <th>Direccion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="c-black">Juan</td>
+                                <td class="c-black">Pérez</td>
+                                <td class="c-black">juan.perez@email.com</td>
+                                <td class="c-black">+54 11 4567-8901</td>
+                                <td class="c-black">Av. Corrientes 1234</td>
+                            </tr>
+                            <tr>
+                                <td class="c-black">María</td>
+                                <td class="c-black">González</td>
+                                <td class="c-black">maria.gonzalez@email.com</td>
+                                <td class="c-black">+54 11 5678-9012</td>
+                                <td class="c-black">Calle Florida 567</td>
+                            </tr>
+                            <tr>
+                                <td class="c-black">Carlos</td>
+                                <td class="c-black">Rodríguez</td>
+                                <td class="c-black">carlos.rodriguez@email.com</td>
+                                <td class="c-black">+54 351 234-5678</td>
+                                <td class="c-black">San Martín 890</td>
+                            </tr>
+                        </tbody>
+                    </table>  
+                </div>
+
+                <p class="mt-3">
+                    La clase para lograr esto es <span class="badge badge-red">.table-sm</span> y se puede combinar con las otras clases de tablas vistas anteriormente.
+                </p>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="table-responsive">
+        <table class="table-sm fd-blanco">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="c-black">Juan</td>
+                    <td class="c-black">Pérez</td>
+                    <td class="c-black">juan.perez@email.com</td>
+                    <td class="c-black">+54 11 4567-8901</td>
+                    <td class="c-black">Av. Corrientes 1234</td>
+                </tr>
+                <tr>
+                    <td class="c-black">María</td>
+                    <td class="c-black">González</td>
+                    <td class="c-black">maria.gonzalez@email.com</td>
+                    <td class="c-black">+54 11 5678-9012</td>
+                    <td class="c-black">Calle Florida 567</td>
+                </tr>
+                <tr>
+                    <td class="c-black">Carlos</td>
+                    <td class="c-black">Rodríguez</td>
+                    <td class="c-black">carlos.rodriguez@email.com</td>
+                    <td class="c-black">+54 351 234-5678</td>
+                    <td class="c-black">San Martín 890</td>
+                </tr>
+            </tbody>
+        </table>  
+    </div>
+</pre>
+</div>
+            </article>
+            <article class="article">
+                <h2 id="6" class="scroll-item">Borde Vertical</h2>
+                <p>
+                    También es posible definir un borde vertical para separar las columnas de la tabla.
+                    La clase utilizada para esto es <span class="badge badge-red">.vertical-border</span>.
+                </p>
+                <div class="table-responsive">
+                    <table class="vertical-border fd-blanco">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Email</th>
+                                <th>Telefono</th>
+                                <th>Direccion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="c-black">Juan</td>
+                                <td class="c-black">Pérez</td>
+                                <td class="c-black">juan.perez@email.com</td>
+                                <td class="c-black">+54 11 4567-8901</td>
+                                <td class="c-black">Av. Corrientes 1234</td>
+                            </tr>
+                            <tr>
+                                <td class="c-black">María</td>
+                                <td class="c-black">González</td>
+                                <td class="c-black">maria.gonzalez@email.com</td>
+                                <td class="c-black">+54 11 5678-9012</td>
+                                <td class="c-black">Calle Florida 567</td>
+                            </tr>
+                            <tr>
+                                <td class="c-black">Carlos</td>
+                                <td class="c-black">Rodríguez</td>
+                                <td class="c-black">carlos.rodriguez@email.com</td>
+                                <td class="c-black">+54 351 234-5678</td>
+                                <td class="c-black">San Martín 890</td>
+                            </tr>
+                        </tbody>    
+                    </table>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+    <pre class="cod-html pt-1">
+        <div class="table-responsive">
+            <table class="table-sm vertical-border fd-blanco">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                        <th>Telefono</th>
+                        <th>Direccion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="c-black">Juan</td>
+                        <td class="c-black">Pérez</td>
+                        <td class="c-black">juan.perez@email.com</td>
+                        <td class="c-black">+54 11 4567-8901</td>
+                        <td class="c-black">Av. Corrientes 1234</td>
+                    </tr>
+                    <tr>
+                        <td class="c-black">María</td>
+                        <td class="c-black">González</td>
+                        <td class="c-black">maria.gonzalez@email.com</td>
+                        <td class="c-black">+54 11 5678-9012</td>
+                        <td class="c-black">Calle Florida 567</td>
+                    </tr>
+                    <tr>
+                        <td class="c-black">Carlos</td>
+                        <td class="c-black">Rodríguez</td>
+                        <td class="c-black">carlos.rodriguez@email.com</td>
+                        <td class="c-black">+54 351 234-5678</td>
+                        <td class="c-black">San Martín 890</td>
+                    </tr>
+                </tbody>
+            </table>  
+        </div>
+    </pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h2 id="7" class="scroll-item">Colores</h2>
+                <p>
+                    Antes vimos como colorear una tabla, pero bodystyle cuenta con algunos temas de colores predefinos y limitados 
+                    que aportan más flexibilidad en los diseños, pero es importante entender que las demás clases provenientes de colores
+                    también pueden ser utilizadas para personalizar las tablas. <br>
+                </p>
+
+                <div class="table-responsive">
+                    <table class="table-red">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Email</th>
+                                <th>Telefono</th>
+                                <th>Direccion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Juan</td>
+                                <td>Pérez</td>
+                                <td>juan.perez@email.com</td>
+                                <td>+54 11 4567-8901</td>
+                                <td>Av. Corrientes 1234</td>
+                            </tr>
+                            <tr>
+                                <td>María</td>
+                                <td>González</td>
+                                <td>maria.gonzalez@email.com</td>
+                                <td>+54 11 5678-9012</td>
+                                <td>Calle Florida 567</td>
+                            </tr>
+                            <tr>
+                                <td>Carlos</td>
+                                <td>Rodríguez</td>
+                                <td>carlos.rodriguez@email.com</td>
+                                <td>+54 351 234-5678</td>
+                                <td>San Martín 890</td>
+                            </tr>
+                        </tbody>    
+                    </table>
+                </div>
+                <div class="table-responsive mt-3">
+                    <table class="table-green">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Email</th>
+                                <th>Telefono</th>
+                                <th>Direccion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Juan</td>
+                                <td>Pérez</td>
+                                <td>juan.perez@email.com</td>
+                                <td>+54 11 4567-8901</td>
+                                <td>Av. Corrientes 1234</td>
+                            </tr>
+                            <tr>
+                                <td>María</td>
+                                <td>González</td>
+                                <td>maria.gonzalez@email.com</td>
+                                <td>+54 11 5678-9012</td>
+                                <td>Calle Florida 567</td>
+                            </tr>
+                            <tr>
+                                <td>Carlos</td>
+                                <td>Rodríguez</td>
+                                <td>carlos.rodriguez@email.com</td>
+                                <td>+54 351 234-5678</td>
+                                <td>San Martín 890</td>
+                            </tr>
+                        </tbody>    
+                    </table>
+                </div>
+                <div class="table-responsive mt-3">
+                    <table class="table-blue">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Email</th>
+                                <th>Telefono</th>
+                                <th>Direccion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Juan</td>
+                                <td>Pérez</td>
+                                <td>juan.perez@email.com</td>
+                                <td>+54 11 4567-8901</td>
+                                <td>Av. Corrientes 1234</td>
+                            </tr>
+                            <tr>
+                                <td>María</td>
+                                <td>González</td>
+                                <td>maria.gonzalez@email.com</td>
+                                <td>+54 11 5678-9012</td>
+                                <td>Calle Florida 567</td>
+                            </tr>
+                            <tr>
+                                <td>Carlos</td>
+                                <td>Rodríguez</td>
+                                <td>carlos.rodriguez@email.com</td>
+                                <td>+54 351 234-5678</td>
+                                <td>San Martín 890</td>
+                            </tr>
+                        </tbody>    
+                    </table>
+                </div>
+                <div class="table-responsive mt-3">
+                    <table class="table-dark">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Email</th>
+                                <th>Telefono</th>
+                                <th>Direccion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Juan</td>
+                                <td>Pérez</td>
+                                <td>juan.perez@email.com</td>
+                                <td>+54 11 4567-8901</td>
+                                <td>Av. Corrientes 1234</td>
+                            </tr>
+                            <tr>
+                                <td>María</td>
+                                <td>González</td>
+                                <td>maria.gonzalez@email.com</td>
+                                <td>+54 11 5678-9012</td>
+                                <td>Calle Florida 567</td>
+                            </tr>
+                            <tr>
+                                <td>Carlos</td>
+                                <td>Rodríguez</td>
+                                <td>carlos.rodriguez@email.com</td>
+                                <td>+54 351 234-5678</td>
+                                <td>San Martín 890</td>
+                            </tr>
+                        </tbody>    
+                    </table>
+                </div>
+
+
+                <div class="alert mt-3">
+                    <h4 class="c-blue-s"><i class=" bs-info c-blue-s fz-28">&nbsp;</i>Información</h4>
+                    <p>
+                        Estos son temas básicos que intentan promover la creatividad y para nada son modelos 
+                        definitivos, la propuesta es ver la sección <a href="colores.html" class="link tips-ele"
+                        data-tips="Colores de Fondo" data-pos="top">Colores</a>
+                        y <a href="texto.html" class="link tips-ele" data-tips="Colores de Texto" data-pos="top">Texto</a> para poder personalizar las tablas a gusto.
+                    </p>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="table-responsive">
+        <table class="table-red">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>juan.perez@email.com</td>
+                    <td>+54 11 4567-8901</td>
+                    <td>Av. Corrientes 1234</td>
+                </tr>
+                <tr>
+                    <td>María</td>
+                    <td>González</td>
+                    <td>maria.gonzalez@email.com</td>
+                    <td>+54 11 5678-9012</td>
+                    <td>Calle Florida 567</td>
+                </tr>
+                <tr>
+                    <td>Carlos</td>
+                    <td>Rodríguez</td>
+                    <td>carlos.rodriguez@email.com</td>
+                    <td>+54 351 234-5678</td>
+                    <td>San Martín 890</td>
+                </tr>
+            </tbody>    
+        </table>
+    </div>
+    <div class="table-responsive mt-3">
+        <table class="table-green">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>juan.perez@email.com</td>
+                    <td>+54 11 4567-8901</td>
+                    <td>Av. Corrientes 1234</td>
+                </tr>
+                <tr>
+                    <td>María</td>
+                    <td>González</td>
+                    <td>maria.gonzalez@email.com</td>
+                    <td>+54 11 5678-9012</td>
+                    <td>Calle Florida 567</td>
+                </tr>
+                <tr>
+                    <td>Carlos</td>
+                    <td>Rodríguez</td>
+                    <td>carlos.rodriguez@email.com</td>
+                    <td>+54 351 234-5678</td>
+                    <td>San Martín 890</td>
+                </tr>
+            </tbody>    
+        </table>
+    </div>
+    <div class="table-responsive mt-3">
+        <table class="table-blue">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>juan.perez@email.com</td>
+                    <td>+54 11 4567-8901</td>
+                    <td>Av. Corrientes 1234</td>
+                </tr>
+                <tr>
+                    <td>María</td>
+                    <td>González</td>
+                    <td>maria.gonzalez@email.com</td>
+                    <td>+54 11 5678-9012</td>
+                    <td>Calle Florida 567</td>
+                </tr>
+                <tr>
+                    <td>Carlos</td>
+                    <td>Rodríguez</td>
+                    <td>carlos.rodriguez@email.com</td>
+                    <td>+54 351 234-5678</td>
+                    <td>San Martín 890</td>
+                </tr>
+            </tbody>    
+        </table>
+    </div>
+    <div class="table-responsive mt-3">
+        <table class="table-dark">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>juan.perez@email.com</td>
+                    <td>+54 11 4567-8901</td>
+                    <td>Av. Corrientes 1234</td>
+                </tr>
+                <tr>
+                    <td>María</td>
+                    <td>González</td>
+                    <td>maria.gonzalez@email.com</td>
+                    <td>+54 11 5678-9012</td>
+                    <td>Calle Florida 567</td>
+                </tr>
+                <tr>
+                    <td>Carlos</td>
+                    <td>Rodríguez</td>
+                    <td>carlos.rodriguez@email.com</td>
+                    <td>+54 351 234-5678</td>
+                    <td>San Martín 890</td>
+                </tr>
+            </tbody>    
+        </table>
+    </div>
+</pre>
+</div>
+                
+
+            </article>
+
+            <article class="article">
+                <h2 id="7" class="scroll-item">Resumen</h2>
+                <p>
+                    A continuación se presenta una tabla resumen con todas las clases y variantes de tablas documentadas 
+                    en Bodystyle, para facilitar la consulta rápida de las opciones disponibles.
+                </p>
+
+                <div class="table-responsive">
+                    <table class="fd-gris-n">
+                        <thead>
+                            <tr>
+                                <th class="c-white">Clase</th>
+                                <th class="c-white">Descripción</th>
+                                <th class="c-white">Uso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="c-white"><code>.table-responsive</code></td>
+                                <td class="c-white">Envoltorio responsive para tablas</td>
+                                <td class="c-white">Agregar scroll horizontal en pantallas ≤ 1030px</td>
+                            </tr>
+                            <tr>
+                                <td class="c-white"><code>.table-sm</code></td>
+                                <td class="c-white">Tabla compacta</td>
+                                <td class="c-white">Reducir padding para más datos en menos espacio</td>
+                            </tr>
+                            <tr>
+                                <td class="c-white"><code>.vertical-border</code></td>
+                                <td class="c-white">Bordes verticales</td>
+                                <td class="c-white">Separar columnas con líneas verticales</td>
+                            </tr>
+                            <tr>
+                                <td class="c-white"><code>.fd-blanco</code></td>
+                                <td class="c-white">Fondo blanco</td>
+                                <td class="c-white">Tabla con fondo claro (por defecto)</td>
+                            </tr>
+                            <tr>
+                                <td class="c-white"><code>.fd-gris-n</code></td>
+                                <td class="c-white">Fondo gris</td>
+                                <td class="c-white">Tabla con fondo gris para contraste</td>
+                            </tr>
+                            <tr>
+                                <td class="c-white"><code>.c-white</code></td>
+                                <td class="c-white">Color de texto blanco</td>
+                                <td class="c-white">Texto blanco en celdas</td>
+                            </tr>
+                            <tr>
+                                <td class="c-white"><code>.c-black</code></td>
+                                <td class="c-white">Color de texto negro</td>
+                                <td class="c-white">Texto negro en celdas</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="alert mt-3">
+                    <h4 class="c-blue-s"><i class=" bs-info c-blue-s fz-28">&nbsp;</i>Información</h4>
+                    <p>
+                        Las clases de tablas en Bodystyle pueden combinarse entre sí para lograr el efecto deseado. 
+                        Por ejemplo: <code>&lt;table class="table-sm vertical-border fd-gris-n"&gt;</code> crearía una 
+                        tabla compacta con bordes verticales y fondo gris.
+                    </p>
+                </div>
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">Tablas</a></li>
+            <li><a href="#2">Default</a></li>
+            <li><a href="#3">Personalizada</a></li>
+            <li><a href="#4">Responsive</a></li>
+            <li><a href="#5">Tabla SM</a></li>
+            <li><a href="#6">Borde Vertical</a></li>
+            <li><a href="#7">Resumen</a></li>
+            <li><a href="#autor">Autor</a></li>
+        </ul>
+    </div>
+
+    <script src="../js/bodystyle.bundled.js"></script>
+    <script src="../js/docs.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l1" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l1 ul li a")[6].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>
