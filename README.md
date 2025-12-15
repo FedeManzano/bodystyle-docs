@@ -38,6 +38,23 @@ La documentación está organizada como un sitio web interactivo con ejemplos pr
 - 📉 **Reducción del Bundle** - El tamaño del bundle se redujo de **244 KB a 180 KB** (26% de reducción).
 - 🚀 **Mejor Rendimiento** - Carga más rápida y menor consumo de recursos.
 
+## 🏗️ La Filosofía de Bodystyle
+
+**Bodystyle NO es un framework cerrado.** Es una **BASE DE CONSTRUCCIÓN** modular y flexible que empodera a los desarrolladores.
+
+### ¿Qué te ofrece?
+- ✅ **Grid responsivo** - Sistema flexible de 12 columnas
+- ✅ **Utilitarios CSS** - Clases helper para spacing, colores, tipografía
+- ✅ **Dynamics Positioning** - Sistema para tooltips, dropdowns, toasts y comentarios
+- ✅ **Show Syntax** - Resaltado de código para múltiples lenguajes
+
+### ¿Qué NO te impone?
+- ❌ No obliga a usar componentes predefinidos
+- ❌ No tiene patrones rígidos o estructuras obligatorias
+- ❌ No limita tu creatividad
+
+**A diferencia de otros frameworks populares**, Bodystyle te proporciona los bloques fundamentales para que **TÚ crees tus propios diseños únicos** sin restricciones. Los elementos son herramientas, no soluciones finales.
+
 ## ✨ Características de Bodystyle
 
 - 🎨 **Componentes UI completos** - Botones, formularios, tarjetas, modales, navegación y más
