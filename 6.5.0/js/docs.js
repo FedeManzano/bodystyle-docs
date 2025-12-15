@@ -120,6 +120,7 @@
                     <li><a href="desactivado.html">❌ Desactivado</a></li>
                     <li><a href="texto.html">📝Texto</a></li>
                     <li><a href="tablas.html">📊 Tablas</a></li>
+                    <li><a href="bordes.html">🧱 Bordes</a></li>
                 </ul>
             </div>
             <div class="bs-sidebar-title" data-target="#l2">
