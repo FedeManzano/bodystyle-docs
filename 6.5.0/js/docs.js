@@ -211,7 +211,7 @@
 
     const InitScrollSpyDark = () => {
         let conf = {
-            ancho: 15, // Ancho en porcentaje del scrollspy
+            ancho: 16, // Ancho en porcentaje del scrollspy
             tamFuente: 17, // Tamaño de la fuenta
             colorBorde: "fd-bodyui", // color del borde
             alturaBorde: 30, // Altura del elemento dinámico borde
@@ -229,7 +229,7 @@
 
     const InitScrollSpyLight = () => {
         let conf = {
-            ancho: 15, // Ancho en porcentaje del scrollspy
+            ancho: 16, // Ancho en porcentaje del scrollspy
             tamFuente: 17, // Tamaño de la fuenta
             colorBorde: "fd-bodyui", // color del borde
             alturaBorde: 30, // Altura del elemento dinámico borde

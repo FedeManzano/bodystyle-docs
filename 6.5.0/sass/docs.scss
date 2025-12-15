@@ -3,7 +3,18 @@
 
 
 
+
+.lista-scroll
+{
+    @media (max-width: 1370px) {
+        display: none !important;
+    }
+}
+
+
 $mb: 25px;
+
+
 
 
 .scroll-item {
