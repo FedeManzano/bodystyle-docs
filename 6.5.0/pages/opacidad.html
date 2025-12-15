@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Clases CSS que permiten definir la opacidad de los elementos.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/opacidad.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Opacidad</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">🖼️ Opacidad</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                En este apartado trataremos sobre la opacidad de los elementos propiciada por u conjunto 
+                de clases CSS que permiten definir diferentes niveles de opacidad para los elementos HTML.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Muestra</h2>
+                <p>
+                    Ahora veremos como utlizar las clases de opacidad. Las mismas de definen a partir 
+                    de la seguiente sintaxis <span class="badge badge-red">.opa-[n]</span> donde n es un numero entero 
+                    que va de 0-10 siendo 0 totalmente transparente y 10 totalmente opaco.
+                </p>
+
+                <div class="row">
+                    <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-0 c-white">
+                        .opa-0
+                    </div>
+                    <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-1 c-white">
+                        .opa-1
+                    </div>
+                    <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-2 c-white">
+                        .opa-2  
+                    </div>
+                    <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-3 c-white">
+                        .opa-3
+                    </div>
+                    <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-4 c-white">
+                        .opa-4
+                    </div>
+                    <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-5 c-white">
+                        .opa-5
+                    </div>
+                    <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-6 c-white">
+                        .opa-6
+                    </div>
+                    <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-7 c-white">
+                        .opa-7
+                    </div>
+                    <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-8 c-white">
+                        .opa-8
+                    </div>
+                    <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-9 c-white">
+                        .opa-9
+                    </div>
+                    <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-10 c-white">
+                        .opa-10
+                    </div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1 ">
+    <div class="row">
+        <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-0 c-white">
+            .opa-0
+        </div>
+        <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-1 c-white">
+            .opa-1
+        </div>
+        <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-2 c-white">
+            .opa-2  
+        </div>
+        <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-3 c-white">
+            .opa-3
+        </div>
+        <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-4 c-white">
+            .opa-4
+        </div>
+        <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-5 c-white">
+            .opa-5
+        </div>
+        <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-6 c-white">
+            .opa-6
+        </div>
+        <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-7 c-white">
+            .opa-7
+        </div>
+        <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-8 c-white">
+            .opa-8
+        </div>
+        <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-9 c-white">
+            .opa-9
+        </div>
+        <div class="bg-black p-2 cxs-12 cs-6 cm-4 cl-3 opa-10 c-white">
+            .opa-10
+        </div>
+    </div>
+</pre>
+</div>
+            </article>
+
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Opacidad</a></li>
+            <li><a href="#2">📇 Muestra</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    <script src="../js/bodystyle.bundled.js"></script>
+    <script src="../js/docs.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l1" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l1 ul li a")[8].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

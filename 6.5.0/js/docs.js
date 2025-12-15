@@ -121,6 +121,8 @@
                     <li><a href="texto.html">📝Texto</a></li>
                     <li><a href="tablas.html">📊 Tablas</a></li>
                     <li><a href="bordes.html">🧱 Bordes</a></li>
+                    <li><a href="opacidad.html">🖼️ Opacidad</a></li>
+                    <li><a href="overflow.html">📜 Overflow</a></li>
                 </ul>
             </div>
             <div class="bs-sidebar-title" data-target="#l2">
