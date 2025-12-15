@@ -113,16 +113,16 @@
         </div>
         <div class="bs-sidebar-drop-list" id="l1">
             <ul>
-                    <li><a href="../index.html">✨ Home</a></li>
-                    <li><a href="get_started.html">🚀 Get Started</a></li>
-                    <li><a href="medidas.html">💡Medidas</a></li>
-                    <li><a href="colores.html">🎨 Colores</a></li>
-                    <li><a href="desactivado.html">❌ Desactivado</a></li>
-                    <li><a href="texto.html">📝Texto</a></li>
-                    <li><a href="tablas.html">📊 Tablas</a></li>
-                    <li><a href="bordes.html">🧱 Bordes</a></li>
-                    <li><a href="opacidad.html">🖼️ Opacidad</a></li>
-                    <li><a href="overflow.html">📜 Overflow</a></li>
+                    <li><a href="../index.html" class="com-trigger" data-info="Enlace a la página de inicio.">✨ Home</a></li>
+                    <li><a href="get_started.html" class="com-trigger" data-info="Iniciación, descarga e instalación de la biblioteca.">🚀 Get Started</a></li>
+                    <li><a href="medidas.html" class="com-trigger" data-info="Breakpoint de toda la biblioteca.">💡Medidas</a></li>
+                    <li><a href="colores.html" class="com-trigger" data-info="Paleta de colores de la biblioteca.">🎨 Colores</a></li>
+                    <li><a href="desactivado.html" class="com-trigger" data-info="Estado desactivado de elementos.">❌ Desactivado</a></li>
+                    <li><a href="texto.html" class="com-trigger" data-info="Estilos y formatos de texto.">📝Texto</a></li>
+                    <li><a href="tablas.html" class="com-trigger" data-info="Tablas y sus estilos.">📊 Tablas</a></li>
+                    <li><a href="bordes.html" class="com-trigger" data-info="Estilos de bordes.">🧱 Bordes</a></li>
+                    <li><a href="opacidad.html" class="com-trigger" data-info="Niveles de opacidad.">🖼️ Opacidad</a></li>
+                    <li><a href="overflow.html" class="com-trigger" data-info="Manejo de overflow.">📜 Overflow</a></li>
                 </ul>
             </div>
             <div class="bs-sidebar-title" data-target="#l2">

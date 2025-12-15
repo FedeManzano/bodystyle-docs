@@ -24,15 +24,36 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
 ---
 
+## [6.5.0] - 2025-12-15
+
+### ✨ Agregado
+- **Nuevo formato de documentación**: Restructuración completa de la arquitectura del sitio
+  - Carpetas renombradas al inglés (`pages/`, `images/`, `sass/`)
+  - Mejora en la organización y mantenibilidad del código
+- **Tema SASS**: Integración de preprocessador SASS con estructura modular
+- **Páginas reorganizadas**: Selección de componentes esenciales documentados
+
+### 🔄 Cambios
+- **Cambio de nomenclatura**: De español a inglés en estructura de directorios
+- **Simplificación de componentes**: Enfoque en los elementos más utilizados
+- **Documentación simplificada**: 9 páginas principales enfocadas en lo esencial:
+  - Bordes, Colores, Desactivado, Get Started, Medidas, Opacidad, Overflow, Tablas, Texto
+
+### 📝 Documentado
+- Documentación v6.5.0 de Bodystyle
+- Estructura modernizada y fácil de mantener
+
+---
+
 ## [Unreleased]
 
 ### 🎯 Planeado
 
 - Migrar a GitHub Pages o Netlify
 - Crear guías de migración entre versiones
-- Traducción al inglés
 - Modo oscuro (dark mode)
 - Sistema de analytics
+- Completar documentación de todos los componentes
 
 ---
 
