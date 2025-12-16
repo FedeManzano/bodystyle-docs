@@ -45,102 +45,38 @@
                         placeholder="Buscar en la documentación...">
                 </div>
             </div>
-            <h1 id="1" class="scroll-item">Documentación</h1>
-            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis sit aliquam aspernatur quas?
-                Voluptas aspernatur excepturi quas, delectus fugiat ut, minus, sapiente atque voluptatum magnam illo
-                explicabo ab illum ea.</p>
+            <h1 id="1" class="scroll-item">Botones</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                En este apartado trataremos sobre los botones que ofrece Bodystyle. 
+                Los botones son elementos interactivos que permiten a los usuarios realizar acciones al hacer clic en ellos.
+                Bodystyle proporciona una variedad de clases CSS para personalizar la apariencia y el comportamiento de los botones.
+            </p>
 
             <div id="info_general"></div>
 
 
             <article class="article">
-                <h2 id="2" class="scroll-item">Introducción</h2>
+                <h2 id="2" class="scroll-item">Default</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet odio pariatur soluta animi quae
-                    neque, aspernatur molestiae sunt, ex odit iusto dignissimos et aperiam tenetur. Culpa modi
-                    recusandae
-                    dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus delectus doloribus
-                    vitae explicabo fugit vel reprehenderit! Iure quaerat dolorem architecto? Ipsa adipisci quod aliquam
-                    nisi, animi optio voluptates laboriosam vitae.
+                    A continuación se muestra los botnes por default junto con el botón 
+                    <a href="desactivado.html" class="link tips-ele" data-tips="<i class='bs-books c-bodyui'>&nbsp;</i>Sección Desactivado" data-pos="top">Desactivado</a>
+                    que remueve todos los atributos de comprtamiento de manera automática.
                 </p>
-                <div class="table-responsive">
-                    <table class="selector">
-                        <thead>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Email</th>
-                                <th>Telefono</th>
-                                <th>Direccion</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Juan</td>
-                                <td>Pérez</td>
-                                <td>juan.perez@email.com</td>
-                                <td>+54 11 4567-8901</td>
-                                <td>Av. Corrientes 1234</td>
-                            </tr>
-                            <tr>
-                                <td>María</td>
-                                <td>González</td>
-                                <td>maria.gonzalez@email.com</td>
-                                <td>+54 11 5678-9012</td>
-                                <td>Calle Florida 567</td>
-                            </tr>
-                            <tr>
-                                <td>Carlos</td>
-                                <td>Rodríguez</td>
-                                <td>carlos.rodriguez@email.com</td>
-                                <td>+54 351 234-5678</td>
-                                <td>San Martín 890</td>
-                            </tr>
-                            <tr>
-                                <td>Ana</td>
-                                <td>Martínez</td>
-                                <td>ana.martinez@email.com</td>
-                                <td>+54 261 345-6789</td>
-                                <td>Las Heras 456</td>
-                            </tr>
-                            <tr>
-                                <td>Luis</td>
-                                <td>Fernández</td>
-                                <td>luis.fernandez@email.com</td>
-                                <td>+54 381 456-7890</td>
-                                <td>Av. Alem 789</td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+                <div class="d-flex just-around flex-wrap-s">
+                    <button class="btn tips-ele" data-tips="<i class='bs-code c-yellow'>&nbsp;</i>Botón Default" data-pos="top">Default</button>
+                    <button class="btn desactivado mt-s-1 tips-ele" data-tips="<i class='bs-code c-yellow'>&nbsp;</i>Botón Desactivado" data-pos="top">Desactivado</button>
                 </div>
 
-
-            </article>
-
-
-            <article class="article">
-                <h2 id="3" class="scroll-item">Sección 3</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet odio pariatur soluta animi quae
-                    neque, aspernatur molestiae sunt, ex odit iusto dignissimos et aperiam tenetur. Culpa modi
-                    recusandae
-                    dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus delectus doloribus
-                    vitae explicabo fugit vel reprehenderit! Iure quaerat dolorem architecto? Ipsa adipisci quod aliquam
-                    nisi, animi optio voluptates laboriosam vitae.
-                </p>
-
-            </article>
-
-            <article class="article">
-                <h2 id="4" class="scroll-item">Sección 4</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet odio pariatur soluta animi quae
-                    neque, aspernatur molestiae sunt, ex odit iusto dignissimos et aperiam tenetur. Culpa modi
-                    recusandae
-                    dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus delectus doloribus
-                    vitae explicabo fugit vel reprehenderit! Iure quaerat dolorem architecto? Ipsa adipisci quod aliquam
-                    nisi, animi optio voluptates laboriosam vitae.
-                </p>
+                <div class="alert mt-3">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>
+                        El botón desactivado remueve todos los atributos del botón, 
+                        por lo que no responderá a ningún evento de usuario. <br>
+                        Si dinámicamente removemos la clase <span class="badge badge-red">.desactivado</span>
+                        los atributos y comportamientos del botón volverán a la normalidad.
+                    </p>
+                </div>
 
 <div class="codigo">
     <label for="cod-html" 
@@ -149,12 +85,395 @@
         <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
     </label>
 <pre class="cod-html pt-1">
-    <!-- Ejemplo de código HTML -->
-    <div class="c-white">Estos es un ejemplo de código</div>
+    <div class="d-flex just-around flex-wrap-s">
+        <button class="btn tips-ele" data-tips="<i class='bs-code c-yellow'>&nbsp;</i>Botón Default" data-pos="top">Default</button>
+        <button class="btn desactivado mt-s-1 tips-ele" data-tips="<i class='bs-code c-yellow'>&nbsp;</i>Botón Desactivado" data-pos="top">Desactivado</button>
+    </div>
+</pre>
+</div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Colores</h2>
+                <p>
+                    Para colorear un botón debes combinar tres clases:
+                </p>
+                <div class="lista-doc mt-3">
+                    <ul>
+                        <li><span class="badge badge-bodyui">.btn</span> - Clase base del botón</li>
+                        <li><span class="badge badge-green">.[bg | fd]-[color]</span> - Color de fondo (ej: bg-red, bg-green, etc)</li>
+                    </ul>
+                </div>
+                
+                <p class="mt-2"><strong>Estructura:</strong> <code>&lt;button class="btn bg-color"&gt;Botón&lt;/button&gt;</code></p>
+                <p class="mt-2">
+                    La paleta de colores disponibles se encuentra documentada en la sección de <a href="colores.html" class="link">Colores</a>. 
+                    Cada color tiene variantes: el color base, <strong>-s</strong> (soft/claro) y <strong>-d-1</strong> (dark/oscuro).
+                </p>
+
+                <div class="row">
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn btn-cover bg-bodyui">.btn .bg-bodyui</button>
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn btn-cover bg-red">.btn .bg-red</button>
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn btn-cover bg-red-s">.btn .bg-red-s</button>
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn btn-cover bg-red-d-1">.btn .bg-red-d-1</button>
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn btn-cover bg-green">.btn .bg-green</button>
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn btn-cover bg-green-s">.btn .bg-green-s</button>
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn btn-cover bg-green-d-1">.btn .bg-green-d-1</button>
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn btn-cover bg-yellow">.btn .bg-yellow</button>
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn btn-cover bg-orange">.btn .bg-orange</button>
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn btn-cover bg-violet">.btn .bg-violet</button>
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn btn-cover bg-gray">.btn .bg-gray</button>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Estructura base para colorear botones -->
+    <button class="btn bg-red">Botón Rojo</button>
+    <button class="btn bg-red-s">Rojo Claro</button>
+    <button class="btn bg-red-d-1">Rojo Oscuro</button>
+    
+    <!-- Más ejemplos -->
+    <button class="btn bg-green">Botón Verde</button>
+    <button class="btn bg-green-s">Verde Claro</button>
+    <button class="btn bg-green-d-1">Verde Oscuro</button>
+</pre>
+</div>
+
+
+            <div class="alert">
+                <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                <p>
+                    <strong>Colores de fondo:</strong> Usa <span class="badge badge-red">.bg-[color]</span> o  <span class="badge badge-red">.fd-[color]</span> para colorear el fondo<br>
+                    Consulta la sección de <a href="colores.html" class="link com-trigger" data-info="Colores de fondo de la biblioteca. Utilizados en este caso para colorear los botones y brindarles el efecto hover.">Colores</a> para ver todas las opciones disponibles.
+                </p>
+            </div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="5" class="scroll-item">Tamaños</h2>
+                <p>
+                    Bodystyle maneja tres tamaños (sm | md(default) | lg) para los botones. <br>
+                    Cada una de ella utiliza la clase <span class="badge badge-red">.btn-[size]</span> donde size puede ser <strong>sm</strong> para pequeño, <strong>N/A</strong> para mediano (Default) y <strong>lg</strong> para el grande.
+                </p>
+
+                <div class="lista-doc">
+                    <ul>
+                        <li><span class="badge badge-red">.btn-sm</span> - Para botones pequeños</li>
+                        <li><span class="badge badge-red">.btn</span> - Para botones medianos (Default)</li>
+                        <li><span class="badge badge-red">.btn-lg</span> - Para botones grandes</li>
+                    </ul>
+                </div>
+
+                <div class="d-flex just-around">
+                    <button class="btn-sm fd-bodyui">Pequeño</button>
+                    <button class="btn fd-bodyui">Mediano</button>
+                    <button class="btn-lg fd-bodyui">Grande</button>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Ejemplo de botones de diferentes tamaños -->
+    <!-- Todo el contenedor está envuelto en un DIV que utiliza flexbox para distribuir los botones -->
+    <div class="d-flex just-around">
+
+        <!--Botón Pequeño -->
+        <button class="btn-sm fd-bodyui">Pequeño</button>
+
+        <!--Botón Mediano (Default) -->
+        <button class="btn fd-bodyui">Mediano</button>
+
+        <!--Botón Grande -->
+        <button class="btn-lg fd-bodyui">Grande</button>
+    </div>
 </pre>
 </div>
 
             </article>
+
+            <article class="article">
+                <h2 id="5" class="scroll-item">Efecto Waves</h2>
+                <p>
+                    Es posible añadir un efecto al botón al momento de hacer click en él, similar al efecto "waves" que se encuentra en otros frameworks. 
+                    Para ello, simplemente debemos añadir la clase <span class="badge badge-red">.waves</span> al botón.
+                </p>
+
+                <button class="btn fd-bodyui waves">Click Me!</button>
+
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Ejemplo de botón con efecto waves -->
+    <button class="btn fd-bodyui waves">Click Me!</button>
+</pre>
+</div>
+            <div class="alert">
+                <h4 class="c-yellow"><i class="bs-warning c-yellow fz-25">&nbsp;</i>Advertencia</h4>
+                <p>
+                    El efecto waves se inicializa automáticamente en proyectos tradicionales, lo único que hay que tener 
+                    en cuenta es tenés vinculado el archivo bodystyle.bundled.js en tu proyecto. <br>
+                    En proyecto SPA (Single Page Application) es necesario inicializar el efecto de manera manual
+                    utilizando la función <code>BS.WavesInit()</code> después de cargar los nuevos contenidos dinámicamente.
+                </p>
+            </div>
+            </article>
+
+            <article class="article">
+                <h2 id="6" class="scroll-item">Link</h2>
+                <p>
+                    Los enlaces son elementos fundamentales para la navegación. Bodystyle proporciona la clase <span class="badge badge-bodyui">.link</span> 
+                    que aplica un estilo especial a los enlaces, incluyendo efectos al pasar el cursor y soporte para combinaciones de colores.
+                </p>
+                <p><strong>Características:</strong></p>
+                <div class="lista-doc">
+                    <ul class="ml-3">
+                        <li>Efecto hover suave y profesional</li>
+                        <li>Con las clases <span class="badge badge-green">.btn .fd-color</span> conseguimos el mismo resultado que con los botones.</li>
+                        <li>Subrayado animado al pasar el cursor</li>
+                        <li>Optimizado para accesibilidad</li>
+                    </ul>
+                </div>
+                
+
+                <h3 class="mt-4">Enlace Default</h3>
+                <div class="mt-2 mb-3">
+                    <a href="#" class="link">Este es un enlace default</a>
+                </div>
+
+                <h3 class="mt-4">Enlace con Colores</h3>
+                <p class="mt-2">Las clases .btn utilizadas en apartados anteriores pueden 
+                    utilizarse con los enlaces, a su vez los enlaces tienen una clase <span class="badge badge-red">.link</span> 
+                    que brinda un estilo especial a los mismos.
+                </p>
+                <div class="row mt-2 mb-3">
+                    <a href="#" class="cxs-12 cs-6 cm-4 cl-3 link">.link (default)</a>
+                    <a href="#" class="cxs-12 cs-6 cm-4 cl-3 btn bg-red">.btn .bg-red</a>
+                    <a href="#" class="cxs-12 cs-6 cm-4 cl-3 btn bg-green">.btn .bg-green</a>
+                    <a href="#" class="cxs-12 cs-6 cm-4 cl-3 btn bg-blue">.btn .bg-blue</a>
+                    <a href="#" class="cxs-12 cs-6 cm-4 cl-3 btn bg-orange">.btn .bg-orange</a>
+                    <a href="#" class="cxs-12 cs-6 cm-4 cl-3 btn bg-violet">.btn .bg-violet</a>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Link default -->
+    <a href="#" class="link">Este es un enlace</a>
+
+    <!-- Links coloreados -->
+    <a href="#" class="btn bg-red">Enlace Rojo</a>
+    <a href="#" class="btn bg-green">Enlace Verde</a>
+    <a href="#" class="btn bg-blue">Enlace Azul</a>
+</pre>
+</div>
+
+                <div class="alert mt-3">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>
+                        Los enlaces con clases de botón (<span class="badge badge-red">.btn .fd-color</span>) 
+                        ofrecen una apariencia similar a los botones, pero mantienen la funcionalidad de un enlace. <br>
+                        Esto es útil para crear enlaces que se destaquen visualmente y sean fáciles de identificar como interactivos.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="7" class="scroll-item">Botones Outline</h2>
+                <p>
+                    Los botones outline tienen un estilo diferente: presentan un borde definido con fondo transparente, 
+                    dando una apariencia más ligera y moderna. Son ideales para acciones secundarias o botones menos relevantes.
+                </p>
+                <p><strong>Estructura de clases:</strong></p>
+                <div class="lista-doc">
+                    <ul class="ml-3">
+                        <li><span class="badge badge-bodyui">.btn-o</span> - Clase base para outline</li>
+                        <li><span class="badge badge-bodyui">.btn-color-o</span> - Color del botón (disponibles: bodyui, green, blue, black, grey, white)</li>
+                    </ul>
+                </div>
+                
+                <p class="mt-2"><strong>Estructura:</strong> <code>&lt;button class="btn-o btn-red-o"&gt;Outline&lt;/button&gt;</code></p>
+
+                <h3 class="mt-4">Colores Disponibles</h3>
+                <div class="row mt-2">
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn-o btn-bodyui-o">.btn-o .btn-bodyui-o</button>
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn-o btn-green-o">.btn-o .btn-green-o</button>
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn-o btn-blue-o">.btn-o .btn-blue-o</button>
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn-o btn-grey-o">.btn-o .btn-grey-o</button>
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn-o btn-black-o">.btn-o .btn-black-o</button>
+                    <button class="cxs-12 cs-6 cm-4 cl-3 btn-o btn-white-o" style="background: #f0f0f0;">.btn-o .btn-white-o</button>
+                </div>
+
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Colores disponibles para outline -->
+    <button class="btn-o btn-bodyui-o">Outline Bodyui</button>
+    <button class="btn-o btn-green-o">Outline Verde</button>
+    <button class="btn-o btn-blue-o">Outline Azul</button>
+    <button class="btn-o btn-grey-o">Outline Gris</button>
+    <button class="btn-o btn-black-o">Outline Negro</button>
+    <button class="btn-o btn-white-o">Outline Blanco</button>
+</pre>
+</div>
+
+            <h3 id="8" class="scroll-item">Tamaños de Botones</h3>
+
+            <p>
+                Los botones en Bodystyle tienen tres tamaños disponibles: pequeño, medio y grande. 
+                Las clases varían dependiendo del estilo (relleno u outline).
+            </p>
+
+            <div class="lista-doc">
+                <ul>
+                    <li><span class="badge badge-bodyui">btn-sm-o</span> - Botón pequeño</li>
+                    <li><span class="badge badge-bodyui">btn-o</span> - Botón medio (default)</li>
+                    <li><span class="badge badge-bodyui">btn-lg-o</span> - Botón grande</li>
+                </ul>
+            </div>
+
+            <div class="d-flex just-around">
+                <button class="btn-sm-o btn-bodyui-o">Pequeño</button>
+                <button class="btn-o btn-bodyui-o">Medio</button>
+                <button class="btn-lg-o btn-bodyui-o">Grande</button>
+            </div>
+
+            
+<div class="codigo mt-3">
+<label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Colores disponibles para outline -->
+    <div class="d-flex just-around">
+        <button class="btn-sm-o btn-bodyui-o">Pequeño</button>
+        <button class="btn-o btn-bodyui-o">Medio</button>
+        <button class="btn-lg-o btn-bodyui-o">Grande</button>
+    </div>
+</pre>
+</div>
+            </article>
+         
+            <article class="article">
+                <h2 id="9" class="scroll-item">Botones 100%</h2>
+                <p>
+                    Tanto los botones llenos como los botones outline pueden ocupar el 100% del ancho de su contenedor padre.
+                    Para lograr esto, simplemente debemos añadir la clase <span class="badge badge-red">.btn-cover</span> al botón.
+                </p>
+                <div class="container">
+                    <button class="btn-cover-sm fd-bodyui mb-1">Botón 100% Chico</button>
+                    <button class="btn-cover fd-bodyui mb-1">Botón 100% Mediano</button>
+                    <button class="btn-cover-lg fd-bodyui">Botón 100% Mediano</button>
+                </div>
+<div class="codigo mt-3">
+<label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+
+    <div class="container">
+         <!-- Botones llenos 100% -->
+        <!-- btn-cover-[tamaño] -> sm | N/A (default) | lg -->
+        <button class="btn-cover-sm fd-bodyui">Botón 100% Chico</button>
+        <button class="btn-cover fd-bodyui">Botón 100% Mediano</button>
+        <button class="btn-cover-lg fd-bodyui">Botón 100% Mediano</button>
+    </div>
+</pre>
+</div>
+
+            <h3 id="10" class="scroll-item">Outline 100%</h3>
+            <p>
+                Con los botones outline es similar al caso anterior, simplemente debemos añadir la clase <span class="badge badge-red">.btn-cover</span> junto con las clases de outline.
+            </p> 
+            
+            <div class="container">
+                <button class="btn-cover-sm-o btn-bodyui-o mb-1">Outline 100% Chico</button>
+                <button class="btn-cover-o btn-bodyui-o mb-1">Outline 100% Mediano</button>
+                <button class="btn-cover-lg-o btn-bodyui-o">Outline 100% Grande</button>
+            </div>
+
+            <div class="codigo mt-3">
+<label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+
+    <div class="container">
+         <!-- Botones outline 100% -->
+        <!-- btn-cover-[tamaño] -> sm | N/A (default) | lg -->
+        <button class="btn-cover-sm-o btn-bodyui-o">Outline 100% Chico</button>
+        <button class="btn-cover-o btn-bodyui-o">Outline 100% Mediano</button>
+        <button class="btn-cover-lg-o btn-bodyui-o">Outline 100% Grande</button>
+    </div>
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="11" class="scroll-item">Border Pill</h2>
+                <p>
+                    Utilizando un clase de las pertenecientes a los bordes, es posible darle a los botones un estilo "pill" (pastilla),
+                    que les da bordes redondeados para una apariencia más suave y moderna.
+                </p>
+
+                <div class="btn fd-bodyui bor-pill">Botón Pill</div>
+
+                <p class="mt-3">
+                    Para lograr esto simplemente añadimos la clase <span class="badge badge-red">.bor-pill</span> al botón.
+                </p>
+
+                            <div class="codigo mt-3">
+<label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Ejemplo de botón con bordes tipo pill -->
+    <div class="btn fd-bodyui bor-pill">Botón Pill</div>
+</pre>
+</div>
+
+            <div class="alert">
+                <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                <p>
+                    La clase <span class="badge badge-red">.bor-pill</span> puede combinarse con cualquier estilo de botón (relleno u outline) 
+                    para lograr el efecto deseado.
+                </p>
+            </div>
+            </article>
+            
+            
 
             <article class="article">
                 <h3 id="autor" class="scroll-item">Autor</h3>
@@ -168,20 +487,17 @@
 
     <div class="lista-scroll ocultar-desde-medianos">
         <ul>
-            <li><a href="#1">📇 Get Started</a></li>
-            <li><a href="#2">📇 Filosofía</a></li>
-            <li><a href="#3">📇 Core Bodystyle</a></li>
-            <li><a href="#4">📇 Utilizar Bodystyle</a></li>
-            <li><a href="#5">📇 Descarga Directa</a></li>
-            <li><a href="#6">📇 CDN</a></li>
-            <li><a href="#7">📇 NPM</a></li>
-            <li><a href="#8">📇 Primeros Pasos</a></li>
-            <li><a href="#9">📇 Navegadores</a></li>
-            <li><a href="#10">📇 FAQ</a></li>
-            <li><a href="#11">📇 ScrollSpy vs Reveal</a></li>
-            <li><a href="#12">📇 Fuente Nueva</a></li>
-            <li><a href="#13">📇 Angular / React</a></li>
-            <li><a href="#11">📇 Porque Bodystyle?</a></li>
+            <li><a href="#1">📇 Botones</a></li>
+            <li><a href="#2">📇 Default</a></li>
+            <li><a href="#3">📇 Colores</a></li>
+            <li><a href="#4">📇 Tamaños</a></li>
+            <li><a href="#5">📇 Efecto Waves</a></li>
+            <li><a href="#6">📇 Link</a></li>
+            <li><a href="#7">📇 Botones Outline</a></li>
+            <li><a href="#8">📇 Tamaños de Botones</a></li>
+            <li><a href="#9">📇 Botones 100%</a></li>
+            <li><a href="#10">📇 Outline 100%</a></li>
+            <li><a href="#11">📇 Border Pill</a></li>
             <li><a href="#autor">🧑‍🏫 Autor</a></li>
         </ul>
     </div>

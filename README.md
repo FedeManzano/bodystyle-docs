@@ -22,6 +22,11 @@
 
 Este repositorio contiene la **documentación oficial** de [Bodystyle](https://github.com/FedeManzano/bodystyle), una biblioteca de estilos CSS de código abierto diseñada para facilitar el desarrollo de interfaces de usuario modernas y responsivas.
 
+**⭐ Este es un proyecto educativo y colaborativo.** Su objetivo es:
+- 📚 **Enseñar** cómo construir un framework CSS desde cero
+- 🤝 **Conectar** a desarrolladores hispanohablantes interesados en aprender
+- 👥 **Crecer** juntos como comunidad, manteniendo el proyecto de forma colectiva
+
 La documentación está organizada como un sitio web interactivo con ejemplos prácticos, código de muestra y guías detalladas para cada componente de la biblioteca.
 
 ### 📦 Versiones Documentadas
@@ -198,11 +203,37 @@ La documentación incluye guías completas para:
 
 ## 🤝 Contribuir
 
-¿Encontraste un error en la documentación o tienes una sugerencia? 
+¿Quieres aprender y crecer con nosotros? **¡Te necesitamos!**
 
-1. Abre un [issue](https://github.com/FedeManzano/bodystyle/issues) en el repositorio principal
-2. Describe el problema o mejora sugerida
-3. Si es posible, incluye capturas de pantalla
+Puedes contribuir de varias formas:
+
+### 📝 Mejorar la Documentación
+- Encontraste un error de tipografía o explicación poco clara? Abre un issue
+- ¿Tienes una mejor forma de explicar un concepto? Sugierelo
+- ¿Falta un ejemplo? Propón agregarlo
+
+### 🐛 Reportar Problemas
+- Encuentra inconsistencias entre la documentación y el código
+- Nota comportamientos inesperados en los ejemplos
+- Sugiere mejoras en la estructura o claridad
+
+### 💡 Propuestas de Mejora
+- Nuevos componentes documentados
+- Guías educativas adicionales
+- Ejemplos más prácticos y realistas
+- Mejoras de accesibilidad
+
+### 📚 Proceso Simple
+1. Fork el repositorio
+2. Crea una rama: `git checkout -b mejora/descripcion`
+3. Realiza tus cambios
+4. Abre un Pull Request con una descripción clara
+
+**🎓 Objetivo:** Aprender juntos. Cada contribución, sin importar su tamaño, es valiosa.
+
+---
+
+¿Preguntas? Abre un [issue](https://github.com/FedeManzano/bodystyle-docs/issues) sin dudarlo.
 
 ## 📄 Licencia
 
