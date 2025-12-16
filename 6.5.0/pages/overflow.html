@@ -46,101 +46,37 @@
                 </div>
             </div>
             <h1 id="1" class="scroll-item">📜 Overflow</h1>
-            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis sit aliquam aspernatur quas?
-                Voluptas aspernatur excepturi quas, delectus fugiat ut, minus, sapiente atque voluptatum magnam illo
-                explicabo ab illum ea.</p>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Capacidad que tienen los componentes para permitir que un elemento hijo salga de sus limites 
+                o no dependiendo de la situación de desarrollo. <br>
+                Para esta tarea Bodystyle ofrece cuatro clases dedicadas a gestionar el overflow de los elementos.
+            </p>
 
             <div id="info_general"></div>
 
 
             <article class="article">
-                <h2 id="2" class="scroll-item">Introducción</h2>
+                <h2 id="2" class="scroll-item">Overflow Hidden</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet odio pariatur soluta animi quae
-                    neque, aspernatur molestiae sunt, ex odit iusto dignissimos et aperiam tenetur. Culpa modi
-                    recusandae
-                    dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus delectus doloribus
-                    vitae explicabo fugit vel reprehenderit! Iure quaerat dolorem architecto? Ipsa adipisci quod aliquam
-                    nisi, animi optio voluptates laboriosam vitae.
+                    La clase ov-hidden limita la visibilidad de los elementos hijos a los límites del elemento padre,
+                    ocultando cualquier parte que sobresalga. Esto es útil para mantener un diseño limpio y evitar que los elementos se desborden
+                    fuera de su contenedor.
                 </p>
-                <div class="table-responsive">
-                    <table class="selector">
-                        <thead>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Email</th>
-                                <th>Telefono</th>
-                                <th>Direccion</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Juan</td>
-                                <td>Pérez</td>
-                                <td>juan.perez@email.com</td>
-                                <td>+54 11 4567-8901</td>
-                                <td>Av. Corrientes 1234</td>
-                            </tr>
-                            <tr>
-                                <td>María</td>
-                                <td>González</td>
-                                <td>maria.gonzalez@email.com</td>
-                                <td>+54 11 5678-9012</td>
-                                <td>Calle Florida 567</td>
-                            </tr>
-                            <tr>
-                                <td>Carlos</td>
-                                <td>Rodríguez</td>
-                                <td>carlos.rodriguez@email.com</td>
-                                <td>+54 351 234-5678</td>
-                                <td>San Martín 890</td>
-                            </tr>
-                            <tr>
-                                <td>Ana</td>
-                                <td>Martínez</td>
-                                <td>ana.martinez@email.com</td>
-                                <td>+54 261 345-6789</td>
-                                <td>Las Heras 456</td>
-                            </tr>
-                            <tr>
-                                <td>Luis</td>
-                                <td>Fernández</td>
-                                <td>luis.fernandez@email.com</td>
-                                <td>+54 381 456-7890</td>
-                                <td>Av. Alem 789</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <p><strong>Propiedad CSS:</strong> <code>overflow: hidden;</code></p>
+                <p><strong>Casos de uso:</strong> Recortes de imágenes, truncamiento de texto, elementos flotantes, crear contextos de formato de bloques.</p>
+                
+                <div class="ov-hidden ancho-10 mb-3">
+                    <div  class="card"> <!-- Comienza la tarjeta simple -->
+                        <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                            <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                            <small>Pequeña descripción</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                            </p> 
+                            <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                        </div><!-- FIN Tarjeta oscura -->
+                    </div>
                 </div>
-
-
-            </article>
-
-
-            <article class="article">
-                <h2 id="3" class="scroll-item">Sección 3</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet odio pariatur soluta animi quae
-                    neque, aspernatur molestiae sunt, ex odit iusto dignissimos et aperiam tenetur. Culpa modi
-                    recusandae
-                    dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus delectus doloribus
-                    vitae explicabo fugit vel reprehenderit! Iure quaerat dolorem architecto? Ipsa adipisci quod aliquam
-                    nisi, animi optio voluptates laboriosam vitae.
-                </p>
-
-            </article>
-
-            <article class="article">
-                <h2 id="4" class="scroll-item">Sección 4</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet odio pariatur soluta animi quae
-                    neque, aspernatur molestiae sunt, ex odit iusto dignissimos et aperiam tenetur. Culpa modi
-                    recusandae
-                    dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus delectus doloribus
-                    vitae explicabo fugit vel reprehenderit! Iure quaerat dolorem architecto? Ipsa adipisci quod aliquam
-                    nisi, animi optio voluptates laboriosam vitae.
-                </p>
 
 <div class="codigo">
     <label for="cod-html" 
@@ -149,10 +85,199 @@
         <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
     </label>
 <pre class="cod-html pt-1">
-    <!-- Ejemplo de código HTML -->
-    <div class="c-white">Estos es un ejemplo de código</div>
+    <div class="ov-hidden ancho-10">
+        <div  class="card"> <!-- Comienza la tarjeta simple -->
+            <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+            </div><!-- FIN Tarjeta oscura -->
+        </div>
+    </div>
 </pre>
 </div>
+
+
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Overflow Visible</h2>
+                <p>
+                    Es el valor por defecto de los contenedores en HTML. La clase ov-visible permite que los elementos hijos
+                    se desborden fuera de los límites del elemento padre, haciéndolos completamente visibles.
+                </p>
+                <p><strong>Propiedad CSS:</strong> <code>overflow: visible;</code></p>
+                <p><strong>Casos de uso:</strong> Menús desplegables, tooltips, dropdowns que se extienden fuera de su contenedor padre.</p>
+
+                <div class="ov-visible ancho-10 mb-3">
+                    <div  class="card"> <!-- Comienza la tarjeta simple -->
+                        <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                            <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                            <small>Pequeña descripción</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                            </p> 
+                            <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                        </div><!-- FIN Tarjeta oscura -->
+                    </div>
+                </div>
+
+                
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="ov-visible ancho-10">
+        <div  class="card"> <!-- Comienza la tarjeta simple -->
+            <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+            </div><!-- FIN Tarjeta oscura -->
+        </div>
+    </div>
+</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Overflow Scroll</h2>
+                <p>
+                    La clase ov-scroll añade barras de desplazamiento al contenedor cuando el contenido desborda sus límites.
+                    Esto permite a los usuarios desplazarse para ver todo el contenido sin que se salga del área designada.
+                </p>
+                <p><strong>Propiedad CSS:</strong> <code>overflow: scroll;</code></p>
+                <p><strong>Casos de uso:</strong> Listas largas, contenido con altura fija, paneles laterales con mucho contenido. Las barras siempre son visibles.</p>
+
+                <div class="ov-scroll ancho-10 mb-3">
+                    <div  class="card"> <!-- Comienza la tarjeta simple -->
+                        <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                            <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                            <small>Pequeña descripción</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                            </p> 
+                            <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                        </div><!-- FIN Tarjeta oscura -->
+                    </div>
+                </div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="ov-scroll ancho-10">
+        <div  class="card"> <!-- Comienza la tarjeta simple -->
+            <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+            </div><!-- FIN Tarjeta oscura -->
+        </div>
+    </div>
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="5" class="scroll-item">Overflow Auto</h2>
+                <p>
+                    La clase ov-auto añade barras de desplazamiento solo cuando el contenido desborda los límites del contenedor.
+                    Esto proporciona una experiencia de usuario más limpia, ya que las barras de desplazamiento solo aparecen cuando son necesarias.
+                </p>
+                <p><strong>Propiedad CSS:</strong> <code>overflow: auto;</code></p>
+                <p><strong>Casos de uso:</strong> Solución versátil para la mayoría de casos. Recomendado para contenedores con altura/ancho fijo que pueden tener contenido variable.</p>
+                <p><strong>Nota responsive:</strong> En dispositivos móviles, el comportamiento del scroll es controlado por el navegador. Asegúrate de combinar con propiedades de ancho y alto para resultados óptimos.</p>
+
+    <div class="ov-auto ancho-10 mb-3">
+        <div  class="card"> <!-- Comienza la tarjeta simple -->
+            <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+            </div><!-- FIN Tarjeta oscura -->
+        </div>
+    </div>
+
+    <div class="ov-auto mb-3">
+        <div  class="card"> <!-- Comienza la tarjeta simple -->
+            <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+            </div><!-- FIN Tarjeta oscura -->
+        </div>
+    </div>
+
+                
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Overflow Auto aplicado a un contenedor con ancho fijo -->
+    <div class="ov-auto ancho-10">
+        <div  class="card"> <!-- Comienza la tarjeta simple -->
+            <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+            </div><!-- FIN Tarjeta oscura -->
+        </div>
+    </div>
+    <!-- Overflow Auto aplicado a un contenedor con ancho automático -->
+    <div class="ov-auto mb-3">
+        <div  class="card"> <!-- Comienza la tarjeta simple -->
+            <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+            </div><!-- FIN Tarjeta oscura -->
+        </div>
+    </div>
+</pre>
+</div>
+
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>
+                        Para estos ejemplos se utilizaron propiedades de <a href="ancho_alto.html" class="link">Ancho y Alto</a>, 
+                        <a href="tarjetas.html" class="link">Tarjetas</a> y <a href="botones.html" class="link">Botones</a> de Bodystyle. <br>
+                        Para saber como utilizarlos acudir a las respectivas secciones de la documentación.
+                    </p>
+                    <p><strong>Tip:</strong> Para que el overflow scroll/auto sea visible, el contenedor debe tener una altura máxima definida con propiedades de <a href="ancho_alto.html" class="link">Alto</a>.</p>
+                </div>
 
             </article>
 
@@ -168,20 +293,11 @@
 
     <div class="lista-scroll ocultar-desde-medianos">
         <ul>
-            <li><a href="#1">📇 Get Started</a></li>
-            <li><a href="#2">📇 Filosofía</a></li>
-            <li><a href="#3">📇 Core Bodystyle</a></li>
-            <li><a href="#4">📇 Utilizar Bodystyle</a></li>
-            <li><a href="#5">📇 Descarga Directa</a></li>
-            <li><a href="#6">📇 CDN</a></li>
-            <li><a href="#7">📇 NPM</a></li>
-            <li><a href="#8">📇 Primeros Pasos</a></li>
-            <li><a href="#9">📇 Navegadores</a></li>
-            <li><a href="#10">📇 FAQ</a></li>
-            <li><a href="#11">📇 ScrollSpy vs Reveal</a></li>
-            <li><a href="#12">📇 Fuente Nueva</a></li>
-            <li><a href="#13">📇 Angular / React</a></li>
-            <li><a href="#11">📇 Porque Bodystyle?</a></li>
+            <li><a href="#1">📇 Overflow</a></li>
+            <li><a href="#2">📇 Overflow Hidden</a></li>
+            <li><a href="#3">📇 Overflow Visible</a></li>
+            <li><a href="#4">📇 Overflow Scroll</a></li>
+            <li><a href="#5">📇 Overflow Auto</a></li>
             <li><a href="#autor">🧑‍🏫 Autor</a></li>
         </ul>
     </div>

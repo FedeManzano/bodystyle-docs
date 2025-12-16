@@ -115,7 +115,7 @@
             <ul>
                     <li><a href="../index.html" class="com-trigger" data-info="Enlace a la página de inicio.">✨ Home</a></li>
                     <li><a href="get_started.html" class="com-trigger" data-info="Iniciación, descarga e instalación de la biblioteca.">🚀 Get Started</a></li>
-                    <li><a href="medidas.html" class="com-trigger" data-info="Breakpoint de toda la biblioteca.">💡Medidas</a></li>
+                    <li><a href="medidas.html" class="com-trigger" data-info="Breakpoint de toda la biblioteca.">💡 Medidas</a></li>
                     <li><a href="colores.html" class="com-trigger" data-info="Paleta de colores de la biblioteca.">🎨 Colores</a></li>
                     <li><a href="desactivado.html" class="com-trigger" data-info="Estado desactivado de elementos.">❌ Desactivado</a></li>
                     <li><a href="texto.html" class="com-trigger" data-info="Estilos y formatos de texto.">📝Texto</a></li>
