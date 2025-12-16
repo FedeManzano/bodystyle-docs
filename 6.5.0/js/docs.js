@@ -130,12 +130,18 @@
             </div>
             <div class="bs-sidebar-drop-list" id="l2">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Perfiles</a></li>
-                    <li><a href="">Estadísticas</a></li>
-                <li><a href="">Correos</a></li>
-            </ul>
-        </div>
+                    <li><a href="botones.html" class="com-trigger" data-info="Plantilla completa de botones.">📥 Botones</a></li>
+                    <li><a href="alertas.html" class="com-trigger" data-info="Todas las alertas ppersonalizados de Bodystyle.">🚨 Alertas</a></li>
+                    <li><a href="badges.html" class="com-trigger" data-info="Badges personalizados de Bodystyle.">🏷️ Badges</a></li>
+                    <li><a href="grupos_botones.html" class="com-trigger" data-info="Grupos de botones personalizados de Bodystyle.">🔘 Grupos Botones</a></li>
+                    <li><a href="tarjetas.html" class="com-trigger" data-info="Tarjetas personalizadas de Bodystyle.">💳 Tarjetas</a></li> 
+                    <li><a href="iconos.html" class="com-trigger" data-info="Íconos personalizados de Bodystyle.">💯 Íconos</a></li> 
+                    <li><a href="breadcrubs.html" class="com-trigger" data-info="Breadcrubs personalizados de Bodystyle.">🔗 Breadcrubs</a></li>
+                    <li><a href="solapas.html" class="com-trigger" data-info="Badge sobresaliente que provee Bodystyle.">💄 Solapas</a></li>
+                    <li><a href="compartir.html" class="com-trigger" data-info="Badge de elemento compartido.">🤝 Compartir</a></li>
+                    <li><a href="mensajes.html" class="com-trigger" data-info="Badge en formato de viñeta.">💬 Mensajes</a></li>
+                    </ul>
+            </div>
         <div class="bs-sidebar-title" data-target="#l3">
             <label>Archivos</label>
         </div>
