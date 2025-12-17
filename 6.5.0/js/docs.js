@@ -197,7 +197,7 @@
 
     document.getElementById("info_general").innerHTML =
         `
-    <div class="card-notification-dark fd-gris-az-o"> 
+    <div id="card_general" class="card-notification-dark"> 
         <div class="row">
             <div class="cl-4 card-logo">
                  <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle" width="60" height="60">
@@ -261,6 +261,21 @@
         //        addHeadingLinks()
     }
 
+     let info_autor = 
+    `
+    <div id="card_autor" class="card-notification-dark "> 
+        <div class="row">
+            <div class="cl-4 card-logo">
+                 <img class="img-responsive bor-rad-por-50" src="https://bodystyle.webcindario.com/imagenes/20191106_205049.png" alt="Logo Bodystyle" width="60" height="60">
+            </div>
+            <div class="cl-8">
+                <h4 class="title">Federico Manzano</h4>
+                <p class="content">Estudiante de Ingeniería en Informática de la Universidad Nacional de La Matanza.</p>
+            </div>
+        </div>
+    </div>
+    `
+
     const LoadThemeDark = () => {
         document.body.classList.add('theme-dark');
         document.getElementById("sidebar").classList.remove("bs-sidebar-drop-light")
@@ -275,6 +290,10 @@
         let spanBusqueda = document.getElementById("span_buscador");
         let inputBusqueda = document.getElementById("buscador");
 
+        document.getElementById("card_general").classList.remove("card-notification-light");
+        document.getElementById("card_general").classList.add("card-notification-dark");
+        document.getElementById("card_general").classList.add("fd-gris-az-o");
+       
         if(spanBusqueda && inputBusqueda) {
             spanBusqueda.classList.add("c-white");
             spanBusqueda.classList.add("fd-gris-n");
@@ -295,6 +314,10 @@
                 celda.classList.remove("c-white")
             })
         })
+
+        document.getElementById("card_general").classList.remove("card-notification-dark");
+        document.getElementById("card_general").classList.add("card-notification-light");
+        document.getElementById("card_general").classList.remove("fd-gris-az-o");
 
         let spanBusqueda = document.getElementById("span_buscador");
         let inputBusqueda = document.getElementById("buscador");
@@ -337,20 +360,7 @@
         }
     });
 
-    let info_autor = 
-    `
-    <div class="card-notification-dark fd-gris-az-o"> 
-        <div class="row">
-            <div class="cl-4 card-logo">
-                 <img class="img-responsive bor-rad-por-50" src="https://bodystyle.webcindario.com/imagenes/20191106_205049.png" alt="Logo Bodystyle" width="60" height="60">
-            </div>
-            <div class="cl-8">
-                <h4 class="title">Federico Manzano</h4>
-                <p class="content">Estudiante de Ingeniería en Informática de la Universidad Nacional de La Matanza.</p>
-            </div>
-        </div>
-    </div>
-    `
+   
 
     document.getElementById("logo_marca").dataset.info = info_autor;
     document.getElementById("autor_enlace").dataset.info = info_autor;
