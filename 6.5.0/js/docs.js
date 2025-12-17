@@ -197,7 +197,7 @@
 
     document.getElementById("info_general").innerHTML =
         `
-    <div class="card-notification-dark fd-gris-az-o"> 
+    <div class="card-notification-dark"> 
         <div class="row">
             <div class="cl-4 card-logo">
                  <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle" width="60" height="60">
@@ -275,6 +275,12 @@
         let spanBusqueda = document.getElementById("span_buscador");
         let inputBusqueda = document.getElementById("buscador");
 
+
+        document.querySelectorAll(".card-notification-light").forEach((card) => {
+            card.classList.remove("card-notification-light");
+            card.classList.add("card-notification-dark");
+            card.classList.add("fd-gris-az-o");
+        })
         if(spanBusqueda && inputBusqueda) {
             spanBusqueda.classList.add("c-white");
             spanBusqueda.classList.add("fd-gris-n");
@@ -295,7 +301,11 @@
                 celda.classList.remove("c-white")
             })
         })
-
+        document.querySelectorAll(".card-notification-dark").forEach((card) => {
+            card.classList.remove("card-notification-dark");
+            card.classList.add("card-notification-light");
+            card.classList.remove("fd-gris-az-o");
+        })
         let spanBusqueda = document.getElementById("span_buscador");
         let inputBusqueda = document.getElementById("buscador");
 
@@ -339,7 +349,7 @@
 
     let info_autor = 
     `
-    <div class="card-notification-dark fd-gris-az-o"> 
+    <div class="card-notification-dark "> 
         <div class="row">
             <div class="cl-4 card-logo">
                  <img class="img-responsive bor-rad-por-50" src="https://bodystyle.webcindario.com/imagenes/20191106_205049.png" alt="Logo Bodystyle" width="60" height="60">
