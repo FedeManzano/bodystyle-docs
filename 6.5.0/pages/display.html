@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Display utilizados por bodystyle para controlar la visibilidad y el comportamiento de los elementos en la página.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/display.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Bodystyle</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">🖥️ Display</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Los display en Bodystyle permiten controlar la visibilidad y el comportamiento de los elementos en la página web. 
+                Estos display son esenciales para crear diseños responsivos y adaptativos, asegurando que los contenidos se muestren correctamente en diferentes dispositivos y tamaños de pantalla. <br>
+                Esta sección es introductoria a la sección de 
+                <a href="flexbox.html" class="link com-trigger" data-info="Propiedades de flexbox de la biblioteca <span class='f-w-7'>Bodystyle</span>">Flexbox</a> y 
+                la grilla <a href="grid.html" class="link com-trigger" data-info="Grilla de <span class='f-w-7'>Bodystyle</span>">Grilla</a>.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Display Block</h2>
+                <p>
+                    El display block es un tipo de visualización que hace que un elemento ocupe todo el ancho disponible de su contenedor, 
+                    comenzando en una nueva línea. Los elementos con display block son ideales para estructuras de contenido como párrafos, 
+                    encabezados y divs, ya que permiten organizar el contenido de manera clara y legible.
+                </p>
+                <div class="table-responsive">
+                    <table class="selector">
+                        <thead>
+                            <tr>
+                                <th>Clase</th>
+                                <th>Medida</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>.d-block</td>
+                                <td>Todos los dispositivos</td>
+                                <td>Permite definir un elemento como bloque en todos los tamaños de dispositivos.</td>
+                            </tr>
+                            <tr>
+                                <td>.d-block-m</td>
+                                <td>Medianos (768px a 1031px)</td>
+                                <td>Permite definir un elemento como bloque en dispositivos medianos.</td>
+                            </tr>
+                            <tr>
+                                <td>.d-block-s</td>
+                                <td>Pequeños (400px a 767px)</td>
+                                <td>Permite definir un elemento como bloque en dispositivos pequeños.</td>
+                            </tr>
+                            <tr>
+                                <td>.d-block-xs</td>
+                                <td>Extra pequeños (menos de 400px)</td>
+                                <td>Permite definir un elemento como bloque en dispositivos extra pequeños.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <h3 id="3" class="scroll-item mt-3"><i class="bs-check c-green fz-20">&nbsp;</i>Ejemplo 1</h3>
+
+                <p>
+                    En este ejemplo vamos a ver como utilizar los display block en diferentes tamaños de dispositivos 
+                    generando, apartir de ellos, diseños responsivos. <br>
+                    Tomaremos dos contenedores que se encuentar dentro de un contenedor padre configurados 
+                    con <span class="badge badge-red">.d-flex</span> y en disposivos pequeños(SM) lo configuraremos con <span class="badge badge-red">.d-block-s</span>.
+                </p>
+
+
+                <div class="d-flex d-block-s">
+                    <div class="p-2 bg-red c-white ta-c">Contenedor 1</div>
+                    <div class="p-2 bg-blue c-white ta-c">Contenedor 2</div>
+                </div>
+
+                <div class="alert mt-3">
+                    <h4 class="c-blue-s"><i class=" bs-info c-blue-s fz-28">&nbsp;</i>Información</h4>
+                    <p>
+                        Como podemos ver en el ejemplo transformamos un display: flex en un display: block en dispositivos pequeños,
+                        haciendo que los contenedores se apilen verticalmente en lugar de estar uno al lado del otro. <br>
+                        Si achican el tamaño de la pantalla notarán el cambio en la disposición de los contenedores.
+                    </p>
+                </div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex d-block-s">
+        <div class="p-2 bg-red c-white ta-c">Contenedor 1</div>
+        <div class="p-2 bg-blue c-white ta-c">Contenedor 2</div>
+    </div>
+</pre>
+</div>
+
+                <h3 id="3" class="scroll-item mt-3"><i class="bs-check c-green fz-20">&nbsp;</i>Ejemplo 2</h3>
+                <p>
+                    Podemos realizar lo anterior con cualquier elemento, pero para el ejemplo utilizaremos 
+                    un enlace, que por default tiene un display: inline.
+
+                </p>
+
+                <a href="#" class="d-block-s bg-green c-white p-2 mb-2">Este es un enlace con display block en dispositivos pequeños</a>
+
+                <p class="mt-3">
+                    Notese que el enlace se comporta como un bloque en dispositivos pequeños, ocupando todo el ancho disponible.
+                </p>
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex d-block-s">
+        <a href="#" class="d-block-s bg-green c-white p-2 mb-2">
+            Este es un enlace con display block en dispositivos pequeños
+        </a>
+    </div>
+</pre>
+</div>
+
+                <h3 id="4" class="scroll-item mt-3"><i class="bs-check c-green fz-20">&nbsp;</i>Comparación: Block vs Inline vs Inline-Block</h3>
+                <p>
+                    Es importante entender las diferencias entre los distintos tipos de display para elegir el correcto según tus necesidades:
+                </p>
+                
+                <div class="table-responsive">
+                    <table class="selector">
+                        <thead>
+                            <tr>
+                                <th>Propiedad</th>
+                                <th>Block</th>
+                                <th>Inline</th>
+                                <th>Inline-Block</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ancho</td>
+                                <td>Ocupa 100% del ancho disponible</td>
+                                <td>Solo el ancho necesario</td>
+                                <td>Solo el ancho necesario</td>
+                            </tr>
+                            <tr>
+                                <td>Altura (height)</td>
+                                <td>Se respeta el valor height</td>
+                                <td>Se ignora el valor height</td>
+                                <td>Se respeta el valor height</td>
+                            </tr>
+                            <tr>
+                                <td>Margen (margin)</td>
+                                <td>Se aplica en todos los lados</td>
+                                <td>Solo left y right</td>
+                                <td>Se aplica en todos los lados</td>
+                            </tr>
+                            <tr>
+                                <td>Padding (padding)</td>
+                                <td>Se aplica en todos los lados</td>
+                                <td>Se aplica en todos los lados</td>
+                                <td>Se aplica en todos los lados</td>
+                            </tr>
+                            <tr>
+                                <td>Nueva línea</td>
+                                <td>Sí, siempre comienza en una nueva línea</td>
+                                <td>No, fluye en línea con otros elementos</td>
+                                <td>No, fluye en línea con otros elementos</td>
+                            </tr>
+                            <tr>
+                                <td>Ejemplo</td>
+                                <td>&lt;div&gt;, &lt;p&gt;, &lt;h1&gt;</td>
+                                <td>&lt;span&gt;, &lt;a&gt;, &lt;strong&gt;</td>
+                                <td>Combinación de block e inline</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="alert mt-3 mb-3">
+                    <h4 class="c-grey-s"><i class=" bs-info c-grey-s fz-28">&nbsp;</i>Ejemplo visual</h4>
+                    <p>
+                        A cuantinuación se mostrará un ejemplo visual de cada tipo de display para entender mejor sus diferencias.
+                    </p>
+                </div>
+
+                <div class="mb-3">
+                    <p class="f-w-6 mb-2">Display Block (ocupa todo el ancho):</p>
+                    <div class="d-block bg-red c-white p-2 mb-2">Elemento Block 1</div>
+                    <div class="d-block bg-red c-white p-2">Elemento Block 2</div>
+                </div>
+
+                <div class="mb-3">
+                    <p class="f-w-6 mb-2">Display Inline (fluye con el texto):</p>
+                    <p>
+                        Este es un <span class="bg-blue c-white p-1">elemento inline 1</span> que fluye naturalmente 
+                        con el <span class="bg-blue c-white p-1">elemento inline 2</span> en la misma línea.
+                    </p>
+                </div>
+
+                <div class="mb-3">
+                    <p class="f-w-6 mb-2">Display Inline-Block (fluye pero respeta dimensiones):</p>
+                    <div style="display: inline-block;" class="bg-green c-white p-2 m-1">Box 1</div>
+                    <div style="display: inline-block;" class="bg-green c-white p-2 m-1">Box 2</div>
+                    <div style="display: inline-block;" class="bg-green c-white p-2 m-1">Box 3</div>
+                </div>
+
+                <h3 id="5" class="scroll-item mt-4"><i class="bs-check c-green fz-20">&nbsp;</i>Margin Collapse (Colapso de Márgenes)</h3>
+                <p>
+                    El margin collapse es un comportamiento especial de los elementos con display block donde los márgenes verticales 
+                    (top y bottom) se fusionan cuando dos elementos están adyacentes, utilizando el valor mayor en lugar de sumarlos. 
+                    Este es un concepto importante a entender para evitar espaciados inesperados.
+                </p>
+
+                <div class="alert mt-3 mb-3">
+                    <h4 class="c-blue-s"><i class=" bs-info c-blue-s fz-28">&nbsp;</i>¿Cuándo ocurre el margin collapse?</h4>
+                    <ul class="ml-3 mt-2">
+                        <li>Entre un elemento padre y su primer/último hijo</li>
+                        <li>Entre elementos hermanos bloques adyacentes</li>
+                        <li>En elementos vacíos (solo margen top y bottom)</li>
+                    </ul>
+                </div>
+
+                <h4 class="mt-3 mb-3">Ejemplo 1: Colapso entre hermanos</h4>
+                <p class="mb-2">
+                    En este ejemplo, dos divs con márgenes de 20px. Normalmente esperaríamos 40px de espacio, 
+                    pero el margin collapse hace que sea solo 20px (el valor mayor):
+                </p>
+
+                <div class="d-block p-2 bg-red c-white mb-2" style="margin-bottom: 20px;">Elemento con margen bottom: 20px</div>
+                <div class="d-block p-2 bg-blue c-white" style="margin-top: 20px;">Elemento con margen top: 20px</div>
+
+                <p class="mt-3 mb-2">
+                    <strong>Espacio real entre elementos: 20px (no 40px)</strong> - Esto es el margin collapse.
+                </p>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Margin Bottom: 20px -->
+    <div style="margin-bottom: 20px;">Elemento 1</div>
+
+    <!-- Margin Top: 20px -->
+    <!-- El resultado es 20px, no 40px -->
+    <div style="margin-top: 20px;">Elemento 2</div>
+</pre>
+</div>
+
+                <h4 class="mt-3 mb-3">Ejemplo 2: Cómo evitar el margin collapse</h4>
+                <p class="mb-2">
+                    Existen varias formas de evitar el margin collapse si necesitas que los márgenes se sumen:
+                </p>
+
+                <div class="alert mt-2 mb-3">
+                    <h5 class="c-orange f-w-6">Opciones para evitar margin collapse:</h5>
+                    <ul class="ml-3 mt-2">
+                        <li>Agregar un <span class="badge badge-red">padding</span> al contenedor padre</li>
+                        <li>Usar <span class="badge badge-red">border</span> en el contenedor padre</li>
+                        <li>Cambiar el <span class="badge badge-red">display</span> a flex, grid o inline-block</li>
+                        <li>Usar <span class="badge badge-red">overflow</span> con un valor distinto a visible</li>
+                    </ul>
+                </div>
+
+                <p class="mb-3 f-w-6">Usando padding en el contenedor padre:</p>
+                <div style="padding: 1px;" class="bg-yellow p-2" style="background: #fffbdd;">
+                    <div class="d-block p-2 bg-red c-white mb-2" style="margin-bottom: 20px;">Elemento con margen bottom: 20px</div>
+                    <div class="d-block p-2 bg-blue c-white" style="margin-top: 20px;">Elemento con margen top: 20px</div>
+                </div>
+
+                <p class="mt-3">
+                    <strong>Ahora el espacio es mayor</strong> - El padding del contenedor padre previene el margin collapse 
+                    entre los elementos hijos.
+                </p>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Contenedor con padding para evitar margin collapse -->
+    <div style="padding: 1px;">
+        <div style="margin-bottom: 20px;">Elemento 1</div>
+        <div style="margin-top: 20px;">Elemento 2</div>
+    </div>
+</pre>
+</div>
+
+          <h3 id="6" class="scroll-item">Ejemplo Dinámico</h3>
+
+            <div id="test" class="d-block mb-3">
+                <div class="p-2 bg-red"></div>
+                <div class="p-2 bg-blue"></div>
+            </div>
+
+
+            <div class="d-flex just-around flex-wrap-s mt-3">
+                <button id="btn-block" onclick="block()" class="btn fd-negro">Block</button>
+                <button id="btn-inline" onclick="inline()" class="btn fd-verde">Inline</button>
+                <button id="btn-inblock" onclick="inblock()" class="btn fd-bodyui">In-Block</button>
+                <button id="btn-flex" onclick="flex()" class="btn fd-bodyui">Flex</button>
+            </div>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex just-around flex-wrap-s mt-3">
+        <button id="btn-block" onclick="block()" class="btn fd-negro">Block</button>
+        <button id="btn-inline" onclick="inline()" class="btn fd-verde">Inline</button>
+        <button id="btn-inblock" onclick="inblock()" class="btn fd-bodyui">In-Block</button>
+        <button id="btn-flex" onclick="flex()" class="btn fd-bodyui">Flex</button>
+    </div>
+</pre>
+</div>
+
+
+
+<div class="codigo">
+    <label for="cod-js" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    function block() {
+        const test = document.getElementById("test");
+        test.classList.remove("d-flex");
+        test.classList.remove("d-inline-block");
+        test.querySelectorAll("div").forEach(div => {
+             div.classList.remove("d-inline");
+        });
+        test.classList.add("d-block");
+    }
+
+
+    function inline() {
+        const test = document.getElementById("test");
+        test.classList.remove("d-flex");
+        
+        test.querySelectorAll("div").forEach(div => {
+            div.classList.add("d-inline");
+        });
+        test.classList.remove("d-inline-block");
+        test.classList.remove("d-block");
+    }
+
+
+    function inblock() {
+        const test = document.getElementById("test");
+        test.classList.remove("d-flex");
+        test.classList.add("d-inline-block");
+        test.querySelectorAll("div").forEach(div => {
+             div.classList.remove("d-inline");
+        });
+        test.classList.remove("d-block");
+    }
+
+
+    function flex() {
+        const test = document.getElementById("test");
+        test.classList.add("d-flex");
+        test.classList.remove("d-inline-block");
+        test.querySelectorAll("div").forEach(div => {
+             div.classList.remove("d-inline");
+        });
+        test.classList.remove("d-block");
+    }
+</pre>
+</div>
+
+
+            </article>
+
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Display</a></li>
+            <li><a href="#2">📇 Display Block</a></li>
+            <li><a href="#3">📇 Ejemplo 1</a></li>
+            <li><a href="#3">📇 Ejemplo 2</a></li>
+            <li><a href="#4">📇 Bl vs In vs In-Bl</a></li>
+            <li><a href="#5">📇 Margin Collapse</a></li>
+            <li><a href="#6">📇 Ejemplo Dinámico</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    <script src="../js/bodystyle.bundled.js"></script>
+    <script src="../js/docs.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l1" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l1 ul li a")[10].classList.add("c-red");
+
+
+        function block() {
+            const test = document.getElementById("test");
+            test.classList.remove("d-flex");
+            test.classList.remove("d-inline-block");
+            test.querySelectorAll("div").forEach(div => {
+                 div.classList.remove("d-inline");
+            });
+            test.classList.add("d-block");
+        }
+
+        function inline() {
+            const test = document.getElementById("test");
+            test.classList.remove("d-flex");
+            
+            test.querySelectorAll("div").forEach(div => {
+                div.classList.add("d-inline");
+            });
+
+
+            test.classList.remove("d-inline-block");
+            test.classList.remove("d-block");
+        }
+
+        function inblock() {
+            const test = document.getElementById("test");
+            test.classList.remove("d-flex");
+            test.classList.add("d-inline-block");
+            test.querySelectorAll("div").forEach(div => {
+                 div.classList.remove("d-inline");
+            });
+            test.classList.remove("d-block");
+        }
+
+        function flex() {
+            const test = document.getElementById("test");
+            test.classList.add("d-flex");
+            test.classList.remove("d-inline-block");
+            test.querySelectorAll("div").forEach(div => {
+                 div.classList.remove("d-inline");
+            });
+            test.classList.remove("d-block");
+        }
+    </script>
+</body>
+
+</html>

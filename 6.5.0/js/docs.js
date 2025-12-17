@@ -123,6 +123,7 @@
                     <li><a href="bordes.html" class="com-trigger" data-info="Estilos de bordes.">🧱 Bordes</a></li>
                     <li><a href="opacidad.html" class="com-trigger" data-info="Niveles de opacidad.">🖼️ Opacidad</a></li>
                     <li><a href="overflow.html" class="com-trigger" data-info="Manejo de overflow.">📜 Overflow</a></li>
+                    <li><a href="display.html" class="com-trigger" data-info="Manejo de display.">🖥️ Display</a></li>    
                 </ul>
             </div>
             <div class="bs-sidebar-title" data-target="#l2">
@@ -404,6 +405,16 @@
             nombre: "Alertas", 
             enlace: "alertas.html",
             tags: ["alertas", "alerts", "alert", "notificación", "notification", "mensaje", "message" ]
+        },
+        {
+            nombre: "Badges", 
+            enlace: "badges.html",
+            tags: ["badges", "etiquetas", "labels", "tags", "marcadores" ]
+        },
+        {
+            nombre: "Grupos de Botones", 
+            enlace: "grupos_botones.html",
+            tags: ["grupos", "botones", "buttons", "button", "click", "interacción", "interaction" ]
         }
 
     ]

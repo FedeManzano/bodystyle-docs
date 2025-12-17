@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Etiquetas personalizadas de Bodystyle que resalta la información y llman la atención del usuario.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/badges.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Bodystyle</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">🏷️ Badges</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Los badges son etiquetas pequeñas y llamativas que se utilizan para resaltar información importante o para llamar la atención del usuario sobre ciertos elementos en una interfaz. 
+                En Bodystyle, los badges se pueden implementar fácilmente utilizando clases CSS predefinidas.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Badges Simples</h2>
+                <p>
+                    Los badges son etiquetas pequeñas y llamativas que se utilizan para resaltar información importante o para llamar la atención del usuario sobre ciertos elementos en una interfaz. 
+                    En Bodystyle, los badges se pueden implementar fácilmente utilizando clases CSS predefinidas.
+                </p>
+                <div class="h1 c-white">Esto es un H1 <span class="badge badge-red">New</span></div>
+                <div class="h2 c-white">Esto es un H2 <span class="badge badge-red">New</span></div>
+                <div class="h3 c-white">Esto es un H3 <span class="badge badge-red">New</span></div>
+                <div class="h4 c-white">Esto es un H4 <span class="badge badge-red">New</span></div>
+                <div class="h5 c-white">Esto es un H5 <span class="badge badge-red">New</span></div>
+                <div class="h6 c-white">Esto es un H6 <span class="badge badge-red">New</span></div>
+            
+
+                <div class="alert mt-3">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>
+                        En el ejemplo anterior se utilizaron dos clases, por un lado 
+                            la clase <span class="badge badge-red">.badge</span> y luego 
+                            la del color con badge-red <span class="badge badge-red">.badge-red</span>.
+                    </p>
+                </div>
+
+                <h3 id="3" class="scroll-item">Colores</h3>
+
+                <p>
+                    Los badges pueden tener diferentes colores para indicar distintos significados o estados. 
+                    Bodystyle ofrece una variedad de clases de colores predefinidas que se pueden aplicar a los badges. 
+                    Algunos ejemplos de clases de colores incluyen:
+                </p>
+
+                <div class="mb-2">
+                    <span class="badge badge-red">Red</span>
+                    <span class="badge badge-blue">Blue</span>
+                    <span class="badge badge-green">Green</span>
+                    <span class="badge badge-black">Purple</span>
+                    <span class="badge badge-gray">Gray</span>
+                     <span class="badge badge-white">White</span>
+                </div>
+
+                <h4 class="mb-3"><i class="bs-check c-green fz-20">&nbsp;</i>Alias en Ingés</h4>
+                <div class="table-responsive mb-3">
+                    <table class="table-sm selector vertical-border">
+                        <thead>
+                            <tr>
+                                <th>Español</th>
+                                <th>Inglés</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>.badge-rojo</td>
+                                <td>.badge-red</td>
+                            </tr>
+                            <tr>
+                                <td>.badge-veerde</td>
+                                <td>.badge-green</td>
+                            </tr>
+                            <tr>
+                                <td>.badge-azul</td>
+                                <td>.badge-blue</td>
+                            </tr>
+                            <tr>
+                                <td>.badge-gris</td>
+                                <td>.badge-gray</td>
+                            </tr>
+                            <tr>
+                                <td>.badge-blanco</td>
+                                <td>.badge-white</td>
+                            </tr>
+                            <tr>
+                                <td>.badge-negro</td>
+                                <td>.badge-black</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div>
+        <span class="badge badge-red">Red</span>
+        <span class="badge badge-blue">Blue</span>
+        <span class="badge badge-green">Green</span>
+        <span class="badge badge-black">Purple</span>
+        <span class="badge badge-gray">Gray</span>
+        <span class="badge badge-white">White</span>
+    </div>
+</pre>
+</div>
+               
+            </article>
+
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Medidas</h2>
+                <p>
+                    Bodystyle provee algunos badges con medidas predefinidas a través de los parámetros correspondientes. <br>
+                    Las medidas disponibles son:
+                </p>
+                <div class="lista-doc">
+                    <ul>
+                        <li><strong>.badge-xs</strong>: Badge extra pequeño.</li>
+                        <li><strong>.badge-sm</strong>: Badge pequeño.</li>
+                        <li><strong>.badge-md</strong>: Badge mediano</li>
+                        <li><strong>.badge-lg</strong>: Badge grande.</li>
+                        <li><strong>.badge-xl</strong>: Badge extra grande.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-3">
+                    <span class="badge badge-red badge-xs">XS</span>
+                    <span class="badge badge-red badge-sm">SM</span>
+                    <span class="badge badge-red badge-md">MD</span>
+                    <span class="badge badge-red badge-lg">LG</span>
+                    <span class="badge badge-red badge-xl">XL</span>
+                </div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="mb-2">
+        <span class="badge badge-red badge-xs">XS</span>
+        <span class="badge badge-red badge-sm">SM</span>
+        <span class="badge badge-red badge-md">MD</span>
+        <span class="badge badge-red badge-lg">LG</span>
+        <span class="badge badge-red badge-xl">XL</span>
+    </div>
+</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Badges</a></li>
+            <li><a href="#2">📇 Badge Simple</a></li>
+            <li><a href="#3">📇 Colores</a></li>
+            <li><a href="#4">📇 Medidas</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    <script src="../js/bodystyle.bundled.js"></script>
+    <script src="../js/docs.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l2" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l2 ul li a")[2].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>
