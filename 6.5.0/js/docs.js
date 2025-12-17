@@ -174,7 +174,7 @@
                 <a class="btn-menu"></a>
 
                 <a href="#" class="logo-container">
-                    <img id="logo_marca" class="disparador" data-info="" class="bor-rad-por-50" src="../images/logo_bodystyle.svg" alt="Foto de perfil">
+                    <img id="logo_marca" class="disparador" data-info="" class="bor-rad-por-50" src="../images/logo.png" alt="Foto de perfil">
                 </a>
 
                 <div class="ocultar-desde-medianos">
@@ -196,18 +196,24 @@
 
 
     document.getElementById("info_general").innerHTML =
-        `<div class="alert">
-            <h4 class="c-blue-s"><i class=" bs-info c-blue-s fz-28">&nbsp;</i>Información</h4>
-            <p>
-                Desde el botón que se encuentra abajo de esta alerta, puedes descargar la biblioteca Bodystyle en su <span class="c-red"><i class="bs-tags fz-14">&nbsp;</i>versión 6.5.0</span> 
-                con los archivos procesados y transpilados. <br>
-                Si lo que está buscando es el codigo fuente, puede encontrarlo en el repositorio oficial de
-                <a class="link" href="https://github.com/FedeManzano/bodystyle" target="_blank">GitHub</a>.
-            </p>
+        `
+    <div class="card-notification-dark"> 
+        <div class="row">
+            <div class="cl-4 card-logo">
+                 <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle" width="60" height="60">
+            </div>
+            <div class="cl-8">
+                <h4 class="title">Bodystyle Framework</h4>
+                <p class="content m-0">Librería CSS completa para construir interfaces modernas y responsivas con facilidad.</p>
+            </div>
         </div>
-        <div>
-            <a href="#" class="btn-lg-o btn-bodyui-o bor-pill tips-ele" data-tips="Descarga de la biblioteca." data-pos="right"><i class="bs-download fz-28">&nbsp;</i>Descargar</a>
-        </div>`
+    </div>
+    <div class="mt-3"> 
+        <a class="btn-lg-o btn-bodyui-o bor-pill com-trigger" data-info="Botón que permite descargar la <span class='f-w-7'>Versión 6.5.0</span> transpilada y procesada, no incluye el código fuente." data-pos='right' href="https://bodystyle.webcindario.com/descargas/bodystyle-6.5.0.zip" download>
+            <i class='bs-download fz-27'>&nbsp;</i>Descargar
+        </a>
+    </div>
+    `
 
     document.getElementById("autor_content").innerHTML =
         `
@@ -216,7 +222,8 @@
                 Con mucho <i class="bs-heart c-red fz-20 mt-1">&nbsp;</i>
                 <a id="autor_enlace" href="https://github.com/FedeManzano" target="_blank" class="link disparador" data-info="">Federico Manzano</a>
             </h6>
-        </div>`
+        </div>
+        `
 
     const InitScrollSpyDark = () => {
         let conf = {
@@ -332,20 +339,15 @@
 
     let info_autor = 
     `
-    <div class="card"> <!-- Comienza la tarjeta simple -->
-        <div  class="card-simple-dark">
-            <h4>Autor</h4>
-            <small class="mb-3">Federico Manzano</small>
-           
-            <div class="img-display-128 m-a pt-1">
-                <img class="img-responsive bor-rad-por-50" src="../images/perfil.png" alt="Foto de perfil">
+    <div class="card-notification-dark"> 
+        <div class="row">
+            <div class="cl-4 card-logo">
+                 <img class="img-responsive bor-rad-por-50" src="https://bodystyle.webcindario.com/imagenes/20191106_205049.png" alt="Logo Bodystyle" width="60" height="60">
             </div>
-            <p>
-               Federico Manzano es un desarrollador web apasionado por crear soluciones innovadoras y eficientes. 
-               Con experiencia en diversas tecnologías, se especializa en el desarrollo front-end y back-end, 
-               siempre buscando mejorar la experiencia del usuario a través de interfaces intuitivas y funcionales.
-            </p> 
-            
+            <div class="cl-8">
+                <h4 class="title">Federico Manzano</h4>
+                <p class="content">Estudiante de Ingeniería en Informática de la Universidad Nacional de La Matanza.</p>
+            </div>
         </div>
     </div>
     `
