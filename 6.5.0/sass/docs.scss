@@ -479,23 +479,155 @@ html {
         }
 
         .codigo {
+            background: linear-gradient(135deg, #f5f5f5 0%, #f9f9f9 100%) !important;
+            padding: 10px !important;
+            padding-top: 37px !important;
             border-radius: 12px;
-            color: white;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            box-shadow:
+                0 4px 6px rgba(0, 0, 0, 0.08),
+                0 8px 16px rgba(0, 0, 0, 0.06),
+                0 0 20px rgba(0, 0, 0, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8),
+                0 1px 0 0 rgba(0, 0, 0, 0.1);
+            color: #2d2d2d;
             margin-bottom: $mb;
             overflow: hidden;
             position: relative;
+            transition: all 0.3s ease;
 
+            // Estilos del scrollbar - Webkit (Chrome, Safari, Edge)
+            &::-webkit-scrollbar {
+                height: 8px;
+                width: 8px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: linear-gradient(180deg, #d4a574, #a0826d);
+                border-radius: 4px;
+
+                &:hover {
+                    background: linear-gradient(180deg, #e0b88a, #b8956a);
+                }
+            }
+
+            // Firefox
+            scrollbar-color: #d4a574 transparent;
+            scrollbar-width: thin;
+
+            // Línea izquierda colorida con gradiente
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 35px;
+                bottom: 0;
+                width: 3px;
+                background: linear-gradient(180deg, #d4a574, transparent);
+                box-shadow: 0 0 10px rgba(212, 165, 116, 0.3);
+                border-radius: 0 3px 3px 0;
+            }
+
+            // Efecto de brillo superior sutil
             &::before {
                 content: '';
                 position: absolute;
                 top: 0;
                 left: 0;
                 right: 0;
-                height: 40px;
-                background: linear-gradient(180deg, rgba(220, 38, 38, 0.06) 0%, transparent 100%);
+                height: 50px;
+                background: linear-gradient(180deg, rgba(212, 165, 116, 0.08) 0%, transparent 100%);
                 pointer-events: none;
                 z-index: 1;
                 border-radius: 12px 12px 0 0;
+            }
+
+            .label {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 15px;
+                background: linear-gradient(135deg, rgba(245, 245, 245, 0.95) 0%, rgba(249, 249, 249, 0.95) 100%);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                border-radius: 12px 12px 0 0;
+                color: #505050;
+                font-size: 0.85em;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                z-index: 3;
+                backdrop-filter: blur(5px);
+
+                i {
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    opacity: 0.6;
+                    margin-left: 8px;
+
+                    &:hover {
+                        opacity: 1;
+                        color: #d4a574;
+                        transform: scale(1.15);
+                    }
+
+                    &:active {
+                        transform: scale(0.95);
+                    }
+                }
+            }
+
+            &:hover {
+                border-color: rgba(0, 0, 0, 0.2);
+                box-shadow:
+                    0 6px 12px rgba(0, 0, 0, 0.12),
+                    0 12px 24px rgba(0, 0, 0, 0.08),
+                    0 0 30px rgba(212, 165, 116, 0.15),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+                    0 2px 0 0 rgba(212, 165, 116, 0.2);
+                transform: translateY(-2px);
+            }
+
+            pre {
+                position: relative;
+                z-index: 2;
+                margin: 0;
+                overflow-x: auto;
+                overflow-y: hidden;
+                color: #2d2d2d !important;
+                background: linear-gradient(135deg, #f5f5f5 0%, #f9f9f9 100%) !important;
+                // Estilos del scrollbar - Webkit (Chrome, Safari, Edge)
+                &::-webkit-scrollbar {
+                    height: 8px;
+                    width: 8px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: transparent;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: linear-gradient(180deg, #d4a574, #a0826d);
+                    border-radius: 4px;
+
+                    &:hover {
+                        background: linear-gradient(180deg, #e0b88a, #b8956a);
+                    }
+                }
+
+                // Firefox
+                scrollbar-color: #d4a574 transparent;
+                scrollbar-width: thin;
+
+                
             }
         }
 
@@ -726,6 +858,159 @@ html {
             }
         }
 
+        .codigo {
+            background: linear-gradient(135deg, #10151a 0%, #141820 100%) !important;
+            padding: 10px !important;
+            padding-top: 37px !important;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 21, 21, 0.3);
+            box-shadow:
+                0 4px 6px rgba(0, 0, 0, 0.4),
+                0 8px 16px rgba(0, 0, 0, 0.3),
+                0 0 20px rgba(255, 21, 21, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05),
+                0 1px 0 0 rgba(255, 21, 21, 0.4);
+            color: #ffffff;
+            margin-bottom: $mb;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+
+            // Estilos del scrollbar - Webkit (Chrome, Safari, Edge)
+            &::-webkit-scrollbar {
+                height: 8px;
+                width: 8px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: linear-gradient(180deg, #ff1515, #cc0f0f);
+                border-radius: 4px;
+
+                &:hover {
+                    background: linear-gradient(180deg, #ff3333, #ff1515);
+                }
+            }
+
+            // Firefox
+            scrollbar-color: #ff1515 transparent;
+            scrollbar-width: thin;
+
+            // Línea izquierda colorida con gradiente
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 35px;
+                bottom: 0;
+                width: 3px;
+                background: linear-gradient(180deg, #ff1515, transparent);
+                box-shadow: 0 0 10px rgba(255, 21, 21, 0.4);
+                border-radius: 0 3px 3px 0;
+            }
+
+            // Efecto de brillo superior sutil
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 50px;
+                background: linear-gradient(180deg, rgba(255, 21, 21, 0.08) 0%, transparent 100%);
+                pointer-events: none;
+                z-index: 1;
+                border-radius: 12px 12px 0 0;
+            }
+
+            .label {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 15px;
+                background: linear-gradient(135deg, rgba(20, 25, 30, 0.95) 0%, rgba(16, 21, 26, 0.95) 100%);
+                border-bottom: 1px solid rgba(255, 21, 21, 0.2);
+                border-radius: 12px 12px 0 0;
+                color: #d6d6d6;
+                font-size: 0.85em;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                z-index: 3;
+                backdrop-filter: blur(5px);
+
+                i {
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    opacity: 0.7;
+                    margin-left: 8px;
+
+                    &:hover {
+                        opacity: 1;
+                        color: #ff1515;
+                        transform: scale(1.15);
+                    }
+
+                    &:active {
+                        transform: scale(0.95);
+                    }
+                }
+            }
+
+            &:hover {
+                border-color: rgba(255, 21, 21, 0.5);
+                box-shadow:
+                    0 6px 12px rgba(0, 0, 0, 0.5),
+                    0 12px 24px rgba(0, 0, 0, 0.4),
+                    0 0 30px rgba(255, 21, 21, 0.25),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+                    0 2px 0 0 rgba(255, 21, 21, 0.6);
+                transform: translateY(-2px);
+            }
+
+            pre {
+                position: relative;
+                z-index: 2;
+                margin: 0;
+                overflow-x: auto;
+                overflow-y: hidden;
+                color: #ffffff !important;
+
+                // Estilos del scrollbar - Webkit (Chrome, Safari, Edge)
+                &::-webkit-scrollbar {
+                    height: 8px;
+                    width: 8px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: transparent;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: linear-gradient(180deg, #ff1515, #cc0f0f);
+                    border-radius: 4px;
+
+                    &:hover {
+                        background: linear-gradient(180deg, #ff3333, #ff1515);
+                    }
+                }
+
+                // Firefox
+                scrollbar-color: #ff1515 transparent;
+                scrollbar-width: thin;
+
+               
+            }
+        }
+
         .article {
             background: linear-gradient(135deg, rgba(20, 20, 20, 0.6) 0%, rgba(30, 25, 35, 0.4) 100%);
             border: 1px solid rgba(255, 21, 21, 0.15);
@@ -782,6 +1067,158 @@ html {
             }
         }
     }
+
+    .codigo {
+            background: linear-gradient(135deg, #f5f5f5 0%, #f9f9f9 100%) !important;
+            padding: 10px !important;
+            padding-top: 37px !important;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            box-shadow:
+                0 4px 6px rgba(0, 0, 0, 0.08),
+                0 8px 16px rgba(0, 0, 0, 0.06),
+                0 0 20px rgba(0, 0, 0, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8),
+                0 1px 0 0 rgba(0, 0, 0, 0.1);
+            color: #2d2d2d;
+            margin-bottom: $mb;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+
+            // Estilos del scrollbar - Webkit (Chrome, Safari, Edge)
+            &::-webkit-scrollbar {
+                height: 8px;
+                width: 8px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: linear-gradient(180deg, #d4a574, #a0826d);
+                border-radius: 4px;
+
+                &:hover {
+                    background: linear-gradient(180deg, #e0b88a, #b8956a);
+                }
+            }
+
+            // Firefox
+            scrollbar-color: #d4a574 transparent;
+            scrollbar-width: thin;
+
+            // Línea izquierda colorida con gradiente
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 35px;
+                bottom: 0;
+                width: 3px;
+                background: linear-gradient(180deg, #d4a574, transparent);
+                box-shadow: 0 0 10px rgba(212, 165, 116, 0.3);
+                border-radius: 0 3px 3px 0;
+            }
+
+            // Efecto de brillo superior sutil
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 50px;
+                background: linear-gradient(180deg, rgba(212, 165, 116, 0.08) 0%, transparent 100%);
+                pointer-events: none;
+                z-index: 1;
+                border-radius: 12px 12px 0 0;
+            }
+
+            .label {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 15px;
+                background: linear-gradient(135deg, rgba(245, 245, 245, 0.95) 0%, rgba(249, 249, 249, 0.95) 100%);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                border-radius: 12px 12px 0 0;
+                color: #505050;
+                font-size: 0.85em;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                z-index: 3;
+                backdrop-filter: blur(5px);
+
+                i {
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    opacity: 0.6;
+                    margin-left: 8px;
+
+                    &:hover {
+                        opacity: 1;
+                        color: #d4a574;
+                        transform: scale(1.15);
+                    }
+
+                    &:active {
+                        transform: scale(0.95);
+                    }
+                }
+            }
+
+            &:hover {
+                border-color: rgba(0, 0, 0, 0.2);
+                box-shadow:
+                    0 6px 12px rgba(0, 0, 0, 0.12),
+                    0 12px 24px rgba(0, 0, 0, 0.08),
+                    0 0 30px rgba(212, 165, 116, 0.15),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+                    0 2px 0 0 rgba(212, 165, 116, 0.2);
+                transform: translateY(-2px);
+            }
+
+            pre {
+                position: relative;
+                z-index: 2;
+                margin: 0;
+                overflow-x: auto;
+                overflow-y: hidden;
+                color: #2d2d2d !important;
+                background: linear-gradient(135deg, #f5f5f5 0%, #f9f9f9 100%) !important;
+                // Estilos del scrollbar - Webkit (Chrome, Safari, Edge)
+                &::-webkit-scrollbar {
+                    height: 8px;
+                    width: 8px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: transparent;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: linear-gradient(180deg, #d4a574, #a0826d);
+                    border-radius: 4px;
+
+                    &:hover {
+                        background: linear-gradient(180deg, #e0b88a, #b8956a);
+                    }
+                }
+
+                // Firefox
+                scrollbar-color: #d4a574 transparent;
+                scrollbar-width: thin;
+
+            }
+        }
 
     #nav {
         background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0f 25%, #2d1420 50%, #1f1820 75%, #0f0f10 100%);
