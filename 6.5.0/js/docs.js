@@ -385,7 +385,18 @@
             nombre: "Bordes", 
             enlace: "bordes.html",
             tags: ["bordes", "borders", "border", "radio", "radius", "grosor", "thickness" ]
+        },
+        {
+            nombre: "Botones", 
+            enlace: "botones.html",
+            tags: ["botones", "buttons", "button", "click", "interacción", "interaction" ]
+        },
+        {
+            nombre: "Alertas", 
+            enlace: "alertas.html",
+            tags: ["alertas", "alerts", "alert", "notificación", "notification", "mensaje", "message" ]
         }
+
     ]
 
     let ul = document.createElement("ul");
