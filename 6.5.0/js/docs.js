@@ -197,7 +197,7 @@
 
     document.getElementById("info_general").innerHTML =
         `
-    <div class="card-notification-dark"> 
+    <div class="card-notification-dark fd-gris-az-o"> 
         <div class="row">
             <div class="cl-4 card-logo">
                  <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle" width="60" height="60">
@@ -339,7 +339,7 @@
 
     let info_autor = 
     `
-    <div class="card-notification-dark"> 
+    <div class="card-notification-dark fd-gris-az-o"> 
         <div class="row">
             <div class="cl-4 card-logo">
                  <img class="img-responsive bor-rad-por-50" src="https://bodystyle.webcindario.com/imagenes/20191106_205049.png" alt="Logo Bodystyle" width="60" height="60">
