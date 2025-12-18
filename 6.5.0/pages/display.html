@@ -342,7 +342,7 @@
             </div>
 
 
-            <div class="d-flex just-around flex-wrap-s mt-3">
+            <div class="d-flex gap-1 flex-wrap-s mt-3">
                 <button id="btn-block" onclick="block()" class="btn fd-negro">Block</button>
                 <button id="btn-inline" onclick="inline()" class="btn fd-verde">Inline</button>
                 <button id="btn-inblock" onclick="inblock()" class="btn fd-bodyui">In-Block</button>
@@ -357,7 +357,7 @@
         <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
     </label>
 <pre class="cod-html pt-1">
-    <div class="d-flex just-around flex-wrap-s mt-3">
+    <div class="d-flex gap-1 flex-wrap-s mt-3">
         <button id="btn-block" onclick="block()" class="btn fd-negro">Block</button>
         <button id="btn-inline" onclick="inline()" class="btn fd-verde">Inline</button>
         <button id="btn-inblock" onclick="inblock()" class="btn fd-bodyui">In-Block</button>
@@ -426,6 +426,88 @@
 
 
             <article class="article">
+                <h2 id="7" class="scroll-item">Display Inline</h2>
+                <p>
+                    El display inline es un tipo de visualización que permite que los elementos fluyan en línea con el texto circundante. 
+                    Los elementos con display inline no comienzan en una nueva línea y solo ocupan el ancho necesario para su contenido. 
+                    Este tipo de display es ideal para elementos como enlaces, etiquetas span y otros elementos que forman parte del flujo de texto. <br>
+                    Para este tipo de contenedores existe una clase en bodystyle llamada <span class="badge badge-red">.d-inline</span> que permite definir un elemento como inline en todos los tamaños de dispositivos.
+                </p>
+
+                <div class="c-white mb-3">
+                    Esto es un ejemplo de un div con display inline <div class="p-1 bg-red d-inline">DIV</div>, notese como fluye con el texto.
+                </div>
+
+                <div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="c-white">
+        Esto es un ejemplo de un div con display inline <div class="p-1 bg-red d-inline">DIV</div>, notese como fluye con el texto.
+    </div>
+</pre>
+</div>
+
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class=" bs-info c-blue-s fz-28">&nbsp;</i>Información</h4>
+                    <p>
+                        Notese que el contenedor div por defecto es (block) y a partir de la clase 
+                        <span class="badge badge-red">.d-inline</span> se comporta como un elemento inline. 
+                    </p>
+                </div>
+
+                <h4 class="mb-3"><i class="bs-check c-green fz-20">&nbsp;</i>Ejemplo Interactivo</h4>
+
+                <div id="test2">
+                    <div class="p-2 bg-red c-white mb-2">Elemento 1</div>
+                    <div class="p-2 bg-blue c-white mb-2">Elemento 2</div>
+                </div>
+                <div class="d-flex gap-2 mt-3">
+                    <button onclick="block2()" class="btn fd-bodyui">Block</button>
+                    <button onclick="inline2()" class="btn bg-gray">Inline</button>
+                </div>
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Ejemplo Responsive</h4>
+                <p>
+                    En el ejemplo vamos a ver como adaptar el diseño en función al tamaño de pantalla 
+                    en el cual se visualicen los elementos, por un lado vamos a disponer de dos 
+                    contenedores que se montrarán (inline) en dispositivos mayores a 1030 px y en 
+                    bloque (block) en dispositivos menores a 1030 px.
+                </p>
+
+
+                <div>
+                    <div class="d-inline d-block-s bg-red c-white p-2 mb-2">Contenedor 1</div>
+                    <div class="d-inline d-block-s bg-blue c-white p-2 mb-2">Contenedor 2</div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div>
+        <div class="d-inline d-block-s bg-red c-white p-2 mb-2">Contenedor 1</div>
+        <div class="d-inline d-block-s bg-blue c-white p-2 mb-2">Contenedor 2</div>
+    </div>
+</pre>
+</div>
+
+            <div class="alert">
+                <h4 class="c-blue-s"><i class=" bs-info c-blue-s fz-28">&nbsp;</i>Información</h4>
+                <p>
+                    <strong>Nota:</strong> Para conocer los diferentes tamaños de dispositivos y sus respectivas clases en Bodystyle,
+                    puedes visitar la sección de <a href="medidas.html" class="link com-trigger" data-info="Medidas y puntos de quiebre de <span class='f-w-7'>Bodystyle</span>">Medidas</a>.
+                </p>
+            </div>
+            </article>
+
+            <article class="article">
                 <h3 id="autor" class="scroll-item">Autor</h3>
                 <div id="autor_content"></div>
             </article>
@@ -444,6 +526,7 @@
             <li><a href="#4">📇 Bl vs In vs In-Bl</a></li>
             <li><a href="#5">📇 Margin Collapse</a></li>
             <li><a href="#6">📇 Ejemplo Dinámico</a></li>
+            <li><a href="#7">📇 Display Inline</a></li>
             <li><a href="#autor">🧑‍🏫 Autor</a></li>
         </ul>
     </div>
@@ -460,6 +543,30 @@
         BS.CodigoJsInit()
         BS.PersonalizadoInit({ori: "disparador"})
         document.querySelectorAll("#l1 ul li a")[10].classList.add("c-red");
+
+
+        function block2() {
+            const test = document.getElementById("test2");
+            test.classList.remove("d-flex");
+            test.classList.remove("d-inline-block");
+            test.querySelectorAll("div").forEach(div => {
+                 div.classList.remove("d-inline");
+            });
+            test.classList.add("d-block");
+        }
+
+        function inline2() {
+            const test = document.getElementById("test2");
+            test.classList.remove("d-flex");
+            
+            test.querySelectorAll("div").forEach(div => {
+                div.classList.add("d-inline");
+            });
+
+
+            test.classList.remove("d-inline-block");
+            test.classList.remove("d-block");
+        }
 
 
         function block() {

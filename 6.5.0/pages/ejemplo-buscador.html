@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplo de integración del buscador con Web Worker">
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <title>Ejemplo: Buscador Integrado</title>
+    
+    <!-- ESTILOS DEL BUSCADOR -->
+    <style>
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .indicador-carga {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .resultados-container {
+            background: white;
+            border-radius: 6px;
+            max-height: 400px;
+            overflow-y: auto;
+            margin-top: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .resultado-item {
+            padding: 12px 16px;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .resultado-item:hover {
+            background: #f9f9f9;
+        }
+
+        .resultado-item h4 {
+            margin: 0 0 6px 0;
+            color: #667eea;
+            font-size: 1em;
+        }
+
+        .resultado-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 3px 8px;
+            background: #f0f0f0;
+            border-radius: 20px;
+            font-size: 0.8em;
+            color: #666;
+        }
+
+        .resultado-vacio {
+            padding: 20px;
+            text-align: center;
+            color: #999;
+        }
+
+        .resultado-stats {
+            padding: 8px 16px;
+            background: #f9f9f9;
+            color: #999;
+            font-size: 0.85em;
+            text-align: center;
+            border-top: 1px solid #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="theme-light mb-3">
+
+        <!-- BUSCADOR INTEGRADO -->
+        <div class="busqueda-container mb-3">
+            <div class="input-g ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100">
+                <div class="grupo">
+                    <span class="span-grupo fd-gris-n c-white">🔎</span>
+                    <input 
+                        type="search" 
+                        data-buscar
+                        class="fd-gris-n c-white" 
+                        placeholder="Buscar en la documentación..."
+                    >
+                    <div class="indicador-carga" data-cargando style="display: none;">
+                        <span class="spinner"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="resultados-container" data-resultados></div>
+        </div>
+
+        <!-- Navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+        <div id="sidebar" class="bs-sidebar-drop-light"></div>
+
+        <!-- Contenido -->
+        <section id="main">
+            <h1>📖 Ejemplo: Buscador Integrado</h1>
+            
+            <div class="info-box" style="background: #e3f2fd; border-left: 4px solid #2196F3; padding: 15px; margin: 20px 0; border-radius: 4px;">
+                <strong>✨ Este ejemplo muestra cómo integrar el buscador en las páginas de documentación.</strong>
+                <p style="margin: 10px 0 0 0;">Prueba escribiendo en el buscador de arriba para ver cómo funciona.</p>
+            </div>
+
+            <h2>🎯 Características</h2>
+            <ul>
+                <li>✅ Búsqueda no-bloqueante (Web Worker)</li>
+                <li>✅ Resultados ordenados por relevancia</li>
+                <li>✅ Debounce automático (300ms)</li>
+                <li>✅ Indicador visual de carga</li>
+                <li>✅ Integración simple</li>
+            </ul>
+
+            <h2>📝 Implementación</h2>
+            
+            <h3>1. HTML (Input)</h3>
+            <pre><code>&lt;div class="busqueda-container mb-3"&gt;
+    &lt;div class="input-g ancho-50"&gt;
+        &lt;div class="grupo"&gt;
+            &lt;span class="span-grupo"&gt;🔎&lt;/span&gt;
+            &lt;input type="search" data-buscar placeholder="Buscar..."&gt;
+            &lt;div class="indicador-carga" data-cargando&gt;
+                &lt;span class="spinner"&gt;&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="resultados-container" data-resultados&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            <h3>2. JavaScript (Inicialización)</h3>
+            <pre><code>// Definir índices
+const indicesBusqueda = [
+    { title: "Botones", url: "botones.html", tags: ["botones", "btn"] },
+    { title: "Colores", url: "colores.html", tags: ["colores"] },
+    { title: "Grid", url: "grid.html", tags: ["grid", "layout"] }
+];
+
+// Inicializar
+window.BuscadorModule.Init(indicesBusqueda);</code></pre>
+
+            <h3>3. CSS (Estilos básicos)</h3>
+            <p>Ver archivo <code>css/docs.css</code> para estilos completos.</p>
+
+            <h2>🔍 Términos disponibles</h2>
+            <p>Prueba buscando:</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0;">
+                <button class="btn-sm" onclick="document.querySelector('[data-buscar]').value='botones'; document.querySelector('[data-buscar]').dispatchEvent(new Event('input'))">botones</button>
+                <button class="btn-sm" onclick="document.querySelector('[data-buscar]').value='colores'; document.querySelector('[data-buscar]').dispatchEvent(new Event('input'))">colores</button>
+                <button class="btn-sm" onclick="document.querySelector('[data-buscar]').value='grid'; document.querySelector('[data-buscar]').dispatchEvent(new Event('input'))">grid</button>
+                <button class="btn-sm" onclick="document.querySelector('[data-buscar]').value='formulario'; document.querySelector('[data-buscar]').dispatchEvent(new Event('input'))">formulario</button>
+                <button class="btn-sm" onclick="document.querySelector('[data-buscar]').value='modal'; document.querySelector('[data-buscar]').dispatchEvent(new Event('input'))">modal</button>
+            </div>
+
+            <h2>📚 Documentación</h2>
+            <p>Para más información sobre la integración, ver:</p>
+            <ul>
+                <li><a href="../../GUIA-INTEGRACION-DOCS.md">GUIA-INTEGRACION-DOCS.md</a> - 3 opciones de integración</li>
+                <li><a href="../../WEB-WORKERS-GUIA.md">WEB-WORKERS-GUIA.md</a> - Conceptos educativos</li>
+                <li><a href="../../RESUMEN-BUSCADOR.md">RESUMEN-BUSCADOR.md</a> - Overview del proyecto</li>
+            </ul>
+
+            <h2>🚀 Próximos Pasos</h2>
+            <ol>
+                <li>Copiar este código a tus páginas</li>
+                <li>Definir los índices apropiados para tu documentación</li>
+                <li>Agregar estilos CSS en docs.css</li>
+                <li>Testear en navegador</li>
+            </ol>
+
+            <div style="background: #f5f5f5; padding: 15px; border-radius: 4px; margin-top: 20px;">
+                <strong>💡 Tip:</strong> Puedes reutilizar este componente en todas las páginas de documentación.
+            </div>
+        </section>
+    </section>
+
+    <!-- Scripts -->
+    <script src="../js/bodystyle.bundled.js"></script>
+    
+    <!-- Buscador -->
+    <script src="../js/buscador.js"></script>
+    <script>
+        // Índices de búsqueda para este ejemplo
+        const indicesBusqueda = [
+            { title: "Botones", url: "botones.html", tags: ["botones", "btn", "accion", "click", "interactivo"] },
+            { title: "Colores", url: "colores.html", tags: ["colores", "color", "paleta", "tema", "diseño"] },
+            { title: "Grid", url: "grid.html", tags: ["grid", "malla", "layout", "responsive", "diseño"] },
+            { title: "Flexbox", url: "flexbox.html", tags: ["flexbox", "flex", "layout", "alineacion", "distribucion"] },
+            { title: "Tablas", url: "tablas.html", tags: ["tablas", "tabla", "datos", "fila", "columna"] },
+            { title: "Formularios", url: "formularios.html", tags: ["formulario", "form", "input", "campo", "datos"] },
+            { title: "Input", url: "input.html", tags: ["input", "campo", "texto", "dato", "entrada"] },
+            { title: "Checkbox", url: "checkbox.html", tags: ["checkbox", "seleccionar", "marcar", "opcion"] },
+            { title: "Radio", url: "radio.html", tags: ["radio", "opcion", "seleccionar", "alternativa"] },
+            { title: "Modal", url: "modal.html", tags: ["modal", "ventana", "dialogo", "popup", "overlay"] },
+            { title: "Navegación", url: "nav.html", tags: ["navegacion", "nav", "menu", "link", "enlace"] },
+            { title: "Tarjetas", url: "tarjetas.html", tags: ["tarjeta", "card", "contenedor", "grupo", "coleccion"] },
+            { title: "Toast", url: "toast.html", tags: ["toast", "notificacion", "alerta", "mensaje"] },
+            { title: "Tooltips", url: "tooltips.html", tags: ["tooltip", "pista", "ayuda", "informacion"] },
+            { title: "Badges", url: "badges.html", tags: ["badge", "etiqueta", "label", "tag"] },
+            { title: "Bordes", url: "bordes.html", tags: ["borde", "outline", "stroke", "linea"] },
+            { title: "Medidas", url: "medidas.html", tags: ["medidas", "tamaño", "dimension", "ancho", "alto"] },
+            { title: "Opacidad", url: "opacidad.html", tags: ["opacidad", "transparencia", "alpha", "visible"] },
+            { title: "Padding", url: "padding.html", tags: ["padding", "espaciado", "interior", "espacio"] },
+            { title: "Margin", url: "margin.html", tags: ["margin", "espaciado", "exterior", "separacion"] }
+        ];
+
+        // Inicializar buscador cuando el DOM esté listo
+        if (window.BuscadorModule) {
+            window.BuscadorModule.Init(indicesBusqueda);
+            console.log('✅ Buscador inicializado');
+        } else {
+            console.warn('⚠️ BuscadorModule no disponible');
+        }
+
+        // Inicializar navegación
+       /// BS.NavigationInit("#nav");
+    </script>
+</body>
+
+</html>

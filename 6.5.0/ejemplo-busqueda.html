@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Búsqueda con Web Worker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .busqueda-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        input[type="search"] {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1.1em;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        input[type="search"]:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .indicador-carga {
+            display: none;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .resultados-container {
+            display: none;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .resultado-item {
+            padding: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.2s ease;
+        }
+
+        .resultado-item:last-child {
+            border-bottom: none;
+        }
+
+        .resultado-item:hover {
+            background: #f9f9f9;
+        }
+
+        .resultado-item a {
+            text-decoration: none;
+            color: #667eea;
+        }
+
+        .resultado-item h4 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .resultado-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #f0f0f0;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .tag mark {
+            background: #ffd700;
+            color: #333;
+            font-weight: bold;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        .resultado-stats {
+            padding: 15px 20px;
+            background: #f9f9f9;
+            color: #999;
+            font-size: 0.9em;
+            text-align: center;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .resultado-vacio,
+        .resultado-error {
+            padding: 40px 20px;
+            text-align: center;
+            color: #999;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .info-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .info-box ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Sistema de Búsqueda</h1>
+            <p>Con Web Worker - Búsqueda no-bloqueante</p>
+        </div>
+
+        <div class="busqueda-box">
+            <div class="input-group">
+                <input 
+                    type="search" 
+                    data-buscar
+                    placeholder="Escribe para buscar (ej: botones, formularios, grid)..."
+                    autocomplete="off"
+                >
+                <div class="indicador-carga" data-cargando>
+                    <div class="spinner"></div>
+                </div>
+            </div>
+
+            <div class="resultados-container" data-resultados></div>
+
+            <div class="info-box">
+                <h3>💡 ¿Qué está pasando?</h3>
+                <ul>
+                    <li>Tu búsqueda corre en un <strong>Web Worker</strong> (thread separado)</li>
+                    <li>La UI permanece <strong>completamente responsiva</strong></li>
+                    <li>Intenta escribir mientras ves cómo no se congela la página</li>
+                    <li>Los resultados se filtran por <strong>relevancia</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="buscador.js"></script>
+</body>
+</html>
