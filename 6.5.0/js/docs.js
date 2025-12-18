@@ -415,6 +415,11 @@
             nombre: "Grupos de Botones", 
             enlace: "grupos_botones.html",
             tags: ["grupos", "botones", "buttons", "button", "click", "interacción", "interaction" ]
+        },
+        {
+            nombre: "Display", 
+            enlace: "display.html",
+            tags: ["display", "visibilidad", "visibility", "mostrar", "ocultar", "show", "hide", "block", "inline", "inline-block" ]
         }
 
     ]

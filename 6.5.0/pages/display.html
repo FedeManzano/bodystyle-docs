@@ -102,9 +102,9 @@
                 <h3 id="3" class="scroll-item mt-3"><i class="bs-check c-green fz-20">&nbsp;</i>Ejemplo 1</h3>
 
                 <p>
-                    En este ejemplo vamos a ver como utilizar los display block en diferentes tamaños de dispositivos 
-                    generando, apartir de ellos, diseños responsivos. <br>
-                    Tomaremos dos contenedores que se encuentar dentro de un contenedor padre configurados 
+                    En este ejemplo vamos a ver cómo utilizar los display block en diferentes tamaños de dispositivos 
+                    generando, a partir de ellos, diseños responsivos. <br>
+                    Tomaremos dos contenedores que se encuentran dentro de un contenedor padre configurados
                     con <span class="badge badge-red">.d-flex</span> y en disposivos pequeños(SM) lo configuraremos con <span class="badge badge-red">.d-block-s</span>.
                 </p>
 
@@ -223,7 +223,7 @@
                 <div class="alert mt-3 mb-3">
                     <h4 class="c-grey-s"><i class=" bs-info c-grey-s fz-28">&nbsp;</i>Ejemplo visual</h4>
                     <p>
-                        A cuantinuación se mostrará un ejemplo visual de cada tipo de display para entender mejor sus diferencias.
+                        A continuación se mostrará un ejemplo visual de cada tipo de display para entender mejor sus diferencias.
                     </p>
                 </div>
 
@@ -435,7 +435,7 @@
                 </p>
 
                 <div class="c-white mb-3">
-                    Esto es un ejemplo de un div con display inline <div class="p-1 bg-red d-inline">DIV</div>, notese como fluye con el texto.
+                    Esto es un ejemplo de un div con display inline <div class="p-1 bg-red d-inline">DIV</div>, nótese cómo fluye con el texto.
                 </div>
 
                 <div class="codigo">
@@ -454,7 +454,7 @@
                 <div class="alert">
                     <h4 class="c-blue-s"><i class=" bs-info c-blue-s fz-28">&nbsp;</i>Información</h4>
                     <p>
-                        Notese que el contenedor div por defecto es (block) y a partir de la clase 
+                        Nótese que el contenedor div por defecto es (block) y a partir de la clase 
                         <span class="badge badge-red">.d-inline</span> se comporta como un elemento inline. 
                     </p>
                 </div>
@@ -472,9 +472,9 @@
 
                 <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Ejemplo Responsive</h4>
                 <p>
-                    En el ejemplo vamos a ver como adaptar el diseño en función al tamaño de pantalla 
+                    En el ejemplo vamos a ver cómo adaptar el diseño en función al tamaño de pantalla 
                     en el cual se visualicen los elementos, por un lado vamos a disponer de dos 
-                    contenedores que se montrarán (inline) en dispositivos mayores a 1030 px y en 
+                    contenedores que se mostrarán (inline) en dispositivos mayores a 1030 px y en 
                     bloque (block) en dispositivos menores a 1030 px.
                 </p>
 
@@ -507,6 +507,202 @@
             </div>
             </article>
 
+
+            <article class="article">
+                <h2 id="8" class="scroll-item">Display None</h2>
+                <p>
+                    El display none es una propiedad que permite ocultar un elemento de la página web, 
+                    haciendo que no ocupe espacio en el diseño. Los elementos con display none no son visibles 
+                    y no afectan la disposición de otros elementos en la página. Esta propiedad es útil para 
+                    ocultar contenido que no se desea mostrar en ciertos contextos o dispositivos.
+                </p>
+
+                <div id="visibilidad">
+                    <div class="bg-red c-white p-2 mb-2">Este contenedor puede ser mostrado u ocultado</div>
+                </div>
+
+                <div class="d-flex gap-1 flex-wrap">
+                    <button class="btn fd-bodyui waves" onclick="mostrar('visibilidad')">Mostrar</button>
+                    <button class="btn fd-bodyui waves" onclick="ocultar('visibilidad')">Ocultar</button>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div id="visibilidad">
+        <div class="bg-red c-white p-2 mb-2">Este contenedor puede ser mostrado u ocultado</div>
+    </div>
+    
+    <div class="d-flex gap-1 flex-wrap">
+        <button class="btn fd-bodyui waves" onclick="mostrar('visibilidad')">Mostrar</button>
+        <button class="btn fd-bodyui waves" onclick="ocultar('visibilidad')">Ocultar</button>
+    </div>
+</pre>
+</div>
+
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    function ocultar(id)
+    {
+        let elemento = document.getElementById(id)
+        if(elemento){
+            elemento.classList.add("d-none");
+    }
+    }
+    function mostrar(id)
+    {
+        let elemento = document.getElementById(id)
+        if(elemento){
+            elemento.classList.remove("d-none");
+        }
+    }
+</pre>
+</div>
+                <h4 class="mb-3"><i class="bs-check c-green fz-20">&nbsp;</i>Ejemplo Responsive</h4>
+                <p>
+                    Es posible permitirle a un determinado elemento visualizarse en ciertos dispositivos
+                    y en otros no, para ello contamos con las siguientes clases:
+                </p>
+
+                <div class="table-responsive">
+                    <table class="selector">
+                        <thead>
+                            <tr>
+                                <th>Clase</th>
+                                <th>Medida</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>.d-none-m</td>
+                                <td>Medianos (768px a 1031px)</td>
+                                <td>Oculta el elemento en dispositivos medianos.</td>
+                            </tr>
+                            <tr>
+                                <td>.d-none-s</td>
+                                <td>Pequeños (400px a 767px)</td>
+                                <td>Oculta el elemento en dispositivos pequeños.</td>
+                            </tr>
+                            <tr>
+                                <td>.d-none-xs</td>
+                                <td>Extra pequeños (menos de 400px)</td>
+                                <td>Oculta el elemento en dispositivos extra pequeños.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-red p-2 c-white d-none-m mt-3">
+                    Este contenedor se oculta en dispositivos medianos y más pequeños.
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="bg-red p-2 c-white d-none-m mt-3">
+        Este contenedor se oculta en dispositivos medianos y más pequeños.
+    </div>
+</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h2 id="t9" class="scroll-item">Display Flex</h2>
+                <p>
+                    La propiedad display flex es una herramienta poderosa para crear diseños flexibles y adaptativos. 
+                    Al utilizar display flex, los elementos hijos de un contenedor se distribuyen de manera eficiente, 
+                    permitiendo un control preciso sobre la alineación, el orden y el tamaño de los elementos dentro del contenedor. 
+                    Esta propiedad es especialmente útil para crear interfaces de usuario responsivas que se ajustan automáticamente 
+                    a diferentes tamaños de pantalla y dispositivos.
+                </p>
+
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class=" bs-info c-blue-s fz-28">&nbsp;</i>Información</h4>
+                    <p>
+                        Para más información sobre display flex y sus propiedades asociadas, 
+                        visita la sección de <a href="flexbox.html" class="link com-trigger" data-info="Propiedades de flexbox de la biblioteca <span class='f-w-7'>Bodystyle</span>">Flexbox</a>.
+                    </p>
+                </div>
+
+                <h4 class="mb-3"><i class="bs-check c-green fz-20">&nbsp;</i>Ejemplo Block - Flex</h4>
+                <p>
+                    Sin importar cuál es el display del elemento hijo, flexbox ubica lateralmente 
+                    el contenido modificando su ancho de manera eficiente, utilizando solo el espacio que necesite 
+                    el elemento.
+                </p>
+
+                <div id="flex-block" class="d-flex bg-gray p-2 mb-3">
+                    <div class="p-2 bg-red c-white">Elemento 1</div>
+                    <div class="p-2 bg-blue c-white">Elemento 2</div>
+                    <div class="p-2 bg-green c-white">Elemento 3</div>
+                </div>
+
+                <div class="d-flex gap-1">
+                    <button onclick="flex_block('flex-block', 'block')" class="btn fd-bodyui">Block</button>
+                    <button onclick="flex_block('flex-block', 'flex')" class="btn bg-gray">Flex</button>
+                </div>
+
+                <div class="alert mt-3">
+                    <h4 class="c-blue-s"><i class=" bs-info c-blue-s fz-28">&nbsp;</i>Información</h4>
+                    <p>
+                        Nótese que al utilizar display flex en el contenedor padre, los elementos hijos 
+                        se alinean lateralmente sin importar su display original (block, inline, inline-block).
+                    </p>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div id="flex-block" class="d-flex bg-gray p-2 mb-3">
+        <div class="p-2 bg-red c-white">Elemento 1</div>
+        <div class="p-2 bg-blue c-white">Elemento 2</div>
+        <div class="p-2 bg-green c-white">Elemento 3</div>
+    </div>
+    <div class="d-flex gap-1">
+        <button onclick="flex_block('flex-block', 'block')" class="btn fd-bodyui">Block</button>
+        <button onclick="flex_block('flex-block', 'flex')" class="btn bg-gray">Flex</button>
+    </div>
+</pre>
+</div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    function flex_block (id, tipo)
+    {
+        const contenedor = document.getElementById(id);
+        if(!contenedor)
+            return 
+        if(tipo === 'block'){
+            contenedor.classList.remove("d-flex");
+        } else if (tipo === 'flex'){
+            contenedor.classList.add("d-flex");
+        }
+    }
+</pre>
+</div>
+            </article>
             <article class="article">
                 <h3 id="autor" class="scroll-item">Autor</h3>
                 <div id="autor_content"></div>
@@ -527,6 +723,8 @@
             <li><a href="#5">📇 Margin Collapse</a></li>
             <li><a href="#6">📇 Ejemplo Dinámico</a></li>
             <li><a href="#7">📇 Display Inline</a></li>
+            <li><a href="#8">📇 Display None</a></li>
+            <li><a href="#9">📇 Display Flex</a></li>
             <li><a href="#autor">🧑‍🏫 Autor</a></li>
         </ul>
     </div>
@@ -544,6 +742,34 @@
         BS.PersonalizadoInit({ori: "disparador"})
         document.querySelectorAll("#l1 ul li a")[10].classList.add("c-red");
 
+
+
+        function flex_block (id, tipo)
+        {
+            const contenedor = document.getElementById(id);
+            if(!contenedor)
+                return 
+            if(tipo === 'block'){
+                contenedor.classList.remove("d-flex");
+            } else if (tipo === 'flex'){
+                contenedor.classList.add("d-flex");
+            }
+        }
+        function ocultar(id)
+        {
+            let elemento = document.getElementById(id)
+            if(elemento){
+                elemento.classList.add("d-none");
+            }
+        }
+
+        function mostrar(id)
+        {
+            let elemento = document.getElementById(id)
+            if(elemento){
+                elemento.classList.remove("d-none");
+            }
+        }
 
         function block2() {
             const test = document.getElementById("test2");
