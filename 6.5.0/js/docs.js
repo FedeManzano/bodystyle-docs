@@ -109,7 +109,7 @@
     document.getElementById("sidebar").innerHTML =
         `
         <div class="bs-sidebar-title" data-target="#l1">
-            <label>🚀 Inicio</label>
+            <label>🚀 Iniciación</label>
         </div>
         <div class="bs-sidebar-drop-list" id="l1">
             <ul>
@@ -144,7 +144,7 @@
                     </ul>
             </div>
         <div class="bs-sidebar-title" data-target="#l3">
-            <label>Archivos</label>
+            <label>🎛️ Alineamiento</label>
         </div>
         <div class="bs-sidebar-drop-list" id="l3">
             <ul>
@@ -155,9 +155,31 @@
             </ul>
         </div>
         <div class="bs-sidebar-title" data-target="#l4">
-            <label>Cuentas</label>
+            <label>📝 Formularios</label>
         </div>
         <div class="bs-sidebar-drop-list" id="l4">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+        <div class="bs-sidebar-title" data-target="#l5">
+            <label>🟨 JS</label>
+        </div>
+        <div class="bs-sidebar-drop-list" id="l5">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+        <div class="bs-sidebar-title" data-target="#l6">
+            <label>🔥 Navegación</label>
+        </div>
+        <div class="bs-sidebar-drop-list" id="l6">
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">Perfiles</a></li>
