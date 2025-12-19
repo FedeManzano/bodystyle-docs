@@ -243,27 +243,52 @@
             </article>
 
             <article class="article">
-                <h2 id="4" class="scroll-item">Sección 4</h2>
+                <h2 id="4" class="scroll-item">Grupos y Flexbox</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet odio pariatur soluta animi quae
-                    neque, aspernatur molestiae sunt, ex odit iusto dignissimos et aperiam tenetur. Culpa modi
-                    recusandae
-                    dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus delectus doloribus
-                    vitae explicabo fugit vel reprehenderit! Iure quaerat dolorem architecto? Ipsa adipisci quod aliquam
-                    nisi, animi optio voluptates laboriosam vitae.
+                    Lo grupos de botones internamente son reacomodados por un contenedor flexbox, 
+                    que en algunas oportunidades, en equipos de pantalla pequeña pueden salirse del
+                    contenedor padre. <br>
+                    Por esta razón a partir de clases de Flexbox de bodystyle, podemos forzar el reacomodamiento
+                    de los botones dentro del contenedor padre.
                 </p>
 
-<div class="codigo">
+                <div class="btn-group-lg flex-column-s ">
+                    <button class="btn fd-bodyui bor-rad-0"><i class="bs-home fz-18">&nbsp;</i> Inicio</button>
+                    <button class="btn fd-bodyui"><i class="bs-user fz-18">&nbsp;</i> Perfil</button>
+                    <button class="btn fd-bodyui"><i class="bs-tag fz-18">&nbsp;</i> Versión</button>
+                    <button class="btn fd-bodyui"><i class="bs-info fz-18">&nbsp;</i> Info</button>
+                    <button class="btn fd-bodyui bor-rad-0"><i class="bs-big-data fz-18">&nbsp;</i> Almacenamiento</button>
+                </div>
+
+                  
+
+<div class="codigo mt-3">
     <label for="cod-html" 
     class="label">
         HTML 
         <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
     </label>
 <pre class="cod-html pt-1">
-    <!-- Ejemplo de código HTML -->
-    <div class="c-white">Estos es un ejemplo de código</div>
+    <!-- Se utiliza la clase .flex-column-s  para que rompa el flexbox horizontal en pantallas pequeñas -->
+    <!-- Esto es posible debido a que internamente los grupos de botones utilizan flexbox -->
+    <div class="btn-group-lg flex-column-s ">
+        <button class="btn fd-bodyui bor-rad-0"><i class="bs-home fz-18">&nbsp;</i> Inicio</button>
+        <button class="btn fd-bodyui"><i class="bs-user fz-18">&nbsp;</i> Perfil</button>
+        <button class="btn fd-bodyui"><i class="bs-tag fz-18">&nbsp;</i> Versión</button>
+        <button class="btn fd-bodyui"><i class="bs-info fz-18">&nbsp;</i> Info</button>
+        <button class="btn fd-bodyui bor-rad-0"><i class="bs-big-data fz-18">&nbsp;</i> Almacenamiento</button>
+    </div>
 </pre>
 </div>
+
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class=" bs-info c-blue-s fz-28">&nbsp;</i>Información</h4>
+                    <p>
+                        Nótese que en el ejemplo anterior se ha utilizado la clase <span class="badge badge-red">.bor-rad-0</span>
+                        para eliminar el borde redondeado de los botones que quedan en los extremos del grupo. <br>
+                        Se recomienda ver la documentación de acerca de <a href="bordes.html" class="link">Bordes</a>.
+                    </p>
+                </div>
 
             </article>
 
@@ -282,7 +307,7 @@
             <li><a href="#1">📇 Grupos Botones</a></li>
             <li><a href="#2">📇 Default</a></li>
             <li><a href="#3">📇 Tamaños</a></li>
-            <li><a href="#4">📇 Utilizar Bodystyle</a></li>
+            <li><a href="#4">📇 Grupos Flexbox</a></li>
             <li><a href="#autor">🧑‍🏫 Autor</a></li>
         </ul>
     </div>
