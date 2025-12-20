@@ -442,6 +442,11 @@
             nombre: "Display", 
             enlace: "display.html",
             tags: ["display", "visibilidad", "visibility", "mostrar", "ocultar", "show", "hide", "block", "inline", "inline-block" ]
+        },
+        {
+            nombre: "Tarjetas", 
+            enlace: "tarjetas.html",
+            tags: ["tarjetas", "cards", "card", "bloques", "contenido", "content" ]
         }
 
     ]
