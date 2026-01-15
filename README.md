@@ -6,7 +6,7 @@
 <h1 align="center">📚 Documentación Bodystyle</h1>
 
 <p align="center">
-  <a href="https://github.com/FedeManzano/bodystyle"><img src="https://img.shields.io/badge/Bodystyle-v5.8.0-red" alt="Bodystyle Version"></a>
+  <a href="https://github.com/FedeManzano/bodystyle"><img src="https://img.shields.io/badge/Bodystyle-v6.5.0-red" alt="Bodystyle Version"></a>
   <a href="https://github.com/FedeManzano/bodystyle/blob/master/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-purple" alt="License"></a>
   <a href="https://bodystyle.webcindario.com"><img src="https://img.shields.io/badge/Docs-Online-blue" alt="Documentation"></a>
   <a href="https://mega.nz/file/8cFFjSYZ#y82eMpvPRGRoQZUA8Lktuj3oHmFVMonJAE8hgFHj1MA"><img src="https://img.shields.io/badge/Download-MEGA-green" alt="Download"></a>
