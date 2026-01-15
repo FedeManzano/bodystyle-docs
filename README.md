@@ -9,7 +9,7 @@
   <a href="https://github.com/FedeManzano/bodystyle"><img src="https://img.shields.io/badge/Bodystyle-v5.8.0-red" alt="Bodystyle Version"></a>
   <a href="https://github.com/FedeManzano/bodystyle/blob/master/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-purple" alt="License"></a>
   <a href="https://bodystyle.webcindario.com"><img src="https://img.shields.io/badge/Docs-Online-blue" alt="Documentation"></a>
-  <a href="https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk"><img src="https://img.shields.io/badge/Download-MEGA-green" alt="Download"></a>
+  <a href="https://mega.nz/file/8cFFjSYZ#y82eMpvPRGRoQZUA8Lktuj3oHmFVMonJAE8hgFHj1MA"><img src="https://img.shields.io/badge/Download-MEGA-green" alt="Download"></a>
 </p>
 
 <p align="center">
@@ -30,14 +30,14 @@ Este repositorio contiene la **documentación oficial** de [Bodystyle](https://g
 La documentación está organizada como un sitio web interactivo con ejemplos prácticos, código de muestra y guías detalladas para cada componente de la biblioteca.
 
 ### 📦 Versiones Documentadas
-
-- **v5.8.0** - Versión actual (recomendada)
+- **v6.5.0** - Versión actual (recomendada)
+- **v5.8.0** - Versión estable anterior
 - **v5.0.0** - Versión estable anterior
 - **v4.8.0** - Versión legacy
 - **v4.5.0** - Versión legacy
 - **v4.0.0** - Versión inicial
 
-## 🎉 Novedades en v5.8.0
+## 🎉 Novedades en v6.5.0
 
 - ⚡ **Migración a Vanilla JS** - Se eliminó la dependencia de jQuery, utilizando JavaScript nativo para un mejor rendimiento.
 - 📉 **Reducción del Bundle** - El tamaño del bundle se redujo de **244 KB a 180 KB** (26% de reducción).
@@ -116,8 +116,7 @@ Visita la documentación completa en: **[bodystyle.webcindario.com](https://body
 ### 💾 Descarga de la Documentación
 
 **Recomendado** - Descarga sin anuncios del hosting:
-
-- 📥 [Documentación v5.8.0](https://mega.nz/file/dFMVnaSD#Bl1jtd8F_wN4Egd-_ijJdodQPOkI0owOw8N3kT7sgCo) **Lasted Versión actual**
+- 📥 [Documentación v6.5.0](https://mega.nz/file/BBFwyALC#niLWlUCjOu9hNTyTwAGjAz-pGGQjKhs9BH5XaavsXZM) **Lasted Versión actual**
 - 📦 [Todas las versiones](https://mega.nz/folder/VdMHERDR#gjbVQoWuKsIjNYJ39X1Dcw)
 
 ### 📋 Historial de Cambios
