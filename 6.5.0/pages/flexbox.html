@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Clases CSS para manejar el flexbox.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/flexbox.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Flexbox</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">📐 Flexbox</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Bodystyle incluye una serie de clases CSS para facilitar el uso de Flexbox en tus proyectos web.
+                Estas clases te permiten crear diseños flexibles y responsivos de manera sencilla.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Introducción</h2>
+                <p>
+                    Bodystyle proporciona un conjunto de clases que permitirán utilizar la potente herramienta de flexbox de CSS, de manera 
+                    tal que solo utilizando HTML podamos aplicar estos estilos y reacomodar los elementos de manera sencilla. <br>
+                    Flexbox permite distribuir el espacio entre los elementos de una interfaz y mejorar la alineación de los mismos y 
+                    el reacomodamiento lateral y vertical de los elementos dentro de un contenedor, incluso cuando su tamaño es desconocido o dinámico.
+                </p>
+                
+                <div class="d-flex">
+                    <div class="p-2 bg-bodyui c-white">1</div>
+                    <div class="p-2 bg-bodyui c-white">2</div>
+                    <div class="p-2 bg-bodyui c-white">3</div>
+                </div>
+
+                <p class="mt-3">
+                    Nótese como los tres <spam class="badge badge-black">div</spam> se acomodan 
+                    horizontalmente, si bien son etiquetas html en bloquem flexbox ajusta el ancho de estos 
+                    elementos para posicionarlos uno al lado del otro.
+                </p>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- .d-flex para acodar a los divs de manera horizontal -->
+    <div class="d-flex">
+        <div class="p-2 bg-bodyui c-white">1</div>
+        <div class="p-2 bg-bodyui c-white">2</div>
+        <div class="p-2 bg-bodyui c-white">3</div>
+    </div>
+</pre>
+</div>
+
+            <div class="alert">
+                <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                <p>
+                    Nótese que se utilizó la clase <span class="badge badge-red">.d-flex</span> y 
+                    que el contenido quedó alineado a la izquierda de manera horizontal.
+                </p>
+            </div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        CSS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    /** En CSS la propiedad es display:flex */
+    .d-flex {
+        display: flex;
+    }
+</pre>
+</div>
+
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Justificación</h2>
+                <p>
+                    La justificación de los elementos dentro de un contenedor flexbox se puede controlar utilizando 
+                    las clases de justificación que Bodystyle ofrece. Estas clases permiten alinear los elementos 
+                    a la izquierda, derecha, centro, espacio entre ellos, entre otros.
+                </p>
+
+                 <div class="d-flex just-center">
+                    <div class="p-2 bg-bodyui c-white">1</div>
+                    <div class="p-2 bg-bodyui c-white">2</div>
+                    <div class="p-2 bg-bodyui c-white">3</div>
+                </div>
+                <div class="d-flex just-start mt-1">
+                    <div class="p-2 bg-bodyui c-white">1</div>
+                    <div class="p-2 bg-bodyui c-white">2</div>
+                    <div class="p-2 bg-bodyui c-white">3</div>
+                </div>
+                <div class="d-flex just-end mt-1">
+                    <div class="p-2 bg-bodyui c-white">1</div>
+                    <div class="p-2 bg-bodyui c-white">2</div>
+                    <div class="p-2 bg-bodyui c-white">3</div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex just-center">
+        <div class="p-2 bg-bodyui c-white">1</div>
+        <div class="p-2 bg-bodyui c-white">2</div>
+        <div class="p-2 bg-bodyui c-white">3</div>
+    </div>
+    <div class="d-flex just-start mt-1">
+        <div class="p-2 bg-bodyui c-white">1</div>
+        <div class="p-2 bg-bodyui c-white">2</div>
+        <div class="p-2 bg-bodyui c-white">3</div>
+    </div>
+    <div class="d-flex just-end mt-1">
+        <div class="p-2 bg-bodyui c-white">1</div>
+        <div class="p-2 bg-bodyui c-white">2</div>
+        <div class="p-2 bg-bodyui c-white">3</div>
+    </div>
+</pre>
+</div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        CSS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    /** Justificación al centro */
+    .just-center {
+        justify-content: center !important;
+    }
+
+    /** Justificación al inicio (izquierda) */
+    .just-start {
+        justify-content: flex-start !important;
+    }
+
+    /** Justificación al final (derecha) */
+    .just-end {
+        justify-content: flex-end !important;
+    }
+</pre>
+</div>
+
+
+                <h3 class="scoll-item" id="4">Space-Around</h3>
+                <p>
+                    En muchas ocasiones es necesario distribuir los elementos con espacios iguales a su alrededor.
+                    Para ello Bodystyle incluye la clase <span class="badge badge-red">.just-around</span>.
+                </p>
+
+                    <div class="d-flex just-around">
+                        <div class="p-2 bg-bodyui c-white">1</div>
+                        <div class="p-2 bg-bodyui c-white">2</div>
+                        <div class="p-2 bg-bodyui c-white">3</div>
+                    </div>
+
+                    <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex just-around">
+        <div class="p-2 bg-bodyui c-white">1</div>
+        <div class="p-2 bg-bodyui c-white">2</div>
+        <div class="p-2 bg-bodyui c-white">3</div>
+    </div>
+</pre>
+</div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        CSS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    /** Justificación al centro */
+    .d-flex {
+        display: flex;
+    }
+
+    /** Justificación con espacio alrededor */
+    .just-around {
+        justify-content: space-around !important;
+    }
+</pre>
+</div>
+
+            <h3 class="scroll-item" id="5">Space-Between</h3>
+            <p>
+                Si disponenos de dos contenedores y pretendemos que estos se ubiquen en los extremos
+                del contenedor padre, podemos utilizar la clase <span class="badge badge-red">.just-between</span>.
+            </p>
+
+
+            <div class="d-flex just-between">
+                <div class="p-2 bg-bodyui c-white">1</div>
+                <div class="p-2 bg-bodyui c-white">2</div>
+            </div>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex just-between">
+        <div class="p-2 bg-bodyui c-white">1</div>
+        <div class="p-2 bg-bodyui c-white">2</div>
+    </div>
+</pre>
+</div>
+
+
+            <h3 class="scroll-item mt-3" id="6">Responsive</h3>
+            <p>
+                Bodystyle cuenta con las clases de justificación personalizadas para cada tamaño de pantalla. De manera tal 
+                que para un determinado dispositivo podamos definir una justificación diferente a la de otro dispositivo.
+            </p>
+
+            <div class="d-flex just-center just-start-m just-end-s just-around-xs">
+                <div class="p-2 bg-bodyui c-white">1</div>
+                <div class="p-2 bg-bodyui c-white">2</div>
+                <div class="p-2 bg-bodyui c-white">3</div>
+            </div>
+
+            <p>
+                Si achicamos el tamaño de pantalla, notaremos como la justificación de los elementos cambia según el dispositivo.
+            </p>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex just-center just-start-m just-end-s just-around-xs">
+        <div class="p-2 bg-bodyui c-white">1</div>
+        <div class="p-2 bg-bodyui c-white">2</div>
+        <div class="p-2 bg-bodyui c-white">3</div>
+    </div>
+</pre>
+</div>
+
+            <h3 class="scroll-item" id="7">Tabla Resumen de Clases</h3>
+            <p>
+                A continuación se presenta un resumen de todas las clases de justificación disponibles en Bodystyle:
+            </p>
+
+            <div class="tabla-scroll">
+                <table class="tabla-documentacion">
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Propiedad CSS</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge badge-red">.just-center</span></td>
+                            <td><code>justify-content: center</code></td>
+                            <td>Centra los elementos en el eje principal</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-start</span></td>
+                            <td><code>justify-content: flex-start</code></td>
+                            <td>Alinea los elementos al inicio (izquierda)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-end</span></td>
+                            <td><code>justify-content: flex-end</code></td>
+                            <td>Alinea los elementos al final (derecha)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-around</span></td>
+                            <td><code>justify-content: space-around</code></td>
+                            <td>Distribuye los elementos con espacios iguales alrededor</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-between</span></td>
+                            <td><code>justify-content: space-between</code></td>
+                            <td>Distribuye los elementos con espacios iguales entre ellos</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-center-m</span></td>
+                            <td><code>justify-content: center</code></td>
+                            <td>Justificación al centro en pantallas medianas</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-start-m</span></td>
+                            <td><code>justify-content: flex-start</code></td>
+                            <td>Justificación al inicio en pantallas medianas</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-end-m</span></td>
+                            <td><code>justify-content: flex-end</code></td>
+                            <td>Justificación al final en pantallas medianas</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-around-m</span></td>
+                            <td><code>justify-content: space-around</code></td>
+                            <td>Distribuye con espacios iguales en pantallas medianas</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-between-m</span></td>
+                            <td><code>justify-content: space-between</code></td>
+                            <td>Distribuye con espacios iguales en pantallas medianas</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-center-s</span></td>
+                            <td><code>justify-content: center</code></td>
+                            <td>Justificación al centro en pantallas pequeñas</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-start-s</span></td>
+                            <td><code>justify-content: flex-start</code></td>
+                            <td>Justificación al inicio en pantallas pequeñas</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-end-s</span></td>
+                            <td><code>justify-content: flex-end</code></td>
+                            <td>Justificación al final en pantallas pequeñas</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-around-s</span></td>
+                            <td><code>justify-content: space-around</code></td>
+                            <td>Distribuye con espacios iguales en pantallas pequeñas</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-between-s</span></td>
+                            <td><code>justify-content: space-between</code></td>
+                            <td>Distribuye con espacios iguales en pantallas pequeñas</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-center-xs</span></td>
+                            <td><code>justify-content: center</code></td>
+                            <td>Justificación al centro en pantallas extra pequeñas</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-start-xs</span></td>
+                            <td><code>justify-content: flex-start</code></td>
+                            <td>Justificación al inicio en pantallas extra pequeñas</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-end-xs</span></td>
+                            <td><code>justify-content: flex-end</code></td>
+                            <td>Justificación al final en pantallas extra pequeñas</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-around-xs</span></td>
+                            <td><code>justify-content: space-around</code></td>
+                            <td>Distribuye con espacios iguales en pantallas extra pequeñas</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.just-between-xs</span></td>
+                            <td><code>justify-content: space-between</code></td>
+                            <td>Distribuye con espacios iguales en pantallas extra pequeñas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="scroll-item mt-4" id="8">Casos de Uso</h3>
+            <p>
+                A continuación se describen los casos de uso recomendados para cada clase de justificación:
+            </p>
+
+            <h4 class="mt-3"><span class="badge badge-red">.just-start</span> - Alineación al Inicio</h4>
+            <p>
+                <strong>Cuándo usar:</strong> Cuando deseas que los elementos se alineen al inicio del contenedor 
+                (izquierda en dirección LTR). Ideal para listas de elementos, menús horizontales o formularios donde el 
+                contenido debe comenzar desde el lado izquierdo sin espacios adicionales.
+            </p>
+            <p><strong>Ejemplo:</strong> Menú de navegación, lista de botones de acción, breadcrumbs.</p>
+
+            <h4 class="mt-3"><span class="badge badge-red">.just-center</span> - Centrado</h4>
+            <p>
+                <strong>Cuándo usar:</strong> Cuando necesitas centrar los elementos en el contenedor. Es la opción 
+                perfecta para crear layouts simétricos, centrar iconos, logos o grupos de elementos para dar énfasis visual.
+            </p>
+            <p><strong>Ejemplo:</strong> Logo en el centro, botones principales centralizados, grupo de iconos de redes sociales.</p>
+
+            <h4 class="mt-3"><span class="badge badge-red">.just-end</span> - Alineación al Final</h4>
+            <p>
+                <strong>Cuándo usar:</strong> Cuando los elementos deben alinearse al final del contenedor 
+                (derecha en dirección LTR). Útil para botones de acción secundarios, botones de cerrar o elementos 
+                que deben estar al extremo derecho.
+            </p>
+            <p><strong>Ejemplo:</strong> Botón "Guardar" al lado derecho de un formulario, botón cerrar de un modal, navegación derecha.</p>
+
+            <h4 class="mt-3"><span class="badge badge-red">.just-between</span> - Espacio Entre Elementos</h4>
+            <p>
+                <strong>Cuándo usar:</strong> Cuando tienes dos o más elementos y deseas distribuirlos ocupando todo 
+                el ancho disponible, con el primer elemento al inicio y el último al final. Ideal para headers con logo 
+                en un extremo y menú en el otro.
+            </p>
+            <p><strong>Ejemplo:</strong> Header con logo a la izquierda y menú a la derecha, barra de utilidades con acciones separadas.</p>
+
+            <h4 class="mt-3"><span class="badge badge-red">.just-around</span> - Espaciado Alrededor</h4>
+            <p>
+                <strong>Cuándo usar:</strong> Cuando deseas distribuir los elementos con espacios iguales a su alrededor. 
+                Los elementos tendrán el mismo espacio antes y después de ellos. Perfecto para galerías, tarjetas de productos 
+                o cuando quieres que los elementos estén bien distribuidos visualmente.
+            </p>
+            <p><strong>Ejemplo:</strong> Galería de productos, filas de tarjetas, botones de opciones múltiples bien espaciados.</p>
+
+            <h4 class="mt-3"><span class="badge badge-red">.just-center-m</span>, <span class="badge badge-red">.just-start-m</span>, etc. - Responsive</h4>
+            <p>
+                <strong>Cuándo usar:</strong> Cuando necesitas que la justificación cambie según el tamaño de la pantalla. 
+                Combina diferentes clases (base, -m, -s, -xs) para adaptar el layout a cada dispositivo. Por ejemplo, 
+                elementos centrados en escritorio pero alineados al inicio en móviles.
+            </p>
+            <p><strong>Ejemplo:</strong> 
+                <code>class="d-flex just-center just-start-m just-around-s"</code> 
+                - Centra en desktop, inicio en tablet, distribuido en móvil.
+            </p>
+
+            <div class="alert mt-3">
+                <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Consejo</h4>
+                <p>
+                    La mejor práctica es combinar <span class="badge badge-red">.just-center</span> con 
+                    <span class="badge badge-red">.just-start-s</span> o <span class="badge badge-red">.just-start-xs</span> 
+                    para layouts más legibles en dispositivos móviles. De esta manera aprovechas mejor el espacio 
+                    disponible en pantallas pequeñas.
+                </p>
+            </div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="9" class="scroll-item">Alineación</h2>
+                <p>
+                    En el aprtado anterior vimos la justificación de los elementos en el eje principal del contenedor flexbox.
+                    Ahora veremos cómo alinear los elementos en el eje transversal utilizando las clases de alineación que
+                    Bodystyle ofrece.
+                </p>
+
+                <div class="d-flex ali-center bg-gray-s" style="height: 160px;">
+                    <div class="p-2 bg-bodyui c-white">1</div>
+                    <div class="p-2 bg-bodyui c-white">2</div>
+                    <div class="p-2 bg-bodyui c-white">3</div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- .ali-center para alinear verticalmente al centro -->
+    <div class="d-flex ali-center bg-gray-s" style="height: 160px;">
+        <div class="p-2 bg-bodyui c-white">1</div>
+        <div class="p-2 bg-bodyui c-white">2</div>
+        <div class="p-2 bg-bodyui c-white">3</div>
+    </div>
+</pre>
+</div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    /** Alineación al centro en el eje transversal */
+    .ali-center {
+        align-items: center !important;
+    }
+</pre>
+</div>
+
+                <h3 class="scroll-item" id="10"><i class="bs-check c-green fz-20">&nbsp;</i>Start / Center / End</h3>
+
+                <div class="d-flex ali-start bg-gray-s bor-1" style="height: 160px;">
+                    <div class="p-2 bg-bodyui c-white">1</div>
+                    <div class="p-2 bg-bodyui c-white">2</div>
+                    <div class="p-2 bg-bodyui c-white">3</div>
+                </div>
+
+                <div class="d-flex ali-center bg-gray-s bor-1" style="height: 160px;">
+                    <div class="p-2 bg-bodyui c-white">1</div>
+                    <div class="p-2 bg-bodyui c-white">2</div>
+                    <div class="p-2 bg-bodyui c-white">3</div>
+                </div>
+
+                <div class="d-flex ali-end bg-gray-s bor-1" style="height: 160px;">
+                    <div class="p-2 bg-bodyui c-white">1</div>
+                    <div class="p-2 bg-bodyui c-white">2</div>
+                    <div class="p-2 bg-bodyui c-white">3</div>
+                </div>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex ali-start bg-gray-s bor-1" style="height: 160px;">
+        <div class="p-2 bg-bodyui c-white">1</div>
+        <div class="p-2 bg-bodyui c-white">2</div>
+        <div class="p-2 bg-bodyui c-white">3</div>
+    </div>
+    <div class="d-flex ali-center bg-gray-s bor-1" style="height: 160px;">
+        <div class="p-2 bg-bodyui c-white">1</div>
+        <div class="p-2 bg-bodyui c-white">2</div>
+        <div class="p-2 bg-bodyui c-white">3</div>
+    </div>
+    <div class="d-flex ali-end bg-gray-s bor-1" style="height: 160px;">
+        <div class="p-2 bg-bodyui c-white">1</div>
+        <div class="p-2 bg-bodyui c-white">2</div>
+        <div class="p-2 bg-bodyui c-white">3</div>
+    </div>
+</pre>
+</div>
+
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    /** Alineación al centro en el eje transversal */
+    .ali-center {
+        align-items: center !important;
+    }
+
+    /** Alineación al inicio en el eje transversal */
+    .ali-start {
+        align-items: flex-start !important;
+    }
+
+    /** Alineación al final en el eje transversal */
+    .ali-end {
+        align-items: flex-end !important;
+    }
+</pre>
+</div>
+
+                <h3 class="scroll-item" id="11">Alineación Stretch</h3>
+                <p>
+                    La alineación stretch permite que los elementos hijos se estiren para llenar el contenedor 
+                    en el eje transversal. Esto es útil cuando deseas que los elementos tengan la misma altura 
+                    o ancho dentro del contenedor flexbox.
+                </p>
+                <div class="d-flex ali-stretch bg-gray-s bor-1" style="height: 500px;">
+                    <div class="p-2 bg-bodyui c-white mb-1">1</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">2</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">3</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">4</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">5</div>
+                </div>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- .ali-stretch para alinear verticalmente con stretch -->
+    <div class="d-flex ali-stretch bg-gray-s bor-1" style="height: 500px;">
+        <div class="p-2 bg-bodyui c-white mb-1">1</div>
+        <div class="p-2 bg-bodyui c-white mb-1">2</div>
+        <div class="p-2 bg-bodyui c-white mb-1">3</div>
+        <div class="p-2 bg-bodyui c-white mb-1">4</div>
+        <div class="p-2 bg-bodyui c-white mb-1">5</div>
+    </div>
+</pre>
+</div>
+
+            <h3 class="scroll-item" id="12">Alineación Baseline</h3>
+            <p>
+                La alineación baseline permite que los elementos hijos se alineen según su línea base de texto. 
+                Esto es útil cuando tienes elementos de diferentes alturas y deseas que sus textos estén alineados 
+                horizontalmente.
+            </p>
+
+            <div class="d-flex ali-baseline bg-gray-s bor-1 p-3" style="height: 150px;">
+                <div class="p-2 bg-bodyui c-white mb-1 ta-c" style="height: 40px;">1</div>
+                <div class="p-2 bg-bodyui c-white mb-1" style="height: 45px;">2</div>
+                <div class="p-2 bg-bodyui c-white mb-1" style="height: 50px;">3</div>
+                <div class="p-2 bg-bodyui c-white mb-1" style="height: 55px;">4</div>
+                <div class="p-2 bg-bodyui c-white mb-1" style="height: 60px;">5</div>
+            </div>
+
+            <h3 class="scroll-item mt-3" id="13">Responsive</h3>
+
+            <p>
+                Todas las clases de alineación cuentan con variantes para cada tamaño de pantalla, permitiendo
+                adaptar la alineación de los elementos según el dispositivo utilizado.
+            </p>
+
+            <div class="table-responsive">
+                <table class="selector vertical-border">
+                    <thead>
+                        <tr>
+                            <th>
+                                Clase
+                            </th>
+                            <th>
+                                Propiedad CSS
+                            </th>
+                            <th>
+                                Descripción 
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge badge-red">.ali-center-[m, s, xs]</span></td>
+                            <td><code>align-items: center</code></td>
+                            <td>Alinea los elementos al centro en el eje transversal en los diferentes tamaños de pantalla</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.ali-start-[m, s, xs]</span></td>
+                            <td><code>align-items: flex-start</code></td>
+                            <td>Alinea los elementos al inicio en el eje transversal en los diferentes tamaños de pantalla</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.ali-end-[m, s, xs]</span></td>
+                            <td><code>align-items: flex-end</code></td>
+                            <td>Alinea los elementos al final en el eje transversal en los diferentes tamaños de pantalla</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.ali-stretch-[m, s, xs]</span></td>
+                            <td><code>align-items: stretch</code></td>
+                            <td>Estira los elementos para llenar el contenedor en el eje transversal en los diferentes tamaños de pantalla</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-red">.ali-baseline-[m, s, xs]</span></td>
+                            <td><code>align-items: baseline</code></td>
+                            <td>Alinea los elementos según su línea base de texto en los diferentes tamaños de pantalla</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="alert mt-3">
+                <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                <p>
+                    Recuerda combinar las clases de alineación con las clases de justificación para lograr el diseño 
+                    deseado en tus proyectos web. También es importante aclarar que las diferentes clases de alineamiento 
+                    pueden ser aplicadas a un solo elemento en diferentes tamaños de pantalla, permitiendo una gran flexibilidad en el diseño responsivo.
+                </p>
+            </div>
+            </article>
+            <article class="article">
+                <h2 id="14" class="scroll-item">Gap</h2>
+                <p>
+                    En muchas oportunidades vamos a necesitar generar un espacio entre los 
+                    elementos de un contenedor flexbox, por esta razón, para que los elementos NO 
+                    queden pegados entre sí, Bodystyle incluye la clase <span class="badge badge-red">.gap-*</span>.
+                </p>
+
+                <div class="d-flex gap-2">
+                    <div class="p-2 bg-bodyui c-white">1</div>
+                    <div class="p-2 bg-bodyui c-white">2</div>
+                    <div class="p-2 bg-bodyui c-white">3</div>
+                </div>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- .gap-2 para generar un espacio entre los elementos -->
+    <!-- 2 = 10px-->
+    <div class="d-flex gap-2">
+        <div class="p-2 bg-bodyui c-white">1</div>
+        <div class="p-2 bg-bodyui c-white">2</div>
+        <div class="p-2 bg-bodyui c-white">3</div>
+    </div>
+</pre>
+</div>
+
+                <div class="table-responsive">
+                    <table class="selector vertical-border">
+                        <thead>
+                            <tr>
+                                <th>Clase</th>
+                                <th>Propiedad CSS</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="badge badge-red">.gap-0</span></td>
+                                <td><code>gap: 0px;</code></td>
+                                <td>Sin espacio entre los elementos</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-red">.gap-1</span></td>
+                                <td><code>gap: 5px;</code></td>
+                                <td>Espacio pequeño entre los elementos</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-red">.gap-2</span></td>
+                                <td><code>gap: 10px;</code></td>
+                                <td>Espacio mediano entre los elementos</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-red">.gap-3</span></td>
+                                <td><code>gap: 15px;</code></td>
+                                <td>Espacio grande entre los elementos</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-red">.gap-4</span></td>
+                                <td><code>gap: 20px;</code></td>
+                                <td>Espacio extra grande entre los elementos</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-red">.gap-5</span></td>
+                                <td><code>gap: 25px;</code></td>
+                                <td>Espacio máximo entre los elementos</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-red">.gap-10</span></td>
+                                <td><code>gap: 50px;</code></td>
+                                <td>Espacio máximo entre los elementos</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+            <article class="article">
+                <h2 class="scroll-item" id="15">Wrap</h2>
+                <p>
+                    En ocasiones, cuando los elementos dentro de un contenedor flexbox no caben en una sola línea,
+                    es necesario que estos se ajusten automáticamente a la siguiente línea. Para ello, Bodystyle
+                    incluye la clase <span class="badge badge-red">.flex-wrap</span>. <br>
+                    Por defecto flex toma una sola linea y no rompe el flexbox haciendo que se salgan del contenedor padre 
+                    en dispositivos de pantalla pequeñas.
+                </p>
+
+                <div class="d-flex flex-wrap bg-gray-s p-2">
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 1</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 2</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 3</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 4</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 5</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 6</div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- .flex-wrap permite romper el flexbox y que se generen varias lineas 
+     manteniendo a los elementos dentro del contenedor padre-->
+    <div class="d-flex flex-wrap bg-gray-s p-2">
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 1</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 2</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 3</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 4</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 5</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 6</div>
+    </div>
+</pre>
+</div>
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s">&nbsp;</i>Información</h4>
+                    <p>
+                        Cuando se utiliza la clase <span class="badge badge-red">.flex-wrap</span>, los elementos
+                        dentro del contenedor flexbox se ajustan automáticamente a la siguiente línea cuando no hay suficiente espacio horizontal disponible. <br>
+                        En este caso la ruptura del flexbox se realiza de manera automática, y el órden en que se ordenan los ellementos 
+                        se mantiene despues de la ruptura.
+                    </p>
+                </div>
+
+                <h3 class="scroll-item" id="16">Wrap-Reverse</h3>
+                <p>
+                    Ahora veremos un ejemplo similar al anterior, pero en este caso utilizaremos la clase 
+                    <span class="badge badge-red">.flex-wrap-reverse</span>, la cual permite que los elementos se ajusten a la siguiente línea,
+                    pero en orden inverso.
+                </p>
+
+
+            <div class="d-flex flex-wrap-reverse bg-gray-s p-2">
+                <div class="p-2 bg-bodyui c-white mb-1">Elemento 1</div>
+                <div class="p-2 bg-bodyui c-white mb-1">Elemento 2</div>
+                <div class="p-2 bg-bodyui c-white mb-1">Elemento 3</div>
+                <div class="p-2 bg-bodyui c-white mb-1">Elemento 4</div>
+                <div class="p-2 bg-bodyui c-white mb-1">Elemento 5</div>
+                <div class="p-2 bg-bodyui c-white mb-1">Elemento 6</div>
+            </div>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- .flex-wrap permite romper el flexbox y que se generen varias lineas 
+     manteniendo a los elementos dentro del contenedor padre-->
+    <div class="d-flex flex-wrap-reverse bg-gray-s p-2">
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 1</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 2</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 3</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 4</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 5</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 6</div>
+    </div>
+</pre>
+</div>
+
+
+                <h3 class="scroll-item" id="17">Responsive</h3>
+                <p>
+                    Todo las clases que vimos anteriormente se encuentran para todos los tipos 
+                    de pantallas, permitiendo así una gran flexibilidad a la hora de diseñar
+                    layouts responsivos. <br>
+                    Por ejemplo, podemos utilizar la clase <span class="badge badge-red">.flex-wrap-s</span>
+                    para que el contenedor flexbox rompa la línea solamente en pantallas pequeñas.
+                </p>
+
+                <div class="table-responsive">
+                    <table class="selector vertical-border">
+                        <thead>
+                            <tr>
+                                <th>Clase</th>
+                                <th>Propiedad CSS</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="badge badge-red">.flex-wrap-[m, s, xs]</span></td>
+                                <td><code>flex-wrap: wrap;</code></td>
+                                <td>Permite romper el flexbox en los diferentes tamaños de pantalla</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-red">.flex-wrap-reverse-[m, s, xs]</span></td>
+                                <td><code>flex-wrap: wrap-reverse;</code></td>
+                                <td>Permite romper el flexbox en orden inverso en los diferentes tamaños de pantalla</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+            <article class="article">
+                <h2 id="17" class="scroll-item">Flex Columna</h2>
+                <p>
+                    Hasta ahora hemos visto ejemplos de contenedores flexbox con dirección de fila (row), 
+                    pero Bodystyle también ofrece la posibilidad de crear contenedores flexbox con dirección 
+                    de columna (column) utilizando la clase <span class="badge badge-red">.flex-column</span>. <br>
+                    Esto es útil cuando deseas apilar elementos verticalmente en lugar de horizontalmente.
+                </p>
+
+                <div class="d-flex flex-column">
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 1</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 2</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 3</div>
+                </div>
+
+                <h3 class="scroll-item mt-4">Cambio de Ejes: Row vs Column</h3>
+                <p>
+                    <strong>Información importante:</strong> Cuando usas <span class="badge badge-red">.flex-column</span>, 
+                    los ejes principales y transversales se invierten. Esto significa que las propiedades 
+                    <span class="badge badge-red">justify-content</span> y <span class="badge badge-red">align-items</span> 
+                    afectan los elementos de manera opuesta.
+                </p>
+
+                <div class="tabla-scroll">
+                    <table class="tabla-documentacion">
+                        <thead>
+                            <tr>
+                                <th>Propiedad</th>
+                                <th>Con flex-row (defecto)</th>
+                                <th>Con flex-column</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="badge badge-red">justify-content</span></td>
+                                <td>Alinea horizontalmente (eje principal)</td>
+                                <td>Alinea verticalmente (eje principal)</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-red">align-items</span></td>
+                                <td>Alinea verticalmente (eje transversal)</td>
+                                <td>Alinea horizontalmente (eje transversal)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="scroll-item mt-4">Justificación en Columna</h3>
+                <p>
+                    Con <span class="badge badge-red">.flex-column</span>, <span class="badge badge-red">justify-content</span> 
+                    controla la distribución <strong>vertical</strong> de los elementos. Por ejemplo, 
+                    <span class="badge badge-red">.just-center</span> centrará los elementos verticalmente.
+                </p>
+
+                <div class="d-flex flex-column just-center bg-gray-s" style="height: 300px;">
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 1</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 2</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 3</div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- .flex-column + .just-center centra verticalmente -->
+    <div class="d-flex flex-column just-center" style="height: 300px;">
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 1</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 2</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 3</div>
+    </div>
+</pre>
+</div>
+
+                <h3 class="scroll-item mt-4">Alineación en Columna</h3>
+                <p>
+                    Con <span class="badge badge-red">.flex-column</span>, <span class="badge badge-red">align-items</span> 
+                    controla la alineación <strong>horizontal</strong> de los elementos. Por ejemplo, 
+                    <span class="badge badge-red">.ali-center</span> centrará los elementos horizontalmente.
+                </p>
+
+                <div class="d-flex flex-column ali-center bg-gray-s" style="height: 250px;">
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 1</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 2</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 3</div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- .flex-column + .ali-center centra horizontalmente -->
+    <div class="d-flex flex-column ali-center" style="height: 250px;">
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 1</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 2</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 3</div>
+    </div>
+</pre>
+</div>
+
+                <h3 class="scroll-item mt-4">Centrado Perfecto (Vertical y Horizontal)</h3>
+                <p>
+                    Para centrar elementos completamente (vertical y horizontalmente), combina ambas clases:
+                </p>
+
+                <div class="d-flex flex-column just-center ali-center bg-gray-s" style="height: 300px;">
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 1</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 2</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 3</div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Combina .just-center + .ali-center para centrado perfecto -->
+    <div class="d-flex flex-column just-center ali-center" style="height: 300px;">
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 1</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 2</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 3</div>
+    </div>
+</pre>
+</div>
+
+                <h3 class="scroll-item mt-4">Variantes Responsivas</h3>
+                <p>
+                    Como con todas las clases de flexbox, <span class="badge badge-red">.flex-column</span> 
+                    también tiene variantes responsivas para cambiar la dirección según el tamaño de pantalla:
+                </p>
+
+                <div class="table-responsive">
+                    <table class="selector vertical-border">
+                        <thead>
+                            <tr>
+                                <th>Clase</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="badge badge-red">.flex-column</span></td>
+                                <td>Columna en todos los tamaños de pantalla</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-red">.flex-column-m</span></td>
+                                <td>Columna en pantallas medianas y menores</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-red">.flex-column-s</span></td>
+                                <td>Columna en pantallas pequeñas</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-red">.flex-column-xs</span></td>
+                                <td>Columna en pantallas extra pequeñas</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="alert mt-3">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Tip</h4>
+                    <p>
+                        Un patrón común es usar <span class="badge badge-red">.flex-column-s</span> 
+                        para que el layout cambie a columna en dispositivos móviles, mejorando la legibilidad 
+                        y experiencia de usuario en pantallas pequeñas.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="article">
+                <h2 class="scroll-item" id="18">Reverse</h2>
+                <p>
+                    Bodystyle es capaz de utilizar flexbox, por defecto esta herramienta se encuentra 
+                    como "flex-row", pero en muchas oportunidades vamos a necesitar invertir el orden
+                    de los elementos dentro de un contenedor flexbox, para ello Bodystyle incluye la 
+                    clase <span class="badge badge-red">.flex-row-reverse</span>. <br>
+                    Esta clase invierte el orden de los elementos dentro del contenedor flexbox,
+                    colocándolos en orden inverso al que fueron definidos en el HTML.
+                </p>
+
+
+                <div class="d-flex flex-row-reverse">
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 1</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 2</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 3</div>
+                </div>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- .flex-row-reverse para invertir el orden de los elementos 
+     Esta clase utiliza la justificación flex-end y la dirección de fila inversa 
+     Si no queremos esto simplemente usamos .just-start-->
+    <div class="d-flex flex-row-reverse">
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 1</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 2</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 3</div>
+    </div>
+</pre>
+</div>
+
+                <div class="alert mt-3">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>
+                        Cuando se utiliza la clase <span class="badge badge-red">.flex-row-reverse</span>, 
+                        los elementos dentro del contenedor flexbox se ordenan en sentido inverso. 
+                        Esto es útil para crear diseños donde el orden visual de los elementos necesita ser 
+                        diferente al orden en el código HTML. <br>
+                        Es importante aclarar que como todas las clases vistas en este apartado, posee las clases responsivas
+                        <span class="badge badge-red">.flex-row-reverse-[m, s, xs]</span> para aplicar el cambio de orden en los diferentes tamaños de pantalla.
+                    </p>
+                </div>
+
+                
+                <div class="d-flex flex-row-reverse-m">
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 1</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 2</div>
+                    <div class="p-2 bg-bodyui c-white mb-1">Elemento 3</div>
+                </div>
+
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- .flex-row-reverse-m para invertir el orden de los elementos 
+     en pantallas medianas y menores-->
+    <div class="d-flex flex-row-reverse-m">
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 1</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 2</div>
+        <div class="p-2 bg-bodyui c-white mb-1">Elemento 3</div>
+    </div>
+</pre>
+</div>
+
+                    
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Flexbox</a></li>
+            <li><a href="#2">📇 Introducción</a></li>
+            <li><a href="#3">📇 Justificación</a></li>
+            <li><a href="#4">📇 Space-Around</a></li>
+            <li><a href="#5">📇 Space-Between</a></li>
+            <li><a href="#6">📇 Responsive</a></li>
+            <li><a href="#7">📇 Tabla Resumen</a></li>
+            <li><a href="#8">📇 Casos de uso</a></li>
+            <li><a href="#9">📇 Alineación</a></li>
+            <li><a href="#9">📇 Start / Center / End</a></li>
+            <li><a href="#10">📇 Alineación Stretch</a></li>
+            <li><a href="#11">📇 Alineación Baseline</a></li>
+            <li><a href="#12">📇 Responsive</a></li>
+            <li><a href="#13">📇 Gap</a></li>
+            <li><a href="#14">📇 Wrap</a></li>
+            <li><a href="#15">📇 Wrap-Reverse</a></li>
+            <li><a href="#16">📇 Responsive</a></li>
+            <li><a href="#17">📇 Flex Columna</a></li>
+            <li><a href="#18">📇 Reversa</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l3" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoCssInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l3 ul li a")[2].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

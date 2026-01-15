@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Componente que permite el acceso directo a secciones de la página a través de enlaces.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/scrollspy.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>ScrollSpy</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">📌 ScrollSpy</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                El componente ScrollSpy permite crear una barra de navegación que resalta automáticamente los enlaces
+                correspondientes a las secciones visibles en la ventana gráfica mientras el usuario se desplaza por la
+                página. Esto facilita la navegación y mejora la experiencia del usuario al proporcionar un acceso rápido
+                a diferentes secciones del contenido.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Inicialización</h2>
+                <p>
+                    Para inicializar el componente ScrollSpy, asegúrate de que tu barra de navegación y las secciones
+                    objetivo tengan los atributos y clases necesarios. La barra de navegación debe contener enlaces con
+                    referencias a las secciones mediante IDs.
+                </p>
+                <div class="table-responsive">
+                    <table class="selector">
+                        <thead>
+                            <tr>
+                                <th>Parámetro</th>
+                                <th>Valor</th>
+                                <th>Descripción</th>
+                                <th>Default</th>
+                                <th>Obligatorio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ancho</td>
+                                <td>1-100%</td>
+                                <td>Ancho del scrollspy en porcentaje</td>
+                                <td>16</td>
+                                <td>NO</td>
+                            </tr>
+                            <tr>
+                                <td>tamFuente</td>
+                                <td>1-30px</td>
+                                <td>Tamaño de la fuente del scrollspy en píxeles</td>
+                                <td>16</td>
+                                <td>NO</td>
+                            </tr>
+                            <tr>
+                                <td>colorBorde</td>
+                                <td>fd-color</td>
+                                <td>Color del borde del scrollspy (Clases de Bodystyle)</td>
+                                <td>fd-azul</td>
+                                <td>NO</td>
+                            </tr>
+                            <tr>
+                                <td>alturaBorde</td>
+                                <td>1-100px</td>
+                                <td>Altura del borde del scrollspy en píxeles</td>
+                                <td>3</td>
+                                <td>NO</td>
+                            </tr>
+                            <tr>
+                                <td>separacion</td>
+                                <td>1-n (px)</td>
+                                <td>Separación entre el scrollspy y el inicio de la página en píxeles</td>
+                                <td>100</td>
+                                <td>NO</td>
+                            </tr>
+                            <tr>
+                                <td>colorSeleccionado</td>
+                                <td>Hexadecimal</td>
+                                <td>Color del elemento seleccionado en el scrollspy</td>
+                                <td>#000</td>
+                                <td>NO</td>
+                            </tr>
+                            <tr>
+                                <td>colorNoSeleccionado</td>
+                                <td>Hexadecimal</td>
+                                <td>Color del elemento no seleccionado en el scrollspy</td>
+                                <td>#666</td>
+                                <td>NO</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Muestra Default</h4>
+                <p>
+                    Ahora veremos la muestra por default, bastante simple para que se comprenda el funcionamiento 
+                    de este componente.
+                </p>
+
+                <a target="_blank" href="muestras/m3_scrollspy_def.html" class="link com-trigger" 
+                data-info="Muestra por default del scroll spy">Ver muestra</a>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+
+    <!-- SECCIONES A ENLACZAR POR EL SCROLLSPY -->
+    <div class="container mt-3">
+
+        <!--Nótese que cada sección a enlazar tiene un ID único y la clase .scroll-item 
+        Sin esto el componente no funcionará correctamente -->
+        <div id="1" class="bg-red ta-c p-3 scroll-item" style="height: 700px;">Sección 1</div>
+        <div id="2" class="bg-red ta-c p-3 mt-3 scroll-item" style="height: 700px;">Sección 2</div>
+        <div id="3" class="bg-red ta-c p-3 mt-3 scroll-item" style="height: 700px;">Sección 3</div>
+    </div>
+
+    <!-- BARRA DE NAVEGACIÓN DEL SCROLLSPY -->
+    <div class="lista-scroll">
+        <ul>
+            <!--Cada enlace apunta al ID correspondiente de cada sección -->
+            <li><a href="#1">Sección 1</a></li>
+            <li><a href="#2">Sección 2</a></li>
+            <li><a href="#3">Sección 3</a></li>
+        </ul>
+    </div>
+</pre>
+</div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    // Inicialización por default 
+    // No recibe parámetros
+    BS.ScrollSpyInit()
+</pre>
+</div>
+
+            <div class="alert">
+                <h4 class="c-red"><i class="bs-cancel c-red fz-25">&nbsp;</i>Peligro</h4>
+                <p>
+                    Este componente no es compatible con el efecto <a href="reveal.html" class="link">Reveal</a>
+                    si se usan ambos puede generar comflictos que no permitan su buen funcionamiento.
+                </p>
+            </div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Personalizado</h2>
+                <p>
+                    Ahora veremos un ejemplo personalizado en el cual pasamos el JSON de configuración 
+                    para modificar el aspecto del scrollspy.
+                </p>
+
+                <a href="muestras/m4_scrollspy_per.html" target="_blank" class="link com-trigger"
+                data-info="Ejemplo personalizado con los parámetros de configuración">Ver Muestra</a>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="container mt-3">
+        <div id="1" class="bg-red ta-c p-3 scroll-item" style="height: 700px;">Sección 1</div>
+        <div id="2" class="bg-red ta-c p-3 mt-3 scroll-item" style="height: 700px;">Sección 2</div>
+        <div id="3" class="bg-red ta-c p-3 mt-3 scroll-item" style="height: 700px;">Sección 3</div>
+    </div>
+    
+
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#1">Sección 1</a></li>
+            <li><a href="#2">Sección 2</a></li>
+            <li><a href="#3">Sección 3</a></li>
+        </ul>
+    </div>
+</pre>
+</div>
+
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    let conf = {
+        ancho: 16, // Ancho en %
+        tamFuente: 18, // Tamaño de fuente en px
+        colorBorde: "fd-bodyui", // Clase de Bodystyle para el color del borde
+        alturaBorde: 35, // Altura del borde en px
+        separacion: 150, // Separación desde el tope de la página en px
+        colorSeleccionado: "#222", // Color del elemento seleccionado
+        colorNoSelecccionado: "#666" // Color del elemento no seleccionado
+    }
+    BS.ScrollSpyInit(conf)
+</pre>
+</div>
+
+
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Ocultar</h2>
+                <p>
+                    Por lo general este elemento se utiliza en equipos de pantalla grande (mayores a 1030px) pero 
+                    en equipos de tamaños infereriores se opta por ocultarlo ya que interfiere en ell flujo de la página 
+                    y la experiencia del usuario.
+                    Para ello se le agrega la clase <code>ocultar-desde-medianos</code> al contenedor del scrollspy.
+                </p>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">Sección 1</a></li>
+            <li><a href="#2">Sección 2</a></li>
+            <li><a href="#3">Sección 3</a></li>
+        </ul>
+    </div>
+</pre>
+</div>
+
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>
+                        Para más información sobre este tema se recomienda la sección de helpers 
+                        <a href="helpers.html" class="link">Screen Utilitarios</a>.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 ScrollSpy</a></li>
+            <li><a href="#2">📇 Muestra Default</a></li>
+            <li><a href="#3">📇 Personalizado</a></li>
+            <li><a href="#4">📇 Ocultar</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l5" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l5 ul li a")[14].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

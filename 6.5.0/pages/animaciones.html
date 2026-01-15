@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Animaciones reutilizables en Bodystyle.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/animaciones.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Animaciones</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Animaciones</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                En este apartado veremos algunas animaciones reutilizables que son muy comunes 
+                en el ambito del desarrollo web y que Bodystyle nos ofrece listas para usar. <br>
+                Las animaciones son: FadeIn, FadeOut, SlideInUp, SlideInDown.
+
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Introducción</h2>
+                <p>
+                    Como todos los módulos de Bodystyle, es necesario disponer del archivo <span class="badge badge-red">bodystyle.min.js</span> agregado en el proyecto
+                    para poder utilizar las animaciones. <br> 
+                    Luego, se llama a la función correspondiente aplicando el efecto deseado al elemento HTML que se quiera animar.
+                </p>
+                
+                
+                <div class="p-2 bg-red" id="div1"></div>
+
+                <div class="d-flex gap-1 flex-wrap mt-3">
+                    <button class="btn fd-bodyui" onclick="FadeOut('div1')">Fade Out</button>
+                    <button class="btn fd-bodyui" onclick="FadeIn('div1')">Fade In</button>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex gap-1 flex-wrap mt-3">
+        <button class="btn fd-bodyui" onclick="FadeOut('div1')">Fade Out</button>
+        <button class="btn fd-bodyui" onclick="FadeIn('div1')">Fade In</button>
+    </div>
+</pre>
+</div>
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    const FadeIn = (idElemento) => {
+        // Obtener el elemento por su ID
+        let ele = document.getElementById(idElemento);
+        
+        // Si no existe return
+        if(!ele)
+            return
+
+        // LLAMADO A LA FUNCIÓN DE ANIMACIÓN
+        // BS.fadeIn ( elemento, duración en milisegundos, función callback opcional )
+        BS.fadeIn(ele, 1000, () => {
+            BS.Toast({
+                html: "🎯 Animación FadeIn completada",
+            })
+        });
+    }
+    const FadeOut = (idElemento) => {
+
+        // Obtener el elemento por su ID
+        let ele = document.getElementById(idElemento);
+
+        // Si no existe return
+        if(!ele)
+            return
+
+        // LLAMADO A LA FUNCIÓN DE ANIMACIÓN
+        // BS.fadeOut ( elemento, duración en milisegundos, función callback opcional )
+        BS.fadeOut(ele, 1000, () => {
+            BS.Toast({
+                html: "🎯 Animación FadeOut completada",
+            })
+        });
+    }
+</pre>
+</div>
+                <div id="div2" class="bg-red" style="min-height: 200px;"></div>
+                <div class="d-flex gap-1 flex-wrap mt-3">
+                    <button class="btn fd-bodyui" onclick="SlideUp('div2')">Slide Up</button>
+                    <button class="btn fd-bodyui" onclick="SlideDown('div2')">Slide Down</button>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div id="div2" class="bg-red" style="min-height: 200px;"></div>
+    <div class="d-flex gap-1 flex-wrap mt-3">
+        <button class="btn fd-bodyui" onclick="SlideUp('div2')">Slide Up</button>
+        <button class="btn fd-bodyui" onclick="SlideDown('div2')">Slide Down</button>
+    </div>
+</pre>
+</div>
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    // Función Slide Up
+    const SlideUp = (idElemento) => {
+        // Obtener el elemento por su ID
+        let ele = document.getElementById(idElemento);
+        if(!ele) // Si no existe
+            return // return
+
+        // LLAMADO A LA FUNCIÓN DE ANIMACIÓN
+        // BS.slideUp ( elemento, duración en milisegundos, función callback opcional )
+        BS.slideUp(ele, 500, () => {
+            BS.Toast({
+                html: "🎯 Animación SlideUp completada",
+            })
+        });
+    }
+
+
+    const SlideDown = (idElemento) => {
+        // Obtener el elemento por su ID
+        let ele = document.getElementById(idElemento);
+        if(!ele) // Si no existe
+            return // return
+        // LLAMADO A LA FUNCIÓN DE ANIMACIÓN
+        // BS.slideDown ( elemento, duración en milisegundos, función callback opcional )
+        BS.slideDown(ele, 500, () => {
+            BS.Toast({
+                html: "🎯 Animación SlideDown completada",
+            })
+        });
+    }
+</pre>
+</div>
+                <div class="alert">
+                    <h4 class="c-red"><i class="bs-cancel c-red fz-25">&nbsp;</i>Peligro</h4>
+                    <p>
+                        La animación slideUp y slideDown son funcionales, pero no están del todo 
+                        pulidas. Se recomienda usarlas con precaución y testear su comportamiento en los distintos navegadores.
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Funcionamiento</h2>
+                <p>
+                    Ahora veremos el código que hace posible las animaciones. <br>
+                    Todas las animaciones utilizan la propiedad CSS <code>opacity</code> para el efecto de
+                    desvanecimiento (fade) y la propiedad <code>height</code> para el efecto de deslizamiento (slide). <br>
+                    Cada función toma tres parámetros: el elemento a animar, la duración de la animación en milisegundos y una función callback opcional que se ejecuta al finalizar la animación.
+                </p>
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Fade In</h4>
+                <p>
+                    En el archivo del repositorio <a href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Animaciones.js" class="link">Animaciones.js</a>
+                    encontraremos cuatro dunciones que permiten que las animaciones de esta sección funcionen. <br>
+                    La función <code>fadeIn</code> incrementa gradualmente la opacidad del elemento desde 0 hasta 1 durante el tiempo especificado.
+                </p>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    
+    /**
+     * Desvanece (fade‑in) un elemento mostrándolo con animación de opacidad.
+     * @param {HTMLElement|NodeList} elemento El elemento a mostrar.
+     * @param {number} [duration=300] Duración en milisegundos.
+     * @param {Function} [callback] Función opcional que se ejecuta al terminar la animación.
+     */
+    export function fadeIn(elemento, duration = 300, callback) {
+        if (!elemento) return;
+        const el = (elemento instanceof NodeList) ? elemento[0] : elemento;
+        if (!el || !(el instanceof HTMLElement)) return;
+    
+        // Asegurar que el elemento sea visible
+        el.style.display = el.style.display === 'none' ? 'flex' : el.style.display || 'flex';
+        el.style.opacity = '0';
+    
+        const animation = el.animate(
+            [
+                { opacity: '0' },
+                { opacity: '1' }
+            ],
+            {
+                duration: duration,
+                easing: 'ease-in-out',
+                fill: 'forwards'
+            }
+        );
+        
+        animation.onfinish = () => {
+            el.style.opacity = '1';
+            if (typeof callback === 'function') callback();
+        };
+    }
+</pre>
+</div>
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Fade Out</h4>
+                <p>
+                    La función <code>fadeOut</code> disminuye gradualmente la opacidad del elemento desde 1 hasta 0 durante el tiempo especificado.
+
+                </p>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    /**
+     * Desvanece (fade‑out) un elemento ocultándolo con animación de opacidad.
+     * @param {HTMLElement|NodeList} elemento El elemento a ocultar.
+     * @param {number} [duration=300] Duración en milisegundos.
+     * @param {Function} [callback] Función opcional que se ejecuta al terminar la animación.
+     */
+    export function fadeOut(elemento, duration = 300, callback) {
+        if (!elemento) return;
+        const el = (elemento instanceof NodeList) ? elemento[0] : elemento;
+        if (!el || !(el instanceof HTMLElement)) return;
+
+        const animation = el.animate(
+            [
+                { opacity: '1' },
+                { opacity: '0' }
+            ],
+            {
+                duration: duration,
+                easing: 'ease-in-out',
+                fill: 'forwards'
+            }
+        );
+
+        animation.onfinish = () => {
+            el.style.opacity = '0';
+            el.style.display = 'none';
+            if (typeof callback === 'function') callback();
+        };
+    }
+</pre>
+</div>
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Slide Up</h4>
+                <p>
+                    La función <code>slideUp</code> reduce gradualmente la altura del elemento hasta 0, ocultándolo de la vista.
+
+                </p>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    /**
+     * Desliza (slide‑up) un elemento ocultándolo con animación.
+     * @param {HTMLElement|NodeList} elemento El panel a cerrar (puede ser un HTMLElement o un NodeList con un solo elemento).
+     * @param {number} [duration=300] Duración en milisegundos.
+     * @param {Function} [callback] Función opcional que se ejecuta al terminar la animación.
+     */
+    export function slideUp(elemento, duration = 300, callback) {
+        if (!elemento) return;
+        const el = (elemento instanceof NodeList) ? elemento[0] : elemento;
+        if (!el || !(el instanceof HTMLElement)) return;
+
+        // Cancelar animaciones previas para evitar conflictos
+        if (el.__slideAnimation) {
+            el.__slideAnimation.cancel();
+        }
+
+        // Asegurar que el elemento sea visible para obtener su altura actual
+        const wasHidden = el.style.display === 'none';
+        if (wasHidden) {
+            el.style.display = 'block';
+        }
+
+        const startHeight = el.scrollHeight;
+        el.style.overflow = 'hidden';
+        el.style.opacity = '1';
+
+        const animation = el.animate(
+            [
+                { height: `${startHeight}px` },
+                { height: '0px' }
+            ],
+            {
+                duration: duration,
+                easing: 'ease-in-out',
+                fill: 'forwards'
+            }
+        );
+
+        el.__slideAnimation = animation;
+
+        animation.onfinish = () => {
+            el.style.display = 'none';
+            el.style.removeProperty('height');
+            el.style.removeProperty('overflow');
+            el.__slideAnimation = null;
+            if (typeof callback === 'function') callback();
+        };
+    }
+</pre>
+</div>
+         
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Slide Down</h4>
+                <p>
+                    La función <code>slideDown</code> incrementa gradualmente la altura del elemento desde 0 hasta su altura original, mostrándolo en la vista.
+                </p>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    /**
+     * Desliza (slide‑down) un elemento mostrándolo con animación.
+     * @param {HTMLElement|NodeList} elemento El panel a abrir.
+     * @param {number} [duration=300] Duración en milisegundos.
+     * @param {Function} [callback] Función opcional que se ejecuta al terminar la animación.
+     */
+    export function slideDown(elemento, duration = 300, callback) {
+        if (!elemento) return;
+        const el = (elemento instanceof NodeList) ? elemento[0] : elemento;
+        if (!el || !(el instanceof HTMLElement)) return;
+
+        // Cancelar animaciones previas para evitar conflictos
+        if (el.__slideAnimation) {
+            el.__slideAnimation.cancel();
+        }
+
+        // Aseguramos que el elemento sea visible para calcular su altura natural
+        el.style.display = 'block';
+        el.style.overflow = 'hidden';
+        el.style.height = '0px';
+        el.style.opacity = '1';
+
+        // Forzar reflow para que el cambio de display se aplique antes de animar
+        void el.offsetHeight;
+
+        const targetHeight = el.scrollHeight;
+
+        const animation = el.animate(
+            [
+                { height: '0px' },
+                { height: `${targetHeight}px` }
+            ],
+            {
+                duration: duration,
+                easing: 'ease-in-out',
+                fill: 'forwards'
+            }
+        );
+
+        el.__slideAnimation = animation;
+
+        animation.onfinish = () => {
+            el.style.removeProperty('height');
+            el.style.removeProperty('overflow');
+            el.style.removeProperty('opacity');
+            el.__slideAnimation = null;
+            if (typeof callback === 'function') callback();
+        };
+    }
+</pre>
+</div>
+
+            </article>
+
+
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Animaciones</a></li>
+            <li><a href="#2">📇 Introducción</a></li>
+            <li><a href="#3">📇 Funcionamiento</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l5" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l5 ul li a")[7].classList.add("c-red");
+
+        const FadeIn = (idElemento) => {
+            let ele = document.getElementById(idElemento);
+            if(!ele)
+                return
+            BS.fadeIn(ele, 1000, () => {
+                BS.Toast({
+                    html: "🎯 Animación FadeIn completada",
+                })
+            });
+        }
+        const FadeOut = (idElemento) => {
+            let ele = document.getElementById(idElemento);
+            if(!ele)
+                return
+            BS.fadeOut(ele, 1000, () => {
+                BS.Toast({
+                    html: "🎯 Animación FadeOut completada",
+                })
+            });
+        }
+
+
+        const SlideUp = (idElemento) => {
+            let ele = document.getElementById(idElemento);
+            if(!ele)
+                return
+            BS.slideUp(ele, 500, () => {
+                BS.Toast({
+                    html: "🎯 Animación SlideUp completada",
+                })
+            });
+        }
+
+
+        const SlideDown = (idElemento) => {
+            let ele = document.getElementById(idElemento);
+            if(!ele)
+                return
+            BS.slideDown(ele, 500, () => {
+                BS.Toast({
+                    html: "🎯 Animación SlideDown completada",
+                })
+            });
+        }
+    </script>
+</body>
+
+</html>

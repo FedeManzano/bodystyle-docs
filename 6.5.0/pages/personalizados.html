@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Tips personalizados para mostrar información de un determinado elemento.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/personalizados.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+
+        
+    <title>Personalizados</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">✨ Personalizados</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Al igual que los tooltips y comentarios los tips personalizados son elementos dinámicos 
+                provenientes de la dependencia <a href="https://github.com/FedeManzano/dynamics-tips" class="link com-trigger"
+                data-info="Dynamics-Tips es una biblioteca independiente que proporciona funcionalidades de tooltips dinámicos.">Dynamics-Tips v3.0.0</a> y permiten 
+                definir estilos y elementos personalizados para asociarlos a algún elemento del DOM.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Muestra</h2>
+                <p>
+                    En este caso es ligeramente más complicado utilizar estos elementos ya que es necesario 
+                    definir los estilos y elementos que se mostrarán como así también la información 
+                    a mostrar. <br>
+                    Como veremos a lo largo de los apartados hay dos maneras de inicializar estos elementos,
+                    por un lado solo definiremos estilos, y por otro lado definiremos elementos completos 
+                    que se posicionarán de manera adecuada utilizando el kernel de Dynamics-Tips.
+                </p>
+                <button id="boton1" class="btn fd-bodyui disparador" data-info="">Hover Me!</button>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Definimos una clase cualquiera, en este caso es .disparador, pero puede ser cualquiera 
+     luego le añadimos un ID al elemento disparador en este caso (boton1), acto seguido 
+     definimos el data-info="" (vacío)-->
+    <button id="boton1" class="btn fd-bodyui disparador" data-info="">Hover Me!</button>
+</pre>
+</div>
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    // Inicializamos los tips personalizados indicando la clase o el 
+    // origen de los elementos disparadores
+    // Es importante respetar este formato para que funcione correctamente
+    // Esta es una de las dos formas, no es la única
+    BS.PersonalizadoInit({ori: "disparador"})
+
+
+    // Nótese que seteamos el attr data-info de manera dinámica 
+    // lo cual nos permitirá cargar el elemento dinámico en el attr 
+    // data-info del disparador
+    document.getElementById("boton1").setAttribute("data-info", 
+        `<div  class="card-notification-dark" style="min-width: 300px !important; max-width: 300px;"> 
+            <div  class="row">
+                <div  class="cl-4 card-logo">
+                     <img  class="img-responsive"  src="../images/logo.png"  alt="Logo Bodystyle"  width="60"  height="60">
+                </div>
+                <div  class="cl-8">
+                    <h4  class="title">Bodystyle Framework</h4>
+                    <p  class="content">Librería CSS completa para construir interfaces modernas y responsivas con facilidad.</p>
+                </div>
+            </div>
+        </div>
+        `
+    )
+</pre>
+</div>
+
+                <div class="alert">
+                    <h4 class="c-yellow"><i class="bs-warning c-yellow fz-25">&nbsp;</i>Advertencia</h4>
+                    <p>
+                        No es recomendable inicializar varias veces los tips personalizados en la misma página 
+                        ya que cuenta con dos formas, que permitirán realizar cosas distintas. Si se inicializan
+                        varias veces puede ocasionar conflictos entre ambas formas.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Posición</h2>
+                <p>
+                    Al igual que los demás elementos dinámicos de Bodystyle, los tips personalizados
+                    permiten definir la posición en la cual se mostrarán. Por defecto se mostrarán
+                    en la posición "bottom" (abajo) pero podemos definir cualquiera de las otras posiciones.
+                </p>
+
+
+                <div class="d-flex just-around flex-wrap gap-1">
+                    <button  class="btn fd-bodyui disparador posicion" data-info="" data-pos="top">Top</button>
+                    <button  class="btn fd-bodyui disparador posicion" data-info="" data-pos="bottom">Bottom</button>
+                    <button  class="btn fd-bodyui disparador posicion" data-info="" data-pos="left">Left</button>
+                    <button  class="btn fd-bodyui disparador posicion" data-info="" data-pos="right">Right</button>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Cuatro botones  con el attr data-pos apuntando a la posición deseada -->
+    <div class="d-flex just-around flex-wrap gap-1">
+
+        <!-- Clase posicion para poder selccionar el elemento desde JS -->
+        <!-- data-info permanece vacío para cargarlo dinámicamente--> 
+        <button  class="btn fd-bodyui disparador posicion" data-info="" data-pos="top">Top</button>
+        <button  class="btn fd-bodyui disparador posicion" data-info="" data-pos="bottom">Bottom</button>
+        <button  class="btn fd-bodyui disparador posicion" data-info="" data-pos="left">Left</button>
+        <button  class="btn fd-bodyui disparador posicion" data-info="" data-pos="right">Right</button>
+    </div>
+</pre>
+</div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    document.querySelectorAll(".posicion").forEach(boton => {
+        boton.setAttribute("data-info", 
+            `<div  class="card-notification-dark" style="min-width: 200px !important; max-width: 200px;"> 
+                <div  class="row">
+                    <div  class="cl-12">
+                        <h4  class="title">Posición: ${boton.getAttribute("data-pos")}</h4>
+                        <p  class="content">Este tip personalizado se muestra en la posición ${boton.getAttribute("data-pos")}.</p>
+                    </div>
+                </div>
+            </div>
+            `
+        )
+    })
+</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Evento Click</h2>
+                <p>
+                    Al igual que los tooltips y comentarios, los tips personalizados 
+                    pueden ser disparados mediante el evento click. Para ello 
+                    debemos inicializarlos con la opción "evento" seteada en "click".
+                </p>
+
+                <button class="btn fd-bodyui disparador evento" data-info="" data-evt="click">Click Me!</button>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+     <button class="btn fd-bodyui disparador evento" data-info="" data-evt="click">Click Me!</button>
+</pre>
+</div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    document.querySelector(".evento").setAttribute("data-info", 
+        `<div  class="card-notification-dark" style="min-width: 250px !important; max-width: 250px;"> 
+            <div  class="row">
+                <div  class="cl-12">
+                    <h4  class="title">Evento Click</h4>
+                    <p  class="content">Este tip personalizado se muestra al hacer click en el botón.</p>
+                </div>
+            </div>
+        </div>
+        `
+    )
+</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h2 id="5" class="scroll-item">Segunda forma</h2>
+                <p>
+                    La segunda forma va a necesitar que definamos un/unas clase/s CSS 
+                    que permitirán establecer el estilo que rodea a la información 
+                    del tip personalizado. Luego debemos inicializar los tips personalizados
+                    indicando la clase o el origen de los elementos disparadores. 
+                </p>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        CSS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    /* Definimos una clase personalizada para el tip */
+    .mi-tip-personalizado {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        font-size: 14px;
+        max-width: 200px;
+    }
+</pre>
+</div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    // Nótese como se envía el segundo parámetro "ele" con la clase personalizada
+    // que definimos en el CSS para el tip personalizado
+    // Es importante respetar el nombre de los parámetros (ori y ele) para que funcione correctamente
+    BS.PersonalizadoInit({ori: "disparador", ele: "mi-tip-personalizado"});
+</pre>
+</div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- ori: .disparador y en este caso si se carga el attr data-info 
+     con la información a mostrar.-->
+    <button class="btn fd-bodyui disparador" data-info="Esto es un tips personalizado.">Hover Me!</button>
+</pre>
+</div>
+            <a target="_blank" href="muestras/m1_personalizados.html" 
+            class="link com-trigger" data-info="Este es un ejemplo de personalizado con clase CSS inicializadora.">Ver ejemplo</a>          
+            </article>
+
+            <article class="article">
+                <h2 id="6" class="scroll-item">Accesibilidad</h2>
+                <p>
+                    Los tips personalizados deben ser accesibles para todos los usuarios, incluyendo aquellos 
+                    que utilizan tecnologías de asistencia como lectores de pantalla. A continuación se presentan 
+                    las mejores prácticas para garantizar que tus tips sean completamente accesibles.
+                </p>
+
+                <h3>Atributos ARIA</h3>
+                <p>
+                    Utiliza atributos ARIA para describir correctamente el propósito del elemento disparador 
+                    y relacionarlo con el tip personalizado.
+                </p>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Utiliza aria-label para describir el botón -->
+    <button 
+        id="btn-info"
+        class="btn fd-bodyui disparador" 
+        data-info=""
+        aria-label="Mostrar información adicional"
+        aria-describedby="tip-info"
+        aria-expanded="false">
+        ℹ️ Información
+    </button>
+</pre>
+</div>
+
+                <h3>Navegación por Teclado</h3>
+                <p>
+                    Asegúrate de que los elementos disparadores sean navegables por teclado. Utiliza tabindex 
+                    si es necesario y proporciona retroalimentación visual clara.
+                </p>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Los botones son navegables por teclado por defecto -->
+    <!-- Para otros elementos, utiliza tabindex="0" -->
+    <div 
+        class="disparador" 
+        tabindex="0"
+        role="button"
+        aria-label="Mostrar detalles"
+        data-info="">
+        Presiona Enter o Espacio
+    </div>
+</pre>
+</div>
+
+                <h3>Contraste y Legibilidad</h3>
+                <p>
+                    Garantiza suficiente contraste entre el texto y el fondo del tip. Usa colores que cumplan 
+                    con las pautas WCAG AA o AAA.
+                </p>
+
+<div class="codigo">
+    <label for="cod-css" 
+    class="label">
+        CSS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    /* Asegura contraste adecuado en el tip personalizado */
+    .mi-tip-accesible {
+        background-color: #1a1a1a;  /* Color oscuro */
+        color: #ffffff;              /* Blanco puro */
+        padding: 12px;
+        border-radius: 5px;
+        font-size: 16px;            /* Tamaño legible */
+        line-height: 1.5;           /* Espaciado de líneas */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        border: 2px solid #4a90e2;  /* Borde distintivo */
+    }
+</pre>
+</div>
+
+                <h3>Descripciones Textuales</h3>
+                <p>
+                    Si utilizas iconos o símbolos en los tips, incluye siempre una descripción textual clara. 
+                    Evita depender únicamente de colores para transmitir información.
+                </p>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Incluye texto descriptivo junto con iconos -->
+    <div class="card-notification-dark" style="min-width: 250px !important;">
+        <div class="row">
+            <div class="cl-12">
+                <!-- El icon se acompaña de texto -->
+                <h4 class="title">
+                    <span aria-hidden="true">⚠️</span>
+                    <span>Advertencia Importante</span>
+                </h4>
+                <p class="content">Descripción clara y concisa del mensaje de advertencia.</p>
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+
+                <h3>Ejemplo Completo Accesible</h3>
+
+<div class="codigo">
+    <label for="cod-js" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    // Inicializa los tips con opciones accesibles
+    BS.PersonalizadoInit({ori: "disparador"});
+    
+    const btn = document.getElementById("btn-info");
+    
+    // Actualiza aria-expanded cuando se muestra/oculta el tip
+    btn.addEventListener("mouseenter", () => {
+        btn.setAttribute("aria-expanded", "true");
+    });
+    
+    btn.addEventListener("mouseleave", () => {
+        btn.setAttribute("aria-expanded", "false");
+    });
+    
+    // Soporte para teclado (Enter y Espacio)
+    btn.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            btn.click();
+        }
+    });
+    
+    // Contenido con estructura semántica
+    btn.setAttribute("data-info",
+        `<div class="card-notification-dark" style="min-width: 280px !important;">
+            <div class="row">
+                <div class="cl-12">
+                    <h4 class="title">Información</h4>
+                    <p class="content">Este tip utiliza atributos ARIA y soporta navegación por teclado.</p>
+                </div>
+            </div>
+        </div>`
+    );
+</pre>
+</div>
+
+                <div class="alert">
+                    <h4 class="c-green"><i class="bs-check c-green fz-25">&nbsp;</i>Recomendación</h4>
+                    <p>
+                        Prueba tus tips personalizados con herramientas de accesibilidad como WAVE, Axe, o lectores 
+                        de pantalla como NVDA o JAWS para asegurar que funcionan correctamente para todos los usuarios.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="7" class="scroll-item">Destruir</h2>
+                <p>
+                    Es posible destruir los tips personalizados inicializados en la página
+                    mediante la función <code>BS.PersonalizadoDestroy()</code>.
+                </p>
+
+                <button class="btn fd-bodyui com-trigger" data-info="Todos los tips personalizados de esta página será destridos al momento de presionar el botón" onclick="Destroy()">Destruir Tips</button>
+            
+            
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <button class="btn fd-bodyui com-trigger" data-info="Todos los tips personalizados de esta página será destridos al momento de presionar el botón" onclick="Destroy()">Destruir Tips</button>
+</pre>
+</div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    const Destroy = () => {
+        BS.PersonalizadoDestroy()
+        BS.Toast({
+            html: '✅ Tips personalizados destruidos',
+            clases: ['fd-gris-az', 'c-white', 'bor-pill'],
+        })
+    }
+</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Personalizados</a></li>
+            <li><a href="#2">📇 Muestra</a></li>
+            <li><a href="#3">📇 Posición</a></li>
+            <li><a href="#4">📇 Evento Click</a></li>
+            <li><a href="#5">📇 Segunda Forma</a></li>
+            <li><a href="#6">♿ Accesibilidad</a></li>
+            <li><a href="#7">📇 Destruir</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l5" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.CodigoCssInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l5 ul li a")[4].classList.add("c-red");
+
+        document.getElementById("boton1").setAttribute("data-info", 
+            `<div  class="card-notification-dark" style="min-width: 300px !important; max-width: 300px;"> 
+
+                <!--Utilización de la grilla para alinear elementos -->
+                <div  class="row">
+
+                    <!-- Columna para el logo -->
+                    <div  class="cl-4 card-logo">
+                         <img  class="img-responsive"  src="../images/logo.png"  alt="Logo Bodystyle"  width="60"  height="60">
+                    </div>
+
+                    <!-- Columna para el contenido -->
+                    <div  class="cl-8">
+                        <h4  class="title">Bodystyle Framework</h4>
+                        <p  class="content">Librería CSS completa para construir interfaces modernas y responsivas con facilidad.</p>
+                    </div>
+                </div>
+            </div>
+            `
+        )
+
+        document.querySelectorAll(".posicion").forEach(boton => {
+            boton.setAttribute("data-info", 
+                `<div  class="card-notification-dark" style="min-width: 200px !important; max-width: 200px;"> 
+                    <div  class="row">
+                        <div  class="cl-12">
+                            <h4  class="title">Posición: ${boton.getAttribute("data-pos")}</h4>
+                            <p  class="content">Este tip personalizado se muestra en la posición ${boton.getAttribute("data-pos")}.</p>
+                        </div>
+                    </div>
+                </div>
+                `
+            )
+        })
+
+
+        document.querySelector(".evento").setAttribute("data-info", 
+            `<div  class="card-notification-dark" style="min-width: 250px !important; max-width: 250px;"> 
+                <div  class="row">
+                    <div  class="cl-12">
+                        <h4  class="title">Evento Click</h4>
+                        <p  class="content">Este tip personalizado se muestra al hacer click en el botón.</p>
+                    </div>
+                </div>
+            </div>
+            `
+        )
+
+
+        const Destroy = () => {
+            BS.PersonalizadoDestroy()
+            BS.Toast({
+                html: '✅ Tips personalizados destruidos',
+                clases: ['fd-gris-az', 'c-white', 'bor-pill'],
+            })
+        }
+
+    </script>
+</body>
+
+</html>
+

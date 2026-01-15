@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Clase de CSS que permite centrar los elementos y ajustar el ancho de los mismos según el tamaño de pantalla donde se estén visualizando.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/contenedor.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Contenedor</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Contenedor</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                La clase <code>contenedor</code> permite centrar los elementos y ajustar el ancho de los mismos según
+                el tamaño de pantalla donde se estén visualizando.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Específicaciones</h2>
+                <p>
+                    A continuación se detallan los anchos máximos que tendrá el contenedor según el tamaño de pantalla:
+                </p>
+                <div class="table-responsive">
+                    <table class="selector">
+                        <thead>
+                            <tr>
+                                <th>Medida</th>
+                                <th>Porcentaje</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>> 1030 px</td>
+                                <td>70%</td>
+                            </tr>
+                            <tr>
+                                <td>775px < X <= 1030px</td>
+                                <td>75%</td>
+                            </tr>
+                            <tr>
+                                <td>400px < X <= 775px</td>
+                                <td>80%</td>
+                            </tr>
+                            <tr>
+                                <td>< 400px</td>
+                                <td>90%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="alert mt-3">
+                    <h4 class="c-blue-s"><i class="bs-info fz-25 c-blue-s">&nbsp;</i>Información</h4>
+                    <p>
+                        Es importante destacar que el contenedor siempre tendrá un margen automático a ambos lados para
+                        mantenerlo centrado en la pantalla.
+                    </p>
+                </div>
+
+                <h4 class="my-3"><i class="bs-check c-green fz-25">&nbsp;</i>Muestra</h4>
+
+                <div class="container">
+                    <div class="p-1 ta-c c-white bg-red">Contenido centrado dentro del contenedor</div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Se utiliza la clase contaner o contenedor / ambas son iguales-->
+    <div class="container">
+        <div class="p-1 ta-c c-white bg-red">Contenido centrado dentro del contenedor</div>
+    </div>
+</pre>
+</div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Ejemplo Práctico</h2>
+                <p>
+                    Vamos a ver coomo utilizar este contenedor para centrar varias tarjetas en combinación 
+                    con la grilla de Bodystyle.
+                </p>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="cs-12 cm-6 cl-6">
+                            <div  class="card "> <!-- Comienza la tarjeta simple -->
+                                <div  class="card-simple-dark card-cover"> <!-- Tarjeta oscura -->
+                                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                                    <small>Pequeña descripción</small>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                                    </p> 
+                                    <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                                </div><!-- FIN Tarjeta oscura -->
+                            </div>
+                        </div>
+                        <div class="cs-12 cm-6 cl-6">
+                            <div  class="card"> <!-- Comienza la tarjeta simple -->
+                                <div  class="card-simple-dark card-cover"> <!-- Tarjeta oscura -->
+                                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                                    <small>Pequeña descripción</small>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                                    </p> 
+                                    <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                                </div><!-- FIN Tarjeta oscura -->
+                            </div>
+                        </div>
+                         <div class="cs-12 cm-6 cl-6">
+                            <div  class="card"> <!-- Comienza la tarjeta simple -->
+                                <div  class="card-simple-dark card-cover"> <!-- Tarjeta oscura -->
+                                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                                    <small>Pequeña descripción</small>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                                    </p> 
+                                    <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                                </div><!-- FIN Tarjeta oscura -->
+                            </div>
+                            
+                        </div>
+                        <div class="cs-12 cm-6 cl-6">
+                            <div  class="card"> <!-- Comienza la tarjeta simple -->
+                                <div  class="card-simple-dark card-cover"> <!-- Tarjeta oscura -->
+                                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                                    <small>Pequeña descripción</small>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                                    </p> 
+                                    <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                                </div><!-- FIN Tarjeta oscura -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Container que centra el contenido-->
+    <div class="container">
+
+        <!-- Fila de la grilla -->
+        <div class="row">
+            <div class="cs-12 cm-6 cl-6">
+                <div  class="card "> <!-- Comienza la tarjeta simple -->
+                    <div  class="card-simple-dark card-cover"> <!-- Tarjeta oscura -->
+                        <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                        <small>Pequeña descripción</small>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                        </p> 
+                        <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                    </div><!-- FIN Tarjeta oscura -->
+                </div>
+            </div>
+            <div class="cs-12 cm-6 cl-6">
+                <div  class="card"> <!-- Comienza la tarjeta simple -->
+                    <div  class="card-simple-dark card-cover"> <!-- Tarjeta oscura -->
+                        <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                        <small>Pequeña descripción</small>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                        </p> 
+                        <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                    </div><!-- FIN Tarjeta oscura -->
+                </div>
+            </div>
+             <div class="cs-12 cm-6 cl-6">
+                <div  class="card"> <!-- Comienza la tarjeta simple -->
+                    <div  class="card-simple-dark card-cover"> <!-- Tarjeta oscura -->
+                        <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                        <small>Pequeña descripción</small>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                        </p> 
+                        <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                    </div><!-- FIN Tarjeta oscura -->
+                </div>
+                
+            </div>
+            <div class="cs-12 cm-6 cl-6">
+                <div  class="card"> <!-- Comienza la tarjeta simple -->
+                    <div  class="card-simple-dark card-cover"> <!-- Tarjeta oscura -->
+                        <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                        <small>Pequeña descripción</small>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                        </p> 
+                        <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+                    </div><!-- FIN Tarjeta oscura -->
+                </div>
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+
+            </article>
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Contenedor</a></li>
+            <li><a href="#2">📇 Específicaciones</a></li>
+            <li><a href="#3">📇 Ejemplo Práctico</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l3" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l3 ul li a")[0].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

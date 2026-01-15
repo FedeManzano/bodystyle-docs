@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Clases CSS que permiten gestionar la distancia interna de los elementos mediante relleno o padding.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/padding.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Padding</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Padding</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Las clases de padding en Bodystyle permiten gestionar la distancia interna de los elementos
+                mediante relleno o padding. Estas clases facilitan la aplicación de espacios internos consistentes
+                y adaptativos en los elementos HTML, mejorando la apariencia y la legibilidad del contenido.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Introducción</h2>
+                <p>
+                    Veremos a lo largo de las secciones de la documentación las clases CSS de padding que Bodystyle
+                    ofrece para gestionar el relleno interno de los elementos. Estas clases permiten ajustar el
+                    espacio interno de los elementos de manera sencilla y eficiente, mejorando la presentación y
+                    la usabilidad de las interfaces web. <br>
+                    Es importante ver las clases de <a href="margin.html" class="link tips-ele"
+                    data-tips="Clases de Margin">Margin</a> que ofrecen las mismas funcionalidades y son complementarias 
+                    a las clases de padding.
+                </p>
+                
+                <div class="d-flex ali-center gap-2">
+                    <div class="bg-red ta-c c-white pl-2">pl-2</div>
+                    <div class="bg-red ta-c c-white pr-2">pr-2</div>
+                    <div class="bg-red ta-c c-white pt-2">pt-2</div>
+                    <div class="bg-red ta-c c-white pb-2">pb-2</div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex  gap-2">
+        <div class="bg-red ta-c c-white pl-2">pl-2</div>
+        <div class="bg-red ta-c c-white pr-2">pr-2</div>
+        <div class="bg-red ta-c c-white pt-2">pt-2</div>
+        <div class="bg-red ta-c c-white pb-2">pb-2</div>
+    </div>
+</pre>
+</div>
+
+                <div class="table-responsive">
+                    <table class="selector vertical-border">
+                        <thead>
+                            <tr>
+                                <th>Clase</th>
+                                <th>Rango</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>p-[0-15]</code></td>
+                                <td>p-0 a p-15</td>
+                                <td>Aplica padding (relleno) uniforme en todos los lados del elemento.</td>
+                            </tr>
+                            <tr>
+                                <td><code>pt-[0-15]</code></td>
+                                <td>pt-0 a pt-15</td>
+                                <td>Aplica padding (relleno) en la parte superior del elemento.</td>
+                            </tr>
+                            <tr>
+                                <td><code>pr-[0-15]</code></td>
+                                <td>pr-0 a pr-15</td>
+                                <td>Aplica padding (relleno) en la parte derecha del elemento.</td>
+                            </tr>
+                            <tr>
+                                <td><code>pb-[0-15]</code></td>
+                                <td>pb-0 a pb-15</td>
+                                <td>Aplica padding (relleno) en la parte inferior del elemento.</td>
+                            </tr>
+                            <tr>
+                                <td><code>pl-[0-15]</code></td>
+                                <td>pl-0 a pl-15</td>
+                                <td>Aplica padding (relleno) en la parte izquierda del elemento.</td>
+                            </tr>
+                            <tr>
+                                <td><code>px-[0-15]</code></td>
+                                <td>px-0 a px-15</td>
+                                <td>Aplica padding (relleno) en los lados izquierdo y derecho del elemento.</td>
+                            </tr>
+                            <tr>    
+                                <td><code>py-[0-15]</code></td>
+                                <td>py-0 a py-15</td>
+                                <td>Aplica padding (relleno) en la parte superior e inferior del elemento.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Responsive</h2>
+                <p>
+                    Las clases de padding en Bodystyle también son responsivas, lo que significa que pueden
+                    adaptarse a diferentes tamaños de pantalla. Al agregar los modificadores de tamaño (como -m,
+                    -s, -xs), puedes aplicar diferentes valores de padding según el dispositivo o la resolución de
+                    pantalla. Esto permite crear diseños flexibles y adaptativos que se ven bien en
+                    dispositivos móviles, tabletas y computadoras de escritorio.
+                </p>
+
+                <div>
+                    <div class="bg-blue-s ta-c c-white p-5 p-m-3 p-s-2 p-xs-1">
+                        Ejemplo de padding responsivo
+                    </div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div>
+        <!-- A este contenedor se le aplica padding responsivo (En todas las Direcciones). -->
+        <div class="bg-blue-s ta-c c-white p-5 p-m-3 p-s-2 p-xs-1">
+            Ejemplo de padding responsivo
+        </div>
+    </div>
+</pre>
+</div>
+
+                <div class="table-responsive">
+                    <table class="selector vertical-border">
+                        <thead>
+                            <tr>
+                                <th>Clase</th>
+                                <th>Rango</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>p-[m|s|xs]</code></td>
+                                <td>Modificadores de tamaño</td>
+                                <td>Permiten aplicar padding responsivo según el tamaño de pantalla:
+                                    -m (mediano), -s (pequeño), -xs (extra pequeño).</td>
+                            </tr>
+                            <tr>
+                                <td><code>pl-[m|s|xs]</code></td>
+                                <td>Modificadores de tamaño</td>
+                                <td>Permiten aplicar padding responsivo según el tamaño de pantalla:
+                                    -m (mediano), -s (pequeño), -xs (extra pequeño).</td>
+                            </tr>
+                            <tr>
+                                <td><code>pr-[m|s|xs]</code></td>
+                                <td>Modificadores de tamaño</td>
+                                <td>Permiten aplicar padding responsivo según el tamaño de pantalla:
+                                    -m (mediano), -s (pequeño), -xs (extra pequeño).</td>
+                            </tr>
+                            <tr>
+                                <td><code>pt-[m|s|xs]</code></td>
+                                <td>Modificadores de tamaño</td>
+                                <td>Permiten aplicar padding responsivo según el tamaño de pantalla:
+                                    -m (mediano), -s (pequeño), -xs (extra pequeño).</td>
+                            </tr>
+                            <tr>
+                                <td><code>pb-[m|s|xs]</code></td>
+                                <td>Modificadores de tamaño</td>
+                                <td>Permiten aplicar padding responsivo según el tamaño de pantalla:
+                                    -m (mediano), -s (pequeño), -xs (extra pequeño).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Padding</a></li>
+            <li><a href="#2">📇 Introducción</a></li>
+            <li><a href="#3">📇 Responsive</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l3" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l3 ul li a")[4].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

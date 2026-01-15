@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="El efecto borde que se produce con el paso del cursor por encima de los elementos.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/efecto_hover.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Bodystyle</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Efecto Hover</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">El efecto borde que se produce con el paso del cursor por encima de los elementos generando 
+                un borde dinámico que mejora la UX.</p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Muestra</h2>
+                <p>
+                    A continuación se muestra una tabla con el efecto hover aplicado. Pasa el cursor por encima de la tabla para ver el efecto en acción.
+                </p>
+                
+                    <!--Si se pasa el cursor por encima se podra observar el borde que aparece -->
+                <div  class="bg-gray-d-1  py-2 efecto-borde-rojo mt-3 c-white">
+                    Hover Me!
+                </div>
+
+
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!--Si se pasa el cursor por encima se podra observar el borde que aparece -->
+    <div  class="bg-gray-d-1  py-2 efecto-borde-rojo mt-3 c-white">
+        Hover Me!
+    </div>
+</pre>
+</div>
+                <h3 id="3" class="scroll-item">Colores</h3>
+
+                <p>
+                    El efecto hover puede aplicarse con diferentes colores de borde. A continuación se muestran algunos ejemplos:   
+                </p>
+            
+
+                <h4 class="mb-3"><i class="bs-check fz-20 c-green">&nbsp;</i>Español</h4>
+
+                <div  class="row">
+                    <div  class="py-2 bg-red efecto-borde-blanco cxs-12 cs-6 cm-4 cl-3"></div>
+                    <div  class="py-2 bg-red efecto-borde-azul cxs-12 cs-6 cm-4 cl-3"></div>
+                    <div  class="py-2 bg-red efecto-borde-negro cxs-12 cs-6 cm-4 cl-3"></div>
+                    <div  class="py-2 bg-red efecto-borde-verde cxs-12 cs-6 cm-4 cl-3"></div>
+                    <div  class="py-2 bg-red efecto-borde-gris cxs-12 cs-6 cm-4 cl-3"></div>
+                    <div  class="py-2 bg-black efecto-borde-rojo cxs-12 cs-6 cm-4 cl-3"></div>
+                    <div  class="py-2 bg-black efecto-borde-bodyui cxs-12 cs-6 cm-4 cl-3"></div>
+                </div>
+
+                <h4 class="my-3"><i class="bs-check fz-20 c-green">&nbsp;</i>Inglés</h4>
+
+                <div  class="row mt-1">
+                    <div  class="py-2 bg-red effect-border-white cxs-12 cs-6 cm-4 cl-3"></div>
+                    <div  class="py-2 bg-red effect-border-blue cxs-12 cs-6 cm-4 cl-3"></div>
+                    <div  class="py-2 bg-red effect-border-black cxs-12 cs-6 cm-4 cl-3"></div>
+                    <div  class="py-2 bg-red effect-border-green cxs-12 cs-6 cm-4 cl-3"></div>
+                    <div  class="py-2 bg-red effect-border-grey cxs-12 cs-6 cm-4 cl-3"></div>
+                    <div  class="py-2 bg-black effect-border-red cxs-12 cs-6 cm-4 cl-3"></div>
+                    <div  class="py-2 bg-black effect-border-bodyui cxs-12 cs-6 cm-4 cl-3"></div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+
+    <!-- 
+        Ejemplo de código HTML 
+        Las clases utilizadas están disponibles en castellano y en inglés
+        en ambos casos el funcionamiento es idéntico.
+     -->
+    <h4 class="mb-3"><i class="bs-check fz-20 c-green">&nbsp;</i>Español</h4>
+
+    <!-- Se utiliza la grilla (grid.html) para poder mostrar los elementos en filas y columnas -->
+    <div  class="row">
+        <div  class="py-2 bg-red efecto-borde-blanco cxs-12 cs-6 cm-4 cl-3"></div>
+        <div  class="py-2 bg-red efecto-borde-azul cxs-12 cs-6 cm-4 cl-3"></div>
+        <div  class="py-2 bg-red efecto-borde-negro cxs-12 cs-6 cm-4 cl-3"></div>
+        <div  class="py-2 bg-red efecto-borde-verde cxs-12 cs-6 cm-4 cl-3"></div>
+        <div  class="py-2 bg-red efecto-borde-gris cxs-12 cs-6 cm-4 cl-3"></div>
+        <div  class="py-2 bg-black efecto-borde-rojo cxs-12 cs-6 cm-4 cl-3"></div>
+        <div  class="py-2 bg-black efecto-borde-bodyui cxs-12 cs-6 cm-4 cl-3"></div>
+    </div>
+    <h4 class="my-3"><i class="bs-check fz-20 c-green">&nbsp;</i>Inglés</h4>
+
+    <!-- Se utiliza la grilla (grid.html) para poder mostrar los elementos en filas y columnas -->
+    <div  class="row mt-1">
+        <div  class="py-2 bg-red effect-border-white cxs-12 cs-6 cm-4 cl-3"></div>
+        <div  class="py-2 bg-red effect-border-blue cxs-12 cs-6 cm-4 cl-3"></div>
+        <div  class="py-2 bg-red effect-border-black cxs-12 cs-6 cm-4 cl-3"></div>
+        <div  class="py-2 bg-red effect-border-green cxs-12 cs-6 cm-4 cl-3"></div>
+        <div  class="py-2 bg-red effect-border-grey cxs-12 cs-6 cm-4 cl-3"></div>
+        <div  class="py-2 bg-black effect-border-red cxs-12 cs-6 cm-4 cl-3"></div>
+        <div  class="py-2 bg-black effect-border-bodyui cxs-12 cs-6 cm-4 cl-3"></div>
+    </div>
+</pre>
+</div>
+
+            <div class="table-responsive">
+                <table class="vertical-border selector">
+                    <thead>
+                        <tr>
+                            <th>Español</th>
+                            <th>Inglés</th>
+                            <th>Color</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>efecto-borde-blanco</td>
+                            <td>effect-border-white</td>
+                            <td><div class="p-1 bg-white"></div></td>
+                        </tr>
+                        <tr>
+                            <td>efecto-borde-azul</td>
+                            <td>effect-border-blue</td>
+                            <td><div class="p-1 bg-blue"></div></td>
+                        </tr>
+                        <tr>
+                            <td>efecto-borde-negro</td>
+                            <td>effect-border-black</td>
+                            <td><div class="p-1 bg-black"></div></td>
+                        </tr>
+                        <tr>
+                            <td>efecto-borde-verde</td>
+                            <td>effect-border-green</td>
+                            <td><div class="p-1 bg-green"></div></td>
+                        </tr>
+                        <tr>
+                            <td>efecto-borde-gris</td>
+                            <td>effect-border-grey</td>
+                            <td><div class="p-1 bg-gray"></div></td>
+                        </tr>
+                        <tr>
+                            <td>efecto-borde-rojo</td>
+                            <td>effect-border-red</td>
+                            <td><div class="p-1 bg-red"></div></td>
+                        </tr>
+                        <tr>
+                            <td>efecto-borde-bodyui</td>
+                            <td>effect-border-bodyui</td>
+                            <td><div class="p-1 bg-bodyui"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="scroll-item mt-3" id="4">Posición</h3>
+            <p>
+                Podemos decidir desde que posición se comienza a mostrar el borde dinámico, en los ejemplos anteriores era desde 
+                la izquierda a la derecha, pero también podemos hacerlo desde la derecha a la izquierda, desde el centro hacia afuera, etc.
+            </p>
+
+            <div  class="py-2 bg-black efecto-borde-rojo derecha mt-3 c-white">
+                Hover Me!   
+            </div>
+
+
+            <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Ejemplo de código HTML -->
+    <!-- Se añade la clase "derecha" para que el borde dinámico comience desde la derecha -->
+    <div  class="py-2 bg-black efecto-borde-rojo derecha mt-3 c-white">
+        Hover Me!   
+    </div>
+
+    <!-- Ejemplo de código HTML -->
+    <!-- Se añade la clase "right" para que el borde dinámico comience desde la derecha -->
+    <div  class="py-2 bg-black efecto-borde-rojo right mt-3 c-white">
+        Hover Me!   
+    </div>
+</pre>
+</div>
+
+            <div  class="py-2 bg-black efecto-borde-rojo center mt-3 c-white">
+                Hover Me!   
+            </div>  
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Ejemplo de código HTML -->
+    <!-- Se añade la clase "derecha" para que el borde dinámico comience desde el centro -->
+    <div  class="py-2 bg-black efecto-borde-rojo centro mt-3 c-white">
+        Hover Me!   
+    </div>
+
+    <!-- Ejemplo de código HTML -->
+    <!-- Se añade la clase "right" para que el borde dinámico comience desde el centro -->
+    <div  class="py-2 bg-black efecto-borde-rojo center mt-3 c-white">
+        Hover Me!   
+    </div>
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 class="scroll-item" id="5">Laterales</h2>
+                <p>
+                    Podemos a través de las clases de Bodystyle definir efecto borde  en los laterales de los elementos.
+                </p>
+
+                <div  class="row">
+                    <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-1  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-1</div>
+                    <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-2  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-2</div>
+                    <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-3  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-3</div> 
+                    <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-4  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-4</div> 
+                    <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-5  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-5</div> 
+                    <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-6  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-6</div> 
+                    <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-7  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-7</div> 
+                    <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-8  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-8</div> 
+                    <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-9  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-9</div> 
+                    <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-10  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-10</div>      
+                </div>  
+                
+                
+            <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+     <!-- Ejemplo de código HTML -->
+    <!-- Se utiliza la grilla (grid.html) para poder mostrar los elementos en filas y columnas -->
+     <div  class="row">
+        <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-1  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-1</div>
+        <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-2  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-2</div>
+        <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-3  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-3</div> 
+        <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-4  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-4</div> 
+        <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-5  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-5</div> 
+        <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-6  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-6</div> 
+        <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-7  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-7</div> 
+        <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-8  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-8</div> 
+        <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-9  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-9</div> 
+        <div  class="c-white ta-c py-2 bg-black e-border-left-bodyui-10  cxs-12 cs-6 cm-4 cl-3">.e-border-left-bodyui-10</div>      
+    </div>  
+</pre>
+</div>
+
+            <div  class="row">
+                <div  class="c-white ta-c py-2 bg-black e-border-right-white-1  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-1</div>
+                <div  class="c-white ta-c py-2 bg-black e-border-right-white-2  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-2</div>
+                <div  class="c-white ta-c py-2 bg-black e-border-right-white-3  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-3</div> 
+                <div  class="c-white ta-c py-2 bg-black e-border-right-white-4  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-4</div> 
+                <div  class="c-white ta-c py-2 bg-black e-border-right-white-5  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-5</div> 
+                <div  class="c-white ta-c py-2 bg-black e-border-right-white-6  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-6</div> 
+                <div  class="c-white ta-c py-2 bg-black e-border-right-white-7  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-7</div> 
+                <div  class="c-white ta-c py-2 bg-black e-border-right-white-8  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-8</div> 
+                <div  class="c-white ta-c py-2 bg-black e-border-right-white-9  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-9</div> 
+                <div  class="c-white ta-c py-2 bg-black e-border-right-white-10  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-10</div>      
+            </div> 
+            
+            
+                        <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+     <div  class="row">
+        <div  class="c-white ta-c py-2 bg-black e-border-right-white-1  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-1</div>
+        <div  class="c-white ta-c py-2 bg-black e-border-right-white-2  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-2</div>
+        <div  class="c-white ta-c py-2 bg-black e-border-right-white-3  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-3</div> 
+        <div  class="c-white ta-c py-2 bg-black e-border-right-white-4  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-4</div> 
+        <div  class="c-white ta-c py-2 bg-black e-border-right-white-5  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-5</div> 
+        <div  class="c-white ta-c py-2 bg-black e-border-right-white-6  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-6</div> 
+        <div  class="c-white ta-c py-2 bg-black e-border-right-white-7  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-7</div> 
+        <div  class="c-white ta-c py-2 bg-black e-border-right-white-8  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-8</div> 
+        <div  class="c-white ta-c py-2 bg-black e-border-right-white-9  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-9</div> 
+        <div  class="c-white ta-c py-2 bg-black e-border-right-white-10  cxs-12 cs-6 cm-4 cl-3">.e-border-right-white-10</div>      
+    </div> 
+</pre>
+</div>
+    
+            </article>
+
+
+            <article class="article">
+                <h2 id="6" class="scroll-item">Ejemplo Práctico</h2>
+                <p>
+                    Podemos utilizar este efecto en cualquier elemento, como ejemplo tomaremos 
+                    los grupos de botones <a href="grupos_botones.html" class="link">Grupos Botones</a>
+                    y aplicaremos un ejemplo de cada caso.
+                </p>
+
+                <div class="btn-group ">
+                    <button class="btn bg-black e-border-left-bodyui-5 bor-rad-0">Item</button>
+                    <button class="btn bg-black e-border-left-bodyui-5">Item</button>
+                    <button class="btn bg-black e-border-left-bodyui-5">Item</button>
+                    <button class="btn bg-black e-border-left-bodyui-5 bor-rad-0">Item</button>
+                </div>  
+
+
+                <div class="btn-group-lg mt-3">
+                    <button class="btn bg-black e-border-left-bodyui-5 bor-rad-0">Item</button>
+                    <button class="btn bg-black e-border-left-bodyui-5">Item</button>
+                    <button class="btn bg-black e-border-left-bodyui-5">Item</button>
+                    <button class="btn bg-black e-border-left-bodyui-5 bor-rad-0">Item</button>
+                </div> 
+
+                <div class="btn-group-sm mt-3">
+                    <button class="btn bg-black e-border-left-bodyui-5 bor-rad-0">Item</button>
+                    <button class="btn bg-black e-border-left-bodyui-5">Item</button>
+                    <button class="btn bg-black e-border-left-bodyui-5">Item</button>
+                    <button class="btn bg-black e-border-left-bodyui-5 bor-rad-0">Item</button>
+                </div>
+                
+                
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="btn-group ">
+        <button class="btn bg-black e-border-left-bodyui-5 bor-rad-0">Item</button>
+        <button class="btn bg-black e-border-left-bodyui-5">Item</button>
+        <button class="btn bg-black e-border-left-bodyui-5">Item</button>
+        <button class="btn bg-black e-border-left-bodyui-5 bor-rad-0">Item</button>
+    </div>  
+    <div class="btn-group-lg mt-3">
+        <button class="btn bg-black e-border-left-bodyui-5 bor-rad-0">Item</button>
+        <button class="btn bg-black e-border-left-bodyui-5">Item</button>
+        <button class="btn bg-black e-border-left-bodyui-5">Item</button>
+        <button class="btn bg-black e-border-left-bodyui-5 bor-rad-0">Item</button>
+    </div> 
+    <div class="btn-group-sm mt-3">
+        <button class="btn bg-black e-border-left-bodyui-5 bor-rad-0">Item</button>
+        <button class="btn bg-black e-border-left-bodyui-5">Item</button>
+        <button class="btn bg-black e-border-left-bodyui-5">Item</button>
+        <button class="btn bg-black e-border-left-bodyui-5 bor-rad-0">Item</button>
+    </div> 
+</pre>
+</div>
+
+                <div class="btn-group ">
+                    <button class="btn bg-black effect-border-white center bor-rad-0">Item</button>
+                    <button class="btn bg-black effect-border-white center">Item</button>
+                    <button class="btn bg-black effect-border-white center">Item</button>
+                    <button class="btn bg-black effect-border-white center bor-rad-0">Item</button>
+                </div>  
+                <div class="btn-group-lg mt-3">
+                    <button class="btn bg-black effect-border-white center bor-rad-0">Item</button>
+                    <button class="btn bg-black effect-border-white center">Item</button>
+                    <button class="btn bg-black effect-border-white center">Item</button>
+                    <button class="btn bg-black effect-border-white center bor-rad-0">Item</button>
+                </div> 
+                <div class="btn-group-sm mt-3">
+                    <button class="btn bg-black effect-border-white center bor-rad-0">Item</button>
+                    <button class="btn bg-black effect-border-white center">Item</button>
+                    <button class="btn bg-black effect-border-white center">Item</button>
+                    <button class="btn bg-black effect-border-white center bor-rad-0">Item</button>
+                </div> 
+                
+                
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+      <div class="btn-group ">
+            <button class="btn bg-black effect-border-white center bor-rad-0">Item</button>
+            <button class="btn bg-black effect-border-white center">Item</button>
+            <button class="btn bg-black effect-border-white center">Item</button>
+            <button class="btn bg-black effect-border-white center bor-rad-0">Item</button>
+        </div>  
+        <div class="btn-group-lg mt-3">
+            <button class="btn bg-black effect-border-white center bor-rad-0">Item</button>
+            <button class="btn bg-black effect-border-white center">Item</button>
+            <button class="btn bg-black effect-border-white center">Item</button>
+            <button class="btn bg-black effect-border-white center bor-rad-0">Item</button>
+        </div> 
+        <div class="btn-group-sm mt-3">
+            <button class="btn bg-black effect-border-white center bor-rad-0">Item</button>
+            <button class="btn bg-black effect-border-white center">Item</button>
+            <button class="btn bg-black effect-border-white center">Item</button>
+            <button class="btn bg-black effect-border-white center bor-rad-0">Item</button>
+        </div> 
+</pre>
+</div>
+    
+            </article>
+
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Efecto Hover</a></li>
+            <li><a href="#2">📇 Muestra</a></li>
+            <li><a href="#3">📇 Colores</a></li>
+            <li><a href="#4">📇 Posición</a></li>
+            <li><a href="#5">📇 Laterales</a></li>
+            <li><a href="#6">📇 Ejemplo Práctico</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l2" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l2 ul li a")[13].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

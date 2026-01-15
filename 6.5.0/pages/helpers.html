@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Ayudantes que permiten ajustar la visibilidad y comportamiento de elementos en el DOM.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/helpers.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Helpers</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Helpers</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Los helpers son una serie de funciones auxiliares que permiten ajustar la visibilidad y comportamiento
+                de elementos en el DOM de manera sencilla y eficiente.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Introducción</h2>
+                <p>
+                    Los helpers en Bodystyle son funciones diseñadas para facilitar tareas comunes relacionadas con
+                    la manipulación del DOM. Estos helpers permiten mostrar u ocultar elementos, alternar clases CSS,
+                    y realizar otras operaciones útiles que mejoran la interactividad y la experiencia del usuario en
+                    una página web. <br>
+                    Recomendación: Ver la página donde se describen los Breakpoint utilizados por Bodystyle desde <a href="medidas.html" class="link">Medidas</a>.
+                </p>
+
+                <div class="table-respondsive">
+                    <table class="selector vertical-border">
+                        <thead>
+                            <tr>
+                                <th>Español</th>
+                                <th>Inglés</th>
+                                <th>Descripción</th>
+                                <th>Ejemplo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>.ocultar-solo-grandes</td>
+                                <td>.hide-only-large</td>
+                                <td>Permite ocultar elementos solo en pantallas grandes.</td>
+                                <td><div class="p-2 bg-red ocultar-solo-grandes"></div></td>
+                            </tr>
+                            <tr>
+                                <td>.ocultar-desde-medianos</td>
+                                <td>.hide-from-medium</td>
+                                <td>Permite ocultar elementos desde pantallas medianas en adelante.</td>
+                                <td><div class="p-2 bg-red ocultar-desde-medianos"></div></td>
+                            </tr>
+                            <tr>
+                                <td>.ocultar-desde-chicos</td>
+                                <td>.hide-from-small</td>
+                                <td>Permite ocultar elementos desde pantallas pequeñas en adelante.</td>
+                                <td><div class="p-2 bg-red ocultar-desde-chicos"></div></td>
+                            </tr>
+                            <tr>
+                                <td>.ocultar-desde-x-chicos</td>
+                                <td>.hide-from-x-small</td>
+                                <td>Permite ocultar elementos desde pantallas extra pequeñas en adelante.</td>
+                                <td><div class="p-2 bg-red ocultar-desde-x-chicos"></div></td>
+                            </tr>
+                            <tr>
+                                <td>.mostrar-solo-x-chicos</td>
+                                <td>.show-only-x-small</td>
+                                <td>Permite mostrar elementos solo en pantallas extra pequeñas.</td>
+                                <td><div class="p-2 bg-red mostrar-solo-x-chicos"></div></td>
+                            </tr>
+                            <tr>
+                                <td>.mostrar-solo-chicos</td>
+                                <td>.show-only-small</td>
+                                <td>Permite mostrar elementos solo en pantallas pequeñas.</td>
+                                <td><div class="p-2 bg-red mostrar-solo-chicos"></div></td>
+                            </tr>
+                            <tr>
+                                <td>.mostrar-solo-medianos</td>
+                                <td>.show-only-medium</td>
+                                <td>Permite mostrar elementos solo en pantallas medianas.</td>
+                                <td><div class="p-2 bg-red mostrar-solo-medianos"></div></td>
+                            </tr>
+                            <tr>
+                                <td>.mostrar-solo-grandes</td>
+                                <td>.show-only-large</td>
+                                <td>Permite mostrar elementos solo en pantallas grandes.</td>
+                                <td><div class="p-2 bg-red mostrar-solo-grandes"></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+               
+                <div class="alert mt-3">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s">&nbsp;</i>Información</h4>
+                    <p>
+                        En la tabla anterior si cambian el tamaño de pantalla podrán notar como la columna 
+                        ejemplo muestra u oculta el cuadro rojo según la clase aplicada.
+                    </p>
+                </div>
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Ejemplo</h4>
+                <p>
+                    Tomaremos un contenedor y permitiremos que el mismo sólo se muestre en equipos grandes 
+                    o sea más de 1030px de ancho.
+                </p>
+
+                <div class="p-2 bg-red mostrar-solo-grandes c-white ta-c">.mostrar-solo-grandes</div>
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Contenedor que solo se muestra en pantallas grandes -->
+    <div class="p-2 bg-red mostrar-solo-grandes"></div>
+</pre>
+</div>
+
+
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">SASS</h2>
+                <p>
+                    Con las propiedades y funciones de SASS se crearon estos helpers para
+                    facilitar la tarea de mostrar u ocultar elementos según el tamaño de pantalla.
+                </p>
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        SASS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    /**
+       Estos mixin son la base de los helpers de visibilidad de Bodystyle.
+       A partir de ellos se ajustará la visibilidad delos elementos según
+       el tamaño de pantalla.
+    */
+
+
+    /**
+        Este mixin permite agregar estilos CSS a medida que el tamaño de pantalla
+        sea menor o igual al tamaño seleccionado.
+    */
+    @mixin agregar-a-medida-maxima($tam) {
+        @if map.has-key(variables.$tamaños, $tam) {
+            @media (max-width: #{map.get(variables.$tamaños, $tam)}) {
+                @content;
+            }
+        }
+
+        @else {
+            @warn "El tamaño seleccionado no existe";
+        }
+    }
+
+    /**
+        Este mixin permite agregar estilos CSS a medida que el tamaño de pantalla
+        sea mayor o igual al tamaño seleccionado.
+    */
+    @mixin agregar-a-medida-minima($tam) {
+        @if map.has-key(variables.$tamaños, $tam) {
+            @media (min-width: #{map.get(variables.$tamaños, $tam)}) {
+                @content;
+            }
+        }
+
+        @else {
+            @warn "El tamaño seleccionado no existe";
+        }
+    }
+</pre>
+</div>
+                <p>
+                    Luego, con las clases apropiadas y utilizando estos mixin podemos 
+                    establecer de manera sencilla cada uno de los helpers.
+                </p>
+
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        SASS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    @use "../globales/mixins";
+
+    /**
+        Helpers de visibilidad de elementos según tamaño de pantalla
+    */
+    .ocultar-solo-grandes,
+    .hide-only-large {
+        @include mixins.agregar-a-medida-minima(m) {
+            display: none !important;
+        }
+    }
+
+    /// Ocultar desde pantallas medianas hacia abajo
+    .ocultar-desde-medianos,
+    .hide-from-medium {
+        @include mixins.agregar-a-medida-maxima(m) {
+            display: none !important;
+        }
+    }
+
+    /// Ocultar desde pantallas chicas hacia abajo
+    .ocultar-desde-chicos,
+    .hide-from-small {
+        @include mixins.agregar-a-medida-maxima(s) {
+            display: none !important;
+        }
+    }
+
+    /// Ocultar desde pantallas extra chicas hacia abajo
+    .ocultar-desde-x-chicos,
+    .hide-from-x-small {
+        @include mixins.agregar-a-medida-maxima(xs) {
+            display: none !important;
+        }
+    }
+
+    /// Mostrar solo en pantallas extra chicas
+    .mostrar-solo-x-chicos,
+    .show-only-x-small {
+        @include mixins.agregar-a-medida-minima(xs) {
+            display: none !important;
+        }
+    }
+
+    /// Mostrar solo en pantallas chicas
+    .mostrar-solo-chicos,
+    .show-only-small {
+        @include mixins.agregar-a-medida-minima(s) {
+            display: none !important;
+        }
+
+        @include mixins.agregar-a-medida-maxima(xs) {
+            display: none !important;
+        }
+    }
+
+    /// Mostrar solo en pantallas medianas
+    .mostrar-solo-medianos,
+    .show-only-medium {
+        @include mixins.agregar-a-medida-minima(m) {
+            display: none !important;
+        }
+
+        @include mixins.agregar-a-medida-maxima(s) {
+            display: none !important;
+        }
+    }
+
+    /// Mostrar solo en pantallas grandes
+    .mostrar-solo-grandes,
+    .show-only-large {
+        @include mixins.agregar-a-medida-maxima(m) {
+            display: none !important;
+        }
+    }
+</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Ejemplo Práctico</h2>
+                <p>
+                    En muchas oportunidades en la barra de navegación tenemos un menú que 
+                    por determinadas razones el mismo no se aprecia de manera correcta 
+                    en disposivos pequeños, lo cual nos obliga a agregar CSS validando esta situación 
+                    y corrigiéndola. En este caso utilizaremos un helpers.
+                </p>
+
+        <nav  id="nav"  class="bs-nav bg-pink-d-1"  data-target="#bs-nav-sidebar">
+            <div  class="bs-nav-md align-right-list">
+                <a  href="#"  class="logo-container">
+                    <img  src="../images/logo.png"  alt="Foto de perfil">
+                </a>
+                <div class="ocultar-desde-medianos">
+                    <ul>
+                        <li><a  href="#">Inicio</a></li>
+                        <li><a  href="#">Porfolio</a></li>
+                        <li><a  href="#">Galeria</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <nav  id="nav"  class="bs-nav bg-pink-d-1"  data-target="#bs-nav-sidebar">
+            <div  class="bs-nav-md align-right-list">
+                <a  href="#"  class="logo-container">
+                    <img  src="../images/logo.png"  alt="Foto de perfil">
+                </a>
+                <!--Nótese que cuando se achique la pantalla el menú desaparecerá-->
+                <div class="ocultar-desde-medianos">
+                    <ul>
+                        <li><a  href="#">Inicio</a></li>
+                        <li><a  href="#">Porfolio</a></li>
+                        <li><a  href="#">Galeria</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Helpers</a></li>
+            <li><a href="#2">📇 Introducción</a></li>
+            <li><a href="#3">📇 SASS</a></li>
+            <li><a href="#4">📇 Ejemplo Práctico</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l3" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoCssInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l3 ul li a")[6].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

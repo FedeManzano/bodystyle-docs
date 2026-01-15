@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Efecto que se produce cuando el usuario hace click en un elemento.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/waves.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Waves</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Waves</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Efecto que se produce cuando el usuario hace click en un elemento. 
+                Este efecto es ideal para botones, tarjetas y otros elementos interactivos. <br>
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Muestra</h2>
+                <p>
+                    Si bien no es necesario inicializar el módulo porque se activa automáticamente al agregar el 
+                    archivo <span class="badge badge-red">bodystyle.min.css</span> al proyecto en desarrollo. <br>
+                    A continuación se muestra un ejemplo de cómo utilizar el efecto Waves en un botón. <br>
+                    La manera de poder utilizarlo es a través de la clase <span class="badge badge-red">.waves</span> en el
+                    elemento que se desea aplicar el efecto.
+                </p>
+                
+                <button class="btn fd-bodyui waves">Click Me!</button>
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Se añadió la clase .waves al elemento-->
+    <button class="btn fd-bodyui waves">Click Me!</button>
+</pre>
+</div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Colores</h2>
+                <p>
+                    Es posible utilizar este efecto en diferentes colores. Los mismos van a ser configurados 
+                    a través del atributo <span class="badge badge-black">data-color</span> que recibirá 
+                    la clase de <a href="colores.html" class="link">Colores</a> pertenecientes a Bodystyle. <br>
+                    A continuación se muestran algunos ejemplos de cómo utilizar diferentes colores en el efecto Waves.
+                </p>
+                <div class="d-flex gap-1 flex-wrap">
+                    <button class="btn fd-bodyui waves" data-color="bg-blue">Azul</button>
+                    <button class="btn fd-bodyui waves" data-color="bg-green">Verde</button>
+                    <button class="btn fd-bodyui waves" data-color="bg-gray">Gris</button>
+                    <button class="btn fd-bodyui waves" data-color="bg-violet">Violeta</button>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex gap-1 flex-wrap">
+        <!-- Se añaden clases de bodystyle al data-color -->
+        <button class="btn fd-bodyui waves" data-color="bg-blue">Azul</button>
+        <button class="btn fd-bodyui waves" data-color="bg-green">Verde</button>
+        <button class="btn fd-bodyui waves" data-color="bg-gray">Gris</button>
+        <button class="btn fd-bodyui waves" data-color="bg-violet">Violeta</button>
+    </div>
+</pre>
+</div>
+                <div class="alert">
+                    <h4 class="c-red"><i class="bs-cancel c-red fz-25">&nbsp;</i>Peligro</h4>
+                    <p>
+                        Es importante tener en cuenta que el atributo <span class="badge badge-black">data-color</span>
+                        debe contener una clase de color válida de Bodystyle para que el efecto funcione correctamente. <br>
+                        Caso contrario, en la consola del navegador aparecerá un mensaje de error de Bodystyle informando 
+                        esta situación.
+                    </p>
+                </div>          
+
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Funcionamiento</h2>
+                <p>
+                    El efecto funciona con un elemento que se crea de manera dinámica, luego, el mismo 
+                    se añade al elemento disparador como hijo, por último el elemento se anima para cambiar 
+                    su tamaño y opacidad, creando así el efecto de onda. <br>
+                </p>
+
+
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    /**
+     * Módulo (27) Efecto que incorpora momentaneamente 
+     * un elemento dentro de otro para generar el efecto pretendido.
+     * migrado a vanilla js desde la versión 5.8.0.
+     */
+    (function () {
+
+        // Si alguien quiere cambiar el tiempo de espera
+        const Time = 500;
+
+
+        /**
+         * Almacena los event listeners para poder eliminarlos posteriormente
+         * @type {Map<HTMLElement, Function>}
+         * @private
+         */
+        const eventListeners = new Map();
+
+        /**
+         * Aplica el efecto de onda a un elemento específico
+         * @private
+         * @param {HTMLElement} elemento - Elemento que recibirá el efecto waves
+         * @returns {void}
+         * 
+         * @description
+         * Esta función interna agrega un event listener de click al elemento.
+         * Cuando se hace clic:
+         * 1. Obtiene el color personalizado del atributo `data-color` (opcional)
+         * 2. Crea un elemento `<span>` con la clase `efecto-waves`
+         * 3. Posiciona el span en las coordenadas del clic
+         * 4. Aplica el color si es válido
+         * 5. Agrega el elemento al DOM
+         * 6. Elimina el elemento después de 500ms (duración de la animación CSS)
+         * 
+         * La animación de expansión se maneja mediante CSS con `transform: translate3d()`
+         * y transiciones en el archivo `_efecto-waves.scss`.
+         */
+        const aplicarEfecto = (elemento) => {
+            const clickHandler = (e) => {
+                const color = elemento.getAttribute("data-color");
+                const boton = e.currentTarget;
+                const span = document.createElement("span");
+
+                span.classList.add("efecto-waves");
+
+                // Validar y aplicar color personalizado
+                if (color !== null && color !== "") {
+                    if (!ERR.fondo.val(color)) {
+                        console.error(
+                            `(WAVES) ${ERR.fondo.mje} Revise el atributo data-color='bg-[color]'`
+                        );
+                        return;
+                    }
+                    span.classList.add(color);
+                }
+
+                // Posicionar el efecto en el punto de clic
+                span.style.left = e.offsetX + "px";
+                span.style.top = e.offsetY + "px";
+
+                // Agregar al DOM
+                boton.appendChild(span);
+
+                // Animar con Web Animations API
+                span.animate([
+                    // Keyframe inicial (0%)
+                    {
+                        width: '10px',
+                        height: '10px',
+                        opacity: 0.8
+                    },
+                    // Keyframe final (100%)
+                    {
+                        width: '200px',
+                        height: '200px',
+                        opacity: 0
+                    }
+                ], {
+                    duration: Time,        // Duración en ms
+                    easing: 'ease-out',    // Curva de animación
+                    fill: 'forwards'       // Mantener estado final
+                });
+
+                // Remover después de la animación
+                setTimeout(() => {
+                    span.remove();
+                }, Time);
+            };
+
+            elemento.addEventListener("click", clickHandler);
+            eventListeners.set(elemento, clickHandler);
+        };
+
+        /**
+         * Inicializa el efecto waves en todos los elementos con la clase `.waves`
+         * @private
+         * @returns {void}
+         */
+        const inicializarEfectos = () => {
+            document.querySelectorAll(".waves").forEach((elemento) => {
+                aplicarEfecto(elemento);
+            });
+        };
+
+        /**
+         * Elimina todos los event listeners del efecto waves
+         * @private
+         * @returns {void}
+         */
+        const destruirEfectos = () => {
+            eventListeners.forEach((handler, elemento) => {
+                elemento.removeEventListener("click", handler);
+            });
+            eventListeners.clear();
+        };
+
+        /**
+         * Objeto público del módulo Waves
+         * @namespace Waves
+         * @type {Object}
+         * @property {Function} iniciar - Inicializa el efecto waves
+         * @property {Function} destroy - Elimina todos los event listeners
+         */
+        const Waves = {
+            /**
+             * Inicializa el efecto waves en todos los elementos con la clase `.waves`
+             * @memberof Waves
+             * @function iniciar
+             * @returns {void}
+             * @example
+             * Waves.init();
+             */
+            iniciar: function () {
+                inicializarEfectos();
+            },
+
+            /**
+             * Elimina todos los event listeners del efecto waves
+             * @memberof Waves
+             * @function destroy
+             * @returns {void}
+             * @example
+             * Waves.destroy();
+             */
+            destroy: function () {
+                destruirEfectos();
+            }
+        };
+
+        // Auto-inicialización al cargar el módulo
+        inicializarEfectos();
+
+        // Exponer en el objeto window para compatibilidad con código legacy
+        window.Waves = Waves;
+
+        // Exportar el módulo
+        return Waves;
+    })();
+
+    export default window.Waves;
+
+</pre>
+</div>
+
+                <div class="alert">
+                    <h4 class="c-yellow"><i class="bs-warning c-yellow fz-25">&nbsp;</i>Advertencia</h4>
+                    <p>
+                        El efecto Waves se inicializa automáticamente, pero en caso de proyectos 100% dinámicos 
+                        puede pasar que esta inicializión se pierda por cuestiones de renderizado. <br>
+                        En estos casos se utilizará la función BS.WavesInit() para volver a inicializar el efecto.
+                    </p>
+                </div>
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Waves</a></li>
+            <li><a href="#2">📇 Muestra</a></li>
+            <li><a href="#3">📇 Colores</a></li>
+            <li><a href="#4">📇 Funcionamiento</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l5" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l5 ul li a")[13].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

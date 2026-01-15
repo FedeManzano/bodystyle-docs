@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Efecto en CSS que permite girar un elementos y mostrarlo de diferentes ángulos.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/efecto3d.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Bodystyle</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">💎 Efecto 3D</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Efecto en CSS que permite girar un elementos y mostrarlo de diferentes ángulos y mostrar el movimiento del elementos 
+                en 3D.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Muestra</h2>
+                <p>
+                    Vamos a ver un ejemplo de como se vería el efecto, a través de tarjetas utilizadas 
+                    y provistas por Bodystyle.
+                </p>
+                
+                    <div  class="ancho-40">
+                        <div  class="contenedor-efecto3d">
+                            <div  class="contenedor-vertical bor-rad-10 ">
+                                <div  class="adelate">
+                                    <div  class="card">
+                                        <div  class="card-simple-dark">
+                                            <h4>Cara Delantera</h4>
+                                            <small>Pequeña descripción</small>
+                                            <p>
+                                                Esto es el contenido del elemento que se ve de frente
+                                            </p> 
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+                                <div  class="atras-vertical ">
+                                    <div  class="bg-black p-2 c-white  alto-100 bor-rad-10 ta-c d-flex ali-center">
+                                        <p>
+                                            Este texto queda por oculto por detrás de la figura que se muestra de frente.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div  class="ancho-40">
+        <div  class="contenedor-efecto3d">
+            <div  class="contenedor-vertical bor-rad-10 ">
+                <div  class="adelate">
+                    <div  class="card">
+                        <div  class="card-simple-dark">
+                            <h4 style="color: white !important;">Cara Delantera</h4>
+                            <small>Pequeña descripción</small>
+                            <p>
+                                Esto es el contenido del elemento que se ve de frente
+                            </p> 
+                        </div>
+                    </div>
+                </div>
+            
+                <div  class="atras-vertical ">
+                    <div  class="bg-black p-2 c-white  alto-100 bor-rad-10 ta-c d-flex ali-center">
+                        <p>
+                            Este texto queda por oculto por detrás de la figura que se muestra de frente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+    
+
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>
+                        Nótese que el contenedor principal del efecto 3D es <span
+                            class="badge badge-red">.contenedor-efecto3d</span>, y dentro de este se encuentra el 
+                        contenedor vertical <span class="badge badge-red">.contenedor-vertical</span> que contiene las dos caras del
+                        elemento: la cara delantera <span class="badge badge-red">.adelate</span> y la cara trasera <span
+                            class="badge badge-red">.atras-vertical</span>. <br>
+                        La biblioteca provee dos efectos 3D: En uno el elemento gira sobre un eje vertical y en otro sobre un eje
+                        horizontal. <br>
+                    </p>
+                </div>
+
+                <h4 class="mb-3"><i class="bs-check c-green">&nbsp;</i>Horizontal</h4>
+
+
+                <div  class="ancho-40">
+                    <div  class="contenedor-efecto3d">
+                        <div  class="contenedor-horizontal bor-rad-10 ">
+                            <div  class="adelate">
+                                <div  class="card">
+                                    <div  class="card-simple-dark">
+                                        <h4 style="color: white !important;">Cara Delantera</h4>
+                                        <small>Pequeña descripción</small>
+                                        <p>
+                                            Esto es el contenido del elemento que se ve de frente
+                                        </p> 
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div  class="atras-horizontal ">
+                                <div  class="bg-black p-2 c-white  alto-100 bor-rad-10 ta-c d-flex ali-center">
+                                    <p>
+                                        Este texto queda por oculto por detrás de la figura que se muestra de frente.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div  class="ancho-40">
+        <div  class="contenedor-efecto3d">
+            <div  class="contenedor-horizontal bor-rad-10 ">
+                <div  class="adelate">
+                    <div  class="card">
+                        <div  class="card-simple-dark">
+                            <h4 style="color: white !important;">Cara Delantera</h4>
+                            <small>Pequeña descripción</small>
+                            <p>
+                                Esto es el contenido del elemento que se ve de frente
+                            </p> 
+                        </div>
+                    </div>
+                </div>
+            
+                <div  class="atras-horizontal ">
+                    <div  class="bg-black p-2 c-white  alto-100 bor-rad-10 ta-c d-flex ali-center">
+                        <p>
+                            Este texto queda por oculto por detrás de la figura que se muestra de frente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+
+            <h4><i class="bs-check c-green fz-20">&nbsp;</i>Estructura</h4>
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+   
+    <!-- Estructura del efecto 3D Vertical -->
+    <div  class="contenedor-efecto3d"> <!-- Contenedor principal del efecto 3D -->
+        <div  class="contenedor-vertical bor-rad-10 "> <!-- Contenedor vertical -->
+            <div  class="adelate">  <!-- Cara delantera -->
+                <!-- Contenido de la cara delantera -->
+            </div>
+        
+            <div  class="atras-vertical ">  <!-- Cara trasera -->
+                <!-- Contenido de la cara trasera -->
+            </div>
+        </div>
+        <div  class="contenedor-horizontal bor-rad-10 "> <!-- Contenedor horizontal -->
+            <div  class="adelate">  <!-- Cara delantera -->
+                <!-- Contenido de la cara delantera -->
+            </div>
+        
+            <div  class="atras-horizontal ">
+                <!-- Cara trasera -->
+                <!-- Contenido de la cara trasera -->
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+
+    
+            </article>
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Clases Disponibles</h2>
+                <p>
+                    A continuación se encuentran todas las clases CSS disponibles para implementar el efecto 3D:
+                </p>
+
+                <div class="tabla-responsive">
+                    <table class="tabla tabla-bordered tabla-hover">
+                        <thead class="bg-blue-s c-white">
+                            <tr>
+                                <th>Clase</th>
+                                <th>Descripción</th>
+                                <th>Obligatoria</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="badge badge-red">.contenedor-efecto3d</span></td>
+                                <td>Contenedor principal que envuelve todo el efecto 3D</td>
+                                <td><i class="bs-check c-green fz-18"></i></td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-red">.contenedor-vertical</span></td>
+                                <td>Contenedor que hace girar el elemento sobre un eje vertical (izquierda-derecha)</td>
+                                <td>Sí (o usar horizontal)</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-red">.contenedor-horizontal</span></td>
+                                <td>Contenedor que hace girar el elemento sobre un eje horizontal (arriba-abajo)</td>
+                                <td>Sí (o usar vertical)</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-red">.adelate</span></td>
+                                <td>Define la cara delantera del elemento que se muestra al inicio</td>
+                                <td><i class="bs-check c-green fz-18"></i></td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-red">.atras-vertical</span></td>
+                                <td>Define la cara trasera del elemento en un efecto vertical</td>
+                                <td>Si usa vertical</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-red">.atras-horizontal</span></td>
+                                <td>Define la cara trasera del elemento en un efecto horizontal</td>
+                                <td>Si usa horizontal</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Elementos Simples</h2>
+                <p>
+                   Vamos a ver como utilizar este efecto con elementos simples, definiendo 
+                   contenedores sólo con las clases de Bodystyle y sin utilizar tarjetas u otros
+                   componentes. 
+                </p>
+
+
+                <div class="contenedor-efecto3d">
+                    <div class="contenedor-vertical">
+                        <div class="adelate bg-blue-s c-white p-2 bor-rad-10 ta-c">
+                            <h4>Frente</h4>
+                            <p>Este es un contenedor simple con el efecto 3D aplicado.</p>
+                        </div>
+                        <div class="atras-vertical bg-blue c-white p-2 bor-rad-10 ta-c">
+                            <h4>Detrás</h4>
+                            <p>Este es el reverso del contenedor simple con el efecto 3D aplicado.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenedor-efecto3d mt-3">
+                    <div class="contenedor-horizontal">
+                        <div class="adelate bg-blue-s c-white p-2 bor-rad-10 ta-c">
+                            <h4>Frente</h4>
+                            <p>Este es un contenedor simple con el efecto 3D aplicado.</p>
+                        </div>
+                        <div class="atras-horizontal bg-blue c-white p-2 bor-rad-10 ta-c">
+                            <h4>Detrás</h4>
+                            <p>Este es el reverso del contenedor simple con el efecto 3D aplicado.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+   <div class="contenedor-efecto3d">
+        <div class="contenedor-vertical">
+            <div class="adelate bg-blue-s c-white p-2 bor-rad-10 ta-c">
+                <h4>Frente</h4>
+                <p>Este es un contenedor simple con el efecto 3D aplicado.</p>
+            </div>
+            <div class="atras-vertical bg-blue c-white p-2 bor-rad-10 ta-c">
+                <h4>Detrás</h4>
+                <p>Este es el reverso del contenedor simple con el efecto 3D aplicado.</p>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor-efecto3d mt-3">
+        <div class="contenedor-horizontal">
+            <div class="adelate bg-blue-s c-white p-2 bor-rad-10 ta-c">
+                <h4>Frente</h4>
+                <p>Este es un contenedor simple con el efecto 3D aplicado.</p>
+            </div>
+            <div class="atras-horizontal bg-blue c-white p-2 bor-rad-10 ta-c">
+                <h4>Detrás</h4>
+                <p>Este es el reverso del contenedor simple con el efecto 3D aplicado.</p>
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="5" class="scroll-item">Variaciones del Efecto</h2>
+                <p>
+                    Existen diferentes variaciones del efecto 3D que puedes utilizar para obtener diferentes resultados. 
+                    A continuación se muestran algunas variaciones comunes con diferentes velocidades y estilos de animación.
+                </p>
+
+                <h4 class="mb-3"><i class="bs-check c-green">&nbsp;</i>Efecto Lento (2 segundos)</h4>
+                <p>Un efecto más suave y elegante, ideal para elementos que requieren una transición gradual.</p>
+                
+                <div class="contenedor-efecto3d" style="--duracion: 2s;">
+                    <div class="contenedor-vertical" style="transition: transform 2s ease-in-out;">
+                        <div class="adelate bg-purple c-white p-2 bor-rad-10 ta-c">
+                            <h4>Efecto Lento</h4>
+                            <p>Duración: 2 segundos</p>
+                        </div>
+                        <div class="atras-vertical bg-purple-s c-white p-2 bor-rad-10 ta-c">
+                            <h4>Detrás</h4>
+                            <p>Pasa el ratón sobre la tarjeta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        CSS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    &:hover .contenedor-vertical {
+        transform: perspective(600px) rotateY(180deg);
+        transition: transform 2s ease-in-out;
+    }
+</pre>
+</div>
+
+                <h4 class="mb-3 mt-3"><i class="bs-check c-green">&nbsp;</i>Efecto Rápido (0.5 segundos)</h4>
+                <p>Un efecto ágil y dinámico, perfecto para interacciones rápidas.</p>
+                
+                <div class="contenedor-efecto3d" style="--duracion: 0.5s;">
+                    <div class="contenedor-vertical" style="transition: transform 0.5s ease-in-out;">
+                        <div class="adelate bg-green c-white p-2 bor-rad-10 ta-c">
+                            <h4>Efecto Rápido</h4>
+                            <p>Duración: 0.5 segundos</p>
+                        </div>
+                        <div class="atras-vertical bg-green-s c-white p-2 bor-rad-10 ta-c">
+                            <h4>Detrás</h4>
+                            <p>Pasa el ratón sobre la tarjeta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        CSS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    &:hover .contenedor-vertical {
+        transform: perspective(600px) rotateY(180deg);
+        transition: transform 0.5s ease-in-out;
+    }
+</pre>
+</div>
+
+                <h4 class="mb-3 mt-3"><i class="bs-check c-green">&nbsp;</i>Efecto Elasticity (1.2 segundos)</h4>
+                <p>Un efecto con rebote, que simula una animación más elástica y divertida.</p>
+                
+                <div class="contenedor-efecto3d" style="--duracion: 1.2s;">
+                    <div class="contenedor-vertical" style="transition: transform 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
+                        <div class="adelate bg-orange c-white p-2 bor-rad-10 ta-c">
+                            <h4>Efecto Elástico</h4>
+                            <p>Duración: 1.2 segundos</p>
+                        </div>
+                        <div class="atras-vertical bg-orange-s c-white p-2 bor-rad-10 ta-c">
+                            <h4>Detrás</h4>
+                            <p>Pasa el ratón sobre la tarjeta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        CSS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    &:hover .contenedor-vertical {
+        transform: perspective(600px) rotateY(180deg);
+        transition: transform 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        /* Este cubic-bezier crea un efecto de rebote */
+    }
+</pre>
+</div>
+
+                <h4 class="mb-3 mt-3"><i class="bs-check c-green">&nbsp;</i>Perspectiva Profunda</h4>
+                <p>Variación del efecto con una perspectiva más profunda (300px en lugar de 600px) para un efecto más dramático.</p>
+                
+                <div class="contenedor-efecto3d" style="--duracion: 1s;">
+                    <div class="contenedor-vertical" style="transition: transform 1s ease-in-out;">
+                        <div class="adelate bg-red c-white p-2 bor-rad-10 ta-c" style="transform: perspective(300px);">
+                            <h4>Perspectiva Profunda</h4>
+                            <p>Efecto más dramático</p>
+                        </div>
+                        <div class="atras-vertical bg-red-s c-white p-2 bor-rad-10 ta-c">
+                            <h4>Detrás</h4>
+                            <p>Pasa el ratón sobre la tarjeta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        CSS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    &:hover .contenedor-vertical {
+        transform: perspective(300px) rotateY(180deg);
+        /* Una perspectiva menor (300px) crea un efecto más pronunciado */
+        transition: transform 1s ease-in-out;
+    }
+</pre>
+</div>
+
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>
+                        Puedes personalizar el efecto ajustando:
+                        <ul style="margin-top: 10px;">
+                            <li><strong>transition</strong>: Cambia la duración (ej: 0.5s, 1s, 2s, etc.)</li>
+                            <li><strong>easing function</strong>: Modifica ease-in-out por ease, linear, ease-in, ease-out o cubic-bezier()</li>
+                            <li><strong>perspective</strong>: Reduce el valor para un efecto más dramático, aumenta para menos dramático</li>
+                            <li><strong>rotateX/rotateY</strong>: Cambia el ángulo (ej: 90deg, 270deg, etc.)</li>
+                        </ul>
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="article">
+                <h2 class="scroll-item" id="6">Sass</h2>
+                <p>
+                    Para entender como funciona el efecto 3D en Sass, veamos las variables y mixins utilizados:
+                </p>
+
+                                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        SASS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    &:hover .contenedor-vertical {
+        transform: perspective(600px) rotateY(180deg);
+        -webkit-transform: perspective(600px) rotateY(180deg);
+        -moz-transform: perspective(600px) rotateY(180deg);
+        -o-transform: perspective(600px) rotateY(180deg);
+        -webkit-box-shadow: 0px 0px 14px 4px rgba(117, 117, 117, 0.71);
+        -moz-box-shadow: 0px 0px 14px 4px rgba(117, 117, 117, 0.71);
+        box-shadow: 0px 0px 14px 4px rgba(117, 117, 117, 0.71);
+    }
+
+    &:hover .contenedor-horizontal {
+        transform: perspective(600px) rotateX(180deg);
+        -webkit-transform: perspective(600px) rotateX(180deg);
+        -moz-transform: perspective(600px) rotateX(180deg);
+        -o-transform: perspective(600px) rotateX(180deg);
+        -webkit-box-shadow: 0px 0px 14px 4px rgba(117, 117, 117, 0.71);
+        -moz-box-shadow: 0px 0px 14px 4px rgba(117, 117, 117, 0.71);
+        box-shadow: 0px 0px 14px 4px rgba(117, 117, 117, 0.71);
+    }
+
+</pre>
+</div>
+
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>
+                        El efecto 3D se logra mediante la propiedad CSS <code>transform</code> junto con la función 
+                        <code>perspective</code> y las rotaciones <code>rotateY</code> para el efecto vertical y 
+                        <code>rotateX</code> para el efecto horizontal. Al aplicar el efecto, se añade una sombra al 
+                        contenedor para mejorar la percepción de profundidad.
+                    </p>
+                </div>
+
+            </article>
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Efecto 3D</a></li>
+            <li><a href="#2">📇 Muestra</a></li>
+            <li><a href="#3">📇 Clases Disponibles</a></li>
+            <li><a href="#4">📇 Elementos Simples</a></li>
+            <li><a href="#5">📇 Variaciones del Efecto</a></li>
+            <li><a href="#6">📇 Sass</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l2" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoCssInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l2 ul li a")[10].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

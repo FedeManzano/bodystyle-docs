@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Mensajes dinámicos que le informan al usuario de una determinada situación.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/toasts.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Toasts</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Toasts</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Los toasts son mensajes dinámicos que le informan al usuario de una determinada situación. Se
+                utilizan para notificar eventos breves y no intrusivos, como la confirmación de una acción o la
+                llegada de un nuevo mensaje.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Muestra Simple</h2>
+                <p>
+                    Ahora veremos un ejemplo básico de un toast que aparece en la esquina inferior derecha de la pantalla.
+                </p>
+                
+                <button class="btn fd-bodyui" onclick="BS.Toast()">Mostrar Toast</button>
+                <p class="mt-3">
+                    Es posible utlizar los toasts porque el archivo <span class="badge badge-bodyui">bodystyle.min.js</span>
+                    está incluido en el proyecto.
+                </p>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Se configurón el evento onclick del botón y a través del OBJ Global BS
+     se llama a la función Toast() para mostrar el toast -->
+    <button class="btn fd-bodyui" onclick="BS.Toast()">Mostrar Toast</button>
+</pre>
+</div>
+
+
+            <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Contenido</h4>
+            <p>
+                Ahora veremos un ejemplo más complicado pasando por parámetro el contenido HTML 
+                que mostrará el toast. 
+            </p>
+
+            <button class="btn fd-bodyui" onclick="BS.Toast({html: 'Esto es el Contenido del Toast'})">Mostrar Toast</button>
+            
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- dentro de la función toast se envía un JSON con un attr (html) con el valor 
+     que se quiere mostrar -->
+    <button class="btn fd-bodyui" onclick="BS.Toast({html: 'Esto es el Contenido del Toast'})">Mostrar Toast</button>
+</pre>
+</div>
+        </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Clases CSS</h2>
+                <p>
+                    Es posible personalizar el toasts con clases CSS enviadas por parámetro, 
+                    dentro de este conjunto podemos incluir las clases de bodystyle de manera tal 
+                    de aprovechar la potencia de la biblioteca.
+                </p>
+
+                <button class="btn fd-bodyui" onclick="ClasesToasts()">Mostrar Toast</button>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Dentro del evento onclick cargamos la función ClasesToasts -->
+    <button class="btn fd-bodyui" onclick="ClasesToasts()">Mostrar Toast</button>
+</pre>
+</div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    const ClasesToasts = () => {
+        let conf = {
+            // Nótese que html puede recibir código HTML
+            html: `🔔 <span class="f-w-7">Toast Personalizados</span>`,
+            // Nótese que recibe un array de clases, las mismas pueden ser cualquiera.
+            clases: ["bor-pill", "fd-gris-az", "c-white", "bor-red-1"]
+        }
+        BS.Toast(conf);
+    }
+</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Tiempo</h2>
+                <p>
+                    Es posible configurar el tiempo que estará visible el toast en pantalla, 
+                    por defecto el mismo es de 3000 milisegundos (3 segundos).
+                </p>
+
+                <button class="btn fd-bodyui" onclick="TiempoToasts()">Mostrar Toast</button>
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <button class="btn fd-bodyui" onclick="TiempoToasts()">Mostrar Toast</button>
+</pre>
+</div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    const TiempoToasts = () => {
+        let conf = {
+            html: `🔔 <span class="f-w-7">5 Segundos</span>`,
+            clases: ["bor-pill", "fd-gris-az", "c-white", "bor-red-1"],
+            tiempo: 5000 // 5 segundos
+        }
+        BS.Toast(conf);
+    }
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="5" class="scroll-item">Cerrar</h2>
+                <p>
+                    Desde un atributo del archivo de configuración podemos 
+                    darle la oportunidad al usuario de cerrar el toast antes de tiempo.
+                </p>
+                
+                <button class="btn fd-bodyui" onclick="BS.Toast({html: 'Toast con Cerrar', cerrar: true})">Mostrar Toast</button>
+            
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Dentro de la función toast se envía un JSON con un attr (cerrar) con valor true -->
+    <button class="btn fd-bodyui" onclick="BS.Toast({html: 'Toast con Cerrar', cerrar: true})">Mostrar Toast</button>
+</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Toasts</a></li>
+            <li><a href="#2">📇 Muestra Simple</a></li>
+            <li><a href="#3">📇 Clases</a></li>
+            <li><a href="#4">📇 Tiempo</a></li>
+            <li><a href="#5">📇 Cerrar</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l5" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l5 ul li a")[5].classList.add("c-red");
+
+
+        const ClasesToasts = () => {
+            let conf = {
+                html: `🔔 <span class="f-w-7">Toast Personalizados</span>`,
+                clases: ["bor-pill", "fd-gris-az", "c-white", "bor-red-1"]
+            }
+
+            BS.Toast(conf);
+        }
+
+        const TiempoToasts = () => {
+            let conf = {
+                html: `🔔 <span class="f-w-7">5 Segundos</span>`,
+                clases: ["bor-pill", "fd-gris-az", "c-white", "bor-red-1"],
+                tiempo: 5000 // 5 segundos
+            }
+
+            BS.Toast(conf);
+        }
+    </script>
+</body>
+
+</html>

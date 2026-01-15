@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Guia utilizada para ayudarle al usuario en que parte de un determinado proceso se encuentra.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/breadcrumbs.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Breadcrumbs</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Breadcrumbs</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Elemento básico de navegación que ayuda a los usuarios a entender y navegar por la jerarquía de un sitio web o aplicación. <br>
+                Los breadcrumbs muestran la ubicación actual del usuario dentro de la estructura del sitio y permiten un acceso rápido a niveles superiores
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Breadcrumbs Light</h2>
+                <p>
+                    Los breadcrumbs en su versión light son ideales para fondos oscuros o cuando se busca un contraste suave. 
+                    Utilizan colores claros para los textos y separadores, asegurando una buena legibilidad sin ser demasiado invasivos.
+                </p>
+                
+                <div  class="breadcrumb-negro bg-white mar-3">
+                    <a  href="#"  class="br-activo">Inicio</a>
+                    <a  href="#">servicios</a>
+                    <a  href="#">Personal</a>
+                    <a  href="#">Galeria</a>
+                </div>
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div  class="breadcrumb-negro bg-white mar-3">
+        <a  href="#"  class="br-activo">Inicio</a>
+        <a  href="#">servicios</a>
+        <a  href="#">Personal</a>
+        <a  href="#">Galeria</a>
+     </div>
+</pre>
+</div>
+
+            <div class="alert">
+                <h4 class="c-blue-s"><i class="bs-info c-blue-s">&nbsp;</i>Información</h4>
+                <p>
+                    Muy utilizado este elemento cuando disponemos de varios formularios en serie, 
+                    y necesitamos que el usuario sepa en que etapa del proceso se encuentra.
+                </p>
+            </div>
+
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Breadcrumbs Dark</h2>
+                <p>
+                    El otro tema que provee la biblioteca es el tema dark, para temas 
+                    claros de fondo logra una visualización correcta y clara para el usuario.
+                </p>
+
+                <div  class="breadcrumb-blanco">
+                    <a  href="#"  class="br-activo">Inicio</a>
+                    <a  href="#">servicios</a>
+                    <a  href="#">Personal</a>
+                    <a  href="#">Galeria</a>
+                </div>
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div  class="breadcrumb-blanco">
+        <a  href="#"  class="br-activo">Inicio</a>
+        <a  href="#">servicios</a>
+        <a  href="#">Personal</a>
+        <a  href="#">Galeria</a>
+     </div>
+</pre>
+</div>
+
+            </article>
+
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Breadcrumbs</a></li>
+            <li><a href="#2">📇 Breadcrumbs Light</a></li>
+            <li><a href="#3">📇 Breadcrumbs Dark</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l2" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l2 ul li a")[6].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

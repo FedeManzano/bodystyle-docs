@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Elementos dinámicos informativos que permiten gran cantidad de contenido.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/comentarios.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Comentarios</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">📝 Comentarios</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Los comentarios son elementos dinámicos informativos que permiten gran cantidad de contenido, como
+                texto,
+                imágenes, videos, enlaces, listas, tablas y otros elementos HTML. Son ideales para mostrar
+                información
+                adicional sin sobrecargar la interfaz principal. <br>
+                Es importante aclarar que este elemento al igual que los tooltips pertenecen a la 
+                dependencia  <a href="https://github.com/FedeManzano/dynamics-tips" class="link com-trigger"
+                data-info="Dynamics-Tips es una biblioteca independiente que proporciona funcionalidades de tooltips dinámicos.">Dynamics-Tips v3.0.0</a>
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Muestra</h2>
+                <p>
+                    Ahora veremos una muestra de como añadir dinámicamente información 
+                    a un elemento, por ejemplo un botón.
+                </p>
+
+                <button class="btn fd-bodyui com-trigger" data-info="Esto es un comentario dinámico, asociado a un botón de <span class='f-w-7'>Bodystyle</span>">Hover Me!</button>
+                
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Se utiliza la clase com-trigger para activar los comentarios dinámicos
+     y se añade la información en el atributo data-info -->
+    <button class="btn fd-bodyui com-trigger" data-info="Esto es un comentario dinámico, asociado a un botón de <span class='f-w-7'>Bodystyle</span>">Hover Me!</button>
+</pre>
+</div>
+                <div class="alert">
+                    <strong>Nota:</strong> Los comentarios dinámicos pueden contener HTML, lo que permite una
+                    personalización avanzada del contenido mostrado. <br>
+                    Otra cosa importante es que la inicialización es automática al cargar la página, no es necesario
+                    llamar a ninguna función para que funcionen.
+                </div>
+
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Posición</h2>
+                <p>
+                    Es posible elegir la posición del comentario dinámico utilizando el atributo
+                    <code>data-pos</code>. Las opciones disponibles son: top, bottom, left, right, auto. Por defecto, la
+                    posición es bottom, lo que permite que el comentario se ajuste automáticamente según
+                </p>
+
+                <div class="d-flex just-around gap-1">
+                    <button class="btn fd-bodyui com-trigger" data-pos="top" data-info="Comentario en la parte superior">Top</button>
+                    <button class="btn fd-bodyui com-trigger" data-pos="bottom" data-info="Comentario en la parte inferior">Bottom</button>
+                    <button class="btn fd-bodyui com-trigger" data-pos="left" data-info="Comentario a la izquierda">Left</button>
+                    <button class="btn fd-bodyui com-trigger" data-pos="right" data-info="Comentario a la derecha">Right</button>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex just-around gap-1">
+        <button class="btn fd-bodyui com-trigger" data-pos="top" data-info="Comentario en la parte superior">Top</button>
+        <button class="btn fd-bodyui com-trigger" data-pos="bottom" data-info="Comentario en la parte inferior">Bottom</button>
+        <button class="btn fd-bodyui com-trigger" data-pos="left" data-info="Comentario a la izquierda">Left</button>
+        <button class="btn fd-bodyui com-trigger" data-pos="right" data-info="Comentario a la derecha">Right</button>
+    </div>
+</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Html</h2>
+                <p>
+                    El contenido de los comentarios no necesariamente tiene que texto plano, puede contener HTML
+                    para una mejor presentación.
+                </p>
+
+                <button class="btn fd-bodyui com-trigger" data-info="Este comentario contiene <strong>HTML</strong> para una mejor presentación.">Hover Me!</button>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+     <button class="btn fd-bodyui com-trigger" data-info="Este comentario contiene <strong>HTML</strong> para una mejor presentación.">Hover Me!</button>
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 class="scroll-item" id="5">Evento Click</h2>
+
+                <p>
+                    Por defecto los comentarios se activan al pasar el cursor sobre el elemento (hover), pero es
+                    posible
+                    configurarlos para que se activen al hacer click utilizando el atributo
+                    <code>data-event="click"</code>.
+                </p>
+
+                <button class="btn fd-bodyui com-trigger" data-evt="click" data-info="Comentario activado con click">Click Me!</button>
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+     <button class="btn fd-bodyui com-trigger" data-evt="click" data-info="Comentario activado con click">Click Me!</button>
+</pre>
+</div>          
+            </article>
+
+            <article class="article">
+                <h2 class="scroll-item" id="6">Destroy</h2>
+                <p>
+                    Es posible destruir un comentario dinámico utilizando el método
+                    <code>BS.CommentDestroy()</code> de esta forma todos los comentarios 
+                    serán eliminados de la página.
+                </p>
+
+                <button class="btn fd-bodyui com-trigger" onclick="destroy()" data-info="Cuando presione este botón se eliminarán lols comentarios.">Destroy Comments</button>
+            
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    function destroy() {
+        BS.CommentDestroy();
+        BS.Toast({
+            html: "Comentarios destruidos",
+            clases: ["bg-red", "c-white", "bor-pill"],
+        })
+    }
+</pre>
+</div>  
+            
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Comentarios</a></li>
+            <li><a href="#2">📇 Muestra</a></li>
+            <li><a href="#3">📇 Posición</a></li>
+            <li><a href="#4">📇 Html</a></li>
+            <li><a href="#5">📇 Evento Click</a></li>
+            <li><a href="#6">📇 Destroy</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l5" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l5 ul li a")[2].classList.add("c-red");
+
+        function destroy() {
+            BS.CommentDestroy();
+            BS.Toast({
+                html: "Comentarios destruidos",
+                clases: ["bg-red", "c-white", "bor-pill"],
+            })
+        }
+
+    </script>
+</body>
+
+</html>

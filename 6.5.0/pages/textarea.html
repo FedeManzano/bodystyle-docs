@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Comienzo de la documentación de bodystyle.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/get_started.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Bodystyle</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Textarea</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Componente Textarea de Bodystyle. Permite la entrada de texto multilínea en formularios y aplicaciones web.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Muestra</h2>
+                <p>
+                    Ahora veremos un ejemplo de Textarea, puedes escribir en el cuadro de texto de abajo:
+                </p>
+
+                <textarea name="escritura" required id="txta1" placeholder="Escribe aquí tu texto..." style="width: 100%; padding: 0.75em; border: 1px solid #ddd; border-radius: 4px; 
+                                         resize: vertical; min-height: 100px;">
+                    
+                </textarea>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <textarea name="escritura" required id="txta1" placeholder="Escribe aquí tu texto..." style="width: 100%; padding: 0.75em; border: 1px solid #ddd; border-radius: 4px; 
+                                        resize: vertical; min-height: 100px;">
+                    
+    </textarea>
+</pre>
+</div>
+
+
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Tamaños</h2>
+                <p>El componente textarea se puede dimensionar usando el atributo <span class="badge badge-red">rows</span> para diferentes necesidades:</p>
+                
+                <div class="d-flex flex-column gap-2">
+                    <textarea placeholder="Pequeño (4 filas)" rows="4" style="width: 100%; padding: 0.5em; border: 1px solid #ddd; border-radius: 4px; resize: vertical;"></textarea>
+                    <textarea placeholder="Mediano (8 filas)" rows="8" style="width: 100%; padding: 0.75em; border: 1px solid #ddd; border-radius: 4px; resize: vertical;"></textarea>
+                    <textarea placeholder="Grande (12 filas)" rows="12" style="width: 100%; padding: 1em; border: 1px solid #ddd; border-radius: 4px; resize: vertical;"></textarea>
+                </div>
+
+                <div class="codigo mt-3">
+                    <label class="label">HTML <i class="bs-copy c-bodyui fz-20 btn-copy"></i></label>
+                    <pre class="cod-html pt-1">&lt;div class="d-flex flex-column gap-2"&gt;
+    &lt;textarea placeholder="Pequeño (4 filas)" rows="4"&gt;&lt;/textarea&gt;
+    &lt;textarea placeholder="Mediano (8 filas)" rows="8"&gt;&lt;/textarea&gt;
+    &lt;textarea placeholder="Grande (12 filas)" rows="12"&gt;&lt;/textarea&gt;
+&lt;/div&gt;</pre>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Estados</h2>
+                <p>Diferentes estados visuales del textarea para indicar su condición:</p>
+                
+                <div class="d-flex flex-column gap-2">
+                    <textarea placeholder="Estado normal" rows="4" style="width: 100%; padding: 0.75em; border: 1px solid #ddd; border-radius: 4px; resize: vertical;"></textarea>
+                    
+                    <textarea placeholder="Estado desactivado" rows="4" disabled style="width: 100%; padding: 0.75em; border: 1px solid #ddd; border-radius: 4px; resize: vertical; background: #f5f5f5; color: #999; cursor: not-allowed;"></textarea>
+                    
+                    <textarea placeholder="Con error" rows="4" style="width: 100%; padding: 0.75em; border: 2px solid #ff3333; border-radius: 4px; resize: vertical; background: #fff5f5;"></textarea>
+                    
+                    <textarea placeholder="Exitoso" rows="4" style="width: 100%; padding: 0.75em; border: 2px solid #00cc66; border-radius: 4px; resize: vertical; background: #f5fff9;"></textarea>
+                </div>
+
+                <div class="codigo mt-3">
+                    <label class="label">HTML <i class="bs-copy c-bodyui fz-20 btn-copy"></i></label>
+                    <pre class="cod-html pt-1">&lt;!-- Normal --&gt;
+&lt;textarea placeholder="Estado normal" rows="4"&gt;&lt;/textarea&gt;
+
+&lt;!-- Desactivado --&gt;
+&lt;textarea placeholder="Estado desactivado" rows="4" disabled&gt;&lt;/textarea&gt;
+
+&lt;!-- Con error --&gt;
+&lt;textarea placeholder="Con error" rows="4" style="border: 2px solid #ff3333; background: #fff5f5;"&gt;&lt;/textarea&gt;
+
+&lt;!-- Exitoso --&gt;
+&lt;textarea placeholder="Exitoso" rows="4" style="border: 2px solid #00cc66; background: #f5fff9;"&gt;&lt;/textarea&gt;</pre>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 id="5" class="scroll-item">Grupos con Etiquetas</h2>
+                <p>Textarea agrupados con etiquetas para mejor presentación en formularios:</p>
+                
+                <div class="d-flex flex-column gap-3">
+                    <div class="input-g">
+                        <label class="label">Comentarios</label>
+                        <textarea placeholder="Escribe tus comentarios aquí..." rows="6" style="width: 100%; padding: 0.75em; border: 1px solid #ddd; border-radius: 4px; resize: vertical;"></textarea>
+                    </div>
+
+                    <div class="input-g">
+                        <label class="label">Descripción del Proyecto</label>
+                        <small class="c-gris-n">Máximo 500 caracteres</small>
+                        <textarea placeholder="Describe tu proyecto..." rows="6" maxlength="500" style="width: 100%; padding: 0.75em; border: 1px solid #ddd; border-radius: 4px; resize: vertical;"></textarea>
+                    </div>
+
+                    <div class="input-g desactivado">
+                        <label class="label">Información del Sistema</label>
+                        <textarea placeholder="Este campo no es editable" rows="4" disabled style="width: 100%; padding: 0.75em; border: 1px solid #ddd; border-radius: 4px; resize: vertical; background: #f5f5f5;"></textarea>
+                    </div>
+                </div>
+
+                <div class="codigo mt-3">
+                    <label class="label">HTML <i class="bs-copy c-bodyui fz-20 btn-copy"></i></label>
+                    <pre class="cod-html pt-1">&lt;div class="input-g"&gt;
+    &lt;label class="label"&gt;Comentarios&lt;/label&gt;
+    &lt;textarea placeholder="Escribe tus comentarios aquí..." rows="6"&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+
+&lt;div class="input-g"&gt;
+    &lt;label class="label"&gt;Descripción&lt;/label&gt;
+    &lt;small class="c-gris-n"&gt;Máximo 500 caracteres&lt;/small&gt;
+    &lt;textarea maxlength="500" rows="6"&gt;&lt;/textarea&gt;
+&lt;/div&gt;</pre>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 id="6" class="scroll-item">Redimensionamiento</h2>
+                <p>Control sobre cómo se puede redimensionar el textarea:</p>
+                
+                <div class="d-flex flex-column gap-2">
+                    <div>
+                        <label class="label mb-1">Sin redimensionamiento</label>
+                        <textarea placeholder="No se puede redimensionar" rows="4" style="width: 100%; padding: 0.75em; border: 1px solid #ddd; border-radius: 4px; resize: none;"></textarea>
+                    </div>
+
+                    <div>
+                        <label class="label mb-1">Solo vertical</label>
+                        <textarea placeholder="Se redimensiona solo verticalmente" rows="4" style="width: 100%; padding: 0.75em; border: 1px solid #ddd; border-radius: 4px; resize: vertical;"></textarea>
+                    </div>
+
+                    <div>
+                        <label class="label mb-1">Solo horizontal</label>
+                        <textarea placeholder="Se redimensiona solo horizontalmente" rows="4" style="width: 100%; padding: 0.75em; border: 1px solid #ddd; border-radius: 4px; resize: horizontal;"></textarea>
+                    </div>
+
+                    <div>
+                        <label class="label mb-1">Ambas direcciones</label>
+                        <textarea placeholder="Se redimensiona en ambas direcciones" rows="4" style="width: 100%; padding: 0.75em; border: 1px solid #ddd; border-radius: 4px; resize: both;"></textarea>
+                    </div>
+                </div>
+
+                <div class="codigo mt-3">
+                    <label class="label">HTML <i class="bs-copy c-bodyui fz-20 btn-copy"></i></label>
+                    <pre class="cod-html pt-1">
+<!-- Sin redimensionamiento -->
+<textarea style="resize: none;"></textarea>
+
+<!-- Solo vertical -->
+<textarea style="resize: vertical;"></textarea>
+
+<!-- Solo horizontal -->
+<textarea style="resize: horizontal;"></textarea>
+<!-- Ambas direcciones -->
+<textarea style="resize: both;"></textarea></pre>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 id="7" class="scroll-item">Contador de Caracteres</h2>
+                <p>Textarea con indicador de límite de caracteres:</p>
+                
+                <div class="input-g">
+                    <label class="label">Biografía (máximo 200 caracteres)</label>
+                    <textarea id="bio" placeholder="Cuéntanos sobre ti..." rows="5" maxlength="200" style="width: 100%; padding: 0.75em; border: 1px solid #ddd; border-radius: 4px; resize: vertical;"></textarea>
+                    <div class="d-flex justify-content-between mt-1">
+                        <small class="c-gris-n">Se recomienda mínimo 50 caracteres</small>
+                        <small class="c-gris-n"><span id="charCount">0</span>/200</small>
+                    </div>
+                </div>
+<div class="codigo mt-3">
+    <label class="label">HTML <i class="bs-copy c-bodyui fz-20 btn-copy"></i></label>
+<pre class="cod-html pt-1">&lt;div class="input-g"&gt;
+    <label class="label">Biografía</label>
+    <textarea id="bio" maxlength="200" rows="5"></textarea>
+    <div class="d-flex justify-content-between mt-1">
+        <small>Mínimo 50 caracteres</small>
+        <small><span id="charCount">0</span>/200</small>
+    </div>
+</div></pre>
+                </div>
+
+                <div class="codigo mt-3">
+                    <label class="label">JavaScript <i class="bs-copy c-bodyui fz-20 btn-copy"></i></label>
+                    <pre class="cod-js pt-1">const bioTextarea = document.getElementById('bio');
+const charCount = document.getElementById('charCount');
+
+bioTextarea.addEventListener('input', function() {
+    charCount.textContent = this.value.length;
+});</pre>
+                </div>
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Textarea</a></li>
+            <li><a href="#2">📇 Muestra</a></li>
+            <li><a href="#3">📇 Tamaños</a></li>
+            <li><a href="#4">📇 Estados</a></li>
+            <li><a href="#5">📇 Grupos con Etiquetas</a></li>
+            <li><a href="#6">📇 Redimensionamiento</a></li>
+            <li><a href="#7">📇 Contador de Caracteres</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l4" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l4 ul li a")[7].classList.add("c-red");
+        
+        // Contador de caracteres
+        const bioTextarea = document.getElementById('bio');
+        const charCount = document.getElementById('charCount');
+        
+        if (bioTextarea) {
+            bioTextarea.addEventListener('input', function() {
+                charCount.textContent = this.value.length;
+            });
+        }
+    </script>
+</body>
+
+</html>

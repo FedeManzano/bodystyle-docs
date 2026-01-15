@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/bodystyle.min.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <nav  id="na"  class="bs-nav bg-pink-d-1 bs-nav-bor-black bs-nav-fixed"  data-target="#bs-nav-sidebar">
+        <div  class="bs-nav-md align-right-list">
+            <!--Botón que se oculta solo en dispositivos Grande Med >= 1030px no se muestra -->
+            <a  class="btn-menu"></a>
+            <a  href="#"  class="logo-container">
+                <img  src="../../images/logo.png"  alt="Foto de perfil">
+            </a>
+            <div>
+                <ul>
+                    <li><a  href="#">Inicio</a></li>
+                    <li><a  href="#">Porfolio</a></li>
+                    <li><a  href="#">Galeria</a></li>
+                </ul>
+            </div>
+            <div  class="right-content">
+                <div  class="btn-grupo-lg">
+                    <button  class="btn-sm bg-white c-black">Login</button>
+                    <button  class="btn-sm fd-gris-n">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-10">
+        <div class="bg-red p-3 ta-c c-white fz-25" style="height: 700px">
+            Nótese que si achica el ancho de la pantalla aparece el botón menú en la esquina superior izquierda
+            <button class="btn bg-black mt-3 com-trigger" 
+            data-info="Con este botón se desvincula la lógica del nav" onclick="Destroy()">Destroy</button>
+        </div>
+        <div class="bg-red mt-3" style="height: 700px"></div>
+        <div class="bg-red mt-3" style="height: 700px"></div>
+    </div>
+
+    <!-- 
+            Lista lateral la misma contiene un ID = al configurado en el (data-target) del nav
+            y lleva la clase [bs-nav-sidebar] para configurarle los estilos de este elemento.
+            Este elemento puede estar en cualquier parte del dom, no tiene limitaciones 
+            ya que el enlace del sidebar con el nav es a través del data-target.
+    -->
+    <div  id="bs-nav-sidebar"  class="bs-nav-sidebar">
+        <ul>
+            <li><a  href="#">Inicio</a></li>
+            <li><a  href="#">Servicios</a></li>
+            <li><a  href="#">Porfolio</a></li>
+            <li><a  href="#">Graleria</a></li>
+            <li><a  href="#">Repositorio</a></li>
+        </ul>
+    </div>
+
+    <script src="../../js/docs-body.js"></script>
+    <script>
+        BS.NavigationInit("#na", true);
+
+        const Destroy = () => {
+            BS.NavigationDestroy();
+
+            BS.Toast({
+                html: "✅ Navigation Destroyed",
+                duracion: 3000
+            })
+        } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Input con los estilos provistos por Bodystyle.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/input.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Input</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Input</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Los campos de entrada (input) son elementos esenciales en cualquier formulario web. Bodystyle proporciona
+                una variedad de estilos y clases para personalizar la apariencia y el comportamiento de los campos de
+                entrada, asegurando una experiencia de usuario óptima y coherente en toda la aplicación.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Muestra</h2>
+                <p>
+                    A continuación, se presentan ejemplos de diferentes tipos de campos de entrada con los estilos
+                    proporcionados por Bodystyle.
+                </p>
+                <div class="d-flex flex-column gap-2">
+                    <input type="text" placeholder="Input Por Default">
+                    <input type="text" placeholder="Desactivado" aria-disabled="true" class="desactivado">
+                    <input type="text" placeholder="Error" aria-disabled="true" class="i-error">
+                </div>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex flex-column gap-2">
+        <input type="text" placeholder="Input Por Default">
+        <input type="text" placeholder="Desactivado" aria-disabled="true" class="desactivado">
+        <input type="text" placeholder="Error" aria-disabled="true" class="i-error">
+    </div>
+</pre>
+</div>
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>La clase <span class="badge badge-red">.i-error</span> se añade dinámicamente para indicar un estado de error en el campo de entrada.</p>
+                </div>
+
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Grupos</h2>
+                <p>
+                    A través de las clases pertinentes de Bodystyle podemos agrupar un conjunto de elementos 
+                    que permitirán un mejor visual y funcionalidad a los campos de entrada.
+                </p>
+                <div class="d-flex flex-column gap-2">
+                    <div class="input-g">
+                        <div class="grupo">
+                            <span class="span-grupo">@</span>
+                            <input type="email" placeholder="Correo Electrónico">
+                        </div>
+                    </div>
+                    <div class="input-g desactivado">
+                        <div class="grupo">
+                            <span class="span-grupo">@</span>
+                            <input type="email" placeholder="Desactivado" class="desactivado">
+                        </div>
+                    </div>
+                    <div class="input-g">
+                        <div class="grupo-sm">
+                            <span class="span-grupo">@</span>
+                            <input type="email" placeholder="Correo Electrónico">
+                        </div>
+                    </div>
+                    <div class="input-g">
+                        <div class="grupo-lg">
+                            <span class="span-grupo">@</span>
+                            <input type="email" placeholder="Correo Electrónico">
+                        </div>
+                    </div>
+                </div>
+                
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex flex-column gap-2">
+        <div class="input-g">
+            <div class="grupo">
+                <span class="span-grupo">@</span>
+                <input type="email" placeholder="Correo Electrónico">
+            </div>
+        </div>
+        <div class="input-g desactivado">
+            <div class="grupo">
+                <span class="span-grupo">@</span>
+                <input type="email" placeholder="Desactivado" class="desactivado">
+            </div>
+        </div>
+        <div class="input-g">
+            <div class="grupo-sm">
+                <span class="span-grupo">@</span>
+                <input type="email" placeholder="Correo Electrónico">
+            </div>
+        </div>
+        <div class="input-g">
+            <div class="grupo-lg">
+                <span class="span-grupo">@</span>
+                <input type="email" placeholder="Correo Electrónico">
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+                <h3 id="4" class="scroll-item">Grupos Personalizados</h3>
+                <p>
+                    También es posible personalizar los grupos utilizando diferentes elementos como botones o iconos.
+                </p>
+
+                <div>
+                    <div class="input-g">
+                        <div class="grupo">
+                            <span class="span-grupo fd-gris-n"><i class="bs-man c-white"></i></span>
+                            <input type="text" placeholder="Username" class="fd-gris-n c-white">
+                        </div>
+                    </div>
+                    <div class="input-g mt-1">
+                        <div class="grupo">
+                            <span class="span-grupo fd-bodyui"><i class="bs-man c-white"></i></span>
+                            <input type="text" placeholder="Username" class="fd-gris-az c-white">
+                        </div>
+                    </div>
+                    <div class="input-g mt-1">
+                        <div class="grupo">
+                            <span class="span-grupo fd-gris-az"><i class="bs-man c-white"></i></span>
+                            <input type="text" placeholder="Username" class="fd-gris-o-2 c-white">
+                        </div>
+                    </div>
+                    <div class="input-g mt-1">
+                        <div class="grupo">
+                            <span class="span-grupo fd-gris-c"><i class="bs-man c-black"></i></span>
+                            <input type="text" placeholder="Username" class="fd-gris-c c-black">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div>
+        <div class="input-g">
+            <div class="grupo">
+                <span class="span-grupo fd-gris-n"><i class="bs-man c-white"></i></span>
+                <input type="text" placeholder="Username" class="fd-gris-n c-white">
+            </div>
+        </div>
+        <div class="input-g mt-1">
+            <div class="grupo">
+                <span class="span-grupo fd-bodyui"><i class="bs-man c-white"></i></span>
+                <input type="text" placeholder="Username" class="fd-gris-az c-white">
+            </div>
+        </div>
+        <div class="input-g mt-1">
+            <div class="grupo">
+                <span class="span-grupo fd-gris-az"><i class="bs-man c-white"></i></span>
+                <input type="text" placeholder="Username" class="fd-gris-o-2 c-white">
+            </div>
+        </div>
+        <div class="input-g mt-1">
+            <div class="grupo">
+                <span class="span-grupo fd-gris-c"><i class="bs-man c-black"></i></span>
+                <input type="text" placeholder="Username" class="fd-gris-c c-black">
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>Se pueden utilizar diferentes clases de fondo y colores de texto para personalizar aún más los campos de entrada y sus grupos. <br>
+                    Los íconos están documentados en la sección <a href="iconos.html" class="link">Íconos</a></p>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 id="5" class="scroll-item">Íconos</h2>
+                <p>
+                    Los íconos utilizados en los grupos de entrada provienen de la biblioteca de íconos de Bodystyle. 
+                    Puedes encontrar una lista completa de los íconos disponibles en la sección <a href="iconos.html" class="link">Íconos</a>.
+                </p>
+
+                        <div  class="row">
+                            <div  class="cs-12 cm-6 input-icon">
+                                <i  class="bs-search fz-20 c-red"></i>
+                                <input  type="search"  name="buscar"  id="buscar">
+                            </div>
+                            <div  class="cs-12 cm-6 input-icon">
+                                <i  class="bs-man fz-20"></i>
+                                <input  type="text"  name="nombre"  id="nombre">
+                            </div>
+                            <div  class="cs-12 cm-6 input-icon">
+                                <i  class="bs-phone-call fz-20 c-green"></i>
+                                <input  type="text"  name="telefono"  id="telefono">
+                            </div>
+                        </div>     
+    
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div  class="row">
+        <div  class="cs-12 cm-6 input-icon">
+            <i  class="bs-search fz-20 c-red"></i>
+            <input  type="search"  name="buscar"  id="buscar">
+        </div>
+        <div  class="cs-12 cm-6 input-icon">
+            <i  class="bs-man fz-20"></i>
+            <input  type="text"  name="nombre"  id="nombre">
+        </div>
+        <div  class="cs-12 cm-6 input-icon">
+            <i  class="bs-phone-call fz-20 c-green"></i>
+            <input  type="text"  name="telefono"  id="telefono">
+        </div>
+    </div> 
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="6" class="scroll-item">Ejemplo Completo</h2>
+                <p>
+                    A continuación se presenta un ejemplo completo de un formulario que integra diferentes tipos de campos de entrada con los estilos de Bodystyle.
+                </p>
+
+                <form class="d-flex flex-column gap-2">
+                    <!-- Usuario -->
+                    <div class="input-g">
+                        <div class="grupo">
+                            <span class="span-grupo fd-gris-n"><i class="bs-man c-white"></i></span>
+                            <input type="text" placeholder="Nombre de usuario" class="fd-gris-n c-white" required>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="input-g">
+                        <div class="grupo">
+                            <span class="span-grupo">@</span>
+                            <input type="email" placeholder="Correo electrónico" required>
+                        </div>
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div class="input-g">
+                        <div class="grupo">
+                            <span class="span-grupo fd-bodyui"><i class="bs-phone-call c-white"></i></span>
+                            <input type="tel" placeholder="Número de teléfono" class="fd-gris-n c-white">
+                        </div>
+                    </div>
+
+                    <!-- Contraseña -->
+                    <div class="input-g">
+                        <div class="grupo">
+                            <span class="span-grupo fd-gris-az"><i class="bs-lock c-white"></i></span>
+                            <input type="password" placeholder="Contraseña" required class="fd-gris-n c-white">
+                        </div>
+                    </div>
+
+                    <!-- Confirmación de Contraseña -->
+                    <div class="input-g">
+                        <div class="grupo">
+                            <span class="span-grupo fd-gris-az"><i class="bs-lock c-white"></i></span>
+                            <input type="password" placeholder="Confirmar contraseña" required class="fd-gris-n c-white">
+                        </div>
+                    </div>
+
+                    <!-- Búsqueda -->
+                    <div class="input-g">
+                        <div class="grupo">
+                            <span class="span-grupo fd-gris-n"><i class="bs-search c-white"></i></span>
+                            <input type="search" placeholder="Buscar..." class="fd-gris-n c-white">
+                        </div>
+                    </div>
+                </form>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <form class="d-flex flex-column gap-2">
+        <!-- Usuario -->
+        <div class="input-g">
+            <div class="grupo">
+                <span class="span-grupo fd-gris-n"><i class="bs-man c-white"></i></span>
+                <input type="text" placeholder="Nombre de usuario" class="fd-gris-n c-white" required>
+            </div>
+        </div>
+        <!-- Email -->
+        <div class="input-g">
+            <div class="grupo">
+                <span class="span-grupo">@</span>
+                <input type="email" placeholder="Correo electrónico" required>
+            </div>
+        </div>
+        <!-- Teléfono -->
+        <div class="input-g">
+            <div class="grupo">
+                <span class="span-grupo fd-bodyui"><i class="bs-phone-call c-white"></i></span>
+                <input type="tel" placeholder="Número de teléfono" class="fd-gris-n c-white">
+            </div>
+        </div>
+        <!-- Contraseña -->
+        <div class="input-g">
+            <div class="grupo">
+                <span class="span-grupo fd-gris-az"><i class="bs-lock c-white"></i></span>
+                <input type="password" placeholder="Contraseña" required class="fd-gris-n c-white">
+            </div>
+        </div>
+        <!-- Confirmación de Contraseña -->
+        <div class="input-g">
+            <div class="grupo">
+                <span class="span-grupo fd-gris-az"><i class="bs-lock c-white"></i></span>
+                <input type="password" placeholder="Confirmar contraseña" required class="fd-gris-n c-white">
+            </div>
+        </div>
+        <!-- Búsqueda -->
+        <div class="input-g">
+            <div class="grupo">
+                <span class="span-grupo fd-gris-n"><i class="bs-search c-white"></i></span>
+                <input type="search" placeholder="Buscar..." class="fd-gris-n c-white">
+            </div>
+        </div>
+    </form>
+</pre>
+</div>
+
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>Este ejemplo muestra cómo combinar diferentes tipos de campos de entrada con iconos y estilos de Bodystyle para crear un formulario profesional y funcional. Cada input puede estar equipado con validaciones HTML5 utilizando atributos como <span class="badge badge-blue">required</span>, <span class="badge badge-blue">type</span> y otros.</p>
+                </div>
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Input</a></li>
+            <li><a href="#2">📇 Muestra</a></li>
+            <li><a href="#3">📇 Grupos</a></li>
+            <li><a href="#4">📇 Personalizados</a></li>
+            <li><a href="#5">📇 Íconos</a></li>
+            <li><a href="#6">📇 Ejemplo Completo</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l4" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        BS.InputHandlerInit()
+        document.querySelectorAll("#l4 ul li a")[0].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

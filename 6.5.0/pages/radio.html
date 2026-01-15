@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Elementos de formulario que permiten seleccionar una opción de un conjunto.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/radio.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Radiobutton</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Radiobutton</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Elementos de formularios que permiten seleccionar una única opción de un grupos 
+                de opciones predefinidas.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Muestra</h2>
+                <p>
+                    Los radiobuttons se utilizan cuando se desea que el usuario seleccione una única opción entre varias disponibles. Al seleccionar un radiobutton, 
+                    cualquier selección previa en el mismo grupo se deselecciona automáticamente.
+                </p>
+
+                <div class="check-radio-grupo">
+                    <input type="radio" name="grupo1" class="radiobtn" id="radio1">
+                    <label for="radio1" class="rd-azul">RadioButton</label>
+                </div>
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- implementar el elemento con la clase .check-radio-grupo -->
+    <div class="check-radio-grupo">
+        <!-- .radiobtn para darle los estilos al input radio -->
+        <input type="radio" name="grupo1" class="radiobtn" id="radio1">
+
+        <!-- label asociado al input radio que posee la clase .rd-azul -->
+        <label for="radio1" class="rd-azul">RadioButton</label>
+    </div>
+</pre>
+</div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Colores</h2>
+                <p>
+                    Los radiobuttons pueden personalizarse con diferentes colores utilizando las clases de color disponibles en Bodystyle. 
+                    Estas clases permiten cambiar el color del radiobutton y del texto asociado para adaptarse al diseño de la interfaz de usuario.
+                </p>
+
+                <div class="check-radio-grupo">
+                    <input type="radio" name="grupo2" class="radiobtn" id="radio2">
+                    <label for="radio2" class="rd-verde">RadioButton Verde</label>
+                </div>
+                <div class="check-radio-grupo mt-1">
+                    <input type="radio" name="grupo2" class="radiobtn" id="radio3">
+                    <label for="radio3" class="rd-rojo">RadioButton Rojo</label>
+                </div>
+                <div class="check-radio-grupo mt-1">
+                    <input type="radio" name="grupo2" class="radiobtn" id="radio4">
+                    <label for="radio4" class="rd-azul">RadioButton Azul</label>
+                </div>
+                <div class="check-radio-grupo mt-1">
+                    <input type="radio" name="grupo2" class="radiobtn" id="radio5">
+                    <label for="radio5" class="rd-negro">RadioButton Negro</label>
+                </div>
+                <div class="check-radio-grupo mt-1">
+                    <input type="radio" name="grupo2" class="radiobtn" id="radio6">
+                    <label for="radio6" class="rd-blanco">RadioButton Blanco</label>
+                </div>
+                <div class="check-radio-grupo mt-1">
+                    <input type="radio" name="grupo2" class="radiobtn" id="radio7">
+                    <label for="radio7" class="rd-gris">RadioButton Gris</label>
+                </div>
+
+                <div class="check-radio-grupo mt-1">
+                    <input type="radio" name="grupo2" class="radiobtn desactivado" id="desactivado" aria-disabled="true" disabled>
+                    <label for="desactivado" class="rd-gris com-trigger"
+                    data-info="Este radiobutton está desactivado y no puede ser seleccionado.">RadioButton Desactivado</label>
+                </div>
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="check-radio-grupo">
+        <input type="radio" name="grupo2" class="radiobtn" id="radio2">
+        <label for="radio2" class="rd-verde">RadioButton Verde</label>
+    </div>
+    <div class="check-radio-grupo mt-1">
+        <input type="radio" name="grupo2" class="radiobtn" id="radio3">
+        <label for="radio3" class="rd-rojo">RadioButton Rojo</label>
+    </div>
+    <div class="check-radio-grupo mt-1">
+        <input type="radio" name="grupo2" class="radiobtn" id="radio4">
+        <label for="radio4" class="rd-azul">RadioButton Azul</label>
+    </div>
+    <div class="check-radio-grupo mt-1">
+        <input type="radio" name="grupo2" class="radiobtn" id="radio5">
+        <label for="radio5" class="rd-negro">RadioButton Negro</label>
+    </div>
+    <div class="check-radio-grupo mt-1">
+        <input type="radio" name="grupo2" class="radiobtn" id="radio6">
+        <label for="radio6" class="rd-blanco">RadioButton Blanco</label>
+    </div>
+    <div class="check-radio-grupo mt-1">
+        <input type="radio" name="grupo2" class="radiobtn" id="radio7">
+        <label for="radio7" class="rd-gris">RadioButton Gris</label>
+    </div>
+
+    <div class="check-radio-grupo mt-1">
+        <input type="radio" name="grupo2" class="radiobtn desactivado" id="desactivado" aria-disabled="true" disabled>
+        <label for="desactivado" class="rd-gris">RadioButton Gris</label>
+    </div>
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Formulario Ejemplo</h2>
+                <p>
+                    Vamos a hacer un formulario de ejemplo utilizando los elementos vistos 
+                    en esta sección y en las anteriores, para tomarlo como referencia, aunque 
+                    podemos personalizarlo como mejor se ajuste al proyecto en desarrollo.
+                </p>
+
+                <div class="p-3 bg-gray-s bor-rad-20">
+                    <form action="#" autocomplete="off">
+                        <div class="row">
+                            <div class="cs-12">
+                                <h4 class="c-black pb-1 fz-25">Formulario de Ejemplo</h4>
+                            </div>
+                            <div class="input-g cxs-12 cs-6">
+                                <div class="grupo">
+                                    <span class="span-grupo c-white" aria-hidden="true">🪪</span>
+                                    <input 
+                                        aria-label="Nro Documento" 
+                                        type="text" 
+                                        name="dni" 
+                                        id="dni" 
+                                        placeholder="DNI...">
+                                </div>
+                            </div>
+                            <div class="input-g cxs-12 cs-6">
+                                <div class="grupo">
+                                    <span class="span-grupo c-white" aria-hidden="true">👤</span>
+                                    <input 
+                                        aria-label="Nombre completo" 
+                                        type="text" 
+                                        name="nombre" 
+                                        id="nombre" 
+                                        placeholder="Nombre completo...">
+                                </div>
+                            </div>
+                            <div class="input-g cxs-12 ">
+                                <div class="grupo">
+                                    <span class="span-grupo" aria-hidden="true">@</span>
+                                    <input 
+                                        aria-label="Correo electrónico" 
+                                        type="email" 
+                                        name="email" 
+                                        id="email" 
+                                        placeholder="Correo electrónico...">
+                                </div>
+                            </div>
+                            <div class="cs-12 mt-2">
+                                <div class="check-radio-grupo">
+                                    <input type="radio" name="genero" class="radiobtn" id="masculino">
+                                    <label for="masculino" class="rd-negro">Masculino</label>
+                                </div>
+                                <div class="check-radio-grupo mt-1">
+                                    <input type="radio" name="genero" class="radiobtn" id="femenino">
+                                    <label for="femenino" class="rd-negro">Femenino</label>
+                                </div>
+                                <div class="check-radio-grupo mt-1">
+                                    <input type="radio" name="genero" class="radiobtn" id="otro">
+                                    <label for="otro" class="rd-negro">Otro</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cs-12 mt-3">
+                            <button type="submit" class="btn btn-verde">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="p-3 bg-gray-s bor-rad-20">
+        <form action="#" autocomplete="off">
+            <div class="row">
+                <div class="cs-12">
+                    <h4 class="c-black pb-1 fz-25">Formulario de Ejemplo</h4>
+                </div>
+                <div class="input-g cxs-12 cs-6">
+                    <div class="grupo">
+                        <span class="span-grupo c-white" aria-hidden="true">🪪</span>
+                        <input 
+                            aria-label="Nro Documento" 
+                            type="text" 
+                            name="dni" 
+                            id="dni" 
+                            placeholder="DNI...">
+                    </div>
+                </div>
+                <div class="input-g cxs-12 cs-6">
+                    <div class="grupo">
+                        <span class="span-grupo c-white" aria-hidden="true">👤</span>
+                        <input 
+                            aria-label="Nombre completo" 
+                            type="text" 
+                            name="nombre" 
+                            id="nombre" 
+                            placeholder="Nombre completo...">
+                    </div>
+                </div>
+                <div class="input-g cxs-12 ">
+                    <div class="grupo">
+                        <span class="span-grupo" aria-hidden="true">@</span>
+                        <input 
+                            aria-label="Correo electrónico" 
+                            type="email" 
+                            name="email" 
+                            id="email" 
+                            placeholder="Correo electrónico...">
+                    </div>
+                </div>
+                <div class="cs-12 mt-2">
+                    <div class="check-radio-grupo">
+                        <input type="radio" name="genero" class="radiobtn" id="masculino">
+                        <label for="masculino" class="rd-negro">Masculino</label>
+                    </div>
+                    <div class="check-radio-grupo mt-1">
+                        <input type="radio" name="genero" class="radiobtn" id="femenino">
+                        <label for="femenino" class="rd-negro">Femenino</label>
+                    </div>
+                    <div class="check-radio-grupo mt-1">
+                        <input type="radio" name="genero" class="radiobtn" id="otro">
+                        <label for="otro" class="rd-negro">Otro</label>
+                    </div>
+                </div>
+            </div>
+            <div class="cs-12 mt-3">
+                <button type="submit" class="btn btn-verde">Enviar</button>
+            </div>
+        </form>
+    </div>
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Radiobutton</a></li>
+            <li><a href="#2">📇 Muestra</a></li>
+            <li><a href="#3">📇 Colores</a></li>
+            <li><a href="#4">📇 Formulario</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l4" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l4 ul li a")[3].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

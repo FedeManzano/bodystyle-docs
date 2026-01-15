@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Slider html que permite seleccionar un rango de valores.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/range.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Range</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">🔊/🔇 Range</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                El componente <code>&lt;input type="range"&gt;</code> permite a los usuarios seleccionar un valor o un
+                rango de valores deslizando un control deslizante horizontal o vertical. Es útil para ajustar configuraciones
+                como el volumen, el brillo o cualquier otro valor numérico dentro de un rango específico.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Muestra</h2>
+                <p>
+                    A continuación se muestra un ejemplo de un control deslizante de rango que permite seleccionar un valor
+                    entre 0 y 100:
+                </p>
+                
+                <div id="range1" class="input-range">
+                    <input  type="range"  name="range"  value="0" min="0" max="100" step="1" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Control deslizante de rango">
+                    <span>0</span>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div id="range1" class="input-range">
+        <input  type="range"  name="range"  value="0" min="0" max="100" step="1" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Control deslizante de rango">
+        <span>0</span>
+    </div>
+</pre>
+</div>            
+
+                <div class="alert">
+                    <h4 class="c-yellow"><i class="bs-warning fz-25 c-yellow">&nbsp;</i>Advertencia</h4>
+                    <p>
+                        Es importante para que funcione el elemento disponer de la lógica de Bodystyle 
+                        a través del archivo <code>bodystyle.min.js</code> agregado al proyecto en desarrollo.
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Range</a></li>
+            <li><a href="#2">📇 Muestra</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l4" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l4 ul li a")[6].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

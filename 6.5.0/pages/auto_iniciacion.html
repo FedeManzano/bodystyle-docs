@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Función que permite inicializar todos los elementos dinámicos.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/auto_iniciacion.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Auto Iniciación</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Auto Iniciación</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Existe la forma de inicializar los elementos dinámicos (Tooltips, Comentarios y Dropdown) de manera 
+                automática solamente llamando a la función de DynamicsAutoInit(). <br>
+                Es una función bastante práctica ya que permite inicialikzar tres módulos de Bodystyle con una sola línea
+                de código.
+            </p>
+
+    
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Función de Inicialización</h2>
+                <p>
+                    Es importante recalcar que es necesario disponer del archivo <span class="badge badge-red">bodystyle.min.js</span> agregado 
+                    en el proyecto para poder utilizar esta función. <br><br>
+                    La función se llama <code class="codigo-inline">BS.DynamicsAutoInit()</code>
+                </p>
+                
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    /* Función de inicialización automática 
+    Dropdown, Tooltips y Comentarios */
+    BS.DynamicsAutoInit();
+</pre>
+</div>
+            <p>
+                Ahora es posible utilizar los elementos dinámicos sin necesidad de inicializarlos uno por uno. <br>
+                Simplemente es necesario agregar las clases correspondientes a los elementos que se desean inicializar:
+            </p>
+
+            <div class="d-flex just-around gap-1 flex-wrap">
+                <button class="btn fd-bodyui tips-ele" data-tips="Esto es un Tooltip">ToolTips</button>
+                <button class="btn fd-bodyui com-trigger" data-info="Esto es un Comentario">Comentario</button>
+                <button class="btn fd-bodyui dropdown-toggle" data-target="#lista">Dropdown</button>
+            </div>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex just-around gap-1 flex-wrap">
+        <!-- Disparador de Tooltips -->
+        <button class="btn fd-bodyui tips-ele" data-tips="Esto es un Tooltip">ToolTips</button>
+        
+        <!-- Disparador de Comentarios -->
+        <button class="btn fd-bodyui com-trigger" data-info="Esto es un Comentario">Comentario</button>
+        
+        <!-- Disparador de Dropdown -->
+        <button class="btn fd-bodyui dropdown-toggle" data-target="#lista">Dropdown</button>
+    </div> 
+
+    <div class="dropdown" id="lista">
+        <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Item 4</a></li>
+        </ul>
+    </div>
+</pre>
+</div>
+
+
+            <div class="alert">
+                <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                <p>
+                    Se recomienda ver los apartados correspondientes a cada uno de estos elementos:
+                </p>
+                <div class="lista-doc mb-0">
+                    <ul>
+                        <li><a class="link" href="tooltips.html">ToolTips</a></li>
+                        <li><a class="link" href="comentarios.html">Comentarios</a></li>
+                        <li><a class="link" href="dropdown.html">Dropdown</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Destroy</h2>
+                <p>
+                    Así como es posible inicializarlos, tambien es posible destruirlos utilizando la función
+                    <code class="codigo-inline">BS.DynamicsAutoDestroy()</code> que eliminará todos los elementos dinámicos
+                    inicializados con la función automática.
+                </p>
+
+
+                <button class="btn fd-bodyui com-trigger" onclick="Destroy()"
+                data-info="Cuando presione este botón los elementos dinámicos dejarán de funcionar en esta página.">Destruir</button>
+
+
+                
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    const Destroy = () => {
+        BS.DynamicsAutoDestroy()
+        BS.Toast({
+            html: "🎯 Elementos dinámicos destruidos",
+        })
+    }
+</pre>
+</div>
+            </article>
+
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="dropdown" id="lista">
+        <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Item 4</a></li>
+        </ul>
+    </div>
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Auto Iniciación</a></li>
+            <li><a href="#2">📇 Función</a></li>
+            <li><a href="#3">📇 Destroy</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l5" });
+        BS.DynamicsAutoInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l5 ul li a")[6].classList.add("c-red");
+
+
+        const Destroy = () => {
+            BS.DynamicsAutoDestroy()
+            BS.Toast({
+                html: "🎯 Elementos dinámicos destruidos",
+            })
+        }
+    </script>
+</body>
+
+</html>

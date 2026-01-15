@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Funcionalidades reutilizables en sass.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/sass.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Sass</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">🎨 Sass</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Bodystyle utiliza Sass para facilitar la personalización y el mantenimiento del código CSS. Sass es un
+                preprocesador CSS que permite utilizar variables, anidamiento, mixins y otras funcionalidades que no
+                están
+                disponibles en CSS puro. Esto hace que el desarrollo de estilos sea más eficiente y organizado.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Instalación y Uso</h2>
+                <p>
+                    Para utilizar las funcionalidades avanzadas de Sass en Bodystyle, necesitas tener Sass instalado
+                    en tu proyecto. Aquí te mostramos los pasos para comenzar:
+                </p>
+
+                <h3>Instalación</h3>
+                <p>Si aún no tienes Sass instalado, puedes hacerlo a través de npm:</p>
+
+<div class="codigo">
+    <label for="cod-install" class="label">
+        Terminal
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">npm install -g sass
+# o instalarlo localmente en tu proyecto
+npm install --save-dev sass</pre>
+</div>
+
+                <h3>Configuración en tu Proyecto</h3>
+                <p>
+                    Una vez instalado Sass, puedes importar las variables, funciones y mixins de Bodystyle
+                    en tus archivos Sass:
+                </p>
+
+<div class="codigo">
+    <label for="cod-import" class="label">
+        SASS
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">// En tu archivo main.scss
+@use "sass:map";
+
+// Importar las variables de Bodystyle
+@use "ruta/a/bodystyle/sass/variables" as *;
+@use "ruta/a/bodystyle/sass/funciones" as *;
+@use "ruta/a/bodystyle/sass/mixins" as *;
+
+// Ahora puedes usar las variables, funciones y mixins
+.contenedor {
+    background-color: $fd-azul;
+    @include flex-box-centrado();
+}</pre>
+</div>
+
+                <h3>Compilar Sass a CSS</h3>
+                <p>
+                    Para compilar tus archivos Sass a CSS, utiliza el siguiente comando:
+                </p>
+
+<div class="codigo">
+    <label for="cod-compile" class="label">
+        Terminal
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">// Compilar un archivo específico
+sass input.scss output.css
+
+// Monitorear cambios (watch mode)
+sass --watch .
+
+// Compilar con opciones de producción (comprimido)
+sass --style=compressed input.scss output.css</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Funciones</h2>
+                <p>
+                    Bodystyle incluye una serie de funciones Sass que facilitan la manipulación de colores, tamaños y
+                    otros
+                    valores. Estas funciones permiten realizar cálculos y transformaciones directamente en el código
+                    Sass,
+                    lo que simplifica la creación de estilos dinámicos y adaptativos.
+                </p>
+                
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        <a href="https://github.com/FedeManzano/bodystyle/blob/master/sass/globales/_funciones.scss" class="link">_funciones.scss</a> 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    /**
+        Todas estas funcionalidades aectan a toda la biblioteca BodyStyle 
+        Para comprender el funcionamiento existe un archivo de variables donde se
+        definen los mapas y variables globales.
+    */
+    @use "sass:map";
+    @use "variables";
+
+    ////
+    /// @group Funciones
+    /// Funciones de la libreria bodyStyle v2.0.0
+    ////
+
+    /// Función que devuelve el tamaño de letra para una etiqueta html predefinida en la variable $letras.
+    /// @param {Map} $hashLetras - Mapa de tamaños de letras
+    /// @param {String} $etiqueta - Etiqueta HTML (h1, h2, etc.)
+    /// @return {Number} Tamaño de fuente
+    @function tamLetra($hashLetras, $etiqueta) {
+        @if(map.has-key($hashLetras, $etiqueta )) {
+            @return map.get($hashLetras , $etiqueta);
+        }
+
+        @else {
+            @warn "La etiqueta html no existe";
+        }
+    }
+
+    /// Función para establecer el grosor de las Fuentes
+    /// @param {Map} $grosor - Mapa de grosores
+    /// @param {String} $val - Clave del grosor
+    /// @return {Number} Valor del grosor
+    @function get-grosor($grosor, $val) {
+        @if(map.has-key($grosor, $val )) {
+            @return map.get($grosor , $val);
+        }
+
+        @else {
+            @warn "El grosor seleccionado no existe";
+        }
+    }
+
+
+    /// Función que devuelve el nivel del componente (z-index)
+    /// @param {String} $al - Nombre del nivel de superposición
+    /// @return {Number} Valor z-index
+    @function superposicion($al) {
+        @if map.has-key(variables.$superposicion, $al) {
+            @return map.get(variables.$superposicion, $al);
+        }
+
+        @else {
+            @warn "El componente no existe";
+        }
+    }
+
+    /// Devuelve el breakpoint
+    /// @param {String} $med - Clave del tamaño (xs, s, m, l, xl)
+    /// @return {Number} Valor del breakpoint
+    @function dameMedida($med) {
+        @if map.has-key(variables.$tamaños, $med) {
+            @return map.get(variables.$tamaños, $med);
+        }
+    }
+
+    /// Verifica si un valor es múltiplo de 5
+    /// @param {Number} $num - Número a verificar
+    /// @return {Boolean} True si es múltiplo de 5
+    @function multiplo5($num) {
+        @return $num % 5==0;
+    }
+
+    /// Inicializa una variable en 0
+    /// @return {Number} 0
+    @function inicializarVariable() {
+        @return 0;
+    }
+
+    /// Incrementa una variable en 0.5
+    /// @param {Number} $var - Variable a incrementar
+    /// @return {Number} Variable incrementada
+    @function incrementar($var) {
+        @return $var + 0.5;
+    }
+</pre>
+</div>
+
+                <p>
+                    Estas funciones son fundamentales para el funcionamiento interno de Bodystyle y permiten una
+                    personalización
+                    avanzada de los estilos. Al utilizar estas funciones, los desarrolladores pueden crear diseños más
+                    complejos
+                    y adaptativos con mayor facilidad.
+                </p>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        <a href="" class="link"></a> 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    /**
+        Archivo de variables globales para la librería BodyStyle
+        Este archivo contiene todas las variables necesarias para personalizar
+        y configurar los estilos de la biblioteca.
+    */
+
+    /*
+         @group Tipografía
+         Configuración de fuentes y tamaños de texto
+    */
+
+    /************************************** 
+     ***************** TEXTO ************** 
+     **************************************/
+
+    /// Fuente principal de la aplicación
+    /// @type String
+    $font-family: 'Inter', -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            "Helvetica Neue",
+            Arial,
+            "Noto Sans",
+            sans-serif,
+            "Apple Color Emoji",
+            "Segoe UI Emoji",
+            "Segoe UI Symbol",
+            "Noto Color Emoji";;
+
+    /// Mapa de tamaños de fuentes para diferentes elementos
+    /// @type Map
+    $letras: (
+        h1: 2.0em,
+        h2: 1.6em,
+        h3: 1.2em,
+        h4: 1.15em,
+        h5: 1.1em,
+        h6: 1.1em,
+        p: 1.1em,
+        span: 1em,
+        a: 1em
+    );
+
+    /// Mapa de grosores de fuente
+    /// @type Map
+    $grosor: (
+        "100": 100,
+        "200": 200,
+        "300": 300,
+        "400": 400,
+        "500": 500,
+        "600": 600,
+        "700": 700,
+        "800": 800,
+        "900": 900,
+    );
+
+    // ************************************** //
+    // ********** COLORES DE FONDO ********** //
+    // ************************************** //
+
+    ////
+    /// @group Colores
+    /// Paleta de colores de la aplicación
+    ////
+
+    // *** Tonalidades de rojo*** //
+    /// Color rojo principal
+    /// @type Color
+    $fd-rojo: rgb(228, 22, 22);
+    $fd-rojo-c: rgb(255, 40, 40);
+    $fd-rojo-t: rgba(255, 51, 0, 0.3);
+    $fd-rojo-o-1: rgb(164, 0, 0);
+    $fd-rojo-o-2: rgb(141, 0, 0);
+    $fd-rojo-o-3: rgb(105, 0, 0);
+    $fd-rojo-o-4: rgb(73, 0, 0);
+    $fd-rojo-an: rgb(255, 17, 0);
+    $fd-rojo-ro: rgb(175, 52, 89);
+
+    // *** Tonalidades de Rosa **** //
+    /// Color rosa principal
+    /// @type Color
+    $fd-rosa: rgb(231, 20, 80);
+    $fd-rosa-c: rgb(255, 82, 134);
+    $fd-rosa-t: rgba(197, 0, 56, 0.3);
+    $fd-rosa-o-1: rgb(187, 0, 56);
+    $fd-rosa-o-2: rgb(167, 0, 56);
+    $fd-rosa-o-3: rgb(147, 0, 56);
+    $fd-rosa-o-4: rgb(127, 0, 56);
+
+
+    // **** Tonalidades de naranja *** //
+    /// Color naranja principal
+    /// @type Color
+    $fd-naranja: rgb(212, 72, 16);
+    $fd-naranja-c: rgb(247, 88, 48);
+    $fd-naranja-t: rgba(212, 71, 16, 0.3);
+    $fd-naranja-ro: rgb(212, 45, 16);
+    $fd-naranja-am: rgb(240, 116, 0);
+    $fd-naranja-o-1: rgb(187, 32, 0);
+    $fd-naranja-o-2: rgb(167, 32, 0);
+    $fd-naranja-o-3: rgb(147, 32, 0);
+    $fd-naranja-o-4: rgb(127, 32, 0);
+
+
+    // *** Tonaalidadesd de amarillo *** //
+    /// Color amarillo principal
+    /// @type Color
+    $fd-amarillo: rgb(255, 208, 0);
+    $fd-amarillo-c: rgb(255, 255, 85);
+    $fd-amarillo-an: rgb(255, 166, 0);
+    $fd-amarillo-ve: rgb(182, 231, 4);
+    $fd-amarillo-t: rgba(255, 217, 0, 0.3);
+    $fd-amarillo-o-1: rgb(187, 110, 0);
+    $fd-amarillo-o-2: rgb(167, 100, 0);
+    $fd-amarillo-o-3: rgb(147, 100, 0);
+    $fd-amarillo-o-4: rgb(137, 100, 0);
+
+
+    // *** Tonalidades de verde *** //
+    /// Color verde principal
+    /// @type Color
+    $fd-verde: rgb(0, 124, 103);
+    $fd-verde-c: rgb(0, 197, 164);
+    $fd-verde-o-1: rgb(0, 116, 94);
+    $fd-verde-o-2: rgb(0, 96, 85);
+    $fd-verde-o-3: rgb(0, 85, 71);
+    $fd-verde-o-4: rgb(0, 59, 56);
+    $fd-verde-t: rgba(0, 110, 92, .3);
+    $fd-verde-az: rgb(0, 42, 48);
+    $fd-verde-t: rgba(0, 110, 92, .7);
+    $fd-verde-am: rgb(130, 230, 0);
+
+
+    // *** Tonalidades azul *** //
+    /// Color azul principal
+    /// @type Color
+    $fd-azul: rgb(16, 69, 183);
+    $fd-azul-c: rgb(0, 108, 255);
+    $fd-azul-o-1: rgb(0, 35, 110);
+    $fd-azul-o-2: rgb(0, 30, 94);
+    $fd-azul-o-3: rgb(0, 25, 85);
+    $fd-azul-o-4: rgb(0, 15, 48);
+    $fd-azul-ve: rgb(6, 38, 63);
+    $fd-azul-ve-s: rgb(0, 44, 56);
+    $fd-azul-ve-c: rgb(19, 67, 80);
+    $fd-azul-t: rgba(16, 69, 183, .3);
+    $fd-azul-vi: rgb(41, 16, 183);
+
+    // *** Tonalidades de gris *** //
+    /// Color gris principal
+    /// @type Color
+    $fd-gris: rgb(128, 128, 128);
+    $fd-gris-c: rgb(236, 236, 236);
+    $fd-gris-o-1: rgb(51, 51, 51);
+    $fd-gris-o-2: rgb(41, 41, 41);
+    $fd-gris-o-3: rgb(31, 31, 31);
+    $fd-gris-o-4: rgb(21, 21, 21);
+    $fd-gris-az-c: rgb(40, 46, 66);
+    $fd-gris-az: rgb(30, 32, 41);
+    $fd-gris-az-o: rgb(21, 22, 26);
+    $fd-gris-n: rgb(17, 17, 17);
+    $fd-gris-t: rgba(160, 160, 160, 0.3);
+    $fd-blanco: rgb(255, 255, 255);
+    $fd-negro: rgb(0, 0, 0);
+    $gris-input: rgb(163, 163, 163);
+
+
+    // *** Tonalidades de violeta *** //
+    /// Color violeta principal
+    /// @type Color
+    $fd-violeta: rgb(115, 3, 185);
+    $fd-violeta-c: rgb(132, 2, 218);
+    $fd-violeta-o-1: rgb(80, 3, 124);
+    $fd-violeta-o-2: rgb(71, 0, 94);
+    $fd-violeta-o-3: rgb(58, 1, 63);
+    $fd-violeta-o-4: rgb(28, 0, 37);
+    $fd-violeta-t: rgba(30, 2, 32, 0.3);
+    $fd-violeta-az: rgb(16, 1, 58);
+    $fd-violeta-ro: rgb(70, 1, 76);
+
+
+    // ************************************** //
+    // ********** COLORES BOTONES *********** //
+    // ************************************** //
+
+    ////
+    /// @group Botones
+    /// Variables de configuración para los botones
+    ////
+
+    /// Color de fondo para botón rojo
+    /// @type Color
+    $btn-rojo: rgb(187, 24, 24);
+    $btn-rojo-hover: rgb(161, 35, 35);
+    $btn-rojo-activo: rgb(187, 24, 24);
+    $btn-rojo-cargando: rgba(143, 0, 0, 0.5);
+    $btn-rojo-sombra: rgba(199, 60, 60, 0.7);
+
+    // Boton Verde
+    /// Color de fondo para botón verde
+    /// @type Color
+    $btn-verde: rgb(0, 156, 128);
+    $btn-verde-hover: rgb(0, 136, 111);
+    $btn-verde-activo: rgb(0, 156, 128);
+    $btn-verde-cargando: rgba(0, 156, 128, 0.5);
+    $btn-verde-sombra: rgba(37, 145, 125, 0.7);
+
+    // Boton Azul
+    /// Color de fondo para botón azul
+    /// @type Color
+    $btn-azul: rgb(0, 108, 255);
+    $btn-azul-hover: rgb(0, 84, 201);
+    $btn-azul-activo: rgb(0, 108, 255);
+    $btn-azul-cargando: rgb(0, 108, 255, 0.5);
+    $btn-azul-sombra: rgba(58, 111, 185, 0.7);
+
+    // Boton Gris
+    /// Color de fondo para botón gris
+    /// @type Color
+    $btn-gris: rgb(196, 196, 196);
+    $btn-gris-hover: rgb(63, 63, 63);
+    $btn-gris-activo: rgb(10, 10, 10);
+    $btn-gris-cargando: rgba(233, 233, 233, 0.5);
+    $btn-gris-sombra: rgba(65, 65, 65, 0.7);
+
+    /// Color de fondo para botón negro
+    /// @type Color
+    $btn-negro: rgb(26, 27, 36);
+    $btn-negro-hover: rgb(0, 0, 0);
+    $btn-negro-activo: rgb(0, 0, 0);
+    $btn-negro-cargando: rgba(65, 65, 65, 0.5);
+    $btn-negro-sombra: rgba(65, 65, 65, .7);
+
+    /// Color de fondo para botón blanco
+    /// @type Color
+    $btn-blanco: rgb(255, 255, 255);
+    $btn-blanco-hover: rgb(241, 241, 241);
+    $btn-blanco-activo: rgb(202, 202, 202);
+    $btn-blanco-cargando: rgba(255, 255, 255, 0.5);
+    $btn-blanco-sombra: rgba(255, 255, 255, 0.7);
+
+
+    // ************************************** //
+    // *********** CONFIGURACIÓN ************ //
+    // ************************************** //
+
+    ////
+    /// @group Configuración
+    /// Variables globales de configuración (Breakpoints, Z-Index)
+    ////
+
+    /// Mapa de breakpoints para diseño responsivo
+    /// @type Map
+    $tamaños: (
+        xs: 400px,
+        s: 770px,
+        m: 1030px,
+        l: 1200px,
+        /// Mayor 
+    );
+
+    /// Mapa de z-index para controlar la superposición de elementos
+    /// @type Map
+    $superposicion: (
+        ms: 100000,
+        // superposición de los menus superiores
+        ml: 10000,
+        // superposición de los menus laterales
+        co: 3,
+        // superposición de los complementos
+        bf: 30000,
+        // superposición de los complementos
+        dd: 1000000 // superposición de los dropdown
+    );
+
+
+    // ************************************** //
+    // ************** ALERTAS *************** //
+    // ************************************** //
+
+    ////
+    /// @group Alertas
+    /// Configuración de estilos para alertas
+    ////
+
+    //**** Alertas Borde Izquierdo
+    // Generales
+    $alarta-fz: 1, 0625em;
+    $alerta-padding: 15px;
+    $alerta-bg: rgb(250, 250, 250) !important;
+    $alerta-borde: 1px solid rgb(204, 204, 204) !important;
+    $alerta-bor-rad: 5px;
+    $alerta-lh: 1, 5625em;
+    $alerta-fw: 400;
+
+    // Individuales
+    $alerta-roja-borde: 4px solid $fd-rojo !important;
+    $alerta-azul-borde: 4px solid $fd-azul !important;
+    $alerta-verde-borde: 4px solid $fd-verde !important;
+    $alerta-negra-borde: 4px solid $fd-negro !important;
+    $alerta-blanca-borde: 4px solid $fd-blanco !important;
+    $alerta-gris-borde: 4px solid $fd-gris !important;
+
+
+    //**** Alertas opacas 
+    $alerta-op-padding: 15px;
+    $alerta-op-fz: 1em;
+    $alerta-op-lh: 1, 5625em;
+    $alerta-op-fw: 400;
+    $alerta-op-bor-rad: 3px;
+
+    // Alertas Opacas Colores
+    $alerta-op-rojo-bg: rgb(255, 223, 223);
+    $alerta-op-rojo-borde: 1px solid $fd-rojo;
+    $alerta-op-rojo-color: $fd-rojo;
+
+
+    $alerta-op-azul-bg: rgb(225, 236, 252);
+    $alerta-op-azul-borde: 1px solid $fd-azul;
+    $alerta-op-azul-color: $fd-azul;
+
+
+    $alerta-op-verde-bg: rgb(226, 255, 226);
+    $alerta-op-verde-borde: 1px solid $fd-verde;
+    $alerta-op-verde-color: $fd-verde;
+
+    $alerta-op-gris-bg: rgb(240, 240, 240);
+    $alerta-op-gris-borde: 1px solid $fd-gris;
+    $alerta-op-gris-color: $fd-gris-o-1;
+
+    $alerta-op-blanco-bg: rgb(255, 255, 255);
+    $alerta-op-blanco-borde: 1px solid $fd-gris;
+    $alerta-op-blanco-color: $fd-gris;
+
+    $alerta-op-negro-bg: rgb(212, 212, 212);
+    $alerta-op-negro-borde: 1px solid $fd-negro;
+    $alerta-op-negro-color: $fd-negro;
+
+    // ************************************** //
+    // ************** BADGES **************** //
+    // ************************************** //
+
+    ////
+    /// @group Badges
+    /// Configuración de estilos para badges y etiquetas
+    ////
+
+    // ****** Badge Notificaciones ******* //
+    $b-fz: 75%;
+    $b-grosor: 700;
+    $b-bor-rad: 0.25rem;
+
+    // ****** Badge Notificaciones Colores ****** //
+    $b-verde: rgb(30, 190, 142);
+    $b-azul: rgb(0, 71, 153);
+    $b-rojo: rgb(212, 28, 28);
+    $b-gris: rgb(63, 63, 63);
+    $b-negro: rgb(0, 0, 0);
+    $b-blanco: rgb(255, 255, 255);
+
+
+    // ****** Badge Etiquetas ******* //
+    $b-etiqueta-fz: 14px;
+    $b-etiqueta-altura: 30px;
+    $b-etiqueta-minw: 170px;
+    $b-etiqueta-maxw: 200px;
+
+    // ****** Badge Etiquetas Colores ******* //
+    $b-etiqueta-rojo: red;
+    $b-etiqueta-rojo-h: rgb(201, 0, 0);
+    $b-etiqueta-fw: 300;
+
+
+    $b-etiqueta-verde: rgb(0, 109, 94);
+    $b-etiqueta-verde-h: rgb(0, 77, 66);
+
+    $b-etiqueta-azul: rgb(34, 72, 145);
+    $b-etiqueta-azul-h: rgb(16, 44, 95);
+
+
+    $b-etiqueta-blanco: rgb(255, 255, 255);
+    $b-etiqueta-blanco-h: rgb(228, 228, 228);
+
+
+    $b-etiqueta-negro: rgb(0, 0, 0);
+    $b-etiqueta-negro-h: rgb(29, 29, 29);
+
+
+    $b-etiqueta-gris: rgb(231, 231, 231);
+    $b-etiqueta-gris-h: rgb(196, 196, 196);
+
+
+    // ************************************** //
+    // ************** COLECCIONES *********** //
+    // ************************************** //
+
+    ////
+    /// @group Colecciones
+    /// Estilos para listas y colecciones
+    ////
+
+    $borde: 1px solid rgba(0, 0, 0, 0.123);
+    $borde-radio-cabecera: 5px 5px 0 0;
+    $borde-radio-pie: 0 0 5px 5px;
+</pre>
+</div>
+    
+
+            <p>
+                Desde estas variables podemos moldificar los estilos de toda la librería 
+                ajustandola a las necesidades pertinentes al proyecto en desarrollo. Por esta razón 
+                disponemos de la posibilidad de ajustar a Bodystyle para personalizarla.
+            </p>
+            </article>
+
+
+            <article class="article">
+                <h2 id="5" class="scroll-item">Mixins</h2>
+                <p>
+                    Bodystyle también incluye una serie de mixins Sass que permiten reutilizar bloques de código CSS
+                    en
+                    diferentes partes del proyecto. Los mixins son especialmente útiles para aplicar estilos comunes a
+                    múltiples
+                    elementos sin duplicar el código.
+                </p>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        SASS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+    @use "sass:map";
+    @use "funciones";
+    @use "variables";
+
+    ////
+    /// @group Mixins Generales
+    /// Utilidades para media queries y layout
+    ////
+
+    /// Aplica estilos para pantallas menores a un tamaño específico
+    /// @param {String} $tam - Clave del mapa de tamaños (xs, s, m, l)
+    @mixin agregar-a-medida-maxima($tam) {
+        @if map.has-key(variables.$tamaños, $tam) {
+            @media (max-width: #{map.get(variables.$tamaños, $tam)}) {
+                @content;
+            }
+        }
+
+        @else {
+            @warn "El tamaño seleccionado no existe";
+        }
+    }
+
+    ;
+
+    /// Aplica estilos para pantallas mayores a un tamaño específico
+    /// @param {String} $tam - Clave del mapa de tamaños (xs, s, m, l)
+    @mixin agregar-a-medida-minima($tam) {
+        @if map.has-key(variables.$tamaños, $tam) {
+            @media (min-width: #{map.get(variables.$tamaños, $tam)}) {
+                @content;
+            }
+        }
+
+        @else {
+            @warn "El tamaño seleccionado no existe";
+            ;
+        }
+    }
+
+    ;
+
+    /// Centra elementos usando Flexbox
+    @mixin flex-box-centrado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /// Alinea elementos a la derecha usando Flexbox
+    @mixin flex-box-centrado-derecha {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    /// Alinea elementos a la izquierda usando Flexbox
+    @mixin flex-box-centrado-izquierda {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    /// Posicionamiento absoluto con coordenadas
+    /// @param {Length} $top - Posición superior
+    /// @param {Length} $rigth - Posición derecha
+    /// @param {Length} $botton - Posición inferior
+    /// @param {Length} $left - Posición izquierda
+    @mixin posicionamiento-absoluto($top, $rigth, $botton, $left) {
+        position: absolute;
+        top: $top;
+        right: $rigth;
+        bottom: $botton;
+        left: $left;
+    }
+
+    /// Posicionamiento fijo con coordenadas
+    /// @param {Length} $top - Posición superior
+    /// @param {Length} $rigth - Posición derecha
+    /// @param {Length} $botton - Posición inferior
+    /// @param {Length} $left - Posición izquierda
+    @mixin posicionamiento-fixed($top, $rigth, $botton, $left) {
+        position: fixed;
+        top: $top;
+        right: $rigth;
+        bottom: $botton;
+        left: $left;
+    }
+
+    /// Define ancho y alto de un elemento
+    /// @param {Length} $ancho - Ancho del elemento
+    /// @param {Length} $alto - Alto del elemento
+    @mixin ancho-alto($ancho, $alto) {
+        width: $ancho;
+        height: $alto;
+    }
+
+
+    /// Estilos base para menú tipo hamburguesa
+    @mixin menu() {
+        display: flex;
+        flex-direction: column;
+        padding: 6.7px;
+
+        span {
+            @include ancho-alto(18px, 2px);
+            margin-bottom: 3px;
+            background-color: white;
+
+        }
+    }
+
+    /// Estilos para flechas indicadoras
+    @mixin flechas() {
+        position: absolute;
+        @include ancho-alto(0, 0);
+        right: 20px;
+        top: calc(50% - 5px);
+        display: flex;
+    }
+
+
+
+    // ************** Mixins botones ********************* //
+
+    ////
+    /// @group Mixins Botones
+    /// Utilidades para la creación de botones
+    ////
+
+    /// Inicializa los estilos base de un botón
+    @mixin inicializar-botones {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        cursor: pointer;
+        border-radius: 4px;
+        user-select: none;
+        font-size: 18px;
+        position: relative;
+        box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+        user-select: none;
+        appearance: none;
+        white-space: nowrap;
+    }
+
+    /// Configuración base para botones (reset de estilos)
+    @mixin configuracion-botones() {
+        //Inicializar componentes de html puro
+        border-style: none;
+        outline: none;
+        line-height: 0;
+        box-shadow: none;
+        background: none;
+        min-width: unset;
+        max-width: unset;
+        min-height: unset;
+        max-height: unset;
+        display: flex;
+    }
+
+    /// Estilos individuales para botones con tamaños personalizados
+    /// @param {Length} $patb - Padding top/bottom
+    /// @param {Length} $palr - Padding left/right
+    /// @param {Length} $mw - Max width
+    /// @param {Length} $maxh - Max height
+    /// @param {Length} $minw - Min width
+    /// @param {Length} $fz - Font size
+    @mixin estilos-individuales($patb, $palr, $mw, $maxh, $minw, $fz) {
+        padding: $patb $palr ;
+        min-width: 35px;
+        max-width: 200px !important;
+        max-height: $maxh;
+        min-height: $maxh;
+    }
+
+    /// Mixin para botones que cubren un área específica
+    /// @param {Length} $pbt - Padding top/bottom
+    /// @param {Length} $plr - Padding left/right
+    /// @param {Length} $fz - Font size
+    /// @param {String} $display - Propiedad display
+    /// @param {Length} $w - Width
+    /// @param {Length} $m - Margin
+    @mixin btn-cubrir ($pbt, $plr, $fz, $display, $w, $m) {
+        padding: $pbt $plr;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $w;
+        font-size: $fz;
+        margin: $m;
+    }
+
+
+    /// Aplica colores de fondo y texto a un botón
+    /// @param {Color} $bg - Color de fondo
+    /// @param {Color} $color - Color de texto
+    /// @param {Length} $fz - Font size
+    @mixin btn-colores($bg, $color, $fz) {
+        background-color: $bg;
+        color: $color;
+        box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+        transition: all 0.3s ease;
+    }
+
+
+    /// Aplica estilos outline (borde) a un botón
+    /// @param {Length} $bgr - Grosor del borde
+    /// @param {String} $btipo - Tipo de borde (solid, dashed, etc)
+    /// @param {Color} $bcolor - Color del borde
+    /// @param {Color} $color - Color del texto
+    /// @param {Length} $fzm - Font size (no usado en el mixin pero declarado)
+    @mixin btn-colores-outline($bgr, $btipo, $bcolor, $color, $fzm) {
+        border: $bgr $btipo $bcolor !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        color: $color !important;
+        transition: all 0.7s ease;
+    }
+
+
+    // ********* Mixins Input ********* //
+
+    ////
+    /// @group Mixins Inputs
+    /// Utilidades para campos de formulario
+    ////
+
+    /// Configuración base para inputs de texto
+    @mixin configInput() {
+        outline: none;
+        height: 2.1em;
+        width: 100%;
+        border: 1px solid variables.$gris-input;
+        padding: 0.6em;
+        border-radius: 3px;
+        font-size: 1.1em;
+        transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+    }
+
+
+    // ************** Menú ************ //
+
+    ////
+    /// @group Mixins Menú
+    /// Utilidades para menús de navegación
+    ////
+
+    /// Estilos generales para el contenedor del menú
+    @mixin menu-general {
+        @include flex-box-centrado();
+        padding: 0 20px;
+        width: 100%;
+        background-color: variables.$fd-gris-n;
+        z-index: funciones.superposicion(ms); // altura menu superior ms
+    }
+
+
+    /// Estilos para la lista de elementos del menú
+    @mixin menu-lista {
+        @include flex-box-centrado-izquierda();
+        width: 80%;
+
+        li {
+            a {
+                display: block;
+                padding: 1em;
+                height: 100%;
+                color: white;
+                cursor: pointer;
+                font-size: 1.1em;
+
+                &.desactivado {
+                    color: rgba(117, 117, 117);
+
+                    &:hover {
+                        color: grey;
+                    }
+                }
+
+                &:hover {
+                    color: variables.$fd-gris-c;
+                }
+            }
+
+        }
+    }
+
+    /// Estilos para menú extendido
+    @mixin menu-ext {
+        background-color: white;
+        display: block;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.212);
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            li {
+                min-width: 100px;
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    color: rgb(78, 78, 78);
+                    text-align: center;
+                    padding: 10px 0;
+
+                    &:hover {
+                        color: black;
+                    }
+
+                    & span:first-child {
+                        font-size: 30px;
+                        margin-bottom: 7px;
+                    }
+
+                    & span:last-child {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+
+
+    /// Estilos para el botón del menú lateral (hamburguesa)
+    @mixin menu-lateral-boton() {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-items: flex-end;
+        padding: 1em;
+        cursor: pointer;
+
+        span {
+            @include ancho-alto(22px, 2px);
+            margin-bottom: 5px;
+            background-color: white;
+        }
+
+        width: 80%;
+        color: white;
+
+        @include agregar-a-medida-minima(m) {
+            display: none !important;
+        }
+
+        z-index: 100000000;
+    }
+
+    /// Estilos para el logo del menú
+    @mixin menu-logo {
+        @include flex-box-centrado();
+        width: 10%;
+        font-size: 1.2em;
+        font-weight: 600;
+        margin: auto;
+        color: white;
+    }
+</pre>
+</div>
+
+
+            </article>
+
+            <article class="article">
+                <h2 id="6" class="scroll-item">Mejores Prácticas</h2>
+                <p>
+                    Para maximizar la eficiencia y mantenibilidad de tu código Sass con Bodystyle,
+                    te recomendamos seguir estas mejores prácticas:
+                </p>
+
+                <h3>1. Organización de Archivos</h3>
+                <p>
+                    Estructura tus archivos Sass de manera lógica y jerárquica:
+                </p>
+
+<div class="codigo">
+    <label for="cod-estructura" class="label">
+        Estructura de Carpetas
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">sass/
+├── main.scss                 # Archivo principal
+├── variables/
+│   ├── _colores.scss
+│   ├── _tipografia.scss
+│   └── _espaciado.scss
+├── mixins/
+│   ├── _flexbox.scss
+│   ├── _media-queries.scss
+│   └── _botones.scss
+├── componentes/
+│   ├── _cards.scss
+│   ├── _formularios.scss
+│   └── _navegacion.scss
+└── utilidades/
+    └── _helpers.scss</pre>
+</div>
+
+                <h3>2. Nomenclatura de Variables</h3>
+                <p>
+                    Usa nombres descriptivos y consistentes para tus variables. Bodystyle utiliza
+                    el patrón de nombrado que puedes seguir:
+                </p>
+
+<div class="codigo">
+    <label for="cod-nomenclatura" class="label">
+        SASS
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">// ✅ Buen nomenclatura
+$color-primario: #1045B7;
+$espaciado-base: 1rem;
+$breakpoint-tablet: 770px;
+$transicion-rapida: 0.3s ease;
+
+// ❌ Evita nombres genéricos o poco claros
+$c1: #1045B7;
+$sp: 1rem;
+$bp-m: 770px;</pre>
+</div>
+
+                <h3>3. Uso de Mapas para Colecciones</h3>
+                <p>
+                    En lugar de crear múltiples variables, agrupa valores relacionados en mapas:
+                </p>
+
+<div class="codigo">
+    <label for="cod-mapas" class="label">
+        SASS
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">// ✅ Mejor: Usar mapas
+$colores: (
+    "primario": #1045B7,
+    "secundario": #00C7A4,
+    "error": #E41616,
+    "exito": #009C80
+);
+
+// Acceder a los valores
+.boton-primario {
+    background-color: map.get($colores, "primario");
+}
+
+// ❌ Menos organizado: Variables individuales
+$color-primario: #1045B7;
+$color-secundario: #00C7A4;
+$color-error: #E41616;</pre>
+</div>
+
+                <h3>4. Evitar Anidamiento Excesivo</h3>
+                <p>
+                    Aunque Sass permite anidamiento profundo, es importante mantener una jerarquía
+                    razonable para mantener el código legible:
+                </p>
+
+<div class="codigo">
+    <label for="cod-anidamiento" class="label">
+        SASS
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">// ✅ Anidamiento moderado (máx 3-4 niveles)
+.tarjeta {
+    padding: 1rem;
+    background-color: white;
+
+    .tarjeta-header {
+        border-bottom: 1px solid #ddd;
+
+        h3 {
+            margin: 0;
+            color: map.get($colores, "primario");
+        }
+    }
+}
+
+// ❌ Anidamiento excesivo (difícil de leer)
+.tarjeta {
+    .tarjeta-header {
+        .titulo {
+            .subtitulo {
+                .contenido {
+                    color: red; // Muy profundo!
+                }
+            }
+        }
+    }
+}</pre>
+</div>
+
+                <h3>5. Reutilizar Mixins en lugar de Duplicar Código</h3>
+                <p>
+                    Aprovecha los mixins de Bodystyle para evitar duplicación de estilos:
+                </p>
+
+<div class="codigo">
+    <label for="cod-mixins-uso" class="label">
+        SASS
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">// ✅ Usar mixins disponibles
+.contenedor-centrado {
+    @include flex-box-centrado();
+    padding: 2rem;
+}
+
+.boton-personalizado {
+    @include inicializar-botones();
+    @include btn-colores(#1045B7, white, 18px);
+}
+
+// Responsive design con mixins
+.elemento {
+    font-size: 1.5rem;
+    
+    @include agregar-a-medida-maxima(s) {
+        font-size: 1.2rem;
+    }
+}</pre>
+</div>
+
+                <h3>6. Comentar el Código Importante</h3>
+                <p>
+                    Usa comentarios para documentar secciones complejas o decisiones de diseño:
+                </p>
+
+<div class="codigo">
+    <label for="cod-comentarios" class="label">
+        SASS
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">// ========================================
+// Componente: Tarjeta de Producto
+// ========================================
+// Define los estilos para las tarjetas
+// utilizadas en la página de productos.
+
+.producto-tarjeta {
+    @include ancho-alto(100%, auto);
+    
+    // Efecto hover: elevar tarjeta
+    &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transform: translateY(-4px);
+    }
+}</pre>
+</div>
+
+                <h3>7. Validar Variables Antes de Usarlas</h3>
+                <p>
+                    Bodystyle incluye funciones que validan si un valor existe en un mapa.
+                    Úsalas para evitar errores:
+                </p>
+
+<div class="codigo">
+    <label for="cod-validacion" class="label">
+        SASS
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">// Verificar si existe un breakpoint
+@if map.has-key(variables.$tamaños, "s") {
+    @media (max-width: map.get(variables.$tamaños, "s")) {
+        // Estilos para pantallas pequeñas
+    }
+}
+
+// Usar función para obtener z-index seguro
+.menu {
+    z-index: superposicion(ms); // Retorna 100000 de forma segura
+}</pre>
+</div>
+
+                <h3>8. Evitar !important</h3>
+                <p>
+                    Estructura tu CSS de manera que rara vez necesites !important.
+                    Si lo necesitas frecuentemente, revisa tu especificidad:
+                </p>
+
+<div class="codigo">
+    <label for="cod-importante" class="label">
+        SASS
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">// ✅ Mejor: Mayor especificidad
+.contenedor .boton.boton-primario {
+    background-color: #1045B7;
+}
+
+// ❌ Evita:
+.boton {
+    background-color: #1045B7 !important;
+}</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">🎨 Sass</a></li>
+            <li><a href="#3">📦 Instalación y Uso</a></li>
+            <li><a href="#4">⚙️ Funciones</a></li>
+            <li><a href="#5">🔧 Mixins</a></li>
+            <li><a href="#6">✨ Mejores Prácticas</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l2" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoCssInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l2 ul li a")[15].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

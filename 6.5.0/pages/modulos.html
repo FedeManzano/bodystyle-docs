@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Módulos y arquitectura de Bodystyle.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/modulos.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Módulos</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">📦 Módulos</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Bodystyle está compuesto por un conjunto de módulos codificados en JS, lo cual permite 
+                darle dinamismo y funcionalidad a los diferentes componentes expuestos a lo largo de esta 
+                documentación. <br>
+                La intención de esta sección es permitirle al usuario comprender la estructura interna 
+                de la biblioteca y que aprenda cómo instanciar los diferentes módulos de la manera 
+                más eficiente posible.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Introducción</h2>
+                <p>
+                    Bodystyle está diseñado para inicializar cada uno de los módulos que la componen
+                    a través de su OBJETO GLOBAL llamado <code>BS</code>. Este objeto permite el acceso 
+                    a los métodos dispuestos que permitirán no solo inicializar los módulos, sino también 
+                    destruirlos en caso de necesidad para optimizar recursos. <br>
+                    Si bien la opción anteriormente descripta es la más utilizada, también 
+                    podemos inicializar los módulos de manera individual, y utilizar las funciones 
+                    de inicialización y destrucción de cada módulo por separado.
+                </p>
+                <div class="table-responsive">
+                    <table class="selector">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Modo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Animaciones.js" class="link">Animaciones</a></td>
+                                <td>Permite importar cuatro funciones que permiten generar 
+                                    el efecto FadeIn, FadeOut, SlideIn y SlideOut en los elementos HTML.</td>
+                                <td>Manual</td>
+                            </tr>
+                             <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/BotonInicio.js" class="link">Botón Inicio</a></td>
+                                <td>Permite crear un botón de inicio que facilita la navegación hacia la parte superior de la página.</td>
+                                <td>Manual</td>
+                            </tr>
+                             <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/CodigoC.js" class="link">Código C</a></td>
+                                <td>Permite colorear la sintaxis de código en lenguaje C en las etiquetas <code>pre</code>.</td>
+                                <td>Manual</td>
+                            </tr>
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/CodigoCss.js" class="link">Código CSS</a></td>
+                                <td>Permite colorear la sintaxis de código en lenguaje CSS en las etiquetas <code>pre</code>.</td>
+                                <td>Manual</td>
+                            </tr>
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/CodigoHtml.js" class="link">Código HTML</a></td>
+                                <td>Permite colorear la sintaxis de código en lenguaje HTML en las etiquetas <code>pre</code>.</td>
+                                <td>Manual</td>
+                            </tr>
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/CodigoJava.js" class="link">Código Java</a></td>
+                                <td>Permite colorear la sintaxis de código en lenguaje Java en las etiquetas <code>pre</code>.</td>
+                                <td>Manual</td>
+                            </tr>
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/CodigoJs.js" class="link">Código JavaScript</a></td>
+                                <td>Permite colorear la sintaxis de código en lenguaje JavaScript en las etiquetas <code>pre</code>.</td>
+                                <td>Manual</td>
+                            </tr>
+
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/ColeccionFlotante.js" class="link">Colección Flotante</a></td>
+                                <td>Permite crear una colección de elementos flotantes en la página. Permitiendo guiar al usuario a través de contenido destacado.</td>
+                                <td>Manual</td>
+                            </tr>
+
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Colecciones.js" class="link">Colecciones</a></td>
+                                <td>Permite crear colecciones con el efecto acordeón en sus elementos.</td>
+                                <td>Manual</td>
+                            </tr>
+
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/ComentarioDinamico.js" class="link">Comentario Dinámico</a></td>
+                                <td>Permite generar un elemento dinámico descriptivo sobre otro elemento dentro del DOM.</td>
+                                <td>
+                                    Manual,
+                                    Automático
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Desactivado.js" class="link">Desactivado</a></td>
+                                <td>Permite gestionar los elementos desactivados, guardando los atributos en un mapa y conservando la funcionalidad.</td>
+                                <td>
+                                    Manual,
+                                    Automático
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Dropdown.js" class="link">Dropdown</a></td>
+                                <td>Permite desplegar una lista con enlaces asociados a un determinado elemento.</td>
+                                <td>
+                                    Manual
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/EfectoScroll.js" class="link">Efecto Scroll</a></td>
+                                <td>Permite generar el efecto reveal en los elementos al hacer scroll. El contenido irá apareciendo gradualmente.</td>
+                                <td>
+                                    Automático
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Imagenes.js" class="link">Imágenes</a></td>
+                                <td>Permite gestionar y manipular imágenes dentro de la página.</td>
+                                <td>
+                                    Manual
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Modal.js" class="link">Modal</a></td>
+                                <td>Ventanas modales para mostrar contenido superpuesto, mejoradas a partir de la versión v6.5.0</td>
+                                <td>
+                                    Manual
+                                </td>
+                            </tr>
+
+                             <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Navigation.js" class="link">Navigation</a></td>
+                                <td>Barra de navegación responsiva de la biblioteca.</td>
+                                <td>
+                                    Manual
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Paralax.js" class="link">Paralax</a></td>
+                                <td>Permite generar el efecto paralax a las imágenes.</td>
+                                <td>
+                                    Manual
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Personalizado.js" class="link">Personalizado</a></td>
+                                <td>Permite generar elementos dinámicos personalizados, utilizando el núcleo de posicionamiento de Dynamics-Tips</td>
+                                <td>
+                                    Manual
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Range.js" class="link">Range</a></td>
+                                <td>Permite controlar el input range en proyectos tradicionales.</td>
+                                <td>
+                                    Automático
+                                </td>
+                            </tr>
+
+                             <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/ScrollSpy.js" class="link">ScrollSpy</a></td>
+                                <td>Genera una guia de la página basada en el desplazamiento.</td>
+                                <td>
+                                    Manual
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Select.js" class="link">Select</a></td>
+                                <td>Permite controlar los select de html brindando estilos personalizados de estos elementos.</td>
+                                <td>
+                                    Manual
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/SidebarDrop.js" class="link">SidebarDrop</a></td>
+                                <td>Permite gestionar el sidebar desplegable que proporciona Bodystyle.</td>
+                                <td>
+                                    Manual
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Tabs.js" class="link">Tabs</a></td>
+                                <td>Elementos de navegación y opciones, permiten seleccionar contenido y mostrarlo según la pestaña activa.</td>
+                                <td>
+                                    Manual
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Toast.js" class="link">Toast</a></td>
+                                <td>Muestra un mensaje dinámico en pantalla, avisandole al usuario el estado de una acción.</td>
+                                <td>
+                                    Manual
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/ToolTips.js" class="link">Toast</a></td>
+                                <td>Elementos dinámicos con una breve descipción de un elemento en forma de mensaje.</td>
+                                <td>
+                                    Manual
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><a target="_blank" href="https://github.com/FedeManzano/bodystyle/blob/master/src/modulos/Waves.js" class="link">Waves</a></td>
+                                <td>Efecto que se produce cuando el usuario le da click a un elemento.</td>
+                                <td>
+                                    Manual,
+                                    Automático
+                                </td>
+                            </tr>
+                           
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Webpack</h2>
+                <p>
+                    Para modularizar todos los módulos que integran a Bodystyle se utilizó 
+                    Webpack, un empaquetador de módulos estático para aplicaciones JavaScript modernas. 
+                    Cuando Webpack procesa la aplicación, internamente construye un gráfico de dependencias.
+                    Es necesario conocer como funciona para poder aprovechar al máximo la biblioteca. <br>
+                    Cada módulo de Bodystyle está contenido en la carpeta <code>/src/modulos/</code> y 
+                    cada uno de ellos exporta una clase que contiene los métodos necesarios para
+                    inicializar y destruir el módulo. <br>
+                    Al momento de compilar la biblioteca, Webpack toma cada uno de estos módulos y
+                    los combina en un solo archivo de salida, que es el que se utiliza en producción.
+                    Esto permite que Bodystyle sea fácilmente integrable en cualquier proyecto web,
+                    ya que solo se necesita incluir un único archivo JS en lugar de múltiples archivos.
+                </p>
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        webpack.config.js 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    // Permite obtener el path absoluto desde donde se esté trabajando
+    const path = require('path');
+
+    module.exports = {
+
+      // Archivo de entrada
+      // Es necesario definirlo para que Webpack sepa dónde comenzar a construir el gráfico de dependencias
+      entry: './src/app.js',
+
+      output: {
+        // Nombre del archivo de salida 
+        // Dependiendo en que estapa del desarrollo estemos, este archivo puede ser minificado o no
+        // En este caso, se está generando el archivo minificado
+        filename: 'bodystyle.min.js',
+
+        // Carpeta de salida /dist/js/
+        path: path.join(__dirname, 'dist/js'),
+      },
+      resolve: {
+        // Extensiones que se van a utilizar
+        extensions: ['.js', '.ts', '.css']
+      },
+      module: {
+        // Reglas para los loaders
+        rules: [
+          { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
+          { test: /\.css$/i, use: ["style-loader", "css-loader"] },
+        ]
+      },
+      // Modo de compilación (producción en este caso)
+      mode: "production"
+    };
+</pre>
+</div>
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        SHELL 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    npm run build // Comando para ejecutar la compilación con Webpack
+</pre>
+</div>
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>
+                        Con este último comando, Webpack tomará el archivo de entrada definido en la configuración,
+                        analizará todas las dependencias y generará el archivo de salida en la carpeta especificada
+                    </p>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Inicializar Módulos</h2>
+                <p>
+                    Como se mencionó existen dos formas de inicializar los diferentes módulos de la biblioteca: 
+                    Una de ellas es a través del OBJETO GLOBAL <code>BS</code>, y la otra es inicializando 
+                    cada módulo por separado. <br>
+                </p>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    // El código que está debajo es posible si tenemos agregado a nuestro proyecto 
+    // el archivo bodystyle.min.js que permitirá el acceso al objeto BS
+    // BS es el objeto global de Bodystyle
+    BS.ToolTipsInit(); // Inicializa el módulo ToolTips
+    BS.BotonInicioInit(); // Inicializa el módulo Botón Inicio
+    BS.CodigoHtmlInit(); // Inicializa el módulo Código HTML
+</pre>
+</div>
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>
+                        Cada módulo de Bodystyle tiene su propio método de inicialización y destrucción.
+                        Es importante consultar la documentación específica de cada módulo para conocer
+                        los detalles de su uso.
+                    </p>
+                </div>
+
+                <p>
+                    La otra forma de inicializar los módulos es importándolos directamente en nuestro 
+                    proyecto y utilizando sus métodos de inicialización y destrucción.
+                </p>
+
+                <div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+        /*=== Importar Bodystyle en el proyecto global ===*/
+    import 'bodyui2/dist/css/bodystyle.min.css'; // Importar estilos CSS
+    import 'bodyui2/dist/js/bodystyle.min.js';   // Importar
+
+    /*=== Importar Bodystyle en el proyecto individual ===*/
+    // Es posible solo importar los módulos necesarios según las necesidades del proyecto
+    import Alerta from 'node_modules/bodyui2/src/modulos/Alertas'; // Importar solo el módulo de Alertas
+    import Animaciones from 'node_modules/bodyui2/src/modulos/Animaciones'; // Importar solo el módulo de Animaciones
+    import BotonInicio from 'node_modules/bodyui2/src/modulos/BotonInicio'; // Importar solo el módulo de BotonInicio
+    import CodigoC from 'node_modules/bodyui2/src/modulos/CodigoC'; // Importar solo el módulo de CodigoC
+    import CodigoHtml from 'node_modules/bodyui2/src/modulos/CodigoHtml'; // Importar solo el módulo de CodigoHtml
+    import CodigoJs from 'node_modules/bodyui2/src/modulos/CodigoJs'; // Importar solo el módulo de CodigoJs
+    import CodigoCss from 'node_modules/bodyui2/src/modulos/CodigoCss'; // Importar solo el módulo de CodigoCss
+    import CodigoJava from 'node_modules/bodyui2/src/modulos/CodigoJava'; // Importar solo el módulo de CodigoJava
+    import Coleeciones from 'node_modules/bodyui2/src/modulos/Coleeciones'; // Importar solo el módulo de Colecciones
+    import ComentarioDinamico from 'node_modules/bodyui2/src/modulos/ComentarioDinamico'; // Importar solo el módulo de Comentarios
+    import ColeccionFlotante from 'node_modules/bodyui2/src/modulos/ColeccionFlotante'; // Importar solo el módulo de ColeccionFlotante    
+    import Dropdown from 'node_modules/bodyui2/src/modulos/Dropdown'; // Importar solo el módulo de Dropdown
+    import Desactivado from 'node_modules/bodyui2/src/modulos/Desactivado'; // Importar solo el módulo de Desactivado
+    import EfectoScroll from 'node_modules/bodyui2/src/modulos/EfectoScroll'; // Importar solo el módulo de EfectoScroll
+    import Imagenes from 'node_modules/bodyui2/src/modulos/Imagenes'; // Importar solo el módulo de Imagenes
+    import ImputHandler from 'node_modules/bodyui2/src/modulos/ImputHandler'; // Importar solo el módulo de InputHandler
+    import Modal from 'node_modules/bodyui2/src/modulos/Modal'; // Importar solo el módulo de Modales
+    import Navigation from 'node_modules/bodyui2/src/modulos/Navigation'; // Importar solo el módulo de Navigation
+    import Personalizado from 'node_modules/bodyui2/src/modulos/Personalizado'; // Importar solo el módulo de Personalizado
+    import Paralax from 'node_modules/bodyui2/src/modulos/Paralax'; // Importar solo el módulo de Paralax
+    import SidebarDrop from 'node_modules/bodyui2/src/modulos/SidebarDrop'; // Importar solo el módulo de SidebarDrop
+    import Range from 'node_modules/bodyui2/src/modulos/Range'; // Importar solo el módulo de Input Range
+    import Select from 'node_modules/bodyui2/src/modulos/Select'; // Importar solo el módulo de Select
+    import ScrollSpy from 'node_modules/bodyui2/src/modulos/ScrollSpy'; // Importar solo el módulo de ScrollSpy
+    import Tabs from 'node_modules/bodyui2/src/modulos/Tabs'; // Importar solo el módulo de Tabs // Devuelve una instacia de clase
+    import Toast from 'node_modules/bodyui2/src/modulos/Toast'; // Importar solo el módulo de Toast
+    import ToolTips from 'node_modules/bodyui2/src/modulos/ToolTips'; // Importar solo el módulo de ToolTips
+    import Waves from 'node_modules/bodyui2/src/modulos/Waves'; // Importar solo el módulo de Waves
+    
+    /*
+        Es importante aclarar que esta forma de inicialización la podremos realizar 
+        si trabajamos desde el repositorio o a través de NPM, !!! No podremos hacerlo 
+        desde los archivos procesados t transpilados. !!!
+    */
+    // Luego inicializamos con la fucnión iniciar 
+    // Por ejemplo: 
+
+    // ToolTips.iniciar(); // Inicializa el módulo ToolTips
+    // BotonInicio.iniciar(); // Inicializa el módulo Botón Inicio
+</pre>
+</div>
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>
+                        Toda la información de descarga e instalación la encontrará en la página 
+                        <a href="get_started.html" class="link">Get Started</a>.
+                    </p>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 id="5" class="scroll-item">Estados</h2>
+                <p>
+                    Cada módulo de Bodystyle puede encontrarse en dos estados: Inicializado o Destruido. 
+                    Cuando un módulo está inicializado, significa que sus funcionalidades están activas 
+                    y disponibles para su uso en la página web. Por otro lado, cuando un módulo está destruido, 
+                    sus funcionalidades son desactivadas y los recursos asociados son liberados. <br>
+                    Es importante gestionar adecuadamente el estado de los módulos para optimizar el rendimiento 
+                    de la página web y evitar conflictos entre diferentes módulos. <br>
+                    La inicialización y destrucción de los módulos se realiza a través de los métodos 
+                    proporcionados por cada módulo o mediante el objeto global <code>BS</code>.
+                </p>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    BS.ToolTipsInit(); // Inicializa el módulo ToolTips
+    // ... uso del módulo ToolTips ...
+    BS.ToolTipsDestroy(); // Destruye el módulo ToolTips
+
+    /**
+       Los eventos asociados al elemento se desvinculan y los recursos son liberados.
+    */
+</pre>
+</div>
+
+                <h4 class="mb-3"><i class="bs-check c-green fz-20">&nbsp;</i>Angular</h4>
+                <p>
+                    Para ejempleficar lo anterior se toma el framework Angular, en donde
+                    cada componente tiene un ciclo de vida bien definido. Al inicializar
+                    un módulo de Bodystyle dentro de un componente, es recomendable
+                    inicializarlo en el método <code>ngOnInit()</code> y destruirlo 
+                    cuando el/los elementos no se utilicen, veamos un ejemplo:
+                </p>
+
+                <div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    class MiComponente implements OnInit, OnDestroy {
+        ngOnInit() {
+            // Inicializar el módulo ToolTips cuando el componente se inicializa
+            BS.ToolTipsInit();
+        }
+
+        /**
+            Esto puede hacerse en cualquier momento no necesariamente 
+            en este método.
+        */
+        ngOnDestroy() {
+            // Destruir el módulo ToolTips cuando el componente se destruye
+            BS.ToolTipsDestroy();
+        }
+    }
+
+    /** 
+        De esta manera, nos aseguramos de que el módulo ToolTips esté activo 
+        solo mientras el componente esté en uso, optimizando así el rendimiento 
+        y evitando posibles conflictos. Bodystyle hace uso de los recursos 
+        de manera eficiente, permitiendo una mejor experiencia de usuario.
+    */
+</pre>
+</div>
+
+
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Módulos</a></li>
+            <li><a href="#2">📇 Introducción</a></li>
+            <li><a href="#3">📇 Webpack</a></li>
+            <li><a href="#4">📇 Inicialización</a></li>
+            <li><a href="#5">📇 Estados</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l5" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l5 ul li a")[0].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

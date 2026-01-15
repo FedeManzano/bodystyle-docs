@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Sidebar asociada al nav principal para mejorar la navegación.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/sidebar.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Sidebar</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">🔗 Sidebar</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Componente Sidebar asociado al nav principal para mejorar la navegación en la página. <br>
+                Componente complementario al nav para brindarle al usuario un conjunto superior de opciones.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Default</h2>
+                <p>
+                    Ahora veremos un ejemplo bastante simple de como utilizar esta barra de navegación con Sidebar,  
+                    para esto es necesario inicializar el módulo de JS correspondiente, de esta forma lograremos 
+                    vincular la lógica con la vista y utilizar el componente.
+                </p>
+                
+                <a target="_blank" href="muestras/m6_sidebar.html" class="link">Muestra Sidebar</a>
+
+                <p class="mt-3">
+                    En este ejemplo disponemos de una barra de navegación trabajando en conjunto 
+                    con un sidebar lateral. El mismo se despliega al hacer click en el botón menú
+                    ubicado en la esquina superior izquierda de la barra de navegación.
+                </p>
+
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- ID: #na data-target="#bs-nav-sidebar" IMPORTANTE TENER
+     BIEN CONFIGURADOS ESTOS ATRIBUTOS. -->
+    <nav  id="na"  class="bs-nav fd-bodyui bs-nav-fixed"  data-target="#bs-nav-sidebar">
+        <div  class="bs-nav-md align-right-list">
+            
+            <a  class="btn-menu"></a>
+            <a  href="#"  class="logo-container">
+                <img  src="../../images/logo.png"  alt="Foto de perfil">
+            </a>
+            <div>
+                <ul>
+                    <li><a  href="#">Inicio</a></li>
+                    <li><a  href="#">Porfolio</a></li>
+                    <li><a  href="#">Galeria</a></li>
+                </ul>
+            </div>
+            <div  class="right-content">
+                <div  class="btn-grupo-lg">
+                    <button  class="btn-sm bg-white c-black">Login</button>
+                    <button  class="btn-sm fd-gris-n">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 
+            Lista lateral la misma contiene un ID = al configurado en el (data-target) del nav
+            y lleva la clase [bs-nav-sidebar] para configurarle los estilos de este elemento.
+            Este elemento puede estar en cualquier parte del dom, no tiene limitaciones 
+            ya que el enlace del sidebar con el nav es a través del data-target.
+    -->
+    <div  id="bs-nav-sidebar"  class="bs-nav-sidebar"> <!-- ID = data-target del nav-->
+        <ul>
+            <li><a  href="#">Inicio</a></li>
+            <li><a  href="#">Servicios</a></li>
+            <li><a  href="#">Porfolio</a></li>
+            <li><a  href="#">Graleria</a></li>
+            <li><a  href="#">Repositorio</a></li>
+        </ul>
+    </div>
+</pre>
+</div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    // Inicializar el Sidebar
+    // en este caso el sidebar estará 
+    // disponible en todos los tamaños de pantalla
+    BS.NavigationInit("#na", true);
+</pre>
+</div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Colores</h2>
+                <p>
+                    En el ejemplo anterior hemos visto el sidebar por defecto, pero es posible personalizarlo 
+                    utilizando los <a href="colores.html" class="link">Colores</a> de la biblioteca tal y como 
+                    se hace en el <a href="nav.html" class="link">Nav Principal</a>.
+                </p>
+
+                <a target="_blank" href="muestras/m7_sidebar_color.html" class="link">Sidebar Personalizado</a>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <nav  id="na"  class="bs-nav bg-pink-d-1 bs-nav-bor-black bs-nav-fixed"  data-target="#bs-nav-sidebar">
+        <div  class="bs-nav-md align-right-list">
+            
+            <a  class="btn-menu"></a>
+
+            <a  href="#"  class="logo-container">
+                <img  src="../../images/logo.png"  alt="Foto de perfil">
+            </a>
+            <div>
+                <ul>
+                    <li><a  href="#">Inicio</a></li>
+                    <li><a  href="#">Porfolio</a></li>
+                    <li><a  href="#">Galeria</a></li>
+                </ul>
+            </div>
+            <div  class="right-content">
+                <div  class="btn-grupo-lg">
+                    <button  class="btn-sm bg-white c-black">Login</button>
+                    <button  class="btn-sm fd-gris-n">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div  id="bs-nav-sidebar"  class="bs-nav-sidebar bg-pink-d-4">
+        <ul>
+            <li><a  href="#">🏠 Inicio</a></li>
+            <li><a  href="#">⚙️ Servicios</a></li>
+            <li><a  href="#">💼 Porfolio</a></li>
+            <li><a  href="#">📦 Repositorio</a></li>
+        </ul>
+    </div>
+</pre>
+</div>
+                <div class="alert">
+                    <strong>Nota:</strong> Recuerde que puede utilizar cualquier color de la biblioteca para 
+                    personalizar el sidebar, solo debe agregar la clase correspondiente al contenedor del sidebar.
+                </div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Destroy</h2>
+                <p>
+                    Es posible desvincular la lógica del sidebar y liberar recuros, para esto se utiliza la función 
+                    ya documentada en <a href="nav.html" class="link">Nav</a>, de esta forma podremos destruir la
+                    instancia del sidebar.
+                </p>
+
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Sidebar</a></li>
+            <li><a href="#2">📇 Default</a></li>
+            <li><a href="#3">📇 Colores</a></li>
+            <li><a href="#4">📇 Destroy</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l6" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l6 ul li a")[1].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

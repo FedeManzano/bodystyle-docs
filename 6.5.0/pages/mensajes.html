@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Tipo de badge en forma de viñeta, que incluye información de un determinado elemento.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/mensajes.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Mensajes</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Mensajes</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Es un badge con forma de viñeta que permite brindarle información 
+                al usuario de un determinado elemento dentro del DOM.
+            </p>
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Muestra</h2>
+                <p>
+                    Ahora veremos una muestra del badge que permite mostrar mensajes o notificaciones asociados a un elemento.
+                </p>
+                
+                <div  class="d-flex ali-baseline">
+                    <button  class="btn-sm bg-bodyui">BODY UI</button>
+                    <label  class="badge-mje-left badge-mje-white ml-2">Badge</label>
+                </div>
+
+                <div  class="d-flex just-start mt-3">
+                    <div >
+                        <label  class="badge-mje-bottom badge-mje-green m-a">Badge</label>
+                        <button  class="btn-sm bg-bodyui mt-2">BODY UI</button>
+                    </div>
+                </div>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div  class="d-flex ali-baseline">
+        <button  class="btn-sm bg-bodyui">BODY UI</button>
+        <label  class="badge-mje-left badge-mje-white ml-2">Badge</label>
+    </div>
+    <div  class="d-flex just-start mt-3">
+        <div >
+            <label  class="badge-mje-bottom badge-mje-green m-a">Badge</label>
+            <button  class="btn-sm bg-bodyui mt-2">BODY UI</button>
+        </div>
+    </div>
+</pre>
+</div>
+
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-20">&nbsp;</i>Información</h4>
+                    <p>
+                        Estos badges necesitan para una correcta alineación las clases de flexbox de Bodystyle. <br>
+                        En el siguiente enlace podrán acceder a estas funcionalidades: <a href="flexbox.html" class="link tips-ele"
+                        data-tips="Clases Flexbox" data-pos="top">Flexbox</a>.
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Paleta de Badges</h2>
+                <p>
+                    Ahora veremos una lista con los diferentes colores disponibles para los badges de mensajes:
+                </p>
+
+                    <div  class="d-flex just-around ali-center">
+                        <label  class="badge-mje-left badge-mje-bodyui">Bodyui</label>
+                        <label  class="badge-mje-top badge-mje-bodyui">Bodyui</label>
+                        <label  class="badge-mje-right badge-mje-bodyui">Bodyui</label>
+                        <label  class="badge-mje-bottom badge-mje-bodyui">Bodyui</label>
+                    </div>
+                    <div  class="d-flex just-around ali-center">
+                        <label  class="badge-mje-left badge-mje-red">Red</label>
+                        <label  class="badge-mje-top badge-mje-red">Red</label>
+                        <label  class="badge-mje-right badge-mje-red">Red</label>
+                        <label  class="badge-mje-bottom badge-mje-red">Red</label>
+                    </div>
+                    <div  class="d-flex just-around ali-center">
+                        <label  class="badge-mje-left badge-mje-blue">Blue</label>
+                        <label  class="badge-mje-top badge-mje-blue">Blue</label>
+                        <label  class="badge-mje-right badge-mje-blue">Blue</label>
+                        <label  class="badge-mje-bottom badge-mje-blue">Blue</label>
+                    </div>
+                    <div  class="d-flex just-around ali-center">
+                        <label  class="badge-mje-left badge-mje-green">Green</label>
+                        <label  class="badge-mje-top badge-mje-green">Green</label>
+                        <label  class="badge-mje-right badge-mje-green">Green</label>
+                        <label  class="badge-mje-bottom badge-mje-green">Green</label>
+                    </div>
+                    <div  class="d-flex just-around ali-center">
+                        <label  class="badge-mje-left badge-mje-black">Black</label>
+                        <label  class="badge-mje-top badge-mje-black">Black</label>
+                        <label  class="badge-mje-right badge-mje-black">Black</label>
+                        <label  class="badge-mje-bottom badge-mje-black">Black</label>
+                    </div>
+                    <div  class="d-flex just-around ali-center">
+                        <label  class="badge-mje-left badge-mje-white">White</label>
+                        <label  class="badge-mje-top badge-mje-white">White</label>
+                        <label  class="badge-mje-right badge-mje-white">White</label>
+                        <label  class="badge-mje-bottom badge-mje-white">White</label>
+                    </div>
+                    <div  class="d-flex just-around ali-center">
+                        <label  class="badge-mje-left badge-mje-gray">Grey</label>
+                        <label  class="badge-mje-top badge-mje-gray">Grey</label>
+                        <label  class="badge-mje-right badge-mje-gray">Grey</label>
+                        <label  class="badge-mje-bottom badge-mje-gray">Grey</label>
+                    </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div  class="d-flex just-around ali-center">
+        <label  class="badge-mje-left badge-mje-bodyui">Bodyui</label>
+        <label  class="badge-mje-top badge-mje-bodyui">Bodyui</label>
+        <label  class="badge-mje-right badge-mje-bodyui">Bodyui</label>
+        <label  class="badge-mje-bottom badge-mje-bodyui">Bodyui</label>
+    </div>
+    <div  class="d-flex just-around ali-center">
+        <label  class="badge-mje-left badge-mje-red">Red</label>
+        <label  class="badge-mje-top badge-mje-red">Red</label>
+        <label  class="badge-mje-right badge-mje-red">Red</label>
+        <label  class="badge-mje-bottom badge-mje-red">Red</label>
+    </div>
+    <div  class="d-flex just-around ali-center">
+        <label  class="badge-mje-left badge-mje-blue">Blue</label>
+        <label  class="badge-mje-top badge-mje-blue">Blue</label>
+        <label  class="badge-mje-right badge-mje-blue">Blue</label>
+        <label  class="badge-mje-bottom badge-mje-blue">Blue</label>
+    </div>
+    <div  class="d-flex just-around ali-center">
+        <label  class="badge-mje-left badge-mje-green">Green</label>
+        <label  class="badge-mje-top badge-mje-green">Green</label>
+        <label  class="badge-mje-right badge-mje-green">Green</label>
+        <label  class="badge-mje-bottom badge-mje-green">Green</label>
+    </div>
+    <div  class="d-flex just-around ali-center">
+        <label  class="badge-mje-left badge-mje-black">Black</label>
+        <label  class="badge-mje-top badge-mje-black">Black</label>
+        <label  class="badge-mje-right badge-mje-black">Black</label>
+        <label  class="badge-mje-bottom badge-mje-black">Black</label>
+    </div>
+    <div  class="d-flex just-around ali-center">
+        <label  class="badge-mje-left badge-mje-white">White</label>
+        <label  class="badge-mje-top badge-mje-white">White</label>
+        <label  class="badge-mje-right badge-mje-white">White</label>
+        <label  class="badge-mje-bottom badge-mje-white">White</label>
+    </div>
+    <div  class="d-flex just-around ali-center">
+        <label  class="badge-mje-left badge-mje-gray">Grey</label>
+        <label  class="badge-mje-top badge-mje-gray">Grey</label>
+        <label  class="badge-mje-right badge-mje-gray">Grey</label>
+        <label  class="badge-mje-bottom badge-mje-gray">Grey</label>
+    </div>
+</pre>
+</div>
+
+
+            <h3 id="4" class="scroll-item">Resumen</h3>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>badge-mje-left</td>
+                            <td>Posiciona el badge a la izquierda del elemento.</td>
+                        </tr>
+                        <tr>
+                            <td>badge-mje-top</td>
+                            <td>Posiciona el badge en la parte superior del elemento.</td>
+                        </tr>
+                        <tr>
+                            <td>badge-mje-right</td>
+                            <td>Posiciona el badge a la derecha del elemento.</td>
+                        </tr>
+                        <tr>
+                            <td>badge-mje-bottom</td>
+                            <td>Posiciona el badge en la parte inferior del elemento.</td>
+                        </tr>
+                        <tr>
+                            <td>badge-mje-red</td>
+                            <td>Aplica el color rojo al badge.</td>
+                        </tr>
+                        <tr>
+                            <td>badge-mje-blue</td>
+                            <td>Aplica el color azul al badge.</td>
+                        </tr>
+                        <tr>
+                            <td>badge-mje-green</td>
+                            <td>Aplica el color verde al badge.</td>
+                        </tr>
+                        <tr>
+                            <td>badge-mje-black</td>
+                            <td>Aplica el color negro al badge.</td>    
+                        </tr>
+                        <tr>
+                            <td>badge-mje-white</td>
+                            <td>Aplica el color blanco al badge.</td>
+                        </tr>
+                        <tr>
+                            <td>badge-mje-gray</td>
+                            <td>Aplica el color gris al badge.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Mensajes</a></li>
+            <li><a href="#2">📇 Muestra</a></li>
+            <li><a href="#3">📇 Paleta de Badges</a></li>
+            <li><a href="#4">📇 Resumen</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l2" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l2 ul li a")[9].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

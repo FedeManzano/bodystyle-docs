@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Formularios predefinidos por Bodystyle.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/formularios.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Formularios</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Formularios</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                En esta sección mostraremos los diferentes formularios predefinidos de Bodystyle 
+                combinando todos los elementos antes vistos.
+            </p>
+
+            <div id="info_general"></div>
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Clases Utilitarias</h2>
+                <p>
+                    Los formularios de Bodystyle se construyen combinando clases de diferentes secciones de la librería.
+                    Aquí te mostramos las principales clases utilizadas y su origen:
+                </p>
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Grid System</h4>
+                <p class="mb-2">Proporcionan la estructura responsiva de los formularios:</p>
+                <div class="lista-doc">
+                    <ul>
+                        <li><strong>row</strong> - Contenedor principal del grid</li>
+                        <li><strong>cs-XX</strong> - Ancho en desktop (cs-12, cs-6, cs-4, etc.)</li>
+                        <li><strong>cm-XX</strong> - Ancho en tablets (cm-12, cm-6, etc.)</li>
+                        <li><strong>cxs-XX</strong> - Ancho en móviles (cxs-12, cxs-8, etc.)</li>
+                    </ul>
+                </div>
+                
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Flexbox</h4>
+                <p class="mb-2">Para alinear y distribuir elementos horizontalmente:</p>
+                <div class="lista-doc">
+                    <ul>
+                        <li><strong>d-flex</strong> - Activa flexbox</li>
+                        <li><strong>just-between</strong> - Distribuye con espacio entre elementos</li>
+                        <li><strong>just-end</strong> - Alinea al final</li>
+                        <li><strong>just-start</strong> - Alinea al inicio</li>
+                        <li><strong>ali-baseline</strong> - Alinea verticalmente por la línea base</li>
+                        <li><strong>flex-wrap</strong> - Permite que los elementos se envuelvan</li>
+                        <li><strong>gap-X</strong> - Espaciado entre elementos (gap-2, gap-3, etc.)</li>
+                    </ul>
+                </div>
+                
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Espaciado</h4>
+                <p class="mb-2">Márgenes y relleno:</p>
+                <div class="lista-doc">
+                    <ul>
+                        <li><strong>mt-X</strong> - Margen superior (mt-1, mt-2, mt-3, etc.)</li>
+                        <li><strong>mb-X</strong> - Margen inferior</li>
+                        <li><strong>my-X</strong> - Margen vertical (arriba y abajo)</li>
+                        <li><strong>p-X</strong> - Relleno en todos lados (p-2, p-3, etc.)</li>
+                    </ul>
+                </div>
+                
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Colores y Fondos</h4>
+                <p class="mb-2">Estilos de color y fondo:</p>
+                <div class="lista-doc">
+                    <ul>
+                        <li><strong>c-black</strong> - Texto negro</li>
+                        <li><strong>c-white</strong> - Texto blanco</li>
+                        <li><strong>bg-gray-s</strong> - Fondo gris claro</li>
+                        <li><strong>fd-gris-n</strong> - Fondo gris oscuro (para tema oscuro)</li>
+                        <li><strong>bg-bodyui</strong> - Fondo con color primario de Bodystyle</li>
+                    </ul>
+                </div>
+                
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Bordes y Esquinas</h4>
+                <p class="mb-2">Estilos de bordes:</p>
+                <div class="lista-doc">
+                    <ul>
+                        <li><strong>bor-rad-20</strong> - Esquinas redondeadas (20px)</li>
+                        <li><strong>bor-pill</strong> - Forma de píldora (totalmente redondeado)</li>
+                    </ul>
+                </div>
+                
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Responsividad</h4>
+                <p class="mb-2">Controlan el ancho en diferentes pantallas:</p>
+                <div class="lista-doc">
+                    <ul>
+                        <li><strong>ancho-XX</strong> - Ancho en desktop (ancho-55, ancho-60, etc.)</li>
+                        <li><strong>ancho-m-XX</strong> - Ancho en tablets medianas</li>
+                        <li><strong>ancho-s-XX</strong> - Ancho en tablets pequeñas</li>
+                        <li><strong>ancho-xs-100</strong> - Ancho 100% en móviles</li>
+                    </ul>
+                </div>
+                
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Ejemplo de Composición</h4>
+                <p class="mb-2">Cómo se combinan las clases:</p>
+                <div class="codigo">
+                    <label for="cod-html" class="label">HTML <i class="bs-copy c-bodyui fz-20 btn-copy"></i></label>
+    <pre class="cod-html pt-1">
+    <div class="row">
+    <div class="cs-12 cm-6 cxs-12">
+        <div class="input-g">
+            <div class="grupo">
+                <span class="span-grupo">👤</span>
+                <input type="text" placeholder="Usuario...">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-flex just-end gap-2 mt-3">
+    <button class="btn-o btn-white-o bor-pill">Cancelar</button>
+    <button class="btn bg-bodyui">Guardar</button>
+</div>
+
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Login</h2>
+                <p>
+                    Ahora vamos a ver algunos formularios de login, para ejemplificar 
+                    el uso de los elementos modificados de HTML.
+                </p>
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Login Claro</h4>
+
+                <div class="p-3 bg-gray-s bor-rad-20 ancho-55 ancho-m-70 ancho-s-90 ancho-xs-100 ">
+                    <form action="">
+                        <h2 class="c-black">Login</h2>
+                        <div class="input-g">
+                            <div class="grupo">
+                                <span class="span-grupo">👤</span>
+                                <input type="text" name="username" id="username" placeholder="Usuario...">
+                            </div>
+                        </div>
+                        <div class="input-g mt-2">
+                            <div class="grupo">
+                                <span class="span-grupo">🔑</span>
+                                <input type="password" name="password" id="password" placeholder="Contraseña...">
+                            </div>
+                        </div>
+
+                        <div class="d-flex mt-2 just-start">
+                            <div  class="check-radio-grupo mt-1">
+                                <input  id="recordar"  type="checkbox"  class="checkbox">    
+                                <label  for="recordar"  class="cb-rojo">Recordar Credenciales</label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mt-3 just-between ali-baseline flex-wrap gap-2">
+                             <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+                            <button type="submit" class="btn bg-bodyui">Iniciar Sesión</button>
+                        </div>
+                    </form>
+                </div>
+                
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Login Oscuro</h4>
+
+                <div class="p-3 fd-gris-n bor-rad-20 ancho-55 ancho-m-70 ancho-s-90 ancho-xs-100 ">
+                    <form action="">
+                        <h2 class="c-white">Login</h2>
+                        <div class="input-g">
+                            <div class="grupo">
+                                <span class="span-grupo bg-bodyui">👤</span>
+                                <input class="fd-gris-n c-white" type="text" name="username" id="username" placeholder="Usuario...">
+                            </div>
+                        </div>
+                        <div class="input-g mt-2">
+                            <div class="grupo">
+                                <span class="span-grupo bg-bodyui">🔑</span>
+                                <input class="fd-gris-n c-white"  type="password" name="password" id="password" placeholder="Contraseña...">
+                            </div>
+                        </div>
+
+                        <div class="d-flex mt-2 just-start">
+                            <div  class="check-radio-grupo mt-1">
+                                <input  id="recordar_osc"  type="checkbox"  class="checkbox">    
+                                <label  for="recordar_osc"  class="cb-rojo">Recordar Credenciales</label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mt-3 just-between ali-baseline flex-wrap gap-2">
+                             <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+                            <button type="submit" class="btn bg-bodyui">Iniciar Sesión</button>
+                        </div>
+                    </form>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Login Claro</h4>
+
+    <div class="p-3 bg-gray-s bor-rad-20 ancho-55 ancho-m-70 ancho-s-90 ancho-xs-100 ">
+        <form action="#">
+            <h2 class="c-black">Login</h2>
+            <div class="input-g">
+                <div class="grupo">
+                    <span class="span-grupo">👤</span>
+                    <input type="text" name="username" id="username" placeholder="Usuario...">
+                </div>
+            </div>
+            <div class="input-g mt-2">
+                <div class="grupo">
+                    <span class="span-grupo">🔑</span>
+                    <input type="password" name="password" id="password" placeholder="Contraseña...">
+                </div>
+            </div>
+            <div class="d-flex mt-2 just-start">
+                <div  class="check-radio-grupo mt-1">
+                    <input  id="recordar"  type="checkbox"  class="checkbox">    
+                    <label  for="recordar"  class="cb-rojo">Recordar Credenciales</label>
+                </div>
+            </div>
+            <div class="d-flex mt-3 just-between ali-baseline flex-wrap gap-2">
+                 <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+                <button type="submit" class="btn bg-bodyui">Iniciar Sesión</button>
+            </div>
+        </form>
+    </div>
+    
+    <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Login Oscuro</h4>
+    <div class="p-3 fd-gris-n bor-rad-20 ancho-55 ancho-m-70 ancho-s-90 ancho-xs-100 ">
+        <form action="#">
+            <h2 class="c-white">Login</h2>
+            <div class="input-g">
+                <div class="grupo">
+                    <span class="span-grupo bg-bodyui">👤</span>
+                    <input class="fd-gris-n c-white" type="text" name="username" id="username" placeholder="Usuario...">
+                </div>
+            </div>
+            <div class="input-g mt-2">
+                <div class="grupo">
+                    <span class="span-grupo bg-bodyui">🔑</span>
+                    <input class="fd-gris-n c-white"  type="password" name="password" id="password" placeholder="Contraseña...">
+                </div>
+            </div>
+            <div class="d-flex mt-2 just-start">
+                <div  class="check-radio-grupo mt-1">
+                    <input  id="recordar_osc"  type="checkbox"  class="checkbox">    
+                    <label  for="recordar_osc"  class="cb-rojo">Recordar Credenciales</label>
+                </div>
+            </div>
+            <div class="d-flex mt-3 just-between ali-baseline flex-wrap gap-2">
+                 <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+                <button type="submit" class="btn bg-bodyui">Iniciar Sesión</button>
+            </div>
+        </form>
+    </div>
+</pre>
+</div>
+            <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Login Estilo Dos</h4>
+
+            <div class="bg-gray-s p-2 bor-rad-20 ancho-55 ancho-m-70 ancho-s-90 ancho-xs-100 ">
+                <h2 class="c-black">Login</h2>
+                <div class="form-group">
+                    <label for="usuario"><i class="bs-man">&nbsp;</i>Usuario</label>
+                    <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Ingresa tu usuario...">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="usuario"><i class="bs-key">&nbsp;</i>Contraseña</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Ingresa tu contraseña...">
+                </div>
+
+                <div class="d-flex mt-2 just-start">
+                    <div  class="check-radio-grupo mt-1">
+                        <input  id="recordar_dos"  type="checkbox"  class="checkbox">    
+                        <label  for="recordar_dos"  class="cb-rojo">Recordar Credenciales</label>
+                    </div>
+                </div>
+                <div class="d-flex mt-3 just-between ali-baseline flex-wrap gap-2">
+                    <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+                    <button type="submit" class="btn bg-bodyui">Iniciar Sesión</button>
+                </div>
+            </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Ejemplo de código HTML -->
+    <div class="bg-gray-s p-2 bor-rad-20 ancho-55 ancho-m-70 ancho-s-90 ancho-xs-100 ">
+        <h2 class="c-black">Login</h2>
+        <div class="form-group">
+            <label for="usuario"><i class="bs-man">&nbsp;</i>Usuario</label>
+            <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Ingresa tu usuario...">
+        </div>
+        <div class="form-group mt-3">
+            <label for="usuario"><i class="bs-key">&nbsp;</i>Contraseña</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Ingresa tu contraseña...">
+        </div>
+        <div class="d-flex mt-2 just-start">
+            <div  class="check-radio-grupo mt-1">
+                <input  id="recordar_dos"  type="checkbox"  class="checkbox">    
+                <label  for="recordar_dos"  class="cb-rojo">Recordar Credenciales</label>
+            </div>
+        </div>
+        <div class="d-flex mt-3 just-between ali-baseline flex-wrap gap-2">
+            <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+            <button type="submit" class="btn bg-bodyui">Iniciar Sesión</button>
+        </div>
+    </div>
+</pre>
+</div>
+
+            </article>
+
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Registro</h2>
+                <p>
+                    Vamos a realizar un conjunto de formularios de registro solo 
+                    utilizando las clases de Bodystyle.
+                </p>
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Registro Claro</h4>
+
+                <div class="p-3 bor-rad-20 bg-gray-s">
+                    <form action="#">
+                        <div class="row">
+                            <div class="cs-12">
+                                <h2 class="c-black">Registro</h2>
+                            </div>
+                            <div class="cs-12 cm-6 input-g">
+                                <div class="grupo">
+                                    <span class="span-grupo">🪪</span>
+                                    <input type="text" name="dni" id="dni" required placeholder="DNI...">
+                                </div>
+                            </div>
+                            <div class="cs-12 cm-6 input-g">
+                                <div class="grupo">
+                                    <span class="span-grupo">👤</span>
+                                    <input type="text" name="nombre" id="nombre" required placeholder="Nombre...">
+                                </div>
+                            </div>
+                            <div class="cs-12 cm-6 input-g">
+                                <div class="grupo">
+                                    <span class="span-grupo">👤</span>
+                                    <input type="text" name="apellido" id="apellido" required placeholder="Apellido...">
+                                </div>
+                            </div>
+                            <div class="cs-12 cm-6 input-g">
+                                <div class="grupo">
+                                    <span class="span-grupo">📧</span>
+                                    <input type="email" name="email" id="email" required placeholder="Email...">
+                                </div>
+                            </div>
+                            <div  class="select-mod-dark cxs-12 cs-4"  id="paises"> <!--ID igual a lo que pasamos por parámetro-->
+                                <select  name="pais">
+                                    <option value="">(+XX) País</option>
+                                    <option value="+54">🇦🇷 Argentina +54</option>
+                                    <option value="+43">🇦🇹 Austria +43</option>
+                                    <option value="+32">🇧🇪 Bélgica +32</option>
+                                    <option value="+55">🇧🇷 Brasil +55</option>
+                                    <option value="+1">🇨🇦 Canadá +1</option>
+                                    <option value="+56">🇨🇱 Chile +56</option>
+                                    <option value="+86">🇨🇳 China +86</option>
+                                    <option value="+57">🇨🇴 Colombia +57</option>
+                                    <option value="+45">🇩🇰 Dinamarca +45</option>
+                                    <option value="+20">🇪🇬 Egipto +20</option>
+                                    <option value="+34">🇪🇸 España +34</option>
+                                    <option value="+1">🇺🇸 Estados Unidos +1</option>
+                                    <option value="+33">🇫🇷 Francia +33</option>
+                                    <option value="+49">🇩🇪 Alemania +49</option>
+                                    <option value="+30">🇬🇷 Grecia +30</option>
+                                    <option value="+36">🇭🇺 Hungría +36</option>
+                                    <option value="+91">🇮🇳 India +91</option>
+                                    <option value="+62">🇮🇩 Indonesia +62</option>
+                                    <option value="+39">🇮🇹 Italia +39</option>
+                                    <option value="+81">🇯🇵 Japón +81</option>
+                                    <option value="+60">🇲🇾 Malasia +60</option>
+                                    <option value="+52">🇲🇽 México +52</option>
+                                    <option value="+31">🇳🇱 Países Bajos +31</option>
+                                    <option value="+48">🇵🇱 Polonia +48</option>
+                                    <option value="+351">🇵🇹 Portugal +351</option>
+                                    <option value="+44">🇬🇧 Reino Unido +44</option>
+                                    <option value="+7">🇷🇺 Rusia +7</option>
+                                    <option value="+46">🇸🇪 Suecia +46</option>
+                                    <option value="+41">🇨🇭 Suiza +41</option>
+                                    <option value="+66">🇹🇭 Tailandia +66</option>
+                                    <option value="+216">🇹🇳 Túnez +216</option>
+                                    <option value="+90">🇹🇷 Turquía +90</option>
+                                    <option value="+58">🇻🇪 Venezuela +58</option>
+                                    <option value="+84">🇻🇳 Vietnam +84</option>
+                                </select>
+                            </div>
+                            
+                            <div class="cxs-12 cs-8   input-g">
+                                <div class="grupo">
+                                    <span class="span-grupo">📱</span>
+                                    <input type="text" name="telefono" id="telefono" required placeholder="Teléfono...">
+                                </div>
+                            </div>
+
+                            <div  class="select-mod-dark cs-12"  id="localidad"> <!--ID igual a lo que pasamos por parámetro-->
+                                <select  name="Selector">
+                                    <option  value="">Seleccionar localidad...</option>
+                                    <option  value="buenos_aires"> 🏙️ Buenos Aires</option>
+                                    <option  value="cordoba">🏙️ Córdoba</option>
+                                    <option  value="rosario">🏙️ Rosario</option>
+                                    <option  value="mendoza"> 🏙️Mendoza</option>
+                                    <option  value="tucuman">🏙️ Tucumán</option>
+                                    <option  value="salta">🏙️ Salta</option>
+                                    <option  value="la_plata">🏙️ La Plata</option>
+                                    <option  value="mar_del_plata">🏙️ Mar del Plata</option>
+                                    <option  value="la_rioja">🏙️ La Rioja</option>
+                                    <option  value="jujuy">Jujuy</option>
+                                </select>
+                            </div>
+
+                            <div class="cxs-12 cs-8 input-g">
+                                <div class="grupo">
+                                    <span class="span-grupo">🧑</span>
+                                    <input type="text" name="username" id="username" required placeholder="Usuario...">
+                                </div>
+                            </div>
+
+                            <div class="cxs-12 cs-4 input-g">
+                                <button class="btn-o btn-bodyui-o bor-pill">Verificar</button>
+                            </div>
+
+                            <div class=" input-g cxs-12 cs-6 ">
+                                <div class="grupo">
+                                    <span class="span-grupo">🔑</span>
+                                    <input type="password" name="password" id="password" required placeholder="Contraseña...">
+                                </div>
+                            </div>
+                            <div class=" input-g cxs-12 cs-6 ">
+                                <div class="grupo">
+                                    <span class="span-grupo">🔑</span>
+                                    <input type="password" name="repetir" id="repetir" required placeholder="Repetir...">
+                                </div>
+                            </div>
+
+                            <div class=" input-g cxs-12 cs-6 d-flex gap-2">
+                                <div  class="check-radio-grupo mt-1">
+                                    <input  type="radio"  name="grupo2"  class="radiobtn"  id="masculino">
+                                    <label  for="masculino"  class="rd-rojo">Masculino</label>
+                                </div>
+                                <div  class="check-radio-grupo mt-1">
+                                    <input  type="radio"  name="grupo2"  class="radiobtn"  id="femenino">
+                                    <label  for="femenino"  class="rd-rojo">Femenino</label>
+                                </div>
+                            </div>
+
+                            <div class="cs-12 d-flex just-end">
+                                <div  class="check-radio-grupo">
+                                    <input  id="contrato"  type="checkbox"  class="checkbox">    
+                                    <label  for="contrato"  class="cb-negro">Acepto los terminos de la Licencia</label>
+                                </div>
+                            </div>
+
+                            <div class="cs-12 d-flex just-end mt-3">
+                                <button class="btn-lg-o btn-bodyui-o bor-pill">Enviar</button>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Registro Claro</h4>
+
+    <div class="p-3 bor-rad-20 bg-gray-s">
+        <form action="#">
+            <div class="row">
+                <div class="cs-12">
+                    <h2 class="c-black">Registro</h2>
+                </div>
+                <div class="cs-12 cm-6 input-g">
+                    <div class="grupo">
+                        <span class="span-grupo">🪪</span>
+                        <input type="text" name="dni" id="dni" required placeholder="DNI...">
+                    </div>
+                </div>
+                <div class="cs-12 cm-6 input-g">
+                    <div class="grupo">
+                        <span class="span-grupo">👤</span>
+                        <input type="text" name="nombre" id="nombre" required placeholder="Nombre...">
+                    </div>
+                </div>
+                <div class="cs-12 cm-6 input-g">
+                    <div class="grupo">
+                        <span class="span-grupo">👤</span>
+                        <input type="text" name="apellido" id="apellido" required placeholder="Apellido...">
+                    </div>
+                </div>
+                <div class="cs-12 cm-6 input-g">
+                    <div class="grupo">
+                        <span class="span-grupo">📧</span>
+                        <input type="email" name="email" id="email" required placeholder="Email...">
+                    </div>
+                </div>
+                <div  class="select-mod-dark cxs-12 cs-4"  id="paises"> <!--ID igual a lo que pasamos por parámetro-->
+                    <select  name="pais">
+                        <option value="">(+XX) País</option>
+                        <option value="+54">🇦🇷 Argentina +54</option>
+                        <option value="+43">🇦🇹 Austria +43</option>
+                        <option value="+32">🇧🇪 Bélgica +32</option>
+                        <option value="+55">🇧🇷 Brasil +55</option>
+                        <option value="+1">🇨🇦 Canadá +1</option>
+                        <option value="+56">🇨🇱 Chile +56</option>
+                        <option value="+86">🇨🇳 China +86</option>
+                        <option value="+57">🇨🇴 Colombia +57</option>
+                        <option value="+45">🇩🇰 Dinamarca +45</option>
+                        <option value="+20">🇪🇬 Egipto +20</option>
+                        <option value="+34">🇪🇸 España +34</option>
+                        <option value="+1">🇺🇸 Estados Unidos +1</option>
+                        <option value="+33">🇫🇷 Francia +33</option>
+                        <option value="+49">🇩🇪 Alemania +49</option>
+                        <option value="+30">🇬🇷 Grecia +30</option>
+                        <option value="+36">🇭🇺 Hungría +36</option>
+                        <option value="+91">🇮🇳 India +91</option>
+                        <option value="+62">🇮🇩 Indonesia +62</option>
+                        <option value="+39">🇮🇹 Italia +39</option>
+                        <option value="+81">🇯🇵 Japón +81</option>
+                        <option value="+60">🇲🇾 Malasia +60</option>
+                        <option value="+52">🇲🇽 México +52</option>
+                        <option value="+31">🇳🇱 Países Bajos +31</option>
+                        <option value="+48">🇵🇱 Polonia +48</option>
+                        <option value="+351">🇵🇹 Portugal +351</option>
+                        <option value="+44">🇬🇧 Reino Unido +44</option>
+                        <option value="+7">🇷🇺 Rusia +7</option>
+                        <option value="+46">🇸🇪 Suecia +46</option>
+                        <option value="+41">🇨🇭 Suiza +41</option>
+                        <option value="+66">🇹🇭 Tailandia +66</option>
+                        <option value="+216">🇹🇳 Túnez +216</option>
+                        <option value="+90">🇹🇷 Turquía +90</option>
+                        <option value="+58">🇻🇪 Venezuela +58</option>
+                        <option value="+84">🇻🇳 Vietnam +84</option>
+                    </select>
+                </div>
+                
+                <div class="cxs-12 cs-8   input-g">
+                    <div class="grupo">
+                        <span class="span-grupo">📱</span>
+                        <input type="text" name="telefono" id="telefono" required placeholder="Teléfono...">
+                    </div>
+                </div>
+                <div class="cxs-12 cs-8 input-g">
+                    <div class="grupo">
+                        <span class="span-grupo">🧑</span>
+                        <input type="text" name="username" id="username" required placeholder="Usuario...">
+                    </div>
+                </div>
+                <div class="cxs-12 cs-4 input-g">
+                    <button class="btn-o btn-bodyui-o bor-pill">Verificar</button>
+                </div>
+                <div class=" input-g cxs-12 cs-6 ">
+                    <div class="grupo">
+                        <span class="span-grupo">🔑</span>
+                        <input type="password" name="password" id="password" required placeholder="Contraseña...">
+                    </div>
+                </div>
+                <div class=" input-g cxs-12 cs-6 ">
+                    <div class="grupo">
+                        <span class="span-grupo">🔑</span>
+                        <input type="password" name="repetir" id="repetir" required placeholder="Repetir...">
+                    </div>
+                </div>
+                <div class=" input-g cxs-12 cs-6 d-flex gap-2">
+                    <div  class="check-radio-grupo mt-1">
+                        <input  type="radio"  name="grupo2"  class="radiobtn"  id="masculino">
+                        <label  for="masculino"  class="rd-rojo">Masculino</label>
+                    </div>
+                    <div  class="check-radio-grupo mt-1">
+                        <input  type="radio"  name="grupo2"  class="radiobtn"  id="femenino">
+                        <label  for="femenino"  class="rd-rojo">Femenino</label>
+                    </div>
+                </div>
+                <div class="cs-12 d-flex just-end">
+                    <div  class="check-radio-grupo">
+                        <input  id="contrato"  type="checkbox"  class="checkbox">    
+                        <label  for="contrato"  class="cb-negro">Acepto los terminos de la Licencia</label>
+                    </div>
+                </div>
+                <div class="cs-12 d-flex just-end mt-3">
+                    <button class="btn-lg-o btn-bodyui-o bor-pill">Enviar</button>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+</pre>
+</div>
+            <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Registro Oscuro</h4>
+            <div class="p-3 bor-rad-20 fd-gris-n">
+                <form action="#">
+                    <div class="row">
+                        <div class="cs-12">
+                            <h2 class="c-white">Registro</h2>
+                        </div>
+                        <div class="cs-12 cm-6 input-g">
+                            <div class="grupo">
+                                <span class="span-grupo bg-bodyui">🪪</span>
+                                <input class="fd-gris-n c-white" type="text" name="dni" id="dni" required placeholder="DNI...">
+                            </div>
+                        </div>
+                        <div class="cs-12 cm-6 input-g">
+                            <div class="grupo">
+                                <span class="span-grupo bg-bodyui">👤</span>
+                                <input class="fd-gris-n c-white" type="text" name="nombre" id="nombre" required placeholder="Nombre...">
+                            </div>
+                        </div>
+                        <div class="cs-12 cm-6 input-g">
+                            <div class="grupo">
+                                <span class="span-grupo bg-bodyui">👤</span>
+                                <input class="fd-gris-n c-white" type="text" name="apellido" id="apellido" required placeholder="Apellido...">
+                            </div>
+                        </div>
+                        <div class="cs-12 cm-6 input-g">
+                            <div class="grupo">
+                                <span class="span-grupo bg-bodyui">📧</span>
+                                <input class="fd-gris-n c-white" type="email" name="email" id="email" required placeholder="Email...">
+                            </div>
+                        </div>
+                        <div  class="select-mod-dark cxs-12 cs-4"  id="paises2"> <!--ID igual a lo que pasamos por parámetro-->
+                            <select  name="pais">
+                                <option value="">(+XX) País</option>
+                                <option value="+54">🇦🇷 Argentina +54</option>
+                                <option value="+43">🇦🇹 Austria +43</option>
+                                <option value="+32">🇧🇪 Bélgica +32</option>
+                                <option value="+55">🇧🇷 Brasil +55</option>
+                                <option value="+1">🇨🇦 Canadá +1</option>
+                                <option value="+56">🇨🇱 Chile +56</option>
+                                <option value="+86">🇨🇳 China +86</option>
+                                <option value="+57">🇨🇴 Colombia +57</option>
+                                <option value="+45">🇩🇰 Dinamarca +45</option>
+                                <option value="+20">🇪🇬 Egipto +20</option>
+                                <option value="+34">🇪🇸 España +34</option>
+                                <option value="+1">🇺🇸 Estados Unidos +1</option>
+                                <option value="+33">🇫🇷 Francia +33</option>
+                                <option value="+49">🇩🇪 Alemania +49</option>
+                                <option value="+30">🇬🇷 Grecia +30</option>
+                                <option value="+36">🇭🇺 Hungría +36</option>
+                                <option value="+91">🇮🇳 India +91</option>
+                                <option value="+62">🇮🇩 Indonesia +62</option>
+                                <option value="+39">🇮🇹 Italia +39</option>
+                                <option value="+81">🇯🇵 Japón +81</option>
+                                <option value="+60">🇲🇾 Malasia +60</option>
+                                <option value="+52">🇲🇽 México +52</option>
+                                <option value="+31">🇳🇱 Países Bajos +31</option>
+                                <option value="+48">🇵🇱 Polonia +48</option>
+                                <option value="+351">🇵🇹 Portugal +351</option>
+                                <option value="+44">🇬🇧 Reino Unido +44</option>
+                                <option value="+7">🇷🇺 Rusia +7</option>
+                                <option value="+46">🇸🇪 Suecia +46</option>
+                                <option value="+41">🇨🇭 Suiza +41</option>
+                                <option value="+66">🇹🇭 Tailandia +66</option>
+                                <option value="+216">🇹🇳 Túnez +216</option>
+                                <option value="+90">🇹🇷 Turquía +90</option>
+                                <option value="+58">🇻🇪 Venezuela +58</option>
+                                <option value="+84">🇻🇳 Vietnam +84</option>
+                            </select>
+                        </div>
+
+                        <div class="cxs-12 cs-8   input-g">
+                            <div class="grupo">
+                                <span class="span-grupo bg-bodyui">📱</span>
+                                <input class="fd-gris-n c-white" type="text" name="telefono" id="telefono" required placeholder="Teléfono...">
+                            </div>
+                        </div>
+                        <div class="cxs-12 cs-8 input-g">
+                            <div class="grupo">
+                                <span class="span-grupo bg-bodyui">🧑</span>
+                                <input class="fd-gris-n c-white" type="text" name="username" id="username" required placeholder="Usuario...">
+                            </div>
+                        </div>
+                        <div class="cxs-12 cs-4 input-g">
+                            <button class="btn-o btn-bodyui-o bor-pill">Verificar</button>
+                        </div>
+                        <div class=" input-g cxs-12 cs-6 ">
+                            <div class="grupo">
+                                <span class="span-grupo bg-bodyui">🔑</span>
+                                <input class="fd-gris-n c-white" type="password" name="password" id="password" required placeholder="Contraseña...">
+                            </div>
+                        </div>
+                        <div class=" input-g cxs-12 cs-6 ">
+                            <div class="grupo">
+                                <span class="span-grupo bg-bodyui">🔑</span>
+                                <input class="fd-gris-n c-white" type="password" name="repetir" id="repetir" required placeholder="Repetir...">
+                            </div>
+                        </div>
+                        <div class=" input-g cxs-12 cs-6 d-flex gap-2">
+                            <div  class="check-radio-grupo mt-1">
+                                <input  type="radio"  name="grupo3"  class="radiobtn"  id="masculino2">
+                                <label  for="masculino2"  class="rd-rojo">Masculino</label>
+                            </div>
+                            <div  class="check-radio-grupo mt-1">
+                                <input  type="radio"  name="grupo3"  class="radiobtn"  id="femenino2">
+                                <label  for="femenino2"  class="rd-rojo">Femenino</label>
+                            </div>
+                        </div>
+                        <div class="cs-12 d-flex just-end">
+                            <div  class="check-radio-grupo">
+                                <input  id="contrato2"  type="checkbox"  class="checkbox">    
+                                <label  for="contrato2"  class="cb-blanco">Acepto los terminos de la Licencia</label>
+                            </div>
+                        </div>
+                        <div class="cs-12 d-flex just-end mt-3">
+                            <button class="btn-lg-o btn-bodyui-o bor-pill">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Registro Claro</h4>
+    <div class="p-3 bor-rad-20 fd-gris-n">
+    <form action="#">
+        <div class="row">
+            <div class="cs-12">
+                <h2 class="c-white">Registro</h2>
+            </div>
+            <div class="cs-12 cm-6 input-g">
+                <div class="grupo">
+                    <span class="span-grupo bg-bodyui">🪪</span>
+                    <input class="fd-gris-n c-white" type="text" name="dni" id="dni" required placeholder="DNI...">
+                </div>
+            </div>
+            <div class="cs-12 cm-6 input-g">
+                <div class="grupo">
+                    <span class="span-grupo bg-bodyui">👤</span>
+                    <input class="fd-gris-n c-white" type="text" name="nombre" id="nombre" required placeholder="Nombre...">
+                </div>
+            </div>
+            <div class="cs-12 cm-6 input-g">
+                <div class="grupo">
+                    <span class="span-grupo bg-bodyui">👤</span>
+                    <input class="fd-gris-n c-white" type="text" name="apellido" id="apellido" required placeholder="Apellido...">
+                </div>
+            </div>
+            <div class="cs-12 cm-6 input-g">
+                <div class="grupo">
+                    <span class="span-grupo bg-bodyui">📧</span>
+                    <input class="fd-gris-n c-white" type="email" name="email" id="email" required placeholder="Email...">
+                </div>
+            </div>
+            <div  class="select-mod-dark cxs-12 cs-4"  id="paises2"> <!--ID igual a lo que pasamos por parámetro-->
+                <select  name="pais">
+                    <option value="">(+XX) País</option>
+                    <option value="+54">🇦🇷 Argentina +54</option>
+                    <option value="+43">🇦🇹 Austria +43</option>
+                    <option value="+32">🇧🇪 Bélgica +32</option>
+                    <option value="+55">🇧🇷 Brasil +55</option>
+                    <option value="+1">🇨🇦 Canadá +1</option>
+                    <option value="+56">🇨🇱 Chile +56</option>
+                    <option value="+86">🇨🇳 China +86</option>
+                    <option value="+57">🇨🇴 Colombia +57</option>
+                    <option value="+45">🇩🇰 Dinamarca +45</option>
+                    <option value="+20">🇪🇬 Egipto +20</option>
+                    <option value="+34">🇪🇸 España +34</option>
+                    <option value="+1">🇺🇸 Estados Unidos +1</option>
+                    <option value="+33">🇫🇷 Francia +33</option>
+                    <option value="+49">🇩🇪 Alemania +49</option>
+                    <option value="+30">🇬🇷 Grecia +30</option>
+                    <option value="+36">🇭🇺 Hungría +36</option>
+                    <option value="+91">🇮🇳 India +91</option>
+                    <option value="+62">🇮🇩 Indonesia +62</option>
+                    <option value="+39">🇮🇹 Italia +39</option>
+                    <option value="+81">🇯🇵 Japón +81</option>
+                    <option value="+60">🇲🇾 Malasia +60</option>
+                    <option value="+52">🇲🇽 México +52</option>
+                    <option value="+31">🇳🇱 Países Bajos +31</option>
+                    <option value="+48">🇵🇱 Polonia +48</option>
+                    <option value="+351">🇵🇹 Portugal +351</option>
+                    <option value="+44">🇬🇧 Reino Unido +44</option>
+                    <option value="+7">🇷🇺 Rusia +7</option>
+                    <option value="+46">🇸🇪 Suecia +46</option>
+                    <option value="+41">🇨🇭 Suiza +41</option>
+                    <option value="+66">🇹🇭 Tailandia +66</option>
+                    <option value="+216">🇹🇳 Túnez +216</option>
+                    <option value="+90">🇹🇷 Turquía +90</option>
+                    <option value="+58">🇻🇪 Venezuela +58</option>
+                    <option value="+84">🇻🇳 Vietnam +84</option>
+                </select>
+            </div>
+            <div class="cxs-12 cs-8   input-g">
+                <div class="grupo">
+                    <span class="span-grupo bg-bodyui">📱</span>
+                    <input class="fd-gris-n c-white" type="text" name="telefono" id="telefono" required placeholder="Teléfono...">
+                </div>
+            </div>
+            <div class="cxs-12 cs-8 input-g">
+                <div class="grupo">
+                    <span class="span-grupo bg-bodyui">🧑</span>
+                    <input class="fd-gris-n c-white" type="text" name="username" id="username" required placeholder="Usuario...">
+                </div>
+            </div>
+            <div class="cxs-12 cs-4 input-g">
+                <button class="btn-o btn-bodyui-o bor-pill">Verificar</button>
+            </div>
+            <div class=" input-g cxs-12 cs-12 cm-6 ">
+                <div class="grupo">
+                    <span class="span-grupo bg-bodyui">🔑</span>
+                    <input class="fd-gris-n c-white" type="password" name="password" id="password" required placeholder="Contraseña...">
+                </div>
+            </div>
+            <div class=" input-g cxs-12 cs-12 cm-6 ">
+                <div class="grupo">
+                    <span class="span-grupo bg-bodyui">🔑</span>
+                    <input class="fd-gris-n c-white" type="password" name="repetir" id="repetir" required placeholder="Repetir...">
+                </div>
+            </div>
+            <div class=" input-g cxs-12 cs-6 d-flex gap-2">
+                <div  class="check-radio-grupo mt-1">
+                    <input  type="radio"  name="grupo3"  class="radiobtn"  id="masculino2">
+                    <label  for="masculino2"  class="rd-rojo">Masculino</label>
+                </div>
+                <div  class="check-radio-grupo mt-1">
+                    <input  type="radio"  name="grupo3"  class="radiobtn"  id="femenino2">
+                    <label  for="femenino2"  class="rd-rojo">Femenino</label>
+                </div>
+            </div>
+            <div class="cs-12 d-flex just-end">
+                <div  class="check-radio-grupo">
+                    <input  id="contrato2"  type="checkbox"  class="checkbox">    
+                    <label  for="contrato2"  class="cb-blanco">Acepto los terminos de la Licencia</label>
+                </div>
+            </div>
+            <div class="cs-12 d-flex just-end mt-3">
+                <button class="btn-lg-o btn-bodyui-o bor-pill">Enviar</button>
+            </div>
+        </div>
+    </form>
+</div>
+</pre>
+</div>
+
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>
+                        Para más formularios de registro con otros estilos estilos diferentes 
+                        la recomendación es ver la siguiente sección: <a href="grupos_form.html" class="link">Grupos Form</a>.
+                    </p>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 id="5" class="scroll-item">Cambio Password</h2>
+                <p>
+                    Ahora veremos otro estilo de formulario muy utilizados que es el 
+                    de cambio de contraseña.
+                </p>
+
+                <h4 class="mb-3"><i class="bs-check c-green fz-20">&nbsp;</i>Cambio de Password (Claro)</h4>
+
+                <div class="p-2 bg-gray-s bor-rad-20 ancho-55 ancho-m-65 ancho-s-85 ancho-xs-100">
+                    <form action="#">
+                        <h2 class="c-black">Password</h2>
+                        <div class="input-g">
+                            <div class="grupo">
+                                <span class="span-grupo">🔑</span>
+                                <input type="password" name="password_actual" id="password_actual" required placeholder="Contraseña Actual...">
+                            </div>
+                        </div>
+                        <div class="divisor my-2"></div>
+                        <div class="input-g mt-3">
+                            <div class="grupo">
+                                <span class="span-grupo">🔑</span>
+                                <input type="password" name="nueva_password" id="nueva_password" required placeholder="Nueva Contraseña...">
+                            </div>
+                        </div>
+                        <div class="input-g mt-3">
+                            <div class="grupo">
+                                <span class="span-grupo">🔑</span>
+                                <input type="password" name="repetir_password" id="repetir_password" required placeholder="Repetir Contraseña...">
+                            </div>
+                        </div>
+                        <div class="d-flex just-end mt-2">
+                            <button class="btn-lg-o btn-bodyui-o bor-pill">Cambiar Contraseña</button>
+                        </div>
+                    </form>
+                </div>
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <h4 class="mb-3"><i class="bs-check c-green fz-20">&nbsp;</i>Cambio de Password (Claro)</h4>
+    <div class="p-2 bg-gray-s bor-rad-20 ancho-55 ancho-m-65 ancho-s-85 ancho-xs-100">
+        <form action="#">
+            <h2 class="c-black">Password</h2>
+            <div class="input-g">
+                <div class="grupo">
+                    <span class="span-grupo">🔑</span>
+                    <input type="password" name="password_actual" id="password_actual" required placeholder="Contraseña Actual...">
+                </div>
+            </div>
+            <div class="divisor my-1"></div>
+            <div class="input-g mt-1">
+                <div class="grupo">
+                    <span class="span-grupo">🔑</span>
+                    <input type="password" name="nueva_password" id="nueva_password" required placeholder="Nueva Contraseña...">
+                </div>
+            </div>
+            <div class="input-g mt-1">
+                <div class="grupo">
+                    <span class="span-grupo">🔑</span>
+                    <input type="password" name="repetir_password" id="repetir_password" required placeholder="Repetir Contraseña...">
+                </div>
+            </div>
+            <div class="d-flex just-end mt-2">
+                <button class="btn-lg-o btn-bodyui-o bor-pill">Cambiar Contraseña</button>
+            </div>
+        </form>
+    </div>
+</pre>
+</div>
+            <h4 class="mb-3"><i class="bs-check c-green fz-20">&nbsp;</i>Cambio de Password (Oscuro)</h4>
+                <div class="p-2 fd-gris-n bor-rad-20 ancho-55 ancho-m-65 ancho-s-85 ancho-xs-100">
+                    <form action="#">
+                        <h2 class="c-white">Password</h2>
+                        <div class="input-g">
+                            <div class="grupo">
+                                <span class="span-grupo bg-bodyui">🔑</span>
+                                <input class="c-white fd-gris-n" type="password" name="password_actual" id="password_actual" required placeholder="Contraseña Actual...">
+                            </div>
+                        </div>
+                        <div class="divisor my-2"></div>
+                        <div class="input-g mt-2">
+                            <div class="grupo">
+                                <span class="span-grupo bg-bodyui">🔑</span>
+                                <input class="c-white fd-gris-n" type="password" name="nueva_password" id="nueva_password" required placeholder="Nueva Contraseña...">
+                            </div>
+                        </div>
+                        <div class="input-g mt-2">
+                            <div class="grupo">
+                                <span class="span-grupo bg-bodyui">🔑</span>
+                                <input class="c-white fd-gris-n" type="password" name="repetir_password" id="repetir_password" required placeholder="Repetir Contraseña...">
+                            </div>
+                        </div>
+                        <div class="d-flex just-end mt-2">
+                            <button class="btn-lg-o btn-bodyui-o bor-pill">Cambiar Contraseña</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+   <h4 class="mb-3"><i class="bs-check c-green fz-20">&nbsp;</i>Cambio de Password (Oscuro)</h4>
+    <div class="p-2 fd-gris-n bor-rad-20 ancho-55 ancho-m-65 ancho-s-85 ancho-xs-100">
+        <form action="#">
+            <h2 class="c-white">Password</h2>
+            <div class="input-g">
+                <div class="grupo">
+                    <span class="span-grupo bg-bodyui">🔑</span>
+                    <input class="c-white fd-gris-n" type="password" name="password_actual" id="password_actual" required placeholder="Contraseña Actual...">
+                </div>
+            </div>
+            <div class="divisor my-2"></div>
+            <div class="input-g mt-2">
+                <div class="grupo">
+                    <span class="span-grupo bg-bodyui">🔑</span>
+                    <input class="c-white fd-gris-n" type="password" name="nueva_password" id="nueva_password" required placeholder="Nueva Contraseña...">
+                </div>
+            </div>
+            <div class="input-g mt-2">
+                <div class="grupo">
+                    <span class="span-grupo bg-bodyui">🔑</span>
+                    <input class="c-white fd-gris-n" type="password" name="repetir_password" id="repetir_password" required placeholder="Repetir Contraseña...">
+                </div>
+            </div>
+            <div class="d-flex just-end mt-2">
+                <button class="btn-lg-o btn-bodyui-o bor-pill">Cambiar Contraseña</button>
+            </div>
+        </form>
+    </div>
+</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h2 id="6" class="scroll-item">Contacto</h2>
+                <p>
+                    Formulario de contacto para que los usuarios puedan comunicarse. 
+                    Incluye nombre, email, asunto y mensaje. Perfecto para páginas de soporte o consultas generales.
+                </p>
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Contacto Claro</h4>
+
+                <div class="p-3 bor-rad-20 bg-gray-s ancho-60 ancho-m-75 ancho-s-90 ancho-xs-100">
+                    <form action="#">
+                        <h2 class="c-black">Contacto</h2>
+                        <div class="input-g mb-2">
+                            <div class="grupo">
+                                <span class="span-grupo">👤</span>
+                                <input type="text" name="nombre" id="nombre_contacto" required placeholder="Nombre...">
+                            </div>
+                        </div>
+                        <div class="input-g mb-2">
+                            <div class="grupo">
+                                <span class="span-grupo">📧</span>
+                                <input type="email" name="email" id="email_contacto" required placeholder="Email...">
+                            </div>
+                        </div>
+                        <div class="input-g mb-2">
+                            <div class="grupo">
+                                <span class="span-grupo">📝</span>
+                                <input type="text" name="asunto" id="asunto" required placeholder="Asunto...">
+                            </div>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="mensaje" class="c-black">💬 Mensaje</label>
+                            <textarea style="min-height: 150px;" name="mensaje" id="mensaje" class="form-control" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+                        <div class="d-flex just-end gap-2">
+                            <button type="reset" class="btn-o btn-green-o bor-pill">Limpiar</button>
+                            <button type="submit" class="btn bg-bodyui">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Contacto Oscuro</h4>
+
+                <div class="p-3 bor-rad-20 fd-gris-n ancho-60 ancho-m-75 ancho-s-90 ancho-xs-100">
+                    <form action="#">
+                        <h2 class="c-white">Contacto</h2>
+                        <div class="input-g mb-2">
+                            <div class="grupo">
+                                <span class="span-grupo bg-bodyui">👤</span>
+                                <input class="fd-gris-n c-white" type="text" name="nombre" id="nombre_contacto_osc" required placeholder="Nombre...">
+                            </div>
+                        </div>
+                        <div class="input-g mb-2">
+                            <div class="grupo">
+                                <span class="span-grupo bg-bodyui">📧</span>
+                                <input class="fd-gris-n c-white" type="email" name="email" id="email_contacto_osc" required placeholder="Email...">
+                            </div>
+                        </div>
+                        <div class="input-g mb-2">
+                            <div class="grupo">
+                                <span class="span-grupo bg-bodyui">📝</span>
+                                <input class="fd-gris-n c-white" type="text" name="asunto" id="asunto_osc" required placeholder="Asunto...">
+                            </div>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="mensaje_osc" class="c-white">💬 Mensaje</label>
+                            <textarea style="min-height: 150px;" class="fd-gris-n c-white" name="mensaje" id="mensaje_osc" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+                        <div class="d-flex just-end gap-2">
+                            <button type="reset" class="btn-o btn-green-o bor-pill">Limpiar</button>
+                            <button type="submit" class="btn bg-bodyui">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Contacto Claro</h4>
+
+    <div class="p-3 bor-rad-20 bg-gray-s ancho-60 ancho-m-75 ancho-s-90 ancho-xs-100">
+        <form action="#">
+            <h2 class="c-black">Contacto</h2>
+            <div class="input-g mb-2">
+                <div class="grupo">
+                    <span class="span-grupo">👤</span>
+                    <input type="text" name="nombre" id="nombre_contacto" required placeholder="Nombre...">
+                </div>
+            </div>
+            <div class="input-g mb-2">
+                <div class="grupo">
+                    <span class="span-grupo">📧</span>
+                    <input type="email" name="email" id="email_contacto" required placeholder="Email...">
+                </div>
+            </div>
+            <div class="input-g mb-2">
+                <div class="grupo">
+                    <span class="span-grupo">📝</span>
+                    <input type="text" name="asunto" id="asunto" required placeholder="Asunto...">
+                </div>
+            </div>
+            <div class="form-group mb-2">
+                <label for="mensaje" class="c-black">💬 Mensaje</label>
+                <textarea name="mensaje" id="mensaje" class="form-control" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+            <div class="d-flex just-end gap-2">
+                <button type="reset" class="btn-o btn-secondary-o bor-pill">Limpiar</button>
+                <button type="submit" class="btn bg-bodyui">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Contacto Oscuro</h4>
+
+    <div class="p-3 bor-rad-20 fd-gris-n ancho-60 ancho-m-75 ancho-s-90 ancho-xs-100">
+        <form action="#">
+            <h2 class="c-white">Contacto</h2>
+            <div class="input-g mb-2">
+                <div class="grupo">
+                    <span class="span-grupo bg-bodyui">👤</span>
+                    <input class="fd-gris-n c-white" type="text" name="nombre" id="nombre_contacto_osc" required placeholder="Nombre...">
+                </div>
+            </div>
+            <div class="input-g mb-2">
+                <div class="grupo">
+                    <span class="span-grupo bg-bodyui">📧</span>
+                    <input class="fd-gris-n c-white" type="email" name="email" id="email_contacto_osc" required placeholder="Email...">
+                </div>
+            </div>
+            <div class="input-g mb-2">
+                <div class="grupo">
+                    <span class="span-grupo bg-bodyui">📝</span>
+                    <input class="fd-gris-n c-white" type="text" name="asunto" id="asunto_osc" required placeholder="Asunto...">
+                </div>
+            </div>
+            <div class="form-group mb-2">
+                <label for="mensaje_osc" class="c-white">💬 Mensaje</label>
+                <textarea class="fd-gris-n c-white" name="mensaje" id="mensaje_osc" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+            <div class="d-flex just-end gap-2">
+                <button type="reset" class="btn-o btn-secondary-o bor-pill">Limpiar</button>
+                <button type="submit" class="btn bg-bodyui">Enviar</button>
+            </div>
+        </form>
+    </div>
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Formularios</a></li>
+            <li><a href="#2">📇 Clases Utilitarias</a></li>
+            <li><a href="#3">📇 Login</a></li>
+            <li><a href="#4">📇 Registro</a></li>
+            <li><a href="#5">📇 Cambio Password</a></li>
+            <li><a href="#6">📇 Contacto</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l4" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l4 ul li a")[9].classList.add("c-red");
+        BS.SelectInit().iniciar("#paises", "borde" );
+        BS.SelectInit().iniciar("#paises2", "borde" );
+        BS.SelectInit().iniciar("#localidad", "borde" );
+    </script>
+</body>
+
+</html>

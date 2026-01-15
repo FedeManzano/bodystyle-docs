@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Elementos de formulario que permiten seleccionar opciones.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/checkbox.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Checkbox</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">✅ Checkbox</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Los checkboxes o casillas de verificación son elementos de formulario que permiten a los usuarios
+                seleccionar una o más opciones de un conjunto. A diferencia de los botones de opción (radio buttons),
+                los checkboxes permiten múltiples selecciones simultáneas.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Muestra</h2>
+                <p>
+                    Vamos a ver una muestra de como utilizar los checkboxes en Bodystyle.
+                </p>
+
+                <div  class="check-radio-grupo">
+                    <input  id="ck"  type="checkbox"  class="checkbox">
+                    <label  for="ck"  class="cb-azul">Acepta los terminos de licencia</label>
+                </div>
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Se utiliza la clase .check-radio-grupo-->
+    <div  class="check-radio-grupo">
+        <!-- Al input se le agrega un ID y la clase .checkbox -->
+        <input  id="ck"  type="checkbox"  class="checkbox">
+
+        <!-- Al label se le agrega el atributo for con el mismo valor que el ID del input y la clase .cb-azul -->
+        <label  for="ck"  class="cb-azul">Acepta los terminos de licencia</label>
+    </div>
+</pre>
+</div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Colores</h2>
+                <p>
+                    Bodystyle ofrece una variedad de colores predefinidos para personalizar la apariencia de los
+                    checkboxes. Estos colores permiten adaptar los elementos a diferentes temas y estilos de diseño,
+                    mejorando la experiencia visual del usuario.
+                </p>
+
+                <div class="check-radio-grupo">
+                    <input  id="ck1"  type="checkbox"  class="checkbox">    
+                    <label  for="ck1"  class="cb-azul">Opción Azul</label>
+                </div>
+
+                <div class="check-radio-grupo mt-1">
+                    <input  id="ck2"  type="checkbox"  class="checkbox">    
+                    <label  for="ck2"  class="cb-verde">Opción Verde</label>
+                </div>
+
+                <div class="check-radio-grupo mt-1">
+                    <input  id="ck3"  type="checkbox"  class="checkbox">    
+                    <label  for="ck3"  class="cb-gris">Opción Gris</label>
+                </div>
+
+                <div class="check-radio-grupo mt-1">
+                    <input  id="ck4"  type="checkbox"  class="checkbox">    
+                    <label  for="ck4"  class="cb-rojo">Opción Rojo</label>
+                </div>
+
+                <div class="check-radio-grupo mt-1">
+                    <input  id="ck5"  type="checkbox"  class="checkbox">    
+                    <label  for="ck5"  class="cb-negro">Opción Negro</label>
+                </div>
+
+                <div class="check-radio-grupo mt-1">
+                    <input  id="ck6"  type="checkbox"  class="checkbox">    
+                    <label  for="ck6"  class="cb-blanco">Opción Blanco</label>
+                </div>
+
+                <div class="check-radio-grupo mt-1">
+                    <input  id="desactivado"  type="checkbox"  class="checkbox desactivado" aria-disabled="true">    
+                    <label  for="desactivado"  class="cb-blanco com-trigger"
+                    data-info="Este checkbox está desactivado y no puede ser seleccionado.">Opción desactivado</label>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="check-radio-grupo">
+        <input  id="ck1"  type="checkbox"  class="checkbox">    
+        <label  for="ck1"  class="cb-azul">Opción Azul</label>
+    </div>
+    <div class="check-radio-grupo mt-1">
+        <input  id="ck2"  type="checkbox"  class="checkbox">    
+        <label  for="ck2"  class="cb-verde">Opción Verde</label>
+    </div>
+    <div class="check-radio-grupo mt-1">
+        <input  id="ck3"  type="checkbox"  class="checkbox">    
+        <label  for="ck3"  class="cb-gris">Opción Gris</label>
+    </div>
+    <div class="check-radio-grupo mt-1">
+        <input  id="ck4"  type="checkbox"  class="checkbox">    
+        <label  for="ck4"  class="cb-rojo">Opción Rojo</label>
+    </div>
+    <div class="check-radio-grupo mt-1">
+        <input  id="ck5"  type="checkbox"  class="checkbox">    
+        <label  for="ck5"  class="cb-negro">Opción Negro</label>
+    </div>
+    <div class="check-radio-grupo mt-1">
+        <input  id="ck6"  type="checkbox"  class="checkbox">    
+        <label  for="ck6"  class="cb-blanco">Opción Blanco</label>
+    </div>
+
+    <div class="check-radio-grupo mt-1">
+        <input  id="desactivado"  type="checkbox"  class="checkbox desactivado" aria-disabled="true">    
+        <label  for="desactivado"  class="cb-blanco com-trigger"
+        data-info="Este checkbox está desactivado y no puede ser seleccionado.">Opción Blanco</label>
+    </div>
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Ejemplo Formulario</h2>
+                <p>
+                    Ahora veremos un ejemplo de formulario simple para comprobar 
+                    la pariencia de estos elementos en combinación con los demás 
+                    elementos vistos en apartados anteriores de esta documentación.
+                </p>
+
+                <div class="p-3 bor-rad-20 bg-gray-s mb-3">
+                    <form id="formularioRegistro" autocomplete="off">
+                        <div class="row">
+                            <div class="cs-12">
+                                <h4 class="c-black fz-25 pb-1 mb-1" style="border-bottom: 1px solid grey;" >Formulario de Registro</h4>
+                            </div>
+    
+                            <div class="input-g cs-12 cm-6">
+                                <div class="grupo">
+                                    <span class="span-grupo">🪪</span>
+                                    <input type="text" id="dni" name="dni" placeholder="Nro Documento" required>
+                                </div>
+                            </div>
+                            <div class="input-g cs-12 cm-6">
+                                <div class="grupo">
+                                    <span class="span-grupo">👤</span>
+                                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                                </div>
+                            </div>
+                            <div class="input-g cs-12 cm-6">
+                                <div class="grupo">
+                                    <span class="span-grupo">🏷️</span>
+                                    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                                </div>
+                            </div>
+                            <div class="input-g cs-12 cm-6">
+                                <div class="grupo">
+                                    <span class="span-grupo">@</span>
+                                    <input type="email" id="email" name="email" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <div  class="select-mod-dark cs-12"  id="localidad"> <!--ID igual a lo que pasamos por parámetro-->
+                                <select  name="Selector">
+                                    <option  value="">Seleccionar localidad...</option>
+                                    <option  value="buenos_aires"> 🏙️ Buenos Aires</option>
+                                    <option  value="cordoba">🏙️ Córdoba</option>
+                                    <option  value="rosario">🏙️ Rosario</option>
+                                    <option  value="mendoza"> 🏙️Mendoza</option>
+                                    <option  value="tucuman">🏙️ Tucumán</option>
+                                    <option  value="salta">🏙️ Salta</option>
+                                    <option  value="la_plata">🏙️ La Plata</option>
+                                    <option  value="mar_del_plata">🏙️ Mar del Plata</option>
+                                    <option  value="la_rioja">🏙️ La Rioja</option>
+                                    <option  value="jujuy">Jujuy</option>
+                                </select>
+                            </div>
+                            <div class="input-g cs-12 ">
+                                <div class="grupo">
+                                    <span class="span-grupo">📱+54</span>
+                                    <input type="text" id="telefono" name="telefono" placeholder="Telefono">
+                                </div>
+                            </div>
+                            <div class="input-g cs-12 cm-6">
+                                <div class="grupo">
+                                    <span class="span-grupo">🔑</span>
+                                    <input type="password" id="password" name="password" placeholder="Password" required>
+                                </div>
+                            </div>
+                            
+                            <div class="input-g cs-12 cm-6">
+                                <div class="grupo">
+                                    <span class="span-grupo">🔑</span>
+                                    <input type="password" id="repetir" name="repetir" placeholder="Repetir" required>
+                                </div>
+                            </div>
+                            <div class="cs-12">
+                                <div class="check-radio-grupo mt-1 d-flex just-start">
+                                    <input  id="contrato"  type="checkbox"  class="checkbox" required>    
+                                    <label  for="contrato"  class="cb-rojo">Acepto el contrato</label>
+                                </div>
+                            </div>
+                            <div class="cs-12 d-flex just-end mt-2">
+                                <button type="submit" id="enviar" class="btn-lg bg-green bor-pill">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="p-3 bor-rad-20 bg-gray-s mb-3">
+        <form id="formularioRegistro" autocomplete="off">
+            <div class="row">
+                <div class="cs-12">
+                    <h4 class="c-black fz-25 pb-1 mb-1" style="border-bottom: 1px solid grey;" >Formulario de Registro</h4>
+                </div>   
+                <div class="input-g cs-12 cm-6">
+                    <div class="grupo">
+                        <span class="span-grupo">🪪</span>
+                        <input type="text" id="dni" name="dni" placeholder="Nro Documento" required>
+                    </div>
+                </div>
+                <div class="input-g cs-12 cm-6">
+                    <div class="grupo">
+                        <span class="span-grupo">👤</span>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                    </div>
+                </div>
+                <div class="input-g cs-12 cm-6">
+                    <div class="grupo">
+                        <span class="span-grupo">🏷️</span>
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                    </div>
+                </div>
+                <div class="input-g cs-12 cm-6">
+                    <div class="grupo">
+                        <span class="span-grupo">@</span>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div  class="select-mod-dark cs-12"  id="localidad"> <!--ID igual a lo que pasamos por parámetro-->
+                    <select  name="Selector">
+                        <option  value="">Seleccionar localidad...</option>
+                        <option  value="buenos_aires"> 🏙️ Buenos Aires</option>
+                        <option  value="cordoba">🏙️ Córdoba</option>
+                        <option  value="rosario">🏙️ Rosario</option>
+                        <option  value="mendoza"> 🏙️Mendoza</option>
+                        <option  value="tucuman">🏙️ Tucumán</option>
+                        <option  value="salta">🏙️ Salta</option>
+                        <option  value="la_plata">🏙️ La Plata</option>
+                        <option  value="mar_del_plata">🏙️ Mar del Plata</option>
+                        <option  value="la_rioja">🏙️ La Rioja</option>
+                        <option  value="jujuy">Jujuy</option>
+                    </select>
+                </div>
+                <div class="input-g cs-12 ">
+                    <div class="grupo">
+                        <span class="span-grupo">📱+54</span>
+                        <input type="text" id="telefono" name="telefono" placeholder="Telefono">
+                    </div>
+                </div>
+                <div class="input-g cs-12 cm-6">
+                    <div class="grupo">
+                        <span class="span-grupo">🔑</span>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                </div>
+
+                <div class="input-g cs-12 cm-6">
+                    <div class="grupo">
+                        <span class="span-grupo">🔑</span>
+                        <input type="password" id="repetir" name="repetir" placeholder="Repetir" required>
+                    </div>
+                </div>
+                <div class="cs-12">
+                    <div class="check-radio-grupo mt-1 d-flex just-start">
+                        <input  id="contrato"  type="checkbox"  class="checkbox" required>    
+                        <label  for="contrato"  class="cb-rojo">Acepto el contrato</label>
+                    </div>
+                </div>
+                <div class="cs-12 d-flex just-end mt-2">
+                    <button type="submit" id="enviar" class="btn-lg bg-green bor-pill">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</pre>
+</div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+     // Validación del formulario
+    const formulario = document.getElementById('formularioRegistro');
+    const camposValidacion = ['dni', 'nombre', 'apellido', 'email', 'telefono', 'password', 'repetir'];
+    function validarEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+
+    function marcarError(inputId) {
+        const input = document.getElementById(inputId);
+        input.classList.add('i-error');
+    }
+
+    function limpiarError(inputId) {
+        const input = document.getElementById(inputId);
+        input.classList.remove('i-error');
+    }
+    
+    function validarFormulario() {
+        let valido = true;
+        // Validar campos vacíos
+        camposValidacion.forEach(id => {
+            const input = document.getElementById(id);
+            if (!input.value.trim()) {
+                marcarError(id);
+                valido = false;
+            } else {
+                limpiarError(id);
+            }
+        });
+        // Validar email
+        const email = document.getElementById('email');
+        if (email.value.trim() && !validarEmail(email.value)) {
+            marcarError('email');
+            valido = false;
+        } else {
+            limpiarError('email');
+        }
+        // Validar que las contraseñas coincidan
+        const password = document.getElementById('password');
+        const repetir = document.getElementById('repetir');
+        if (password.value !== repetir.value) {
+            marcarError('repetir');
+            valido = false;
+        } else {
+            limpiarError('repetir');
+        }
+        // Validar checkbox de contrato
+        const contrato = document.getElementById('contrato');
+        if (!contrato.checked) {
+            valido = false;
+        }
+        return valido;
+    }
+    // Event listener para el envío del formulario
+    formulario.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (validarFormulario()) {
+            // Mostrar toast de éxito
+            BS.Toast({
+                html: "✅ Formulario enviado correctamente",
+                clases: ["bg-green", "bor-rad-10", "c-white"],
+                tiempo: 3000,
+                cerrar: true
+            });
+            // Opcional: limpiar formulario
+            setTimeout(() => {
+                formulario.reset();
+                camposValidacion.forEach(id => limpiarError(id));
+            }, 500);
+        } else {
+            // Mostrar toast de error
+            BS.Toast({
+                html: "❌ Por favor, completa todos los campos correctamente",
+                clases: ["bg-red", "bor-rad-10", "c-white"],
+                tiempo: 3000,
+                cerrar: true
+            });
+        }
+    });
+    // Limpiar error al escribir
+    camposValidacion.forEach(id => {
+        const input = document.getElementById(id);
+        if (input) {
+            input.addEventListener('input', function() {
+                limpiarError(id);
+            });
+        }
+    });
+
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Checkbox</a></li>
+            <li><a href="#2">📇 Muestra</a></li>
+            <li><a href="#3">📇 Colores</a></li>
+            <li><a href="#4">📇 Ejemplo Formulario</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l4" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        BS.SelectInit().iniciar("#localidad", "borde");
+        document.querySelectorAll("#l4 ul li a")[2].classList.add("c-red");
+
+        // Validación del formulario
+        const formulario = document.getElementById('formularioRegistro');
+        const camposValidacion = ['dni', 'nombre', 'apellido', 'email', 'telefono', 'password', 'repetir'];
+
+        function validarEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+
+        function marcarError(inputId) {
+            const input = document.getElementById(inputId);
+            input.classList.add('i-error');
+        }
+
+        function limpiarError(inputId) {
+            const input = document.getElementById(inputId);
+            input.classList.remove('i-error');
+        }
+
+        function validarFormulario() {
+            let valido = true;
+
+            // Validar campos vacíos
+            camposValidacion.forEach(id => {
+                const input = document.getElementById(id);
+                if (!input.value.trim()) {
+                    marcarError(id);
+                    valido = false;
+                } else {
+                    limpiarError(id);
+                }
+            });
+
+            // Validar email
+            const email = document.getElementById('email');
+            if (email.value.trim() && !validarEmail(email.value)) {
+                marcarError('email');
+                valido = false;
+            } else {
+                limpiarError('email');
+            }
+
+            // Validar que las contraseñas coincidan
+            const password = document.getElementById('password');
+            const repetir = document.getElementById('repetir');
+            if (password.value !== repetir.value) {
+                marcarError('repetir');
+                valido = false;
+            } else {
+                limpiarError('repetir');
+            }
+
+            // Validar checkbox de contrato
+            const contrato = document.getElementById('contrato');
+            if (!contrato.checked) {
+                valido = false;
+            }
+
+            return valido;
+        }
+
+        // Event listener para el envío del formulario
+        formulario.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            if (validarFormulario()) {
+                // Mostrar toast de éxito
+                BS.Toast({
+                    html: "✅ Formulario enviado correctamente",
+                    clases: ["bg-green", "bor-rad-10", "c-white"],
+                    tiempo: 3000,
+                    cerrar: true
+                });
+
+                // Opcional: limpiar formulario
+                setTimeout(() => {
+                    formulario.reset();
+                    camposValidacion.forEach(id => limpiarError(id));
+                }, 500);
+            } else {
+                // Mostrar toast de error
+                BS.Toast({
+                    html: "❌ Por favor, completa todos los campos correctamente",
+                    clases: ["bg-red", "bor-rad-10", "c-white"],
+                    tiempo: 3000,
+                    cerrar: true
+                });
+            }
+        });
+
+        // Limpiar error al escribir
+        camposValidacion.forEach(id => {
+            const input = document.getElementById(id);
+            if (input) {
+                input.addEventListener('input', function() {
+                    limpiarError(id);
+                });
+            }
+        });
+
+    </script>
+</body>
+
+</html>

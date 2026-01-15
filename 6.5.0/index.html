@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Biblioteca CSS y JS para la rápida creación del frontend de sitios y aplicaciones web.">
+    <link rel="canonical" href="https://bodystyle.webcindario.com">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="./css/bodystyle.min.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet"
@@ -31,36 +37,30 @@
             -->
             <a class="btn-menu ocultar-solo-grandes"></a>
 
-            <a href="#" class="logo-container">
-                <img src="./images/logo_bodystyle.svg" alt="Foto de perfil">
+            <a class="logo-container">
+                <img id="logo" src="./images/logo_bodystyle.svg" 
+                class="disparador" data-info="" alt="Foto de perfil">
             </a>
             <!--Lista de opciones del nan principal -->
             <div class="ocultar-desde-medianos">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Galería</a></li>
+                    <li><a href="pages/get_started.html" class="com-trigger" data-info="Inicio de la Documentación.">Docs</a></li>
+                    <li><a target="_blank" href="https://github.com/FedeManzano/bodystyle"
+                        class="com-trigger" data-info="Repositorio Oficial de <span class='f-w-7'>Bodystyle</span>">Repositorio</a></li>
                 </ul>
             </div>
             <div class="right-content">
-                <a href=""><i class="bs-download fz-33 c-white"></i></a>
-                <a href=""><i class="bs-github-2 ml-2 fz-33 c-white"></i></a>
+                <a><i id="descarga" class="bs-download fz-33 c-white disparador" data-info="" data-pos="right" data-evt="click"></i></a>
+                <a target="_blank" href="https://github.com/FedeManzano/bodystyle"><i class="bs-github-2 ml-2 fz-33 c-white"></i></a>
             </div>
         </div>
     </nav>
 
-    <!--
-        Este es el sidebar con la clase .bs-nav-sidebar
-        y en este caso, el ID bs-nav-sidebar que es a elección
-        pero tiene que coincidir con el data-target del NAV
-    -->
     <div id="bs-nav-sidebar" class="bs-nav-sidebar gradiente-linear-carbon">
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Galería</a></li>
-            <li><a href="#">Repositorio</a></li>
+            <li><a href="./pages/get_started.html"><i class="bs-info fz-25 c-blue-s">&nbsp;</i>Docs</a></li>
+            <li><a href="https://github.com/FedeManzano/bodystyle"><i class="bs-github-2 fz-25 c-white">&nbsp;</i>Repositorio</a></li>
+            <li><a href="#"><i class="bs-zip fz-25 c-yellow">&nbsp;</i>Docs v6.5.0</a></li>
         </ul>
     </div>
 
@@ -74,11 +74,13 @@
                         del Frontend de sitios y aplicaciones web</h2>
                     <div class="d-flex just-center flex-wrap-s mt-8">
                         <a href="./pages/get_started.html" class="btn-cover-lg-o btn-bodyui-o bor-pill com-trigger"
-                            data-info="Ingresar a la documentación" data-pos="top">Get Started</a>
-                        <a href="" class="btn-cover-lg-o btn-white-o bor-pill ml-1 ml-s-0 mt-s-1">Repositorio</a>
+                            data-info="Ingresar a la documentación" data-pos="top"><i class="bs-play fz-25">&nbsp;</i>Get Started</a>
+                        <a id="descarga_docs" class="btn-cover-lg-o btn-white-o bor-pill ml-1 ml-s-0 mt-s-1 disparador"
+                         data-info="" data-pos="top" data-evt="click"><i class="bs-zip fz-25">&nbsp;</i>Docs v6.5.0</a>
                     </div>
                     <div class="ta-c mt-6">
-                        <a href="" class="link">Release v6.5.0</a>
+                        <a target="_blank" href="https://github.com/FedeManzano/bodystyle/releases/tag/v6.5.0" class="link tips-ele"
+                        data-tips="Última versión de Bodystyle" data-pos="top">Release v6.5.0</a>
                     </div>
                 </div>
             </div>
@@ -90,11 +92,8 @@
     </section>
 
 
-    <script src="./js/bodystyle.bundled.js"></script>
-    <script>
-        BS.NavigationInit("#nav");
-        BS.fadeIn(document.getElementById("main"), 1200);
-    </script>
+    <script src="./js/docs-body.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

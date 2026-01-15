@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Grid layout system in Bodystyle.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/grid.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Grid</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">🧩 Grid</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                En este apartado documentamos el <strong>sistema de grilla de Bodystyle</strong>. <br>
+                Bodystyle utiliza un sistema de grillas basado en <strong>contenedores, filas (rows) y columnas</strong> 
+                para crear diseños responsivos y flexibles que se adapten a cualquier tamaño de pantalla.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Row / Fila</h2>
+                <p>
+                    El sistema de grillas de Bodystyle está dividido en <strong>12 columnas</strong>. <br>
+                    Para crear una fila, utilizamos la clase <code>row</code>. Dentro de esta fila, 
+                    asignamos a cada elemento hijo las clases de columna apropiadas para distintos tamaños de pantalla.
+                </p>
+                
+                
+                <div class="row">
+                    <div class="p-1 bg-red c-white ta-c cl-1">1</div>
+                    <div class="p-1 bg-red c-white ta-c cl-1">2</div>
+                    <div class="p-1 bg-red c-white ta-c cl-1">3</div>
+                    <div class="p-1 bg-red c-white ta-c cl-1">4</div>
+                    <div class="p-1 bg-red c-white ta-c cl-1">5</div>
+                    <div class="p-1 bg-red c-white ta-c cl-1">6</div>
+                    <div class="p-1 bg-red c-white ta-c cl-1">7</div>
+                    <div class="p-1 bg-red c-white ta-c cl-1">8</div>
+                    <div class="p-1 bg-red c-white ta-c cl-1">9</div>
+                    <div class="p-1 bg-red c-white ta-c cl-1">10</div>
+                    <div class="p-1 bg-red c-white ta-c cl-1">11</div>
+                    <div class="p-1 bg-red c-white ta-c cl-1">12</div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="row">
+        <div class="p-1 bg-red c-white ta-c cl-1">1</div>
+        <div class="p-1 bg-red c-white ta-c cl-1">2</div>
+        <div class="p-1 bg-red c-white ta-c cl-1">3</div>
+        <div class="p-1 bg-red c-white ta-c cl-1">4</div>
+        <div class="p-1 bg-red c-white ta-c cl-1">5</div>
+        <div class="p-1 bg-red c-white ta-c cl-1">6</div>
+        <div class="p-1 bg-red c-white ta-c cl-1">7</div>
+        <div class="p-1 bg-red c-white ta-c cl-1">8</div>
+        <div class="p-1 bg-red c-white ta-c cl-1">9</div>
+        <div class="p-1 bg-red c-white ta-c cl-1">10</div>
+        <div class="p-1 bg-red c-white ta-c cl-1">11</div>
+        <div class="p-1 bg-red c-white ta-c cl-1">12</div>
+    </div>
+</pre>
+</div>
+                <div class="alert">
+                    <strong>Nota:</strong> Recuerda que la suma total de las clases de columna en una fila no debe exceder 12. <br>
+                    La idea de esta distribución es asignarle a cada elemento hijo la cantidad de columnas que ocupará en
+                    función del tamaño de pantalla en el que se visualice.
+                </div>
+
+                <h4 class="my-3"><i class="bs-check fz-20 c-green">&nbsp;</i>Ejemplo: 4 Columnas</h4>
+                <p>
+                    En este ejemplo, vemos cómo los elementos ocupan <strong>4 columnas cada uno</strong> 
+                    en todos los dispositivos. Esto permite que 3 elementos se ajusten perfectamente en una fila de 12 columnas.
+                </p>
+
+
+                <div class="row">
+                    <div class="p-1 ta-c bg-red c-white cl-4">1</div>
+                    <div class="p-1 ta-c bg-red c-white cl-4">2</div>
+                    <div class="p-1 ta-c bg-red c-white cl-4">3</div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="row">
+        <div class="p-1 ta-c bg-red c-white cl-4">1</div>
+        <div class="p-1 ta-c bg-red c-white cl-4">2</div>
+        <div class="p-1 ta-c bg-red c-white cl-4">3</div>
+    </div>
+</pre>
+</div>
+
+                <div class="alert mt-3">
+                    <strong>Nota:</strong> Cada elemento ocupa <code>4 columnas</code> (cl-4). 
+                    Al multiplicar 4 × 3 elementos = 12 columnas totales, se utiliza el ancho completo de la fila.
+                </div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Responsive</h2>
+                <p>
+                    En la mayoría de los casos, querrás que tu diseño sea responsivo, es decir, que se adapte a diferentes tamaños
+                    de pantalla. <br>
+                    Para lograr esto, puedes utilizar las clases específicas para cada tamaño de pantalla:
+                </p>
+                <div class="lista-doc">
+                    <ul>
+                        <li><code>cl-[n]</code> para pantallas grandes (large)</li>
+                        <li><code>cm-[n]</code> para pantallas medianas (medium)</li>
+                        <li><code>cs-[n]</code> para pantallas pequeñas (small)</li>
+                        <li><code>cxs-[n]</code> para pantallas extra pequeñas (extra small)</li>
+                    </ul>
+                </div>
+                
+
+                <div class="row">
+                    <div class="p-1 ta-c bg-red c-white cxs-12 cs-6 cm-6 cl-4">1</div>
+                    <div class="p-1 ta-c bg-red c-white cxs-12 cs-6 cm-6 cl-4">2</div>
+                    <div class="p-1 ta-c bg-red c-white cxs-12 cs-6 cm-6 cl-4">3</div>
+                </div>
+
+                <div class="alert mt-3">
+                    <strong>Nota:</strong> Las clases se aplican del más pequeño al más grande. En este ejemplo:
+                    <ul style="margin-top: 0.5rem;">
+                        <li><code>cxs-12</code> → Pantalla extra pequeña: 12 columnas (ancho completo)</li>
+                        <li><code>cs-6</code> → Pantalla pequeña: 6 columnas (medio ancho)</li>
+                        <li><code>cm-6</code> → Pantalla mediana: 6 columnas (medio ancho)</li>
+                        <li><code>cl-4</code> → Pantalla grande: 4 columnas (un tercio del ancho)</li>
+                    </ul>
+                    Esto asegura que el diseño se adapte adecuadamente a diferentes dispositivos.
+                </div>
+
+                <div class="table-responsive">
+                    <table class="selector vertical-border">
+                        <thead>
+                            <tr>
+                                <th>Clase</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>cl-[n]</code></td>
+                                <td>Define el número de columnas que un elemento ocupará en pantallas grandes (large). Rango: 1-12.</td>
+                            </tr>
+                            <tr>
+                                <td><code>cm-[n]</code></td>
+                                <td>Define el número de columnas que un elemento ocupará en pantallas medianas (medium). Rango: 1-12.</td>
+                            </tr>
+                            <tr>
+                                <td><code>cs-[n]</code></td>
+                                <td>Define el número de columnas que un elemento ocupará en pantallas pequeñas (small). Rango: 1-12.</td>
+                            </tr>
+                            <tr>
+                                <td><code>cxs-[n]</code></td>
+                                <td>Define el número de columnas que un elemento ocupará en pantallas extra pequeñas (extra small). Rango: 1-12.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Ejemplo Completo</h4>
+                <p>
+                    Ahora vamos a un ejemplo completo donde adaptaremos una configuración diferente para 
+                    cada tamaño de pantalla:
+                </p>
+                <div class="lista-doc">
+                    <ul>
+                        <li><strong>Pantallas grandes:</strong> cada elemento ocupará <code>3 columnas</code> (cl-3)</li>
+                        <li><strong>Pantallas medianas:</strong> cada elemento ocupará <code>4 columnas</code> (cm-4)</li>
+                        <li><strong>Pantallas pequeñas:</strong> cada elemento ocupará <code>6 columnas</code> (cs-6)</li>
+                        <li><strong>Pantallas extra pequeñas:</strong> cada elemento ocupará <code>12 columnas</code> (cxs-12)</li>
+                    </ul>
+                </div>
+                
+
+                <div class="row">
+                    <div class="p-1 ta-c bg-red c-white cxs-12 cs-6 cm-4 cl-3">1</div>
+                    <div class="p-1 ta-c bg-red c-white cxs-12 cs-6 cm-4 cl-3">2</div>
+                    <div class="p-1 ta-c bg-red c-white cxs-12 cs-6 cm-4 cl-3">3</div>
+                    <div class="p-1 ta-c bg-red c-white cxs-12 cs-6 cm-4 cl-3">4</div>
+                </div>
+
+
+                <p class="mt-3">
+                    Si redimensionas el tamaño de la ventana del navegador, podrás ver cómo los elementos se reorganizan 
+                    automáticamente según las clases de columna asignadas a cada breakpoint (tamaño de pantalla).
+                </p>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="row">
+        <div class="p-1 ta-c bg-red c-white cxs-12 cs-6 cm-4 cl-3">1</div>
+        <div class="p-1 ta-c bg-red c-white cxs-12 cs-6 cm-4 cl-3">2</div>
+        <div class="p-1 ta-c bg-red c-white cxs-12 cs-6 cm-4 cl-3">3</div>
+        <div class="p-1 ta-c bg-red c-white cxs-12 cs-6 cm-4 cl-3">4</div>
+    </div>
+</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Offset</h2>
+                <p>
+                    Es posible utilizar un desplazamiento (offset), para generar configuraciones de grilla 
+                    más complejas y controlar el espacio en blanco antes de un elemento.
+                </p>
+                <p>
+                    Para ello, utilizamos las clases de offset según el tamaño de pantalla:
+                </p>
+                <div class="lista-doc">
+                    <ul>
+                        <li><code>offset-l-[inicio]-[n]</code> para pantallas grandes (large)</li>
+                        <li><code>offset-m-[inicio]-[n]</code> para pantallas medianas (medium)</li>
+                        <li><code>offset-s-[inicio]-[n]</code> para pantallas pequeñas (small)</li>
+                        <li><code>offset-xs-[inicio]-[n]</code> para pantallas extra pequeñas (extra small)</li>
+                    </ul>
+                </div>
+                
+                <p class="mt-2">
+                    Donde <code>[inicio]</code> es la columna de inicio del desplazamiento y <code>[n]</code> es el número de columnas que ocupará el elemento.
+                </p>
+
+                <div class="table-responsive mt-3">
+                    <table class="selector vertical-border">
+                        <thead>
+                            <tr>
+                                <th>Clase</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>offset-l-[inicio]-[n]</code></td>
+                                <td>Define el desplazamiento y ancho en pantallas grandes (large). [inicio] es la columna inicial (1-12), [n] es el ancho del elemento.</td>
+                            </tr>
+                            <tr>
+                                <td><code>offset-m-[inicio]-[n]</code></td>
+                                <td>Define el desplazamiento y ancho en pantallas medianas (medium). [inicio] es la columna inicial (1-12), [n] es el ancho del elemento.</td>
+                            </tr>
+                            <tr>
+                                <td><code>offset-s-[inicio]-[n]</code></td>
+                                <td>Define el desplazamiento y ancho en pantallas pequeñas (small). [inicio] es la columna inicial (1-12), [n] es el ancho del elemento.</td>
+                            </tr>
+                            <tr>
+                                <td><code>offset-xs-[inicio]-[n]</code></td>
+                                <td>Define el desplazamiento y ancho en pantallas extra pequeñas (extra small). [inicio] es la columna inicial (1-12), [n] es el ancho del elemento.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Ejemplo de Offset</h4>
+                <p>
+                    En este ejemplo, el primer elemento ocupa 4 columnas sin desplazamiento. El segundo elemento 
+                    está desplazado según el dispositivo con offsets responsivos.
+                </p>
+
+                <div class="row">
+                    <div class="p-1 ta-c bg-red c-white cxs-12 cs-6 cm-4 cl-4">Elemento 1<br><small>Sin offset</small></div>
+                    <div class="p-1 ta-c bg-red c-white cxs-12 offset-xs-1-11 cs-6 offset-s-1-5 cm-4 offset-m-5-7 offset-l-8-4">Elemento 2<br><small>offset responsivo</small></div>
+                </div>
+
+                <h4 class="my-3 mt-4"><i class="bs-check c-green fz-20">&nbsp;</i>Ejemplo Avanzado</h4>
+                <p>
+                    Aquí mostramos cómo usar offset para crear layouts más sofisticados con elementos desplazados estratégicamente 
+                    en diferentes dispositivos.
+                </p>
+
+                <div class="row">
+                    <div class="p-1 ta-c bg-red c-white cxs-12 cs-6 cm-4 cl-4">Elemento 1</div>
+                    <div class="p-1 ta-c bg-red c-white cxs-12 offset-xs-1-11 cs-6 offset-s-1-5 cm-4 offset-m-4-8 cl-3 offset-l-4-8">Elemento 2</div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Ejemplo simple de offset responsivo -->
+    <div class="row">
+        <div class="p-1 ta-c bg-red c-white cxs-12 cs-6 cm-4 cl-4">Elemento 1</div>
+        <div class="p-1 ta-c bg-red c-white cxs-12 offset-xs-1-11 cs-6 offset-s-1-5 cm-4 offset-m-5-7 offset-l-8-4">Elemento 2</div>
+    </div>
+
+    <!-- Ejemplo avanzado de offset responsivo -->
+    <div class="row">
+        <div class="p-1 ta-c bg-red c-white cxs-12 cs-6 cm-4 cl-4">Elemento 1</div>
+        <div class="p-1 ta-c bg-red c-white cxs-12 offset-xs-1-11 cs-6 offset-s-1-5 cm-4 offset-m-4-8 cl-3 offset-l-4-8">Elemento 2</div>
+    </div>
+</pre>
+</div>
+
+                <div class="alert mt-3">
+                    <strong>Nota:</strong> El offset desplaza el elemento desde la izquierda, creando espacio en blanco. 
+                    Es importante notar que en el ejemplo, cada dispositivo tiene su propio offset configurado:
+                    <div class="lista-doc">
+                        <ul style="margin-top: 0.5rem;">
+                            <li><code>offset-xs-1-11</code> → Extra pequeño: comienza en columna 1, ocupa 11 (full width menos 1)</li>
+                            <li><code>offset-s-1-5</code> → Pequeño: comienza en columna 1, ocupa 5</li>
+                            <li><code>offset-m-5-7</code> → Mediano: comienza en columna 5, ocupa 7</li>
+                            <li><code>offset-l-8-4</code> → Grande: comienza en columna 8, ocupa 4</li>
+                        </ul>
+                    </div>
+                    
+                    Esto permite crear layouts complejos y asimétricos que se adapten perfectamente a cada dispositivo.
+                </div>
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Grid</a></li>
+            <li><a href="#2">📇 Fila / row</a></li>
+            <li><a href="#3">📇 Responsive</a></li>
+            <li><a href="#4">📇 Offset</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l3" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l3 ul li a")[1].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

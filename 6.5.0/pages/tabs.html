@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Componente que permite seleccionar contenido de manera dinámica.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/tabs.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Tabs</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">🔖 Tabs</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                El componente Tabs permite organizar y mostrar contenido en secciones separadas dentro de una misma
+                área de la página web. Cada pestaña (tab) representa una sección diferente de contenido, y los usuarios
+                pueden cambiar entre ellas haciendo clic en las pestañas correspondientes. Esto es útil para mejorar la
+                experiencia del usuario al permitirle acceder rápidamente a diferentes conjuntos de información sin
+                necesidad de cargar nuevas páginas.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Inicialización</h2>
+                <p>
+                    En este caso es un componente configurable, lo cual en un principio es un poco más 
+                    complicado su uso, a través de la función de inicialización obtendremos una instancia 
+                    del tab, la cual a través de parámetros especícos podremos configurar su comportamiento.
+                </p>
+                
+                <h4 class="my-3"><i class="bs-check fz-20 c-green">&nbsp;</i>Default</h4>
+                <div  id="tab1">
+                    <div  class="tab-borde">
+                        <div  class="op-tab-borde">
+                            <ul role="tablist" aria-label="Opciones de contenido">
+                                <label role="tab" aria-selected="true" aria-controls="inicio" data-target="#inicio" id="tab-inicio" tabindex="0">Inicio</label>
+                                <label role="tab" aria-selected="false" aria-controls="servicios" data-target="#servicios" id="tab-servicios" tabindex="-1">Servicios</label>
+                                <label role="tab" aria-selected="false" aria-controls="galeria" data-target="#galeria" id="tab-galeria" tabindex="-1">Galeria</label>
+                                <label role="tab" aria-selected="false" aria-controls="porfolio" data-target="#porfolio" id="tab-porfolio" tabindex="-1">Porfolio</label>
+                            </ul>
+                        </div>
+                        <div  id="inicio" role="tabpanel" aria-labelledby="tab-inicio" class="contenido-tab p-1 d-flex just-center ali-center c-negro">
+                            <p style="color: black !important;">Hola soy el inicio del tab!!</p>
+                        </div>
+                        <div  id="servicios" role="tabpanel" aria-labelledby="tab-servicios" class="contenido-tab p-1 d-flex just-center ali-center">
+                            <p style="color: black !important;">Hola soy los servicios del tab!!</p>
+                        </div>
+                        <div  id="galeria" role="tabpanel" aria-labelledby="tab-galeria" class="contenido-tab p-1 d-flex just-center ali-center">
+                            <p style="color: black !important;">Hola soy la galeria del tab!!</p>
+                        </div>
+                        <div  id="porfolio" role="tabpanel" aria-labelledby="tab-porfolio" class="contenido-tab p-1 d-flex just-center ali-center">
+                            <p style="color: black !important;">Hola soy el porfolio del tab!!</p>
+                        </div>
+                    </div>
+                </div>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Nótese que el tab está envuelto por un div que posee un ID (IMPORTANTE) que será 
+     el contexto detectado por la lógica de JS para hacer funcionar al componente. -->
+    <div  id="tab1">
+
+        <!-- Envuelve el contenido del tab .tab-borde-->
+        <div  class="tab-borde">
+
+            <!-- Contenedor de las opciones del tab .op-tab-borde -->
+            <div  class="op-tab-borde">
+                <ul>
+                    <!-- Cada etqueta cuenta con el atributo data-target que apunta al ID del contenido correspondiente -->
+                    <label  data-target="#inicio">Inicio</label>
+                    <label  data-target="#servicios">Servicios</label>
+                    <label  data-target="#galeria">Galeria</label>
+                    <label  data-target="#porfolio">Porfolio</label>
+                </ul>
+            </div>
+
+            <!-- Contenedores de contenido del tab .contenido-tab -->
+            <!-- IMPORTANTE: Nótese que el contenido dispone de un ID que es apuntado 
+             por el atributo data-target de las opciones del tab -->
+            <div  id="inicio"  class="contenido-tab p-1 d-flex just-center ali-center c-negro">
+                <p style="color: black !important;">Hola soy el inicio del tab!!</p>
+            </div>
+
+            <!-- Cada contenedor de contenido debe tener un ID único -->
+            <div  id="servicios"  class="contenido-tab">
+                <p>Hola soy los servicios del tab!!</p>
+            </div>
+
+            <!-- Cada contenedor de contenido debe tener un ID único -->
+            <div  id="galeria"  class="contenido-tab">
+                <p>Hola soy la galeria del tab!!</p>
+            </div>
+
+            <!-- Cada contenedor de contenido debe tener un ID único -->
+            <div  id="porfolio"  class="contenido-tab">
+                <p>Hola soy el porfolio del tab!!</p>
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+    
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+
+    // Inicializar el tab con borde
+    // BS.TabInit() devuelve una instancia del tab para poder configurarlo
+    // Luego, se llama al método iniciarBorde() para inicializar el tab con borde
+    BS.TabInit().iniciarBorde({
+        contexto: "#tab1",  // Parámetro OBLIGATORIO: Contexto del tab
+    });
+</pre>
+</div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Parámetros</h2>
+                <p>
+                    Como se mencionó anteriormente este componente es conpletamente configurable, para esto 
+                    es necesario pasarle parámetros a la función de inicialización. A continuación se detallan.
+                </p>
+                <div class="table-responsive mb-3">
+                    <table class="selector vertical-border">
+                        <thead>
+                            <tr>
+                                <th>Parámetro</th>
+                                <th>Tipo</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>contexto</code></td>
+                                <td><code>string</code></td>
+                                <td>Selector CSS que apunta al contenedor principal del tab. Este parámetro es obligatorio para que el componente funcione correctamente.</td>
+                            </tr>
+                            <tr>
+                                <td>colorFuente</td>
+                                <td>Clase con el color de la fuente</td>
+                                <td>Clase CSS que define el color de la fuente para el tab.</td>    
+                            </tr>
+                            <tr>
+                                <td>colorFondo</td>
+                                <td>Clase con el color de fondo</td>
+                                <td>Clase CSS que define el color de fondo para el tab.</td>    
+                            </tr>
+                            <tr>
+                                <td>colorBorde</td>
+                                <td>Clase con el color del borde selector</td>
+                                <td>Clase CSS que define el color del borde para el tab.</td>    
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                 <div  id="tab2">
+                    <div  class="tab-borde bg-black">
+                        <div  class="op-tab-borde">
+                            <ul role="tablist" aria-label="Opciones de contenido">
+                                <label role="tab" aria-selected="true" aria-controls="inicio1" data-target="#inicio1" id="tab-inicio1" tabindex="0">Inicio</label>
+                                <label role="tab" aria-selected="false" aria-controls="servicios1" data-target="#servicios1" id="tab-servicios1" tabindex="-1">Servicios</label>
+                                <label role="tab" aria-selected="false" aria-controls="galeria1" data-target="#galeria1" id="tab-galeria1" tabindex="-1">Galeria</label>
+                                <label role="tab" aria-selected="false" aria-controls="porfolio1" data-target="#porfolio1" id="tab-porfolio1" tabindex="-1">Porfolio</label>
+                            </ul>
+                        </div>
+                        <div  id="inicio1" role="tabpanel" aria-labelledby="tab-inicio1" class="contenido-tab bg-black c-white">
+                            <p>Hola soy el inicio del tab!!</p>
+                        </div>
+                        <div  id="servicios1" role="tabpanel" aria-labelledby="tab-servicios1" class="contenido-tab bg-black c-white">
+                            <p>Hola soy los servicios del tab!!</p>
+                        </div>
+                        <div  id="galeria1" role="tabpanel" aria-labelledby="tab-galeria1" class="contenido-tab bg-black c-white">
+                            <p>Hola soy la galeria del tab!!</p>
+                        </div>
+                        <div  id="porfolio1" role="tabpanel" aria-labelledby="tab-porfolio1" class="contenido-tab bg-black c-white">
+                            <p>Hola soy el porfolio del tab!!</p>
+                        </div>
+                    </div>
+                </div>
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div  id="tab2">
+        <div  class="tab-borde">
+            <div  class="op-tab-borde">
+                <ul>
+                    <label  data-target="#inicio1">Inicio</label>
+                    <label  data-target="#servicios1">Servicios</label>
+                    <label  data-target="#galeria1">Galeria</label>
+                    <label  data-target="#porfolio1">Porfolio</label>
+                </ul>
+            </div>
+            <div  id="inicio1"  class="contenido-tab bg-black c-white">
+                <p>Hola soy el inicio del tab!!</p>
+            </div>
+            <div  id="servicios1"  class="contenido-tab bg-black c-white">
+                <p>Hola soy los servicios del tab!!</p>
+            </div>
+            <div  id="galeria1"  class="contenido-tab bg-black c-white">
+                <p>Hola soy la galeria del tab!!</p>
+            </div>
+            <div  id="porfolio1"  class="contenido-tab bg-black c-white">
+                <p>Hola soy el porfolio del tab!!</p>
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    // Inicializar el tab con borde y parámetros personalizados
+    BS.TabInit() // Instancia de la clase Tabs
+            .iniciarBorde({
+                contexto: "#tab2",
+                colorFuente: "c-white", 
+                colorFondo: "bg-black", 
+                colorBorde: "fd-blanco"
+        })
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Ejemplo Práctico</h2>
+                <p>
+                    Es muy típico ver en las páginas web un formulario login / registro, para esta tarea 
+                    instanciaremos un tab que permita realizar esta función.
+                </p>
+
+
+                <div  id="log-reg">
+                    <div  class="tab-borde">
+                        <div  class="op-tab-borde">
+                            <ul role="tablist" aria-label="Seleccionar formulario">
+                                <label role="tab" aria-selected="true" aria-controls="login" data-target="#login" id="tab-login" tabindex="0">Login</label>
+                                <label role="tab" aria-selected="false" aria-controls="registro" data-target="#registro" id="tab-registro" tabindex="-1">Registro</label>
+                            </ul>
+                        </div>
+                        <div  id="login" role="tabpanel" aria-labelledby="tab-login" class="contenido-tab bg-black c-white">
+                            <div class="p-3 px-s-0 d-flex just-center ali-center">
+                                <div  class="p-3 bg-gray-s bor-rad-20 ancho-55 ancho-m-70 ancho-s-90 ancho-xs-100 ">
+                                    <form  action="#">
+                                        <h2  class="c-black">Login</h2>
+                                        <div  class="input-g">
+                                            <div  class="grupo">
+                                                <span  class="span-grupo">👤</span>
+                                                <input  type="text"  name="username"  id="username"  placeholder="Usuario...">
+                                            </div>
+                                        </div>
+                                        <div  class="input-g mt-2">
+                                            <div  class="grupo">
+                                                <span  class="span-grupo">🔑</span>
+                                                <input  type="password"  name="password"  id="password"  placeholder="Contraseña...">
+                                            </div>
+                                        </div>
+                                        <div  class="d-flex mt-2 just-start">
+                                            <div  class="check-radio-grupo mt-1">
+                                                <input  id="recordar"  type="checkbox"  class="checkbox">    
+                                                <label  for="recordar"  class="cb-rojo">Recordar Credenciales</label>
+                                            </div>
+                                        </div>
+                                        <div  class="d-flex mt-3 just-between ali-baseline flex-wrap gap-2">
+                                             <a  href="#"  class="link">¿Olvidaste tu contraseña?</a>
+                                            <button  type="submit"  class="btn bg-bodyui">Iniciar Sesión</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div  id="registro"  class="contenido-tab bg-black c-white p-3 px-s-0">
+                            <div  class="p-3 bor-rad-20 bg-gray-s">
+                                <form  action="#">
+                                    <div  class="row">
+                                        <div  class="cs-12">
+                                            <h2  class="c-black">Registro</h2>
+                                        </div>
+                                        <div  class="cs-12 cm-6 input-g">
+                                            <div  class="grupo">
+                                                <span  class="span-grupo">🪪</span>
+                                                <input  type="text"  name="dni"  id="dni"  required=""  placeholder="DNI...">
+                                            </div>
+                                        </div>
+                                        <div  class="cs-12 cm-6 input-g">
+                                            <div  class="grupo">
+                                                <span  class="span-grupo">👤</span>
+                                                <input  type="text"  name="nombre"  id="nombre"  required=""  placeholder="Nombre...">
+                                            </div>
+                                        </div>
+                                        <div  class="cs-12 cm-6 input-g">
+                                            <div  class="grupo">
+                                                <span  class="span-grupo">👤</span>
+                                                <input  type="text"  name="apellido"  id="apellido"  required=""  placeholder="Apellido...">
+                                            </div>
+                                        </div>
+                                        <div  class="cs-12 cm-6 input-g">
+                                            <div  class="grupo">
+                                                <span  class="span-grupo">📧</span>
+                                                <input  type="email"  name="email"  id="email"  required=""  placeholder="Email...">
+                                            </div>
+                                        </div>
+                                        <div  class="select-mod-dark cxs-12 cs-4"  id="paises"> <!--ID igual a lo que pasamos por parámetro-->
+                                            <select  name="pais">
+                                                <option  value="">(+XX) País</option>
+                                                <option  value="+54">🇦🇷 Argentina +54</option>
+                                                <option  value="+43">🇦🇹 Austria +43</option>
+                                                <option  value="+32">🇧🇪 Bélgica +32</option>
+                                                <option  value="+55">🇧🇷 Brasil +55</option>
+                                                <option  value="+1">🇨🇦 Canadá +1</option>
+                                                <option  value="+56">🇨🇱 Chile +56</option>
+                                                <option  value="+86">🇨🇳 China +86</option>
+                                                <option  value="+57">🇨🇴 Colombia +57</option>
+                                                <option  value="+45">🇩🇰 Dinamarca +45</option>
+                                                <option  value="+20">🇪🇬 Egipto +20</option>
+                                                <option  value="+34">🇪🇸 España +34</option>
+                                                <option  value="+1">🇺🇸 Estados Unidos +1</option>
+                                                <option  value="+33">🇫🇷 Francia +33</option>
+                                                <option  value="+49">🇩🇪 Alemania +49</option>
+                                                <option  value="+30">🇬🇷 Grecia +30</option>
+                                                <option  value="+36">🇭🇺 Hungría +36</option>
+                                                <option  value="+91">🇮🇳 India +91</option>
+                                                <option  value="+62">🇮🇩 Indonesia +62</option>
+                                                <option  value="+39">🇮🇹 Italia +39</option>
+                                                <option  value="+81">🇯🇵 Japón +81</option>
+                                                <option  value="+60">🇲🇾 Malasia +60</option>
+                                                <option  value="+52">🇲🇽 México +52</option>
+                                                <option  value="+31">🇳🇱 Países Bajos +31</option>
+                                                <option  value="+48">🇵🇱 Polonia +48</option>
+                                                <option  value="+351">🇵🇹 Portugal +351</option>
+                                                <option  value="+44">🇬🇧 Reino Unido +44</option>
+                                                <option  value="+7">🇷🇺 Rusia +7</option>
+                                                <option  value="+46">🇸🇪 Suecia +46</option>
+                                                <option  value="+41">🇨🇭 Suiza +41</option>
+                                                <option  value="+66">🇹🇭 Tailandia +66</option>
+                                                <option  value="+216">🇹🇳 Túnez +216</option>
+                                                <option  value="+90">🇹🇷 Turquía +90</option>
+                                                <option  value="+58">🇻🇪 Venezuela +58</option>
+                                                <option  value="+84">🇻🇳 Vietnam +84</option>
+                                            </select>
+                                        </div>
+                                        <div  class="cxs-12 cs-8   input-g">
+                                            <div  class="grupo">
+                                                <span  class="span-grupo">📱</span>
+                                                <input  type="text"  name="telefono"  id="telefono"  required=""  placeholder="Teléfono...">
+                                            </div>
+                                        </div>
+                                        <div  class="cxs-12 cs-8 input-g">
+                                            <div  class="grupo">
+                                                <span  class="span-grupo">🧑</span>
+                                                <input  type="text"  name="username"  id="username"  required=""  placeholder="Usuario...">
+                                            </div>
+                                        </div>
+                                        <div  class="cxs-12 cs-4 input-g">
+                                            <button  class="btn-o btn-bodyui-o bor-pill">Verificar</button>
+                                        </div>
+                                        <div  class=" input-g cxs-12 cs-6 ">
+                                            <div  class="grupo">
+                                                <span  class="span-grupo">🔑</span>
+                                                <input  type="password"  name="password"  id="password"  required=""  placeholder="Contraseña...">
+                                            </div>
+                                        </div>
+                                        <div  class=" input-g cxs-12 cs-6 ">
+                                            <div  class="grupo">
+                                                <span  class="span-grupo">🔑</span>
+                                                <input  type="password"  name="repetir"  id="repetir"  required=""  placeholder="Repetir...">
+                                            </div>
+                                        </div>
+                                        <div  class=" input-g cxs-12 cs-6 d-flex gap-2">
+                                            <div  class="check-radio-grupo mt-1">
+                                                <input  type="radio"  name="grupo2"  class="radiobtn"  id="masculino">
+                                                <label  for="masculino"  class="rd-rojo">Masculino</label>
+                                            </div>
+                                            <div  class="check-radio-grupo mt-1">
+                                                <input  type="radio"  name="grupo2"  class="radiobtn"  id="femenino">
+                                                <label  for="femenino"  class="rd-rojo">Femenino</label>
+                                            </div>
+                                        </div>
+                                        <div  class="cs-12 d-flex just-end">
+                                            <div  class="check-radio-grupo">
+                                                <input  id="contrato"  type="checkbox"  class="checkbox">    
+                                                <label  for="contrato"  class="cb-negro">Acepto los terminos de la Licencia</label>
+                                            </div>
+                                        </div>
+                                        <div  class="cs-12 d-flex just-end mt-3">
+                                            <button  class="btn-lg-o btn-bodyui-o bor-pill">Enviar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html"
+    class="label">
+        HTML
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div  id="log-reg">
+        <div  class="tab-borde">
+            <div  class="op-tab-borde">
+                <ul>
+                    <label  data-target="#login">Login</label>
+                    <label  data-target="#registro">Registro</label>
+                </ul>
+            </div>
+            <div  id="login"  class="contenido-tab bg-black c-white">
+                <div class="p-3 px-s-0 d-flex just-center ali-center">
+                    <div  class="p-3 bg-gray-s bor-rad-20 ancho-55 ancho-m-70 ancho-s-90 ancho-xs-100 ">
+                        <form  action="#">
+                            <h2  class="c-black">Login</h2>
+                            <div  class="input-g">
+                                <div  class="grupo">
+                                    <span  class="span-grupo">👤</span>
+                                    <input  type="text"  name="username"  id="username"  placeholder="Usuario...">
+                                </div>
+                            </div>
+                            <div  class="input-g mt-2">
+                                <div  class="grupo">
+                                    <span  class="span-grupo">🔑</span>
+                                    <input  type="password"  name="password"  id="password"  placeholder="Contraseña...">
+                                </div>
+                            </div>
+                            <div  class="d-flex mt-2 just-start">
+                                <div  class="check-radio-grupo mt-1">
+                                    <input  id="recordar"  type="checkbox"  class="checkbox">    
+                                    <label  for="recordar"  class="cb-rojo">Recordar Credenciales</label>
+                                </div>
+                            </div>
+                            <div  class="d-flex mt-3 just-between ali-baseline flex-wrap gap-2">
+                                 <a  href="#"  class="link">¿Olvidaste tu contraseña?</a>
+                                <button  type="submit"  class="btn bg-bodyui">Iniciar Sesión</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div  id="registro"  class="contenido-tab bg-black c-white p-3 px-s-0">
+                <div  class="p-3 bor-rad-20 bg-gray-s">
+                    <form  action="#">
+                        <div  class="row">
+                            <div  class="cs-12">
+                                <h2  class="c-black">Registro</h2>
+                            </div>
+                            <div  class="cs-12 cm-6 input-g">
+                                <div  class="grupo">
+                                    <span  class="span-grupo">🪪</span>
+                                    <input  type="text"  name="dni"  id="dni"  required=""  placeholder="DNI...">
+                                </div>
+                            </div>
+                            <div  class="cs-12 cm-6 input-g">
+                                <div  class="grupo">
+                                    <span  class="span-grupo">👤</span>
+                                    <input  type="text"  name="nombre"  id="nombre"  required=""  placeholder="Nombre...">
+                                </div>
+                            </div>
+                            <div  class="cs-12 cm-6 input-g">
+                                <div  class="grupo">
+                                    <span  class="span-grupo">👤</span>
+                                    <input  type="text"  name="apellido"  id="apellido"  required=""  placeholder="Apellido...">
+                                </div>
+                            </div>
+                            <div  class="cs-12 cm-6 input-g">
+                                <div  class="grupo">
+                                    <span  class="span-grupo">📧</span>
+                                    <input  type="email"  name="email"  id="email"  required=""  placeholder="Email...">
+                                </div>
+                            </div>
+                            <div  class="select-mod-dark cxs-12 cs-4"  id="paises"> <!--ID igual a lo que pasamos por parámetro-->
+                                <select  name="pais">
+                                    <option  value="">(+XX) País</option>
+                                    <option  value="+54">🇦🇷 Argentina +54</option>
+                                    <option  value="+43">🇦🇹 Austria +43</option>
+                                    <option  value="+32">🇧🇪 Bélgica +32</option>
+                                    <option  value="+55">🇧🇷 Brasil +55</option>
+                                    <option  value="+1">🇨🇦 Canadá +1</option>
+                                    <option  value="+56">🇨🇱 Chile +56</option>
+                                    <option  value="+86">🇨🇳 China +86</option>
+                                    <option  value="+57">🇨🇴 Colombia +57</option>
+                                    <option  value="+45">🇩🇰 Dinamarca +45</option>
+                                    <option  value="+20">🇪🇬 Egipto +20</option>
+                                    <option  value="+34">🇪🇸 España +34</option>
+                                    <option  value="+1">🇺🇸 Estados Unidos +1</option>
+                                    <option  value="+33">🇫🇷 Francia +33</option>
+                                    <option  value="+49">🇩🇪 Alemania +49</option>
+                                    <option  value="+30">🇬🇷 Grecia +30</option>
+                                    <option  value="+36">🇭🇺 Hungría +36</option>
+                                    <option  value="+91">🇮🇳 India +91</option>
+                                    <option  value="+62">🇮🇩 Indonesia +62</option>
+                                    <option  value="+39">🇮🇹 Italia +39</option>
+                                    <option  value="+81">🇯🇵 Japón +81</option>
+                                    <option  value="+60">🇲🇾 Malasia +60</option>
+                                    <option  value="+52">🇲🇽 México +52</option>
+                                    <option  value="+31">🇳🇱 Países Bajos +31</option>
+                                    <option  value="+48">🇵🇱 Polonia +48</option>
+                                    <option  value="+351">🇵🇹 Portugal +351</option>
+                                    <option  value="+44">🇬🇧 Reino Unido +44</option>
+                                    <option  value="+7">🇷🇺 Rusia +7</option>
+                                    <option  value="+46">🇸🇪 Suecia +46</option>
+                                    <option  value="+41">🇨🇭 Suiza +41</option>
+                                    <option  value="+66">🇹🇭 Tailandia +66</option>
+                                    <option  value="+216">🇹🇳 Túnez +216</option>
+                                    <option  value="+90">🇹🇷 Turquía +90</option>
+                                    <option  value="+58">🇻🇪 Venezuela +58</option>
+                                    <option  value="+84">🇻🇳 Vietnam +84</option>
+                                </select>
+                            </div>
+                            <div  class="cxs-12 cs-8   input-g">
+                                <div  class="grupo">
+                                    <span  class="span-grupo">📱</span>
+                                    <input  type="text"  name="telefono"  id="telefono"  required=""  placeholder="Teléfono...">
+                                </div>
+                            </div>
+                            <div  class="cxs-12 cs-8 input-g">
+                                <div  class="grupo">
+                                    <span  class="span-grupo">🧑</span>
+                                    <input  type="text"  name="username"  id="username"  required=""  placeholder="Usuario...">
+                                </div>
+                            </div>
+                            <div  class="cxs-12 cs-4 input-g">
+                                <button  class="btn-o btn-bodyui-o bor-pill">Verificar</button>
+                            </div>
+                            <div  class=" input-g cxs-12 cs-6 ">
+                                <div  class="grupo">
+                                    <span  class="span-grupo">🔑</span>
+                                    <input  type="password"  name="password"  id="password"  required=""  placeholder="Contraseña...">
+                                </div>
+                            </div>
+                            <div  class=" input-g cxs-12 cs-6 ">
+                                <div  class="grupo">
+                                    <span  class="span-grupo">🔑</span>
+                                    <input  type="password"  name="repetir"  id="repetir"  required=""  placeholder="Repetir...">
+                                </div>
+                            </div>
+                            <div  class=" input-g cxs-12 cs-6 d-flex gap-2">
+                                <div  class="check-radio-grupo mt-1">
+                                    <input  type="radio"  name="grupo2"  class="radiobtn"  id="masculino">
+                                    <label  for="masculino"  class="rd-rojo">Masculino</label>
+                                </div>
+                                <div  class="check-radio-grupo mt-1">
+                                    <input  type="radio"  name="grupo2"  class="radiobtn"  id="femenino">
+                                    <label  for="femenino"  class="rd-rojo">Femenino</label>
+                                </div>
+                            </div>
+                            <div  class="cs-12 d-flex just-end">
+                                <div  class="check-radio-grupo">
+                                    <input  id="contrato"  type="checkbox"  class="checkbox">    
+                                    <label  for="contrato"  class="cb-negro">Acepto los terminos de la Licencia</label>
+                                </div>
+                            </div>
+                            <div  class="cs-12 d-flex just-end mt-3">
+                                <button  class="btn-lg-o btn-bodyui-o bor-pill">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    // Inicializar el tab del formulario login / registro
+    BS.TabInit() // Instancia de la clase Tabs
+            .iniciarBorde({
+                contexto: "#log-reg",
+                colorFuente: "c-white", 
+                colorFondo: "bg-bodyui", 
+                colorBorde: "fd-blanco"
+        })
+        // Inicializar el select de países dentro del formulario
+        // Ver documentación de Select para más detalles
+        BS.SelectInit().iniciar("#paises", "borde" );
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="5" class="scroll-item">Destroy</h2>
+                <p>
+                    Es posible destruir los tabs desvinculado la lógica de JS del componente específico 
+                    para esta tarea se tomará una instancia del tab y llamaremos al método destroy 
+                    pasándole el contexto del tab a destruir.
+                </p>
+
+                <button class="btn fd-bodyui com-trigger" 
+                data-info="Cuando presionen este botón todos los Tabs dejarán de funcionar."
+                onclick="Destroy()">Destruir</button>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    const Destroy = () => {
+        // Tomar una instancia del tab
+        const tabInstances = BS.TabInit();
+
+        // Luego a través de ella llamar al método destroy pasándole el contexto del tab a destruir
+        tabInstances.destroy("#tab1");
+        tabInstances.destroy("#tab2");
+        tabInstances.destroy("#log-reg");
+        BS.Toast({
+            html: "✅ Todos los Tabs han sido destruidos.",
+        })
+    }
+</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h2 id="6" class="scroll-item">Desactivado</h2>
+                <p>
+                    Es posible anular momentaneamente la funcionalidad de los tabs si se desea, para ello solo 
+                    le añadimos la clase <span class="badge badge-red">.desactivado</span> y listo!, el tab 
+                    no funcionará y se mostrará comop desactivado, cuando esta clase sea removida el tab
+                    volverá a funcionar normalmente.
+                </p>
+
+                    <div  id="des" class="desactivado mb-3">
+                        <div  class="tab-borde">
+                            <div  class="op-tab-borde">
+                                <ul>
+                                    <label  data-target="#iniciodes">Inicio</label>
+                                    <label  data-target="#serviciosdes">Servicios</label>
+                                    <label  data-target="#galeriades">Galeria</label>
+                                    <label  data-target="#porfoliodes">Porfolio</label>
+                                </ul>
+                            </div>
+                            <div  id="iniciodes"  class="contenido-tab bg-black c-white">
+                                <p>Hola soy el inicio del tab!!</p>
+                            </div>
+                            <div  id="serviciosdes"  class="contenido-tab bg-black c-white">
+                                <p>Hola soy los servicios del tab!!</p>
+                            </div>
+                            <div  id="galeriades"  class="contenido-tab bg-black c-white">
+                                <p>Hola soy la galeria del tab!!</p>
+                            </div>
+                            <div  id="porfoliodes"  class="contenido-tab bg-black c-white">
+                                <p>Hola soy el porfolio del tab!!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="ActivarTab('des')" class="btn fd-bodyui">Activar Tab</button>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div  id="des" class="desactivado mb-3">
+        <div  class="tab-borde">
+            <div  class="op-tab-borde">
+                <ul>
+                    <label  data-target="#iniciodes">Inicio</label>
+                    <label  data-target="#serviciosdes">Servicios</label>
+                    <label  data-target="#galeriades">Galeria</label>
+                    <label  data-target="#porfoliodes">Porfolio</label>
+                </ul>
+            </div>
+            <div  id="iniciodes"  class="contenido-tab bg-black c-white">
+                <p>Hola soy el inicio del tab!!</p>
+            </div>
+            <div  id="serviciosdes"  class="contenido-tab bg-black c-white">
+                <p>Hola soy los servicios del tab!!</p>
+            </div>
+            <div  id="galeriades"  class="contenido-tab bg-black c-white">
+                <p>Hola soy la galeria del tab!!</p>
+            </div>
+            <div  id="porfoliodes"  class="contenido-tab bg-black c-white">
+                <p>Hola soy el porfolio del tab!!</p>
+            </div>
+        </div>
+    </div>
+    <button onclick="ActivarTab('des')" class="btn fd-bodyui">Activar Tab</button>
+</pre>
+</div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    const ActivarTab = (contexto) => {
+        if(typeof contexto === "string"){
+            let elemento = document.getElementById(contexto);
+            elemento.classList.remove("desactivado");
+            elemento.querySelectorAll("*").forEach((el) => {
+                el.classList.remove("desactivado");
+            });
+        }
+    }
+</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Tabs</a></li>
+            <li><a href="#2">📇 Inicialización</a></li>
+            <li><a href="#3">📇 Parámetros</a></li>
+            <li><a href="#4">📇 Ejemplo Práctico</a></li>
+            <li><a href="#5">📇 Destroy</a></li>
+            <li><a href="#6">📇 Desactivado</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l5" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l5 ul li a")[11].classList.add("c-red");
+
+        BS.TabInit().iniciarBorde({
+            contexto: "#tab1",
+            
+        });
+        BS.TabInit().iniciarBorde({contexto: "#tab2",colorFuente: "c-white", colorFondo: "bg-black", colorBorde: "fd-blanco"})
+        BS.TabInit().iniciarBorde({contexto: "#log-reg",colorFuente: "c-white", colorFondo: "bg-bodyui", colorBorde: "fd-blanco"})
+        BS.SelectInit().iniciar("#paises", "borde" );
+
+        BS.TabInit().iniciarBorde({contexto: "#des",colorFuente: "c-white", colorFondo: "bg-black", colorBorde: "fd-blanco"})
+
+
+        const Destroy = () => {
+            const tabInstances = BS.TabInit();
+            tabInstances.destroy("#tab1");
+            tabInstances.destroy("#tab2");
+            tabInstances.destroy("#log-reg");
+
+            BS.Toast({
+                html: "✅ Todos los Tabs han sido destruidos.",
+            })
+        }
+
+
+        const ActivarTab = (contexto) => {
+            if(typeof contexto === "string"){
+                let elemento = document.getElementById(contexto);
+                elemento.classList.remove("desactivado");
+                elemento.querySelectorAll("*").forEach((el) => {
+                    el.classList.remove("desactivado");
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

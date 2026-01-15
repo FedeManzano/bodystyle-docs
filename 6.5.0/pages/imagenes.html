@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Módulo de Bodystyle para manejo de imágenes.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/imagenes.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Imágenes</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">🖼️ Imágenes</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                En este apartado veremos las clases y funciones de JS para el manejo de imágenes en Bodystyle.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Display</h2>
+                <p>
+                    Clases utilitarias que se utilizan para imágenes cuadradas o circulares. <br>
+                    Permiten definir un ancho y alto multiplo de ocho para los contenedores de las imágenes.
+                </p>
+                
+                <div class="d-flex gap-1 flex-wrap">
+                    <div class="img-display-8">
+                        <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+                    </div>
+                    <div class="img-display-16">
+                        <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+                    </div>
+                    <div class="img-display-24">
+                        <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+                    </div>
+                    <div class="img-display-32">
+                        <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+                    </div>
+                    <div class="img-display-40">
+                        <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+                    </div>
+                    <div class="img-display-48">
+                        <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+                    </div>
+                    <div class="img-display-56">
+                        <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+                    </div>
+                    <div class="img-display-64">
+                        <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+                    </div>
+                    <div class="img-display-128">
+                        <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+                    </div>
+                    <div class="img-display-256">
+                        <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+                    </div>
+                </div>
+
+
+                
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="d-flex gap-1 flex-wrap">
+
+        <!-- img-display-8 (PX)-->
+        <div class="img-display-8">
+            <!--.img-responsive necesaria para que la imágen no se salga de los 
+            límites del contenedor -->
+            <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+        </div>
+        <div class="img-display-16">
+            <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+        </div>
+        <div class="img-display-24">
+            <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+        </div>
+        <div class="img-display-32">
+            <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+        </div>
+        <div class="img-display-40">
+            <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+        </div>
+        <div class="img-display-48">
+            <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+        </div>
+        <div class="img-display-56">
+            <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+        </div>
+        <div class="img-display-64">
+            <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+        </div>
+        <div class="img-display-128">
+            <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+        </div>
+        <div class="img-display-256">
+            <img class="img-responsive" src="../images/logo.png" alt="Logo Bodystyle">
+        </div>
+    </div>
+</pre>
+</div>
+
+
+                <div class="alert">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Información</h4>
+                    <p>
+                        Los displays permiten crear contenedores que van desde 8 PX a 800px siempre 
+                        cuadrados, no funcionan para imágenes rectangulares.
+                    </p>
+                </div>
+
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Circular</h4>
+                <p>
+                    Podemos disponer de imágenes cirsulares utilizando las clases de <a href="bordes.html" class="link">Bordes</a>
+                    de Bodystyle.
+                </p>
+
+                <div class="img-display-256">
+                    <img src="../images/logo.png" alt="IMG Circular" class="img-responsive bor-rad-por-50">
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Para que esto funcione es necesario que la imágen sea cuadrada-->
+     <div class="img-display-256">
+        <!-- .bor-rad-por-50 es la clase que permite que la imagen sea circular -->
+        <img src="../images/logo.png" alt="IMG Circular" class="img-responsive bor-rad-por-50">
+    </div>
+</pre>
+</div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Zoom</h2>
+                <p>
+                    Bodystyle dispone de una funcionalidad para realizarle Zoom a una imágen 
+                    de manera tan que el usuario pueda verla en pantalla completa, para esta tarea 
+                    es necesario inicializar el módulo corresponsiente de JS.
+                </p>
+
+                <div  class="img-display-248">
+                    <img  class="img-responsive img-exp"  src="../images/logo.png"  alt="Imagen zoom">
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div  class="img-display-248">
+        <!--.img-exp es la clase necesaria para detectarla y hacer zoom -->
+        <img  class="img-responsive img-exp"  src="../images/logo.png"  alt="Imagen zoom">
+    </div>
+</pre>
+</div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    // Es necesario inicializar el módulo de imágenes para que funcione el zoom
+    BS.ImagenesInit();
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Paralax</h2>
+                <p>
+                    Bodystyle incluye un módulo de JS que permite generar el efecto paralax 
+                    en las imágenes de fondo de los contenedores, para ello es necesario 
+                    inicializar el módulo correspondiente.
+                </p>
+
+                <div  style=" height: 250px;">
+                    <div class="paralax-contenedor">
+                        <img  class="img-responsive paralax"  src="https://wallpapers.com/images/featured/paisajes-2iz0murq98x75o3c.jpg"  alt="Efecto paralax">
+                    </div>
+                </div>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div  style=" height: 250px;">
+        <!-- Se encierra a la imágen dentro del .paralax-contenedor -->
+        <div class="paralax-contenedor">
+            <!-- .paralax se añade esta clase para que la lógica del efecto funcione -->
+            <img  class="img-responsive paralax"  src="https://wallpapers.com/images/featured/paisajes-2iz0murq98x75o3c.jpg"  alt="Efecto paralax">
+        </div>
+    </div>
+</pre>
+</div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    // Es necesario inicializar el módulo de paralax para que funcione el efecto
+    BS.ParalaxInit();
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Imagenes</a></li>
+            <li><a href="#2">📇 Display</a></li>
+            <li><a href="#3">📇 Zoom</a></li>
+            <li><a href="#4">📇 Paralax</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l5" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l5 ul li a")[15].classList.add("c-red");
+        BS.ImagenesInit();
+        BS.ParalaxInit()
+
+    </script>
+</body>
+
+</html>

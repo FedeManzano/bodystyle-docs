@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Colecciones con el efecto acordeón.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/colecciones_acordeon.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Colecciones</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">🎁 Colecciones</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Esta es la continuación de la documentación sobre colecciones, en este apartado 
+                veremos como introducir el efecto acordeón en las colecciones de Bodystyle.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Muestra</h2>
+                <p>
+                    Vamos a ver un ejemplo de como utilizar este elemento de manera básica:
+                </p>
+                
+                        <div  class="container my-3">
+                            <div  class="list-container">
+                                <div  id="coleccion_desplegable">
+                                    <div  class="l-colapso">
+                                        <a  class="lista-item"  data-target="#menu1">Servicios</a>
+                                        <div  class="desplegable fd-gris-o-2"  id="menu1">
+                                            <ul>
+                                                <li><a  href="">500 GB de Almacenamiento</a></li>
+                                                <li><a  href="">Ventas de Productos</a></li>
+                                                <li><a  href="">4G / Gigabits de Datos</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                
+                                    <div  class="l-colapso">
+                                        <a  class="lista-item"  data-target="#menu2">Facturación</a>
+                                        <div  class="desplegable fd-gris-o-2"  id="menu2">
+                                            <ul>
+                                                <li><a  href="#">Medios de Pagos</a></li>
+                                                <li><a  href="#">Precios</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Contenedor principal con la clase .list-container -->
+    <div  class="list-container">
+
+        <!-- Contenedor de la colección desplegable  ID IMPORTANTE PARA INICIALIZAR EL COMPONENTE -->
+        <div  id="coleccion_desplegable">
+
+            <!-- Un contenedor con la clase .l-colapso 
+             que contendrá al disparador del evento y 
+             al contenido a desplegar -->
+            <div  class="l-colapso">
+                <a  class="lista-item"  data-target="#menu1">Servicios</a>
+                <div  class="desplegable fd-gris-o-2"  id="menu1">
+                    <ul>
+                        <li><a  href="">500 GB de Almacenamiento</a></li>
+                        <li><a  href="">Ventas de Productos</a></li>
+                        <li><a  href="">4G / Gigabits de Datos</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Un contenedor con la clase .l-colapso 
+             que contendrá al disparador del evento y 
+             al contenido a desplegar -->
+            <div  class="l-colapso">
+                <a  class="lista-item"  data-target="#menu2">Facturación</a>
+                <div  class="desplegable fd-gris-o-2"  id="menu2">
+                    <ul>
+                        <li><a  href="#">Medios de Pagos</a></li>
+                        <li><a  href="#">Precios</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</pre>
+</div>
+
+<div class="codigo">
+    <label for="cod-js" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+     BS.Colecciones() // Devuelve una instancia del componente Colecciones
+        .iniciar(
+        {    
+            contexto : "#coleccion_desplegable", // Contexto de inicialización
+            colorFondo : "bg-pink-d-1",          // Color de fondo de los ítems desplegables
+            colorTexto : "c-blanco",             // Color del texto de los ítems desplegables
+            colorFlechas : "#fff"                // Color de las flechas de los ítems desplegables
+       })
+</pre>
+</div>
+                <div class="table-responsive">
+                    <table class="vertical-border selector">
+                        <thead>
+                            <tr>
+                                <th>Parámetro</th>
+                                <th>Tipo</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>contexto</code></td>
+                                <td><code>string</code></td>
+                                <td>Selector CSS que define el contenedor principal de la colección desplegable.</td>
+                            </tr>
+                            <tr>
+                                <td><code>colorFondo</code></td>
+                                <td><code>string</code></td>
+                                <td>Clase de Bodystyle que define el color de fondo de los ítems desplegables.</td>
+                            </tr>
+                            <tr>
+                                <td><code>colorTexto</code></td>
+                                <td><code>string</code></td>
+                                <td>Clase de Bodystyle que define el color del texto de los ítems desplegables.</td>
+                            </tr>
+                            <tr>
+                                <td><code>colorFlechas</code></td>
+                                <td><code>string</code></td>
+                                <td>Color en formato hexadecimal que define el color de las flechas de los ítems desplegables.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Ejemplo Práctico</h2>
+                <p>
+                    Ahora veremos un ejemplo práctico de cómo utilizar las colecciones desplegables en un sitio web: <br>
+                    Vamos a reemplazar los enlaces con una tabla.
+                </p>
+
+                <div  class="container my-3">
+                            <div  class="list-container">
+                                <div  id="tablas_desplegable">
+                                    <div  class="l-colapso">
+                                        <a  class="lista-item"  data-target="#tabla">Servicios</a>
+                                        <div  class="desplegable p-1"  id="tabla">
+                                            <div class="table-responsive">
+                                                <table class="vertical-border selector">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Nombre del Servicio</th>
+                                                            <th>Descripción</th>
+                                                            <th>Precio</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>500 GB de Almacenamiento</td>
+                                                            <td>Almacenamiento en la nube con acceso rápido y seguro.</td>
+                                                            <td>$9.99/mes</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Ventas de Productos</td>
+                                                            <td>Plataforma para gestionar y vender tus productos en línea.</td>
+                                                            <td>$19.99/mes</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4G / Gigabits de Datos</td>
+                                                            <td>Conexión a internet de alta velocidad con cobertura 4G.</td>
+                                                            <td>$29.99/mes</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div  class="l-colapso">
+                                        <a  class="lista-item"  data-target="#factura">Facturación</a>
+                                        <div  class="desplegable p-1"  id="factura">
+                                            <div class="table-responsive">
+                                                <table class="vertical-border selector">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Método de Pago</th>
+                                                            <th>Descripción</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Tarjeta de Crédito</td>
+                                                            <td>Paga con tu tarjeta de crédito de forma segura y rápida.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>PayPal</td>
+                                                            <td>Utiliza tu cuenta de PayPal para realizar pagos cómodamente.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div  class="container my-3">
+        <div  class="list-container">
+            <div  id="tablas_desplegable">
+                <div  class="l-colapso">
+                    <a  class="lista-item"  data-target="#tabla">Servicios</a>
+                    <div  class="desplegable p-1"  id="tabla">
+                        <div class="table-responsive">
+                            <table class="vertical-border selector">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre del Servicio</th>
+                                        <th>Descripción</th>
+                                        <th>Precio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>500 GB de Almacenamiento</td>
+                                        <td>Almacenamiento en la nube con acceso rápido y seguro.</td>
+                                        <td>$9.99/mes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ventas de Productos</td>
+                                        <td>Plataforma para gestionar y vender tus productos en línea.</td>
+                                        <td>$19.99/mes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4G / Gigabits de Datos</td>
+                                        <td>Conexión a internet de alta velocidad con cobertura 4G.</td>
+                                        <td>$29.99/mes</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            
+                <div  class="l-colapso">
+                    <a  class="lista-item"  data-target="#factura">Facturación</a>
+                    <div  class="desplegable p-1"  id="factura">
+                        <div class="table-responsive">
+                            <table class="vertical-border selector">
+                                <thead>
+                                    <tr>
+                                        <th>Método de Pago</th>
+                                        <th>Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Tarjeta de Crédito</td>
+                                        <td>Paga con tu tarjeta de crédito de forma segura y rápida.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PayPal</td>
+                                        <td>Utiliza tu cuenta de PayPal para realizar pagos cómodamente.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+     BS.Colecciones().iniciar({ contexto : "#tablas_desplegable", colorFondo : "bg-pink-d-1",colorTexto : "c-blanco",  colorFlechas : "#fff" })
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Ejemplo Completo</h2>
+                <p>
+                    Ahora veremos un ejemplo completo personalizadon toda la lista con clases de Bodystyle,
+                    tanto en los ítems desplegables como en el contenido desplegado, 
+                    y generando un diseño con un alto grado de personalización.
+                </p>
+                <div  class="list-container ov-hidden bor-rad-8">
+                    <div  id="ejemplo_completo">
+                        <div  class="l-colapso">
+                            <a  class="lista-item fz-30 f-w-7"  data-target="#tabla1">💼 Servicios</a>
+                            <div  class="desplegable p-1 bg-white"  id="tabla1">
+                                <div class="table-responsive">
+                                    <table class="vertical-border selector">
+                                        <thead>
+                                            <tr>
+                                                <th>Nombre del Servicio</th>
+                                                <th>Descripción</th>
+                                                <th>Precio</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>500 GB de Almacenamiento</td>
+                                                <td>Almacenamiento en la nube con acceso rápido y seguro.</td>
+                                                <td>$9.99/mes</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ventas de Productos</td>
+                                                <td>Plataforma para gestionar y vender tus productos en línea.</td>
+                                                <td>$19.99/mes</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4G / Gigabits de Datos</td>
+                                                <td>Conexión a internet de alta velocidad con cobertura 4G.</td>
+                                                <td>$29.99/mes</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div  class="l-colapso">
+                            <a  class="lista-item fz-30 f-w-7"  data-target="#factura2">🌐 Facturación</a>
+                            <div  class="desplegable p-1 bg-white"  id="factura2">
+                                <div class="table-responsive">
+                                    <table class="vertical-border selector">
+                                        <thead>
+                                            <tr>
+                                                <th>Método de Pago</th>
+                                                <th>Descripción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tarjeta de Crédito</td>
+                                                <td>Paga con tu tarjeta de crédito de forma segura y rápida.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>PayPal</td>
+                                                <td>Utiliza tu cuenta de PayPal para realizar pagos cómodamente.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+   <div  class="list-container ov-hidden bor-rad-8">
+        <div  id="ejemplo_completo">
+            <div  class="l-colapso">
+                <a  class="lista-item fz-30 f-w-7"  data-target="#tabla1">💼 Servicios</a>
+                <div  class="desplegable p-1 bg-white"  id="tabla1">
+                    <div class="table-responsive">
+                        <table class="vertical-border selector">
+                            <thead>
+                                <tr>
+                                    <th>Nombre del Servicio</th>
+                                    <th>Descripción</th>
+                                    <th>Precio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>500 GB de Almacenamiento</td>
+                                    <td>Almacenamiento en la nube con acceso rápido y seguro.</td>
+                                    <td>$9.99/mes</td>
+                                </tr>
+                                <tr>
+                                    <td>Ventas de Productos</td>
+                                    <td>Plataforma para gestionar y vender tus productos en línea.</td>
+                                    <td>$19.99/mes</td>
+                                </tr>
+                                <tr>
+                                    <td>4G / Gigabits de Datos</td>
+                                    <td>Conexión a internet de alta velocidad con cobertura 4G.</td>
+                                    <td>$29.99/mes</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        
+            <div  class="l-colapso">
+                <a  class="lista-item fz-30 f-w-7"  data-target="#factura2">🌐 Facturación</a>
+                <div  class="desplegable p-1 bg-white"  id="factura2">
+                    <div class="table-responsive">
+                        <table class="vertical-border selector">
+                            <thead>
+                                <tr>
+                                    <th>Método de Pago</th>
+                                    <th>Descripción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tarjeta de Crédito</td>
+                                    <td>Paga con tu tarjeta de crédito de forma segura y rápida.</td>
+                                </tr>
+                                <tr>
+                                    <td>PayPal</td>
+                                    <td>Utiliza tu cuenta de PayPal para realizar pagos cómodamente.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</pre>
+</div>
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+     BS.Colecciones().iniciar({ contexto : "#ejemplo_completo", colorFondo : "bg-gray-s",colorTexto : "c-black",  colorFlechas : "#000" })  
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="5" class="scroll-item">Destroy</h2>
+                <p>
+                    Como todos los módulos de Bodystyle, las colecciones desplegables cuentan con un método destroy
+                    que nos permite eliminar la funcionalidad del componente en cualquier momento.
+                </p>
+
+                <button class="btn fd-bodyui com-trigger"
+                data-info="Eliminar todos los eventos asociados a las colecciones."
+                onclick="Destroy()">Destroy</button>
+
+
+<div class="codigo mt-3">
+    <label for="cod-js" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    // Método Destroy para eliminar las colecciones desplegables
+    const Destroy = () => {
+
+        // Se crea una instancia de colecciones
+        const col = BS.Colecciones();
+
+        // Se eliminan las colecciones desplegables por su contexto
+        col.destroy("#coleccion_desplegable");
+        col.destroy("#tablas_desplegable");
+        col.destroy("#ejemplo_completo");
+        BS.Toast({
+            html: "⭐ Se han eliminado las colecciones desplegables.",
+        })
+    }
+</pre>
+                </div>
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Colecciones</a></li>
+            <li><a href="#2">📇 Muestra</a></li>
+            <li><a href="#3">📇 Ejemplo Práctico</a></li>
+            <li><a href="#4">📇 Ejemplo Completo</a></li>
+            <li><a href="#5">📇 Destroy</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l5" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l5 ul li a")[12].classList.add("c-red");
+
+        BS.Colecciones().iniciar({ contexto : "#coleccion_desplegable", colorFondo : "bg-pink-d-1",colorTexto : "c-blanco",  colorFlechas : "#fff" })
+        BS.Colecciones().iniciar({ contexto : "#tablas_desplegable", colorFondo : "bg-pink-d-1",colorTexto : "c-blanco",  colorFlechas : "#fff" })
+        BS.Colecciones().iniciar({ contexto : "#ejemplo_completo", colorFondo : "bg-gray-s",colorTexto : "c-black",  colorFlechas : "#000" })
+
+
+        const Destroy = () => {
+            const col = BS.Colecciones();
+            col.destroy("#coleccion_desplegable");
+            col.destroy("#tablas_desplegable");
+            col.destroy("#ejemplo_completo");
+
+            BS.Toast({
+                html: "⭐ Se han eliminado las colecciones desplegables.",
+            })
+        }
+    </script>
+</body>
+
+</html>

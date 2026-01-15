@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Barra de navegación principal de Bodystyle.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/nav.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Nav</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">🗺️ Navegación</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                En este apartado veremos la barra de navegación principal de Bodystyle. <br>
+                La barra de navegación es un componente fijo que se encuentra en la parte superior de la página y
+                permite al usuario navegar por las diferentes secciones de la documentación de Bodystyle.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Default</h2>
+                <p>
+                    A continuación se muestra como es la barra de navegación por defecto sin clases 
+                    utilitarias ni modificaciones.
+                </p>
+                
+                <!--NAV Chica -->
+            <nav aria-label="Navegación principal pequeña" class="bs-nav mt-2">
+                <div  class="bs-nav-sm align-left-list">
+                    <a  href="#"  class="logo-container" aria-label="Ir al inicio">
+                        <img  src="../images/logo.png"  alt="Foto de perfil">
+                    </a>
+                    <ul>
+                        <li><a  href="#" aria-current="page">Inicio</a></li>
+                        <li><a  href="#">Porfolio</a></li>
+                        <li><a  href="#">Galeria</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!--NAV Mediana -->
+            <nav aria-label="Navegación principal mediana" class="bs-nav mt-2">
+                <div  class="bs-nav-md align-left-list">
+                    <a  href="#"  class="logo-container" aria-label="Ir al inicio">
+                        <img  src="../images/logo.png"  alt="Foto de perfil">
+                    </a>
+                    <ul>
+                        <li><a  href="#" aria-current="page">Inicio</a></li>
+                        <li><a  href="#">Porfolio</a></li>
+                        <li><a  href="#">Galeria</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!--NAV LG -->
+            <nav aria-label="Navegación principal grande" class="bs-nav mt-2">
+                <div  class="bs-nav-lg align-left-list">
+                    <a  href="#"  class="logo-container" aria-label="Ir al inicio">
+                        <img  src="../images/logo.png"  alt="Foto de perfil">
+                    </a>
+                    <ul>
+                        <li><a  href="#" aria-current="page">Inicio</a></li>
+                        <li><a  href="#">Porfolio</a></li>
+                        <li><a  href="#">Galeria</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!--
+        Como se puede observar Bodystyle cuenta con tres versiones de la barra de navegación
+        para adaptarse a los diferentes tamaños de pantalla: pequeña, mediana y grande.
+    -->
+
+    <!--NAV Chica -->
+    <nav  class="bs-nav">
+        <div  class="bs-nav-sm align-left-list">
+            <a  href="#"  class="logo-container">
+                <img  src="../images/logo.png"  alt="Foto de perfil">
+            </a>
+            <ul>
+                <li><a  href="#">Inicio</a></li>
+                <li><a  href="#">Porfolio</a></li>
+                <li><a  href="#">Galeria</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!--NAV Mediana -->
+    <nav  class="bs-nav">
+        <div  class="bs-nav-md align-left-list">
+            <a  href="#"  class="logo-container">
+                <img  src="../images/logo.png"  alt="Foto de perfil">
+            </a>
+            <ul>
+                <li><a  href="#">Inicio</a></li>
+                <li><a  href="#">Porfolio</a></li>
+                <li><a  href="#">Galeria</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!--NAV LG -->
+    <nav  class="bs-nav">
+        <div  class="bs-nav-lg align-left-list">
+            <a  href="#"  class="logo-container">
+                <img  src="../images/logo.png"  alt="Foto de perfil">
+            </a>
+            <ul>
+                <li><a  href="#">Inicio</a></li>
+                <li><a  href="#">Porfolio</a></li>
+                <li><a  href="#">Galeria</a></li>
+            </ul>
+        </div>
+    </nav>
+</pre>
+</div>
+
+                <h4 class="my-3"><i class="bs-check c-green fz-20">&nbsp;</i>Estructura</h4>
+                <p>
+                    Para poder recordar mejor como utilizar este componente, el nav de bodystyle está construído 
+                    con una estructura específica, que permitirá recordarla y definirla de una manera sencilla.
+                </p>
+
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+
+    <!-- El contenedor principal posee la clase .bs-nav -->
+    <nav  class="bs-nav">
+
+        <!-- Dentro del nav se encuentra un div con la clase .bs-nav-(sm/md/lg) -->
+        <!-- Dependiendo del tamaño de pantalla en el que se quiera mostrar el nav -->
+        <!--.align-left-list permite alinear la lista a la derecha o a la izquierda -->
+        <div  class="bs-nav-[sm||lg] align-[left|right]-list">
+
+            <!-- Contenedor del logo o imagen de perfil -->
+            <a  href="#"  class="logo-container">
+                <!-- Contenedor de la imagen o logo -->
+                <img  src="../images/logo.png"  alt="Foto de perfil">
+            </a>
+
+            <!-- Sección de la lista de navegación -->
+            <div>
+                <ul>
+                    <li><a  href="#">Inicio</a></li>
+                    <li><a  href="#">Porfolio</a></li>
+                    <li><a  href="#">Galeria</a></li>
+                </ul>
+            </div>
+
+            <div class="right-content">
+                <!-- Aquí irá el contenido que iria a la derecha del nav -->
+            </div>
+            
+        </div>
+    </nav>
+</pre>
+</div>
+
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Colores</h2>
+                <p>
+                    Esto es bastante simple si disponemos de la paleta de <a href="colores.html" class="link">Colores</a>
+                    de Bodystyle. Podemos cambiar el color de fondo del nav utilizando las clases de fondo
+                    de Bodystyle.
+                </p>
+
+                <nav aria-label="Navegación principal Facebook" class="bs-nav fd-facebook">
+                    <div  class="bs-nav-md align-left-list">
+                        <a  href="#"  class="logo-container" aria-label="Ir al inicio">
+                            <img  src="../images/logo.png"  alt="Foto de perfil">
+                        </a>
+                        <ul>
+                            <li><a  href="#" aria-current="page">Inicio</a></li>
+                            <li><a  href="#">Porfolio</a></li>
+                            <li><a  href="#">Galeria</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <nav aria-label="Navegación principal Snapchat" class="bs-nav fd-snapchat mt-3">
+                    <div  class="bs-nav-md align-left-list">
+                        <a  href="#"  class="logo-container" aria-label="Ir al inicio">
+                            <img  src="../images/logo.png"  alt="Foto de perfil">
+                        </a>
+                        <ul>
+                            <li><a class="c-black"  href="#" aria-current="page">Inicio</a></li>
+                            <li><a class="c-black" href="#">Porfolio</a></li>
+                            <li><a class="c-black" href="#">Galeria</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <nav aria-label="Navegación principal Flickr" class="bs-nav fd-flickr mt-3">
+                    <div  class="bs-nav-md align-left-list">
+                        <a  href="#"  class="logo-container" aria-label="Ir al inicio">
+                            <img  src="../images/logo.png"  alt="Foto de perfil">
+                        </a>
+                        <ul>
+                            <li><a class="c-black"  href="#" aria-current="page">Inicio</a></li>
+                            <li><a class="c-black" href="#">Porfolio</a></li>
+                            <li><a class="c-black" href="#">Galeria</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+
+                <nav aria-label="Navegación principal Bodyui" class="bs-nav fd-bodyui mt-3">
+                    <div  class="bs-nav-md align-left-list">
+                        <a  href="#"  class="logo-container" aria-label="Ir al inicio">
+                            <img  src="../images/logo.png"  alt="Foto de perfil">
+                        </a>
+                        <ul>
+                            <li><a   href="#" aria-current="page">Inicio</a></li>
+                            <li><a  href="#">Porfolio</a></li>
+                            <li><a  href="#">Galeria</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <nav aria-label="Navegación principal Gris" class="bs-nav fd-gris-n mt-3">
+                    <div  class="bs-nav-md align-left-list">
+                        <a  href="#"  class="logo-container" aria-label="Ir al inicio">
+                            <img  src="../images/logo.png"  alt="Foto de perfil">
+                        </a>
+                        <ul>
+                            <li><a  href="#" aria-current="page">Inicio</a></li>
+                            <li><a  href="#">Porfolio</a></li>
+                            <li><a  href="#">Galeria</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <nav  class="bs-nav fd-facebook">
+        <div  class="bs-nav-md align-left-list">
+            <a  href="#"  class="logo-container">
+                <img  src="../images/logo.png"  alt="Foto de perfil">
+            </a>
+            <ul>
+                <li><a  href="#">Inicio</a></li>
+                <li><a  href="#">Porfolio</a></li>
+                <li><a  href="#">Galeria</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav  class="bs-nav fd-snapchat mt-3">
+        <div  class="bs-nav-md align-left-list">
+            <a  href="#"  class="logo-container">
+                <img  src="../images/logo.png"  alt="Foto de perfil">
+            </a>
+            <ul>
+                <li><a class="c-black"  href="#">Inicio</a></li>
+                <li><a class="c-black" href="#">Porfolio</a></li>
+                <li><a class="c-black" href="#">Galeria</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav  class="bs-nav fd-flickr mt-3">
+        <div  class="bs-nav-md align-left-list">
+            <a  href="#"  class="logo-container">
+                <img  src="../images/logo.png"  alt="Foto de perfil">
+            </a>
+            <ul>
+                <li><a class="c-black"  href="#">Inicio</a></li>
+                <li><a class="c-black" href="#">Porfolio</a></li>
+                <li><a class="c-black" href="#">Galeria</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav  class="bs-nav fd-bodyui mt-3">
+        <div  class="bs-nav-md align-left-list">
+            <a  href="#"  class="logo-container">
+                <img  src="../images/logo.png"  alt="Foto de perfil">
+            </a>
+            <ul>
+                <li><a   href="#">Inicio</a></li>
+                <li><a  href="#">Porfolio</a></li>
+                <li><a  href="#">Galeria</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav  class="bs-nav fd-gris-n mt-3">
+        <div  class="bs-nav-md align-left-list">
+            <a  href="#"  class="logo-container">
+                <img  src="../images/logo.png"  alt="Foto de perfil">
+            </a>
+            <ul>
+                <li><a  href="#">Inicio</a></li>
+                <li><a  href="#">Porfolio</a></li>
+                <li><a  href="#">Galeria</a></li>
+            </ul>
+        </div>
+    </nav>
+</pre>
+</div>
+
+
+
+
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Align Right</h2>
+                <p>
+                    Es posible alinear la lista a la derecha de la barra de navegación utilizando la clase
+                    .align-right-list en el contenedor interno del nav.
+                </p>
+
+                <nav aria-label="Navegación principal alineada a la derecha" class="bs-nav fd-bodyui mt-3">
+                    <div  class="bs-nav-md align-right-list">
+                        <a  href="#"  class="logo-container" aria-label="Ir al inicio">
+                            <img  src="../images/logo.png"  alt="Foto de perfil">
+                        </a>
+                        <ul>
+                            <li><a  href="#" aria-current="page">Inicio</a></li>
+                            <li><a  href="#">Porfolio</a></li>
+                            <li><a  href="#">Galeria</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <nav  class="bs-nav fd-bodyui">
+        <div  class="bs-nav-md align-right-list">
+            <a  href="#"  class="logo-container">
+                <img  src="../images/logo.png"  alt="Foto de perfil">
+            </a>
+            <ul>
+                <li><a  href="#">Inicio</a></li>
+                <li><a  href="#">Porfolio</a></li>
+                <li><a  href="#">Galeria</a></li>
+            </ul>
+        </div>
+    </nav>
+</pre>
+</div>
+
+            </article>
+            <article class="article">
+                <h2 id="5" class="scroll-item">Right Content</h2>
+                <p>
+                    También es posible agregar contenido a la derecha de la barra de navegación
+                    utilizando el contenedor .right-content dentro del contenedor interno del nav.
+                </p>
+
+                <nav aria-label="Navegación principal con contenido derecho" class="bs-nav fd-bodyui">
+                    <div  class="bs-nav-md align-left-list">
+                        <a  href="#"  class="logo-container" aria-label="Ir al inicio">
+                            <img  src="../images/logo.png"  alt="Foto de perfil">
+                        </a>
+                        <ul>
+                            <li><a  href="#" aria-current="page">Inicio</a></li>
+                            <li><a  href="#">Porfolio</a></li>
+                            <li><a  href="#">Galeria</a></li>
+                        </ul>
+                        <div class="right-content gap-1">
+                            <a href="#" class="btn-sm bg-black bor-pill" aria-label="Registrarse">SignUp</a>
+                            <a href="#" class="btn-sm-o btn-white-o bor-pill" aria-label="Iniciar sesión">SignIn</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <nav  class="bs-nav fd-bodyui">
+        <div  class="bs-nav-md align-left-list">
+            <a  href="#"  class="logo-container">
+                <img  src="../images/logo.png"  alt="Foto de perfil">
+            </a>
+            <ul>
+                <li><a  href="#">Inicio</a></li>
+                <li><a  href="#">Porfolio</a></li>
+                <li><a  href="#">Galeria</a></li>
+            </ul>
+            <!-- Se añade este contenedor con la clase right-content para alinear contenido a la derecha -->
+            <div class="right-content gap-1">
+                <a href="#" class="btn-sm bg-black bor-pill">SignUp</a>
+                <a href="#" class="btn-sm-o btn-white-o bor-pill">SignIn</a>
+            </div>
+        </div>
+    </nav>
+</pre>
+</div>
+            </article>
+
+            <article class="article">
+                <h2 id="6" class="scroll-item">Fixed</h2>
+                <p>
+                    Es posible fijar la barra de navegación en la parte superior de la página
+                    utilizando la clase .bs-nav-fixed en el contenedor principal del nav. <br>
+                    La clase utilizada para esto es <span class="badge badge-red">.bs-nav-fixed</span>.
+                </p>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Se añade la clase .bs-nav-fixed para fijar el nav en la parte superior -->
+    <!-- Ahora el nav se mostrará fijo en la parte superior a lo largo de todo el recorrido de la página -->
+    <nav  class="bs-nav fd-bodyui bs-nav-fixed">
+        <div  class="bs-nav-md align-left-list">
+            <a  href="#"  class="logo-container">
+                <img  src="../images/logo.png"  alt="Foto de perfil">
+            </a>
+            <ul>
+                <li><a  href="#">Inicio</a></li>
+                <li><a  href="#">Porfolio</a></li>
+                <li><a  href="#">Galeria</a></li>
+            </ul>
+        </div>
+    </nav>
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="7" class="scroll-item">Responsive</h2>
+                <p>
+                    Bodystyle incorpora un sidebar desplegable a través de un botón de menú 
+                    del tipo hamburguesa que permitirá disponer de un sidebar y bien utilizado 
+                    un nav responsive.
+                </p>
+
+                <a href="muestras/m5_nav_responsive.html" class="link com-trigger"
+                data-info="Ejemplo del nav responsivo, con un sidebar complementario.">Muestra Nav Responsive</a>
+                
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+
+    <!-- 
+            Barra de navegación principal con el botón de menú hamburguesa
+            que despliega el sidebar configurado en el data-target. 
+            Nótese que el nav dispone de un ID único para inicializar el componente, luego 
+            posee un atributo data-target que contiene el ID del sidebar que se desea desplegar.
+    -->
+    <nav  id="na"  class="bs-nav bg-pink-d-1 bs-nav-bor-black bs-nav-fixed"  data-target="#bs-nav-sidebar">
+        <div  class="bs-nav-md align-right-list">
+
+            <!--Botón que se oculta solo en dispositivos Grande Med >= 1030px no se muestra -->
+            <a  class="btn-menu ocultar-solo-grandes"></a>
+
+            <a  href="#"  class="logo-container">
+                <img  src="../../images/logo.png"  alt="Foto de perfil">
+            </a>
+
+            <!-- Lista de navegación que se oculta en dispositivos pequeños y medianos -->
+            <!--Ver Helpers en la documentación -->
+            <div  class="ocultar-desde-medianos">
+                <ul>
+                    <li><a  href="#">Inicio</a></li>
+                    <li><a  href="#">Porfolio</a></li>
+                    <li><a  href="#">Galeria</a></li>
+                </ul>
+            </div>
+            <div  class="right-content">
+                <div  class="btn-grupo-lg">
+                    <button  class="btn-sm bg-white c-black">Login</button>
+                    <button  class="btn-sm fd-gris-n">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 
+            Lista lateral la misma contiene un ID = al configurado en el (data-target) del nav
+            y lleva la clase [bs-nav-sidebar] para configurarle los estilos de este elemento.
+            Este elemento puede estar en cualquier parte del dom, no tiene limitaciones 
+            ya que el enlace del sidebar con el nav es a través del data-target.
+    -->
+    <div  id="bs-nav-sidebar"  class="bs-nav-sidebar">
+        <ul>
+            <li><a  href="#">Inicio</a></li>
+            <li><a  href="#">Servicios</a></li>
+            <li><a  href="#">Porfolio</a></li>
+            <li><a  href="#">Graleria</a></li>
+            <li><a  href="#">Repositorio</a></li>
+        </ul>
+    </div>
+</pre>
+</div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    /**
+        El primer parámetro es el ID del nav (OBLIGATORIO), luego puede recibir un valor 
+        booleano (OPCIONAL) que permite saber si el nav contiene la clase 
+        .bs-nav-bor-[color] que generará un borde inferior al nav mejorando su apariencia.
+        Si no se pasa este segundo parámetro, el valor por defecto es false.
+    */
+    BS.NavigationInit("#na", true);
+</pre>
+</div>
+                <div class="alert">
+                    <p>
+                        <strong>Cosas Importantes: </strong> Es necesario que el atributo 
+                        <span class="badge badge-black">data-target</span> del nav apunte 
+                        al ID del sidebar que se desea desplegar y es necesario respetar el caracter 
+                        <span class="badge badge-black">#</span> al inicio del valor del atributo.
+                    </p>
+                </div>
+                
+            </article>
+
+            <article class="article">
+                <h2 id="8" class="scroll-item">Destroy</h2>
+                <p>
+                    Para destruir el componente de navegación y eliminar los eventos asociados
+                    se utiliza el siguiente método:
+                </p>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        JS
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    const Destroy = () => {
+        BS.NavigationDestroy();
+        BS.Toast({
+            html: "✅ Navigation Destroyed",
+            duracion: 3000
+        })
+    }
+</pre>
+</div>
+
+
+            </article>
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Nav</a></li>
+            <li><a href="#2">📇 Default</a></li>
+            <li><a href="#3">📇 Colores</a></li>
+            <li><a href="#4">📇 Align Right</a></li>
+            <li><a href="#5">📇 Right Content</a></li>
+            <li><a href="#6">📇 Fixed</a></li>
+            <li><a href="#7">📇 Responsive</a></li>
+            <li><a href="#8">📇 Destroy</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l6" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l6 ul li a")[0].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

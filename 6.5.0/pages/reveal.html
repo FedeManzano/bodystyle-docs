@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Efecto scroll que permite que el contenido de la página aparezca gradualmente al hacer scroll.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/reveal.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Reveal</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">Reveal</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                El efecto Reveal permite que los elementos de la página web aparezcan gradualmente a medida que el
+                usuario hace scroll hacia abajo. Esto crea una experiencia visual atractiva y dinámica, ya que los
+                contenidos se revelan de manera progresiva en lugar de estar todos visibles desde el principio.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Muestra</h2>
+                <p>
+                    Este efecto es fácil de implementar, lo único que tenemos que hacer es añadir la clase
+                    <code>scroll-effect</code> a los elementos que queremos que tengan este efecto.
+                </p>
+                
+                <a target="_blank" href="muestras/m2_reveal.html" class="link com-trigger"
+                data-info="Muestra del efecto reveal en una página de muestra.">Reveal Muestra</a>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+     <div class="container mt-3">
+        <!-- Todas las secciones poseen la clase scroll-effect y con eso ya es suficiente-->
+        <!-- Este efecto es con JS pero no necesita función de inicialización-->
+        <div class="bg-red c-white ta-c scroll-effect" style="height: 1000px;">Sección 1</div>
+        <div class="bg-red c-white ta-c scroll-effect mt-3" style="height: 1000px;">Sección 2</div>
+        <div class="bg-red c-white ta-c scroll-effect mt-3" style="height: 1000px;">Sección 2</div>
+        <div class="bg-red c-white ta-c scroll-effect mt-3" style="height: 1000px;">Sección 2</div>
+        <div class="bg-red c-white ta-c scroll-effect mt-3" style="height: 1000px;">Sección 2</div>
+    </div>
+</pre>
+</div>
+
+
+
+
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Funcionamiento</h2>
+                <p>
+                    El funcionamiento se presenta a través de <span class="badge badge-black">IntersectionObserver</span>
+                    detecta cuando un elementos se encuentra dentro del viewport y le añade una clase
+                    <code>active-scroll</code> que activa la animación de aparición. Esta clase puede ser personalizada
+                    mediante CSS para ajustar la animación según las necesidades del desarrollador.
+                </p>
+
+
+<div class="codigo">
+    <label for="cod-html" 
+    class="label">
+        JS 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-js pt-1">
+    /**
+     * Modulo (29) Efecto Scroll
+     * 
+     * Este módulo aplica una clase CSS a los elementos con la clase 'scroll-effect'
+     */
+
+    // Variable para almacenar el observer
+    let observer = null;
+
+    /**
+     * Función que inicializa el componente 
+     * permite crear el observer y observar los elementos con la clase 'scroll-effect'
+     * @description Inicializa el efecto scroll
+     */
+    const iniciar = () => {
+
+        /**
+         * Configuración del IntersectionObserver
+         */
+        const config = {
+            threshold: 0.1, // El umbral de visibilidad para activar el efecto
+            rootMargin: "0px 0px -100px 0px" // Margen para activar el efecto antes de que el elemento entre completamente en la vista
+        }
+
+        /**
+         * Creación del IntersectionObserver
+         * @description Observa los elementos con la clase 'scroll-effect' y les añade la clase 'active-scroll' cuando entran en la vista
+         */
+        observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // Si el elemento se ve en pantalla añade el active-scroll
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active-scroll');
+                }
+            })
+        }, config);
+
+        /**
+         * Observación de los elementos con la clase 'scroll-effect'
+         * @description Selecciona todos los elementos con la clase 'scroll-effect' y los observa con el IntersectionObserver
+         */
+        const elementos = document.querySelectorAll('.scroll-effect');
+        elementos.forEach(el => {
+            observer.observe(el);
+        })
+    }
+
+    /**
+     * Función que destruye el componente
+     * @description Desconecta el observer y limpia la variable
+     */
+    const destroy = () => {
+        if (observer) {
+            observer.disconnect();
+            observer = null;
+        }
+    }
+
+
+    /**
+     * Objeto público del módulo EfectoScroll
+     * @description Proporciona métodos para iniciar y destruir el efecto scroll
+     */
+    const EfectoScroll = {
+        iniciar: () => iniciar(),
+        destroy: () => destroy()
+    }
+
+    // Accesible desde el ámbito global
+    if (typeof window !== 'undefined') {
+        window.EfectoScroll = EfectoScroll;
+    }
+
+    // Exportación del módulo EfectoScroll
+    export default EfectoScroll;
+</pre>
+</div>
+            </article>
+
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Reveal</a></li>
+            <li><a href="#2">📇 Muestra</a></li>
+            <li><a href="#3">📇 Funcionamiento</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l5" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l5 ul li a")[9].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

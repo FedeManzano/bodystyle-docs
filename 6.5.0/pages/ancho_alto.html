@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Clases CSS que permiten gestionar el ancho y el alto de los elementos.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/ancho_alto.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Ancho y Alto</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">📏 Ancho y Alto</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Clases CSS que permiten gestionar el ancho y el alto de los elementos. <br>
+                A través de ellas es posible ajustar los elementos para cualquier tamaño de pantalla 
+                simplemente añadiendo estas clases desde HTML sin necesidad de CSS adicional.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Introducción</h2>
+                <p>
+                    Estas clases permitirán adaptar cualquier diseño a todos los tamaños de pantalla,
+                    facilitando la creación de sitios web responsivos.
+                </p>
+                
+                <div class="p-2 bg-red c-white ta-c ancho-50 ancho-m-75 ancho-s-87 ancho-xs-95">
+                    Elemento Responsivo
+                </div>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Contenedor responsivo: se utilizan las clases para adaptar 
+     el ancho del contenedor a los diferentes tamaños.-->
+    <div class="p-2 bg-red c-white ta-c ancho-50 ancho-m-75 ancho-s-87 ancho-xs-95">
+        Elemento Responsivo
+    </div>
+</pre>
+</div>
+
+            <div class="container p-3 bg-red" style="height: 300px;">
+                <div class="bg-black c-white ta-c alto-50  alto-m-75 alto-s-85 alto-xs-95">
+                    Elemento Responsivo
+                </div>
+            </div>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <!-- Contenedor responsivo: se utilizan las clases para adaptar 
+     el alto del contenedor a los diferentes tamaños.-->
+    <div class="container p-3 bg-red" style="height: 300px;">
+        <div class="bg-black c-white ta-c alto-50  alto-m-75 alto-s-85 alto-xs-95">
+            Elemento Responsivo
+        </div>
+    </div>
+</pre>
+</div>
+
+                <div class="table-responsive">
+                    <table class="vertical-border selector">
+                        <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Descripción</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>ancho-xx / width-xx</code></td>
+                                <td>Establece el ancho del elemento al xx% del contenedor en pantallas grandes.</td>
+                            </tr>
+                            <tr>
+                                <td><code>ancho-m-xx / width-m-xx</code></td>
+                                <td>Establece el ancho del elemento al xx% del contenedor en pantallas medianas.</td>
+                            </tr>
+                            <tr>
+                                <td><code>ancho-s-xx / width-s-xx</code></td>
+                                <td>Establece el ancho del elemento al xx% del contenedor en pantallas pequeñas.</td>
+                            </tr>
+                            <tr>
+                                <td><code>ancho-xs-xx / width-xs-xx</code></td>
+                                <td>Establece el ancho del elemento al xx% del contenedor en pantallas extra pequeñas.</td>
+                            </tr>
+                            <tr>
+                                <td><code>alto-xx / height-xx</code></td>
+                                <td>Establece el alto del elemento al xx% del contenedor en pantallas grandes.</td>
+                            </tr>
+                            <tr>
+                                <td><code>alto-m-xx / height-m-xx</code></td>
+                                <td>Establece el alto del elemento al xx% del contenedor en pantallas medianas.</td>
+                            </tr>
+                            <tr>
+                                <td><code>alto-s-xx / height-s-xx</code></td>
+                                <td>Establece el alto del elemento al xx% del contenedor en pantallas pequeñas.</td>
+                            </tr>
+                            <tr>
+                                <td><code>alto-xs-xx / height-xs-xx</code></td>
+                                <td>Establece el alto del elemento al xx% del contenedor en pantallas extra pequeñas.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="alert mt-3">
+                    <strong>Nota:</strong> Reemplaza <code>xx</code> por el valor deseado (por ejemplo, 25, 50, 75, 100). <br>
+                    Los valores son todos multiplos de 5 entre 5 y 100. <br>
+                    Nótese que las clases tienen su respectivo equivalente en inglés.
+                </div>
+        
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Casos de Uso: Ancho</h2>
+                <p>
+                    Los casos de uso más comunes para controlar el ancho de los elementos incluyen:
+                </p>
+
+                <h3>1. Contenedor de Contenido Centrado</h3>
+                <p>
+                    Limitar el ancho de un contenedor principal para que no ocupe todo el ancho de pantalla en dispositivos grandes.
+                </p>
+                <div class="p-3 bg-gray-s ancho-80 ancho-m-100">
+                    <strong>Contenedor de contenido</strong> - Ancho del 80% en pantalla grande y 100% en tablet
+                </div>
+                <div class="codigo mt-3">
+                    <label for="cod-html" class="label">
+                        HTML 
+                        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+                    </label>
+                <pre class="cod-html pt-1">
+    <div class="ancho-80 ancho-m-100">
+        Contenedor de contenido centrado
+    </div>
+                </pre>
+                </div>
+
+                <h3>2. Barra Lateral Responsiva</h3>
+                <p>
+                    Crear una barra lateral que se adapte según el tamaño de pantalla.
+                </p>
+                <div style="display: flex; gap: 10px; margin: 20px 0;">
+                    <div class="p-2 bg-gray-s c-white ancho-25 ancho-m-100">
+                        <strong>Sidebar</strong> 25% escritorio
+                    </div>
+                    <div class="p-2 bg-blue-s c-white ancho-75 ancho-m-100">
+                        <strong>Contenido Principal</strong> 75% escritorio
+                    </div>
+                </div>
+                <div class="codigo mt-3">
+                    <label for="cod-html" class="label">
+                        HTML 
+                        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+                    </label>
+                <pre class="cod-html pt-1">
+    <div style="display: flex; gap: 10px;">
+        <div class="ancho-25 ancho-m-100">
+            Barra Lateral
+        </div>
+        <div class="ancho-75 ancho-m-100">
+            Contenido Principal
+        </div>
+    </div>
+                </pre>
+                </div>
+
+                <h3>3. Galería de Tarjetas Responsiva</h3>
+                <p>
+                    Crear una galería con tarjetas que se ajusten según el dispositivo.
+                </p>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <div class="p-3 bg-blue c-white ancho-100 ancho-m-50 ancho-s-33 ta-c">
+                        Tarjeta 1
+                    </div>
+                    <div class="p-3 bg-blue c-white ancho-100 ancho-m-50 ancho-s-33 ta-c">
+                        Tarjeta 2
+                    </div>
+                    <div class="p-3 bg-blue c-white ancho-100 ancho-m-50 ancho-s-33 ta-c">
+                        Tarjeta 3
+                    </div>
+                </div>
+                <div class="codigo mt-3">
+                    <label for="cod-html" class="label">
+                        HTML 
+                        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+                    </label>
+                <pre class="cod-html pt-1">
+    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <div class="ancho-100 ancho-m-50 ancho-s-33">
+            Tarjeta 1
+        </div>
+        <div class="ancho-100 ancho-m-50 ancho-s-33">
+            Tarjeta 2
+        </div>
+        <div class="ancho-100 ancho-m-50 ancho-s-33">
+            Tarjeta 3
+        </div>
+    </div>
+                </pre>
+                </div>
+
+                <h3>4. Formulario Responsivo</h3>
+                <p>
+                    Campos de formulario que se adaptan según el tamaño de pantalla.
+                </p>
+                <div class="p-3" style="border: 1px solid #ccc;">
+                    <div class="mb-2">
+                        <input type="text" class="ancho-100 p-2" placeholder="Nombre" style="border: 1px solid #999;">
+                    </div>
+                    <div class="mb-2">
+                        <input type="text" class="ancho-100 ancho-m-50 p-2" placeholder="Email" style="border: 1px solid #999; display: inline-block;">
+                        <input type="text" class="ancho-100 ancho-m-50 p-2" placeholder="Teléfono" style="border: 1px solid #999; display: inline-block;">
+                    </div>
+                </div>
+                <div class="codigo mt-3">
+                    <label for="cod-html" class="label">
+                        HTML 
+                        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+                    </label>
+                <pre class="cod-html pt-1">
+    <div>
+        <input type="text" class="ancho-100 mb-2" placeholder="Nombre">
+        <input type="text" class="ancho-100 ancho-m-50" placeholder="Email">
+        <input type="text" class="ancho-100 ancho-m-50" placeholder="Teléfono">
+    </div>
+                </pre>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Casos de Uso: Alto</h2>
+                <p>
+                    Los casos de uso más comunes para controlar el alto de los elementos incluyen:
+                </p>
+
+                <h3>1. Hero Section con Altura Fija</h3>
+                <p>
+                    Crear una sección hero que ocupe la altura de la ventana gráfica.
+                </p>
+                <div class="bg-blue-s c-white ta-c ta-v-c p-3" style="height: 200px;">
+                    <h2>Bienvenido a nuestro sitio</h2>
+                    <p>Sección hero con altura fija</p>
+                </div>
+                <div class="codigo mt-3">
+                    <label for="cod-html" class="label">
+                        HTML 
+                        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+                    </label>
+                <pre class="cod-html pt-1">
+    <div class="alto-100" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <h2>Bienvenido a nuestro sitio</h2>
+    </div>
+                </pre>
+                </div>
+
+                <h3>2. Componentes de Altura Uniforme</h3>
+                <p>
+                    Crear tarjetas o cajas con la misma altura para alineamiento visual.
+                </p>
+                <div style="display: flex; gap: 10px;">
+                    <div class="p-3 bg-green c-white alto-40 alto-m-50 alto-s-60 ta-c">
+                        <strong>Caja 1</strong>
+                    </div>
+                    <div class="p-3 bg-yellow c-white alto-40 alto-m-50 alto-s-60 ta-c">
+                        <strong>Caja 2</strong>
+                    </div>
+                    <div class="p-3 bg-red c-white alto-40 alto-m-50 alto-s-60 ta-c">
+                        <strong>Caja 3</strong>
+                    </div>
+                </div>
+                <div class="codigo mt-3">
+                    <label for="cod-html" class="label">
+                        HTML 
+                        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+                    </label>
+                <pre class="cod-html pt-1">
+    <div class="alto-40 alto-m-50 alto-s-60">
+        Caja con altura responsiva
+    </div>
+                </pre>
+                </div>
+
+                <h3>3. Contenedor de Altura Adaptativa</h3>
+                <p>
+                    Adaptar la altura según el tamaño de pantalla para layouts complejos.
+                </p>
+                <div class="bg-gray-s p-3" style="height: 250px;">
+                    <div class="fd-gris-n c-white p-2 alto-50 alto-m-60 alto-s-75 alto-xs-100">
+                        Panel adaptativo que cambia de altura
+                    </div>
+                </div>
+                <div class="codigo mt-3">
+                    <label for="cod-html" class="label">
+                        HTML 
+                        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+                    </label>
+                <pre class="cod-html pt-1">
+    <div class="bg-gray-s" style="height: 250px;">
+        <div class="alto-50 alto-m-60 alto-s-75 alto-xs-100">
+            Panel adaptativo
+        </div>
+    </div>
+                </pre>
+                </div>
+
+                <h3>4. Galería de Imágenes Responsiva</h3>
+                <p>
+                    Crear imágenes con altura proporcional en diferentes dispositivos.
+                </p>
+                <div style="display: flex; gap: 10px;">
+                    <div class="bg-gray-s alto-40 ancho-100 ancho-m-50 ancho-s-33 ta-c c-white p-2">
+                        Imagen 1
+                    </div>
+                    <div class="bg-gray-s alto-40 ancho-100 ancho-m-50 ancho-s-33 ta-c c-white p-2">
+                        Imagen 2
+                    </div>
+                    <div class="bg-gray-s alto-40 ancho-100 ancho-m-50 ancho-s-33 ta-c c-white p-2">
+                        Imagen 3
+                    </div>
+                </div>
+                <div class="codigo mt-3">
+                    <label for="cod-html" class="label">
+                        HTML 
+                        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+                    </label>
+                <pre class="cod-html pt-1">
+    <div class="alto-40 ancho-100 ancho-m-50 ancho-s-33">
+        <img src="imagen.jpg" class="ancho-100 alto-100">
+    </div>
+                </pre>
+                </div>
+            </article>
+
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Ancho y Alto</a></li>
+            <li><a href="#2">📇 Introducción</a></li>
+            <li><a href="#3">📇 </a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l3" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoJsInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l3 ul li a")[5].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

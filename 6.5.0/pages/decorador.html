@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Decorador de títulos que mejoran su estética.">
+     <link rel="canonical" href="https://bodystyle.webcindario.com/paginas/decorador.html">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../css/bodystyle.min.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="../css/show-dark.min.css">
+    <title>Bodystyle</title>
+</head>
+
+<body>
+
+    <section class="theme-light mb-3">
+        <!--Busqueda-->
+        <div id="lista-busqueda" class="search-list"></div>
+        <!--Barra de navegación -->
+        <nav id="nav" class="bs-nav bs-nav-fixed"></nav>
+
+        <div id="sidebar" class="bs-sidebar-drop-light "></div>
+
+        <section id="main">
+             <div id="componente_busqueda" class="input-g mb-2 ancho-50 ancho-m-60 ancho-s-80 ancho-xs-100" role="search">
+                <div class="grupo">
+                    <span id="span_buscador" class="span-grupo c-white" aria-hidden="true">🔎</span>
+                    <input 
+                        aria-label="Buscar en la documentación" 
+                        aria-describedby="search-hint"
+                        aria-controls="search-results"
+                        class="fd-gris-n c-white" 
+                        type="search" 
+                        name="" 
+                        id="buscador" 
+                        placeholder="Buscar en la documentación...">
+                </div>
+            </div>
+            <h1 id="1" class="scroll-item">🖌️ Decoradores</h1>
+            <p class="fz-20 fz-m-19 fz-s-18 fz-xs-16">
+                Los decoradores son elementos visuales que permiten mejorar la estética de los títulos en una página web.
+                Estos elementos pueden ser líneas, formas o iconos que se colocan alrededor o cerca del título para
+                darle un aspecto más atractivo y profesional.
+            </p>
+
+            <div id="info_general"></div>
+
+
+            <article class="article">
+                <h2 id="2" class="scroll-item">Muestra</h2>
+                <p>
+                    A continuación se muestra un ejemplo de cómo se ve un título con un decorador aplicado:
+                </p>
+                
+                <div class="p-1 bg-white" >
+                    <div class="bs-header-decorator header-red h1" style="font-family: Inter !important; ">
+                        Ejemplo de Header Decorator Rojo
+                    </div>
+
+                    <div class="bs-header-decorator header-green h1 mt-1" style="font-family: Inter !important; ">
+                        Ejemplo de Header Decorator Verde
+                    </div>
+                    <div class="bs-header-decorator header-blue h1 mt-1" style="font-family: Inter !important; ">
+                        Ejemplo de Header Decorator Azul
+                    </div>
+
+                    <div class="bs-header-decorator header-black h1 mt-1" style="font-family: Inter !important; ">
+                        Ejemplo de Header Decorator negro
+                    </div>
+                    <div class="bs-header-decorator header-white h1 mt-1 bg-black c-white" style="font-family: Inter !important; ">
+                        Ejemplo de Header Decorator blanco
+                    </div>
+
+                    <div class="bs-header-decorator header-gray h1 mt-1 bg-black c-white" style="font-family: Inter !important; ">
+                        Ejemplo de Header Decorator gris
+                    </div>
+                </div>
+
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        HTML 
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-html pt-1">
+    <div class="p-1 bg-white" >
+        <h1 class="bs-header-decorator header-red h1" style="font-family: Inter !important; ">
+            Ejemplo de Header Decorator Rojo
+        </h1>
+        <h1 class="bs-header-decorator header-green mt-1">
+            Ejemplo de Header Decorator Verde
+        </h1>
+        <h1 class="bs-header-decorator header-blue mt-1">
+            Ejemplo de Header Decorator Azul
+        </h1>
+        <h1 class="bs-header-decorator header-black mt-1" >
+            Ejemplo de Header Decorator negro
+        </h1>
+        <h1 class="bs-header-decorator header-white mt-1 bg-black c-white">
+            Ejemplo de Header Decorator blanco
+        </h1>
+        <h1 class="bs-header-decorator header-gray mt-1 bg-black c-white">
+            Ejemplo de Header Decorator gris
+        </h1>
+    </div>
+</pre>
+</div>
+                <div class="table-responsive">
+                    <table class="vertical-border selector">
+                        <thead>
+                            <tr>
+                                <th>Clase 1</th>
+                                <th>Clase 2</th>
+                                <th>Color</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>bs-header-decorator</td>
+                                <td>header-red</td>
+                                <td><div class="p-1 bg-red"></div></td>
+                            </tr>
+                            <tr>
+                                <td>bs-header-decorator</td>
+                                <td>header-blue</td>
+                                <td><div class="p-1 bg-blue"></div></td>
+                            </tr>
+                            <tr>
+                                <td>bs-header-decorator</td>
+                                <td>header-blue</td>
+                                <td><div class="p-1 bg-blue"></div></td>
+                            </tr>
+                            <tr>
+                                <td>bs-header-decorator</td>
+                                <td>header-black</td>
+                                <td><div class="p-1 bg-black"></div></td>
+                            </tr>
+                            <tr>
+                                <td>bs-header-decorator</td>
+                                <td>header-white</td>
+                                <td><div class="p-1 bg-white bor-gris"></div></td>
+                            </tr>
+                            <tr>
+                                <td>bs-header-decorator</td>
+                                <td>header-gray</td>
+                                <td><div class="p-1 bg-gray"></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+
+            <article class="article">
+                <h2 id="3" class="scroll-item">Sass</h2>
+                <p>
+                    Si estamos trabajando desde el repositorio de Bodystyle y utilizando Sass, podemos encontrar las variables
+                    relacionadas con los decoradores en el archivo "_header_decorator.scss". Aquí podemos personalizar los colores
+                    y modificar los estilos que se ajusten al proyecto en desarrollo.
+                </p>
+
+<div class="codigo mt-3">
+    <label for="cod-html" 
+    class="label">
+        <a href="https://github.com/FedeManzano/bodystyle/blob/master/sass/_header_decorator.scss" class="link">_header_decorator.scss</a>
+        <i class="bs-copy c-bodyui fz-20 btn-copy"></i>
+    </label>
+<pre class="cod-css pt-1">
+
+/*
+    Importa las variables globales de bodystyle
+    Estos colores afectan a todos los elementos que utilizan
+    estos colores en bodystyle.
+*/
+@use "globales/variables";
+
+
+/** Con esto aumentamos la separación del decorador respecto al contenido */
+.bs-header-decorator {
+
+    padding-bottom: 12px;
+}
+
+/** Desde estas variables podemos modificar los colores a través de variables globales */
+$rojo: linear-gradient(90deg, variables.$fd-rojo 0%, #ff000000 100%);
+$azul: linear-gradient(90deg, variables.$fd-azul 0%, #ff000000 100%);
+$verde: linear-gradient(90deg, variables.$fd-verde 0%, #ff000000 100%);
+$gris: linear-gradient(90deg, variables.$fd-gris 0%, #ff000000 100%);
+$negro: linear-gradient(90deg, variables.$fd-negro 0%, #ffffff00 100%);
+$blanco: linear-gradient(90deg, variables.$fd-blanco 0%, #ffffff00 100%);
+
+.header-red {
+    position: relative;
+    &::before{
+
+        content: "";
+        border-radius: 99999px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 5px;
+        background: $rojo;
+    }
+}
+
+.header-blue {
+    position: relative;
+    &::before{
+
+        content: "";
+        border-radius: 99999px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 5px;
+        background: $azul;
+    }
+}
+
+.header-green {
+    position: relative;
+    &::before{
+
+        content: "";
+        border-radius: 99999px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 5px;
+        background: $verde;
+    }
+}
+
+.header-gray {
+    position: relative;
+    &::before{
+
+        content: "";
+        border-radius: 99999px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 5px;
+        background: $gris;
+    }
+}
+
+
+.header-black {
+    position: relative;
+    &::before{
+
+        content: "";
+        border-radius: 99999px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 5px;
+        background: $negro;
+    }
+}
+
+
+.header-white {
+    position: relative;
+    &::before{
+
+        content: "";
+        border-radius: 99999px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 5px;
+        background: $blanco;
+    }
+}
+</pre>
+</div>
+
+            </article>
+
+            <article class="article">
+                <h2 id="4" class="scroll-item">Uso Recomendado</h2>
+                <p>
+                    En páginas visualmente atractivas o profesionales, como portafolios, blogs de diseño o sitios web corporativos, el uso de decoradores en los títulos puede mejorar significativamente la apariencia general y captar la atención del usuario.
+                </p>
+
+                <div class="tabla-responsive">
+                    <table class="tabla tabla-bordered tabla-hover">
+                        <thead class="bg-blue-s c-white">
+                            <tr>
+                                <th>Color</th>
+                                <th>Uso Recomendado</th>
+                                <th>Contexto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="badge badge-red">Rojo</span></td>
+                                <td>Alertas, advertencias, secciones importantes o llamadas a la acción críticas</td>
+                                <td>Errores, promociones urgentes, títulos destacados</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-blue">Azul</span></td>
+                                <td>Información general, secciones principales, confiabilidad y profesionalismo</td>
+                                <td>Encabezados de secciones, títulos de artículos, headers principales</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-green">Verde</span></td>
+                                <td>Éxito, confirmación, progreso positivo o contenido relacionado con naturaleza</td>
+                                <td>Mensajes de éxito, secciones completadas, tips útiles</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-gray">Gris</span></td>
+                                <td>Subtítulos, secciones secundarias, contenido menos importante</td>
+                                <td>Descripciones, texto de ayuda, secciones auxiliares</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge" style="background: #000; color: white;">Negro</span></td>
+                                <td>Elegancia, minimalismo, diseños oscuros o profesionales</td>
+                                <td>Portafolios de diseño, sitios corporativos, interfaces modernas</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge" style="background: white; color: #000; border: 1px solid #ccc;">Blanco</span></td>
+                                <td>Sobre fondos oscuros, diseños con tema oscuro (dark mode)</td>
+                                <td>Interfaces dark mode, secciones sobre fondos de color</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="alert mt-3">
+                    <h4 class="c-blue-s"><i class="bs-info c-blue-s fz-25">&nbsp;</i>Consejo</h4>
+                    <p>
+                        Para mejores resultados, mantén la consistencia en tu diseño. Asigna cada color a un tipo de contenido 
+                        específico en toda tu página web. Por ejemplo, usa siempre rojo para advertencias y azul para títulos 
+                        principales. Esto ayuda a los usuarios a reconocer patrones visuales.
+                    </p>
+                </div>
+                
+            </article>
+            <article class="article">
+                <h3 id="autor" class="scroll-item">Autor</h3>
+                <div id="autor_content"></div>
+            </article>
+
+        </section>
+    </section>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#1">📇 Decorador</a></li>
+            <li><a href="#2">📇 Muestra</a></li>
+            <li><a href="#3">📇 Sass</a></li>
+            <li><a href="#4">📇 Uso Recomendado</a></li>
+            <li><a href="#autor">🧑‍🏫 Autor</a></li>
+        </ul>
+    </div>
+
+    
+    <script src="../js/docs-body.js"></script>
+    <script>
+        // Inicializar el Sidebar
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l2" });
+        BS.CommentInit()
+        BS.ToolTipsInit()
+        BS.BotonInicioInit()
+        BS.CodigoHtmlInit()
+        BS.CodigoCssInit()
+        BS.PersonalizadoInit({ori: "disparador"})
+        document.querySelectorAll("#l2 ul li a")[12].classList.add("c-red");
+
+    </script>
+</body>
+
+</html>

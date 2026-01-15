@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/bodystyle.min.css">
+    <title>Document</title>
+
+    <style>
+        .mi-tip-personalizado {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            font-size: 14px;
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container mt-8">
+        <button class="btn fd-bodyui disparador" data-info="Esto es un tips personalizado.">Hover Me!</button>
+    </div>
+
+    <script src="../../js/docs-body.js"></script>
+    <script>
+        BS.PersonalizadoInit({ori: "disparador", ele: "mi-tip-personalizado"});
+    </script>
+</body>
+</html>
